@@ -152,7 +152,7 @@ $$
 
 ### Plotting Empirical Analysis of Algorithms
 
-![[SVG/tikz1755249469.1451561.svg|diagram]]
+![[SVG/tikz1755251190.5823498.svg|diagram]]
 
 ### Towers of Hanoi
 
@@ -166,7 +166,7 @@ T(n-1) = (2T(n-2) + 1) +1\\
 i: T(n) = 2^{i}T(n-i) + 2^i - 1 \\
 \end{align}
 $$
-![[SVG/tikz1755249470.7473257.svg|diagram]]
+![[SVG/tikz1755251192.4088056.svg|diagram]]
 ### Brute force, Decrease-and-Conquer & D & C Algorithms
 
 #### Brute Force: Selection Sort
@@ -232,7 +232,7 @@ for i = 0 to n-m
 ```
 
 #### Exhaustive Search: Traveling Salesman Problem
-![[SVG/tikz1755249472.3046975.svg|diagram]]
+![[SVG/tikz1755251194.0053957.svg|diagram]]
 
 #### Exhaustive Search: Knapsack Problem
 

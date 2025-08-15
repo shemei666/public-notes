@@ -624,7 +624,7 @@ Example: $C(X)$ X is compact is uniformly closed algebra
 
 **Def:** A set $\mathscr{B}$ is said to be uniform closure of an algebra $\mathscr{A}$ of  real valued functions of X if $\mathscr{B}$ is the set of all uniform limits of $\mathscr{A}$
 
-![[SVG/tikz1755249475.3999135.svg|diagram]]
+![[SVG/tikz1755251197.2322385.svg|diagram]]
 
 
 **Theorem:** A uniform closure $\mathscr{B}$ of an algebra $\mathscr{A}$ of bounded functions on a metric space X is a uniformly closed algebra
