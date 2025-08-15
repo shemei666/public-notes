@@ -1,3 +1,10 @@
+---
+title: Design and Analysis of Algorithms
+tags:
+  - incomplete
+created: 2025-07-25
+---
+
 DAA - Week 01 - jnair.work@gmail.com
 
 ## Design of Algorithms
@@ -152,7 +159,7 @@ $$
 
 ### Plotting Empirical Analysis of Algorithms
 
-![[SVG/tikz1755251190.5823498.svg|diagram]]
+![[SVG/tikz1755252490.2587242.svg|diagram]]
 
 ### Towers of Hanoi
 
@@ -166,7 +173,7 @@ T(n-1) = (2T(n-2) + 1) +1\\
 i: T(n) = 2^{i}T(n-i) + 2^i - 1 \\
 \end{align}
 $$
-![[SVG/tikz1755251192.4088056.svg|diagram]]
+![[SVG/tikz1755252491.8134243.svg|diagram]]
 ### Brute force, Decrease-and-Conquer & D & C Algorithms
 
 #### Brute Force: Selection Sort
@@ -232,7 +239,7 @@ for i = 0 to n-m
 ```
 
 #### Exhaustive Search: Traveling Salesman Problem
-![[SVG/tikz1755251194.0053957.svg|diagram]]
+![[SVG/tikz1755252493.3862784.svg|diagram]]
 
 #### Exhaustive Search: Knapsack Problem
 

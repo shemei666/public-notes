@@ -1,8 +1,18 @@
+---
+title: Algebraic Topology
+tags:
+  - "#incomplete"
+  - refactor
+created: 2025-07-28
+---
+
 **Recap**:
 - Homotopy of maps $X\to Y$
 - Path homotopy for maps $I\to X$
 - Products of paths $f:I\to X, g:I\to X ,f*g$
 - Loop at $x_0$ = path initial point and final point = $x_{0}$
+
+## Fundamental Groups
 
 **Theorem**:  path homotopy classes of loops at $x_{0}$ form a group $\pi_{1}(x_{0})$
 
@@ -16,7 +26,7 @@ Suppose $x_{0},x_{1} \in X$ and Suppose $\exists$ a path $\alpha:I \to X$ from $
 $\tilde{\alpha}: \pi_{1}(X,x_{0})\to \pi_{1}(X,x_{1})$
 
 ![[Drawing 2025-07-28 14.16.43.excalidraw.svg]]
-![[SVG/tikz1755251172.5894644.svg|diagram]]
+![[SVG/tikz1755252471.4047825.svg|diagram]]
 $[f] \to [\alpha^{-1} * f * \alpha ]$
 
 this is well defined because $f \cong g$ then $\alpha^{-1} * f * \alpha \cong  \alpha^{-1} * g * \alpha$ 
@@ -95,7 +105,7 @@ If we change the basepoints, How does $h_{*}$ change?
 Assume X path connected. Let $x_{0},x_{1} \in X$, $y_{i} = h(x_{i})$ 
 Let $\alpha: I \to X$ be a path from $x_{0}$  to $x_{1}$  is a path from $y_{0}$ to $y_{1}$
 
-![[SVG/tikz1755251174.3933232.svg|diagram]]
+![[SVG/tikz1755252473.0791786.svg|diagram]]
 
 This implies that $(h_{x_{0}})_{*}$   $(h_{x_{1}})_{*}$ have the same behavior. If one of them is injective/ surjective /bijective then so is the other. Their kernels and images have he same size etc.
 
@@ -109,11 +119,12 @@ Proof of commutativity of diagram: $\overline{(h\circ\alpha)} \circ (h_{x_{0}})_
 How can we compute $\pi_{1}$ Covering spaces
 A covering space of X = a space where some of loops have been 'unwound'
 
+## Covering Spaces
 
-**Def:** Let $p:E \to B$ be a continuous surjection. An open subset $U \subseteq B$ is said to be evenly covered if the inverse image $p^{-1} (U)$ is a disjoing union of open subjsets $\{ V_{\alpha } \}$ in E such that $p_{|_{V_{\alpha }}} : V_{\alpha}\to U$ is a homeomorphism $\forall \alpha$  We call $V_{\alpha }$ a partition of $p^{-1}U$ into slices, each slice being $V_{\alpha }$
+**Def:** Let $p:E \to B$ be a continuous surjection. An open subset $U \subseteq B$ is said to be evenly covered if the inverse image $p^{-1} (U)$ is a disjoint union of open subsets $\{ V_{\alpha } \}$ in E such that $p_{|_{V_{\alpha }}} : V_{\alpha}\to U$ is a homeomorphism $\forall \alpha$  We call $V_{\alpha }$ a partition of $p^{-1}U$ into slices, each slice being $V_{\alpha }$
 If U is evenly covered by p, then so is W for every subspace W $\subseteq$ U.
 
-**Def:** A map $p:E \to B$ is called a covering map if it is surjective and every b $\in B$ has a open neighbourhood which is an evenly covered by p. (Equivalently , B admits a cover by open subsets that are evely covered ). We also say E is a covering space of B by p.
+**Def:** A map $p:E \to B$ is called a _covering map_ if it is surjective and every b $\in B$ has a open neighbourhood which is an evenly covered by p. (Equivalently , B admits a cover by open subsets that are evenly covered ). We also say E is a covering space of B by p.
 
 
 ### Basic Examples and Properties
@@ -153,7 +164,7 @@ $$
 ![[Drawing 2025-07-31 17.38.33.excalidraw.svg]]
 
 
-![[SVG/tikz1755251176.0602312.svg|diagram]]
+![[SVG/tikz1755252474.7456975.svg|diagram]]
 
 - Any collection of open sets $\{ U_{\lambda } \}$ covering B such that each $U_{\lambda }$ is evenly covered will be called a trivialising cover for p. 
 
@@ -178,7 +189,7 @@ Covering map $\implies$ local homeomorphism $\iff$(**Exercise**) locally one-one
 ### The lifting properties of covering spaces
 **Def:** Let $p:E\to B$ be a continuous fn. For any continuous function $f:X\to B$ a lifting of f is a continuous map $\tilde{f}:X\to E$ such that $f= p \circ \tilde{f}$ In general $\tilde{f}$ is not uniquely determined
 
-![[SVG/tikz1755251177.6875932.svg|diagram]]
+![[SVG/tikz1755252476.403913.svg|diagram]]
 
 
 Example : $p : \mathbb{R} \to S^{1}$
@@ -186,9 +197,9 @@ i) $f: I \to S^{1}$  ,$f(s) = (\cos \pi s, \sin \pi s)$ , $\tilde{f}(s) = \frac{
 ii) $g(s) = (\cos \pi s, -\sin \pi s)$ $\tilde{g}(s) = -\frac{s}{2} + n$
 iii) $h(s) = (\cos 4\pi s, \sin 4 \pi s)$ $\tilde{h}(s) = 2s + n$
 
-## Lifting theorems
+### Lifting theorems
 **Theorem:** (Lifting of paths) Let $p:(E,e_{0}) \to (B,b_{0}$ be a covering map. Then any path $f: I \to B$ starting at $b_{0}$ lifts uniquely to a path $\tilde{f}:I\to E$ starting at $e_{0}$
-![[SVG/tikz1755251179.3357084.svg|diagram]]
+![[SVG/tikz1755252478.0477443.svg|diagram]]
 
 **Proof:**  Pick a trivialising open cover $\{ U_{\lambda } \}$ of B for p. Then $\{ f^{-1} U_{\lambda }\}$ is an open cover of I. 
 As I is a compact metric space, by the Lebesgue number lemma, exists $\delta >0$ such that any interval of length less than $\delta$ is in some $f^{-1} U_{\lambda }$ . Hence we may choose $s_{i} \in I$ 
@@ -311,7 +322,7 @@ $$
 $$
 
 Given $f:I\to X$ we have $\bar{f}:S^{1} \to X$ determined by
-![[SVG/tikz1755251180.9704702.svg|diagram]]
+![[SVG/tikz1755252479.603771.svg|diagram]]
 
 Given $g:S^{1} \to X$ we obtain $f:I\to X$ as the composite
 $$
@@ -322,7 +333,7 @@ It is easily seen to be a 1-1 correspondence
 
 If $f_{1},f_{2}$ are 2 path homotopic loops at $x_{0}$ via $F:I\times I \to X$
 then 
-![[SVG/tikz1755251182.5801034.svg|diagram]]
+![[SVG/tikz1755252481.310708.svg|diagram]]
 gives existence of $\overline{F}$  a base point fixing homotopy between $f_{1}:(S^{1},1) \to (X,x_{0})$ and $f_{2}(S_{1},1) \to (X,x_{0})$ 
 
 ![[Drawing 2025-08-07 17.25.22.excalidraw.svg]]
@@ -335,7 +346,7 @@ Given 2 pointed spaces $(A,a),(B,b)$ we define $[(A,a),(B,b)]$ or simply $[A,B]$
 Thus, in this notation $[(S^{1},1),(X,x_{0})] \leftrightarrow \pi_{1}(X,x_{0})$ where $[f] \mapsto [f \circ q]$
 In particular, $[(S^{1},1),(S^{1},1)] \leftrightarrow \pi_{1}(S^{1},1) \cong \mathbb{Z}$ where $[id] \mapsto 1$ 
 
-### Higher homotopy groups 
+## Higher homotopy groups 
 For $n\geq 0$ define $S^{n} \subseteq \mathbb{R}^{n+1}$ to be $\{ v: ||v|| = 1\}$  i.e. unit sphere
 
 Fix a base point a $\in S^{n}$
@@ -355,12 +366,12 @@ Using $\frac{I^{n}}{dI^{n}} \cong S^{n}$ we also have $[(I^{n},dI^{n}),(X,x_{0})
 2. For n>1 $\pi_{n}(X,x_{0})$ is an abelian group
 3. For n>0 $\pi_{n}(S^{n}) \cong \mathbb{Z}$
 
-### Brouwer fixed point theorem
+## Brouwer fixed point theorem
 **Theorem:** (Brouwer fixed point theorem) Let $f: B^{2} \to B^{2}$ be a continuous map. Then there exists a point $x \in B^{n}$ such that $f(x) = x$.
 
 **Proof:** Assume f has no fixed point. Then we'll obtain a retract $B^{2} \to S^{1}$ using this , a contradiction.
 
-![[SVG/tikz1755251184.1138663.svg|diagram]]
+![[SVG/tikz1755252482.9379263.svg|diagram]]
 $$
 \lVert tf(x) + (1-t)x \rVert =1
 $$
@@ -374,7 +385,7 @@ $$
 \{ f:I \to X \text{ at } x_{0} \} \leftrightarrow  \{ \text{maps } (S^{1},1) \to (X,x_{0}) \}
 $$
 
-![[SVG/tikz1755251185.7236667.svg|diagram]]
+![[SVG/tikz1755252485.2291088.svg|diagram]]
 
 This correspondence preserves base point fixed homotopy.
 
@@ -386,7 +397,7 @@ ii) h extends to a map $k:B^{2} \to X$
 iii) $h_{*} : \pi_{1}(S^{1}) \to \pi_{1}(X)$ is the trivial map
 
 **Proof:** $(i) \implies (ii)$
-![[SVG/tikz1755251187.334282.svg|diagram]]
+![[SVG/tikz1755252487.045333.svg|diagram]]
 
 
 $(ii) \implies (iii)$ Follows from functoriality $S^{1} \hookrightarrow B^{2} \xrightarrow{k} X$ 
@@ -462,6 +473,7 @@ Let $F:X\times I \to X$ be a homotopy for the deformation retract. Consider $I\t
 2) Any non-vanishing vector field $\alpha:B^{2} \to \mathbb{R}^{2}\setminus \{ 0 \}$ has a point on $S^{1}$ where $\alpha$ points inwards and a point where it points outwards. (Equivalent to the Brouwer fixed point theorem.) (else $S^{1} \hookrightarrow B^{2} \xrightarrow{\alpha} \mathbb{R}^{2}\setminus \{ 0 \}$).
 3) Deformation retract
 
+## Homotopy equivalence
 
 **Theorem:** Let $h,k$ be maps $(X,x_{0}) \to (Y,y_{0})$. If there exists a base point fixing homotopy fixing homotopy $h \sim k$. Then $h_{*} = k_{*}$ as maps $\pi_{1}(X,x_{0}) \to \pi_{1}(Y,y_{0})$.
 
@@ -500,7 +512,7 @@ Deformation retracts are not symmetric: $\{p\} \hookrightarrow X$ is a deformati
 	c) Figure dumbbell
 	Then (a),(b),(c) are deformation retracts of X with the two missing points placed appropriately.
 a)
-![[SVG/tikz1755251188.6163447.svg|diagram]]
+![[SVG/tikz1755252488.500627.svg|diagram]]
 
 
 

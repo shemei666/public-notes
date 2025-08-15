@@ -1,3 +1,11 @@
+---
+title: Differential geometry and Lie groups
+tags:
+  - incomplete
+created: 2025-08-04
+---
+
+
 **Def:** $S \subset \mathbb{R}^{3}$ is called a surface if $\forall p \in S, \exists W_{p} \subset \mathbb{R}^{3}$ open such that $\exists$ a homeomorphism $\sigma_{U} \to W \cap S \subset \mathbb{R}^{3}$
 $\mathscr{A} = \{ W_{p} \cap S | W_{p},S \quad \text{as above} \}$ is called atlas.
 
@@ -5,7 +13,7 @@ S is called _regular_ if $\sigma$ is also differentiable and $\nabla_{x}: \mathb
 
 
 Transition functions:
-![[SVG/tikz1755251195.6856055.svg|diagram]]
+![[SVG/tikz1755252495.0336535.svg|diagram]]
 remark: goes through the intersection.
 
 **Theorem:** In a regular atlas, all transition fns are smooth.
