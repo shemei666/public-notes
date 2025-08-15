@@ -3,6 +3,7 @@ title: Differential geometry and Lie groups
 tags:
   - incomplete
 created: 2025-08-04
+draft: false
 ---
 
 
@@ -13,7 +14,7 @@ S is called _regular_ if $\sigma$ is also differentiable and $\nabla_{x}: \mathb
 
 
 Transition functions:
-![[SVG/tikz1755252495.0336535.svg|diagram]]
+![[SVG/tikz1755255125.7149007.svg|diagram]]
 remark: goes through the intersection.
 
 **Theorem:** In a regular atlas, all transition fns are smooth.

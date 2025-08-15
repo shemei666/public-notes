@@ -3,6 +3,7 @@ title: Function Spaces
 tags:
   - incomplete
 created: 2025-07-25
+draft: false
 ---
 
 **Proposition**:
@@ -631,7 +632,7 @@ Example: $C(X)$ X is compact is uniformly closed algebra
 
 **Def:** A set $\mathscr{B}$ is said to be uniform closure of an algebra $\mathscr{A}$ of  real valued functions of X if $\mathscr{B}$ is the set of all uniform limits of $\mathscr{A}$
 
-![[SVG/tikz1755252496.5638163.svg|diagram]]
+![[SVG/tikz1755255127.190391.svg|diagram]]
 
 
 **Theorem:** A uniform closure $\mathscr{B}$ of an algebra $\mathscr{A}$ of bounded functions on a metric space X is a uniformly closed algebra
