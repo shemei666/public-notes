@@ -1,3 +1,8 @@
+---
+title: draft note
+draft: true
+---
+
 2) Write down a polynomial in $F(\beta )$ which has root $\alpha$, consider it as a polynomial in $F(\alpha )$.
 3)  there is $\mathbb{F}_{p}$ inside a finite field of char p. Hence consider it as a vector space over $\mathbb{F}_{p}$.
 4) The points will lie on the unit circle and will be roots of unity and hence pick the one with smallest angle.
