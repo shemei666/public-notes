@@ -55,6 +55,7 @@ Example:
 
 **Def**: Let $(X,\rho)$ be a metric space and $E\subseteq X$ then $\text{diam}(E)$ is $\sup_{x,y \in E} \rho(x,y)$, $E$ is said to be bounded in the supremum is finite.
 $\{E_{i}\}_{i \in \mathbb{N}}$ is a decreasing sequence of non-empty subsets of E is said to be contracting if $\text{diam} E_{n}\to 0$ as $n\to \infty$
+
 **Theorem**: (Cantor Intersection) Let $(X,\rho)$ be a metric space, and X is complete iff whenever ${F_{i}}$ is a decreasing seq of non empty closed contracting subset of X, $\bigcap  F_{i}$ contains exactly one point.
 
 **Proof**: $(\implies)$  Choose a point from each of $F_{i}$ then since the diameters are decreasing to 0, we have a Cauchy sequence, hence it converges to a point in X.
@@ -632,7 +633,7 @@ Example: $C(X)$ X is compact is uniformly closed algebra
 
 **Def:** A set $\mathscr{B}$ is said to be uniform closure of an algebra $\mathscr{A}$ of  real valued functions of X if $\mathscr{B}$ is the set of all uniform limits of $\mathscr{A}$
 
-![[SVG/tikz1755255127.190391.svg|diagram]]
+![[SVG/tikzdiagram16.svg|diagram]]
 
 
 **Theorem:** A uniform closure $\mathscr{B}$ of an algebra $\mathscr{A}$ of bounded functions on a metric space X is a uniformly closed algebra

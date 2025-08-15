@@ -27,7 +27,7 @@ Suppose $x_{0},x_{1} \in X$ and Suppose $\exists$ a path $\alpha:I \to X$ from $
 $\tilde{\alpha}: \pi_{1}(X,x_{0})\to \pi_{1}(X,x_{1})$
 
 ![[Drawing 2025-07-28 14.16.43.excalidraw.svg]]
-![[SVG/tikz1755255104.130486.svg|diagram]]
+![[SVG/tikzdiagram1.svg|diagram]]
 $[f] \to [\alpha^{-1} * f * \alpha ]$
 
 this is well defined because $f \cong g$ then $\alpha^{-1} * f * \alpha \cong  \alpha^{-1} * g * \alpha$ 
@@ -106,7 +106,7 @@ If we change the basepoints, How does $h_{*}$ change?
 Assume X path connected. Let $x_{0},x_{1} \in X$, $y_{i} = h(x_{i})$ 
 Let $\alpha: I \to X$ be a path from $x_{0}$  to $x_{1}$  is a path from $y_{0}$ to $y_{1}$
 
-![[SVG/tikz1755255105.7454216.svg|diagram]]
+![[SVG/tikzdiagram2.svg|diagram]]
 
 This implies that $(h_{x_{0}})_{*}$   $(h_{x_{1}})_{*}$ have the same behavior. If one of them is injective/ surjective /bijective then so is the other. Their kernels and images have he same size etc.
 
@@ -165,7 +165,7 @@ $$
 ![[Drawing 2025-07-31 17.38.33.excalidraw.svg]]
 
 
-![[SVG/tikz1755255107.3686643.svg|diagram]]
+![[SVG/tikzdiagram3.svg|diagram]]
 
 - Any collection of open sets $\{ U_{\lambda } \}$ covering B such that each $U_{\lambda }$ is evenly covered will be called a trivialising cover for p. 
 
@@ -190,7 +190,7 @@ Covering map $\implies$ local homeomorphism $\iff$(**Exercise**) locally one-one
 ### The lifting properties of covering spaces
 **Def:** Let $p:E\to B$ be a continuous fn. For any continuous function $f:X\to B$ a lifting of f is a continuous map $\tilde{f}:X\to E$ such that $f= p \circ \tilde{f}$ In general $\tilde{f}$ is not uniquely determined
 
-![[SVG/tikz1755255108.9625883.svg|diagram]]
+![[SVG/tikzdiagram4.svg|diagram]]
 
 
 Example : $p : \mathbb{R} \to S^{1}$
@@ -200,7 +200,7 @@ iii) $h(s) = (\cos 4\pi s, \sin 4 \pi s)$ $\tilde{h}(s) = 2s + n$
 
 ### Lifting theorems
 **Theorem:** (Lifting of paths) Let $p:(E,e_{0}) \to (B,b_{0}$ be a covering map. Then any path $f: I \to B$ starting at $b_{0}$ lifts uniquely to a path $\tilde{f}:I\to E$ starting at $e_{0}$
-![[SVG/tikz1755255110.5278277.svg|diagram]]
+![[SVG/tikzdiagram5.svg|diagram]]
 
 **Proof:**  Pick a trivialising open cover $\{ U_{\lambda } \}$ of B for p. Then $\{ f^{-1} U_{\lambda }\}$ is an open cover of I. 
 As I is a compact metric space, by the Lebesgue number lemma, exists $\delta >0$ such that any interval of length less than $\delta$ is in some $f^{-1} U_{\lambda }$ . Hence we may choose $s_{i} \in I$ 
@@ -323,7 +323,7 @@ $$
 $$
 
 Given $f:I\to X$ we have $\bar{f}:S^{1} \to X$ determined by
-![[SVG/tikz1755255112.0316463.svg|diagram]]
+![[SVG/tikzdiagram6.svg|diagram]]
 
 Given $g:S^{1} \to X$ we obtain $f:I\to X$ as the composite
 $$
@@ -334,7 +334,7 @@ It is easily seen to be a 1-1 correspondence
 
 If $f_{1},f_{2}$ are 2 path homotopic loops at $x_{0}$ via $F:I\times I \to X$
 then 
-![[SVG/tikz1755255113.5982847.svg|diagram]]
+![[SVG/tikzdiagram7.svg|diagram]]
 gives existence of $\overline{F}$  a base point fixing homotopy between $f_{1}:(S^{1},1) \to (X,x_{0})$ and $f_{2}(S_{1},1) \to (X,x_{0})$ 
 
 ![[Drawing 2025-08-07 17.25.22.excalidraw.svg]]
@@ -372,7 +372,7 @@ Using $\frac{I^{n}}{dI^{n}} \cong S^{n}$ we also have $[(I^{n},dI^{n}),(X,x_{0})
 
 **Proof:** Assume f has no fixed point. Then we'll obtain a retract $B^{2} \to S^{1}$ using this , a contradiction.
 
-![[SVG/tikz1755255115.0343058.svg|diagram]]
+![[SVG/tikzdiagram8.svg|diagram]]
 $$
 \lVert tf(x) + (1-t)x \rVert =1
 $$
@@ -386,7 +386,7 @@ $$
 \{ f:I \to X \text{ at } x_{0} \} \leftrightarrow  \{ \text{maps } (S^{1},1) \to (X,x_{0}) \}
 $$
 
-![[SVG/tikz1755255116.5445564.svg|diagram]]
+![[SVG/tikzdiagram9.svg|diagram]]
 
 This correspondence preserves base point fixed homotopy.
 
@@ -398,7 +398,7 @@ ii) h extends to a map $k:B^{2} \to X$
 iii) $h_{*} : \pi_{1}(S^{1}) \to \pi_{1}(X)$ is the trivial map
 
 **Proof:** $(i) \implies (ii)$
-![[SVG/tikz1755255117.9958138.svg|diagram]]
+![[SVG/tikzdiagram10.svg|diagram]]
 
 
 $(ii) \implies (iii)$ Follows from functoriality $S^{1} \hookrightarrow B^{2} \xrightarrow{k} X$ 
@@ -513,7 +513,7 @@ Deformation retracts are not symmetric: $\{p\} \hookrightarrow X$ is a deformati
 	c) Figure dumbbell
 	Then (a),(b),(c) are deformation retracts of X with the two missing points placed appropriately.
 a)
-![[SVG/tikz1755255119.2643483.svg|diagram]]
+![[SVG/tikzdiagram11.svg|diagram]]
 
 
 
