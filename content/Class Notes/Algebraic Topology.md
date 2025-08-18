@@ -423,10 +423,10 @@ $$
 Then $\alpha_{|S^{1}} : S^{1} \to \mathbb{R}^{2}\setminus \{ 0 \}$ is null-homotopic by earlier lemma. Suppose $\alpha_{|S^{1}}$ does not point inwards anywhere. Then we'll find a homotopy $\alpha_{|S^{1}} \sim j$ ($j: S^{1} \hookrightarrow \mathbb{R}^{2} \setminus \{ 0 \}$) which will be a contradiction.
 For this we use the straight line homotopy. Though $\mathbb{R}^{2}\setminus \{ 0 \}$ is not convex, it suffices to check that $t \alpha_{|S^{1}} + (1-t)$ is nonzero for all $t \in [0,1]$. 
 $$
-\begin{align}
+\begin{align*}
 F: S^{1}\times I \to & \mathbb{R}^{2} \setminus \{ 0 \}  \\
 (x,t) \mapsto& t \alpha_{|S^{1}}(x) + (1-t)x
-\end{align}
+\end{align*}
 $$
 Clearly RHS is nonzero for $t=0,1$. For $t \in (0,1)$ If RHS = 0, we get $\alpha(x) = -\frac{1-t}{t}x$ a contradiction to $\alpha$ not pointing inwards anywhere.
 
@@ -484,12 +484,12 @@ I\times I \xrightarrow{f\times Id} X\times I \xrightarrow{H}Y
 $$
 satisfies
 $$
-\begin{align}
+\begin{align*}
 G(s,0) =& H(f(s),0)=h \circ f (s) = \text{image of loop f in Y under } h \\
 G(s,1) =& H(f(s),1) = k\circ f(s) = \text{image of loop f in Y under }  k \\
 G(0,t) =& H(x_{0},t)=y_{0} \\
 G(1,t) =& H(x_{0},t) = y_{0}
-\end{align}
+\end{align*}
 $$
 Thus $h \circ f \sim k \circ f$ in Y i.e. $h_{*}[f] = k_{*}[f] \quad \blacksquare$
 
@@ -520,27 +520,27 @@ $\{ p \} \hookrightarrow X$ with X contractible. Is this a deformation retract a
 Broom space $X\times I$
 
 **Theorem:**(Invariance of $\pi_{1}$ under homotopy of maps) Let $h,k: X\to Y$ be maps,, $x_{0} \in X,y_{0} = h(x_{0}), y_{1}=k(x_{0})$. If $h,k$ are homotopic via $H:X\times I \to Y$(so that $\alpha(t) = H(x_{0},t)$ is a path in Y from $y_{0}$ to $y_{1}$) then the following diagram commutes
-![[SVG/tikzdiagram11.svg|diagram]]
+![[SVG\tikzdiagram11.svg|diagram]]
 ![[Drawing 2025-08-18 14.47.11.excalidraw]]
 
 **Proof:** Let $f:I\to X$ be a loop in X at $x_{0}$. It suffices to check that for any such arbitrary f, we have $\hat{\alpha}(h_{*}[f]) = k_{*}[f]$ 
 i.e.
 $$
-\begin{align}
+\begin{align*}
 \bar{\alpha} * (h\circ f)*\alpha \sim_{p} k\circ f \text{ equivalently} \\
 \bar{\alpha}*(h\circ f)*\alpha*\overline{(k\circ f)} \text{ is a path homotpic to the trivial homotopy}
-\end{align}
+\end{align*}
 $$
 
 $I\times I \xrightarrow{f\times Id} X\times I \xrightarrow{H} Y$
 
 $$
-\begin{align}
+\begin{align*}
 F(x,0) = H(f(s),0) = h\circ f(s)  \\ \\
 F(1,t) = H(x_{0},t)= \alpha(t) \\
 F(1-s,1) = H(f(1-s),1) = k\circ \overline{f} (s) = \overline{(k \circ f)}(s) \\
 F(0,1-t) = H(x_{0},1-t) = \bar{\alpha}(t)
-\end{align}
+\end{align*}
 $$
 
 Since $I\times I$ is homeomorphic to the disc $D^{2}$ and the path $1*2*3*4$ goes to the boundary $S^{1}$ under such a homeomorphism we see that the loop has trival image in $\pi_{1}(Y,y_{1}) \quad \blacksquare$
@@ -555,7 +555,7 @@ Since $I\times I$ is homeomorphic to the disc $D^{2}$ and the path $1*2*3*4$ goe
 **Theorem:** (Invariance of $\pi_{1}$ under homotopy equivalence of spaces) If $f:X\to Y$ is a homotopy equivalence, then for any $x_{0} \in X$, $y_{0}=f(x)$ we have $\pi_{1}(X,x_{0}) \cong \pi_{1}(Y,y_{0})$ via $(f_{x_{0}})_{*}$ 
 
 **Proof:** Let $g:Y \to X$ be a homotopy inverse. Let $x_{1}=g(y_{0})$. Let $y_{1}=f(x_{1})$. Now consider maps
-![[SVG/tikzdiagram12.svg|diagram]]
+![[SVG\tikzdiagram12.svg|diagram]]
 
 Since $g\circ f \sim Id_{x}$. $((g\circ f)_{x_{0}})_{*} = (g_{y_{0}})_{*}(f_{x_{0}})_{{*}}$ is an isomorphism. Similarly $f\circ g \sim Id_{Y} \implies (f_{x_{1}})_{*}(g_{y_{0}})_{*}$  is an isomorphism.
 

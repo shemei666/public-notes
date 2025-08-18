@@ -158,21 +158,21 @@ $$
 ||x_{r}|| = 1
 $$
 $$
-\begin{align}
+\begin{align*}
 \text{dist}(x_{r},Y) \leq & ||x_{r}-0|| \quad 0 \in Y \\
 & ||x_{r}|| \\
 &=1
-\end{align}
+\end{align*}
 $$
 $$
-\begin{align}
+\begin{align*}
 \text{dist}(x_{r},Y) =& \text{ dist}\left( \frac{x-y}{||x-y||},Y\right) \\
 =&\frac{1}{||x-y||}\text{dist}(x-y,||x-y||Y) \\
 =&\frac{1}{||x-y||} \text{dist}(x-y,Y) \\
 =&\frac{1}{||x-y||}\text{dist}(X,Y) \\
 \geq & \quad r \hspace{10em} \blacksquare  \\
  
-\end{align}
+\end{align*}
 $$
 
 
@@ -206,11 +206,11 @@ $$
 $$
 
 $$ 
-\begin{align}
+\begin{align*}
 |f_{n}(x) - f_{m}(x) | &\leq |f_{n}(x)-f(x) + f(x) - f_{m}(x)|
 \\ &\leq |f_{n}(x) - f(x)| + |f_{m}(x) - f(x)|  \\
 &< \epsilon
-\end{align}
+\end{align*}
 $$
 
 Therefore $f_{n}$ is uniformly Cauchy
@@ -319,13 +319,13 @@ Take $x_{1} \in S$ and consider $\{ f_{n}(x_{1}) \}_{n=1}^{\infty }$ . Since $\{
 
 So it has convergent subsequence $\{ f_{1,n}(x_{1}) \}$. Consider ${f_{1,n}}$ and look at ${f_{1,n}(x_{2})}$ and repeat the same process to get
 $$
-\begin{align}
+\begin{align*}
 \{f_{1,n}\} &= f_{1,1} ,f_{1,2},\dots,f_{1,k} \\
 \{f_{2,n}\} &= f_{2,1},f_{2,2},\dots,f_{2,k} \\
 \vdots & \\ 
 \{f_{m,n}\} &= f_{m,1},f_{m,2},\dots,f_{m,k}
 
-\end{align}
+\end{align*}
 $$
 
 Consider $\{ f_{n,n} \}_{n=1}^{\infty}$ converge pointwise at each point of S. Define $g_{n} = f_{n,n} \forall n \in \mathbb{N}$ 
@@ -350,13 +350,13 @@ $$
 $$
 Then if $\rho(x,y) < \delta$
 $$
-\begin{align}
+\begin{align*}
 \lvert g_{n}(x) - g_{m}(x)\rvert \leq &\lvert g_{n}(x) - g_{n}(s) \rvert +& \\ 
 & \lvert g_{n}(s) - g_{m}(s) \rvert +&  \\
 &\lvert g_{m}(s)-g_{m}(x) \rvert   \\
 \leq &\frac{\epsilon}{3} + \frac{\epsilon}{3} + \frac{\epsilon}{3} \\
 =& \epsilon
-\end{align}
+\end{align*}
 
 $$
 
@@ -506,22 +506,22 @@ Tf(t_{0}) = x_{0}
 $$
 Also, 
 $$
-\begin{align}
+\begin{align*}
 \sup_{t \in J} \lvert x_{0} - Tf(t) \rvert \leq & \sup_{t \in J}\int_{t_{0}}^{t}\lvert g(s,f(s))ds \rvert \\
 \leq & c \sup_{t \in J} \int_{t_{0}}^{t}ds \leq c\beta 
-\end{align}
+\end{align*}
 $$
 So, $Tf \in X$
 
 **Step 4**: T is a contraction
 $\forall t \in [t_{0}-\beta,t_{0}+\beta]$ and $\forall f_{1},f_{2} \in X$ then
 $$
-\begin{align}
+\begin{align*}
 \lvert Tf_{1}(t) - Tf_{2}(t) \rvert =& \left\lvert  \int_{t_{0}}^{t}[g(s,f_{1}(s)-g(s,f_{2}(s)))]ds  \right\rvert  \\
 \leq & k\int_{t_{0}}^{t}\lvert f_{1}(s)-f_{2}(s) \rvert ds \quad \text{(By the Lipschitz cond.)} \\
 \leq & k\sup_{s \in J}\int_{t_{0}}^{t}ds \\
 \leq & \beta k \rho_{\infty}(f_{1},f_{2})
-\end{align}
+\end{align*}
 $$
 So,
 $$
@@ -599,10 +599,10 @@ $$
 $$
 So,$\forall x \in B(x_{0},\delta)$ and $\forall j\geq N$,
 $$
-\begin{align}
+\begin{align*}
 \lvert f_{j}(x_{0}) -f_{j}(x) \rvert \leq & \lvert f_{j}(x_{0}) - f_{N}(x_{0}) \rvert + \lvert f_{N}(x_{0})-f_{N}(x) \rvert +\lvert f_{N}(x)-f_{j}(x) \rvert  \\
 <& \frac{3\epsilon }{4}
-\end{align}
+\end{align*}
 $$
 So, $\{ f_{n} \}_{n=N}^{\infty}$ is equicontinuous at $x_{0}$, Since $\{ f_{1},\dots,f_{N-1} \}$ is equicontinuous at $x_{0}$, So $\{ f_{n} \}_{n=1}^{\infty}$ is equicontinuous.
 
@@ -687,30 +687,30 @@ $$
 
 Fix $\xi \in [0,1]$
 $$
-\begin{align}
+\begin{align*}
 B_{n}(x,f-f(\xi)) = \sum_{k=0}^{n} (f- f(\xi))\left( \frac{k}{n} \right) \binom{n}{k} x^{k}(1-x)^{n-k} \\
 = B_{n}(x,f) - f(\xi)B_{n}(x,1)=B_{n}(x,f)-f(\xi)
-\end{align}
+\end{align*}
 $$
 Aim to show, $\sup_{\xi \in [0,1]} \lvert B_{n}(\xi,f)- f(\xi) \rvert \to 0$
 
 $$
-\begin{align}
+\begin{align*}
 \lvert B_{n}(x,f) - f(\xi) \rvert = |B_{n}(x,f-f(\xi)) \\
 \leq B_{n}\left( x, \frac{2M}{\delta^{2}}  (x-\xi)^{2} + \frac{\epsilon}{2} \right) \\
 =B_{n}\left( x,\frac{2M}{\delta^{2}}[x^{2} - 2x \xi + \xi^{2}] + \frac{\epsilon}{2} \right) \\
 = \frac{2M}{\delta} (x-\xi)^{2} + \frac{2M}{\delta^{2}n}\left( x-x^{2} \right)+ \frac{\epsilon}{2} \hspace{4em} \text{(*)}
-\end{align}
+\end{align*}
 $$
 
 
 Putting $x = \xi$ in $(*)$ we have,
 $$
-\begin{align}
+\begin{align*}
 |B_{n}(\xi,\delta )  - f(\xi)| \leq & \frac{2M}{\delta^{2}n}(\xi - \xi^{2}) + \frac{\epsilon}{2} \\
 \leq \frac{2M}{\delta^{2}n} \frac{1}{4} + \frac{\epsilon}{2} \\
 =& \frac{M}{2\delta^{2}n} + \frac{\epsilon}{2} \\
-\end{align}
+\end{align*}
 $$
 
 $$
@@ -746,10 +746,10 @@ Since $f_{n} , g_{n}$ are bounded so are $f,g$ we need to prove $f +g \in \maths
 
 1) Given $\epsilon >0 \exists n_{1},n_{2} \in \mathbb{N}$ such that
 $$
-\begin{align}
+\begin{align*}
 \lvert f_{n}(x) - f(x) \rvert  <\frac{\epsilon}{2} \\
 \lvert g_{n}(x) - g(x) \rvert  <\frac{\epsilon}{2}
-\end{align}
+\end{align*}
 $$
 
 $\forall  n\geq \max \{n_{1},n_{2}\}$
@@ -763,27 +763,27 @@ $$
 \lvert  f_{n}(x) - f(x) \rvert <1 \quad \forall n\geq n_{0},\forall x \in X
 $$
 $$
-\begin{align}
+\begin{align*}
 \implies \lvert f_{n}(x) \rvert < & 1 + f(x) \quad \forall n\geq n_{0},\forall x \in X \\
 \leq & 1 + M
-\end{align}
+\end{align*}
 $$
 
 Now, Given $\epsilon>0$ , $\exists n_{1},n_{2} \in \mathbb{N}$ such that
 $$
-\begin{align}
+\begin{align*}
 \lvert f_{n}(x) - f(x) \rvert  <\frac{\epsilon}{2M_{2}}  \\
 \lvert g_{n}(x) - g(x) \rvert  <\frac{\epsilon}{2(1+M_{1})}
-\end{align}
+\end{align*}
 $$
 
 $\forall n \geq \max \{ n_{0},n_{1},n_{2} \}$ and $\forall x \in X$
 $$
-\begin{align}
+\begin{align*}
 \lvert f_{n}(x)g_{n}(x) - f(x)g(x) \rvert &\leq \lvert f_{n}(x) - f(x) \rvert \lvert g_{n}(x) \rvert + \lvert g_{n}(x) - g(x) \rvert \lvert f(x) \rvert  \\
 &< \frac{\epsilon}{2M_{2}}(M_{2}) + \frac{\epsilon}{2(1+M_{1})}(1 + M_{1})  \\
 &= \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon 
-\end{align}
+\end{align*}
 $$
 Therefore $\{ f_{n}g_{n} \} \to fg$ uniformly on X
 iii) $cf \in \mathscr{B}$ (Clear!)
@@ -793,23 +793,23 @@ i.e. To prove if $\{ h_{n} \} \subseteq \mathscr{B} \to h$ uniformly on X then $
 
 Given $\epsilon>0$, $\exists n_{1} \in \mathbb{N}$ such that
 $$
-\begin{align}
+\begin{align*}
 \lvert h_{n}(x) - h(x) \rvert < \frac{\epsilon}{2} \quad \forall n \geq n_{1}, \forall x \in X
-\end{align}
+\end{align*}
 $$
 
 Now, since $h_{n} \in \mathscr{B}$ and $\mathscr{B}$ in the unifrom closure of $\mathscr{A}, \exists \{ h_{n,i} \}_{i=1}^{\infty} \subseteq \mathscr{A}$ such that $\{ h_{n,i} \} \to h_{n}$ uniformly i.e. $e\xi st i_{n} \in \mathbb{N}$ such that
 $$
-\begin{align}
+\begin{align*}
 \lvert h_{n,i}(x) - h_{n}(x) \rvert < \frac{\epsilon}{2} \quad \forall i \geq i_{n}, \forall x \in X
-\end{align}
+\end{align*}
 $$
 
 Now, for $n \geq n_{1}, \forall x \in X$
 $$
-\begin{align}
+\begin{align*}
 \lvert h_{n,i}(x) - h(x) \rvert &\leq \lvert h_{n,i}(x) - h_{n}(x) \rvert + \lvert h_{n}(x) - h(x) \rvert \\
-\end{align}
+\end{align*}
 $$
 So, $f \in \mathscr{B}$ and we are done
 
@@ -828,10 +828,10 @@ $$
 Therefore $|f| \in \mathscr{B}$
 Similarly, we can show $\max \{ f,g \}, \min \{ f,g \} \in \mathscr{B}$ by
 $$
-\begin{align}
+\begin{align*}
 \max \{ f,g \} = \frac{1}{2} \left( f + g + |f-g| \right) \\
 \min \{ f,g \} = \frac{1}{2} \left( f + g - |f-g| \right)
-\end{align}
+\end{align*}
 $$
 $\quad \blacksquare$
 
@@ -882,20 +882,20 @@ $$
 $$
 We can check,
 $$
-\begin{align}
+\begin{align*}
 
 -\epsilon p_{n}(f_{0}) - \frac{2M}{\delta^{2}}p_{n}(f_{y}) <& p_{n}(f)(x) - f(y) p_{n}(f_{0})(y)  \\
 \leq& \frac{2M}{\delta^{2}}p_{n}(f_{y})(y)+\epsilon p_{n}(f_{0})(y) 
-\end{align}
+\end{align*}
 \tag{***}
 $$
 Now,
 $$
-\begin{align}
+\begin{align*}
 p_{k}(f_{y})(y) &= p_{k}(x^{2}-2xy+y^{2})(y) \\
 &= p_{k}(f^{2})(y) - 2yp_{k}(f_{1}(y)) + p_{k}(f_{2})(y)  \\
 &\to y^{2} - 2y^{2} + y^{2} = 0
-\end{align}
+\end{align*}
 $$
 
 Since $\{ p_{k}(f_{0})(y) \} \to 1$ uniformly $\forall y \in [a,b]$, by $(* * *)$ 

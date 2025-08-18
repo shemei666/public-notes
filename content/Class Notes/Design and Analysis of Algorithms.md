@@ -168,11 +168,11 @@ $$
 
 
 $$
-\begin{align}
+\begin{align*}
 T(n) = 2T(n-1) + 1 \\
 T(n-1) = (2T(n-2) + 1) +1\\
 i: T(n) = 2^{i}T(n-i) + 2^i - 1 \\
-\end{align}
+\end{align*}
 $$
 ![[SVG\tikzdiagram14.svg|diagram]]
 ### Brute force, Decrease-and-Conquer & D & C Algorithms
