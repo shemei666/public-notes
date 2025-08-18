@@ -27,7 +27,7 @@ Suppose $x_{0},x_{1} \in X$ and Suppose $\exists$ a path $\alpha:I \to X$ from $
 $\tilde{\alpha}: \pi_{1}(X,x_{0})\to \pi_{1}(X,x_{1})$
 
 ![[Drawing 2025-07-28 14.16.43.excalidraw.svg]]
-![[SVG/tikzdiagram1.svg|diagram]]
+![[SVG\tikzdiagram1.svg|diagram]]
 $[f] \to [\alpha^{-1} * f * \alpha ]$
 
 this is well defined because $f \cong g$ then $\alpha^{-1} * f * \alpha \cong  \alpha^{-1} * g * \alpha$ 
@@ -106,7 +106,7 @@ If we change the basepoints, How does $h_{*}$ change?
 Assume X path connected. Let $x_{0},x_{1} \in X$, $y_{i} = h(x_{i})$ 
 Let $\alpha: I \to X$ be a path from $x_{0}$  to $x_{1}$  is a path from $y_{0}$ to $y_{1}$
 
-![[SVG/tikzdiagram2.svg|diagram]]
+![[SVG\tikzdiagram2.svg|diagram]]
 
 This implies that $(h_{x_{0}})_{*}$   $(h_{x_{1}})_{*}$ have the same behavior. If one of them is injective/ surjective /bijective then so is the other. Their kernels and images have he same size etc.
 
@@ -165,7 +165,7 @@ $$
 ![[Drawing 2025-07-31 17.38.33.excalidraw.svg]]
 
 
-![[SVG/tikzdiagram3.svg|diagram]]
+![[SVG\tikzdiagram3.svg|diagram]]
 
 - Any collection of open sets $\{ U_{\lambda } \}$ covering B such that each $U_{\lambda }$ is evenly covered will be called a trivialising cover for p. 
 
@@ -190,7 +190,7 @@ Covering map $\implies$ local homeomorphism $\iff$(**Exercise**) locally one-one
 ### The lifting properties of covering spaces
 **Def:** Let $p:E\to B$ be a continuous fn. For any continuous function $f:X\to B$ a lifting of f is a continuous map $\tilde{f}:X\to E$ such that $f= p \circ \tilde{f}$ In general $\tilde{f}$ is not uniquely determined
 
-![[SVG/tikzdiagram4.svg|diagram]]
+![[SVG\tikzdiagram4.svg|diagram]]
 
 
 Example : $p : \mathbb{R} \to S^{1}$
@@ -200,7 +200,7 @@ iii) $h(s) = (\cos 4\pi s, \sin 4 \pi s)$ $\tilde{h}(s) = 2s + n$
 
 ### Lifting theorems
 **Theorem:** (Lifting of paths) Let $p:(E,e_{0}) \to (B,b_{0}$ be a covering map. Then any path $f: I \to B$ starting at $b_{0}$ lifts uniquely to a path $\tilde{f}:I\to E$ starting at $e_{0}$
-![[SVG/tikzdiagram5.svg|diagram]]
+![[SVG\tikzdiagram5.svg|diagram]]
 
 **Proof:**  Pick a trivialising open cover $\{ U_{\lambda } \}$ of B for p. Then $\{ f^{-1} U_{\lambda }\}$ is an open cover of I. 
 As I is a compact metric space, by the Lebesgue number lemma, exists $\delta >0$ such that any interval of length less than $\delta$ is in some $f^{-1} U_{\lambda }$ . Hence we may choose $s_{i} \in I$ 
@@ -323,7 +323,7 @@ $$
 $$
 
 Given $f:I\to X$ we have $\bar{f}:S^{1} \to X$ determined by
-![[SVG/tikzdiagram6.svg|diagram]]
+![[SVG\tikzdiagram6.svg|diagram]]
 
 Given $g:S^{1} \to X$ we obtain $f:I\to X$ as the composite
 $$
@@ -334,7 +334,7 @@ It is easily seen to be a 1-1 correspondence
 
 If $f_{1},f_{2}$ are 2 path homotopic loops at $x_{0}$ via $F:I\times I \to X$
 then 
-![[SVG/tikzdiagram7.svg|diagram]]
+![[SVG\tikzdiagram7.svg|diagram]]
 gives existence of $\overline{F}$  a base point fixing homotopy between $f_{1}:(S^{1},1) \to (X,x_{0})$ and $f_{2}(S_{1},1) \to (X,x_{0})$ 
 
 ![[Drawing 2025-08-07 17.25.22.excalidraw.svg]]
@@ -372,7 +372,7 @@ Using $\frac{I^{n}}{dI^{n}} \cong S^{n}$ we also have $[(I^{n},dI^{n}),(X,x_{0})
 
 **Proof:** Assume f has no fixed point. Then we'll obtain a retract $B^{2} \to S^{1}$ using this , a contradiction.
 
-![[SVG/tikzdiagram8.svg|diagram]]
+![[SVG\tikzdiagram8.svg|diagram]]
 $$
 \lVert tf(x) + (1-t)x \rVert =1
 $$
@@ -386,7 +386,7 @@ $$
 \{ f:I \to X \text{ at } x_{0} \} \leftrightarrow  \{ \text{maps } (S^{1},1) \to (X,x_{0}) \}
 $$
 
-![[SVG/tikzdiagram9.svg|diagram]]
+![[SVG\tikzdiagram9.svg|diagram]]
 
 This correspondence preserves base point fixed homotopy.
 
@@ -398,7 +398,7 @@ ii) h extends to a map $k:B^{2} \to X$
 iii) $h_{*} : \pi_{1}(S^{1}) \to \pi_{1}(X)$ is the trivial map
 
 **Proof:** $(i) \implies (ii)$
-![[SVG/tikzdiagram10.svg|diagram]]
+![[SVG\tikzdiagram10.svg|diagram]]
 
 
 $(ii) \implies (iii)$ Follows from functoriality $S^{1} \hookrightarrow B^{2} \xrightarrow{k} X$ 
@@ -495,7 +495,7 @@ Thus $h \circ f \sim k \circ f$ in Y i.e. $h_{*}[f] = k_{*}[f] \quad \blacksquar
 
 **Def:** Two maps $f:X\to Y$ and $g:Y\to X$ are said to be a homotopy equivalence if $g\circ f:X\to X$ is homotopic to the identity on X ($g \circ f \sim Id_{x}$) and $f \circ g:Y\to Y$ is homotopic to $Id_{y}$. We say that $f,g$ are homotopy inverses. We say that $X,Y$ are homotopically equivalent space or have the same homotopy type.
 
-E.g.: A deformation retract $j:A\to X$ is a homotopy eq. Indeed with $\gamma:X\to A$ the retract, we have $r\circ j = Id_{A}$ while $j \circ r \sim Id_{x}$ via the deformation retraction H.
+E.g.: A deformation retract $j:A\to X$ is a homotopy eq. Indeed with $\gamma:X\to A$ the retract, we have $\gamma \circ j = Id_{A}$ while $j \circ \gamma  \sim Id_{x}$ via the deformation retraction H.
 
 If $f:X\to Y$ and $h:Y\to Z$ are homotopy equivalences with homotopy inverses $g:Y\to Z$ and $k:Z\to Y$ resp. then $h\circ f:X\to Z$ is also a homotopy eq with inverse $g\circ k$ 
 
@@ -512,19 +512,84 @@ Deformation retracts are not symmetric: $\{p\} \hookrightarrow X$ is a deformati
 	b) Figure $\theta$
 	c) Figure dumbbell
 	Then (a),(b),(c) are deformation retracts of X with the two missing points placed appropriately.
-a)
+
+
+$S^{n} \hookrightarrow \mathbb{R}^{n+1} \setminus \{ 0 \}$ is a deformation retract. $v \mapsto \frac{v}{||v||}$.
+$\{ p \} \hookrightarrow X$ with X contractible. Is this a deformation retract always?
+
+Broom space $X\times I$
+
+**Theorem:**(Invariance of $\pi_{1}$ under homotopy of maps) Let $h,k: X\to Y$ be maps,, $x_{0} \in X,y_{0} = h(x_{0}), y_{1}=k(x_{0})$. If $h,k$ are homotopic via $H:X\times I \to Y$(so that $\alpha(t) = H(x_{0},t)$ is a path in Y from $y_{0}$ to $y_{1}$) then the following diagram commutes
 ![[SVG/tikzdiagram11.svg|diagram]]
+![[Drawing 2025-08-18 14.47.11.excalidraw]]
 
+**Proof:** Let $f:I\to X$ be a loop in X at $x_{0}$. It suffices to check that for any such arbitrary f, we have $\hat{\alpha}(h_{*}[f]) = k_{*}[f]$ 
+i.e.
+$$
+\begin{align}
+\bar{\alpha} * (h\circ f)*\alpha \sim_{p} k\circ f \text{ equivalently} \\
+\bar{\alpha}*(h\circ f)*\alpha*\overline{(k\circ f)} \text{ is a path homotpic to the trivial homotopy}
+\end{align}
+$$
 
+$I\times I \xrightarrow{f\times Id} X\times I \xrightarrow{H} Y$
 
-![[out.svg]]
+$$
+\begin{align}
+F(x,0) = H(f(s),0) = h\circ f(s)  \\ \\
+F(1,t) = H(x_{0},t)= \alpha(t) \\
+F(1-s,1) = H(f(1-s),1) = k\circ \overline{f} (s) = \overline{(k \circ f)}(s) \\
+F(0,1-t) = H(x_{0},1-t) = \bar{\alpha}(t)
+\end{align}
+$$
 
+Since $I\times I$ is homeomorphic to the disc $D^{2}$ and the path $1*2*3*4$ goes to the boundary $S^{1}$ under such a homeomorphism we see that the loop has trival image in $\pi_{1}(Y,y_{1}) \quad \blacksquare$
 
+**Corollary:** If $h_{*}$ is inj/surj/bij then so is $k_{*}$
+**Proof:** Obvious from diagram
 
+**Corollary:** 
+(a) If h is null-homotopic then $h_{*}$ is trivial.
+(b) If h is homotopic to a homeomorphism $k$ then $h_{*}$ is an isomorphism. 
 
+**Theorem:** (Invariance of $\pi_{1}$ under homotopy equivalence of spaces) If $f:X\to Y$ is a homotopy equivalence, then for any $x_{0} \in X$, $y_{0}=f(x)$ we have $\pi_{1}(X,x_{0}) \cong \pi_{1}(Y,y_{0})$ via $(f_{x_{0}})_{*}$ 
 
+**Proof:** Let $g:Y \to X$ be a homotopy inverse. Let $x_{1}=g(y_{0})$. Let $y_{1}=f(x_{1})$. Now consider maps
+![[SVG/tikzdiagram12.svg|diagram]]
 
+Since $g\circ f \sim Id_{x}$. $((g\circ f)_{x_{0}})_{*} = (g_{y_{0}})_{*}(f_{x_{0}})_{{*}}$ is an isomorphism. Similarly $f\circ g \sim Id_{Y} \implies (f_{x_{1}})_{*}(g_{y_{0}})_{*}$  is an isomorphism.
 
+$(g_{y_{0}})_{*}$ is injective and surjective, i.e. an isomorphism, Hence, the same is true of $(f_{x_{1}})_{*} \quad \blacksquare$
 
+**Theorem:** $S^{n}$ is simply connected for $n\geq{2}$ 
 
+**Proof:** Let $f:I\to S^{n}$ be a loop at a basepoint $x_{0}$. 
+(First Proof)
+
+**Theorem:** Let X be a topological space covered by 2 open sets $U,V$ such taht $U \cap V$ is nonempty and path connected. Then using the inclusions $i:U\hookrightarrow X$,$j:V \hookrightarrow X$. we obtain that for any $x_{0} \in U \cap V$, $\pi_{1}(X,x_{0})$ is generated by the images $i_{*}\pi_{1}(U,x_{0})$ and $j_{*}\pi_{1}(V,x_{0})$
+
+From this theorem it is easy to show the above result by using complements of 2 antipodal points.
+
+**Proof:** Let $f: I \to X$ be a loop at $x_{0} \in U \cap V$. We claim $\exists \ 0=t_{0}<t_{1}<\dots<t_{n}=1$ such that 
+1. $f(t_{i}) \in U\cap V \forall i$ and,
+2. $f([t_{i},t_{i+1}])$ lies completely in $U$ or in $V$.
+
+By the Lebesgue number lemma we first find $t_{i}$ such that (2) is satisfied now we can say that if images of $[t_{i},t_{i+1}], [t_{i-1},t_{i}]$  sit it the same open set we join them otherwise $f(t_{i})$ lies in $U \cap V$
+
+Now let $f_{i}: [0,1] \to [t_{i},t_{i+1}] \xrightarrow{f} X$. Then $f = f_{1}*\dots*f_{n}$. Here $f_{i}$s are no longer loops. But since we have (1) we can say that there is a path from $x_{0} \to f(t_{i})$ call it $\alpha_{i}$. Hence,
+$$
+f \sim f_{1}*\overline{\alpha_{1}} *\alpha_{1}*f_{2}*\dots*\overline{\alpha_{n-1}}\alpha_{n-1}*f_{n}
+$$
+$\blacksquare$
+
+**Theorem:** $x_{0}\in X,y_{0} \in Y$. Then,
+$$
+\pi_{1}(X\times Y,(x_{0},y_{0})) = \pi_{1}(X,x_{0}) \times \pi_{1}(Y,y_{0})
+$$
+
+**Proof:** Using the projection maps we get, $p_{*}:\pi_{1}(X\times Y)\to \pi_{1}(X)$ and $q_{*}:\pi_{1}(X\times Y)\to \pi_{1}(Y)$. Therefore we get a map of groups $\pi_{1}(X\times Y)\to \pi_{1}(X)\times \pi_{1}(Y)$. which sends the class $[f]$ of loops $f:I\to X\times Y$ to the class $([p\circ f],[q\circ f])$ of loops in X and Y respectively. We check this is one-one and onto.
+
+one-one: If F is a path homotopy for $(p\circ f) \sim e_{x_{0}}$. and a path homotopy similarly for $(q \circ f)$. Now we can create a path homotopy for f to $e_{(x_{0},y_{0})}$
+
+onto: Given $f:I\to X$ and $g:I\to Y$, we can construct a loop $h:I\to X\times Y$ given by $h(t) = (f(t),g(t))$.
 

@@ -561,32 +561,128 @@ Continuing like this, we have, for any $n, \exists r_{n+1}< \frac{1}{n+1}$ and a
 
 Applying Cantor intersection , $\exists$ a point $x_{0} \in \bigcap \overline{B_{n}} \subseteq \bigcap E_{n}$   and $x_{0} \in \overline{B_{1}}$ and hence $x_{0} \in B(x,r)$, hence $B(x,r) \cap \bigcap E_{n} \neq \varnothing$ hence x is a limit point of $\bigcap E_{n}$. Since $x \in X$ is arbitrary we have that $\bigcap E_{n}$ is dense in X. $\quad \blacksquare$
 
+**Theorem:**(B.C.T Closed Set Version) Let X be a complete metric space X and $\{ F_{n} \}$ be a countable collection of nowhere dense closed subsets of X then $\bigcup_{n=1}^{\infty } F_{n}$ has no open ball inside it.
+
+**Corollary:** Let X be complete and $\{ F_{n} \}$ be a countable collection of closed sets in X. If $\bigcup_{n=1}^{\infty} F_{n}$ has non-empty interior then at least one of $F_{n}$ has non-empty interior.
+
+**Corollary:** Let X be complete and $\{ F_{n} \}$ be a sequence of closed sets. Then $\bigcup_{n=1}^{\infty}\partial F_{n}$ is nowhere dense in X.
+
+**Theorem:**(A non-linear uniform boundedness theorem) Let X be a complete metric space and $F$ be family of continuous functions on X such that F is pointwise bounded, i.e. for every $x \in X$, $\{ f(x) | f \in F \}$ is bounded. Then $\exists$ a ball in X on which F is uniformly bounded.
+
+**Proof:** For $n \in \mathbb{N}$ set,
+$$
+E_{n} := \{ x \in X | |f(x) \leq n \forall f\in F|\}
+$$
+Observe that $E_{n}$ is a closed set $\forall n \in \mathbb{N}$. Now, for any $x \in X$, $\exists n$ such that,
+$$
+|f(x)| \leq n \quad \forall f\in F
+$$
+Therefore, $X = \bigcup_{n=1}^{\infty}E_{n},\exists k \in \mathbb{N}$ such that $E_{k}$ has an interior point $x_{0}$. So $\exists r>0$ such that $B(x_{0},r) \subseteq E_{k}$, Hence
+$$
+|f(x)|\leq k \quad \forall f \in F \text{ and } x \in B(x_{0},r)
+$$
+Therefore, F is uniformly bounded on $B(x_{0},r)$ $\quad \blacksquare$
+
+**Theorem:** Let X be a complete metric space and ${f_{n}}$ be a sequence of continuous functions which converges pointwise to a function $f$ on X. Then $\exists$ a dense subset D of X on which $\{ f_{n} \}$ is equicontinuous and f is continuous on D.
+
+**Proof:** $\forall n,m \in \mathbb{N}$ we define,
+$$
+E_{m,n} := \left\{  x \in X \middle  |f_{j}(x) - f_{k}(x)|\leq \frac{1}{m}   \forall j,k\geq n\right\}
+$$
+Take, $D=X\setminus \bigcup_{n,m=1}^{\infty} \partial E_{n,m}$. So, D is dense in X. So, D is dense in X. Let $x_{0} \in X$ and $\epsilon>0$ arbitrary. $\{ f_{n}(x_{0}) \}$ is convergent and hence a Cauchy sequence. Let $m \in \mathbb{N}$ such that $\frac{1}{m} < \frac{\epsilon}{4}$. $\exists N \in \mathbb{N}$
+$$
+\lvert f_{j}(x_{0}) - f_{k}(x_{0}) \rvert  \frac{<1}{m} \quad \forall j,k \geq N
+$$
+So, $x_{0} \in E_{m,n}$. Hence, $x_{0} \in D \cap E_{m,n}$. $\exists r>0$ such that $B(x_{0},r) \subseteq E_{m,N}$. Since, $f_{N}$ is continuous at $x_{0}$, $\exists 0<\delta<r$ such that
+$$
+\lvert f_{N}(x_{0}) - f_{N}(x) \rvert < \frac{1}{m} \quad \forall x \in B(x_{0},\delta)
+$$
+So,$\forall x \in B(x_{0},\delta)$ and $\forall j\geq N$,
+$$
+\begin{align}
+\lvert f_{j}(x_{0}) -f_{j}(x) \rvert \leq & \lvert f_{j}(x_{0}) - f_{N}(x_{0}) \rvert + \lvert f_{N}(x_{0})-f_{N}(x) \rvert +\lvert f_{N}(x)-f_{j}(x) \rvert  \\
+<& \frac{3\epsilon }{4}
+\end{align}
+$$
+So, $\{ f_{n} \}_{n=N}^{\infty}$ is equicontinuous at $x_{0}$, Since $\{ f_{1},\dots,f_{N-1} \}$ is equicontinuous at $x_{0}$, So $\{ f_{n} \}_{n=1}^{\infty}$ is equicontinuous.
+
+Now taking $j\to \infty$,
+$$
+\lvert f(x_{0})-f(x) \rvert \leq \frac{3\epsilon}{4} < \epsilon \quad \forall x \in B(x_{0},\delta)
+$$
+So, F is continuous at $x_{0}$. Since $x_{0}\in D$ arbitrary we are done. $\quad \blacksquare$
+
+**Def:** A normal linear space $(X,||\cdot||)$ is called a Banach space if X is complete with respect to the metric coming from the norm $||\cdot||$
+
+**Theorem:** An infinite dimensional Banach space X can not have a (Hamel) basis which is countable.
+	**Lemma:** Let Y be a proper subspace of a normed linear space $(X,||\cdot||)$ then $Y^{\circ} = \varnothing$ 
+	**Proof:** If possible let y be an interior point of Y. Then, $\exists r>0$ such that $B(y,r) \subseteq Y$ implies $\implies B(0,r) = B(y,r) - y \subseteq Y$.
+	Now, take $x \in X$, $\left\lvert \left\lvert  \frac{r}{2} \frac{x}{\lvert \lvert x \rvert \rvert}  \right\rvert   \right\rvert = \frac{r}{2} <r$.  
+	So $\frac{r}{2} \frac{x}{\lvert \lvert x \rvert \rvert} \in Y$ implies $x \in Y$, So $X=Y$. $\quad \blacksquare$
+
+**Proof:** (of the theorem)
+Let $\{ x_{1},x_{2},\dots, \}$ be a countable basis of X. Define $Y_{m} := \text{span}\{ x_{1},\dots,x_{m} \},\forall m \in \mathbb{N}$. So $Y_{m}$ is closed.
+$$
+X = \bigcup_{m=1}^{\infty} Y_{m}
+$$
+Since $Y_{m}$ is a proper subspace of X, $Y_{m}^{\circ} = \varnothing$. But by BCT X cannot be a countable union of nowhere dense sets. $\quad \blacksquare$
 ## Schauder basis
+Let X be a normed linear space A countable linearly independent set $\{ x_{1},x_{2},\dots \}$ is said to be a Schauder basis of X if $||x_{i}||=1$ $\forall i$ and,
+$$
+x = \sum_{i=1}^{\infty} \alpha_{i}x_{i} \quad\forall x \in X,\text{for some } \alpha_{i} \in \mathbb{R}
+$$
+i.e.
+$$
+\lim_{ n \to \infty } \left\lVert x - \sum_{i=1}^{n} \alpha_{i}x_{i} \right\rVert = 0
+$$
+See that, $\left\{  \sum_{i=1}^{\infty} \alpha_{i}x_{i}  \mid n \in \mathbb{N}, \alpha_{i} \in \mathbb{Q} \right\}$ form a dense subset of X. Therefore X is separable.
+Remark: Not every normed linear space has a Schauder basis. Not every separable normed linear space has a Schauder basis. $\ell^{p},1\leq p\leq \infty$ as a Schauder basis, $\{e_{i}| e_{i}=(0,\dots,1,0,\dots ) \text{ at the ith position}\}$.
+## Stone Weierstrass Theorem
 
-
-### Stone Weierstrauss Theorem
-
-**Def:**(Bernstein Polynomial)
+**Def:**(Bernstein Polynomial): For a function $f$ on some set X, the nth Bernstein polynomial is
+$$
+B_{n}(x,f) = \sum_{k=0}^{n} f\left( \frac{k}{n} \right) \binom{n}{k} x^{k}(1-x)^{n-k} \quad \forall x \in [0,1]
+$$
 
 **Lemma:**  
 1. $B_{n}(x,1)=1$ , $B(x,x)=x,B_{n}(x,x^{r})=\frac{x}{n}+ \frac{n-1}{n}x^{r} ,x \in [0,1]$ 
-2. for  $f \leq g$ $B_{n}(x,f)\leq B_{n}(x,g)$
+2. for  $f \leq g$,  $B_{n}(x,f)\leq B_{n}(x,g)$
 
 **Proof:** $\forall x,y \in \mathbb{R}$
-$(x+y)^{n}$ = $\sum_{k=0}^{n} $
+$$
+(x+y)^{n} = \sum_{k=0}^{n} \binom{n}{k} x^{k}y^{n-k} \tag{i}
+$$
+Taking partial derivative w.r.t $x$ in the both side of (i) we have,
+$$
+n(x+y)^{n-1} = \sum_{k=0}^{n} k\binom{n}{k} x^{k-1}y^{n-k} \tag{ii}
+$$
+Now, multiply both sides by $\frac{x}{n}$
+$$
+x(x+y)^{n-1} = \sum_{k=0}^{n} \binom{n}{k}\left(\frac{k}{n}\right) x^{k}(1-x)^{n-k} 
+$$
+Again taking partial derivatives w.r.t x in both sides of (ii) we have,
+$$
+(x+y)^{n-1} + (n-1)x(x+y)^{n-2} = \sum_{k=0}^{n}k\left( \frac{k}{n}\right)\binom{n}{k}x^{k-1}y^{n-k}
+$$
+Again multiply by $\frac{x}{n}$ in both sides we have
+$$
+\frac{x}{n}(x+y)^{n-1} + \frac{n-1}{n}x^{2}(x+y)^{n-2} = \sum_{k=0}^{n}\left( \frac{k}{n}\right)^{2}\binom{n}{k}x^{k}y^{n-k} \tag{iii}
+$$
 
-### Weierstrauss Approximation Theorem
+Replacing y by $(1-x)$ in (i),(ii),(iii) we have,
+$B_{n}(x,1),B_{n}(x,x)=x,B_{n}(x,x^{2}) = \frac{x}{n} + \frac{n-1}{n}x^{2}$
+### Weierstrass Approximation Theorem
 **Theorem:** Let $f \in C[a,b]$ . Then $\exists$ a seq of polynomial ${p_{n}}$ such that $p_{n} \to f$ uniformly on $[a,b]$.
 
 **Proof:** Let $f \in C[0,1]$ so f is uniformly continuous, Given $\epsilon >0$ , $\exists \delta >0$ such that,
 $$
-\lvert f(x)-f(y) \rvert \frac{<\epsilon}{2} \quad \forall \lvert x-y \rvert <\delta 
+\lvert f(x)-f(y) \rvert <\frac{\epsilon}{2} \quad \forall \lvert x-y \rvert <\delta 
 $$
- Since,  f is bounded, $\exists M>0$ such that $\sup_{x \in[0,1]} |f(x)\leq M$
- Also if $|x-y| \geq \delta$ then $(\frac{x-y}{\delta })^{2} \geq 1$
+ Since,  f is bounded, $\exists M>0$ such that $\sup_{x \in[0,1]} |f(x)|\leq M$
+ Also if $|x-y| \geq \delta$ then $(\frac{x-y}{\delta })^{2} \geq 1$ 
 
 $$
-\lvert f(x) - f(y) \rvert  \leq 2M\left( \frac{x-y}{\delta } \right)^{2} + \frac{\epsilon}{2} ) \quad \forall x,y \in [0,1]
+\lvert f(x) - f(y) \rvert  \leq 2M\left( \frac{x-y}{\delta } \right)^{2} + \frac{\epsilon}{2}  \quad \forall x,y \in [0,1]
 $$
 
 Fix $\xi \in [0,1]$
@@ -619,21 +715,21 @@ $$
 
 $$
 \begin{cases}
-\frac{M}{2\delta^{2}n < \frac{\epsilon}{4}}  & \text{if } n > 2\frac{M}{\delta^{2}\epsilon} \\
-\text{ if } k \in \mathbb{N} > \frac{2M}{\delta^{2}\epsilon} &  \text{ then} \lvert  \rvert 
+\frac{M}{2\delta^{2}n < \frac{\epsilon}{4}}  & \text{if } n >  2\frac{M}{\delta^{2}\epsilon} \\
+\text{ if } k \in \mathbb{N} > \frac{2M}{\delta^{2}\epsilon} &  \text{ then} \lvert B_{n}(\xi,f) - f(\xi)  \rvert \leq  \frac{\epsilon}{4}+ \frac{\epsilon}{2}=\frac{3\epsilon}{4}
 \end{cases}
 $$
-#incomplete 
+So, $\sup_{\xi \in [0,1]}\lvert B_{n}(\xi,f)-f(\xi) \rvert < \epsilon, \forall n\geq k$
 
 **Def:** A collection of real valued functions $\mathscr{A}$ on a set X is said to be an algebra if $\forall f,g \in \mathscr{A}, f+g, f\cdot g, cf \in \mathscr{A} \quad (c \in \mathbb{R})$  
 
-**Def:** An algebra $\mathscr{A}$ of real valued function on a set X in said to be uniformly closed if for every seq $\{ f_{n} \}$ converging uniformly to some $f, f\in \mathscr{A}$
+**Def:** An algebra $\mathscr{A}$ of real valued function on a set X in said to be _uniformly closed_ if for every seq $\{ f_{n} \}$ converging uniformly to some $f, f\in \mathscr{A}$
 
 Example: $C(X)$ X is compact is uniformly closed algebra
 
 **Def:** A set $\mathscr{B}$ is said to be uniform closure of an algebra $\mathscr{A}$ of  real valued functions of X if $\mathscr{B}$ is the set of all uniform limits of $\mathscr{A}$
 
-![[SVG/tikzdiagram16.svg|diagram]]
+![[SVG\tikzdiagram17.svg|diagram]]
 
 
 **Theorem:** A uniform closure $\mathscr{B}$ of an algebra $\mathscr{A}$ of bounded functions on a metric space X is a uniformly closed algebra
@@ -738,3 +834,74 @@ $$
 \end{align}
 $$
 $\quad \blacksquare$
+
+
+
+### Stone Weierstrass Theorem
+#incomplete 
+**Theorem:**
+
+**Proof:** Let X be a compact metric space
+
+**Theorem:** Let X be a compact metric space. Then $C(X)$ is separable.
+
+**Proof:** Since $X$ is compact, $X$ is separable. That is $\exists$ a collection of points $\{ z_{1},z_{1},\dots  \}$  such that $Z$ is dense in X. Define $f_{j}:X\to \mathbb{R},\forall j$ satisfies.
+$$
+F_{j}(x) = \rho(x,z_{j}) \quad \forall x \in X 
+$$
+
+implies $f_{j}\in C(X), \forall j$
+Let 
+
+
+### Korovkin's Theorem(1953)
+**Theorem:** Let $f_{0}(x)=1,f_{2}(x)=x,f_{2}(x)=x^{2}$ be the function in $C[a,b]$ and $\{p_{n}\}$ be a sequence of positive linear maps from $C[a,b] \to C[a,b]$ such that
+$$
+\{p_{n}(f_{i})\}_{n=1}^{\infty } \to f_{i} \quad \text{uniformly } \forall i=0,1,2
+$$
+Then $\{ p_{n}(f) \}_{n=1}^{\infty } \to f$ uniformly $\forall f \in C[a,b]$
+**Proof:**
+$f \in C[a,b]$. Then f is uniformly continuous and given $\epsilon>0$, $\exists$ $\delta>0$ such that
+$$
+|f(x)-f(y)| <\epsilon \quad \forall |x-y| < \epsilon
+$$
+If $|x-y| \leq \delta$ , $\implies (x-y)^{2}\geq\delta^{2}$. Also since $f \in C[a,b]$, f is bounded. i.e. $\exists M>0$ such that $|f(x)|\leq M ,\forall x \in [a,b]$ 
+$\forall |x-y| <\delta$,
+$$
+|f(x)-f(y)|\leq \frac{2M(x-y)^{2}}{\delta^{2}}
+$$
+So, $\forall x,y \in [a,b]$
+$$
+|f(x)-f(y)| \leq \frac{2M(x-y)^{2}}{\delta^{2}} + \epsilon \tag{*}
+$$
+For a $y \in [a,b]$, Take, $f_{y}(x) = (x-y)^{2}$
+
+Then $(*)$ implies,
+$$
+-\epsilon - \frac{2M}{\delta^{2}}f_y(x) < f(x) - f(y) < \frac{2M}{\delta^{2}}f_{y}(x) + \epsilon 
+$$
+We can check,
+$$
+\begin{align}
+
+-\epsilon p_{n}(f_{0}) - \frac{2M}{\delta^{2}}p_{n}(f_{y}) <& p_{n}(f)(x) - f(y) p_{n}(f_{0})(y)  \\
+\leq& \frac{2M}{\delta^{2}}p_{n}(f_{y})(y)+\epsilon p_{n}(f_{0})(y) 
+\end{align}
+\tag{***}
+$$
+Now,
+$$
+\begin{align}
+p_{k}(f_{y})(y) &= p_{k}(x^{2}-2xy+y^{2})(y) \\
+&= p_{k}(f^{2})(y) - 2yp_{k}(f_{1}(y)) + p_{k}(f_{2})(y)  \\
+&\to y^{2} - 2y^{2} + y^{2} = 0
+\end{align}
+$$
+
+Since $\{ p_{k}(f_{0})(y) \} \to 1$ uniformly $\forall y \in [a,b]$, by $(* * *)$ 
+
+$$
+\{ p_{k}(y) \}_{n=1}^{\infty} \to f(y) \quad \text{uniformly } \forall y \in [a,b]
+$$
+i.e. ${p_{k}(f)}_{k=1}^{\infty} \to f$ uniformly.
+ 
