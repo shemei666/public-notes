@@ -835,24 +835,144 @@ $$
 $$
 $\quad \blacksquare$
 
+### Algebra, Uniformly closed algebra, Uniform Closure
+**Def:** A collection $\mathscr{A}$ of real valued functions on a set X is said to separate points of X if $\forall x\neq y \in X, \exists f \in \mathscr{A}$ such that $f(x)\neq f(y)$.
 
+**Def:** A collection $\mathscr{A}$ of real valued functions on X is said to vanish at no point of X if $\forall x \in X, \exists f_{x} \in \mathscr{A}$. such that $f_{x}(x) \neq 0$.
 
+**Example**: $\mathbb{R}[x] \subseteq C(\mathbb{R})$ . So, $\mathbb{R}[x]$ separates points. Let $P(x)=1, \forall x \in X$. Hence it doesn't vanish at any point. Also $P(x) = x$. separates points. Hence polynomials are such a collection.
 ### Stone Weierstrass Theorem
-#incomplete 
-**Theorem:**
 
-**Proof:** Let X be a compact metric space
+**Theorem:** Let $\mathscr{A}$ be an algebra of real valued function on some metric space X such that
+1. $\mathscr{A}$ does not vanish at any point of X.
+2. $\mathscr{A}$ separates points.
+Then, $\forall$ distinct $s,t \in X$ and $\forall c_{1},c_{2} \in \mathbb{R},\exists$ a function $g \in \mathscr{A}$ such that $g(s)=c_{1},g(t)=c_{2}$.
+
+**Proof:** Since $\mathscr{A}$ does not vanish at any point of X, for $s,t, \exists h_{1},h_{2} \in \mathscr{A}$ such that
+$$
+h_{1}(s)\neq 0 \quad \& \quad h_{2}(t) \neq 0
+$$
+Also, since $\mathscr{A}$ separates points, $\exists h \in \mathscr{A}$ such that $h(s) \neq h(t)$. Now define
+$$
+\begin{align*}
+g_{1}(x) = \frac{h(x)-h(t)}{h(s)-h(t)} \frac{h_{1}(x)}{h_{1}(s)}\\
+g_{2}(x) = \frac{h(s)-h(x)}{h(s)-h(t)} \frac{h_{2}(x)}{h_{2}(t)}
+\end{align*}
+$$
+So, 
+$$
+\begin{cases}
+g_{1}(s) = 1 & g_{1}(t) = 0 \\
+g_{2}(s)=0  & g_{2}(t)=1
+\end{cases}
+$$
+Easy to see that $g_{1},g_{2}$ belongs to the algebra. Now take $g = c_{1}g_{1}+c_{2}g_{2}$. Then $g(s) = c_{1}$ and $g(t)=c_{2}$. $\quad \blacksquare$
+
+**Theorem:**(Stone-Weierstrass) Let X be a compact metric space and $\mathscr{A}\subseteq C(X)$ be an algebra such that $\mathscr{A}$ vanishes at no point of X and $\mathscr{A}$ separates points of X. Then, the uniform closure of $\mathscr{A}$ is $C(X)$.
+
+**Proof:** 
+Let $\mathscr{B}$ be the uniform closure of $\mathscr{A}$. We will show that $\mathscr{A} = C(X)$. That is to prove for any $f \in C(X)$ and for each $\epsilon>0$, $\exists$ a function $g \in \mathscr{B}$ such that,
+$$
+\lvert g(x)-f(x) \rvert <\epsilon \quad \forall x \in X
+$$
+Since, $\mathscr{B}$ is the uniform closure we will be done. Take $\epsilon >0$. $\forall s\neq t \in X$, $\exists$ $g_{s,t} \in \mathscr{B}$ such that $g_{s,t}(s) = f(s), g_{s,t}(t) = f(t)$ from previous theorem.
+
+Since, $g_{s,t} \in \mathscr{B}$, it is continuous. Now, fix $s \in X$. Since, $g_{s,t}$ is continuous $\exists$ a neighbourhood $U_{s,t}$ around $t$ such that,
+$$
+g_{s,t}(x) > f(x) - \epsilon \quad \forall x \in U_{s,t}
+$$
+$\{ U_{s,t} \}_{t \in X}$ is an open cover of X. Since X is compact it has a finite subcover $\{ U_{s,t} \}_{t=1}^{n}$. Take, $g_{s} = \max_{1\leq i\leq n} g_{s,t_{i}}$ . Then, by a previous proposition $g_{s} \in \mathscr{B}$. Also, 
+$$
+g_{s}(x)\geq g_{s,t_{i}}(x)>f(x)-\epsilon \quad \forall x \in U_{s,t} \forall i=1,\dots,n
+$$
+So, 
+$$
+g_{s}(x)>f(x)-\epsilon \quad \forall x \in  X \tag{*}
+$$ .Observe that $g_{s}(s) = \max g_{s,t_{i}}(s) = f(s) < f(s) + \epsilon$. Since $g_{s}$ is continuous. $\exists$ a neighbourhood $U_{s}$ around $s$ such that
+$$
+g_{s}(x) < f(x) + \epsilon \quad \forall x \in U_{s}
+$$
+$\{ U_{s} \}_{s \in X}$ is an open cover of X, Hence has a finite subcover $\{ U_{s} \}_{i=1}^{k}$. Now take,
+$$
+g = \min_{1\leq i\leq k} g_{s_{i}}
+$$
+Since $g_{s_{i}} \in \mathscr{B}, g \in \mathscr{B}$ for a similar reason as above. Also, 
+$$
+g(x) < f(x) + \epsilon \quad x \in X
+$$
+Since, g is the minimum of finite collection of $g_{s}$ from $(*)$ $g(x)>f(x)-\epsilon,\forall x \in X$. So, $\lvert g(x)-f(x) \rvert < \epsilon \quad \blacksquare$
+
+**Corollary:** Let $K \subseteq \mathbb{R}^{n}$ be compact and $\mathscr{P}$ be the collection of all n-variable polynomials. Then $\mathscr{P}$ is uniformly dense in $C(K)$
+**Proof:**
+$p \in \mathscr{P}$ has the form $\sum a_{k_{1},k_{2},\dots,k_{n}} x_{1}^{k_{1}}\dots x_n^{k_n}$ . $\mathscr{P}$ is an algebra. Let $P_{j}: K \to \mathbb{R}$ be defined by 
+$$
+P_{i}(x_{1},\dots,x_{n}) = x_{j}
+$$
+It is clear that $P_{j}$ are continuous $\forall j = 1,\dots,n$ . Any polynomial $p \in \mathscr{P}$ can be written as a linear combination of product of some $P_{j}$. Hence $P \in C(K)$.
+
+Take $x\neq y \in \mathbb{R}^{n}$ then its value must be different in atleast one coordinate say j, then $P_{j}$ separates $x,y$. Also since there are constant polynomials in $\mathscr{P}$ we have that $\mathscr{P}$ does not vanish at any point. Hence by Stone-Weierstrass we have that $\mathscr{P}$ is uniformly dense in $C(K)$
+
+Remark: For a compact subset $K \subseteq \mathbb{R}^{2}$, $C(K)$ is separable choose coefficient of the polynomials from $\mathbb{Q}$ and apply the previous corollary.
+
+**Corollary:** Let $\mathscr{A}$ be the collection of set of polynomials in $C[0,\pi]$ such that the polynomials have the following form.
+$$
+a_{0} + \sum_{n=1}^{N} a_{n} \cos nx + b_{n}\sin nx \quad \text{for some } a_{n},b_{n} \in \mathbb{R} \text{ and } N \in \mathbb{N}
+$$
+Then, $\mathscr{A}$ is uniformly dense in $C[a,b]$
+**Proof:**
+Using the formulas,
+$$
+\begin{align*}
+\sin nx \sin mx &  = \frac{1}{2}[\cos(n-m)x - \cos(n+m)x] \\
+\sin nx \cos mx  & = \frac{1}{2}[\sin(n+m)x - \sin(n-m)x] \\
+\cos nx \cos mx &  = \frac{1}{2}[\cos (n+m)x + \cos (n-m)x]
+\end{align*}
+$$
+We can check that $\mathscr{A}$ is an algebra in $C[0,\pi]$. If $x_{1}\neq x_{2} \in [0,\pi]$, then $\cos x_{1} \neq \cos x_{2}$. So $\mathscr{A}$ separates points. Since constants belong to $\mathscr{A}$ it does not vanish at any point on $[0,\pi]$. Hence we are done by Stone-Weierstrass theorem. $\quad \blacksquare$
+
+**Theorem:** Let X be a compact metric space and $\mathscr{A} \subseteq C(X)$ be an algebra which satisfies all the hypothesis of the Stone-Weierstrass theorem. Then, for any $f \in C(X)$, $\exists$ a decreasing sequence of functions $\{ g_{n} \}$ which converges uniformly to $f$. 
+
+**Proof:**
+$\forall n \in \mathbb{N}$ we choose, $f_{n} = f(x) + \frac{2}{3^{n}}$. Since $f \in C(X), f_{n} \in C(X)$. By Stone-Weierstrass, $\exists \{ g_{k} \}$ which converge uniformly to $f_{n}$. Hence $\exists g_{n} \in \mathscr{A}$ such that
+$$
+\begin{align*}
+ & \lvert g_{n}(x) - f_{n}(x) \rvert < \frac{1}{3^{n}} \quad \forall x \in X \\
+ \implies &    -\frac{1}{3^{n}}   < g_{n}(x) - f_{n}(x) < \frac{1}{3^{n}} \\
+\implies &  f_{n}(x) - \frac{1}{3^{n}} < g_{n}(x) < f_{n}(x)+ \frac{1}{3^{n}} \\
+ & f(x) + \frac{1}{3^{n}} < g_{n}(x)<f(x) + \frac{1}{3^{n-1}} \quad (*) \\
+\dots &  < g_{n+1}(x) < f(x) + \frac{1}{3^{n}} < g_{n}(x) < f(x) + \frac{1}{3^{n-1}} < g_{n-1}(x)<\dots
+\end{align*}
+$$
+So, $\{ g_{n} \}$ is a decreasing sequence of functions. From $(*)$ we get that
+$$
+\lvert g_{n}(x) - f(x) \rvert < \frac{1}{3^{n-1}}\quad \forall x \in X
+$$
+that is $\{ g_{n} \}$ converges uniformly to $f$. $\quad \blacksquare$
+
 
 **Theorem:** Let X be a compact metric space. Then $C(X)$ is separable.
 
-**Proof:** Since $X$ is compact, $X$ is separable. That is $\exists$ a collection of points $\{ z_{1},z_{1},\dots  \}$  such that $Z$ is dense in X. Define $f_{j}:X\to \mathbb{R},\forall j$ satisfies.
+**Proof:** 
+We assume that $X$ has more than 1 point otherwise it is trivial.
+Since $X$ is compact, $X$ is separable. That is $\exists$ a collection of points $Z=\{ z_{1},z_{1},\dots  \}$  such that $Z$ is dense in X. Define $f_{j}:X\to \mathbb{R},\forall j$ such that
 $$
 F_{j}(x) = \rho(x,z_{j}) \quad \forall x \in X 
 $$
+implies $f_{j}\in C(X), \forall j$. Now let
+$$
+K = \{ h \in C(X) \mid h \text{ is a product of finitely many }f_{j} \}
+$$
+Now take,
+$$
+\mathscr{A} = \left\{  g = \sum_{k=1}^{N}a_{k}h_{k} \middle| a_{k} \in \mathbb{R}, h_{k} \in K, N \in \mathbb{N}  \right\}
+$$
+$\mathscr{A} \subseteq C(X)$ is an algebra. Let $x_{0} \neq y_{0} \in X$ $\rho(x_{0},x_{0}) = 0$ and $\rho(x_{0},y_{0}) \neq 0$. Then $\exists z_{j} \in Z$ such that $\rho(x_{0},z_{j}) \neq \rho(y_{0},z_{j})$. So $f_{j}(x_{0}) \neq f_{j}(y_{0})$.
 
-implies $f_{j}\in C(X), \forall j$
-Let 
-
+Since $x_{0} \neq y_{0}$ arbitrary we say $\mathscr{A}$ separates points. Take $x_{0} \in X$ then $\exists z_{j} \in Z$ such that $x_{0} \neq z_{j}$ i.e. $f_{j}(x_{0}) >0$. Hence $\mathscr{A}$ does not vanish at any point. So we can apply Stone-Weierstrass theorem to get that $\mathscr{A}$ is uniformly dense in $C(X)$. Therefore,
+$$
+S = \left\{  \sum_{k=1}^{n}q_{k}h_{k} \middle| q_{k} \in \mathbb{Q}, h_{k} \in K, n \in \mathbb{N}  \right\}
+$$
+S is also uniformly dense in $C(X)$ and it is countable, hence $C(X)$ is separable. $\quad \blacksquare$
 
 ### Korovkin's Theorem(1953)
 **Theorem:** Let $f_{0}(x)=1,f_{2}(x)=x,f_{2}(x)=x^{2}$ be the function in $C[a,b]$ and $\{p_{n}\}$ be a sequence of positive linear maps from $C[a,b] \to C[a,b]$ such that
