@@ -517,7 +517,9 @@ Deformation retracts are not symmetric: $\{p\} \hookrightarrow X$ is a deformati
 $S^{n} \hookrightarrow \mathbb{R}^{n+1} \setminus \{ 0 \}$ is a deformation retract. $v \mapsto \frac{v}{||v||}$.
 $\{ p \} \hookrightarrow X$ with X contractible. Is this a deformation retract always?
 
-Broom space $X\times I$
+Broom space $X\times I$ #incomplete 
+
+### Invariance of homotopy
 
 **Theorem:**(Invariance of $\pi_{1}$ under homotopy of maps) Let $h,k: X\to Y$ be maps,, $x_{0} \in X,y_{0} = h(x_{0}), y_{1}=k(x_{0})$. If $h,k$ are homotopic via $H:X\times I \to Y$(so that $\alpha(t) = H(x_{0},t)$ is a path in Y from $y_{0}$ to $y_{1}$) then the following diagram commutes
 ![[SVG/tikzdiagram11.svg|diagram]]
@@ -619,3 +621,51 @@ $$
 2. This is also clear since for any evenly covered $U \subseteq B$, $p^{-1}U = \bigcup V_{\alpha}, V_{\alpha} \to U$ homeomorphism
 3. If $\{ V_{\lambda} \}$ is a countable base of $E$, then so is $p(V_{\lambda})$.
 
+**Def:** A topological n-manifold is a topological space X that is Hausdorff, second countable and locally n-Euclidean. When $n=1$ we call it a curve, $n=2$ surface.
+
+**Example**: 
+1. $\mathbb{R}$, open interval, conic sections are curves
+2. A 0-manifold is the same as a discrete countable space.
+3. Line with 2 origins is locally Euclidean but not Hausdorff, hence not a manifold.
+4. Closed/ Semi-closed intervals, Cantor set are not k-manifolds for any k.
+5. Plane, torus, cylinder, open Mobius strip etc are surfaces 
+6. ![[Drawing 2025-08-21 16.51.12.excalidraw|]] These are not manifolds
+
+>[!info]
+>A topological m-manifolds cannot be an n-manifold for $m\neq n$.
+
+**Def:** 
+$$
+\mathbb{R}P^{n}:= \frac{S^{n}}{x\sim-x} \leftrightarrow  \frac{\mathbb{R}^{n+1}\setminus \{ 0 \}}{w \sim \lambda w}
+$$
+
+**Theorem:** The quotient maps $S^{n} \twoheadrightarrow \mathbb{R}P^{n}$ is a covering map of degree 2. Moreover $\mathbb{R}P^{n}$ is Hausdorff, and hence is a compact, path-connected surface with $\pi_{1}(\mathbb{R}P^{n})$ having exactly 2 elements, i.e. $\pi_{1} \cong \mathbb{Z} / 2\mathbb{Z}$ 
+
+**Proof:** By construction p is onto. Next we see that p is open. $p ^{-1} p(V) = V \bigcup -V$ which shows that $p(V)$ is open if V is open. (similarly p is also a closed map.)
+
+Given $x \in \mathbb{R}P^{n}$, let $y,-y$ be its preimage. Choose open set U around y lying in the hemisphere containing y 
+![[IMG_20250821_171225.jpg]]
+Now $U:= P(V) = P(-V)$ is evenly covered because $p ^{-1} U = V \bigsqcup -V$ and $V\xrightarrow{p} U, -V \xrightarrow{p} U$ are bijective and open, hence a homeomorphism.
+By the earlier lemma. $\mathbb{R}P^{n}$ is Hausdorff and a surface. Compactness, path connectedness hold because they hold for $S^{n}$. Since $S^{n}$ is simply connected for $n\geq 2$ , $|\pi_{1}(\mathbb{R}P^{n})| = |p^{-2}(x)| = 2$. $\quad \blacksquare$
+
+>[!info]
+>$\mathbb{R}P^{0} = \text{1 point}$ 
+>$\mathbb{R}P^{1} \cong S^{1}$ 
+
+![[IMG_20250821_172923.jpg]]
+
+![[IMG_20250821_173137.jpg]]
+
+We see that to get a covering map from a quotient space, the following suffices:
+**Lemma:** Let $f:X \twoheadrightarrow Y$ be an quotient map. If $\exists$ a basis $\mathscr{B}$ of open sets in X such that $\forall V \in \mathscr{B}$ we have $f^{-1}f(V) = \bigsqcup V_{\alpha }$ with $V_{\alpha }$ open and $V_{\alpha } \to  f(V)$ bijective, then f is a covering map (and hence also a quotient map)
+
+**Proof:** Since $f ^{-1} f(V) = \bigsqcup V_{\alpha }$, we see that $f(V)$ is open for any $V \in \mathscr{B}$ since it is a quotient map. Since $\mathscr{B}$ is a basis, we see that f is an open map. Hence $V_{\alpha } \to f(V)$ is a homeomorphism. Hence $f(V)$ is evenly covered. Since $V \in \mathscr{B}$ cover X and f is onto, hence $\{ f(V) \mid V \in \mathscr{B}\}$ covers Y. $\quad \blacksquare$
+
+---
+**The Klein bottle**:
+![[IMG_20250821_175132.jpg]]![[IMG_20250821_175310.jpg]]
+
+![[IMG_20250821_180051.jpg]]![[IMG_20250821_180847.jpg]]
+![[IMG_20250821_181228.jpg]]
+
+quicksort:

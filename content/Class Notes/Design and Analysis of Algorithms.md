@@ -160,7 +160,7 @@ $$
 
 ### Plotting Empirical Analysis of Algorithms
 
-![[SVG/tikzdiagram13.svg|diagram]]
+![[SVG/tikzdiagram14.svg|diagram]]
 
 ### Towers of Hanoi
 
@@ -174,7 +174,7 @@ T(n-1) = (2T(n-2) + 1) +1\\
 i: T(n) = 2^{i}T(n-i) + 2^i - 1 \\
 \end{align*}
 $$
-![[SVG/tikzdiagram14.svg|diagram]]
+![[SVG/tikzdiagram15.svg|diagram]]
 ### Brute force, Decrease-and-Conquer & D & C Algorithms
 
 #### Brute Force: Selection Sort
@@ -240,7 +240,7 @@ for i = 0 to n-m
 ```
 
 #### Exhaustive Search: Traveling Salesman Problem
-![[SVG/tikzdiagram15.svg|diagram]]
+![[SVG/tikzdiagram16.svg|diagram]]
 
 #### Exhaustive Search: Knapsack Problem
 
@@ -294,3 +294,37 @@ Example:
 
 ### D&C Multiplication of 2 Matrices - Strassen's Method
 
+#incomplete 
+
+## Quicksort
+```
+def QUICKSORT(A,p,r):
+	q = PARTITION(A,p,r)
+	QUICKSORT(A,p,q-1)
+	QUICKSORT(A,q+1,r)
+```
+
+```
+def PARTITION(A,p,r):
+	x = A[r]
+	i = p-1
+	for j=p to r-1:
+		if A[j] <= x:
+			i++
+			swap(A[i],A[j])
+	swap(A[i+1],A[r])
+	return (i+1)
+```
+
+**Loop Invariant**: at the beginning of each iteration (loop liens 3-6 of partition) for any array index k, the foll. condn hold:
+1. If $p\leq k\leq i$ then $A[k] \leq x$ pivot
+![[IMG_20250822_101328.jpg]]
+
+### D & C randomized algorithm for selection of median 
+
+
+**Lemma:**
+
+**Proof:**
+
+we can again decide 

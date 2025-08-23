@@ -374,7 +374,7 @@ $$
 Example:
 * $T:\mathbb{R} \to \mathbb{R}$ defined by $T(x) = \frac{x}{2}$
 * Lipschitz with constant less than 1
-**Theorem:** (Banach Contraction Principle) Let X be a complete metric space and $T:X\to X$ be a contraction then T has a  unique fixed point.
+**Theorem:** (Banach Contraction Principle) Let X be a complete metric space and $T:X\to X$ be a contraction then T has a unique fixed point.
 
 **Proof:** fix $x_{0} \in X$ now consider $\{ x_{n} \}$ by 
 $$
@@ -729,7 +729,7 @@ Example: $C(X)$ X is compact is uniformly closed algebra
 
 **Def:** A set $\mathscr{B}$ is said to be uniform closure of an algebra $\mathscr{A}$ of  real valued functions of X if $\mathscr{B}$ is the set of all uniform limits of $\mathscr{A}$
 
-![[SVG/tikzdiagram17.svg|diagram]]
+![[SVG/tikzdiagram18.svg|diagram]]
 
 
 **Theorem:** A uniform closure $\mathscr{B}$ of an algebra $\mathscr{A}$ of bounded functions on a metric space X is a uniformly closed algebra
@@ -1062,7 +1062,7 @@ So, $\mathscr{B}_{X}$ includes atleast the following sets,
 2. $S_{2}=\{ [a,b] \}$
 3. $S_{3}= \{ (a,b] \}$
 4. $S_{4}=\{ [a,b) \}$
-5. $S_{5}={(-\infty,a)}$
+5. $S_{5}=\{(-\infty,a)\}$
 6. $S_{6}= \{ (a,\infty ) \}$
 7. $S_{7}=\{ (-\infty,a] \}$
 8. $S_{8}=\{ [a,\infty ) \}$
