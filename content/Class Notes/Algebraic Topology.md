@@ -523,7 +523,7 @@ Broom space $X\times I$ #incomplete
 
 **Theorem:**(Invariance of $\pi_{1}$ under homotopy of maps) Let $h,k: X\to Y$ be maps,, $x_{0} \in X,y_{0} = h(x_{0}), y_{1}=k(x_{0})$. If $h,k$ are homotopic via $H:X\times I \to Y$(so that $\alpha(t) = H(x_{0},t)$ is a path in Y from $y_{0}$ to $y_{1}$) then the following diagram commutes
 ![[SVG/tikzdiagram11.svg|diagram]]
-![[Drawing 2025-08-18 14.47.11.excalidraw]]
+![[Excalidraw/Drawing 2025-08-18 14.47.11.excalidraw.svg]]
 
 **Proof:** Let $f:I\to X$ be a loop in X at $x_{0}$. It suffices to check that for any such arbitrary f, we have $\hat{\alpha}(h_{*}[f]) = k_{*}[f]$ 
 i.e.
@@ -629,7 +629,9 @@ $$
 3. Line with 2 origins is locally Euclidean but not Hausdorff, hence not a manifold.
 4. Closed/ Semi-closed intervals, Cantor set are not k-manifolds for any k.
 5. Plane, torus, cylinder, open Mobius strip etc are surfaces 
-6. ![[Drawing 2025-08-21 16.51.12.excalidraw|]] These are not manifolds
+6. ![[Excalidraw/Drawing 2025-08-21 16.51.12.excalidraw.svg]]
+%%[[Drawing 2025-08-21 16.51.12.excalidraw.md|🖋 Edit in Excalidraw]]%% 
+These are not manifolds
 
 >[!info]
 >A topological m-manifolds cannot be an n-manifold for $m\neq n$.
@@ -668,4 +670,3 @@ We see that to get a covering map from a quotient space, the following suffices:
 ![[IMG_20250821_180051.jpg]]![[IMG_20250821_180847.jpg]]
 ![[IMG_20250821_181228.jpg]]
 
-quicksort:
