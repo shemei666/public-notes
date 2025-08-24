@@ -93,8 +93,8 @@ Example:  $l^p = \left\{  x = (x_{1},\dots,x^n, \dots  ) :  ( \sum_{n=1}^{\infty
 
 Example: 
 1. $l^p$
-2. C[0,1] 
-3. For compact metric space consider C(X) = $\{ f:X\to \mathbb{R}| \text{cont on X} \}$ with sup norm
+2. $C[0,1]$
+3. For compact metric space consider $C(X) = \{ f:X\to \mathbb{R}| f\text{ continuous on X} \}$ with sup norm
 If the compact set has only finitely many elements then we can create
 $$
 f_{i}(x_{j}) =
@@ -108,7 +108,7 @@ $$
 
 **Proof:**
 we will prove by induction on the dimension of Y.
-Let us assume dim Y = 1
+Let us assume $\dim Y = 1$
 
 So, $\exists y \in X$ such that $Y = \{ ky|k\in \mathbb{R} \}$
 let $\{ k_{n}y \}$ be a Cauchy sequence in Y.
@@ -130,7 +130,7 @@ will show Z = $\text{span}\{x_{1},x_{2},\dots,x_{n-1},x_{n}\}$ is complete
 
 Choose a Cauchy sequence
 let $z^{(p)} = \alpha_{1}^{(p)}x_{1} + \dots + \alpha_{n-1}^{(p)}x_{n-1} + \alpha_{n}^{(p)}x_{n}$
-$|| z^{(p)} - z^{(p)}|| = || (y^{p}-y^{m}) + \alpha_{n}^{(p)}x_{n} - \alpha_{n}^{(m)}x_{n}||$
+$|| z^{(p)} - z^{(m)}|| = || (y^{p}-y^{m}) + \alpha_{n}^{(p)}x_{n} - \alpha_{n}^{(m)}x_{n}||$
 $$
 = |\alpha_{m} - \alpha_{n}| || \frac{1}{|\alpha_{n}^{(p)}-\alpha_{n}^{(m)}|}(y^{(p)}-y^{(m)}) - x_{n}||
 $$
@@ -138,8 +138,7 @@ $$
 \geq |\alpha_{n}^{p} - \alpha_{n}^{m}| \text{dist}(x_{n,Y})
 $$
 
-since {z^(p)} is Cauchy for given $\epsilon>0$.
-we have {$\alpha$} is Cauchy in $\mathbb{R}$
+since $\{z^{(p)}\}$ is Cauchy for given $\epsilon>0$. we have {$\alpha$} is Cauchy in $\mathbb{R}$
 
 
 **Lemma**: (Riesz's Lemma): Let Y be a closed subspace of X such that Y $\neq$X. Then for any $0<r<1$. $\exists x_{r}\in X$ such that $\lvert x_{r} \rvert = 1$ and $r<\text{dist}(x_{r},Y) \leq 1$
@@ -180,11 +179,11 @@ $$
 **Theorem**: Let $(X,||\cdot ||)$ be a infinite dimensional space. Let $B(0,1) = \{x \in X| ||x|| \leq  1\}$ be the closed unit ball in X. Then $B(0,1)$ is not compact.
 
 **Proof**: let $\{ x_{1},x_{1},x_{3},\dots  \}$ be an infinite linearly independent set 
-Define Zn : Span{$x_{1},x_{2},\dots,x_{n}$}
+Define $Z_{n}$ : $\text{span}\{x_{1},x_{2},\dots,x_{n}\}$
 $Z_{1} \subset Z_{2} \subset \dots$
 $Z_{n}$ are closed. for all n
 
-By Riesz lemma we can choose $z_{n} \in Z_{n}$  such that $dist(z_{n},Z_{n-1}) > \frac{1}{2}$  then we can get that there cannot be any convergent subsequence in $\{ z_{n} \}$ hence X is not sequentially compact hence X is not compact.
+By Riesz lemma we can choose $z_{n} \in Z_{n}$  such that $\text{dist}(z_{n},Z_{n-1}) > \frac{1}{2}$  then we can get that there cannot be any convergent subsequence in $\{ z_{n} \}$ hence X is not sequentially compact hence X is not compact.
 
 
 **Def**: Let $\{ f_{n} \}$ sequence of functions on a metric space. Then $\{ f_{n} \}$ is said to converge to f pointwise if for every x in X for a given $\epsilon>0$ $\exists k \in \mathbb{N}$.
