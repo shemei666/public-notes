@@ -36,19 +36,24 @@ $$
 $$
 Which is a contradiction. $\quad \blacksquare$
 
-$2.$ Consider $A_{n} = [n,\infty ),n \in \mathbb{N}$. Then it is clear that $A_{1} \subsetneq A_{2} \subsetneq A_{3} \subsetneq \dots$ , Hence $A_{n}$ is a descending sequence of closed sets. Now,
+$2.$ Consider $A_{n} = [n,\infty ),n \in \mathbb{N}$. Then it is clear that $A_{1} \supsetneq A_{2} \supsetneq A_{3} \supsetneq \dots$ , Hence $A_{n}$ is a descending sequence of closed sets. Now,
 $$
 \bigcap_{n \in \mathbb{N}} A_{n} = \varnothing 
 $$
 Since every $r \in \mathbb{R}, \exists N \in \mathbb{N}$ such that $N> r$ and hence $r \not\in A_{N}$.
 
 $3.$
-$(i)$ By **Weierstrass Approximation theorem** we have that $B_{n}\left( x,|x- \frac{1}{2}| \right)$ converges uniformly to $|x- \frac{1}{2}|$, and since all polynomials are in $C^{\infty }$ we have that $B_{n}\left( x,|x- \frac{1}{2}| \right)$ is differentiable in $(0,1)$ for all $n \in \mathbb{N}$. But $|x - \frac{1}{2}|$ is not differentiable at $\frac{1}{2}$. So there is a sequence in $D$ which converges to an element outside it. Hence $D$ is not complete.
+$(i)$ By **Weierstrass Approximation theorem** we have that $B_{n}\left( x,|x- \frac{1}{2}| \right)$, the Bernstein polynomials of $\left\lvert  x - \frac{1}{2}  \right\rvert$, converges uniformly to $|x- \frac{1}{2}|$, and since all polynomials are in $C^{\infty }$ we have that $B_{n}\left( x,|x- \frac{1}{2}| \right)$ is differentiable in $(0,1)$ for all $n \in \mathbb{N}$. But $|x - \frac{1}{2}|$ is not differentiable at $\frac{1}{2}$. So there is a sequence in $D$ which converges to an element outside it. Hence $D$ is not complete.
+
 $(ii)$ We see that for any polynomial $f$ on $[0,1]$ since its derivative $f'$ is also continuous and hence bounded on $[0,1]$, a compact set. Hence it is Lipschitz since
 $$
 \lvert f(x) - f(y) \rvert = |f'(c)|\lvert x-y \rvert  \leq M \lvert x-y \rvert \quad \text{for some } c \in (x,y)
 $$
-So polynomials on $[0,1]$ are Lipschitz, then we can use the same sequence as in $(i)$ to show that $\mathcal{L}$ is not complete.
+So polynomials on $[0,1]$ are Lipschitz, then see that for $g = \sqrt{ x }$, we have $g' = \frac{1}{\sqrt{ x }}$ which goes to $\infty$ as $x \to 0$. So from mean value theorem we have,
+$$
+\frac{\lvert \sqrt{ x } - \sqrt{ y } \rvert} {x-y} = \frac{1}{\sqrt{ c }} > M \quad \text{if } x,y < \frac{1}{M^{2}}
+$$
+So $g$ is not Lipschitz in $[0,1]$, But like in $(i)$ we have that $\{ B_{n}(x,\sqrt{ x }) \}$, which is a sequence of polynomials, hence Lipschitz on $[0,1]$, converges to $\sqrt{ x }$ which is not Lipschitz, so $\mathcal{L}$ is not complete.
 
 $4.$ If $y \in X\setminus K$ then we have that, 
 $$
@@ -68,7 +73,7 @@ $$
 $$
 So $f(x)=\rho(y,x)$ is a continuous function on the metric space X. Hence it attains a minimum on any compact set. Hence $\exists x \in K$ such that $\rho(x,y) = \text{dist}(y,K)$. 
 
-Now to show that compactness is needed, we can consider the subspace  $X = (0,1) \bigcup  \{ 2 \}$ and  $K = (0,1)$ , then $K$ is not a compact subset by Heine-Borel as it is not closed in $\mathbb{R}$. Now let $y = 2$ and we see that $\text{dist}(y,K)=1$, but no point in $(0,1)$ can attain it as $|x-2| = |x-1|+|1-2| >1$ for $x \in (0,1)$. $\quad \blacksquare$
+Now to show that compactness is needed, we can consider the subspace  $X = (0,1) \bigcup  \{ 2 \}$ and  $K = (0,1)$ , then $K$ is not a compact subset by **Heine-Borel** as it is not closed in $\mathbb{R}$. Now let $y = 2$ and we see that $\text{dist}(y,K)=1$, but no point in $(0,1)$ can attain it as $|x-2| = |x-1|+|1-2| >1$ for $x \in (0,1)$. $\quad \blacksquare$
 
 $5.$ Given that $A$ is compact and $B$ is closed and we suppose that $A \bigcap B=\varnothing$, Now assume for contradiction that $\text{dist}(A,B)=0$. Hence there exists a sequence of real numbers $\{ \rho(a_{n},b_{n}) \}$ such that $\lim_{ n \to \infty } \rho(a_{n},b_{n}) = 0$. Now since A is compact we have that $\{ a_{n} \}$ has a subsequence which will converge, say $\{ a_{n_{k}} \} \subseteq \{ a_{n} \}$ converges to $a$. Now we also have,
 $$
@@ -86,7 +91,7 @@ Conversely, if $\text{dist}(A,B)>0$ and assume for contradiction that $A \bigcap
 $6.$
 ![[SVG/tikzdiagram13.svg|diagram]]
 
-Consider $V^{c}$ and $K$, $K$ is compact and $V^{c}$ is closed and since $K \subseteq V \implies K \bigcap V^{c}= \varnothing$. Hence we can use (5.) above to say $\delta =\text{dist}(K,V^{c}) >0$. Now consider the open sets,
+Consider $V^{c}$ and $K$, $K$ is compact and $V^{c}$ is closed and since $K \subseteq V \implies K \bigcap V^{c}= \varnothing$. Hence we can use $(5.)$ above to say $\delta =\text{dist}(K,V^{c}) >0$. Now consider the open sets,
 $$
 \begin{gather*}
 U = \bigcup_{k \in K} B\left(k,\frac{\delta}{3} \right) \\
