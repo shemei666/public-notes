@@ -1106,7 +1106,8 @@ $$
 
 **Proof:** 
 1. $F=E \bigcup (F \setminus E) \implies \mu(F) = \mu(E) + \mu(F\setminus E) \geq \mu(E)$
-2. $$
+2. 
+$$
 \begin{gather*}
 F_{1} := E_{1} \\
 F_{2}:=E_{2}\setminus E_{1} \\
