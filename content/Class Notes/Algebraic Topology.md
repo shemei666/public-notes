@@ -669,4 +669,3 @@ We see that to get a covering map from a quotient space, the following suffices:
 
 ![[IMG_20250821_180051.jpg]]![[IMG_20250821_180847.jpg]]
 ![[IMG_20250821_181228.jpg]]
-
