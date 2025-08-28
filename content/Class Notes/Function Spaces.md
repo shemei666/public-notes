@@ -1123,8 +1123,8 @@ $$
 \mu\left( \bigcup E_{k} \right) = \mu\left( \bigcup F_{k} \right) = \sum_{}^{} \mu(F_{k}) \leq \sum_{}^{}\mu(E_{k})
 $$
 3.  Let $E_{0}=\varnothing$, we have
-   $$
-   \begin{align*}
+$$
+\begin{align*}
 \mu\left( \bigcup E_{i} \right) = &  \mu\left( \bigcup(E_{i}\setminus E_{i-1}) \right) \\
  = &  \sum_{}^{ } \mu(E_{i}\setminus E_{I-1}) \\
 =  & \lim_{ n \to \infty } \sum_{i=1}^{n} \mu(E_{i}\setminus E_{i-1}) \\
@@ -1134,7 +1134,7 @@ $$
 $$
 
 4. Define $F_{i} = E_{i}\setminus E_{i} \forall i$ 
-   $$
+$$
 F_{1} \subseteq F_{2} \subseteq F_{3} \subseteq\dots 
 $$
 $$
