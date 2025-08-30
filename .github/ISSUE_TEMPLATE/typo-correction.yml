@@ -1,0 +1,47 @@
+name: "Typo or Error Report"
+description: "Report typos, factual errors, or unclear content in the notes."
+title: "[Typo/Error] Brief description of the issue"
+labels: ["bug", "typo", "needs review"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for helping improve the notes! Please fill out the details below to report issues such as typos, factual errors, or unclear sections.
+
+  - type: textarea
+    id: location
+    attributes:
+      label: "Location of Error"
+      description: "Specify the filename and section, line, or paragraph where the issue occurs (e.g., `chapter1.md`, Section 2, third paragraph)."
+      placeholder: "e.g., `algorithms.md`, Section 3.2, first bullet point"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: "Describe the Issue"
+      description: "Clearly state what the error or typo is. If possible, copy/paste the incorrect text here."
+      placeholder: "The note says 'recusrion' instead of 'recursion'."
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: "Suggested Correction"
+      description: "Provide the corrected text or explain how it should be fixed."
+      placeholder: "Change 'recusrion' to 'recursion'."
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "Additional Context"
+      description: "Add any other information that would help clarify the issue (e.g., links, screenshots, why the correction is needed)."
+      placeholder: "This typo may confuse readers learning recursion for the first time."
+    validations:
+      required: false
