@@ -300,7 +300,7 @@ $$
 |f(x)| < M \quad \forall x \in X \text{ and } \forall f \in F
 $$
 
-**Theorem:** (Arzela-Ascoli) Let X be a compact metric space. Let $\{ f_{n} \}_{n=1}^{\infty }$ be a sequence of functions in $(C(X),\rho_{\infty})$ such that $\{ f_{n} \}$ is uniformly bounded and uniformly continuous. Then $\exists$ a subsequence $\{ f_{n_{k}} \}$ which converges in $C(X)$
+**Theorem:** (Arzela-Ascoli) Let X be a compact metric space. Let $\{ f_{n} \}_{n=1}^{\infty }$ be a sequence of functions in $(C(X),\rho_{\infty})$ such that $\{ f_{n} \}$ is uniformly bounded and uniformly equicontinuous. Then $\exists$ a subsequence $\{ f_{n_{k}} \}$ which converges in $C(X)$
 
 **Proof:** Since X is compact, X is totally bounded
 

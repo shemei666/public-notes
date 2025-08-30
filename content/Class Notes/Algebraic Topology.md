@@ -669,3 +669,112 @@ We see that to get a covering map from a quotient space, the following suffices:
 
 ![[IMG_20250821_180051.jpg]]![[IMG_20250821_180847.jpg]]
 ![[IMG_20250821_181228.jpg]]
+
+
+**Theorem:** (Ultimate lifting theorem) $(\widetilde{X},\widetilde{x_{0}}) \to (X,x_{0})$ covering map, $(z,y_{0})$ path connected + locally path connected then $g:(Z,y_{0}) \to (X,x_{0})$ admits a lift $\widetilde{g}:(Z,y_{o})$  iff
+
+**Proof:**
+
+**Corollary:** if $(Z,z_{0})$ is simply connected and locally path connected then any $g:(Z,z_{0}) \to (X,x_{0})$ lifts to a $\widetilde{g}$. 
+**Proof:**
+
+**Corollary:** Any map $(S^{n},z_{0}) \xrightarrow{g} (S^{1},x_{0})$ (for $n>1$) is base point preserving homotopic to a constant map. (pointed null-homotopic)
+**Proof:** As $S^{n}$ is simply connected and locally path connected for $n>1$ g lifts to $\widetilde{g}:(S^{n},z_{0}) \to (\mathbb{R}^{1},\tilde{x_{0}})$. As $\mathbb{R}^{1}$ is contractible, we got a pointed homotopy $\widetilde{g}\to \tilde{e_{x_{0}}}$. Apply $p:\mathbb{R} \to S^{1}$. $\quad \blacksquare$
+
+## Group theory Review
+
+### Abelian groups (Z-Modules)
+
+Let $\{ M_{i} \}_{i \in I}$ be a collection of abelian groups. Then 
+$$
+\begin{gather*}
+\prod M_{i} = \text{cartesian product with componentwise operations} \\
+\bigoplus  M_{i} = \text{submodule consisting of such elements with $a_{i}\neq_{0}$ for finitely many}
+\end{gather*}
+$$ We also have the natural projection maps,
+$$
+\prod M_{i} \xrightarrow{p_{i}} M_{i}
+$$
+
+### Universal properties
+$\prod M_{i}$: Given a $\mathbb{Z}$-module $N$ there is a bijection,
+$$
+\text{Maps}\left( N,\prod M_{i} \right) \leftrightarrow  \{ \text{Maps}(N,M_{i}) \}_{i \in I}
+$$
+
+$\bigoplus M_{i}:$ For any $\mathbb{Z}$-module N, $\exists$ a bijection
+$$
+\text{Maps}\left(\bigoplus M_{i},N\right) \leftrightarrow  \{ \text{Maps} (M_{i},N)\}_{i \in I}
+$$
+$\bigoplus M_{i}$ is the smallest submodule of $\prod M_{i}$ containing $M_{i}$ and every element is uniquely a finite sum $\sum_{}^{} a_{i} a_{i} \in M_{i}, a_{i}= 0$ for almost all $i$.
+
+---
+Suppose $M$ is a module and $M_{i}\subseteq M$ submodules. Then we have a natural map $\bigoplus M_{i} \to M$. This map is neither one-one nor onto in general. 
+
+- If it is onto, we say that ${M_{i}}$ generate M. 
+- If it is one-one, we say that $\{ M_{i} \}$ are independent.
+- If it is bijective, we say that M is an direct sum of $M_{i}$. ($M \cong \bigoplus M_{i}$)
+
+and we also have,
+$$
+\begin{gather*}
+(\bigoplus M_{i}) \oplus  (\bigoplus M_{j}) \cong \bigoplus M_{k} \\
+\bigoplus M_{(i,j) \in I\times J} \cong \bigoplus (\bigoplus  M_{i,j})
+\end{gather*}
+$$
+**Lemma:** For a $\mathbb{Z}$-module $M$ the following are equivalent,
+1. $M \cong \bigoplus \mathbb{Z}$
+2. $M$ has a basis on $\mathbb{Z}$, i.e., $\exists$ subset $S = \{ m_{i} \}_{i \in I} \subseteq M$ such that any $x \in M$ can be uniquely written as $x  = \sum_{}^{} a_{i}m_{i},a_{i} \in \mathbb{Z}$
+3. $\exists$ subset $S \subseteq M$ such that for any module $N$, $\exists$ a bijection $\text{Functions}(S,N) \leftrightarrow \text{Maps}(M,N)$ . i.e. any function $S\to N$ uniquely extends to a map $M\to N$.
+
+**Proof:**
+
+### Non-abelian groups
+
+Given groups $\{ G_{\alpha} \}_{\alpha \in A}$ we define their abstract free product to be a group $G$ with natural maps $G_{\alpha} \xrightarrow{i_{\alpha}} G$ that satisfy the universal extension property: for any group $H$ and any maps $G_{\alpha} \xrightarrow{f_{\alpha }} H$ $\exists!$ map $G\xrightarrow{f }H$ such that $f_{\alpha}= f \circ i_{\alpha }$. i.e. via $i_{\alpha} G_{\alpha} \to G$ the natural function.
+$$
+\text{Maps}(G,H) \to \{ \text{Maps}(G_{\alpha},H) \}_{\alpha \in A}
+$$
+is a bijection.
+
+Since this is a universal property, the data $\{ \{ i_{\alpha} \},G \}$ is uniquely determined upto a unique isomorphism. By choosing $H = G_{\alpha}$ for a fixed $\alpha$ and $f_{\beta} = \begin{cases}Id_{G_{\alpha}} & \alpha = \beta \\ \text{trivial} & \alpha \neq \beta  \end{cases}$ . We see that the existence of $f$ implies $f_{\alpha}i_{\alpha} =  Id_{G_{\alpha}}$. Thus if the universal object = $\{ \{ i_{\alpha} \}, G \}$ exists, then each $i_{\alpha}$ is injective.
+
+---
+**Def:** Given groups $\{ G_{\alpha} \}_{\alpha \in A}$, we define a word in $\bigsqcup G_{\alpha}$ to be sequence $w = (g_{1},g_{2},\dots,g_{n})$ with $g_{i} \in \bigsqcup G_{\alpha}$. empty word is the case when $n=0$. A word in $\bigsqcup G_{\alpha}$ is called reduced if it additionally satisfies the conditions:
+1. $g_{i}\neq 1$ (in $G_{\alpha }$)
+2. $\alpha _i \neq \alpha_{i+1}, \forall i$. Here $\alpha_{i}$ is the index for which $g_{i} \in G_{\alpha_{i}}$
+---
+**Examples:** $G_{1} = \{ 1,a \}$ with $a^{2} = 1$, $G^{2}= \{ 1,b \}$, with $b^{2} =1$.
+Reduced word in $G_{1} \bigsqcup G_{2}$ are $(a,b,a,b,\dots ,b)$
+
+Starting with an arbitrary word $w$, we get a reduced word of (possibly) smaller length by using one of 2 process:
+1. if $g_{i} =1$ for some $i$, drop it and re-index
+2. If $\alpha_{i}= \alpha_{i+1}$, then replace ith entry by $g_{i},g_{i+1}$, drop the (i+1)th entry and re-index.
+
+**Lemma:** The reduced word obtained by using $1.$ and $2.$  successively is unique.
+
+**Proof:** We argue by case, start with $w = (g_{1},\dots,g_{n})$. Use induction on n. Suppose there are 2 ways of applying $1.$ and $2.$ to $w$. If they have non-overlapping indices, we may perform them in either order to get some result of length n-2. By induction we're done. If they overlap, then one of them must be $(1)$. If $g_{i} = 1$, then we can drop it and re-index. Now the other operation must be either $1.$ or $2.$ on the re-indexed word. Again by induction we're done. $\quad \blacksquare$ 
+
+Let us construct $G$ and $i_{\alpha}: G_{\alpha} \to G$ as follows: Let $G$ be the set of all reduced words in $\bigsqcup G_{\alpha}$. Define $i_{\alpha}: G_{\alpha} \to G$ by $g \mapsto (g)$ if $g\neq 1$ and $1 \mapsto ()$.
+
+For any $w = (g_{1},\dots,g_{m})$ and $v=(h_{1},\dots,h_{n})$ we define 
+$$
+w *  v = \text{reduced word obtained from } (g_{1},\dots,g_{m},h_{1},\dots,h_{n})
+$$
+To check associativity: $w = (g_{1},\dots,g_{m},v=(h_{1},\dots,h_{n})$ and $u=(k_{1},\dots,k_{p})$. Then
+$$
+(w*v)*u = \text{reduced word from }(g_{1},\dots,g_{m},h_{1},\dots,h_{n},k_{1},\dots,k_{p}) = w*(v*u)
+$$
+By the uniqueness of the reduction, hence they are equal.
+The identity is the empty word. The inverse of $w=(g_{1},\dots,g_{m})$ is $\overline{w} = (\overline{g_{m}},\dots,\overline{g_{1}})$ where $\overline{g_{i}}$ is the inverse in $G_{\alpha_{i}}$. We see that $w*\overline{w} = ()$ by using the reduction process. 
+
+Hence $(G,*)$ is a group. Hence we can also see that $i_{\alpha}:G_{\alpha} \to G$ is a homomorphism since $i_{\alpha}(g)*i_{\alpha}(h) = (g)*(h) = (gh)$ if $gh \neq 1$ and $()$ otherwise.
+
+Now we check the universal property: Given any group H and maps $G_{\alpha} \xrightarrow{f_{\alpha}} H$ we define $f:G\to H$ by sending the reduced word $w = (g_{1},\dots,g_{n})$ to $f_{\alpha_{1}}(g_{1})\dots f_{\alpha_{n}}(g_{n})$. We see that this is a homomorphism since  $w=(g_{1},\dots,g_{m}), v=(h_{1},\dots,h_{n})$ then 
+$$
+\begin{align*}
+f(w * v) &= f(\text{reduced word from }(g_{1},\dots,g_{m},h_{1},\dots,h_{n}))  \\
+&= f_{\alpha_{1}}(g_{1}) \dots f_{\alpha_{m}}(g_{m})f_{\beta_{1}}(h_{1})\dots f_{\beta_{n}}(h_{n})) = f(w)f(v)
+\end{align*}
+$$ 
+Note that $f$ is uniquely determined by $f_{\alpha}$ since $G$ is generated by $i_{\alpha}(G_{\alpha})$ (i.e. by words of length 1)
