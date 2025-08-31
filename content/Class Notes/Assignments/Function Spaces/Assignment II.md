@@ -28,7 +28,7 @@ Since even polynomials contain the constant function (the polynomial $P(x) = 1$)
 
 $(ii)$ Every continuous function $f \in C[1, 2]$ can be uniformly approximated by a sequence of odd polynomials.  
 
-**Answer:**  This statement is also true. If $f:[1,2] \to \mathbb{R}$ is any continuous function, we can consider a function $g:[1,2], g(x) =\frac{f(x)}{x}$. Now this is also continuous since $x\neq0$ in $[1,2]$. Hence by $(i)$ we have that $g$ can be uniformly approximated by a sequence of even polynomials $\{P_n\}$. Now consider the sequence of odd polynomials $\{Q_n\}$ where $Q_n(x) = x P_n(x)$. $\exists N \in \mathbb{N}$ such that, $\|g -P_{n}\|_{\infty} < \frac{\varepsilon}{2}$ for $n\geq N$
+**Answer:**  This statement is also true. If $f:[1,2] \to \mathbb{R}$ is any continuous function, we can consider a function $g:\mathbb{R}\to [1,2], g(x) =\frac{f(x)}{x}$. Now this is also continuous since $x\neq0$ in $[1,2]$. Hence by $(i)$ we have that $g$ can be uniformly approximated by a sequence of even polynomials $\{P_n\}$. Now consider the sequence of odd polynomials $\{Q_n\}$ where $Q_n(x) = x P_n(x)$. $\exists N \in \mathbb{N}$ such that, $\|g -P_{n}\|_{\infty} < \frac{\varepsilon}{2}$ for $n\geq N$
 $$
 \begin{align*}
 \|f - Q_n\|_\infty =& \|f - x P_n\|_\infty = \|xg - xP_n\|_\infty  \\
@@ -94,10 +94,10 @@ Show that $\{ F_n \}$ has a subsequence that converges uniformly on $[0, 1]$.
 
 **Answer:**  We have that
 $$
-\lvert F_{n}(x) - F_{n}(y) \rvert  = |x-y|F'_{n}(c) = |x-y||f_{n}(c)| \leq |x-y| 
+\lvert F_{n}(x) - F_{n}(y) \rvert  = |x-y||F'_{n}(c)| = |x-y||f_{n}(c)| \leq |x-y| 
 $$
 
-We see that for any $\varepsilon>0$ we have $\delta = \varepsilon$ such that for $|x-y| < \delta$ we have $\lvert F_{n}(x) - F_{n}(y) \rvert| < \varepsilon$, for all $n \in \mathbb{N}$. Hence $\{ F_{n} \}$ is uniformly equicontinuous. Now,
+We see that for any $\varepsilon>0$ we have $\delta = \varepsilon$ such that for $|x-y| < \delta$ we have $\lvert F_{n}(x) - F_{n}(y) \rvert < \varepsilon$, for all $n \in \mathbb{N}$. Hence $\{ F_{n} \}$ is uniformly equicontinuous. Now,
 $$
 \lvert F_{n}  \rvert = \left\lvert  \int_{0}^{x}f_{n}(t) dt  \right\rvert \leq \int_{0}^{x} \lvert f_{n}(t) \rvert dt \leq \int_{0}^{x} 1 dt = x \leq  1
 $$
@@ -111,19 +111,23 @@ $$
 P_n \to f \quad \text{uniformly}, \quad P_n' \to f' \quad \text{uniformly on } [a, b].
 $$  
 
-**Answer:** By **Weierstrass approximation theorem** we have that $\exists \{ P_{n} \}$ such that $P_{n} \to f$ uniformly. Now we have that $f'$ is continuous on $[a,b]$ so by **Weierstrass approximation theorem** again we have $\exists \{ Q_{n} \}$ such that $Q_{n} \to f'$ uniformly. Now define,
+**Answer:** We have that $f'$ is continuous on $[a,b]$ so by **Weierstrass approximation theorem** we have that  $\exists \{ Q_{n} \}$ such that $Q_{n} \to f'$ uniformly. Now define,
 $$
 R_{n}(x) = f(a) + \int_{a}^{x} Q_{n}(t) dt
 $$
-We see that since $Q_{n}(t) \to f'(t)$ uniformly implies,
+We see that since $Q_{n}(t) \to f'(t)$ uniformly implies, $\forall \varepsilon>0, \exists N \in \mathbb{N}$ such that $\lvert Q_{n}(x)-f'(x) \rvert < \frac{\varepsilon}{(b-a)}$ for all $x \in [a,b]$ and . Hence for $n \geq N$ we have,
 $$
-\lim_{ n \to \infty }\int_{a}^{x} Q_{n}(t) dt = \int_{a}^{x} f'(t) dt = f(x) - f(a)
+\begin{align*}
+ \left\lvert  \int_{a}^{x}Q_{n}(t)dt +f(a) - f(x)   \right\rvert = &  \left\lvert \int_{a}^{x} Q_{n}(t) dt -\int_{a}^{x} f'(t) dt \right\rvert \\
+=  &  \left\lvert  \int_{a}^{x} Q_{n}(t) - f'(x) dt  \right\rvert \\
+\leq &  \int_{a}^{x} \lvert Q_{n}(t) - f'(t) \rvert dt  \\
+< & \frac{\varepsilon}{(b-a)} (b-a) = \varepsilon 
+\end{align*}
 $$  
-Hence we have that $R_{n}(x)$ converges pointwise to $f(x)$. Also we have,
+Hence we have that $R_{n}(x)$ converges uniformly to $f(x)$. Also we have by construction of $R_{n}$ that $R'_{n}(x) = Q_{n}(x)$. So by **Fundamental theorem of calculus** we have,
 $$
 R'_{n}(x) = Q_{n}(x) \to f'(x) \quad \text{uniformly}
 $$
-Now by the **Differentiable limit theorem** we have that $R_{n}$ converges uniformly to $f$.
 
 ---
 
@@ -141,7 +145,7 @@ $$
 Hence we have that $P_{n}$ is bounded for $n \geq N$, i.e. $P_{n}$ is constant for $n\geq N$. Hence it can only converge to a constant function. So any non-constant bounded continuous function cannot be approximated by polynomials on $\mathbb{R}$. For example, $f(x) = \sin x$ is a continuous bounded function which cannot be approximated by polynomials on $\mathbb{R}$.
 
 ---
- 
+%%  
 # Part B
 **Function Spaces**  
 *(Some Additional Practice Problems)*
@@ -185,3 +189,4 @@ Show that the theorem is not true by giving a counter-example for each of the fo
 **Answer:**  
 
 ---
+ %%
