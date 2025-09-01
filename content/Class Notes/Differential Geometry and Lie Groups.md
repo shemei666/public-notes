@@ -14,7 +14,7 @@ S is called _regular_ if $\sigma$ is also differentiable and $\nabla_{x}: \mathb
 
 
 Transition functions:
-![[SVG/tikzdiagram17.svg|diagram]]
+![[SVG/tikzdiagram19.svg|diagram]]
 remark: goes through the intersection.
 
 **Theorem:** In a regular atlas, all transition fns are smooth.

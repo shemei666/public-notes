@@ -685,13 +685,15 @@ We see that to get a covering map from a quotient space, the following suffices:
 
 ### Abelian groups (Z-Modules)
 
-Let $\{ M_{i} \}_{i \in I}$ be a collection of abelian groups. Then 
+Let $\{ M_{i} \}_{i \in I}$ be a collection of abelian groups. Then
+
 $$
 \begin{gather*}
-\prod M_{i} = \text{cartesian product with componentwise operations} \\
+\prod M_{i} = \text{cartesian product with componentwise operations}\\
 \bigoplus  M_{i} = \text{submodule consisting of such elements with $a_{i}\neq_{0}$ for finitely many}
 \end{gather*}
-$$ We also have the natural projection maps,
+$$
+We also have the natural projection maps,
 $$
 \prod M_{i} \xrightarrow{p_{i}} M_{i}
 $$
@@ -701,11 +703,14 @@ $\prod M_{i}$: Given a $\mathbb{Z}$-module $N$ there is a bijection,
 $$
 \text{Maps}\left( N,\prod M_{i} \right) \leftrightarrow  \{ \text{Maps}(N,M_{i}) \}_{i \in I}
 $$
+![[SVG/tikzdiagram13.svg|diagram]]
+
 
 $\bigoplus M_{i}:$ For any $\mathbb{Z}$-module N, $\exists$ a bijection
 $$
 \text{Maps}\left(\bigoplus M_{i},N\right) \leftrightarrow  \{ \text{Maps} (M_{i},N)\}_{i \in I}
 $$
+![[SVG/tikzdiagram14.svg|diagram]]
 $\bigoplus M_{i}$ is the smallest submodule of $\prod M_{i}$ containing $M_{i}$ and every element is uniquely a finite sum $\sum_{}^{} a_{i} a_{i} \in M_{i}, a_{i}= 0$ for almost all $i$.
 
 ---
