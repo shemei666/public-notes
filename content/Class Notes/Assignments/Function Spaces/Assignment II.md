@@ -145,7 +145,6 @@ $$
 Hence we have that $P_{n}$ is bounded for $n \geq N$, i.e. $P_{n}$ is constant for $n\geq N$. Hence it can only converge to a constant function. So any non-constant bounded continuous function cannot be approximated by polynomials on $\mathbb{R}$. For example, $f(x) = \sin x$ is a continuous bounded function which cannot be approximated by polynomials on $\mathbb{R}$.
 
 ---
-%%  
 # Part B
 **Function Spaces**  
 *(Some Additional Practice Problems)*
@@ -154,7 +153,7 @@ Hence we have that $P_{n}$ is bounded for $n \geq N$, i.e. $P_{n}$ is constant f
 
 1. Give an example of an infinite family of non-constant functions that is equicontinuous at a point.  
 
-**Answer:**  
+**Answer:**  Consider the family of functions $\mathcal{F} = \{ f_n(x) = \frac{\sin(nx)}{n} : n \in \mathbb{N} \}$. We will show that this family is equicontinuous at the point $x_0 = 0$. For any $\varepsilon > 0$, choose $\delta = \varepsilon$. Then, for any $x$ such that $|x - 0| < \delta$, we have
 
 ---
 
@@ -189,4 +188,3 @@ Show that the theorem is not true by giving a counter-example for each of the fo
 **Answer:**  
 
 ---
- %%
