@@ -419,7 +419,7 @@ Q. For which $\lambda$ eq (I) has a sol in $(C[a,b],\rho_{\infty })$
 
 Define $T : C[a,b] \to C[a,b]$ By
 $$
-Tf(x) = g(x) + \lambda \int_{a}^{b} K(x,y)f(x) dy
+Tf(x) = g(x) + \lambda \int_{a}^{b} K(x,y)f(y) dy
 $$
 f is a fixed point if it is the solution of the equation.
 
