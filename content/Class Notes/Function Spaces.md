@@ -20,7 +20,7 @@ Then $x \in F$
 ### Continuous Functions
 ![[Drawing 2025-07-21 09.34.32.excalidraw.svg]]
 
-**Def**: Let $(X,\rho)$ $(\gamma,\sigma)$ be metric spaces and $f:X\to Y$ be a function. Then F is said to be continuous at $x \in X$if for every $\epsilon > 0$, $\exists \delta >0$
+**Def**: Let $(X,\rho)$ $(\gamma,\sigma)$ be metric spaces and $f:X\to Y$ be a function. Then F is said to be continuous at $x \in X$ if for every $\epsilon > 0$, $\exists \delta >0$
 
 such that  
 $$
@@ -41,11 +41,11 @@ Ex: Lipschitz functions.
 
 ## Completeness
 
-**Def**: Let $(X,\rho)$ be a metric space and $\{ x_{n} \} \subseteq X$ is said to be Cauchy sequence if for $\forall \epsilon > 0$ $\exists k_{\epsilon} \in \mathbb{N}$ such that
+**Def**: Let $(X,\rho)$ be a metric space and $\{ x_{n} \} \subseteq X$ is said to be _Cauchy sequence_ if for $\forall \epsilon > 0$ $\exists k_{\epsilon} \in \mathbb{N}$ such that
 $$
 \rho (x_{n},x_{m}) < \epsilon \quad \forall n,m \geq k_{\epsilon }
 $$
-$(X,\rho)$ is said to be complete if every Cauchy sequence converges to a point in X.
+$(X,\rho)$ is said to be _complete_ if every Cauchy sequence converges to a point in X.
 
 Example: 
 1. $\mathbb{R},\mathbb{R}^{n}$
@@ -56,18 +56,18 @@ Example:
 **Def**: Let $(X,\rho)$ be a metric space and $E\subseteq X$ then $\text{diam}(E)$ is $\sup_{x,y \in E} \rho(x,y)$, $E$ is said to be bounded in the supremum is finite.
 $\{E_{i}\}_{i \in \mathbb{N}}$ is a decreasing sequence of non-empty subsets of E is said to be contracting if $\text{diam} E_{n}\to 0$ as $n\to \infty$
 
-**Theorem**: (Cantor Intersection) Let $(X,\rho)$ be a metric space, and X is complete iff whenever ${F_{i}}$ is a decreasing seq of non empty closed contracting subset of X, $\bigcap  F_{i}$ contains exactly one point.
+**Theorem**: (Cantor Intersection) Let $(X,\rho)$ be a metric space, and X is complete iff whenever ${F_{i}}$ is a decreasing sequence of non empty closed contracting subsets of X, $\bigcap  F_{i}$ contains exactly one point.
 
 **Proof**: $(\implies)$  Choose a point from each of $F_{i}$ then since the diameters are decreasing to 0, we have a Cauchy sequence, hence it converges to a point in X.
-$(\impliedby)$ For each $k \in \mathbb{N}$ we have that there exists $N_{k}$ such that for $n,m > N_{k}$ $d(x_{n,x_{m}})< \frac{1}{k}$ . So we can choose a sequence of points such that they make up nested closed and contracting intervals, hence they have a common point. Hence the Cauchy sequence converges to that unique point.
+$(\impliedby)$ For each $k \in \mathbb{N}$ we have that there exists $N_{k}$ such that for $n,m > N_{k}$ $d(x_{n},x_{m})< \frac{1}{k}$ . So we can choose a sequence of points such that they make up nested closed and contracting intervals, hence they have a common point. Hence the Cauchy sequence converges to that unique point.
 
 
 
 25/07/25:
-**Theorem**:(Lebesgue Covering Lemma) Let X be a compact metric space and {$E_{i}$} be an open cover. Then there exists $\epsilon > 0$. such that for any point x there is a ball of radius of $\epsilon$ contained in one of the $E_{i}$
+**Theorem**:(Lebesgue Covering Lemma) Let X be a compact metric space and {$E_{i}$} be an open cover. Then there exists $\epsilon > 0$. such that for any point x there is a ball of radius of $\epsilon$ contained in one of the $E_{i}$s.
 
-**Proof**: Assume no such $\epsilon$ exists. Then $\forall n \in \mathbb{N} \ \exists x_{n}$ s.t $B\left( x_{n}, \frac{1}{n} \right)$  does not completely lie inside any of $E_{i}$
-By compactness there should be a convergent subsequence for $x_{n}$. Now x $\in E_i$ for some i. and hence there is a $\delta >0$ such that $B(x,\delta) \subseteq E_{i}$ . But then as $x_{n}$ goes to x and as 1/n becomes smaller than $\delta$ we get a contradiction.
+**Proof**:(Sketch) Assume no such $\epsilon$ exists. Then $\forall n \in \mathbb{N} \ \exists x_{n}$ s.t $B\left( x_{n}, \frac{1}{n} \right)$  does not completely lie inside any of $E_{i}$
+By compactness there should be a convergent subsequence for $x_{n}$. Now $\lim_{ n \to \infty } x_{n}=x$ $\in E_i$ for some i and hence there is a $\delta >0$ such that $B(x,\delta) \subseteq E_{i}$ . But then as $x_{n}$ goes to x and as 1/n becomes smaller than $\delta$ we get a contradiction.
 
 **Proposition**: Let $(X,\rho), (Y,\sigma)$ be metric space and X compact $f:X\to Y$ be continuous ,then f is uniformly continuous.
 
@@ -130,18 +130,17 @@ will show Z = $\text{span}\{x_{1},x_{2},\dots,x_{n-1},x_{n}\}$ is complete
 
 Choose a Cauchy sequence
 let $z^{(p)} = \alpha_{1}^{(p)}x_{1} + \dots + \alpha_{n-1}^{(p)}x_{n-1} + \alpha_{n}^{(p)}x_{n}$
-$|| z^{(p)} - z^{(m)}|| = || (y^{p}-y^{m}) + \alpha_{n}^{(p)}x_{n} - \alpha_{n}^{(m)}x_{n}||$
+$|| z^{(p)} - z^{(q)}|| = || (y^{(p)}-y^{(q)}) + \alpha_{n}^{(p)}x_{n} - \alpha_{n}^{(q)}x_{n}||$
 $$
-= |\alpha_{m} - \alpha_{n}| || \frac{1}{|\alpha_{n}^{(p)}-\alpha_{n}^{(m)}|}(y^{(p)}-y^{(m)}) - x_{n}||
+= |\alpha _{m}^{(p)} - \alpha_{n}^{q}| \left| \frac{1}{|\alpha_{n}^{(p)}-\alpha_{n}^{(q)}|}(y^{(p)}-y^{(q)}) - x_{n}\right|
 $$
 $$
-\geq |\alpha_{n}^{p} - \alpha_{n}^{m}| \text{dist}(x_{n,Y})
+\geq |\alpha_{n}^{(p)} - \alpha_{n}^{(q)}| \text{dist}(x_{n,Y})
 $$
 
-since $\{z^{(p)}\}$ is Cauchy for given $\epsilon>0$. we have {$\alpha$} is Cauchy in $\mathbb{R}$
+since $\{z^{(p)}\}$ is Cauchy for given $\epsilon>0$. we have {$\alpha$} is Cauchy in $\mathbb{R}$ and hence we have convergent and hence $\{ z^{(p)} \}$ converges to some $z \in Z$ Hence $Z$ is complete.
 
-
-**Lemma**: (Riesz's Lemma): Let Y be a closed subspace of X such that Y $\neq$X. Then for any $0<r<1$. $\exists x_{r}\in X$ such that $\lvert x_{r} \rvert = 1$ and $r<\text{dist}(x_{r},Y) \leq 1$
+**Lemma**: (Riesz's Lemma): Let $Y$ be a closed subspace of $X$ such that $Y \neq X$. Then for any $0<r<1$. $\exists x_{r}\in X$ such that $\lvert x_{r} \rvert = 1$ and $r\leq\text{dist}(x_{r},Y) \leq 1$
 
 **Proof**:
 Since $Y \neq  X$ . Fix an $x \in X-Y$ . Then there exists element $y \in Y$ (by the property of infimum) such that
@@ -176,7 +175,7 @@ $$
 
 
 
-**Theorem**: Let $(X,||\cdot ||)$ be a infinite dimensional space. Let $B(0,1) = \{x \in X| ||x|| \leq  1\}$ be the closed unit ball in X. Then $B(0,1)$ is not compact.
+**Theorem**: Let $(X,||\cdot ||)$ be a infinite dimensional space. Let $B(0,1) = \{x \in X\mid \|x\| \leq  1\}$ be the closed unit ball in X. Then $B(0,1)$ is not compact.
 
 **Proof**: let $\{ x_{1},x_{1},x_{3},\dots  \}$ be an infinite linearly independent set 
 Define $Z_{n}$ : $\text{span}\{x_{1},x_{2},\dots,x_{n}\}$
@@ -223,13 +222,7 @@ for $n,m > k_{1}$ over all $x \in X$
 Let $f(x)$ be the pointwise limit of $f_n(x)$ since it converges in $\mathbb{R}$
 
 $$
-|f_{n}(x) - f(x)| < \frac{\epsilon}{2}
-$$
-for $n\geq k_{2}$
-
-Now set $p = \text{max}(k_1,k_2)$
-$$
-|f_{n}(x)- f(x)| \leq |f_{n}(x) - f_{p}(x) | + |f_{p}(x) - f(x)| <\epsilon \quad \forall x \in X
+\lim_{ n \to \infty } \lvert f_{n}(x)-f_{m}(x) \rvert = |f_{n}(x) - f(x)| \leq  \frac{\epsilon}{2} \quad \forall n > k_{2}
 $$
 Hence $f_{n}$ converges uniformly $\quad \blacksquare$
 
@@ -302,14 +295,14 @@ $$
 
 **Theorem:** (Arzela-Ascoli) Let X be a compact metric space. Let $\{ f_{n} \}_{n=1}^{\infty }$ be a sequence of functions in $(C(X),\rho_{\infty})$ such that $\{ f_{n} \}$ is uniformly bounded and uniformly equicontinuous. Then $\exists$ a subsequence $\{ f_{n_{k}} \}$ which converges in $C(X)$
 
-**Proof:** Since X is compact, X is totally bounded
+**Proof:** Since X is compact, X is totally bounded we can create a countable dense subset S of X as follows:
 
 $\forall n \in \mathbb{N}$ , $\exists S_{n}= \{ s_{1},\dots,s_{n_{k}} \}$ such that
 $$
 X = \bigcup_{i=1}^{n_{k}} B \left(s_{i},\frac{1}{n} \right)
 $$
 $$
-S = \bigcup_{i=1}^{\infty} S = \{x_{1},x_{2},\dots,\}
+S = \bigcup_{i=1}^{\infty} S_{i} = \{x_{1},x_{2},\dots,\}
 $$
 **Step I**:
 Using uniformly boundedness of $\{ f_{n} \}$ we find a subsequence which converge pointwise
@@ -347,7 +340,7 @@ $\forall n,m \geq k$ and $\forall s \in S_{M}$
 $$
 \lvert g_{n}(s) - g_{m}(s) \rvert < \frac{\epsilon}{3} \quad \forall n,m \geq k
 $$
-Then if $\rho(x,y) < \delta$
+Then if $\rho(x,s) < \delta$
 $$
 \begin{align*}
 \lvert g_{n}(x) - g_{m}(x)\rvert \leq &\lvert g_{n}(x) - g_{n}(s) \rvert +& \\ 
@@ -418,7 +411,7 @@ Remarks:
 - consider $f(x) = \frac{1}{x} + x$ on $[1,\infty )$
 ### Applications of Banach fixed point theorem:
 i) Integral equations
-Let $K \in C([a,b]\times [a.b]), g \in C[a,b]$
+Let $K \in C([a,b]\times [a,b]), g \in C[a,b]$
 $$
 f(x) = \lambda \int_{a}^b K(x,y)f(y) dy + g(x) \quad \text{(I)}
 $$
@@ -474,7 +467,7 @@ f(t_{0}) = x_{0}
 
 $$
 
-**Theorem:** (Picard- Lindelof) Let g be a continuous function on a R = $\{ (t,x)| |t - t_{0}| \leq a, |x-x_{0}|\leq b \}$  and exists c >0 such that $|g(t,x)|\leq c$ $\forall (t,x) \in \mathbb{R}$. Also assume g is Lipschitz on the second variable i.e. $\exists k >0$ such that 
+**Theorem:** (Picard- Lindelof) Let g be a continuous function on a R = $\{ (t,x)| |t - t_{0}\mid \leq a, |x-x_{0}|\leq b \}$  and exists c >0 such that $|g(t,x)|\leq c$ $\forall (t,x) \in \mathbb{R}$. Also assume g is Lipschitz on the second variable i.e. $\exists k >0$ such that 
 $$
 |g(t,x) - g(t,y)| \leq k|x-y| \quad (t,x),(t,y) \in R
 $$
@@ -540,6 +533,9 @@ f_{n+1}(t) = x_{0} + \int_{t_{0}}^{t}g(s,f_{n}(s))ds & \forall n=0,1,\dots
 \end{cases}
 $$
 
+### Baire Category Theorem
+**Def:** A subset A of a metric space X is said to be nowhere dense if the interior of $\overline{A}$ is empty.
+
 **Theorem:**(Baire Category Theorem) Let X be a complete metric space and $E_n$ be a sequence of dense open sets
 $$
 \bigcap_{n=1}^{\infty } E_{n} \quad \text{is also dense in X}
@@ -564,7 +560,7 @@ Applying Cantor intersection , $\exists$ a point $x_{0} \in \bigcap \overline{B_
 
 **Corollary:** Let X be complete and $\{ F_{n} \}$ be a countable collection of closed sets in X. If $\bigcup_{n=1}^{\infty} F_{n}$ has non-empty interior then at least one of $F_{n}$ has non-empty interior.
 
-**Corollary:** Let X be complete and $\{ F_{n} \}$ be a sequence of closed sets. Then $\bigcup_{n=1}^{\infty}\partial F_{n}$ is nowhere dense in X.
+**Corollary:** Let X be complete and $\{ F_{n} \}$ be a sequence of closed sets. Then $\bigcup_{n=1}^{\infty}\partial F_{n}$ has no open ball inside it.
 
 **Theorem:**(A non-linear uniform boundedness theorem) Let X be a complete metric space and $F$ be family of continuous functions on X such that F is pointwise bounded, i.e. for every $x \in X$, $\{ f(x) | f \in F \}$ is bounded. Then $\exists$ a ball in X on which F is uniformly bounded.
 
@@ -588,11 +584,11 @@ Therefore, F is uniformly bounded on $B(x_{0},r)$ $\quad \blacksquare$
 $$
 E_{m,n} := \left\{  x \in X \middle  |f_{j}(x) - f_{k}(x)|\leq \frac{1}{m}   \forall j,k\geq n\right\}
 $$
-Take, $D=X\setminus \bigcup_{n,m=1}^{\infty} \partial E_{n,m}$. So, D is dense in X. So, D is dense in X. Let $x_{0} \in X$ and $\epsilon>0$ arbitrary. $\{ f_{n}(x_{0}) \}$ is convergent and hence a Cauchy sequence. Let $m \in \mathbb{N}$ such that $\frac{1}{m} < \frac{\epsilon}{4}$. $\exists N \in \mathbb{N}$
+Take, $D=X\setminus \bigcup_{n,m=1}^{\infty} \partial E_{n,m}$. So, D is dense in X. So, D is dense in X. Let $x_{0} \in D$ and $\epsilon>0$ arbitrary. $\{ f_{n}(x_{0}) \}$ is convergent and hence a Cauchy sequence. Let $m \in \mathbb{N}$ such that $\frac{1}{m} < \frac{\epsilon}{4}$. $\exists N \in \mathbb{N}$
 $$
-\lvert f_{j}(x_{0}) - f_{k}(x_{0}) \rvert  \frac{<1}{m} \quad \forall j,k \geq N
+\lvert f_{j}(x_{0}) - f_{k}(x_{0}) \rvert < \frac{1}{m} \quad \forall j,k \geq N
 $$
-So, $x_{0} \in E_{m,n}$. Hence, $x_{0} \in D \cap E_{m,n}$. $\exists r>0$ such that $B(x_{0},r) \subseteq E_{m,N}$. Since, $f_{N}$ is continuous at $x_{0}$, $\exists 0<\delta<r$ such that
+So, $x_{0} \in E_{m,N}$. Hence, $x_{0} \in D \cap E_{m,n}$. $\exists r>0$ such that $B(x_{0},r) \subseteq E_{m,N}$. Since, $f_{N}$ is continuous at $x_{0}$, $\exists 0<\delta<r$ such that
 $$
 \lvert f_{N}(x_{0}) - f_{N}(x) \rvert < \frac{1}{m} \quad \forall x \in B(x_{0},\delta)
 $$
@@ -728,7 +724,7 @@ Example: $C(X)$ X is compact is uniformly closed algebra
 
 **Def:** A set $\mathscr{B}$ is said to be uniform closure of an algebra $\mathscr{A}$ of  real valued functions of X if $\mathscr{B}$ is the set of all uniform limits of $\mathscr{A}$
 
-![[SVG/tikzdiagram20.svg|diagram]]
+![[SVG/tikzdiagram24.svg|diagram]]
 
 
 **Theorem:** A uniform closure $\mathscr{B}$ of an algebra $\mathscr{A}$ of bounded functions on a metric space X is a uniformly closed algebra
@@ -950,14 +946,13 @@ $$
 $$
 that is $\{ g_{n} \}$ converges uniformly to $f$. $\quad \blacksquare$
 
-
 **Theorem:** Let X be a compact metric space. Then $C(X)$ is separable.
 
 **Proof:** 
 We assume that $X$ has more than 1 point otherwise it is trivial.
 Since $X$ is compact, $X$ is separable. That is $\exists$ a collection of points $Z=\{ z_{1},z_{1},\dots  \}$  such that $Z$ is dense in X. Define $f_{j}:X\to \mathbb{R},\forall j$ such that
 $$
-F_{j}(x) = \rho(x,z_{j}) \quad \forall x \in X 
+f_{j}(x) = \rho(x,z_{j}) \quad \forall x \in X 
 $$
 implies $f_{j}\in C(X), \forall j$. Now let
 $$
@@ -1073,7 +1068,7 @@ Let S be the collection of all open sets of $\mathbb{R}$. $S_{1} \subseteq S \im
 
 **Def:** Let M be a $\sigma$-algebra on a set X. A function $\mu : M \to [0,\infty]$ is said to be a measure if
 1. $\mu(\varnothing) = 0$
-2. If $\{  E_{i} \}$ is a disjoint collection of sets in $M$ then:
+2. If $\{  E_{i} \}$ is a disjoint collection of sets in $\mathscr{M}$ then:
 $$
 \mu\left( \bigcup_{i=1}^{\infty } E_{i} \right) = \sum_{i=1}^{\infty } \mu(E_{i})
 $$
@@ -1085,7 +1080,7 @@ $(X,M,\mu)$ is called a measure space. Elements of M are called measurable sets.
 
 **Examples**: add some examples of measures #addexample 
 
-**Theorem:** Let $\mu$ be a measure on $M$ then,
+**Theorem:** Let $\mu$ be a measure on $\mathscr{M}$ then,
 1. (monotonicity) if $E,F \in M$ and $E \subseteq F$ then
 $$
 \mu(E) \leq \mu(F)
@@ -1118,7 +1113,7 @@ $$
 $$
 \bigcup F_{k} = \bigcup E_{k}
 $$
-and $\{ F_{k} \}$ is a disjoint family in $M$. So,
+and $\{ F_{k} \}$ is a disjoint family in $\mathscr{M}$. So,
 $$
 \mu\left( \bigcup E_{k} \right) = \mu\left( \bigcup F_{k} \right) = \sum_{}^{} \mu(F_{k}) \leq \sum_{}^{}\mu(E_{k})
 $$
@@ -1158,7 +1153,7 @@ Instead of $\mu(E_{1})<\infty$ if we assume $\mu(E_{n})<\infty$ for some $n \in 
 >[!info]
 >$f = g$ on $E^{c}$ where $\mu(E)=0$, $\mu$ is some measure then we say $f=g \text{ a.s}$
 
-**Def:** Let $(X,M,\mu)$ be a measure space $\mu$ is said to be complete measure if whenever $F \subset N$ and $\mu (N) = 0$ then $F \in M$.
+**Def:** Let $(X,M,\mu)$ be a measure space $\mu$ is said to be _complete measure_ if whenever $F \subset N$ and $\mu (N) = 0$ then $F \in M$.
 
 **Theorem:** Let $(X,M,\mu)$ be a measure space. Define,
 $$
@@ -1170,7 +1165,7 @@ Then, $\overline{M}$ is a $\sigma$-algebra and there is an extension of $\mu$ to
 $$
 \bigcup (E_{i} U F_{i}) = \left( \bigcup E_{i} \right) \cup \left( \bigcup F_{i} \right)
 $$
-The first term in the RHS in in $M$ while the other is a null set, so we have $\bigcup (E_{i} \cup F_{i}) \in \overline{M}$
+The first term in the RHS in in $\mathscr{M}$ while the other is a null set, so we have $\bigcup (E_{i} \cup F_{i}) \in \overline{M}$
 
 We have to check for $E \in M, F \in N$, if $E \cup F \in \overline{M}$ then $(E \cup F)^{c} \in \overline{M}$. We can always assume $E \cap N = \varnothing$,
 $$
@@ -1188,6 +1183,7 @@ So, $\overline{M}$ is a $\sigma$-algebra. Define $\bar{\mu}(E \cup F) = \mu(E), 
 Let $E_{1} \cup  F_{1} = E_{2} \cup F_{2}$, where the $E_{i},F_{i}$ are from there their usual collections, $E_{1} \subseteq E_{2} \cup F_{2}, E_{2} \cup N_{2}$, Hence we have $\mu(E_{1}) \leq \mu(E_{2})+\mu(N_{2}) = \mu(E_{2})$, Similarly we get the other direction. We can also easily check it is measure also.
 
 ### Outer measure
+
 **Def:** Let $X$ be a set. A function $\mu^{*}:\mathscr{P}(X) \to [0,\infty]$ is called an outer measure if
 1. $\mu^{*}(\varnothing) = 0$
 2. if $A \subseteq B$ then $\mu^{*}(A)\leq \mu^{*}(B)$
@@ -1221,27 +1217,394 @@ $$
 $$
 $\quad \blacksquare$
 
-**Def:** Let $\mu^{*}$ be an outer measure on $X$. A subset $A \subseteq X$ is said to be $\mu^{*}$-measurable if
+**Def:** Let $\mu^{*}$ be an outer measure on $X$. A subset $A \subseteq X$ is said to be _$\mu^{*}$-measurable_ if
 $$
 \mu^{*}(E) = \mu^{*} (E \cap A) + \mu^{*}(E \cap A^{*}) \quad \forall E \subseteq X
 $$
-**Theorem:**(Caratheodory's Theorem) Let $\mu^{*}$ be an outer measure on $X$ and $M$ be the collection of all $\mu^{*}$-measurable sets. Then $M$ is a $\sigma$-algebra and $\mu^{*}$ is a measure on $M$
 
-**Proof:** #incomplete 
+**Theorem:**(Caratheodory's Theorem) Let $\mu^{*}$ be an outer measure on $X$ and $\mathscr{M}$ be the collection of all $\mu^{*}$-measurable sets. Then $\mathscr{M}$ is a $\sigma$-algebra and $\mu^{*}$ is a measure on $\mathscr{M}$
+**Proof.** If $A$ is $\mu^*$–measurable then so is $A^c$. For $A,B \in \mathcal{M}$ and $\forall\, E \subseteq X$ we have,
+
+$$
+\begin{align*}
+\mu^*(E)  & = \mu^*(E \cap A) + \mu^*(E \cap A^c)  \\
+ & = \mu^*(E \cap A \cap B) + \mu^*(E \cap A \cap B^c) + \mu^*(E \cap A^c \cap B) + \mu^*(E \cap A^c \cap B^c) \\
+ & \geq \mu^*(E \cap (A \cup B)) + \mu^*(E \cap (A \cup B)^c)
+\end{align*}
+$$
+
+Also we clearly have
+
+$$
+\mu^*(E) \leq \mu^*(E \cap (A \cup B)) + \mu^*(E \cap (A \cup B)^c) \implies A \cup B \in \mathscr{M}.
+$$
+
+If $A, B \in \mathscr{M}$ and $A \cap B = \varnothing$, then
+
+$$
+\mu^*(A \cup B) = \mu^*\left((A \cup B) \cap A\right) + \mu^*\left((A \cup B) \cap A^c\right) = \mu^*(A) + \mu^*(B).
+$$
+Now we will see $\mathscr{M}$ is closed under disjoint union. Let $\{E_i\} \subset \mathscr{M}$ be a countable disjoint collection set, define:
+
+$$
+B_n = \bigcup_{i=1}^n E_i, \quad B = \bigcup_{i=1}^\infty E_i.
+$$
+
+By the first part, $B_n$ is $\mu^*$–measurable, i.e., $\forall\, E \subseteq X$,
+
+$$
+\begin{align*}
+\mu^*(E)  & = \mu^*(E \cap B_n) + \mu^*(E \cap B_n^c) \\
+ & = \mu^*(E \cap B_n \cap E_n) + \mu^*(E \cap B_n \cap E_n^c) + \mu^*(E \cap B_n^c) \\
+ & = \mu^*(E \cap E_n) + \mu^*(E \cap B_{n-1}) + \mu^*(E \cap B_n^c) \\
+ & = \sum_{i=1}^n \mu^*(E \cap E_i) + \mu^*(E \cap B_n^c)  \\
+ & \geq  \mu^*(E \cap B_{n}) + \mu^*(E \cap B_n^c)
+\end{align*}
+$$
+
+Taking $n \to \infty$, we get
+
+$$
+\mu^*(E) \geq \sum_{i=1}^\infty \mu^*(E \cap E_i) + \mu^*(E \cap B^c) \geq \mu^*(E \cap B) + \mu^*(E \cap B^c) \geq \mu^*(E)
+$$
+
+Hence $B$ is $\mu^*$–measurable, also from above we have,
+
+$$
+\mu^*(E \cap B) = \sum_{i=1}^\infty \mu^*(E \cap E_i).
+$$
+
+In particular, take $E = B$,
+
+$$
+\mu^*(B) = \sum_{i=1}^\infty \mu^*(E_i) \quad
+$$
+
+Hence $\mu^*$ is a measure on $\mathscr{M}$. To show $\mu^{*}$ is a complete measure. Take $A \subseteq X$ such that $\mu^*(A) = 0$.
+
+$$
+\mu^*(E) \leq \mu^*(E \cap A) + \mu^*(E \cap A^c) = \mu^*(E \cap A^c) \leq \mu^*(E).
+$$
+
+Therefore
+
+$$
+\mu^*(E) = \mu^*(E \cap A) + \mu^*(E \cap A^c) \quad \forall\, E \subseteq X
+$$
+
+$\implies  A \in \mathscr{M}$. By the above, all the subsets $B \subseteq A$ also belong to $\mathscr{M}$. Therefore $\mu^*$ is a complete measure on $\mathscr{M}$. $\quad \blacksquare$
 
 
-**Def:** Let $\mathscr{A} \subseteq \mathscr{P}(X)$ be an algebra . A premeasure $\mu_{0}$ is a function, $\mu_{0}:\mathscr{A} \to [0,\infty]$ such that
+**Def:** Let $\mathscr{A} \subseteq \mathscr{P}(X)$ be an algebra. A _premeasure_ $\mu_{0}$ is a function, $\mu_{0}:\mathscr{A} \to [0,\infty]$ such that
 1. $\mu_{0}(\varnothing) = 0$
 2. If $\{ A_{i} \}$ is a disjoint collection of sets in $\mathscr{A}$ such that $\bigcup_{i=1}^{\infty} A_{i} \in \mathscr{A}$ then,
 $$
 \mu_{0}\left( \bigcup_{i=1}^{\infty} A_{i} \right) = \sum_{i=1}^{\infty} \mu_{0}(A_{i})
 $$
 
-**Theorem:** Let $\mathscr{A} \subseteq \mathscr{P}(X)$ be an algebra, $\mu_{0}$ be a premeasure on $\mathscr{A}$ and $M$ be the $\sigma$-algebra generated by $\mathscr{A}$. Then
-1. There exists a measure $\mu$ on $M$ such that $\mu = \mu_{0}$ on $\mathscr{A}$.
-2. If $\nu$ is another measure on $M$ that extends $\mu_{0}$ then $\nu  \leq \mu$ on $M$.
+**Proposition:** Let $\mu_0$ be a premeasure on an algebra $\mathscr{A} \subseteq \mathscr{P}(X)$. Then there is an outer measure $\mu^*$ such that
+
+1. $\mu^*|_{\mathscr{A}} = \mu_0$
+
+2. Every set in $\mathscr{A}$ is $\mu^*$–measurable
+
+**Proof:**
+We can define an outer measure by following:
+
+$$
+\mu^*(E) = \inf \left\{ \sum_{i=1}^{\infty} \mu_0(A_i) \,\Big|\, E \subseteq \bigcup_{i=1}^{\infty} A_i,\, A_i \in \mathscr{A} \right\}.
+$$
+Now to check:
+1. Suppose $E \in \mathcal{A}$. Then for any $\{ A_{i} \} \subseteq \mathscr{A}$ with $E \subseteq \bigcup_{i=1}^\infty A_i$ . Then $B_n := E \cap \left(A_n \setminus \bigcup_{i=1}^{n-1} A_i\right)$ is a disjoint collection and $E = \bigcup_{n=1}^\infty B_n$. So
+
+$$
+\mu_0(E) = \sum_{i=1}^{\infty} \mu_0(B_n) \leq \sum_{n=1}^{\infty} \mu_0(A_n).
+$$
+
+$\therefore \mu_0(E) \leq \mu^*(E)$. Taking $A_1 = E$ and $A_i = \emptyset$ for $i \ne 1$,
+
+$$
+\mu^*(E) = \mu_0(E).
+$$
+
+Thus $\mu^*(E) = \mu_0(E)$ $\forall\, E \in \mathcal{A}$.
+
+2. Let $A \in \mathcal{A}$, $E \subseteq X$, $\epsilon > 0$. Then $\exists$ a sequence $\{B_i\}$ s.t. $E \subseteq \bigcup_{i=1}^\infty B_i$.
+
+$$
+\sum_{i=1}^\infty \mu_0(B_i) \leq \mu^*(E) + \epsilon \implies \sum_{i=1}^\infty \mu_0(B_i \cap A) + \sum_{i=1}^\infty \mu_0(B_i \cap A^c) \leq \mu^*(E) + \epsilon
+$$
+
+$$
+\implies \mu^*(E \cap A) + \mu^*(E \cap A^c) \leq \sum_{i=1}^\infty \mu_0(B_i \cap A) + \sum_{i=1}^\infty \mu_0(B_i \cap A^c) \leq \mu^*(E) + \epsilon
+$$
+
+$$
+\implies \mu^*(E \cap A) + \mu^*(E \cap A^c) \leq \mu^*(E) \quad \text{(for some arbitrary $\epsilon$).}
+$$
+
+So
+
+$$
+\mu^*(E) = \mu^*(E \cap A) + \mu^*(E \cap A^c)
+$$
+
+or $A$ is $\mu^*$–measurable. $\quad \blacksquare$
+
+
+**Theorem:** Let $\mathscr{A} \subseteq \mathscr{P}(X)$ be an algebra, $\mu_{0}$ be a premeasure on $\mathscr{A}$ and $\mathscr{M}$ be the $\sigma$-algebra generated by $\mathscr{A}$. Then
+1. There exists a measure $\mu$ on $\mathscr{M}$ such that $\mu = \mu_{0}$ on $\mathscr{A}$.
+2. If $\nu$ is another measure on $\mathscr{M}$ that extends $\mu_{0}$ then $\nu  \leq \mu$ on $\mathscr{M}$.
 3. The equality holds above if $\nu(X) = \mu(X) < \infty$.
 4. if $\mu_{0}$ is $\sigma$-finite on $\mathscr{A}$ then the extension is unique.
 
+**Proof:** 
+1. Uses Caratheodory’s theorem and the previous proposition. Let $\mathcal{M}'$ be the set of all $\mu^*$–measurable sets where $\mu^*$ comes from $\mu_0$. Then by Caratheodory’s theorem, $\mu^*|_{\mathcal{M}'} = \mu_0$. By previous proposition,
+
+$$
+\mu^*|_{\mathcal{A}} = \mu_0 \implies \mu^*|_{\mathcal{M}'} = \mu_0
+$$
+as $\mathcal{M}(A) = \mathcal{M} \subseteq \mathcal{M}'$.
+
+2. Let $E \in \mathcal{M}$ and $E = \bigcup_{i=1}^\infty A_i$, $A_i \in \mathcal{A}$. Then
+
+$$
+\nu(E) \leq \sum_{i=1}^\infty \mu(A_i) = \sum_{i=1}^\infty \mu_0(A_i)
+$$
+
+$$
+\implies \nu(E) = \mu^*(E) = \mu(E).
+$$
+
+3. If $A = \bigcup_{i=1}^\infty A_i$,
+
+$$
+\nu(A) = \lim_{n \to \infty} \left( \bigcup_{i=1}^n A_i \right ) = \lim_{n \to \infty} \mu \left( \bigcup_{i=1}^n A_i \right ) = \mu(A). \quad \blacksquare
+$$
+
+
+
+
+
+$B_\mathbb{R} \subseteq \mathcal{L}$
+
+**Theorem:** If $E \in \mathcal{L}$, Then
+
+$$
+m(E) = \inf \left\{ m(U) \mid U \text{ is open and } E \subseteq U \right\}
+$$
+
+$$
+= \sup \left\{ m(K) \mid K \text{ is compact and } K \subseteq E \right\}
+$$
+
 **Proof:**
-1. By Caratheod #incomplete 
+
+Let $\lambda(E) = \inf \left\{ m(U) \mid U \text{ is open and } E \subseteq U \right\}$
+
+Since $m(E) \leq m(U)$, Thus, $m(E) \leq \lambda(E)$
+
+We already have seen, for $E \in \mathcal{L}$:
+
+$$
+m(E) = \inf \left\{ \sum_{i=1}^n m(a_i, b_i) \mid E \subseteq \bigcup_{i=1}^n (a_i, b_i) \right\}
+$$
+
+$$
+\geq \inf \left\{ m(U) \mid U \text{ is open and } E \subseteq U \right\}
+$$
+
+$$
+= \lambda(E)
+$$
+
+$$
+\left(m\left(\bigcup_{i=1}^n (a_i, b_i)\right) \leq \sum_{i=1}^n m(a_i, b_i)\right)
+$$
+
+Therefore,
+$$
+m(E) = \lambda(E)
+$$
+#incomplete 
+
+
+**Proposition:** If $E \in \mathcal{L}$ Then 
+$$
+\begin{gather*}
+m(E) = inf \{ m(U) | U \text{ is open and } E \subseteq U \} \\
+= sup \{ m(K) | K \text{ is compact and } K \subseteq E \}
+\end{gather*}
+
+$$
+
+**Proposition:** If $E \subseteq \mathbb{R}$ TFAE
+1. $E \in \mathcal{L}$
+2. $E = V\setminus N_{1}$ where $V$ is a $G_{\delta}$ set and $N_{1}$ is a null set.
+3. $E = W \cup N_{2}$ where $W$ is an $F_{\sigma}$ set and $N_{2}$ is a null set.
+
+**Proof:** #incomplete 
+**Remark:** L is the completion of $B_{\mathbb{R}}$
+
+**Def:** $f:(X,\mathscr{M}) \to (Y,\mathscr{N})$ then f is said to be $(\mathscr{M},\mathscr{N})$ measurable if $f^{-1}(N) \in \mathscr{M}, \forall N \in \mathscr{N}$. If $f:(X,\mathscr{M}) \to (\mathbb{R},\mathscr{B}_{\mathbb{R}})$ and f  in $(\mathscr{M},\mathscr{B}_{\mathbb{R}})$-measurable then f is simply called as $\mathscr{M}$-measurable function.
+
+**Theorem:** Let $E \in \mathcal{L}$ Then $\forall s,r \in \mathbb{R}$, $E + s \in \mathcal{L}$ and $rE \in \mathcal{L}$ . Now, $m(E + r) = m(E)$ and $m(rE) = \lvert r \rvert m(E)$.
+
+**Proof:** Let $I$ be an open interval then $I +s$ and $rI$ are also open intervals. Also, $m(I+s) = m(I)$ and $m(rI)= \lvert r \rvert m(I)$.
+
+If $E \in \mathscr{B}_{\mathbb{R}}$ and since $E$ is generated by open intervals then $E + s \in \mathscr{B}_{\mathbb{R}}, rE \in \mathscr{B}_{\mathbb{R}}$, $m(E+s)=m(E), m(rE)=\lvert r \rvert m(E)$.
+
+Let $N \in \mathscr{B}_{\mathbb{R}}$ and $m(N)=0$ by premeasure $N +r \in \mathscr{B}_{\mathbb{R}}, rN \in \mathscr{B}_{\mathbb{R}}$. $m(N + s)=0,m(rN)=\lvert r \rvert m(N)=0$
+If $F \subseteq N$ then $m(F)=0$, Also, $F+r \subseteq N+s$, $rF \subseteq rN$.
+$$
+\begin{gather*} \\
+m(F+r) \leq m(N+s) = 0 \\
+m(rF) \leq m(rF) \leq m(rN) = 0
+\end{gather*}
+$$
+for general $E \in \mathcal{L}$, $E = G \cup F$ where $G \in \mathscr{B}_{\mathbb{R}}, F$ is a null set. $E + r = (G +r) \bigsqcup (F+s)$. So $E + r \in \mathcal{L}$ and $m(E + r) = m(E)$. Similarly for $rE \in \mathcal{L}$ and $m(rE) = \lvert r \rvert m(E)$
+
+**Exercise:** 
+
+**Solution:**
+
+**Proposition:** Let $F:(X, \mathscr{M})\to (Y,\mathscr{N})$ and $\mathscr{N}$ is generated by $E$, Then f is measurable iff $f^{-1}(\mathscr{E}) \in \mathscr{M},\forall E \in \mathscr{E}$.
+**Proof:** $(\implies)$ Trivial
+$(\impliedby )$ 
+$$
+f^{-1}\left( \bigcup_{E \in \mathscr{E}^{}} E \right) = \bigcup_{E \in \mathscr{E}^{}} f^{-1}(E) \in \mathscr{M}
+$$
+Hence we are done.
+
+**Corollary:** Let $f:X \to Y$ are continuous then f is $(\mathscr{B}_X,\mathscr{B}_{Y})$-measurable
+**Proof:**
+
+**Proposition:** $(X,M,\mu)$ complete measure space
+1. Let $f = g$ a.e then f is measurable iff g is
+2. Let $\{ f_n \}$ be a seq of measurable functions such that $\{ fn \}\to f$ pointwise a.e then f is measurable.
+**Proof:** **Exercise**
+
+**Theorem:** Let $(X,M,\mu)$ be a measure space,
+1. Let $f:X\to[0,\infty]$ and $E \in M$
+Then 
+$$
+\int_{E} d\mu = 0 \iff f=0 \text{ a.e on } E
+$$
+2. Let $f \in L^{1}(\mu )$
+$$
+\int_{E}f d\mu = 0\quad \forall E \in M \text{ then } f=0 \text{a.e on } X
+$$
+
+**Proof:**
+
+## Lp spaces
+
+We say that $f \sim g$ if $f = g$ a.e on $X$.
+$$
+L^{1}(\mu) = \left\{  [f] \mid \int_{X} \lvert f \rvert d\mu < \infty  \right\}
+$$
+similarly, $\forall 0<p<\infty$
+$$
+L^{p}(\mu) = \left\{  [f] \mid \int_{X} \lvert f \rvert^{p} d\mu < \infty  \right\}
+$$
+Also we have,
+$$
+L^{\infty} (\mu) = \{[f]\mid \text{essential supremum of $|f|$ exists}\}
+$$
+**Def:** **(Essential supremum)** Let $g : X\to [0,\infty]$ 
+$$
+S = \{  \alpha \mid \mu(g ^{-1}((\alpha,\infty])) = 0 \}
+$$
+If $S\neq \varnothing$, $\beta = inf S$. Prove that $\beta \in S$
+If $S = \varnothing$, $\beta  = \infty$
+$$
+\beta + \frac{1}{n} \in S \implies \mu ( g^{-1}\left( \beta+\frac{1}{n},\infty] \right) = 0
+$$
+hence,
+$$
+0=\mu ( g^{-1} (\beta,\infty ]) = \bigcup_{n=1}^{\infty} \mu\left( g^{-1}\left( \beta+\frac{1}{n},\infty  \right] \right)
+$$
+
+**Theorem:** $1\leq p\leq \infty$, $L^{p}(\mu)$ is a normed linear space.
+
+**Proof:** For, #incomplete 
+
+## Primary goals of Fourier Analysis
+
+1. Whether $S_{n}(f)(x)$ in convergent for all x?
+2. Whether $S_{N}(f)\to f$ pointwise $\forall x \in [a,b]$
+3. Even if f is continuous $S_{N}(f)$ may not converges to f pointwise $\forall x \in [a,b]$.
+4. if f is differentiable and $f'$ is continuous then $S_{N}(f)\to f$ pointwise and uniformly
+5. If f is continuous at  $x \in [a,b]$ then $S_{N}(f)\to f$ is continuous in Cesaro means.
+6. $S_{N}(f)\to f$ in $\|\cdot \|_{2}$ i.e. $\int \lvert S_{n}(t)-f \rvert^{2}dx\to 0$ as $n\to \infty$.
+
+
+**Examples:**  $f(\theta) = \theta, \forall -\pi\leq \theta\leq \pi$ ,$\forall n \in \mathbb{Z}, n \neq 0$
+$$
+\begin{gather*}
+\hat{f}(n) = \frac{1}{2\pi}\int f(\theta)e^{-in \theta } d\theta  \\
+=\begin{cases}
+\frac{(-1)^{n+1}}{in}  & n\neq 0 \\
+0  & \text{o.w}
+\end{cases}
+\end{gather*}
+$$
+$$
+f \sim \sum_{n\neq 0}^{} \frac{(-1)^{n+1}}{in}e^{in \theta} = 2 \sum_{i=1}^{\infty} \frac{\sin n\theta}{n}
+$$
+**(Dirichlet kernel):** $-\pi\leq \theta\leq \pi$
+The $N$-th Dirichlet kernel is defined as follows
+$$
+D_{N}(\theta) = \sum_{n=-N}^{N}e^{in \theta }
+$$
+nth Fourier coefficient of $D_{N}(\theta)$ is
+$$
+\begin{gather*}
+\frac{1}{2\pi}\int_{-\pi}^{\pi} \left( \sum_{n=_{N}}^{N}e^{in \theta } \right) e^{ik \theta } d\theta  \\
+\sum_{n=-N}^{N} \frac{1}{2\pi} \int_{-\pi}^{\pi } e^{i(n-k)\theta } \\
+\frac{1}{2\pi} \int_{-\pi}^{\pi} e^{im \theta} d\theta = 0 \quad \text{if }m\neq 0 \\
+= \frac{1}{2\pi} \left[ \frac{e^{im \theta }}{im} \right]_{-\pi}^{\pi } = 0
+\end{gather*}
+$$
+So, kth Fourier coefficient of $D_{N}$
+$$
+\text{kth coeff. of }D_{N}(\theta) =
+\begin{cases}
+1 & \forall \lvert k \rvert \leq N \\
+0  & \forall \lvert k \rvert  > N
+\end{cases}
+$$
+
+$D_N(\theta) = \frac{\sin((N+\frac{1}{2})\theta)}{\sin(\theta/2)}$ Take $w=e^{i\theta}$ 
+$$
+D_N(\theta) = \sum_{n=-N}^{N}w^n = \sum_{n=0}^{N}w^n + \sum_{n=-N}^{-1}w^n
+$$
+$$
+= \frac{1-w^{N+1}}{1-w} + \frac{w^{-N}-1}{1-w} = \frac{w^{-N}-w^{N+1}}{1-w} 
+$$
+
+**(Poisson Kernel):** $-\pi \leq \theta \leq \pi, 0\leq r <1$
+$$
+P_{r} = \sum_{n=-\infty}^{\infty} r^{\lvert n \rvert } e^{in \theta }
+$$
+The sequence converges absolutely and uniformly
+
+$K^{th}$ Fourier of $P_r(\theta)$ $\frac{1}{2\pi}\int_{-\pi}^{\pi} (\sum_{n=-\infty}^{\infty}r^{|n|}e^{in\theta})e^{-ik\theta}d\theta$ 
+$$ 
+= \frac{1}{2\pi}\sum_{n=-\infty}^{\infty}\int_{-\pi}^{\pi} r^{|n|}e^{in\theta}e^{-ik\theta}d\theta 
+$$ $$ 
+= r^{|k|} 
+$$
+
+$P_r(\theta) = \frac{1-r^2}{1-2r\cos\theta + r^2}$ Take $w = re^{i\theta}$ $P_r(\theta) = \sum_{n=0}^{\infty}w^n + \sum_{n=1}^{\infty}\bar{w}^n$ 
+$$ 
+= \frac{1}{1-w} + \frac{\bar{w}}{1-\bar{w}} = \frac{(1-\bar{w}) + \bar{w}(1-w)}{(1-w)(1-\bar{w})} = \frac{1-\bar{w}+\bar{w}-\bar{w}w}{1-w-\bar{w}+w\bar{w}} = \frac{1-|w|^2}{1-(w+\bar{w})+|w|^2} 
+$$
+
+$$ 
+= \frac{1-r^2}{|1-re^{i\theta}|^2} = \frac{1-r^2}{|(1-r\cos\theta)-ir\sin\theta|^2} 
+$$ $$
+= \frac{1-r^2}{(1-r\cos\theta)^2 + (r\sin\theta)^2} 
+$$ $$
+= \frac{1-r^2}{1-2r\cos\theta+r^2\cos^2\theta+r^2\sin^2\theta} = \frac{1-r^2}{1-2r\cos\theta+r^2} 
+$$

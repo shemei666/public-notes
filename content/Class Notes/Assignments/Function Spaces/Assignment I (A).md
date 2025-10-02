@@ -89,7 +89,7 @@ Hence the sequence $b_{n_{k}}$ converges to $a$. But $A \bigcap B = \varnothing$
 Conversely, if $\text{dist}(A,B)>0$ and assume for contradiction that $A \bigcap B \neq \varnothing$. Then let $x \in A \bigcap B$ hence $\rho(x,x) = 0$ implies $\text{dist}(A,B) = 0\quad \blacksquare$
 
 $6.$
-![[SVG/tikzdiagram15.svg|diagram]]
+![[SVG/tikzdiagram20.svg|diagram]]
 
 Consider $V^{c}$ and $K$, $K$ is compact and $V^{c}$ is closed and since $K \subseteq V \implies K \bigcap V^{c}= \varnothing$. Hence we can use $(5.)$ above to say $\delta =\text{dist}(K,V^{c}) >0$. Now consider the open sets,
 $$
