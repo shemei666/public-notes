@@ -971,9 +971,12 @@ $(iii) \implies (ii), (i)$ because each $s \in S$ has infinite order( choose $H=
 ---
 
 Let $A$ be a set. Consider infinite cyclic groups indexed by $A$, Want to compare $\prod ^{*}C_{\alpha }$ with $\bigoplus_{A} \mathbb{Z}$. First note that we have a natural map by the universal property of free products,
+
 $$
 \prod^{*} C_{\alpha }  \to  \bigoplus_{A} \mathbb{Z}
-$$because we have $C_{\alpha} \cong \mathbb{Z} \hookrightarrow \bigoplus_{A} \mathbb{Z}$. Since $\bigoplus_{A} \mathbb{Z}$ is abelian, we got a natural map,
+$$
+
+because we have $C_{\alpha} \cong \mathbb{Z} \hookrightarrow \bigoplus_{A} \mathbb{Z}$. Since $\bigoplus_{A} \mathbb{Z}$ is abelian, we got a natural map,
 $$
 \left( \prod^{*} C_{\alpha } \right) / \left[ \prod^{*} C_{\alpha },\prod^{*} C_{\alpha } \right] \xrightarrow{\psi }   \bigoplus_{A} \mathbb{Z}
 $$
@@ -1200,30 +1203,29 @@ $$
 \sigma = \bigsqcup_{\tau \subseteq \sigma } Int(\tau)
 $$
 6. $Int(\sigma)$ is convex and open in the affine span of $\{ a_{i} \}$. The closure of $Int(\sigma)$ is $\sigma$. $Int(\sigma) =$ disjoint union of open line segments joining $a_{o}$ to points of the opposite face.
-7. $\sigma $ homeomorphic to $B^{n}$ with $\partial \sigma \cong S^{n-1}$ . Given $u \in \mathbb{R}^{N}$, define a ray from u, along $V \in \mathbb{R}^{N}$ to be $\mathscr{R}= \{ u+tv\mid t\geq 0, t \in \mathbb{R} \} \cong \mathbb{R}_{\geq0}$ 
-	We prove (7) by a more general lemma:
-	Let $U \subseteq \mathbb{R}^{N}$ be an open bounded convex subset. Let $u \in U$.
-	(a) Any ray from u intersects $\partial U = \overline{U}\setminus U$ in a unique point.
-	(b) This induces a homeomorphism $\overline{U} \cong B^{n}$ with $\partial U \cong S^{n-1}$
-	**Proof:** (a) Under the identification $\mathscr{R}\leftrightarrow \mathbb{R}_{>0}$, we see that $\mathscr{R} \cap U$ corresponds to an open, convex (hence connected) bounded subset of $\mathbb{R}_{\geq0}$, i.e. an interval $[0,a)$ for some $a>0$.
-	Therefore $u + av \in \overline{U} \setminus U$. Assume WLOG that boundary point is $0$, $v=-u,a=1$ 
-	Now the open set $W:= \mathbb{R}_{<0}\cdot U$ is disjoint from $U$ because if $-\lambda u_{1} = u_{2}$. $u_{i}  \in U, \lambda >0$.
-	
+7. $\sigma$ homeomorphic to $B^{n}$ with $\partial \sigma \cong S^{n-1}$ . Given $u \in \mathbb{R}^{N}$, define a ray from u, along $V \in \mathbb{R}^{N}$ to be $\mathscr{R}= \{ u+tv\mid t\geq 0, t \in \mathbb{R} \} \cong \mathbb{R} \geq0$ 
+We prove (7) by a more general lemma:
+Let $U \subseteq \mathbb{R}^{N}$ be an open bounded convex subset. Let $u \in U$.
+(a) Any ray from u intersects $\partial U = \overline{U}\setminus U$ in a unique point.
+(b) This induces a homeomorphism $\overline{U} \cong B^{n}$ with $\partial U \cong S^{n-1}$
+**Proof:** (a) Under the identification $\mathscr{R}\leftrightarrow \mathbb{R}_{>0}$, we see that $\mathscr{R} \cap U$ corresponds to an open, convex (hence connected) bounded subset of $\mathbb{R}_{\geq0}$, i.e. an interval $[0,a)$ for some $a>0$.	Therefore $u + av \in \overline{U} \setminus U$. Assume WLOG that boundary point is $0$, $v=-u,a=1$ 
+Now the open set $W:= \mathbb{R}_{<0}\cdot U$ is disjoint from $U$ because if $-\lambda u_{1} = u_{2}$. $u_{i}  \in U, \lambda >0$.
+
 $$
 0 = \frac{\lambda u_{1} + u_{2}}{\lambda + 1}
 $$
-	contradicting the convexity.
-	Since $u + tv \in W(open)$ for $t>1$ we see that $u + tv \not\in \overline{U}$ for $t>1$ as $U \cap W = \varnothing$. Thus $\mathscr{R} \cap \partial U = \{ 0 \}$.
-	(b) For the homeomorphism $\overline{U} \cong B^{n}$ we first assume that $0 \in U$
-	Then $x \mapsto \frac{x}{\lvert x \rvert}$ restricts to a bijective map $\partial U \to S^{n-1}$ by (a) using the ray $\mathscr{R}$ $0+tx$. It is a homeomorphism since $\partial U$ is closed and bounded.
-	Let $g :S^{n-1} \to \partial U$ denote the inverse map. Now define $G: B^{n}\to \overline{U}$ by 
+contradicting the convexity.
+Since $u + tv \in W(open)$ for $t>1$ we see that $u + tv \not\in \overline{U}$ for $t>1$ as $U \cap W = \varnothing$. Thus $\mathscr{R} \cap \partial U = \{ 0 \}$.
+(b) For the homeomorphism $\overline{U} \cong B^{n}$ we first assume that $0 \in U$
+Then $x \mapsto \frac{x}{\lvert x \rvert}$ restricts to a bijective map $\partial U \to S^{n-1}$ by (a) using the ray $\mathscr{R}$ $0+tx$. It is a homeomorphism since $\partial U$ is closed and bounded.
+Let $g :S^{n-1} \to \partial U$ denote the inverse map. Now define $G: B^{n}\to \overline{U}$ by 
 $$
 G(x) = \begin{cases}
 \|g\left( \frac{x}{\|x\|} \right)\|x &\text{if }x\neq 0 \\
 0  & \text{if } x=0
 \end{cases}
 $$
-	G is continuous at $x \neq 0$ in $B^{n}$ clearly. Near $x = 0$ we see that if $\lvert g \rvert< M$ and $\lvert x \rvert<M \delta$. Since G is bijection along each ray (we are also stretching along each ray). It is a bijection. Hence $G$ is a homeomorphism as $\overline{U}$ is compact. $\quad \blacksquare$
+G is continuous at $x \neq 0$ in $B^{n}$ clearly. Near $x = 0$ we see that if $\lvert g \rvert< M$ and $\lvert x \rvert<M \delta$. Since G is bijection along each ray (we are also stretching along each ray). It is a bijection. Hence $G$ is a homeomorphism as $\overline{U}$ is compact. $\quad \blacksquare$
 
 **Def:** A simplicial complex $K$ in $\mathbb{R}^{N}$ is a collection of simplices $K= \{ \sigma_{i} \}_{i \in I}$ in $\mathbb{R}^{N}$ such that:
 1. Every face of any $\sigma \in K$ is also in K.
