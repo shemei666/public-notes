@@ -1321,7 +1321,7 @@ $$
 \mu_0(E) = \sum_{i=1}^{\infty} \mu_0(B_n) \leq \sum_{n=1}^{\infty} \mu_0(A_n).
 $$
 
-$\therefore \mu_0(E) \leq \mu^*(E)$. Taking $A_1 = E$ and $A_i = \emptyset$ for $i \ne 1$,
+Therefore $\mu_0(E) \leq \mu^*(E)$. Taking $A_1 = E$ and $A_i = \emptyset$ for $i \ne 1$,
 
 $$
 \mu^*(E) = \mu_0(E).
@@ -1359,34 +1359,107 @@ or $A$ is $\mu^*$–measurable. $\quad \blacksquare$
 4. if $\mu_{0}$ is $\sigma$-finite on $\mathscr{A}$ then the extension is unique.
 
 **Proof:** 
-1. Uses Caratheodory’s theorem and the previous proposition. Let $\mathcal{M}'$ be the set of all $\mu^*$–measurable sets where $\mu^*$ comes from $\mu_0$. Then by Caratheodory’s theorem, $\mu^*|_{\mathcal{M}'} = \mu_0$. By previous proposition,
+1. Let $\mu^{*}$ be the outer measure as in the Proposition above. Let $\mathscr{M}'$ be the set of all $\mu^*$–measurable sets. Then by Caratheodory’s theorem, $\mu^*|_{\mathscr{M}'} = \mu_0$. By previous proposition,
 
 $$
-\mu^*|_{\mathcal{A}} = \mu_0 \implies \mu^*|_{\mathcal{M}'} = \mu_0
+\mu^*|_{\mathscr{A}} = \mu_0 \impliedby  \mu^*|_{\mathscr{M}'} = \mu_0
 $$
-as $\mathcal{M}(A) = \mathcal{M} \subseteq \mathcal{M}'$.
+Since by previous proposition we have that $\mathscr{A} \subseteq \mathscr{M'}$.
 
-2. Let $E \in \mathcal{M}$ and $E = \bigcup_{i=1}^\infty A_i$, $A_i \in \mathcal{A}$. Then
-
-$$
-\nu(E) \leq \sum_{i=1}^\infty \mu(A_i) = \sum_{i=1}^\infty \mu_0(A_i)
-$$
+2. Let $E \in \mathscr{M}$ and $E = \bigcup_{i=1}^\infty A_i$, $A_i \in \mathscr{A}$. Then
 
 $$
-\implies \nu(E) = \mu^*(E) = \mu(E).
+\nu(E) \leq \sum_{i=1}^\infty \nu(A_i) = \sum_{i=1}^\infty \mu_0(A_i)
 $$
 
-3. If $A = \bigcup_{i=1}^\infty A_i$,
-
 $$
-\nu(A) = \lim_{n \to \infty} \left( \bigcup_{i=1}^n A_i \right ) = \lim_{n \to \infty} \mu \left( \bigcup_{i=1}^n A_i \right ) = \mu(A). \quad \blacksquare
+\implies \nu(E) \leq \mu^*(E) = \mu(E).
 $$
 
+3. If $A = \bigcup_{i=1}^\infty A_i$, $A \in \mathscr{A}$
 
+$$
+\nu(A) = \lim_{n \to \infty} \nu\left( \bigcup_{i=1}^n A_i \right ) = \lim_{n \to \infty} \mu \left( \bigcup_{i=1}^n A_i \right ) = \mu(A) \tag{*}
+$$
+If $M(E)<\infty$ then we can choose $A_{i}$'s such that $A = \bigcup_{i=1}^{\infty} A_{i}$ and $\mu(A\setminus E )<\varepsilon$
+$$
+\mu(E) \leq \mu(A) \stackrel{*}{=} \nu(A) = \nu(E) + \nu(A\setminus E) < \nu(E)+\varepsilon 
+$$
+Since $\varepsilon$ is arbitrary $\mu(E)\leq \nu(E)$, combined with $(ii)$ we have $\mu(E)= \nu(E)$
 
+4. $X = \bigcup_{i=1}^n A_i$ s.t. $\{A_i\}_{i \in \mathbb{N}}$ is a disjoint collection and $\mu_0(A_i) < \infty$. Then for $E \in \mathscr{M}$ we have from above,
+$$ 
+\mu(E) = \sum_{i=1}^\infty \mu(E \cap A_i) = \sum_{i=1}^\infty \nu(E \cap A_i) = \nu(E)
+$$
+## Construction of Lebesgue Measure
 
+Let $A = \{\text{finite disjoint union of } (a,b] \text{intervals in } \mathbb{R}\} \subseteq \mathcal{B}_\mathbb{R}.$
+**Exercise:** A is an algebra
+**Solution:**
 
-$B_\mathbb{R} \subseteq \mathcal{L}$
+**Proposition 16.2.** Let $((a_i, b_i]]_{i=1}^n$ be any disjoint collection in $A$. Define
+$$
+\mu_0\left(\bigcup_{i=1}^n (a_i, b_i]\right) = \sum_{i=1}^n (b_i - a_i), \quad \mu_0(\emptyset)=0 \implies
+$$
+$\mu_0$ is a premeasure on $A$.
+
+**Proof.** Let $\{I_i\}_1^n$ and $\{J_j\}_1^m$ be two disjoint collections of h-intervals. Then
+$$
+\sum_{i=1}^n I_i = \sum_{j=1}^m J_j \implies \mu_0\left(\bigcup_{i=1}^n I_i\right) = \sum_{i=1}^n \mu_0(I_i) = \sum_{i=1}^n \mu_0(I_i \cap \bigcup_{j=1}^m J_j)
+$$
+$$
+= \sum_{j=1}^m \mu_0(J_j) = \mu_0\left(\bigcup_{j=1}^m J_j\right).
+$$
+
+So $\mu_0$ is well-defined. From the definition of $\mu_0$, it is clear that $\mu_0$ is finitely additive.
+Remains to prove, if $\bigcup_{i=1}^\infty I_i \in A$ then $\mu_0\left(\bigcup_{i=1}^\infty I_i\right) = \sum_{i=1}^\infty \mu_0(I_i)$. Since $\bigcup_{i=1}^\infty I_i \in A$, $\bigcup_{i=1}^\infty I_i$ is the finite disjoint union of h-intervals $\{J_j\}_{j=1}^m$, i.e.,
+$$
+J_j = \sum_{i=1}^\infty I_{j_i} \quad \forall \ j \leq m
+$$
+where $\{J_{j_i}\}_{i=1}^\infty$ is some subsequence of $\{I_i\}_{i=1}^\infty$. Then
+$$
+\mu_0\left(\bigcup_{i=1}^\infty I_i\right) = \mu_0\left(\bigcup_{j=1}^m J_j\right) = \sum_{j=1}^m \mu_0(J_j) \quad \left(\mu_0(J_j) = \sum_{i=1}^\infty \mu_0(I_{j_i})\right)
+$$
+$$
+\in A
+$$
+$$
+\geq \mu_0\left(\bigcup_{i=1}^\infty I_{j_i}\right) = \mu\left(J_j \setminus \bigcup_{i=1}^n I_{j_i}\right) \geq \sum_{i=1}^n \mu_0(I_{j_i}) \quad \forall \ n
+$$
+$$
+\implies \mu_0(J_j) \geq \sum_{i=1}^\infty \mu_0(I_{j_i}) \quad \text{as} \ n \to \infty. \quad \blacksquare
+$$
+We extend $\mu_0$ on $A$ to $M$ to $\mu^*$ on $\mathcal{P}(X)$ where
+$$
+\mu^*(A) = \inf\left\{\sum_i \mu_0(A_i) \ | \ A \subseteq \bigcup_i A_i, A_i \in \mathcal{A}\right\}.
+$$
+Then $M'$ = {collection of $\mu^*$-measure sets}. We have that $\mu^*|_{M'}$ is a measure, $A \subseteq M'$. Let $M = \mathcal{M}(A) \implies M \subseteq M'$. Then $\mu^*$ is a measure on $M$ which returns $\mu_0$ if $\mu_0$ is $\sigma$-finite on $X$. Then $\mu^*|_M$ is a unique measure which extends $\mu_0$. An h-interval is of the form $(-\infty, b], (a, b], (a, \infty)$, $a, b \in \mathbb{R}$ and $A = \{\text{finite disjoint unions of h-intervals}\}$ is an algebra.
+
+**Proposition 17.1.** On $A$ define $\mu_0$ by
+$$
+\mu_0\left(\bigcup_{i=1}^n (a_i, b_i]\right) = \sum_{i=1}^n (b_i - a_i).
+$$
+Then $\mu_0$ is a premeasure on $A$.
+
+**Proof.** Let $\{A_i\}_{i=1}^\infty$ is a countable disjoint collection of sets in $A$ if $\bigsqcup_{i=1}^\infty A_i\in A.$ We need to prove that $\mu_0(\bigsqcup_{i=1}^\infty A_i)=\sum_{i=1}^\infty\mu_0(A_i).$ Let $\bigsqcup_{i=1}^\infty A_i=\bigsqcup_{j=1}^k(a_i,b_j]$ where $(a_i,b_j]=\bigsqcup_{i,j}^\infty C_{ij}$ where $A_i=\bigsqcup_{j=1}^\infty C_{ij}.$ It is enough to show that $$\mu_0(a_i,b_j]=\sum_{i=1}^\infty \mu_0(a_{j_i},b_{j_i}).$$ Basically if $[a,b]=\bigsqcup_{i=1}^\infty (a_i,b_i]$ then $\mu_0(a,b]=\sum_{j=1}^\infty\mu_0(a_i,b_i].$ Then $$
+\bigsqcup_{i=1}^\infty (a_i,b_i]=\bigsqcup_{i=1}^N (a_i,b_i]+\bigsqcup_{i=N+1}^\infty (a_i,b_i]\implies \mu_0(\bigsqcup_{i=1}^\infty (a_i,b_i])\geq \mu_0(\bigsqcup_{i=1}^N (a_i,b_i])=\sum_{i=1}^N\mu_0(a_i,b_i]
+$$ Taking $N\to\infty,$ $$\mu_0(a,b]=\mu_0(\bigsqcup_{i=1}^\infty(a_i,b_i])\geq\sum_{i=1}^\infty\mu_0(a_i,b_i].$$ Choose $\epsilon>0$ and take $\delta,\delta_i$ s.t $\delta<\epsilon,\ \delta_i< \frac{\epsilon}{2^{i}}$ Then $[a+\delta,b]\subseteq\bigcup_{i=1}^\infty (a_i,b_i+\delta_i).$ Since $[a+\delta,b]$ is compact, $[a+\delta,b]=\bigcup_{i=1}^N(a_i,b_i+\delta_i).$ Now, $$\mu_0(a,b]=(b-a)\leq b-(a+\delta)+\epsilon\leq b_N+\delta_N-a_1+\epsilon$$ $$=b_N+\delta_N-a_N+\sum_{i=1}^{N-1}[a_{i+1}-a_i]+\epsilon\leq b_N+\delta_N-a_N+\sum_{i=1}^{N-1}[b_i+\delta_i-a_i]$$ $$<\sum_{i=1}^N(b_i-a_i)+\sum_{i=1}^\infty\delta_N+\epsilon<\sum_{i=1}^\infty (b_i-a_i)+\underbrace{\sum_{i=1}^\infty \frac{\epsilon}{2^{i}}+\epsilon}_{=2\epsilon}.$$ As $\epsilon$ was arbitrary, $(b-a)\leq \sum_{i=1}^\infty (b-i-a_i).$ Therefore, $\mu_0(a,b]=\sum_{i=1}^\infty \mu_0(a_i,b_i].$ For intervals of type $(-\infty,b],\ \forall\ M<\infty$ we look at $(-M,b)$ intervals. Let $(-\infty,b]=\sum_{i=1}^N(a_i,b_i]\implies (-M,b)\subseteq \bigsqcup_{i=1}^\infty a_i,b_i].$ Taking $M\to\infty,$ $$\mu_0(-\infty,b]\leq\sum_{i=1}^\infty\mu_0(a_i,b_i).$$
+Let $\mathcal{L} := \{\mu^*\text{-measurable sets}\}$, a Lebesgue $\sigma$-algebra. Lebesgue measure: Complete measure $m = \mu^*|_{\mathcal{L}}$ and $\mu = m|_{\mathscr{B}_\mathbb{R}}$. Then $\mathcal{B}_\mathbb{R} \subseteq \mathcal{L} \implies \overline{\mathscr{B_{\mathbb{R}}}}$  as $\mathcal{A} \subseteq \mathcal{L} \implies \mathscr{B}_\mathbb{R} = \mathscr{M}(A) \subseteq \mathcal{L}$.
+**Question:** Is $\overline{\mathscr{B}_\mathbb{R}} = \mathcal{L}$?
+
+**Proposition 17.2.** Let $E \in \mathcal{L}$. Then
+$$
+m(E) = \inf\left\{\sum_{i=1}^\infty m(a_i, b_i] \ | \ E \subseteq \bigcup_{i=1}^\infty (a_i, b_i]\right\}.
+$$
+**Proof.** Let
+$$
+\nu(E) := \inf\left\{\sum_{i=1}^\infty m(a_i, b_i] \ | \ E \subseteq \bigcup_{i=1}^\infty (a_i, b_i]\right\}.
+$$
+Now
+$$
+(a_i, b_i) = \bigsqcup_{k=1}^\infty (c_k^i, c_{k+1}^i] \implies E \subseteq \bigsqcup_{k=1}^\infty (c_k^i, c_{k+1}^i].
+$$
+Then $$\sum_{i=1}^\infty m(a_i,b_i)=\sum_{i,k=1}^\infty m(c_k^i,c_{k+1}^i]\implies m(E)=\mu^*(E)\leq\nu(E).$$ We need to show that $\nu(E)\leq m(E).$ Given $\epsilon>0,\ \exists\ \{(a_i,b_i]\}_{i=1}^\infty$ such that $$\sum_{i=1}^\infty m(a_i,b_i]\leq m(E)+\epsilon.$$ Take $\delta_i<\frac\epsilon{2^i}.$  Then $$\sum_{i=1}^\infty m(a_i,b_i+\delta_i)\leq\sum_{i=1}^\infty m(a_i,b_i]+\epsilon\leq m(E)+2\epsilon.$$ Since $\epsilon>0$ arbitrary, $\nu(E)\leq m(E).$ Therefore $\nu(E)=m(E).$
 
 **Theorem:** If $E \in \mathcal{L}$, Then
 
@@ -1401,7 +1474,6 @@ $$
 **Proof:**
 
 Let $\lambda(E) = \inf \left\{ m(U) \mid U \text{ is open and } E \subseteq U \right\}$
-
 Since $m(E) \leq m(U)$, Thus, $m(E) \leq \lambda(E)$
 
 We already have seen, for $E \in \mathcal{L}$:
@@ -1426,16 +1498,29 @@ Therefore,
 $$
 m(E) = \lambda(E)
 $$
-#incomplete 
-
-
-**Proposition:** If $E \in \mathcal{L}$ Then 
+Let $E$ be bounded. If E is closed there is nothing to prove. If E is not closed then consider for $F = \overline{E}\setminus E$. For any $\varepsilon>0$, $\exists U \supseteq F$ such that $m(U)\leq m(F)+\varepsilon$. Take,
+$$
+K = \overline{E}\setminus U \implies E = K \sqcup (E \cap U) \implies m(K) = m(E) - [m(U) - m(U\setminus E)] 
+$$
 $$
 \begin{gather*}
-m(E) = inf \{ m(U) | U \text{ is open and } E \subseteq U \} \\
-= sup \{ m(K) | K \text{ is compact and } K \subseteq E \}
+\overline{E} = (\overline{E} \setminus U) \sqcup U \\
+m(\bar{E})=m(\bar{E}\setminus U)+m(U)\leq m(\bar{E}\setminus E)+\epsilon+m(K)=m(\bar{E})-m(E)+\epsilon+m(K)
 \end{gather*}
-
+$$ $$\implies m(E)\leq m(K)+\epsilon\implies m(E)=\sup\{\mu(K)|K\subseteq E, K\text{ compact}\}.$$ If $E$ is not bounded, 
+$$
+\begin{gather*}
+E=\bigsqcup_{i=0}^\infty (E\ \cap\ (i,i+1]) \\
+\text{Let }E_i=E\ \cap\ (i,i+1]
+\end{gather*}
+$$ Therefore for $\epsilon>0,\exists\ K_i$ such that  
+$$
+m(E_i)\leq m(K_i)+\frac \epsilon{2^i}
+$$ Take $H_n=\bigcup_{i=-N}^N K_i,$ then: 
+$$
+m\left(\bigcup_{i=-N}^N E_i\right)\leq m\left(\bigcup_{i=-N}^N H_i\right)+\epsilon\implies m\left(\bigcup_{i=-\infty}^\infty E_i\right)=\lim_{N\to\infty} m\left(\bigcup_{i=-N}^N E_i\right)
+$$ $$
+= \lim_{N\to\infty}\sup\left\{m(K)| K\subseteq \bigcup_{i=-N}^N E_i\right\} \quad \blacksquare
 $$
 
 **Proposition:** If $E \subseteq \mathbb{R}$ TFAE
@@ -1443,10 +1528,34 @@ $$
 2. $E = V\setminus N_{1}$ where $V$ is a $G_{\delta}$ set and $N_{1}$ is a null set.
 3. $E = W \cup N_{2}$ where $W$ is an $F_{\sigma}$ set and $N_{2}$ is a null set.
 
-**Proof:** #incomplete 
-**Remark:** L is the completion of $B_{\mathbb{R}}$
+**Proof:** 1$\implies$ 2 and 3:
+Let $m(E)<\infty.$ Then for all $i\in \mathbb{N},$ $\exists$ an open set $U_i\supseteq E$ and a compact set $K_i\subseteq E$ such that 
+$$
+m(U_i)-\frac 1i\leq m(E)<m(K_i)+\frac 1i
+$$
+Now take $V=\bigcap_{i=1}^\infty U_i$ and $W=\bigcup_{i=1}^\infty K_i.$ Then $m(V)=m(E)=m(W).$ Consider $N_1=V\setminus E$ and $N_2=E\setminus W.$ Then 
+$$
+m(N_1)=m(N_2)=0
+$$
+If $m(E)=\infty$ write $E=\bigcup_{k\in \mathbb{Z}}\underbrace{E\ \cap\ (k,k+1)}_{E_k}.$ Now $m(E_k)<\infty,\ \exists$ some $V_\delta$ set $V_k$ and $F_\delta$ set $W_k$ such that $m(N_1^k)=m(N_2^k)=0$ and  $E_k=V_k\setminus N_1^k$ and $E_k=W_k\ \cup\ N_2^k.$ Take 
+$$
+\begin{gather*}
+V=\bigcup_{k\in \mathbb{Z}} V_k \\
+W=\bigcup_{k\in \mathbb{Z}}W_k  \\
+N_1=\bigcup_{k\in \mathbb{Z}} N_1^k \\
+N_2=\bigcup_{k\in \mathbb{Z}}N_2^k
+\end{gather*}
+$$ 
+Then we are done as $(2 \implies 1)$ and $(3 \implies 1)$ are obvious.
 
-**Def:** $f:(X,\mathscr{M}) \to (Y,\mathscr{N})$ then f is said to be $(\mathscr{M},\mathscr{N})$ measurable if $f^{-1}(N) \in \mathscr{M}, \forall N \in \mathscr{N}$. If $f:(X,\mathscr{M}) \to (\mathbb{R},\mathscr{B}_{\mathbb{R}})$ and f  in $(\mathscr{M},\mathscr{B}_{\mathbb{R}})$-measurable then f is simply called as $\mathscr{M}$-measurable function.
+**Remark:** L is the completion of $B_{\mathbb{R}}$ where
+$$m(E)=\inf\left\{\sum_{i=1}^\infty m(a_i,b_i)\mid E\subset \bigcup_{i=1}^\infty (a_i,b_i)\right\}$$
+and any element $F\in\mathcal{L}$ can be written as $F=E \cup N$ where $E\in\mathscr{B}_\mathbb{R}$ and $N\subseteq N_1$ where $m|_{\mathscr{B}_\mathbb{R}} (N_1)=0.$
+
+**Def:** $f:(X,\mathscr{M}) \to (Y,\mathscr{N})$ then f is said to be $(\mathscr{M},\mathscr{N})$ **measurable** if $f^{-1}(N) \in \mathscr{M}, \forall N \in \mathscr{N}$. If $f:(X,\mathscr{M}) \to (\mathbb{R},\mathscr{B}_{\mathbb{R}})$ and f  in $(\mathscr{M},\mathscr{B}_{\mathbb{R}})$-measurable then f is simply called as $\mathscr{M}$-measurable function.
+**Exercise:** Let $f:X\to (Y,\mathscr{N})$ be a function then $\{f^{-1}(E)|E\in\mathscr{N}\}$ is an algebra on $X.$
+
+**Solution:**
 
 **Theorem:** Let $E \in \mathcal{L}$ Then $\forall s,r \in \mathbb{R}$, $E + s \in \mathcal{L}$ and $rE \in \mathcal{L}$ . Now, $m(E + r) = m(E)$ and $m(rE) = \lvert r \rvert m(E)$.
 
@@ -1464,11 +1573,11 @@ m(rF) \leq m(rF) \leq m(rN) = 0
 $$
 for general $E \in \mathcal{L}$, $E = G \cup F$ where $G \in \mathscr{B}_{\mathbb{R}}, F$ is a null set. $E + r = (G +r) \bigsqcup (F+s)$. So $E + r \in \mathcal{L}$ and $m(E + r) = m(E)$. Similarly for $rE \in \mathcal{L}$ and $m(rE) = \lvert r \rvert m(E)$
 
-**Exercise:** 
+**Exercise:** Let $f:(X,\mathscr{M})\to (Y,\mathscr{N})$ and $g:(Y,\mathscr{N})\to (Z,\mathscr{G})$ be $(\mathscr{M},\mathscr{N})$ and $(\mathscr{N},\mathscr{G})$-measurable respectively. Then $g\circ f$ is $(\mathscr{M},\mathscr{G})$-measurable.
 
 **Solution:**
 
-**Proposition:** Let $F:(X, \mathscr{M})\to (Y,\mathscr{N})$ and $\mathscr{N}$ is generated by $E$, Then f is measurable iff $f^{-1}(\mathscr{E}) \in \mathscr{M},\forall E \in \mathscr{E}$.
+**Proposition:** Let $f:(X, \mathscr{M})\to (Y,\mathscr{N})$ and $\mathscr{N}$ is generated by $E$, Then f is measurable iff $f^{-1}(\mathscr{E}) \in \mathscr{M},\forall E \in \mathscr{E}$.
 **Proof:** $(\implies)$ Trivial
 $(\impliedby )$ 
 $$
@@ -1478,6 +1587,228 @@ Hence we are done.
 
 **Corollary:** Let $f:X \to Y$ are continuous then f is $(\mathscr{B}_X,\mathscr{B}_{Y})$-measurable
 **Proof:**
+
+**Proposition:** Let $f:(X, \mathscr{M})\to \mathbb{R}$ be a function. The following are equivalent:
+
+1. $f$ is measurable
+2. $f^{-1}((a,\infty))\in \mathscr{M}$ for all $a\in\mathbb{R}$
+3. $f^{-1}((-\infty,b))\in \mathscr{M}$ for all $b\in\mathbb{R}$
+4. $f^{-1}([a,\infty))\in \mathscr{M}$ for all $a\in\mathbb{R}$
+5. $f^{-1}((-\infty,b])\in \mathscr{M}$ for all $b\in\mathbb{R}$
+
+**Proof:** Easy to see.
+
+**Proposition:** Let $f,g:(X,\mathscr{M})\to\mathbb{R}$ be measurable and $\phi:\mathbb{R}^2\to Y$ be a continuous function. Define $h:X\to Y$ by $h(x)=\phi(f(x),g(x))$. Then $h$ is measurable.
+
+**Proof:** Let $R$ be an open rectangle in $\mathbb{R}^2$ whose sides are parallel to the $X$ and $Y$ axes. Define $K:X\to\mathbb{R}^2$ by $K(x)=(f(x),g(x))$. Then $h=\phi\circ K$. We only need to show that $K$ is measurable.
+Now,
+$$
+K^{-1}(R)=f^{-1}(I_1) \cap g^{-1}(I_2).
+$$
+Since $f,g$ are measurable, $f^{-1}(I_1)$ and $g^{-1}(I_2)\in\mathscr{M}$ and so $K^{-1}(R)\in\mathscr{M}$. Any open set $E\in\mathbb{R}^2$ can be written as the countable union of such rectangles, i.e., $E=\bigcup_{i=1}^\infty R_i$. So
+$$
+K^{-1}(E)=K^{-1}\left(\bigcup_{i=1}^\infty R_i\right)=\bigcup_{i=1}^\infty K^{-1}(R_i)\implies K^{-1}(E)\in\mathscr{M}.
+$$
+**Corollary:** 
+1. Let $f:(X,\mathscr{M})\to\mathbb{C}$ be measurable. Then so is $\text{Re}(f), \text{Im}(f), |f|$. Conversely, if $\text{Re}(f), \text{Im}(f)$ are measurable then so is $f$.
+2. Let $f,g:(X,\mathscr{M})\to\mathbb{R}/\mathbb{C}$ be measurable. Then so is $f+g, fg$.
+
+**Proof:**
+2. Use $\phi(x,y) = x +y , \phi(x,y)= xy$ in the above proposition.
+**Remark:** $f: X \to \mathbb{\overline{R}}$, convention $0 \cdot \infty = 0$
+
+**Proposition:** Let $\{f_i\}_{i\in\mathbb{N}}$ be a sequence of measurable functions. Then $\sup_{i\in\mathbb{N}} f_i$, $\inf_{i\in\mathbb{N}}f_i$, $\limsup f_i$, $\liminf f_i$ are also measurable functions.
+
+**Proof:** Let $g(x)=\sup_{i\in\mathbb{N}}f_i(x)$. Then $g^{-1}((a,\infty])=\bigcup_{i=1}^\infty f_i^{-1}((a,\infty])$ for all $a\in\mathbb{R}$. So $g$ is measurable as $f_i$'s are. Let $h(x)=\inf_{i\in\mathbb{N}}f_i(x)$. Then
+$$
+h^{-1}([-\infty,b))=\bigcap_{i=1}^\infty f_i^{-1}([-\infty,b)).
+$$
+Then $h$ is measurable. Similarly, $\limsup f_i=\inf_k\sup_{i\geq k} f_i$ and $\liminf f_i=\sup_k\inf_{i\geq k} f_i$. By the previous part, $\limsup$ and $\liminf$ are also measurable.
+
+**Corollary:**
+1. Let $f,g:(X,\mathscr{M})\to\mathbb{R}$ be measurable functions then so are $\min(f,g)$ and $\max(f,g)$.
+2. $f:(X,\mathscr{M})\to\mathbb{R}$ and $f=f^+-f^-$. So $f$ is measurable if $f^+$ and $f^-$ are measurable.
+
+**Def:** **(Characteristic Function)**
+Let $(X,\mathscr{M})$ be a measure space and $E\in\mathscr{M}$. Then the function $\chi_E:X\to\mathbb{R}$ defined by
+$$
+\chi_E(x)=\begin{cases}
+1, & x\in E\\
+0, & \text{else}
+\end{cases}
+$$
+is called the **characteristic** function on the set $E$.
+
+**Remark:** $\chi_E$ is measurable.
+
+**Def:** **(Simple Function)**
+A function $\phi:(X,\mathscr{M})\to\mathbb{R}$ is called a **simple** function if $\text{img}(\phi)$ has only finitely many points. Let $\text{img}(\phi)=\{a_1,\ldots,a_n\}$. Then
+$$
+\phi=\sum_{i=1}^n a_i\chi_{E_i} \text{ where } E_i=\phi^{-1}(a_i).
+$$
+
+**Remark:**
+Simple functions are measurable iff $E_i$'s are measurable.
+
+**Notation:** $\mathcal{L^+}=$ Set of all measurable functions $f:(X,\mathscr{M})\to [0,\infty]$.
+
+Let $\phi=\sum_{i=1}^\infty a_i\chi_{E_i}\in \mathcal{L^+}$. Then
+$$
+\int_X\phi d\mu:=\sum_{i=1}^\infty a_i\mu(E_i).
+$$
+
+**Proposition:**
+Let $\phi,\psi\in \mathcal{L^+}$ be simple. Then
+1. $\int(\phi+\psi)d\mu=\int\phi d\mu+\int\psi d\mu$
+2. $c\int\phi d\mu=\int c\phi d\mu$
+3. If $\phi\leq\psi$ then $\int\phi d\mu\leq \int\psi d\mu$
+4. The function $\lambda:A\to \int_A\phi d\mu$ is a measure on $X \equiv\int\phi\chi_A d\mu$
+
+**Def:** Let $f\in \mathcal{L^+}$. Then
+$$
+\int fd\mu=\sup\left\{\int\phi d\mu|0\leq\phi\leq f\right\}.
+$$
+Observe that if $f,g\in L^+$ and $f\leq g$ then $\int f d\mu\leq\int g d\mu$. Also for all $c>0$, $c\int f d\mu=\int cf d\mu$.
+
+**Proposition:** Let $f \in L^{+}$ then, $\exists \{ \phi_{n} \} \subseteq L^{+}$ such that $\phi_{n} \uparrow f$ pointwise.
+**Proof:** For $n=1,2,\dots$ and $\forall 0\leq k\leq 2^{2n}-1$
+$$
+\begin{gather*}
+E_{n}^{k} = f^{-1}((2^{-n},2^{-n}(k+1)]) \\
+F_{n} = f^{-1}((2^{n},\infty ]) \\
+\phi_{n} = \sum_{k=1}^{2^{2n}-1} 2^{-n}k \chi_{E_{n}^{k}} + 2^{n}\chi_{F_{n}}
+\end{gather*}
+$$
+Then clearly $\phi_{n}\leq \phi_{n+1} \forall n \in \mathbb{N}$ and $f(x) = \lim_{ n \to \infty } \phi_{n}(x) \forall x \in X$
+
+**Theorem:** **(Monotone Convergence Theorem)** Let $\{f_n\}_{n\in\mathbb{N}}\subseteq \mathcal{L^+}$, $f_n\leq f_{n+1}$ for all $n\in\mathbb{N}$ and $f=\lim f_n$. Then $\int f d\mu=\lim_{n\to\infty}\int f_n d\mu$.
+
+**Proof:**
+Since $f_n\leq f$ for all $n\in\mathbb{N}$,
+$$
+\int f_n d\mu\leq \int f d\mu\implies\lim_{n\to\infty}\int f_n d\mu\leq\int f d\mu.
+$$
+For the convergence part, let $0\leq\phi\leq f$ and $\alpha<1$ such that $\alpha\phi<f$. Consider
+$$
+E_n=\{x\in X|f_n(x)\geq \alpha\phi(x)\}.
+$$
+Then $X=\bigcup_{n=1}^\infty E_n$, $E_n\uparrow X$. Then $\int_{E_n}f_n d\mu\geq \int_{E_n}\alpha\phi d\mu =\alpha\int_{E_n}\phi d\mu$. Since $\lambda:A\to\int_A\phi d\mu$ is a measure,
+$$
+\int_X\phi d\mu=\lim\int_{E_n}\phi d\mu.
+$$
+Suppose $\lambda:A\to\int_A\phi d\mu$ is a measure. Since $E_1\subseteq E_2\subseteq\ldots$, $\mu\left(\bigcup E_i\right)=\lim_{i\to\infty}\mu(E_i)\implies \lambda(X)=\lim_{n\to\infty}\lambda(E_i)$. Then $\int_X\phi d\mu=\lim\int_{E_n}\phi d\mu$. From,
+$$
+\int f_n d\mu\geq\int_{E_n}f_n d\mu\geq\alpha\int_{E_n}\phi d\mu\implies \int f_n d\mu\geq\alpha\int \phi d\mu
+$$
+$$
+\implies \lim_{n\to\infty}\int f_n d\mu\geq\alpha\int \phi d\mu \text{ for all } \alpha<1
+$$
+$$
+\begin{gather*}
+
+\implies \lim_{n\to\infty}\int f_n d\mu\geq \int \phi d\mu \text{ for all } 0\leq \phi\leq f \\
+\implies \lim_{n\to\infty}\int f_n d\mu\geq \sup\left\{\int\phi d\mu|0\leq \phi\leq f\right\}=\int f d\mu.
+\end{gather*}
+$$
+
+**Proposition:** Let $\{f_i\}_{i\in\mathbb{N}}\subseteq \mathcal{L^+}$. Then $\int \left(\sum_{i=1}^\infty f_n\right)d\mu=\sum_{i=1}^\infty \int f_n d\mu$.
+**Proof:** Let $f_{1}, f_{2} \in \mathcal{L}^{+}$ then $\int f_{1} + f_{2} = \int f_{1} + \int f_{2}$. $\exists$ a sequence of simple functions $\{ \phi _{i} \} \uparrow f_{1}, \{ \varphi_{i} \} \uparrow f_{2} \implies \{ \phi_{i} + \varphi_{i} \} \uparrow f_{1}+f_{2}$, then by MCT
+$$
+\int f_{1} + f_{2} = \lim_{ n \to \infty } \int \phi_{i} + \lim_{ n \to \infty } \int \varphi_{i}
+$$
+
+By induction we have 
+$$
+\int \sum_{n=1}^{N} f_{n} d\mu = \sum_{n=1}^{N} \int f_{n} d\mu 
+$$
+So $\left\{  \sum_{n=1}^{N}f_{n}  \right\} \uparrow \sum_{n=1}^{\infty} f_{n}$ Then,
+$$
+\begin{align*}
+\int \sum_{n=1}^{\infty} f_{n}d\mu = & \lim_{ N \to \infty } \int \sum_{n=1}^{N} f_{n} d\mu \\
+ =& \lim_{ N \to \infty } \sum_{n=1}^{N} \int f_{n} d\mu \\
+= & \sum_{n=1}^{\infty } \int f_{n} d\mu  \quad \blacksquare
+\end{align*}
+$$
+
+**Lemma:(Fatou)** $\{ f_{n} \} \subseteq L^{+}$ Then,
+$$
+\int \lim \inf f_{n} \leq \lim \inf \int f_{n} d\mu 
+$$
+**Proof:** $\inf_{n\geq k} f_{n} \uparrow \sup_{k} \inf_{n\geq k} f_{n}$ Hence by MCT we have
+$$
+\int \lim \inf f_{n} d\mu = \int \sup_{k} \inf_{n\geq k} f_{n} d\mu = \sup_{k} \int \inf_{n\geq k} f_{n} d\mu 
+$$
+ Now,
+$$
+\begin{gather*}
+\inf_{n\geq k} f_{n} \leq f_{j} \quad \forall j \geq k \\
+\implies \int \inf_{n\geq k} f_{n} d\mu \leq \int f_{j} d\mu \quad \forall j \geq k  \\
+\implies \int \inf_{n\geq k } f_{n} d\mu \leq \inf_{j\geq k} \int f_{j} d\mu \\
+\implies \int \lim \inf f_{n} d\mu \leq \sup_{k} \inf_{j\geq k} \int f_{j} d\mu = \lim \inf \int f_{n} d\mu  \quad \blacksquare
+\end{gather*}
+$$
+**Def:** Let $f:X\to \mathbb{\overline{R}}$ measurable and $f = f^{+} - f^{-}$, if one of $\int f^{+},\int f^{-}$ is finite,
+$$
+\int f d\mu = \int f^{+} d\mu - \int f^{-} d\mu 
+$$
+
+**Def:** Let $(X,\mathscr{M},\mu)$ be a measure space denote $L^{1}(\mu)$ as the set of all measurable functions $f : X\to \mathbb{C}$ such that
+$$
+\int \lvert f \rvert d\mu < \infty 
+$$
+Let $f = u + iv$, then $u\leq \lvert f \rvert, v\leq \lvert f \rvert$ hence we define,
+$$
+\int f d\mu = \int u^{+} d\mu - \int u^{-} d\mu + i\left[ \int v^{+}d\mu - \int v^{-} d\mu \right]
+$$
+**Proposition:** If $f,g \in L^{1}(\mu)$, then $\forall \alpha, \beta \in \mathbb{C}$
+$$
+\alpha f + \beta g \in L^{1} (\mu)
+$$
+
+**Proof:** **Exercise**
+
+**Theorem:** **(Dominated Convergence Theorem (DCT))**
+Let $(X,\mathscr{M},\mu)$ be a measure space. Let $\{f_n\}$ be a sequence of measurable functions on $X$ such that $f_n\to f$ pointwise. Suppose there exists a function $g\in L^1(\mu)$ such that $|f_n|\leq g$ for all $n\in\mathbb{N}$.
+Then $f\in L^1(\mu)$,
+$$
+\lim_{n\to\infty}\int |f_n - f| d\mu = 0
+$$
+and
+$$
+\lim_{n\to\infty}\int f_n d\mu = \int f d\mu \iff \lim_{n\to\infty}\int |f_n - f|d\mu=0.
+$$
+**Proposition:** Let $f \in L^1(\mu)$. Then
+$$
+\left|\int f d\mu\right| \leq \int |f| d\mu.
+$$
+**Proof:** Let $z = \int f d\mu$. There exists an $\alpha \in \mathbb{C}$ such that $\alpha z = |z|$ and $|\alpha|=1$.
+Let $u$ be the real part of $\alpha f$. Then $u \le |\alpha f| = |f|$.
+$$
+\left|\int f d\mu\right| = \alpha \int f d\mu = \int \alpha f d\mu = \int u d\mu \le \int |f| d\mu.
+$$
+**Proof:(DCT)** 
+$|f_n|\leq g \implies |f|\leq g \implies \int |f|d\mu\leq \int g d\mu < \infty$, so $f\in L^1(\mu)$.
+Take $2g - |f_n - f| \to 2g$.
+$|f_n - f| \leq |f_n| + |f| \leq g+g = 2g$.
+$$
+\int \liminf (2g - |f_n - f|) d\mu \leq \liminf \int (2g - |f_n - f|) d\mu.
+$$
+$$
+\implies \int 2g d\mu \leq \liminf \int 2g d\mu + \liminf \int (-|f_n - f|) d\mu
+$$
+$$
+= \int 2g d\mu - \limsup \int |f_n - f| d\mu.
+$$
+$$
+\implies \limsup \int |f_n - f| d\mu \leq 0 \leq \liminf \int |f_n - f| d\mu.
+$$
+$$
+\implies \limsup \int |f_n - f| d\mu = \liminf \int |f_n - f| d\mu
+$$
+$$
+= \lim_{n\to\infty} \int |f_n - f| d\mu = 0.
+$$
+## Role played by measure zero sets
 
 **Proposition:** $(X,M,\mu)$ complete measure space
 1. Let $f = g$ a.e then f is measurable iff g is
@@ -1492,12 +1823,21 @@ $$
 $$
 2. Let $f \in L^{1}(\mu )$
 $$
-\int_{E}f d\mu = 0\quad \forall E \in M \text{ then } f=0 \text{a.e on } X
+\int_{E}f d\mu = 0\quad \forall E \in M \text{ then } f=0 \text{ a.e on } X
 $$
 
-**Proof:**
+**Proof:** 
+1. Let $E_{n} = \left\{  x \in E\mid f(x) > \frac{1}{n} \right\}$, let $F = \{  x \in E \mid f(x)>0 \}$, then we have $F = \bigcup_{n=1}^{\infty} E_{n}$
+$$
+\begin{gather*}
+\implies \int_{E_{n}} f d\mu \leq \int_{E} f d\mu = 0 \\
+\frac{1}{n} \mu(E_{n}) \leq \int_{E_{n}} f d\mu = 0 \\
+\implies \mu(E_{n}) = 0 \implies \mu(F) = 0 \implies f = 0 \text{ a.e on } E
+\end{gather*}
+$$
+2. $f = u+iv$ Then we have that $\int u d\mu = 0 , \int v d\mu = 0$, hence from above we have $f = 0$ a.e on X. 
 
-## Lp spaces
+## $L^{p}$ spaces
 
 We say that $f \sim g$ if $f = g$ a.e on $X$.
 $$
@@ -1527,9 +1867,69 @@ $$
 
 **Theorem:** $1\leq p\leq \infty$, $L^{p}(\mu)$ is a normed linear space.
 
-**Proof:** For, #incomplete 
+**Proof:** We will show that $||\cdot||_p$ is a norm on $L^p(\mathcal{M})$. (i) If $1 \le p < \infty$, $||f||_p = 0 \implies \int |f|^p d\mu = 0 \implies |f|^p = 0$ a.e. $\implies f=0$ a.e. If $p = \infty$, $||f||_\infty = 0 \implies f=0$ a.e. $\implies [f]=0$. (ii) If $1 \le p < \infty$, $\forall \lambda \in \mathbb{C}$ $$ ||\lambda f||_p = \left(\int |\lambda f|^p d\mu\right)^{1/p} = \left(\int |\lambda|^p |f|^p d\mu\right)^{1/p} $$ $$ = |\lambda| \left(\int |f|^p d\mu\right)^{1/p} = |\lambda| ||f||_p. $$ For $p=\infty$, $\text{ess sup } |\lambda f| = |\lambda| (\text{ess sup } |f|)$. 
+$$
+\implies ||\lambda f||_\infty = |\lambda| ||f||_\infty 
+$$
+(iii) we use Minkowski's inequality to prove the triangle inequality for $1 < p < \infty$.
+If $1 < p < \infty$,
+$$
+\int |f+g|^p d\mu \leq \int |f|^p d\mu + \int |g|^p d\mu
+$$
+$$
+||f+g||_p^p = \int |f+g|^p d\mu \leq \int |f|^p d\mu + \int |g|^p d\mu
+$$
+$$
+\geq ||f||_p^p + ||g||_p^p
+$$
+$$
+\implies ||f+g||_p \leq ||f||_p + ||g||_p.
+$$
+For $p=1$ and $p=\infty$, it is easy to verify.
 
-## Primary goals of Fourier Analysis
+**Theorem:** For $1 \le p \le \infty$, $L^p(\mu)$ is a complete normed linear space.
+
+**Proof:** We skip the proof.
+
+**Remark:** If $X$ is countable and $\mu$ is a counting measure, then
+$$
+L^p(\mu) \equiv l^p(\mu).
+$$
+
+**Correspondence:** $\{ (f(x_1), \ldots, f(x_n), \ldots) \mid \sum_{i=1}^\infty |f(x_i)|^p < \infty \}$.
+Let $f \in L^p(\mu)$, $\int |f|^p d\mu<\infty \implies \sum_{i=1}^\infty |f(x_i)|^p < \infty$.
+Then we have a corresponding sequence in $l^{p}$
+$l^p(\mu) = \{ (\lambda_1, \lambda_2, \ldots) \mid \lambda_i \in \mathbb{C} \text{ s.t. } \sum |\lambda_i|^p < \infty \}$.
+$$
+\begin{align*}
+f(x_1)  & =  \lambda_1 \\
+f(x_2)  & =  \lambda_2 \\
+ & \vdots   \\
+f(x_n)  & =   \lambda_n
+\end{align*}
+$$
+$\forall \ 1 \le p \le q \le \infty$, $L^p(\mu) \subseteq L^q(\mu)$ if $\mu(X) < \infty$. (check it)
+**Theorem:** If $\mu(X)<\infty$, then $1\le p \le q \implies L^q(\mu)\subseteq L^p(\mu)$.
+
+$L^{\infty}(\mu)\subseteq\cdots\subseteq L^q(\mu)\subseteq L^p(\mu)\subseteq\cdots\subseteq L^1(\mu)$.
+
+**Def:** Let $X$ be a topological space. $C_c(X)=\{ \text{compactly supported continuous functions on X} \}$.
+
+**Theorem:** For $1\le p<\infty$, $C_c(\mathbb{R})$ is dense in $L^p(\mathbb{R},m)$.where $m$ is the Lebesgue measure.
+
+Let $f\in C_c(X)$. $\int_X |f|^p dm = \int_{K}\lvert f \rvert^{p}dm\leq M^{p}\int_{K}1dm <\infty$
+
+## Fourier Analysis
+
+If $f\in L^1(\mathbb{R},m)$ or in particular if $f$ is Riemann integrable.
+$f$ is a periodic function of period $L$.
+
+$$ f \sim \sum_{n=-\infty}^{\infty} (a_n \cos \frac{2\pi nx}{L} + b_n \sin \frac{2\pi nx}{L}). $$ $f:\mathbb{R}\to\mathbb{C}$ $f:[a,b]\to\mathbb{C}$, $(b-a)=L$. $f$ is $L$-periodic. $f \sim \sum_n (a_n \cos\frac{2\pi nx}{L} + b_n \sin\frac{2\pi nx}{L})$. Let $f:[a,b]\to\mathbb{C}$ be integrable and $(b-a)=L$. Then the $n^{th}$ Fourier coefficient of $f$ is 
+$$ 
+\hat{f}(n) = \frac{1}{L} \int_a^b f(x)e^{-2\pi in x/L} dx. 
+$$
+
+### Primary goals of Fourier Analysis
 
 1. Whether $S_{n}(f)(x)$ in convergent for all x?
 2. Whether $S_{N}(f)\to f$ pointwise $\forall x \in [a,b]$
