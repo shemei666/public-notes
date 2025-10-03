@@ -1455,9 +1455,28 @@ $$
 $$
 Then $\mu_0$ is a premeasure on $A$.
 
-**Proof.** Let $\{A_i\}_{i=1}^\infty$ is a countable disjoint collection of sets in $A$ if $\bigsqcup_{i=1}^\infty A_i\in A.$ We need to prove that $\mu_0(\bigsqcup_{i=1}^\infty A_i)=\sum_{i=1}^\infty\mu_0(A_i).$ Let $\bigsqcup_{i=1}^\infty A_i=\bigsqcup_{j=1}^k(a_i,b_j]$ where $(a_i,b_j]=\bigsqcup_{i,j}^\infty C_{ij}$ where $A_i=\bigsqcup_{j=1}^\infty C_{ij}.$ It is enough to show that $$\mu_0(a_i,b_j]=\sum_{i=1}^\infty \mu_0(a_{j_i},b_{j_i}).$$ Basically if $[a,b]=\bigsqcup_{i=1}^\infty (a_i,b_i]$ then $\mu_0(a,b]=\sum_{j=1}^\infty\mu_0(a_i,b_i].$ Then $$
+**Proof.** Let $\{A_i\}_{i=1}^\infty$ is a countable disjoint collection of sets in $A$ if $\bigsqcup_{i=1}^\infty A_i\in A.$ We need to prove that $\mu_0(\bigsqcup_{i=1}^\infty A_i)=\sum_{i=1}^\infty\mu_0(A_i).$ Let $\bigsqcup_{i=1}^\infty A_i=\bigsqcup_{j=1}^k(a_i,b_j]$ where $(a_i,b_j]=\bigsqcup_{i,j}^\infty C_{ij}$ where $A_i=\bigsqcup_{j=1}^\infty C_{ij}.$ It is enough to show that 
+$$
+\mu_0(a_i,b_j]=\sum_{i=1}^\infty \mu_0(a_{j_i},b_{j_i})
+$$ 
+Basically if $[a,b]=\bigsqcup_{i=1}^\infty (a_i,b_i]$ then $\mu_0(a,b]=\sum_{j=1}^\infty\mu_0(a_i,b_i].$ Then 
+$$
 \bigsqcup_{i=1}^\infty (a_i,b_i]=\bigsqcup_{i=1}^N (a_i,b_i]+\bigsqcup_{i=N+1}^\infty (a_i,b_i]\implies \mu_0(\bigsqcup_{i=1}^\infty (a_i,b_i])\geq \mu_0(\bigsqcup_{i=1}^N (a_i,b_i])=\sum_{i=1}^N\mu_0(a_i,b_i]
-$$ Taking $N\to\infty,$ $$\mu_0(a,b]=\mu_0(\bigsqcup_{i=1}^\infty(a_i,b_i])\geq\sum_{i=1}^\infty\mu_0(a_i,b_i].$$ Choose $\epsilon>0$ and take $\delta,\delta_i$ s.t $\delta<\epsilon,\ \delta_i< \frac{\epsilon}{2^{i}}$ Then $[a+\delta,b]\subseteq\bigcup_{i=1}^\infty (a_i,b_i+\delta_i).$ Since $[a+\delta,b]$ is compact, $[a+\delta,b]=\bigcup_{i=1}^N(a_i,b_i+\delta_i).$ Now, $$\mu_0(a,b]=(b-a)\leq b-(a+\delta)+\epsilon\leq b_N+\delta_N-a_1+\epsilon$$ $$=b_N+\delta_N-a_N+\sum_{i=1}^{N-1}[a_{i+1}-a_i]+\epsilon\leq b_N+\delta_N-a_N+\sum_{i=1}^{N-1}[b_i+\delta_i-a_i]$$ $$<\sum_{i=1}^N(b_i-a_i)+\sum_{i=1}^\infty\delta_N+\epsilon<\sum_{i=1}^\infty (b_i-a_i)+\underbrace{\sum_{i=1}^\infty \frac{\epsilon}{2^{i}}+\epsilon}_{=2\epsilon}.$$ As $\epsilon$ was arbitrary, $(b-a)\leq \sum_{i=1}^\infty (b-i-a_i).$ Therefore, $\mu_0(a,b]=\sum_{i=1}^\infty \mu_0(a_i,b_i].$ For intervals of type $(-\infty,b],\ \forall\ M<\infty$ we look at $(-M,b)$ intervals. Let $(-\infty,b]=\sum_{i=1}^N(a_i,b_i]\implies (-M,b)\subseteq \bigsqcup_{i=1}^\infty a_i,b_i].$ Taking $M\to\infty,$ $$\mu_0(-\infty,b]\leq\sum_{i=1}^\infty\mu_0(a_i,b_i).$$
+$$
+Taking $N\to\infty,$ $$\mu_0(a,b]=\mu_0(\bigsqcup_{i=1}^\infty(a_i,b_i])\geq\sum_{i=1}^\infty\mu_0(a_i,b_i].$$
+Choose $\epsilon>0$ and take $\delta,\delta_i$ s.t $\delta<\epsilon,\ \delta_i< \frac{\epsilon}{2^{i}}$ Then $[a+\delta,b]\subseteq\bigcup_{i=1}^\infty (a_i,b_i+\delta_i).$ Since $[a+\delta,b]$ is compact, $[a+\delta,b]=\bigcup_{i=1}^N(a_i,b_i+\delta_i).$ Now, 
+$$
+\begin{align}
+\mu_0(a,b] & =(b-a)\leq b-(a+\delta)+\epsilon\leq b_N+\delta_N-a_1+\epsilon \\
+ & =b_N+\delta_N-a_N+\sum_{i=1}^{N-1}[a_{i+1}-a_i]+\epsilon\leq b_N+\delta_N-a_N+\sum_{i=1}^{N-1}[b_i+\delta_i-a_i] \\
+ & <\sum_{i=1}^N(b_i-a_i)+\sum_{i=1}^\infty\delta_N+\epsilon<\sum_{i=1}^\infty (b_i-a_i)+\underbrace{\sum_{i=1}^\infty \frac{\epsilon}{2^{i}}+\epsilon}_{=2\epsilon}
+\end{align}
+$$
+
+ As $\epsilon$ was arbitrary, $(b-a)\leq \sum_{i=1}^\infty (b-i-a_i).$ Therefore, $\mu_0(a,b]=\sum_{i=1}^\infty \mu_0(a_i,b_i].$ For intervals of type $(-\infty,b],\ \forall\ M<\infty$ we look at $(-M,b)$ intervals. Let $(-\infty,b]=\sum_{i=1}^N(a_i,b_i]\implies (-M,b)\subseteq \bigsqcup_{i=1}^\infty a_i,b_i].$ Taking $M\to\infty,$ 
+$$
+\mu_0(-\infty,b]\leq\sum_{i=1}^\infty\mu_0(a_i,b_i)
+$$
 Let $\mathcal{L} := \{\mu^*\text{-measurable sets}\}$, a Lebesgue $\sigma$-algebra. Lebesgue measure: Complete measure $m = \mu^*|_{\mathcal{L}}$ and $\mu = m|_{\mathscr{B}_\mathbb{R}}$. Then $\mathcal{B}_\mathbb{R} \subseteq \mathcal{L} \implies \overline{\mathscr{B_{\mathbb{R}}}}$  as $\mathcal{A} \subseteq \mathcal{L} \implies \mathscr{B}_\mathbb{R} = \mathscr{M}(A) \subseteq \mathcal{L}$.
 **Question:** Is $\overline{\mathscr{B}_\mathbb{R}} = \mathcal{L}$?
 
@@ -1538,11 +1557,13 @@ $$
 m(E_i)\leq m(K_i)+\frac \epsilon{2^i}
 $$
 Take $H_n=\bigcup_{i=-N}^N K_i,$ then: 
+
 $$
-m\left(\bigcup_{i=-N}^N E_i\right)\leq m\left(\bigcup_{i=-N}^N H_i\right)+\epsilon\implies m\left(\bigcup_{i=-\infty}^\infty E_i\right)=\lim_{N\to\infty} m\left(\bigcup_{i=-N}^N E_i\right)
-$$ $$
+\begin{gather}
+m\left(\bigcup_{i=-N}^N E_i\right)\leq m\left(\bigcup_{i=-N}^N H_i\right)+\epsilon\implies m\left(\bigcup_{i=-\infty}^\infty E_i\right)=\lim_{N\to\infty} m\left(\bigcup_{i=-N}^N E_i\right) \\
 = \lim_{N\to\infty}\sup\left\{m(K)| K\subseteq \bigcup_{i=-N}^N E_i\right\} \quad \blacksquare
-$$
+\end{gather}
+$$ 
 
 **Proposition:** If $E \subseteq \mathbb{R}$ TFAE
 1. $E \in \mathcal{L}$
