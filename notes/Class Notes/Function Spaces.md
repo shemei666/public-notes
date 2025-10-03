@@ -1521,16 +1521,23 @@ $$
 \overline{E} = (\overline{E} \setminus U) \sqcup U \\
 m(\bar{E})=m(\bar{E}\setminus U)+m(U)\leq m(\bar{E}\setminus E)+\epsilon+m(K)=m(\bar{E})-m(E)+\epsilon+m(K)
 \end{gather}
-$$ $$\implies m(E)\leq m(K)+\epsilon\implies m(E)=\sup\{\mu(K)|K\subseteq E, K\text{ compact}\}.$$ If $E$ is not bounded, 
+$$
+$$
+\implies m(E)\leq m(K)+\epsilon\implies m(E)=\sup\{\mu(K)|K\subseteq E, K\text{ compact}\}
+$$
+If $E$ is not bounded, 
+
 $$
 \begin{gather}
 E=\bigsqcup_{i=0}^\infty (E\ \cap\ (i,i+1]) \\
 \text{Let }E_i=E\ \cap\ (i,i+1]
 \end{gather}
-$$ Therefore for $\epsilon>0,\exists\ K_i$ such that  
+$$
+Therefore for $\epsilon>0,\exists\ K_i$ such that  
 $$
 m(E_i)\leq m(K_i)+\frac \epsilon{2^i}
-$$ Take $H_n=\bigcup_{i=-N}^N K_i,$ then: 
+$$
+Take $H_n=\bigcup_{i=-N}^N K_i,$ then: 
 $$
 m\left(\bigcup_{i=-N}^N E_i\right)\leq m\left(\bigcup_{i=-N}^N H_i\right)+\epsilon\implies m\left(\bigcup_{i=-\infty}^\infty E_i\right)=\lim_{N\to\infty} m\left(\bigcup_{i=-N}^N E_i\right)
 $$ $$
@@ -2003,10 +2010,12 @@ P_{r} = \sum_{n=-\infty}^{\infty} r^{\lvert n \rvert } e^{in \theta }
 $$
 The sequence converges absolutely and uniformly
 
-$K^{th}$ Fourier of $P_r(\theta)$ $\frac{1}{2\pi}\int_{-\pi}^{\pi} (\sum_{n=-\infty}^{\infty}r^{|n|}e^{in\theta})e^{-ik\theta}d\theta$ 
+$K^{th}$ Fourier of $P_r(\theta)$ $\frac{1}{2\pi}\int_{-\pi}^{\pi} (\sum_{n=-\infty}^{\infty}r^{|n|}e^{in\theta})e^{-ik\theta}d\theta$
+
 $$ 
 = \frac{1}{2\pi}\sum_{n=-\infty}^{\infty}\int_{-\pi}^{\pi} r^{|n|}e^{in\theta}e^{-ik\theta}d\theta 
-$$ $$ 
+$$
+$$
 = r^{|k|} 
 $$
 
@@ -2017,8 +2026,10 @@ $$
 
 $$ 
 = \frac{1-r^2}{|1-re^{i\theta}|^2} = \frac{1-r^2}{|(1-r\cos\theta)-ir\sin\theta|^2} 
-$$ $$
+$$
+$$
 = \frac{1-r^2}{(1-r\cos\theta)^2 + (r\sin\theta)^2} 
-$$ $$
+$$
+$$
 = \frac{1-r^2}{1-2r\cos\theta+r^2\cos^2\theta+r^2\sin^2\theta} = \frac{1-r^2}{1-2r\cos\theta+r^2} 
 $$
