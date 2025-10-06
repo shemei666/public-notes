@@ -2054,3 +2054,85 @@ $$
 $$
 = \frac{1-r^2}{1-2r\cos\theta+r^2\cos^2\theta+r^2\sin^2\theta} = \frac{1-r^2}{1-2r\cos\theta+r^2} 
 $$
+
+### Convolution
+Let $f,g$ be two $2\pi$ periodic integrable functions on $\mathbb{R}$ then, the convolution of $f,g$, denoted by $f*g$ is 
+$$
+f *g = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(y) g(x-y) dy 
+$$
+
+If, $f,g$ are Riemann integrable then so is $F_{x}(y) = f(y)g(x-y)$. For general $f,g \in L^{1}$ we use **Fubini-Tonelli** theorem to show the integration makes sense.
+$$
+\int_{-\pi}^{\pi} \lvert  f* g \rvert dx = \frac{1}{2\pi} \int_{-\pi}^{\pi} \left( \int_{-\pi}^{\pi} \lvert f(y)g(x-y) \rvert dy\right)dx \leq \frac{1}{2\pi}\int_{-\pi}^{\pi}
+$$
+
+**Proposition:** Let $f,g$ be $2\pi$-periodic integrable functions on $\mathbb{R}$ then the following holds:
+1. $f * (g+h) = f * g + f* h$
+2. $(cf)*g = c(f*g)$
+3. $(f*g)*h = f*(g*h)$
+4. $f*g = g*f$
+5. $f*g = g*f$
+6. $\widehat{f*g}(n) = \hat{f}(n)*\hat{g}(n)$
+
+**Proof:** 1. and 2. are easy to see
+3. Let $f,g,h$ be continuous
+$$
+\begin{gather}
+(f+g)*h(x) = \frac{1}{2\pi } \int_{-\pi}^{\pi} (f*g)(y)h(x-y)dy \\
+= \frac{1}{(2\pi)^2} \int_{-\pi}^\pi \int_{-\pi}^\pi f(\xi) g(y-\xi) h(x-y) d\xi dy \\= \frac{1}{(2\pi)^2} \int_{-\pi}^\pi \int_{-\pi}^\pi f(\xi) g(y-\xi) h(x-y) d\xi dy  \\
+= \frac{1}{(2\pi)^2} \int_{-\pi}^\pi f(\xi) \left( \int_{-\pi}^\pi g(y-\xi) h(x-y) dy \right) d\xi \text{ (by Change of Variable)}  \\
+= \frac{1}{2\pi} \int_{-\pi}^\pi f(\xi) (g * h)(x-\xi) d\xi  \\
+= (f * (g * h))(x)
+\end{gather}
+$$
+4. 
+$$
+(f*g)(x) = \frac{1}{2\pi}\int_{-\pi}^\pi f(y)g(x-y)dy
+$$
+$$
+= \frac{1}{2\pi}\int_{-\pi}^\pi f(x-z)g(z)dz \quad (x-y=z, dy=-dz)
+$$
+$$
+= \frac{1}{2\pi}\int_{-\pi}^\pi f(x-z)g(z)dz = (g*f)(x)
+$$
+
+6 
+$$
+\widehat{(f*g)}(n) = \frac{1}{2\pi} \int_{-\pi}^{\pi} (f*g)(x)e^{-inx} dx
+$$
+($f, g$ continuous)
+$$
+= \frac{1}{(2\pi)^2} \int_{-\pi}^{\pi} \left( \int_{-\pi}^{\pi} f(y)g(x-y)dy \right) e^{-inx} dx
+$$
+$$
+= \frac{1}{(2\pi)^2} \int_{-\pi}^{\pi} f(y)e^{-iny} \left( \int_{-\pi}^{\pi} g(x-y)e^{-in(x-y)}dx \right) dy
+$$
+$$
+= \frac{1}{2\pi} \int_{-\pi}^{\pi} \hat{g}(n) \hat{f}(n)e^{-iny} dy = \hat{g}(n)\hat{f}(n)
+$$
+**V)** g is continuous on $\mathbb{R}$ and $2\pi$ periodic, so g is uniformly continuous on $\mathbb{R}$.
+g continuous on $[-\pi, \pi]$
+
+>[!info]
+>g is continuous on $[-\pi,\pi]$ $\implies$ g is uniformly continuous on $[-\pi, \pi]$
+>g is $2\pi$-periodic $\implies$ g is uniformly continuous on $\mathbb{R}$.
+
+Given $\epsilon > 0, \exists \delta > 0$ such that
+$|g(x_1)-g(x_2)| < \epsilon \quad \forall |x_1-x_2|<\delta$.
+$\forall |x_1-x_2|<\delta$, $|(f*g)(x_1) - (f*g)(x_2)|$
+$$ = \left|\frac{1}{2\pi}\int_{-\pi}^\pi (f(y)g(x_{1}-y) - f(y){g}(x_{2}-y))dy\right| $$ $$ \leq \frac{1}{2\pi}\int_{-\pi}^\pi |f(y)||g(x_{1}-y)-{g}(x_{2}-y)|dy $$
+$$
+= \frac{1}{2\pi} \int_{-\pi}^\pi |f(y)| |g(x_{1})-g(z_{2})| dy
+$$
+$$
+\leq \frac{\epsilon}{2\pi} \cdot B \quad \text{where } \int_{-\pi}^{\pi} |f|dx = B
+$$
+$\implies f*g$ is continuous.
+
+**Lemma:** Let $f$ be integrable on the circle and bounded by $B$. Then there exists a sequence of continuous functions $\{f_k\}_{k=1}^\infty$ on the circle such that $\{f_k\} \to f$ in $L^1$, i.e., $\int_{-\pi}^{\pi} |f(x) - f_k(x)| dx \to 0$ as $k \to \infty$ and $\sup_{x\in[- \pi,\pi]} |f_k(x)| \leq B \quad \forall k$.
+
+**Proof:** We skip this proof😴
+
+We know that $f*g$ is $2\pi$ periodic and integrable. There exist sequences of continuous functions, $\{f_k\}$ and $\{g_k\}$, such that $\{f_k\} \to f$ in $L^1$ and $\{g_k\} \to g$ in $L^1$. i.e., $\int_{-\pi}^{\pi} |f_k(x)-f(x)|dx \to 0$ and $\int_{-\pi}^{\pi} |g_k(x)-g(x)|dx \to 0$ as $k\to\infty$.
+
+We will show that $\{f_k * g_k\} \to f*g$ uniformly. $f*g - f_k*g_k = (f-f_k)*g + f_k*(g-g_k)$. We will show that the first term goes to zero uniformly. $$ |(f-f_k)*g(x)| \leq \frac{1}{2\pi} \int_{-\pi}^\pi |(f-f_k)(y)| |g(x-y)| dy $$ $$ \leq \frac{1}{2\pi} \sup_{y\in[-\pi,\pi]} |g(y)| \int_{-\pi}^\pi |f(y)-f_k(y)| dy \to 0 \quad as \ k\to\infty. $$
