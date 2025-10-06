@@ -1,3 +1,7 @@
+---
+draft: true
+---
+
 ## Theorems and Corollaries (Field Extensions, Splitting Fields)
 
 ---
