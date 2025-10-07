@@ -292,7 +292,7 @@ $$
 $$
 
 
-**Solution:**
+**Solution:** 
 
 **Corollary:** For any $a \in S^{1}$ , $\pi_{1}(S^{1},a)$ is as a set bijection with $\mathbb{Z}$
 **Proof:** Look at $(\mathbb{R},0) \to (S^{1},1), t \mapsto e^{2\pi it}$ Then $p^{-1}(1)=\mathbb{Z}$
@@ -335,7 +335,7 @@ $$
 **Exercise:**  IF X is Hausdorff then A must be closed in K
 
 
-**Solution:**
+**Solution:** 
 
 **Lemma:** If $A \subseteq X$ is a retraction then $j: A \to X$ inclusive induces an injection homomorphism of  fundamental  groups.
 
