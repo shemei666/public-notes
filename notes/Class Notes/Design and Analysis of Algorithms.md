@@ -377,6 +377,5 @@ def PARTITION(A,p,r):
 
 **Proof:**
 
-!
 
 
