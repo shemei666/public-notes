@@ -4,7 +4,7 @@ import re
 import sys
 import json
 
-DEPENDENCIES = {"Excalidraw": [".svg"]}
+DEPENDENCIES = {"Excalidraw": [".svg"], "Assets": [".jpg"]}
 # PUBVAULT = "C:/Users/shameel/Documents/public-notes"
 ROOT = "../"
 PUBLISH_FOLDER = "../content"

@@ -1376,7 +1376,7 @@ $$
 \implies \nu(E) \leq \mu^*(E) = \mu(E).
 $$
 
-3. If $A = \bigcup_{i=1}^\infty A_i$, $A \in \mathscr{A}$
+3. If $A = \bigcup_{i=1}^\infty A_i$,
 
 $$
 \nu(A) = \lim_{n \to \infty} \nu\left( \bigcup_{i=1}^n A_i \right ) = \lim_{n \to \infty} \mu \left( \bigcup_{i=1}^n A_i \right ) = \mu(A) \tag{*}
@@ -2121,4 +2121,4 @@ $\implies f*g$ is continuous.
 
 We know that $f*g$ is $2\pi$ periodic and integrable. There exist sequences of continuous functions, $\{f_k\}$ and $\{g_k\}$, such that $\{f_k\} \to f$ in $L^1$ and $\{g_k\} \to g$ in $L^1$. i.e., $\int_{-\pi}^{\pi} |f_k(x)-f(x)|dx \to 0$ and $\int_{-\pi}^{\pi} |g_k(x)-g(x)|dx \to 0$ as $k\to\infty$.
 
-We will show that $\{f_k * g_k\} \to f*g$ uniformly. $f*g - f_k*g_k = (f-f_k)*g + f_k*(g-g_k)$. We will show that the first term goes to zero uniformly. $$ |(f-f_k)*g(x)| \leq \frac{1}{2\pi} \int_{-\pi}^\pi |(f-f_k)(y)| |g(x-y)| dy $$ $$ \leq \frac{1}{2\pi} \sup_{y\in[-\pi,\pi]} |g(y)| \int_{-\pi}^\pi |f(y)-f_k(y)| dy \to 0 \quad as \ k\to\infty. $$
+We will show that $\{f_k * g_k\} \to f*g$ uniformly. $f*g - f_k*g_k = (f-f_k)*g + f_k*(g-g_k)$. We will show that the first term goes to zero uniformly. $$ |(f-f_k)*g(x)| \leq \frac{1}{2\pi} \int_{-\pi}^\pi |(f-f_k)(y)| |g(x-y)| dy $$ $$ \leq \frac{1}{2\pi} \sup_{y\in[-\pi,\pi]} |g(y)| \int_{-\pi}^\pi |f(y)-f_k(y)| dy \to 0 \quad \text{as} \ k\to\infty. $$
