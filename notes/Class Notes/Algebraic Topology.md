@@ -1495,3 +1495,59 @@ $$
 
 
 
+![[IMG_20251010_161556.jpg]]
+
+**Exercise:** Check again that $H_0(K) \cong \mathbb{Z}$, $H_1(K) \cong \mathbb{Z}$.
+
+3) $L=$ **solid triangle**
+i.e., $L = \sigma$ 2-simplex (with faces).
+The chain complex is
+$$
+0 \to C_2 \xrightarrow{\partial_2} C_1 \xrightarrow{\partial_1} C_0 \to 0
+$$
+$$
+C_2 \cong \mathbb{Z}\sigma, \quad C_1 \cong \mathbb{Z}e_{01}\oplus\mathbb{Z}e_{12}\oplus\mathbb{Z}e_{20}, \quad C_0 \cong \mathbb{Z}v_0\oplus\mathbb{Z}v_1\oplus\mathbb{Z}v_2.
+$$
+The boundary of the 2-simplex $\sigma$:
+$$
+\partial_2 \sigma = [v_1, v_2] - [v_0, v_2] + [v_0, v_1] \quad \text{(i.e., the formal sum of the faces)}
+$$
+
+From earlier calculation, we saw that $H_0(L) \cong \mathbb{Z}$.
+
+$Z_{1}(L) = Z_{1}(K)$ as before, while $B_{1}(L)=im(\partial_{2})=\mathbb{Z}(1,1,1)=Z_{1}(1)$. Thus $H_{1}(L)=0$. Finally, since $\partial_{2}$ is injective, we see that $Z_{2}(L)=0$. Therefore $H_{2}(L)=0$.
+
+
+![[IMG_20251010_164039.jpg]]
+
+4) $K = \text{solid tetrahedron}$
+$= 3\text{-simplex}$
+
+The chain complex is:
+$$
+0 \to C_3 \xrightarrow{\partial_3} C_2 \xrightarrow{\partial_2} C_1 \xrightarrow{\partial_1} C_0 \to 0
+$$
+$$
+\mathbb{Z} \xrightarrow{n \mapsto (-n, n, n, n)} \mathbb{Z}^4 \xrightarrow{(a,b,c,d) \mapsto (a+b, c-a, -b, a+d, b+d, c+d)} \mathbb{Z}^6 \xrightarrow{} \mathbb{Z}^4
+$$
+
+Simplex basis for the chains:
+$C_3$: $[0123]$
+$C_2$: $[012], [013], [023], [123]$
+$C_1$: $[01], [02], [03], [12], [13], [23]$
+$C_0$: $0, 1, 2, 3$
+
+$$
+\partial_3 [0123] = [123] - [023] + [013] - [012]
+$$
+
+Easy to see that $H_3 \cong 0 \cong H_2$.
+**Exercise:** $H_1 \cong 0, H_0 \cong \mathbb{Z}$.
+
+Geometrically, when is a 1-chain a 1-cycle in a simplicial complex $K$?
+![[IMG_20251010_170132.jpg]]
+
+
+1-cycle is also a boundary, hence gives 0 element in the homology. Consider the 1-cycle $e_{1}+e_{2}+e_{3} +e_{4} = \partial(\sigma+\tau)$. It is a boundary because $\partial \sigma = e_{1} - e_{5} + e_{4}, \partial(\tau)= e_{5}+e_{2}+e_{3}$.
+![[IMG_20251010_171522.jpg]]
+
