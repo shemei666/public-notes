@@ -29,11 +29,11 @@ Any smooth vector field f can be thought of as a function $f:S\to \mathbb{R}^{3}
 ### Explicit formula for the covariant differentiation
 $S \subseteq \mathbb{R}^{3}$ , $p \in S$ $\sigma:U\to  S$ patch around p. $y \in T_{p}(S)$, $w:S\to \mathbb{R}^{3}$ smooth vector field. We need to find $D_{y}w|_{p}$. Let $\alpha(t)= \sigma(u(t),v(t))$ with $\alpha'(0)=y$ and $w(t)=a(u(t),v(t))\sigma_{u}+b(u(t),v(t))\sigma_{v}$ then
 $$
-\begin{gather*}
+\begin{gather}
 \frac{dw(t)}{dt} = a(\sigma_{uu}u' + \sigma_{uv}v') + b(\sigma_{vu}u' + \sigma_{uv} v') + a'\sigma_{u}+b'\sigma_{v} \\
 =(a'+ \Gamma_{11}^{1}au' + \Gamma_{12}^{1}av' + \Gamma_{12}^{1}bu' +\Gamma_{22}^{1}bv')\sigma_{u} +  (b' + \Gamma_{11}^{2}au' + \Gamma_{12}^{2}av' +  \\
 \Gamma_{12}^{2}bu' +\Gamma_{22}^{2}bv')\sigma_{v} + (aL+bM)N
-\end{gather*}
+\end{gather}
 $$
 $\implies D_{y}w = \frac{dw}{dt} - *N$ where $*=(aL+bM)$.
 

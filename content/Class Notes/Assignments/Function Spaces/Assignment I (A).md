@@ -1,5 +1,5 @@
 ---
-draft: false
+publish: true
 ---
 
 **Muhammed Shameel KV**
@@ -61,11 +61,11 @@ $$
 $$
 We show that the function $f:K\to \mathbb{R}, f(x) = \rho(y,x)$ is continuous and hence attains a minimum on the compact set $K$. Now WLOG assume that $\rho(x_{1},y)\geq \rho(x_{2},y)$ otherwise rename $x_{1},x_{2}$.
 $$
-\begin{align*} \\
+\begin{align} \\
 \rho(x_{1},y) &\geq \rho(x_{1},x_{2}) + \rho(x_{2},y) ) \\
 \implies \rho(x_{1},y)-\rho(x_{2},y) &\leq \rho(x_{1},x_{2}) \\
 \implies \lvert \rho(x_{1},y)-\rho(x_{2},y) \rvert  &\leq \rho(x_{1},x_{2})
-\end{align*}
+\end{align}
 $$
 Hence we have,
 $$
@@ -77,11 +77,11 @@ Now to show that compactness is needed, we can consider the subspace  $X = (0,1)
 
 $5.$ Given that $A$ is compact and $B$ is closed and we suppose that $A \bigcap B=\varnothing$, Now assume for contradiction that $\text{dist}(A,B)=0$. Hence there exists a sequence of real numbers $\{ \rho(a_{n},b_{n}) \}$ such that $\lim_{ n \to \infty } \rho(a_{n},b_{n}) = 0$. Now since A is compact we have that $\{ a_{n} \}$ has a subsequence which will converge, say $\{ a_{n_{k}} \} \subseteq \{ a_{n} \}$ converges to $a$. Now we also have,
 $$
-\begin{gather*}
+\begin{gather}
 \lim_{ n \to \infty } \rho(a_{n_{k}},b_{n_{k}}) = 0 \\
 \rho(b_{n_{k}},a_{n_{k}})+\rho(a_{n_{k}},a) \geq \rho(b_{n_{k}},a) \\
 \implies \lim_{ n \to \infty } \rho(b_{n_{k}},a) \leq \lim_{ n \to \infty } \rho(b_{n_{k}},a_{n_{k}}) + \lim_{ n \to \infty } \rho(a_{n_{k}},a) = 0
-\end{gather*}
+\end{gather}
 $$
 
 Hence the sequence $b_{n_{k}}$ converges to $a$. But $A \bigcap B = \varnothing$. Which is a contradiction.
@@ -89,14 +89,32 @@ Hence the sequence $b_{n_{k}}$ converges to $a$. But $A \bigcap B = \varnothing$
 Conversely, if $\text{dist}(A,B)>0$ and assume for contradiction that $A \bigcap B \neq \varnothing$. Then let $x \in A \bigcap B$ hence $\rho(x,x) = 0$ implies $\text{dist}(A,B) = 0\quad \blacksquare$
 
 $6.$
-![[SVG/tikzdiagram20.svg|diagram]]
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=0.7]
+  % Open set V (largest)
+  \draw[thick, blue!50,dashed ] plot[smooth cycle, tension=0.9] coordinates {
+      (-3,0) (-2,2) (0,2.5) (2,2) (3,0) (2,-2) (0,-2.5) (-2,-2)
+    };
+  \node[blue!70!black] at (2.7,1.8) {$V$};
+
+  % Closure of U (inside V)
+  \draw[thick, green!60!black] plot[smooth cycle, tension=0.9] coordinates {(-2,0) (-1.3,1.3) (0,1.7) (1.5,1.2) (1.7,0) (1.2,-1.2) (0,-1.5) (-1.5,-1)};
+  \node[green!60!black] at (2,1) {$\overline{U}$};
+  \node[green!60!black] at (1.5,0.7) {$U$};
+
+  \draw[thick, red!70!black] (-0.5,-0.5) rectangle (0.5,0.5);
+  \node[red!70!black] at (0.9,0) {$K$};
+\end{tikzpicture}
+\end{document}
+```
 
 Consider $V^{c}$ and $K$, $K$ is compact and $V^{c}$ is closed and since $K \subseteq V \implies K \bigcap V^{c}= \varnothing$. Hence we can use $(5.)$ above to say $\delta =\text{dist}(K,V^{c}) >0$. Now consider the open sets,
 $$
-\begin{gather*}
+\begin{gather}
 U = \bigcup_{k \in K} B\left(k,\frac{\delta}{3} \right) \\
 W = \bigcup_{x \in V^{c}} B\left(x, \frac{\delta}{3}\right)
-\end{gather*}
+\end{gather}
 $$
 Then $U \bigcap W = \varnothing$, since otherwise if $a \in U \bigcap W$ implies $\exists x_{0},k_{0}$ such that $\rho(x_{0},a) < \frac{\delta}{3}, \rho(x_{1},a)< \frac{\delta}{3}$. So we get
 $$
@@ -106,11 +124,11 @@ So we get that $U \bigcap W = \varnothing$. Hence $U \subseteq W^{c} \implies \o
 
 $7.$ See that $f(x) = \rho(x,T(x))$ is continuous, since for any convergent sequence $\{ x_{n} \} \to x$, and since $T$ is continuous, seen easily from the given condition, so $\{ T(x_{n}) \}\to T(x)$ we have, 
 $$
-\begin{gather*}
+\begin{gather}
 \rho(x_{n},T(x_{n})) \leq \rho(x_{n},x) + \rho(x,T(x)) + \rho(T(x),T(x_{n})) \\
 \rho(x,T(x)) \leq \rho(x,x_{n}) + \rho(x_{n},T(x_{n})) + \rho(T(x_{n}),T(x)) \\
 \implies \lvert  \rho(x_{n},T(x_{n})) -\rho(x,T(x) \rvert \leq \rho(x_{n},x)  + \rho(T(x),T(x_{n})) \to 0
-\end{gather*}
+\end{gather}
 $$
 
 Hence there exists $f(x_{0})$ which is minimum of $f$ over $X$. Then if the minimum is 0, we are done. Otherwise if $\inf_{x \in X} \rho(x,T(x)) = \delta$ and let $x_{0}$ be the point such that $\rho(x_{0},T(x_{0})) = \delta$ is attained. Then we should have,
@@ -139,10 +157,10 @@ $9.$
 $(i)$ Consider $f_{n}(x) = x+ \frac{1}{n}$ and $g(x) = x^{2}$, Now we have $g\circ f_{n} = x^{2} + \frac{2x}{n}+\frac{1}{n^{2}}$ and $g \circ f = x^{2}$ Hence for any $\varepsilon>0$ and any $n$ we can choose $x$ such that,
 
 $$
-\begin{gather*} 
+\begin{gather} 
 x > \frac{\varepsilon n}{2} \\
 \implies \left\lvert \left( x^{2} + \frac{2x}{n} + \frac{1}{n^{2}} \right) - x^{2} \right\rvert = \left\lvert  \frac{2x}{n} + \frac{1}{n^{2}}  \right\rvert > \varepsilon 
-\end{gather*}
+\end{gather}
 $$
 So we can see that $g \circ f_{n}$ is not uniformly convergent. Hence the statement is false.
 

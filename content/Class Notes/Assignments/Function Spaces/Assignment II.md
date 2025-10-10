@@ -1,5 +1,5 @@
 ---
-draft: false
+publish: true
 ---
 
 # Part A  
@@ -14,11 +14,11 @@ $(i)$ Every continuous function $f \in C[1, 2]$ can be uniformly approximated by
 
 **Answer:** The statement is true since even polynomials form an algebra. We can see this as follows: if $f,g$ are 2 even polynomials then,
 $$
-\begin{gather*}
+\begin{gather}
 f \cdot g = \sum_{i=0}^n a_i x^{2i} \cdot \sum_{j=0}^m b_j x^{2j} = \sum_{k=0}^{n+m} c_k x^{2k}, \\
 f + g = \sum_{i=0}^n a_i x^{2i} + \sum_{j=0}^m b_j x^{2j} = \sum_{k=0}^{\max(n,m)} d_k x^{2k}, \\ \\
 cf = c \cdot \sum_{i=0}^n a_i x^{2i} = \sum_{i=0}^n (c a_i) x^{2i},
-\end{gather*}
+\end{gather}
 $$
 Hence even polynomials on $[1,2]$ form an algebra
 
@@ -30,10 +30,10 @@ $(ii)$ Every continuous function $f \in C[1, 2]$ can be uniformly approximated b
 
 **Answer:**  This statement is also true. If $f:[1,2] \to \mathbb{R}$ is any continuous function, we can consider a function $g:\mathbb{R}\to [1,2], g(x) =\frac{f(x)}{x}$. Now this is also continuous since $x\neq0$ in $[1,2]$. Hence by $(i)$ we have that $g$ can be uniformly approximated by a sequence of even polynomials $\{P_n\}$. Now consider the sequence of odd polynomials $\{Q_n\}$ where $Q_n(x) = x P_n(x)$. $\exists N \in \mathbb{N}$ such that, $\|g -P_{n}\|_{\infty} < \frac{\varepsilon}{2}$ for $n\geq N$
 $$
-\begin{align*}
+\begin{align}
 \|f - Q_n\|_\infty =& \|f - x P_n\|_\infty = \|xg - xP_n\|_\infty  \\
  =& \|x(g-P_n)\|_\infty  \leq  2\|g - P_{n}\|_{\infty } < \frac{2\varepsilon}{2} = \varepsilon  
-\end{align*}
+\end{align}
 \quad \text{for } n\geq N
 $$
 
@@ -61,10 +61,10 @@ If $\{ f_n \}$ forms an equicontinuous family then show that $f$ is constant.
 
 **Answer:** By assumption of equicontinuity we have, $\forall\varepsilon>0, \exists \delta>0$ such that,
 $$
-\begin{gather*}
+\begin{gather}
 |f_{n}(0) - f_{n}(y)| < \varepsilon \quad \text{for } |y|<\delta, \forall n \in \mathbb{N} \\
 |f(0) - f(ny)| < \varepsilon
-\end{gather*}
+\end{gather}
 $$
 Since $\exists N_{0} \in \mathbb{N}$ such that  $\forall r \in \mathbb{R},\left\lvert  \frac{r}{N_{0}}  \right\rvert < \delta$. So we get for $f_{N_{0}}$,
 $$
@@ -117,12 +117,12 @@ R_{n}(x) = f(a) + \int_{a}^{x} Q_{n}(t) dt
 $$
 We see that since $Q_{n}(t) \to f'(t)$ uniformly implies, $\forall \varepsilon>0, \exists N \in \mathbb{N}$ such that $\lvert Q_{n}(x)-f'(x) \rvert < \frac{\varepsilon}{(b-a)}$ for all $x \in [a,b]$ and . Hence for $n \geq N$ we have,
 $$
-\begin{align*}
+\begin{align}
  \left\lvert  \int_{a}^{x}Q_{n}(t)dt +f(a) - f(x)   \right\rvert = &  \left\lvert \int_{a}^{x} Q_{n}(t) dt -\int_{a}^{x} f'(t) dt \right\rvert \\
 =  &  \left\lvert  \int_{a}^{x} Q_{n}(t) - f'(x) dt  \right\rvert \\
 \leq &  \int_{a}^{x} \lvert Q_{n}(t) - f'(t) \rvert dt  \\
 < & \frac{\varepsilon}{(b-a)} (b-a) = \varepsilon 
-\end{align*}
+\end{align}
 $$  
 Hence we have that $R_{n}(x)$ converges uniformly to $f(x)$. Also we have by construction of $R_{n}$ that $R'_{n}(x) = Q_{n}(x)$. So by **Fundamental theorem of calculus** we have,
 $$
@@ -135,10 +135,10 @@ $$
 
 **Answer:** Every non-constant polynomial is unbounded. Hence if we choose any non-constant bounded continuous function we have $N \in \mathbb{N}$ such that
 $$
-\begin{gather*}
+\begin{gather}
 \lvert \lvert P_{n}(x)  \rvert  - M \rvert \leq \lvert f(x) - P_{n}(x) \rvert  < 1 \\
 \implies \lvert P_{n}(x) \rvert < M + 1
-\end{gather*}
+\end{gather}
 
 \quad \text{for } n \geq N
 $$

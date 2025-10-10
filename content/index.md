@@ -1,6 +1,6 @@
 ---
 title: My 3rd year notes
-draft: false
+publish: true
 ---
 # Notes.
 This is my personal collection of notes, feel free to read it. 

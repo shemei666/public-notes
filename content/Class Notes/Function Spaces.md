@@ -3,7 +3,7 @@ title: Function Spaces
 tags:
   - incomplete
 created: 2025-07-25
-draft: false
+publish: true
 ---
 
 **Proposition**:
@@ -156,21 +156,21 @@ $$
 ||x_{r}|| = 1
 $$
 $$
-\begin{align*}
+\begin{align}
 \text{dist}(x_{r},Y) \leq & ||x_{r}-0|| \quad 0 \in Y \\
 & ||x_{r}|| \\
 &=1
-\end{align*}
+\end{align}
 $$
 $$
-\begin{align*}
+\begin{align}
 \text{dist}(x_{r},Y) =& \text{ dist}\left( \frac{x-y}{||x-y||},Y\right) \\
 =&\frac{1}{||x-y||}\text{dist}(x-y,||x-y||Y) \\
 =&\frac{1}{||x-y||} \text{dist}(x-y,Y) \\
 =&\frac{1}{||x-y||}\text{dist}(X,Y) \\
 \geq & \quad r \hspace{10em} \blacksquare  \\
  
-\end{align*}
+\end{align}
 $$
 
 
@@ -204,11 +204,11 @@ $$
 $$
 
 $$ 
-\begin{align*}
+\begin{align}
 |f_{n}(x) - f_{m}(x) | &\leq |f_{n}(x)-f(x) + f(x) - f_{m}(x)|
 \\ &\leq |f_{n}(x) - f(x)| + |f_{m}(x) - f(x)|  \\
 &< \epsilon
-\end{align*}
+\end{align}
 $$
 
 Therefore $f_{n}$ is uniformly Cauchy
@@ -311,13 +311,13 @@ Take $x_{1} \in S$ and consider $\{ f_{n}(x_{1}) \}_{n=1}^{\infty }$ . Since $\{
 
 So it has convergent subsequence $\{ f_{1,n}(x_{1}) \}$. Consider ${f_{1,n}}$ and look at ${f_{1,n}(x_{2})}$ and repeat the same process to get
 $$
-\begin{align*}
+\begin{align}
 \{f_{1,n}\} &= f_{1,1} ,f_{1,2},\dots,f_{1,k} \\
 \{f_{2,n}\} &= f_{2,1},f_{2,2},\dots,f_{2,k} \\
 \vdots & \\ 
 \{f_{m,n}\} &= f_{m,1},f_{m,2},\dots,f_{m,k}
 
-\end{align*}
+\end{align}
 $$
 
 Consider $\{ f_{n,n} \}_{n=1}^{\infty}$ converge pointwise at each point of S. Define $g_{n} = f_{n,n} \forall n \in \mathbb{N}$ 
@@ -342,13 +342,13 @@ $$
 $$
 Then if $\rho(x,s) < \delta$
 $$
-\begin{align*}
+\begin{align}
 \lvert g_{n}(x) - g_{m}(x)\rvert \leq &\lvert g_{n}(x) - g_{n}(s) \rvert +& \\ 
 & \lvert g_{n}(s) - g_{m}(s) \rvert +&  \\
 &\lvert g_{m}(s)-g_{m}(x) \rvert   \\
 \leq &\frac{\epsilon}{3} + \frac{\epsilon}{3} + \frac{\epsilon}{3} \\
 =& \epsilon
-\end{align*}
+\end{align}
 
 $$
 
@@ -498,22 +498,22 @@ Tf(t_{0}) = x_{0}
 $$
 Also, 
 $$
-\begin{align*}
+\begin{align}
 \sup_{t \in J} \lvert x_{0} - Tf(t) \rvert \leq & \sup_{t \in J}\int_{t_{0}}^{t}\lvert g(s,f(s))ds \rvert \\
 \leq & c \sup_{t \in J} \int_{t_{0}}^{t}ds \leq c\beta 
-\end{align*}
+\end{align}
 $$
 So, $Tf \in X$
 
 **Step 4**: T is a contraction
 $\forall t \in [t_{0}-\beta,t_{0}+\beta]$ and $\forall f_{1},f_{2} \in X$ then
 $$
-\begin{align*}
+\begin{align}
 \lvert Tf_{1}(t) - Tf_{2}(t) \rvert =& \left\lvert  \int_{t_{0}}^{t}[g(s,f_{1}(s)-g(s,f_{2}(s)))]ds  \right\rvert  \\
 \leq & k\int_{t_{0}}^{t}\lvert f_{1}(s)-f_{2}(s) \rvert ds \quad \text{(By the Lipschitz cond.)} \\
 \leq & k\sup_{s \in J}\int_{t_{0}}^{t}ds \\
 \leq & \beta k \rho_{\infty}(f_{1},f_{2})
-\end{align*}
+\end{align}
 $$
 So,
 $$
@@ -594,10 +594,10 @@ $$
 $$
 So,$\forall x \in B(x_{0},\delta)$ and $\forall j\geq N$,
 $$
-\begin{align*}
+\begin{align}
 \lvert f_{j}(x_{0}) -f_{j}(x) \rvert \leq & \lvert f_{j}(x_{0}) - f_{N}(x_{0}) \rvert + \lvert f_{N}(x_{0})-f_{N}(x) \rvert +\lvert f_{N}(x)-f_{j}(x) \rvert  \\
 <& \frac{3\epsilon }{4}
-\end{align*}
+\end{align}
 $$
 So, $\{ f_{n} \}_{n=N}^{\infty}$ is equicontinuous at $x_{0}$, Since $\{ f_{1},\dots,f_{N-1} \}$ is equicontinuous at $x_{0}$, So $\{ f_{n} \}_{n=1}^{\infty}$ is equicontinuous.
 
@@ -682,30 +682,30 @@ $$
 
 Fix $\xi \in [0,1]$
 $$
-\begin{align*}
+\begin{align}
 B_{n}(x,f-f(\xi)) = \sum_{k=0}^{n} (f- f(\xi))\left( \frac{k}{n} \right) \binom{n}{k} x^{k}(1-x)^{n-k} \\
 = B_{n}(x,f) - f(\xi)B_{n}(x,1)=B_{n}(x,f)-f(\xi)
-\end{align*}
+\end{align}
 $$
 Aim to show, $\sup_{\xi \in [0,1]} \lvert B_{n}(\xi,f)- f(\xi) \rvert \to 0$
 
 $$
-\begin{align*}
+\begin{align}
 \lvert B_{n}(x,f) - f(\xi) \rvert = |B_{n}(x,f-f(\xi)) \\
 \leq B_{n}\left( x, \frac{2M}{\delta^{2}}  (x-\xi)^{2} + \frac{\epsilon}{2} \right) \\
 =B_{n}\left( x,\frac{2M}{\delta^{2}}[x^{2} - 2x \xi + \xi^{2}] + \frac{\epsilon}{2} \right) \\
 = \frac{2M}{\delta} (x-\xi)^{2} + \frac{2M}{\delta^{2}n}\left( x-x^{2} \right)+ \frac{\epsilon}{2} \hspace{4em} \text{(*)}
-\end{align*}
+\end{align}
 $$
 
 
 Putting $x = \xi$ in $(*)$ we have,
 $$
-\begin{align*}
+\begin{align}
 |B_{n}(\xi,\delta )  - f(\xi)| \leq & \frac{2M}{\delta^{2}n}(\xi - \xi^{2}) + \frac{\epsilon}{2} \\
 \leq \frac{2M}{\delta^{2}n} \frac{1}{4} + \frac{\epsilon}{2} \\
 =& \frac{M}{2\delta^{2}n} + \frac{\epsilon}{2} \\
-\end{align*}
+\end{align}
 $$
 
 $$
@@ -724,7 +724,21 @@ Example: $C(X)$ X is compact is uniformly closed algebra
 
 **Def:** A set $\mathscr{B}$ is said to be uniform closure of an algebra $\mathscr{A}$ of  real valued functions of X if $\mathscr{B}$ is the set of all uniform limits of $\mathscr{A}$
 
-![[SVG/tikzdiagram24.svg|diagram]]
+```tikz
+\begin{document}
+\begin{tikzpicture}
+% Draw a open set script B
+\draw (0,0) circle (2cm);
+% Draw the label to the open set script B
+\node at (2,2) {\textbf{B}};
+% Draw a closed set script A
+\draw (0,0) circle (1cm);
+% Draw the label to the closed set script A
+\node at (0,0) {\textbf{A}};
+
+\end{tikzpicture}
+\end{document}
+```
 
 
 **Theorem:** A uniform closure $\mathscr{B}$ of an algebra $\mathscr{A}$ of bounded functions on a metric space X is a uniformly closed algebra
@@ -741,10 +755,10 @@ Since $f_{n} , g_{n}$ are bounded so are $f,g$ we need to prove $f +g \in \maths
 
 1) Given $\epsilon >0 \exists n_{1},n_{2} \in \mathbb{N}$ such that
 $$
-\begin{align*}
+\begin{align}
 \lvert f_{n}(x) - f(x) \rvert  <\frac{\epsilon}{2} \\
 \lvert g_{n}(x) - g(x) \rvert  <\frac{\epsilon}{2}
-\end{align*}
+\end{align}
 $$
 
 $\forall  n\geq \max \{n_{1},n_{2}\}$
@@ -758,27 +772,27 @@ $$
 \lvert  f_{n}(x) - f(x) \rvert <1 \quad \forall n\geq n_{0},\forall x \in X
 $$
 $$
-\begin{align*}
+\begin{align}
 \implies \lvert f_{n}(x) \rvert < & 1 + f(x) \quad \forall n\geq n_{0},\forall x \in X \\
 \leq & 1 + M
-\end{align*}
+\end{align}
 $$
 
 Now, Given $\epsilon>0$ , $\exists n_{1},n_{2} \in \mathbb{N}$ such that
 $$
-\begin{align*}
+\begin{align}
 \lvert f_{n}(x) - f(x) \rvert  <\frac{\epsilon}{2M_{2}}  \\
 \lvert g_{n}(x) - g(x) \rvert  <\frac{\epsilon}{2(1+M_{1})}
-\end{align*}
+\end{align}
 $$
 
 $\forall n \geq \max \{ n_{0},n_{1},n_{2} \}$ and $\forall x \in X$
 $$
-\begin{align*}
+\begin{align}
 \lvert f_{n}(x)g_{n}(x) - f(x)g(x) \rvert &\leq \lvert f_{n}(x) - f(x) \rvert \lvert g_{n}(x) \rvert + \lvert g_{n}(x) - g(x) \rvert \lvert f(x) \rvert  \\
 &< \frac{\epsilon}{2M_{2}}(M_{2}) + \frac{\epsilon}{2(1+M_{1})}(1 + M_{1})  \\
 &= \frac{\epsilon}{2} + \frac{\epsilon}{2} = \epsilon 
-\end{align*}
+\end{align}
 $$
 Therefore $\{ f_{n}g_{n} \} \to fg$ uniformly on X
 iii) $cf \in \mathscr{B}$ (Clear!)
@@ -788,23 +802,23 @@ i.e. To prove if $\{ h_{n} \} \subseteq \mathscr{B} \to h$ uniformly on X then $
 
 Given $\epsilon>0$, $\exists n_{1} \in \mathbb{N}$ such that
 $$
-\begin{align*}
+\begin{align}
 \lvert h_{n}(x) - h(x) \rvert < \frac{\epsilon}{2} \quad \forall n \geq n_{1}, \forall x \in X
-\end{align*}
+\end{align}
 $$
 
 Now, since $h_{n} \in \mathscr{B}$ and $\mathscr{B}$ in the unifrom closure of $\mathscr{A}, \exists \{ h_{n,i} \}_{i=1}^{\infty} \subseteq \mathscr{A}$ such that $\{ h_{n,i} \} \to h_{n}$ uniformly i.e. $e\xi st i_{n} \in \mathbb{N}$ such that
 $$
-\begin{align*}
+\begin{align}
 \lvert h_{n,i}(x) - h_{n}(x) \rvert < \frac{\epsilon}{2} \quad \forall i \geq i_{n}, \forall x \in X
-\end{align*}
+\end{align}
 $$
 
 Now, for $n \geq n_{1}, \forall x \in X$
 $$
-\begin{align*}
+\begin{align}
 \lvert h_{n,i}(x) - h(x) \rvert &\leq \lvert h_{n,i}(x) - h_{n}(x) \rvert + \lvert h_{n}(x) - h(x) \rvert \\
-\end{align*}
+\end{align}
 $$
 So, $f \in \mathscr{B}$ and we are done
 
@@ -823,10 +837,10 @@ $$
 Therefore $|f| \in \mathscr{B}$
 Similarly, we can show $\max \{ f,g \}, \min \{ f,g \} \in \mathscr{B}$ by
 $$
-\begin{align*}
+\begin{align}
 \max \{ f,g \} = \frac{1}{2} \left( f + g + |f-g| \right) \\
 \min \{ f,g \} = \frac{1}{2} \left( f + g - |f-g| \right)
-\end{align*}
+\end{align}
 $$
 $\quad \blacksquare$
 
@@ -849,10 +863,10 @@ h_{1}(s)\neq 0 \quad \& \quad h_{2}(t) \neq 0
 $$
 Also, since $\mathscr{A}$ separates points, $\exists h \in \mathscr{A}$ such that $h(s) \neq h(t)$. Now define
 $$
-\begin{align*}
+\begin{align}
 g_{1}(x) = \frac{h(x)-h(t)}{h(s)-h(t)} \frac{h_{1}(x)}{h_{1}(s)}\\
 g_{2}(x) = \frac{h(s)-h(x)}{h(s)-h(t)} \frac{h_{2}(x)}{h_{2}(t)}
-\end{align*}
+\end{align}
 $$
 So, 
 $$
@@ -919,11 +933,11 @@ Then, $\mathscr{A}$ is uniformly dense in $C[a,b]$
 **Proof:**
 Using the formulas,
 $$
-\begin{align*}
+\begin{align}
 \sin nx \sin mx &  = \frac{1}{2}[\cos(n-m)x - \cos(n+m)x] \\
 \sin nx \cos mx  & = \frac{1}{2}[\sin(n+m)x - \sin(n-m)x] \\
 \cos nx \cos mx &  = \frac{1}{2}[\cos (n+m)x + \cos (n-m)x]
-\end{align*}
+\end{align}
 $$
 We can check that $\mathscr{A}$ is an algebra in $C[0,\pi]$. If $x_{1}\neq x_{2} \in [0,\pi]$, then $\cos x_{1} \neq \cos x_{2}$. So $\mathscr{A}$ separates points. Since constants belong to $\mathscr{A}$ it does not vanish at any point on $[0,\pi]$. Hence we are done by Stone-Weierstrass theorem. $\quad \blacksquare$
 
@@ -932,13 +946,13 @@ We can check that $\mathscr{A}$ is an algebra in $C[0,\pi]$. If $x_{1}\neq x_{2}
 **Proof:**
 $\forall n \in \mathbb{N}$ we choose, $f_{n} = f(x) + \frac{2}{3^{n}}$. Since $f \in C(X), f_{n} \in C(X)$. By Stone-Weierstrass, $\exists \{ g_{k} \}$ which converge uniformly to $f_{n}$. Hence $\exists g_{n} \in \mathscr{A}$ such that
 $$
-\begin{align*}
+\begin{align}
  & \lvert g_{n}(x) - f_{n}(x) \rvert < \frac{1}{3^{n}} \quad \forall x \in X \\
  \implies &    -\frac{1}{3^{n}}   < g_{n}(x) - f_{n}(x) < \frac{1}{3^{n}} \\
 \implies &  f_{n}(x) - \frac{1}{3^{n}} < g_{n}(x) < f_{n}(x)+ \frac{1}{3^{n}} \\
  & f(x) + \frac{1}{3^{n}} < g_{n}(x)<f(x) + \frac{1}{3^{n-1}} \quad (*) \\
 \dots &  < g_{n+1}(x) < f(x) + \frac{1}{3^{n}} < g_{n}(x) < f(x) + \frac{1}{3^{n-1}} < g_{n-1}(x)<\dots
-\end{align*}
+\end{align}
 $$
 So, $\{ g_{n} \}$ is a decreasing sequence of functions. From $(*)$ we get that
 $$
@@ -998,20 +1012,20 @@ $$
 $$
 We can check,
 $$
-\begin{align*}
+\begin{align}
 
 -\epsilon p_{n}(f_{0}) - \frac{2M}{\delta^{2}}p_{n}(f_{y}) <& p_{n}(f)(x) - f(y) p_{n}(f_{0})(y)  \\
 \leq& \frac{2M}{\delta^{2}}p_{n}(f_{y})(y)+\epsilon p_{n}(f_{0})(y) 
-\end{align*}
+\end{align}
 \tag{***}
 $$
 Now,
 $$
-\begin{align*}
+\begin{align}
 p_{k}(f_{y})(y) &= p_{k}(x^{2}-2xy+y^{2})(y) \\
 &= p_{k}(f^{2})(y) - 2yp_{k}(f_{1}(y)) + p_{k}(f_{2})(y)  \\
 &\to y^{2} - 2y^{2} + y^{2} = 0
-\end{align*}
+\end{align}
 $$
 
 Since $\{ p_{k}(f_{0})(y) \} \to 1$ uniformly $\forall y \in [a,b]$, by $(* * *)$ 
@@ -1103,12 +1117,12 @@ $$
 1. $F=E \bigcup (F \setminus E) \implies \mu(F) = \mu(E) + \mu(F\setminus E) \geq \mu(E)$
 2. 
 $$
-\begin{gather*}
+\begin{gather}
 F_{1} := E_{1} \\
 F_{2}:=E_{2}\setminus E_{1} \\
 \vdots \\
 F_{k} := E_{k} \setminus \left( \bigcup_{i=1}^{k-1} E_{i} \right)
-\end{gather*}
+\end{gather}
 $$
 $$
 \bigcup F_{k} = \bigcup E_{k}
@@ -1119,13 +1133,13 @@ $$
 $$
 3.  Let $E_{0}=\varnothing$, we have
 $$
-\begin{align*}
+\begin{align}
 \mu\left( \bigcup E_{i} \right) = &  \mu\left( \bigcup(E_{i}\setminus E_{i-1}) \right) \\
  = &  \sum_{}^{ } \mu(E_{i}\setminus E_{I-1}) \\
 =  & \lim_{ n \to \infty } \sum_{i=1}^{n} \mu(E_{i}\setminus E_{i-1}) \\
 =  & \lim_{ n \to \infty } \mu\left( \bigcup_{i=1}^{n}(E_{i}\setminus E_{i-1}) \right) \\
 =  &  \lim_{ n \to \infty } \mu(E_{n})
-\end{align*}
+\end{align}
 $$
 
 4. Define $F_{i} = E_{i}\setminus E_{i} \forall i$ 
@@ -1141,10 +1155,10 @@ $$
 $$
 Also,  $\bigcup F_{i} = E_{1} \setminus \bigcap E_{i}$, $\implies \mu\left( \bigcup F_{i} \right) + \mu\left( \bigcap E_{i} \right) = \mu(E_{1})$. So from $(*)$,
 $$
-\begin{gather*}
+\begin{gather}
 \mu(E_{1}) - \mu\left( \bigcap E_{i} \right) = \mu(E_{1}) - \lim_{ n \to \infty } \mu(E_{n}) \\
 \implies \mu\left( \bigcap E_{i} \right) = \lim_{ n \to \infty } \mu(E_{n}) \quad \text{(Since $\mu(E_{1}) < \infty $)}
-\end{gather*}
+\end{gather}
 $$
 Instead of $\mu(E_{1})<\infty$ if we assume $\mu(E_{n})<\infty$ for some $n \in \mathbb{N}$. Then also $(iv)$ is true.
 
@@ -1172,11 +1186,11 @@ $$
 E \cup F = E \cup (F\setminus E) \quad \text{Now $E \cap (N\setminus E)=\varnothing$}
 $$
 $$
-\begin{align*}
+\begin{align}
 E\cup F = & (E \cup N) \setminus (N \setminus F) \\
 = & (E \cup N) \cap [(N \cap F^{c})]^{c} = (E \cup N) \cap (F \cup N^{c}) \\
 (E \cup F)^{c} = & (E \cup N)^{c} \cup (N \cap F^{c})
-\end{align*}
+\end{align}
 $$
 So, $\overline{M}$ is a $\sigma$-algebra. Define $\bar{\mu}(E \cup F) = \mu(E), \forall E\cup F \in \overline{M}$
 **Well definedness of $\bar{\mu}$**:
@@ -1205,10 +1219,10 @@ $$
 \sum_{ki=1}^{\infty} p(E_{i,k}) \leq \mu^{*}(A_{i}) + \frac{\varepsilon}{2^{i}}
 $$
 $$
-\begin{gather*}
+\begin{gather}
 \implies \sum_{i=1}^{\infty}\sum_{k=1}^{\infty}p(E_{i,k}) \leq \sum_{i=1}^{\infty}\mu^{*}(A_{i}) + \varepsilon\left( \frac{1}{2} + \frac{1}{2^{2}} +\dots  \right) \\
 \implies \mu^{*}\left( \bigcup_{i=1}^{\infty } A_{i} \right) \leq \sum_{i=1}^{\infty}\sum_{k=1}^{\infty}p(E_{i,k}) \leq \sum_{i=1}^{\infty } \mu^{*}(A_{i}) + \varepsilon 
-\end{gather*}
+\end{gather}
 $$
 
 Since $\varepsilon$ is arbitrary, we have,
@@ -1226,11 +1240,11 @@ $$
 **Proof.** If $A$ is $\mu^*$–measurable then so is $A^c$. For $A,B \in \mathcal{M}$ and $\forall\, E \subseteq X$ we have,
 
 $$
-\begin{align*}
+\begin{align}
 \mu^*(E)  & = \mu^*(E \cap A) + \mu^*(E \cap A^c)  \\
  & = \mu^*(E \cap A \cap B) + \mu^*(E \cap A \cap B^c) + \mu^*(E \cap A^c \cap B) + \mu^*(E \cap A^c \cap B^c) \\
  & \geq \mu^*(E \cap (A \cup B)) + \mu^*(E \cap (A \cup B)^c)
-\end{align*}
+\end{align}
 $$
 
 Also we clearly have
@@ -1253,13 +1267,13 @@ $$
 By the first part, $B_n$ is $\mu^*$–measurable, i.e., $\forall\, E \subseteq X$,
 
 $$
-\begin{align*}
+\begin{align}
 \mu^*(E)  & = \mu^*(E \cap B_n) + \mu^*(E \cap B_n^c) \\
  & = \mu^*(E \cap B_n \cap E_n) + \mu^*(E \cap B_n \cap E_n^c) + \mu^*(E \cap B_n^c) \\
  & = \mu^*(E \cap E_n) + \mu^*(E \cap B_{n-1}) + \mu^*(E \cap B_n^c) \\
  & = \sum_{i=1}^n \mu^*(E \cap E_i) + \mu^*(E \cap B_n^c)  \\
  & \geq  \mu^*(E \cap B_{n}) + \mu^*(E \cap B_n^c)
-\end{align*}
+\end{align}
 $$
 
 Taking $n \to \infty$, we get
@@ -1452,11 +1466,11 @@ $$
 Taking $N\to\infty,$ $$\mu_0(a,b]=\mu_0(\bigsqcup_{i=1}^\infty(a_i,b_i])\geq\sum_{i=1}^\infty\mu_0(a_i,b_i].$$
 Choose $\epsilon>0$ and take $\delta,\delta_i$ s.t $\delta<\epsilon,\ \delta_i< \frac{\epsilon}{2^{i}}$ Then $[a+\delta,b]\subseteq\bigcup_{i=1}^\infty (a_i,b_i+\delta_i).$ Since $[a+\delta,b]$ is compact, $[a+\delta,b]=\bigcup_{i=1}^N(a_i,b_i+\delta_i).$ Now, 
 $$
-\begin{align*}
+\begin{align}
 \mu_0(a,b] & =(b-a)\leq b-(a+\delta)+\epsilon\leq b_N+\delta_N-a_1+\epsilon \\
  & =b_N+\delta_N-a_N+\sum_{i=1}^{N-1}[a_{i+1}-a_i]+\epsilon\leq b_N+\delta_N-a_N+\sum_{i=1}^{N-1}[b_i+\delta_i-a_i] \\
  & <\sum_{i=1}^N(b_i-a_i)+\sum_{i=1}^\infty\delta_N+\epsilon<\sum_{i=1}^\infty (b_i-a_i)+\underbrace{\sum_{i=1}^\infty \frac{\epsilon}{2^{i}}+\epsilon}_{=2\epsilon}
-\end{align*}
+\end{align}
 $$
 
  As $\epsilon$ was arbitrary, $(b-a)\leq \sum_{i=1}^\infty (b-i-a_i).$ Therefore, $\mu_0(a,b]=\sum_{i=1}^\infty \mu_0(a_i,b_i].$ For intervals of type $(-\infty,b],\ \forall\ M<\infty$ we look at $(-M,b)$ intervals. Let $(-\infty,b]=\sum_{i=1}^N(a_i,b_i]\implies (-M,b)\subseteq \bigsqcup_{i=1}^\infty a_i,b_i].$ Taking $M\to\infty,$ 
@@ -1522,10 +1536,10 @@ $$
 K = \overline{E}\setminus U \implies E = K \sqcup (E \cap U) \implies m(K) = m(E) - [m(U) - m(U\setminus E)] 
 $$
 $$
-\begin{gather*}
+\begin{gather}
 \overline{E} = (\overline{E} \setminus U) \sqcup U \\
 m(\bar{E})=m(\bar{E}\setminus U)+m(U)\leq m(\bar{E}\setminus E)+\epsilon+m(K)=m(\bar{E})-m(E)+\epsilon+m(K)
-\end{gather*}
+\end{gather}
 $$
 $$
 \implies m(E)\leq m(K)+\epsilon\implies m(E)=\sup\{\mu(K)|K\subseteq E, K\text{ compact}\}
@@ -1533,10 +1547,10 @@ $$
 If $E$ is not bounded, 
 
 $$
-\begin{gather*}
+\begin{gather}
 E=\bigsqcup_{i=0}^\infty (E\ \cap\ (i,i+1]) \\
 \text{Let }E_i=E\ \cap\ (i,i+1]
-\end{gather*}
+\end{gather}
 $$
 Therefore for $\epsilon>0,\exists\ K_i$ such that  
 $$
@@ -1545,10 +1559,10 @@ $$
 Take $H_n=\bigcup_{i=-N}^N K_i,$ then: 
 
 $$
-\begin{gather*}
+\begin{gather}
 m\left(\bigcup_{i=-N}^N E_i\right)\leq m\left(\bigcup_{i=-N}^N H_i\right)+\epsilon\implies m\left(\bigcup_{i=-\infty}^\infty E_i\right)=\lim_{N\to\infty} m\left(\bigcup_{i=-N}^N E_i\right) \\
 = \lim_{N\to\infty}\sup\left\{m(K)| K\subseteq \bigcup_{i=-N}^N E_i\right\} \quad \blacksquare
-\end{gather*}
+\end{gather}
 $$ 
 
 **Proposition:** If $E \subseteq \mathbb{R}$ TFAE
@@ -1567,12 +1581,12 @@ m(N_1)=m(N_2)=0
 $$
 If $m(E)=\infty$ write $E=\bigcup_{k\in \mathbb{Z}}\underbrace{E\ \cap\ (k,k+1)}_{E_k}.$ Now $m(E_k)<\infty,\ \exists$ some $V_\delta$ set $V_k$ and $F_\delta$ set $W_k$ such that $m(N_1^k)=m(N_2^k)=0$ and  $E_k=V_k\setminus N_1^k$ and $E_k=W_k\ \cup\ N_2^k.$ Take 
 $$
-\begin{gather*}
+\begin{gather}
 V=\bigcup_{k\in \mathbb{Z}} V_k \\
 W=\bigcup_{k\in \mathbb{Z}}W_k  \\
 N_1=\bigcup_{k\in \mathbb{Z}} N_1^k \\
 N_2=\bigcup_{k\in \mathbb{Z}}N_2^k
-\end{gather*}
+\end{gather}
 $$ 
 Then we are done as $(2 \implies 1)$ and $(3 \implies 1)$ are obvious.
 
@@ -1594,10 +1608,10 @@ If $E \in \mathscr{B}_{\mathbb{R}}$ and since $E$ is generated by open intervals
 Let $N \in \mathscr{B}_{\mathbb{R}}$ and $m(N)=0$ by premeasure $N +r \in \mathscr{B}_{\mathbb{R}}, rN \in \mathscr{B}_{\mathbb{R}}$. $m(N + s)=0,m(rN)=\lvert r \rvert m(N)=0$
 If $F \subseteq N$ then $m(F)=0$, Also, $F+r \subseteq N+s$, $rF \subseteq rN$.
 $$
-\begin{gather*} \\
+\begin{gather} \\
 m(F+r) \leq m(N+s) = 0 \\
 m(rF) \leq m(rF) \leq m(rN) = 0
-\end{gather*}
+\end{gather}
 $$
 for general $E \in \mathcal{L}$, $E = G \cup F$ where $G \in \mathscr{B}_{\mathbb{R}}, F$ is a null set. $E + r = (G +r) \bigsqcup (F+s)$. So $E + r \in \mathcal{L}$ and $m(E + r) = m(E)$. Similarly for $rE \in \mathcal{L}$ and $m(rE) = \lvert r \rvert m(E)$
 
@@ -1701,11 +1715,11 @@ Observe that if $f,g\in L^+$ and $f\leq g$ then $\int f d\mu\leq\int g d\mu$. Al
 **Proposition:** Let $f \in L^{+}$ then, $\exists \{ \phi_{n} \} \subseteq L^{+}$ such that $\phi_{n} \uparrow f$ pointwise.
 **Proof:** For $n=1,2,\dots$ and $\forall 0\leq k\leq 2^{2n}-1$
 $$
-\begin{gather*}
+\begin{gather}
 E_{n}^{k} = f^{-1}((2^{-n},2^{-n}(k+1)]) \\
 F_{n} = f^{-1}((2^{n},\infty ]) \\
 \phi_{n} = \sum_{k=1}^{2^{2n}-1} 2^{-n}k \chi_{E_{n}^{k}} + 2^{n}\chi_{F_{n}}
-\end{gather*}
+\end{gather}
 $$
 Then clearly $\phi_{n}\leq \phi_{n+1} \forall n \in \mathbb{N}$ and $f(x) = \lim_{ n \to \infty } \phi_{n}(x) \forall x \in X$
 
@@ -1732,11 +1746,11 @@ $$
 \implies \lim_{n\to\infty}\int f_n d\mu\geq\alpha\int \phi d\mu \text{ for all } \alpha<1
 $$
 $$
-\begin{gather*}
+\begin{gather}
 
 \implies \lim_{n\to\infty}\int f_n d\mu\geq \int \phi d\mu \text{ for all } 0\leq \phi\leq f \\
 \implies \lim_{n\to\infty}\int f_n d\mu\geq \sup\left\{\int\phi d\mu|0\leq \phi\leq f\right\}=\int f d\mu.
-\end{gather*}
+\end{gather}
 $$
 
 **Proposition:** Let $\{f_i\}_{i\in\mathbb{N}}\subseteq \mathcal{L^+}$. Then $\int \left(\sum_{i=1}^\infty f_n\right)d\mu=\sum_{i=1}^\infty \int f_n d\mu$.
@@ -1751,11 +1765,11 @@ $$
 $$
 So $\left\{  \sum_{n=1}^{N}f_{n}  \right\} \uparrow \sum_{n=1}^{\infty} f_{n}$ Then,
 $$
-\begin{align*}
+\begin{align}
 \int \sum_{n=1}^{\infty} f_{n}d\mu = & \lim_{ N \to \infty } \int \sum_{n=1}^{N} f_{n} d\mu \\
  =& \lim_{ N \to \infty } \sum_{n=1}^{N} \int f_{n} d\mu \\
 = & \sum_{n=1}^{\infty } \int f_{n} d\mu  \quad \blacksquare
-\end{align*}
+\end{align}
 $$
 
 **Lemma:(Fatou)** $\{ f_{n} \} \subseteq L^{+}$ Then,
@@ -1768,12 +1782,12 @@ $$
 $$
  Now,
 $$
-\begin{gather*}
+\begin{gather}
 \inf_{n\geq k} f_{n} \leq f_{j} \quad \forall j \geq k \\
 \implies \int \inf_{n\geq k} f_{n} d\mu \leq \int f_{j} d\mu \quad \forall j \geq k  \\
 \implies \int \inf_{n\geq k } f_{n} d\mu \leq \inf_{j\geq k} \int f_{j} d\mu \\
 \implies \int \lim \inf f_{n} d\mu \leq \sup_{k} \inf_{j\geq k} \int f_{j} d\mu = \lim \inf \int f_{n} d\mu  \quad \blacksquare
-\end{gather*}
+\end{gather}
 $$
 **Def:** Let $f:X\to \mathbb{\overline{R}}$ measurable and $f = f^{+} - f^{-}$, if one of $\int f^{+},\int f^{-}$ is finite,
 $$
@@ -1857,11 +1871,11 @@ $$
 **Proof:** 
 1. Let $E_{n} = \left\{  x \in E\mid f(x) > \frac{1}{n} \right\}$, let $F = \{  x \in E \mid f(x)>0 \}$, then we have $F = \bigcup_{n=1}^{\infty} E_{n}$
 $$
-\begin{gather*}
+\begin{gather}
 \implies \int_{E_{n}} f d\mu \leq \int_{E} f d\mu = 0 \\
 \frac{1}{n} \mu(E_{n}) \leq \int_{E_{n}} f d\mu = 0 \\
 \implies \mu(E_{n}) = 0 \implies \mu(F) = 0 \implies f = 0 \text{ a.e on } E
-\end{gather*}
+\end{gather}
 $$
 2. $f = u+iv$ Then we have that $\int u d\mu = 0 , \int v d\mu = 0$, hence from above we have $f = 0$ a.e on X. 
 
@@ -1929,12 +1943,12 @@ Let $f \in L^p(\mu)$, $\int |f|^p d\mu<\infty \implies \sum_{i=1}^\infty |f(x_i)
 Then we have a corresponding sequence in $l^{p}$
 $l^p(\mu) = \{ (\lambda_1, \lambda_2, \ldots) \mid \lambda_i \in \mathbb{C} \text{ s.t. } \sum |\lambda_i|^p < \infty \}$.
 $$
-\begin{align*}
+\begin{align}
 f(x_1)  & =  \lambda_1 \\
 f(x_2)  & =  \lambda_2 \\
  & \vdots   \\
 f(x_n)  & =   \lambda_n
-\end{align*}
+\end{align}
 $$
 $\forall \ 1 \le p \le q \le \infty$, $L^p(\mu) \subseteq L^q(\mu)$ if $\mu(X) < \infty$. (check it)
 **Theorem:** If $\mu(X)<\infty$, then $1\le p \le q \implies L^q(\mu)\subseteq L^p(\mu)$.
@@ -1969,13 +1983,13 @@ $$
 
 **Examples:**  $f(\theta) = \theta, \forall -\pi\leq \theta\leq \pi$ ,$\forall n \in \mathbb{Z}, n \neq 0$
 $$
-\begin{gather*}
+\begin{gather}
 \hat{f}(n) = \frac{1}{2\pi}\int f(\theta)e^{-in \theta } d\theta  \\
 =\begin{cases}
 \frac{(-1)^{n+1}}{in}  & n\neq 0 \\
 0  & \text{o.w}
 \end{cases}
-\end{gather*}
+\end{gather}
 $$
 $$
 f \sim \sum_{n\neq 0}^{} \frac{(-1)^{n+1}}{in}e^{in \theta} = 2 \sum_{i=1}^{\infty} \frac{\sin n\theta}{n}
@@ -1987,12 +2001,12 @@ D_{N}(\theta) = \sum_{n=-N}^{N}e^{in \theta }
 $$
 nth Fourier coefficient of $D_{N}(\theta)$ is
 $$
-\begin{gather*}
+\begin{gather}
 \frac{1}{2\pi}\int_{-\pi}^{\pi} \left( \sum_{n=_{N}}^{N}e^{in \theta } \right) e^{ik \theta } d\theta  \\
 \sum_{n=-N}^{N} \frac{1}{2\pi} \int_{-\pi}^{\pi } e^{i(n-k)\theta } \\
 \frac{1}{2\pi} \int_{-\pi}^{\pi} e^{im \theta} d\theta = 0 \quad \text{if }m\neq 0 \\
 = \frac{1}{2\pi} \left[ \frac{e^{im \theta }}{im} \right]_{-\pi}^{\pi } = 0
-\end{gather*}
+\end{gather}
 $$
 So, kth Fourier coefficient of $D_{N}$
 $$
@@ -2063,13 +2077,13 @@ $$
 **Proof:** 1. and 2. are easy to see
 3. Let $f,g,h$ be continuous
 $$
-\begin{gather*}
+\begin{gather}
 (f+g)*h(x) = \frac{1}{2\pi } \int_{-\pi}^{\pi} (f*g)(y)h(x-y)dy \\
 = \frac{1}{(2\pi)^2} \int_{-\pi}^\pi \int_{-\pi}^\pi f(\xi) g(y-\xi) h(x-y) d\xi dy \\= \frac{1}{(2\pi)^2} \int_{-\pi}^\pi \int_{-\pi}^\pi f(\xi) g(y-\xi) h(x-y) d\xi dy  \\
 = \frac{1}{(2\pi)^2} \int_{-\pi}^\pi f(\xi) \left( \int_{-\pi}^\pi g(y-\xi) h(x-y) dy \right) d\xi \text{ (by Change of Variable)}  \\
 = \frac{1}{2\pi} \int_{-\pi}^\pi f(\xi) (g * h)(x-\xi) d\xi  \\
 = (f * (g * h))(x)
-\end{gather*}
+\end{gather}
 $$
 4. 
 $$
@@ -2122,3 +2136,158 @@ $\implies f*g$ is continuous.
 We know that $f*g$ is $2\pi$ periodic and integrable. There exist sequences of continuous functions, $\{f_k\}$ and $\{g_k\}$, such that $\{f_k\} \to f$ in $L^1$ and $\{g_k\} \to g$ in $L^1$. i.e., $\int_{-\pi}^{\pi} |f_k(x)-f(x)|dx \to 0$ and $\int_{-\pi}^{\pi} |g_k(x)-g(x)|dx \to 0$ as $k\to\infty$.
 
 We will show that $\{f_k * g_k\} \to f*g$ uniformly. $f*g - f_k*g_k = (f-f_k)*g + f_k*(g-g_k)$. We will show that the first term goes to zero uniformly. $$ |(f-f_k)*g(x)| \leq \frac{1}{2\pi} \int_{-\pi}^\pi |(f-f_k)(y)| |g(x-y)| dy $$ $$ \leq \frac{1}{2\pi} \sup_{y\in[-\pi,\pi]} |g(y)| \int_{-\pi}^\pi |f(y)-f_k(y)| dy \to 0 \quad \text{as} \ k\to\infty. $$
+#incomplete 
+
+## Abel Summability
+
+$\sum_{k=0}^{\infty} c_k$ is called **Abel summable** to some value $S$ if for each $0 \le r < 1$,
+$$
+A(r) = \sum_{k=0}^{\infty} c_k r^k
+$$
+converges and
+$$
+S = \lim_{r \to 1^-} A(r).
+$$
+**Example:** $1 - 2 + 3 - 4 + 5 - \cdots = \sum_{k=0}^{\infty} (-1)^k (k+1)$.
+
+$$
+A(r) = \sum_{k=0}^{\infty} (-1)^k (k+1) r^k = \frac{1}{(1+r)^2}.
+$$
+$$
+\lim_{r \to 1^-} A(r) = \frac{1}{(1+1)^2} = \frac{1}{4}.
+$$
+But the above series is **not** Cesàro summable.
+
+If $\sum_{k=0}^{\infty} c_k$ is **Cesàro summable** then $c_n \to 0$ as $n \to \infty$.
+
+---
+
+$$
+\frac{S_0 + \cdots + S_{n-1}}{n} \to a \quad (\text{Cesàro})
+$$
+$$
+\frac{S_0 + \cdots + S_n}{n} \to a
+$$
+$$
+\implies \frac{S_0 + \cdots + S_n}{n} - \frac{S_0 + \cdots + S_{n-1}}{n} = \frac{S_n}{n} - \frac{S_0 + \cdots + S_{n-1}}{n(n)} \to 0
+$$
+$$
+\implies \frac{c_n}{n} \to 0 \quad \text{as } n \to \infty \text{ is not enough.}
+$$
+**Theorem:** Cesàro Summability $\implies$ Abel Summability
+
+---
+
+**Recall:** $0 \le r < 1$.
+$$
+P_r(\theta) = \sum_{n=-\infty}^{\infty} r^{|n|} e^{in\theta} = \frac{1-r^2}{1-2r\cos\theta+r^2}.
+$$
+$$
+f \sim \sum_{n=-\infty}^{\infty} \hat{f}(n) e^{in\theta}
+$$
+$$
+A_r(f)(\theta) = \sum_{n=-\infty}^{\infty} r^{|n|} \hat{f}(n) e^{in\theta} = \sum_{n=-\infty}^{\infty} r^{|n|} \left(\frac{1}{2\pi} \int_{-\pi}^{\pi} f(t)e^{-int} dt\right) e^{in\theta}
+$$
+
+---
+
+$$
+\frac{1}{2\pi} \sum_{n=-\infty}^{\infty} r^{|n|} \left| \int_{-\pi}^{\pi} f(t)e^{-int} dt \right| e^{in\theta}
+$$
+$$
+\le \frac{1}{2\pi} \sum_{n=-\infty}^{\infty} r^{|n|} \int_{-\pi}^{\pi} |f(t)| dt \le B \sum_{n=-\infty}^{\infty} r^{|n|} < \infty.
+$$
+$\implies (*)$ converges absolutely $\text{and}$ uniformly.
+So, we can interchange $\sum \text{ and } \int$.
+Therefore, $(*)$ implies:
+$$
+A_r(f)(\theta) = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(t) \left( \sum_{n=-\infty}^{\infty} r^{|n|} e^{in(\theta-t)} \right) dt
+$$
+$$
+= f * P_r(\theta) \quad \left(f * P_r(\theta) \to f(\theta)\right)
+$$
+
+
+**Prop:** $\{P_r(\theta)\}_{0<r<1}$ is a family of **good kernels** as $r \to 1^-$.
+
+**Proof:**
+$$
+P_r(\theta) = \frac{1-r^2}{1-2r\cos\theta+r^2}
+$$
+$1-2r\cos\theta+r^2 = (1-r)^2 + 2r(1-\cos\theta)$. So $P_r(\theta) \ge 0$
+$\forall \ 0 \le r < 1$
+$$
+\frac{1}{2\pi} \int_{-\pi}^\pi P_r(\theta) d\theta = \frac{1}{2\pi} \int_{-\pi}^\pi |P_r(\theta)| d\theta
+$$
+$$
+= \frac{1}{2\pi} \int_{-\pi}^\pi \sum_{n=-\infty}^\infty r^{|n|} e^{in\theta} d\theta.
+$$
+$$
+= \frac{1}{2\pi} \sum_{n=-\infty}^\infty r^{|n|} \int_{-\pi}^\pi e^{in\theta} d\theta = 1.
+$$
+Properties (i) and (ii) of good kernels have been verified.
+
+---
+
+Let $\delta > 0$. For $\frac{1}{2} \le r < 1$ and $\delta \le |\theta| \le \pi$, then
+$$
+(1-r)^2 + 2r(1-\cos\theta) > C_\delta > 0.
+$$
+$$
+\frac{1}{2\pi} \int_{\delta \le |\theta| \le \pi} |P_r(\theta)| d\theta = \frac{1}{2\pi} \int_{\delta \le |\theta| \le \pi} \frac{1-r^2}{1-2r\cos\theta+r^2} \le \frac{1-r^2}{C_\delta} \to 0 \quad as \ r \to 1^-
+$$
+So, $\{P_r(\theta)\}_{0<r<1}$ is a good kernel as $r \to 1^-$.
+
+---
+
+Therefore, if $f$ is continuous at $\theta$,
+$$
+f * P_r(\theta) \to f(\theta).
+$$
+$\implies A_r(f)(\theta) \to f(\theta)$.
+$\implies$ Fourier Series of $f$ is Abel summable to $f$ at the point of continuity.
+
+Moreover, if $f$ is continuous on the circle, then the Fourier Series of $f$ uniformly Abel summable to $f$.
+
+**Next goal:**
+$$
+\int_{-\pi}^{\pi} |S_N(f)(\theta) - f(\theta)|^2 d\theta \to 0 \quad as \ N \to \infty.
+$$
+Mean Square Convergence or convergence in $L^2$ norm.
+
+## Inner Product
+
+Let $V$ be a vector space over $\mathbb{C}$.
+A map $\langle \cdot, \cdot \rangle: V \times V \to \mathbb{C}$ is called an **inner product** if:
+
+i) **(Positive definite norm)**
+$$
+\langle x, x \rangle \ge 0 \quad \forall x \in V
+$$
+$$
+\langle x, x \rangle = 0 \quad \text{iff } x = 0
+$$
+
+ii) **(Conjugate symmetry)**
+$$
+\langle x, y \rangle = \overline{\langle y, x \rangle}
+$$
+
+iii) **(Linearity in the first variable)** $\forall x, y, z \in V, \lambda \in \mathbb{C}$
+$$
+\langle \lambda x + y, z \rangle = \lambda \langle x, z \rangle + \langle y, z \rangle
+$$
+
+---
+
+Define $||\cdot||$ on $V$ by $||x|| = \sqrt{\langle x,x \rangle}$.
+We will show that $||x||$ is a norm on $V$. If $V$ is complete with respect to the norm, then $V$ is said to be a **Hilbert space**.
+
+**Ex:** $\mathbb{C}^n$ with the below inner product
+$$
+\langle x, y \rangle = \sum_{i=1}^n x_i \overline{y_i}.
+$$
+$x = (x_1, \ldots, x_n)$, $y = (y_1, \ldots, y_n)$.
+$$
+||x|| = \sqrt{\sum_{i=1}^n |x_i|^2}.
+$$

@@ -32,8 +32,7 @@ if n = 1 reutrn 1
 else return fib1(n-1) + fib1(n-2)
 ```
 
-```
-fib2
+```fib2
 if n = 0 return 0
 create an array f[0,...,n]
 f(0) = 0 f(1) = 1
@@ -160,7 +159,23 @@ $$
 
 ### Plotting Empirical Analysis of Algorithms
 
-![[SVG/tikzdiagram21.svg|diagram]]
+```tikz
+\begin{document}
+\begin{tikzpicture}
+%draw a x-y plaine
+\draw[->] (0,0) -- (6,0) node[right] {n};
+\draw[->] (0,0) -- (0,6) node[above] {T(n)};
+% Draw a sqrt x plot with increased sampling
+\draw[domain=0:5, samples=100, smooth, variable=\x] plot ({\x}, {sqrt(\x)});
+% add random points around the graph
+\foreach \x in {0,1,2,3,4,5} {
+		\fill[black] (\x,{sqrt(\x) + rand}) circle (2pt);
+}
+
+
+\end{tikzpicture}
+\end{document}
+```
 
 ### Towers of Hanoi
 
@@ -168,13 +183,29 @@ $$
 
 
 $$
-\begin{align*}
+\begin{align}
 T(n) = 2T(n-1) + 1 \\
 T(n-1) = (2T(n-2) + 1) +1\\
 i: T(n) = 2^{i}T(n-i) + 2^i - 1 \\
-\end{align*}
+\end{align}
 $$
-![[SVG/tikzdiagram22.svg|diagram]]
+```tikz
+\begin{document} 
+\begin{tikzpicture} % Define the style for the pegs and disks 
+\tikzstyle{peg}=[line width=2pt] 
+\tikzstyle{disk}=[draw, fill=blue!50, line width=1pt] 
+% Draw the base 
+\draw[thick] (-5,0) -- (5,0); 
+% Draw the pegs 
+\foreach \x in {-3, 0, 3} { \draw[peg] (\x,0) -- (\x,4); } 
+% Draw the disks on the first peg 
+\foreach \y/\w in {0.5/2.5, 1/2, 1.5/1.5, 2/1} { \draw[disk] (-3-\w/2,\y-0.5) rectangle (-3+\w/2,\y+0.3-0.5); } % Optionally, label the pegs 
+\node at (-3,-0.5) {A}; 
+\node at (0,-0.5) {B}; 
+\node at (3,-0.5) {C}; 
+\end{tikzpicture} 
+\end{document}
+```
 ### Brute force, Decrease-and-Conquer & D & C Algorithms
 
 #### Brute Force: Selection Sort
@@ -240,7 +271,25 @@ for i = 0 to n-m
 ```
 
 #### Exhaustive Search: Traveling Salesman Problem
-![[SVG/tikzdiagram23.svg|diagram]]
+```tikz
+\begin{document}
+\begin{tikzpicture}
+% Define the style for vertices and edges 
+\tikzstyle{vertex}=[circle, draw, minimum size=20pt, inner sep=0pt] 
+\tikzstyle{edge}=[draw, thick] % Define the positions of the vertices 
+\node[vertex] (A) at (0, 1.5) {A}; 
+\node[vertex] (B) at (1.5, 0) {B}; 
+\node[vertex] (C) at (0, -1.5) {C}; 
+\node[vertex] (D) at (-1.5, 0) {D}; % Draw the edges with labels 
+\draw[edge] (A) -- (B) node[midway, above right] {5}; 
+\draw[edge] (A) -- (C) node[midway, right] {1}; 
+\draw[edge] (A) -- (D) node[midway, above left] {4}; 
+\draw[edge] (B) -- (C) node[midway, below right] {3}; 
+\draw[edge] (B) -- (D) node[midway, below] {2}; 
+\draw[edge] (C) -- (D) node[midway, below left] {1};
+\end{tikzpicture}
+\end{document}
+```
 
 #### Exhaustive Search: Knapsack Problem
 

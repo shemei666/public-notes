@@ -103,7 +103,7 @@ g(x) = (x - a)q(x) + g(a),
 $$
 where $q(x)$ is a polynomial of degree $n-1$. Then:
 $$
-\begin{gather*}
+\begin{gather}
 (g(x)h(x))' = \Big(((x-a)q(x)+g(a))h(x)  \Big)' \\
 = ((x-a)q(x)h(x))' + (g(a)h(x))' \\
 = ((x-a)q(x)h(x))' + g(a)h'(x) \\
@@ -111,7 +111,7 @@ $$
 = q(x)[h(x) + (x-a)h'(x)] + q'(x)(x-a)h(x) + g(a)h'(x) \\
 = q(x)h(x) + (x-a)q(x)h'(x) + q'(x)(x-a)h(x) + g(a)h'(x) \\ 
 = g'(x)h(x) + g(a)h'(x)
-\end{gather*}
+\end{gather}
 $$
 Now the above formula follows.
 

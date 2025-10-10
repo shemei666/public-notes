@@ -4,7 +4,7 @@ tags:
   - "#incomplete"
   - refactor
 created: 2025-07-28
-draft: false
+publish: true
 ---
 
 **Recap**:
@@ -27,7 +27,14 @@ Suppose $x_{0},x_{1} \in X$ and Suppose $\exists$ a path $\alpha:I \to X$ from $
 $\tilde{\alpha}: \pi_{1}(X,x_{0})\to \pi_{1}(X,x_{1})$
 
 ![[Drawing 2025-07-28 14.16.43.excalidraw.svg]]
-![[SVG/tikzdiagram1.svg|diagram]]
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+x_0 \ar[loop below, "f"] \ar[r, "\alpha"] & x_1
+\end{tikzcd}
+\end{document}
+```
 $[f] \to [\alpha^{-1} * f * \alpha ]$
 
 this is well defined because $f \cong g$ then $\alpha^{-1} * f * \alpha \cong  \alpha^{-1} * g * \alpha$ 
@@ -106,7 +113,15 @@ If we change the basepoints, How does $h_{*}$ change?
 Assume X path connected. Let $x_{0},x_{1} \in X$, $y_{i} = h(x_{i})$ 
 Let $\alpha: I \to X$ be a path from $x_{0}$  to $x_{1}$  is a path from $y_{0}$ to $y_{1}$
 
-![[SVG/tikzdiagram2.svg|diagram]]
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+\pi_1(X,x_0) \ar[d ,"\hat{\alpha}"] \ar[r ,"h_*"] & \pi_1(Y,y_0) \ar[d ,"\widehat{h \circ \alpha}"]\\
+\pi_1(X,x_1) \ar[r ,"h_*"] & \pi_1(Y,y_1)
+\end{tikzcd}
+\end{document}
+```
 
 This implies that $(h_{x_{0}})_{*}$   $(h_{x_{1}})_{*}$ have the same behavior. If one of them is injective/ surjective /bijective then so is the other. Their kernels and images have he same size etc.
 
@@ -165,7 +180,16 @@ $$
 ![[Drawing 2025-07-31 17.38.33.excalidraw.svg]]
 
 
-![[SVG/tikzdiagram3.svg|diagram]]
+```tikz
+\usepackage{tikz-cd}
+\usepackage{amssymb}
+\begin{document}
+\begin{tikzcd}
+\mathbb{R}^2 \ar[d, dashed] \ar[r] & S^1 \times S^1 \ar[dl] \\
+\mathbb{T}
+\end{tikzcd}
+\end{document}
+```
 
 - Any collection of open sets $\{ U_{\lambda } \}$ covering B such that each $U_{\lambda }$ is evenly covered will be called a trivialising cover for p. 
 
@@ -190,7 +214,15 @@ Covering map $\implies$ local homeomorphism $\iff$(**Exercise**) locally one-one
 ### The lifting properties of covering spaces
 **Def:** Let $p:E\to B$ be a continuous fn. For any continuous function $f:X\to B$ a lifting of f is a continuous map $\tilde{f}:X\to E$ such that $f= p \circ \tilde{f}$ In general $\tilde{f}$ is not uniquely determined
 
-![[SVG/tikzdiagram4.svg|diagram]]
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+& E \ar[d, "p"] \\
+X \ar[ur, dashed , "\tilde{f}"] \ar[r, "f"] & B
+\end{tikzcd}
+\end{document}
+```
 
 
 Example : $p : \mathbb{R} \to S^{1}$
@@ -200,7 +232,15 @@ iii) $h(s) = (\cos 4\pi s, \sin 4 \pi s)$ $\tilde{h}(s) = 2s + n$
 
 ### Lifting theorems
 **Theorem:** (Lifting of paths) Let $p:(E,e_{0}) \to (B,b_{0}$ be a covering map. Then any path $f: I \to B$ starting at $b_{0}$ lifts uniquely to a path $\tilde{f}:I\to E$ starting at $e_{0}$
-![[SVG/tikzdiagram5.svg|diagram]]
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+& (E,e_0) \ar[d , "p"] \\
+I \ar[r, "f"] \ar[ur , dashed,"\tilde{f}"] & (B,b_0)
+\end{tikzcd}
+\end{document}
+```
 
 **Proof:**  Pick a trivialising open cover $\{ U_{\lambda } \}$ of B for p. Then $\{ f^{-1} U_{\lambda }\}$ is an open cover of I. 
 As I is a compact metric space, by the Lebesgue number lemma, exists $\delta >0$ such that any interval of length less than $\delta$ is in some $f^{-1} U_{\lambda }$ . Hence we may choose $s_{i} \in I$ 
@@ -323,7 +363,15 @@ $$
 $$
 
 Given $f:I\to X$ we have $\bar{f}:S^{1} \to X$ determined by
-![[SVG/tikzdiagram6.svg|diagram]]
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+I \ar[d, "f"] \ar[r,, "q"] & S^{1} \ar[dl, dashed, "\bar{f}"] \\
+X
+\end{tikzcd}
+\end{document}
+```
 
 Given $g:S^{1} \to X$ we obtain $f:I\to X$ as the composite
 $$
@@ -334,7 +382,15 @@ It is easily seen to be a 1-1 correspondence
 
 If $f_{1},f_{2}$ are 2 path homotopic loops at $x_{0}$ via $F:I\times I \to X$
 then 
-![[SVG/tikzdiagram7.svg|diagram]]
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+I\times I \ar[r,"q\times Id"] \ar[d,"F"] & S^1 \times I \ar[dl,"\overline{F}"] \\
+X
+\end{tikzcd}
+\end{document}
+```
 gives existence of $\overline{F}$  a base point fixing homotopy between $f_{1}:(S^{1},1) \to (X,x_{0})$ and $f_{2}(S_{1},1) \to (X,x_{0})$ 
 
 ![[Drawing 2025-08-07 17.25.22.excalidraw.svg]]
@@ -372,7 +428,19 @@ Using $\frac{I^{n}}{dI^{n}} \cong S^{n}$ we also have $[(I^{n},dI^{n}),(X,x_{0})
 
 **Proof:** Assume f has no fixed point. Then we'll obtain a retract $B^{2} \to S^{1}$ using this , a contradiction.
 
-![[SVG/tikzdiagram8.svg|diagram]]
+```tikz
+\begin{document}
+\begin{tikzpicture}
+% Draw a circle
+\draw[thick] (0,0) circle (2cm);
+% Draw a point x and a point f(x) inside the circle
+\filldraw[black] (0,0) circle (2pt) node[anchor=south] {$x$};
+\filldraw[black] (1,1) circle (2pt) node[anchor=south] {$f(x)$};
+% Draw an arrow starting from (0,0) and ending at (2,2)
+\draw[->, thick] (0,0) -- (1.4,1.4);
+\end{tikzpicture}
+\end{document}
+```
 $$
 \lVert tf(x) + (1-t)x \rVert =1
 $$
@@ -386,7 +454,16 @@ $$
 \{ f:I \to X \text{ at } x_{0} \} \leftrightarrow  \{ \text{maps } (S^{1},1) \to (X,x_{0}) \}
 $$
 
-![[SVG/tikzdiagram9.svg|diagram]]
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+% double headed arrow right from I to S^1 and arrow downwards from I to X named f and arrow from S^1 to X named bar{f}
+I \ar[d, "f"] \ar[r, "q"] & S^{1} \ar[dl, dashed, "\bar{f}"] \\
+X
+\end{tikzcd}
+\end{document}
+```
 
 This correspondence preserves base point fixed homotopy.
 
@@ -398,7 +475,30 @@ ii) h extends to a map $k:B^{2} \to X$
 iii) $h_{*} : \pi_{1}(S^{1}) \to \pi_{1}(X)$ is the trivial map
 
 **Proof:** $(i) \implies (ii)$
-![[SVG/tikzdiagram10.svg|diagram]]
+```tikz
+\begin{document}
+\begin{tikzpicture}
+%A cylinder,cone, circle with center with arrow from one to the next
+% Draw the cylinder 
+\draw[thick] (0,0) -- (0,2) arc[start angle=180, end angle=360, x radius=0.5, y radius=0.2];
+\draw[thick] (0,0) arc[start angle=180, end angle=360, x radius=0.5, y radius=0.2] -- (1,2);
+\node at (0,0) [left] {$t=0$};
+\node at (0,2) [left] {$t=1$};
+\draw[dashed] (0,2) arc[start angle=180, end angle=0, x radius=0.5, y radius=0.2]; 
+\draw[dashed] (0,0) arc[start angle=180, end angle=0, x radius=0.5, y radius=0.2];
+% Draw an arrow from the cylinder to the cone 
+\draw[->, thick] (1.5,1) -- (2.5,1); 
+% Draw the cone 
+\draw[thick] (3,0) -- (3.5,2) -- (4,0); 
+\draw[thick] (3,0) arc[start angle=180, end angle=360, x radius=0.5, y radius=0.2]; 
+\draw[dashed] (3,0) arc[start angle=180, end angle=0, x radius=0.5, y radius=0.2]; % Draw an arrow from the cone to the circle 
+\draw[->, thick] (4.5,1) -- (5.5,1); % Draw the circle with center 
+\draw[thick] (7,1) circle(0.5); 
+\filldraw (7,1) circle(1pt); % Center of the circle
+
+\end{tikzpicture}
+\end{document}
+```
 
 
 $(ii) \implies (iii)$ Follows from functoriality $S^{1} \hookrightarrow B^{2} \xrightarrow{k} X$ 
@@ -423,10 +523,10 @@ $$
 Then $\alpha_{|S^{1}} : S^{1} \to \mathbb{R}^{2}\setminus \{ 0 \}$ is null-homotopic by earlier lemma. Suppose $\alpha_{|S^{1}}$ does not point inwards anywhere. Then we'll find a homotopy $\alpha_{|S^{1}} \sim j$ ($j: S^{1} \hookrightarrow \mathbb{R}^{2} \setminus \{ 0 \}$) which will be a contradiction.
 For this we use the straight line homotopy. Though $\mathbb{R}^{2}\setminus \{ 0 \}$ is not convex, it suffices to check that $t \alpha_{|S^{1}} + (1-t)$ is nonzero for all $t \in [0,1]$. 
 $$
-\begin{align*}
+\begin{align}
 F: S^{1}\times I \to & \mathbb{R}^{2} \setminus \{ 0 \}  \\
 (x,t) \mapsto& t \alpha_{|S^{1}}(x) + (1-t)x
-\end{align*}
+\end{align}
 $$
 Clearly RHS is nonzero for $t=0,1$. For $t \in (0,1)$ If RHS = 0, we get $\alpha(x) = -\frac{1-t}{t}x$ a contradiction to $\alpha$ not pointing inwards anywhere.
 
@@ -484,12 +584,12 @@ I\times I \xrightarrow{f\times Id} X\times I \xrightarrow{H}Y
 $$
 satisfies
 $$
-\begin{align*}
+\begin{align}
 G(s,0) =& H(f(s),0)=h \circ f (s) = \text{image of loop f in Y under } h \\
 G(s,1) =& H(f(s),1) = k\circ f(s) = \text{image of loop f in Y under }  k \\
 G(0,t) =& H(x_{0},t)=y_{0} \\
 G(1,t) =& H(x_{0},t) = y_{0}
-\end{align*}
+\end{align}
 $$
 Thus $h \circ f \sim k \circ f$ in Y i.e. $h_{*}[f] = k_{*}[f] \quad \blacksquare$
 
@@ -522,27 +622,35 @@ Broom space $X\times I$ #incomplete
 ### Invariance of homotopy
 
 **Theorem:**(Invariance of $\pi_{1}$ under homotopy of maps) Let $h,k: X\to Y$ be maps,, $x_{0} \in X,y_{0} = h(x_{0}), y_{1}=k(x_{0})$. If $h,k$ are homotopic via $H:X\times I \to Y$(so that $\alpha(t) = H(x_{0},t)$ is a path in Y from $y_{0}$ to $y_{1}$) then the following diagram commutes
-![[SVG/tikzdiagram11.svg|diagram]]
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+\pi_1(X,x_0) \ar[d, "h_*"] \ar[dr, "k_*"] \\
+\pi_1(Y,y_0) \ar[r, "\hat{\alpha}"] & \pi_1(Y,y_1)
+\end{tikzcd}
+\end{document}
+```
 ![[Excalidraw/Drawing 2025-08-18 14.47.11.excalidraw.svg]]
 
 **Proof:** Let $f:I\to X$ be a loop in X at $x_{0}$. It suffices to check that for any such arbitrary f, we have $\hat{\alpha}(h_{*}[f]) = k_{*}[f]$ 
 i.e.
 $$
-\begin{align*}
+\begin{align}
 \bar{\alpha} * (h\circ f)*\alpha \sim_{p} k\circ f \text{ equivalently} \\
 \bar{\alpha}*(h\circ f)*\alpha*\overline{(k\circ f)} \text{ is a path homotpic to the trivial homotopy}
-\end{align*}
+\end{align}
 $$
 
 $I\times I \xrightarrow{f\times Id} X\times I \xrightarrow{H} Y$
 
 $$
-\begin{align*}
+\begin{align}
 &F(x,0) = H(f(s),0) = h\circ f(s)  \\
 &F(1,t) = H(x_{0},t)= \alpha(t) \\
 &F(1-s,1) = H(f(1-s),1) = k\circ \overline{f(s)}  = \overline{(k \circ f)}(s) \\
 &F(0,1-t) = H(x_{0},1-t) = \overline{\alpha(t)}
-\end{align*}
+\end{align}
 $$
 
 Since $I\times I$ is homeomorphic to the disc $D^{2}$ and the path $1*2*3*4$ goes to the boundary $S^{1}$ under such a homeomorphism we see that the loop has trivial image in $\pi_{1}(Y,y_{1}) \quad \blacksquare$
@@ -557,7 +665,15 @@ Since $I\times I$ is homeomorphic to the disc $D^{2}$ and the path $1*2*3*4$ goe
 **Theorem:** (Invariance of $\pi_{1}$ under homotopy equivalence of spaces) If $f:X\to Y$ is a homotopy equivalence, then for any $x_{0} \in X$, $y_{0}=f(x)$ we have $\pi_{1}(X,x_{0}) \cong \pi_{1}(Y,y_{0})$ via $(f_{x_{0}})_{*}$ 
 
 **Proof:** Let $g:Y \to X$ be a homotopy inverse. Let $x_{1}=g(y_{0})$. Let $y_{1}=f(x_{1})$. Now consider maps
-![[SVG/tikzdiagram12.svg|diagram]]
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+\pi_1(X,x_0) \ar[r,"(f_{x_0})_*"] & \pi_1(Y,y_0) \ar[dl,"(g_{y_0})"] \\
+\pi_1(X,x_1) \ar[r,"(f_{x_1})_*"] & \pi_1(Y,y_1)
+\end{tikzcd}
+\end{document}
+```
 
 Since $g\circ f \sim Id_{x}$. $((g\circ f)_{x_{0}})_{*} = (g_{y_{0}})_{*}(f_{x_{0}})_{{*}}$ is an isomorphism. Similarly $f\circ g \sim Id_{Y} \implies (f_{x_{1}})_{*}(g_{y_{0}})_{*}$  is an isomorphism.
 
@@ -610,10 +726,10 @@ $$
    
    Now suppose E is Hausdorff and $\deg(p) \leq d$. Let $b_{1},b_{2} \in B,b_{1}\neq b_{2}$. Pick evenly covered neighbourhoods $U_{i}$ around $b_{i}$. Suppose 
 $$
-\begin{align*} \\
+\begin{align} \\
 p^{-1}U_{1} =& \bigsqcup V_{\alpha } \\
 p ^{-1} U_{2} =& \bigsqcup W_{j} 
-\end{align*}
+\end{align}
 $$
    For each point $x_{i}$ in $p ^{-1}(b_{1})$ and for each $y_{j}$ in $p ^{-1}(b_{2})$ choose pairwise disjoint neighbourhoods $Y_{1,i},Y_{2,j}$. Now consider,
    ![[IMG_20250819_173804.jpg]]
@@ -689,10 +805,10 @@ We see that to get a covering map from a quotient space, the following suffices:
 Let $\{ M_{i} \}_{i \in I}$ be a collection of abelian groups. Then
 
 $$
-\begin{gather*}
+\begin{gather}
 \prod M_{i} = \text{cartesian product with componentwise operations}\\
 \bigoplus  M_{i} = \text{submodule consisting of such elements with $a_{i}\neq_{0}$ for finitely many}
-\end{gather*}
+\end{gather}
 $$
 We also have the natural projection maps,
 $$
@@ -704,14 +820,30 @@ $\prod M_{i}$: Given a $\mathbb{Z}$-module $N$ there is a bijection,
 $$
 \text{Maps}\left( N,\prod M_{i} \right) \leftrightarrow  \{ \text{Maps}(N,M_{i}) \}_{i \in I}
 $$
-![[SVG/tikzdiagram13.svg|diagram]]
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+& N \ar[dl, "f_{i}"'] \ar[d, "f"] \ar[dr, "f_{j}"] & \\
+M_{i} & \prod M_{i} \ar[l, "p_{i}"] \ar[r, "p_{j}"'] & M_{j}
+\end{tikzcd}
+\end{document}
+```
 
 
 $\bigoplus M_{i}:$ For any $\mathbb{Z}$-module N, $\exists$ a bijection
 $$
 \text{Maps}\left(\bigoplus M_{i},N\right) \leftrightarrow  \{ \text{Maps} (M_{i},N)\}_{i \in I}
 $$
-![[SVG/tikzdiagram14.svg|diagram]]
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+M_{i} \ar[dr, "f_{i}"] \ar[hookrightarrow,r, "j_{i}"] & \bigoplus M_{i} \ar[d, "f"] & M_{j} \ar[hookrightarrow,l, "j_{j}"'] \ar[dl, "f_{j}"'] \\
+& N &
+\end{tikzcd}
+\end{document}
+```
 $\bigoplus M_{i}$ is the smallest submodule of $\prod M_{i}$ containing $M_{i}$ and every element is uniquely a finite sum $\sum_{}^{} a_{i} a_{i} \in M_{i}, a_{i}= 0$ for almost all $i$.
 
 ---
@@ -723,10 +855,10 @@ Suppose $M$ is a module and $M_{i}\subseteq M$ submodules. Then we have a natura
 
 and we also have,
 $$
-\begin{gather*}
+\begin{gather}
 \left(\bigoplus M_{i}\right) \oplus  \left(\bigoplus M_{j}\right) \cong \bigoplus M_{k} \\
 \bigoplus M_{(i,j) \in I\times J} \cong \bigoplus \left(\bigoplus  M_{i,j}\right)
-\end{gather*}
+\end{gather}
 $$
 **Lemma:** For a $\mathbb{Z}$-module $M$ the following are equivalent,
 1. $M \cong \bigoplus \mathbb{Z}$
@@ -762,7 +894,15 @@ Starting with an arbitrary word $w$, we get a reduced word of (possibly) smaller
 **Proof:** We argue by case, start with $w = (g_{1},\dots,g_{n})$. Use induction on n. Suppose there are 2 ways of applying $1.$ and $2.$ to $w$. If they have non-overlapping indices, we may perform them in either order to get some result of length n-2. By induction we're done. If they overlap, then one of them must be $(1)$. If $g_{i} = 1$, then we can drop it and re-index. Now the other operation must be either $1.$ or $2.$ on the re-indexed word. Again by induction we're done. $\quad \blacksquare$ 
 
 #### Construction of free product
-![[SVG/tikzdiagram15.svg|diagram]]
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+G_{\alpha} \ar[r, "i_{\alpha}"] \ar[dr, "f_{\alpha}"] & G \ar[d, "f"] & G_{\beta} \ar[l, "i_{\beta}"] \ar[dl, "f_{\beta}"] \\
+& H &
+\end{tikzcd}
+\end{document}
+```
 Let us construct $G$ and $i_{\alpha}: G_{\alpha} \to G$ as follows: Let $G$ be the set of all reduced words in $\bigsqcup G_{\alpha}$. Define $i_{\alpha}: G_{\alpha} \to G$ by $g \mapsto (g)$ if $g\neq 1$ and $1 \mapsto ()$.
 
 For any $w = (g_{1},\dots,g_{m})$ and $v=(h_{1},\dots,h_{n})$ we define 
@@ -780,10 +920,10 @@ Hence $(G,*)$ is a group. Hence we can also see that $i_{\alpha}:G_{\alpha} \to 
 
 Now we check the universal property: Given any group H and maps $G_{\alpha} \xrightarrow{f_{\alpha}} H$ we define $f:G\to H$ by sending the reduced word $w = (g_{1},\dots,g_{n})$ to $f_{\alpha_{1}}(g_{1})\dots f_{\alpha_{n}}(g_{n})$. We see that this is a homomorphism since  $w=(g_{1},\dots,g_{m}), v=(h_{1},\dots,h_{n})$ then 
 $$
-\begin{align*}
+\begin{align}
 f(w * v) &= f(\text{reduced word from }(g_{1},\dots,g_{m},h_{1},\dots,h_{n}))  \\
 &= f_{\alpha_{1}}(g_{1}) \dots f_{\alpha_{m}}(g_{m})f_{\beta_{1}}(h_{1})\dots f_{\beta_{n}}(h_{n})) = f(w)f(v)
-\end{align*}
+\end{align}
 $$ 
 Note that $f$ is uniquely determined by $f_{\alpha}$ since $G$ is generated by $i_{\alpha}(G_{\alpha})$ (i.e. by words of length 1)
 
@@ -846,9 +986,27 @@ In fact it is an isomorphism, because if $\overline{w} \in \ker(\psi )$ for some
 ### Pushout diagrams
 
 **Proposition:** Suppose there are homomorphisms of groups as in the diagram below,
-![[SVG/tikzdiagram16.svg|diagram]] 
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+G_{12} \ar[r,"k_1"] \ar[d,"k_2"] & G_1 \\
+G_2 &
+\end{tikzcd}
+\end{document}
+``` 
 $(i)$ If $G_{i}, G_{12}$ are abelian, then $\exists$ a unique triple $(G,G_{1}\xrightarrow{j_{1}} G, G_{2}\xrightarrow{j_{2}}G)$ which is universal for other abelian groups:
-![[SVG/tikzdiagram17.svg|diagram]]
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+G_{12} \ar[r,"k_1"] \ar[d,"k_2"] & G_1 \ar[d,"j_1"] \ar[ddr,bend left=15,"f_1"] \\
+G_2 \ar[r,"j_2"] \ar[drr,bend right=15,"f_2"'] & G \ar[dr,dashed,"\exists ! f"] & \\
+& & H
+
+\end{tikzcd}
+\end{document}
+```
 and given an abelian group $H$ and maps $G_{i}\xrightarrow{j_{i}} H$ such that $f_{1}k_{1} = f_{2}k_{2}$ then $\exists!$ $f:G\to H$ such that $f_{i} = fj_{i}$
 
 $(ii)$ In general with $G_{i}$ not necessarily abelian, we have a similar universal triple for testing against a general group H.
@@ -881,13 +1039,33 @@ Finally note that $f$ is unique since $G$ is generated by the images of $G_1$ an
    Simply use the fact that $g \sim id_{I}$ via the straight line homotopy on the convex set $I$.
 2. Inserting /deleting a loop to/from a loop given $f:I\to X$ loop at $x_{0}$, given a point $x = f(s)$ on the loop and a homotopically trivial loop $g:I\to X$ at $x$, we get a new loop at $x_{0}$ obtained by concatenating the paths $f_{1}*g*f_{2}$.
    (via any convenient reparameterization in the time domain as in $(i)$) and this loop is path homotopic to $f$. We call this insertion of a loop at x. The reverse process is called deletion.
-![[SVG/tikzdiagram18.svg|diagram]]
+```tikz
+\begin{document}
+\begin{tikzpicture}
+\draw (0,0) .. controls (1,2) and (3,2) .. (4,0) .. controls (3,-2) and (1,-2) .. (0,0);
+\filldraw (0,0) circle (2pt) node[anchor=north] {$x$};
+\draw (4,0) .. controls (4.5,1) and (5,1) .. (5.5,0) .. controls (5,-1) and (4,-1) .. (4,0);
+\filldraw (4,0) circle (2pt) node[anchor=north] {$x_{0}$};
+
+\end{tikzpicture}
+\end{document}
+```
 
 
 ## Seifert-Van Kampen theorem (for 2 open sets)
 
 **Theorem:** Suppose $X = U \cup V$ where $U,V, U\cap V$ are path connected. Then for any $x_{0} \in U \cap V$, 
-![[SVG/tikzdiagram19.svg|diagram]]
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+\pi_{1}(U \cap V,x_{0}) \ar[r,"j_{1*}"] \ar[d,"j_{2*}"] & \pi_{1}(U,x_{0}) \ar[d,"k_{1*}"] \ar[rdd,bend left=15,"\phi_{1}"] & \\
+\pi_{1}(V,x_{0}) \ar[drr,bend right=15,"\phi_{2}"] \ar[r,"k_{2*}"] & \pi_{1}(X,x_{0})
+\ar[dr,dashed,"\exists ! \phi"] & \\
+& & H 
+\end{tikzcd}
+\end{document}
+```
 is a push-out square.
 
 **Proof:** **Uniqueness of $\phi$**
@@ -991,10 +1169,10 @@ $$
 4. For a simplex $\sigma$, $\exists$ one and only one geometrically independent set whose convex span is $\sigma$.
 **Proof:** Suppose $\sigma$ is convex span of $\{ a_{0},\dots,a_{n} \}$ and $\{ b_{0},\dots,b_{n} \}$. Suppose,
 $$
-\begin{gather*}
+\begin{gather}
 b_{i}= \sum_{}^{} t_{ij} a_{j} \\
 a_{k} = \sum_{}^{  } s_{kl}b_{l}
-\end{gather*}
+\end{gather}
 $$
 two of them non-zero
 $$
@@ -1153,11 +1331,11 @@ Sufficient criterion for $h_*(L)$ and $h_*(L_0)$ to be equal
 
 **Def:** Let L be a complex and $v \in L^{(0)}$. We define subsets 
 $$
-\begin{gather*}
+\begin{gather}
 St(v):= \bigcup_{v \in \sigma}^{} Int(\sigma ) \\
 \overline{St(v)} := \text{closure of }St(v) &= \bigcup_{v \in \sigma }^{} \sigma \\
 Lk(v) := \overline{St(v)} \setminus St(v)
-\end{gather*}
+\end{gather}
 $$
 
 Note that the complement of $St(v)$ is $\bigcup_{v \not \in \sigma }^{} \sigma$ which is also the underlying set of a subcomplex of $\sigma$ ($v \not\in \sigma \implies v \not\in \text{any face of } \sigma$)
@@ -1172,7 +1350,7 @@ We observe that $St(v)$ is path-connected (as each $x$ is path-connected to $v$)
 (i) $v_1v_2 \in L_0$
 (ii) $St(v_1) \cap St(v_2) = \phi$
 
-Then $dim(g(\sigma)) = dim(\sigma)$ for any $\sigma \in L$. Moreover, if $g(\sigma_1) = g(\sigma_2)$, then $\sigma_1, \sigma_2$ are disjoint simplices.
+Then $\dim(g(\sigma)) = \dim(\sigma)$ for any $\sigma \in L$. Moreover, if $g(\sigma_1) = g(\sigma_2)$, then $\sigma_1, \sigma_2$ are disjoint simplices.
 
 **Proof:** **Exercise**
 
@@ -1253,3 +1431,123 @@ $$
 (-1)^{l-1}(-1)^k \quad \text{if we remove } v_k \text{ first and then } v_l.
 $$
 Therefore sum is 0. $\quad \blacksquare$
+
+---
+
+The sequence of maps $\cdots \to C_p(K) \xrightarrow{\partial_p} C_{p-1}(K) \xrightarrow{\partial_{p-1}} C_{p-2}(K) \to \cdots$ is called the (algebraic) **chain complex** of $K$.
+
+For any $p \in \mathbb{Z}$, we define the group of **p-cycles** to be
+$$
+Z_p(K) = \{ c \in C_p(K) \mid \partial_p c = 0 \}.
+$$
+i.e., these p-chains whose boundary is 0.
+
+The group of **p-boundaries** is
+$$
+B_p(K) = \{ \partial_{p+1}c \mid c \in C_{p+1}(K) \}.
+$$
+Thus $B_p(K) \subseteq Z_p(K) \subseteq C_p(K)$.
+
+**Def:** We define the p-th **homology group** of $K$ to be
+$$
+H_p(K) := \frac{Z_p(K)}{B_p(K)} \quad \left[\text{Note that } \frac{C_p(K)}{Z_p(K)} \cong B_{p-1}(K) \right] \quad \text{Exercise.}
+$$
+
+**Examples**
+1. **Hollow Triangle**
+$K = \{ v_0, v_1, v_2, e_{01}, e_{12}, e_{20} \}$. $\dim(K)=1$.
+The chain complex is
+$$
+0 \to C_1 \xrightarrow{\partial_1} C_0 \to 0
+$$
+$$
+C_1 = \mathbb{Z}e_{01} \oplus \mathbb{Z}e_{12} \oplus \mathbb{Z}e_{20} \to C_0 = \mathbb{Z}v_0 \oplus \mathbb{Z}v_1 \oplus \mathbb{Z}v_2.
+$$
+The map is: $$ \partial_1 (a, b, c) = (c-a, a-b, b-c) $$ $$ H_0(K) = \frac{Z_0(K)}{B_0(K)} = \frac{\{ (a, b, c) \mid c=b=a \}}{0} = a(1, 1, 1) $$ $$ \therefore \underbrace{ H_0(K) \cong \mathbb{Z} }_{ (1, 1, 1) \mapsto  1  } $$ $$
+H_0(K) = \frac{Z_0(K)}{B_0(K)} = \frac{C_0}{\text{im}(\partial_1)}
+$$
+
+Now consider the map
+$$
+\phi: C_0 \to \mathbb{Z}
+$$
+$$
+(x, y, z) \mapsto x+y+z
+$$
+
+Then we see that $\text{im}(\partial_1) \in \ker\phi$ and $\phi$ is onto. Finally observe that $\ker(\phi) \subseteq \text{im}(\partial_1)$ and hence they are equal. (Given $x+y+z=0$, try $c=0$, $a=-x$, $b=z$. )
+
+Thus,
+$$
+H_0(K) = \frac{C_0}{\text{im}(\partial_1)} = \frac{C_0}{\ker(\phi)} \cong \mathbb{Z}
+$$
+$$
+\overline{v_2} = \overline{v_1} = \overline{v_0} \quad \longleftarrow \quad 1
+$$
+2) Same triangle with one edge oriented the other way.
+$K = \{ v_0, v_1, v_2, e_{01}, e_{12}, e_{20} \}$.
+$$
+\mathbb{Z}e_{01} \oplus \mathbb{Z}e_{12} \oplus \mathbb{Z}e_{20} \to \mathbb{Z}v_0 \oplus \mathbb{Z}v_1 \oplus \mathbb{Z}v_2.
+$$
+$$
+(a, b, c) \mapsto (-c-a, a-b, b+c)
+$$
+
+
+
+![[IMG_20251010_161556.jpg]]
+
+**Exercise:** Check again that $H_0(K) \cong \mathbb{Z}$, $H_1(K) \cong \mathbb{Z}$.
+
+3) $L=$ **solid triangle**
+i.e., $L = \sigma$ 2-simplex (with faces).
+The chain complex is
+$$
+0 \to C_2 \xrightarrow{\partial_2} C_1 \xrightarrow{\partial_1} C_0 \to 0
+$$
+$$
+C_2 \cong \mathbb{Z}\sigma, \quad C_1 \cong \mathbb{Z}e_{01}\oplus\mathbb{Z}e_{12}\oplus\mathbb{Z}e_{20}, \quad C_0 \cong \mathbb{Z}v_0\oplus\mathbb{Z}v_1\oplus\mathbb{Z}v_2.
+$$
+The boundary of the 2-simplex $\sigma$:
+$$
+\partial_2 \sigma = [v_1, v_2] - [v_0, v_2] + [v_0, v_1] \quad \text{(i.e., the formal sum of the faces)}
+$$
+
+From earlier calculation, we saw that $H_0(L) \cong \mathbb{Z}$.
+
+$Z_{1}(L) = Z_{1}(K)$ as before, while $B_{1}(L)=im(\partial_{2})=\mathbb{Z}(1,1,1)=Z_{1}(1)$. Thus $H_{1}(L)=0$. Finally, since $\partial_{2}$ is injective, we see that $Z_{2}(L)=0$. Therefore $H_{2}(L)=0$.
+
+
+![[IMG_20251010_164039.jpg]]
+
+4) $K = \text{solid tetrahedron}$
+$= 3\text{-simplex}$
+
+The chain complex is:
+$$
+0 \to C_3 \xrightarrow{\partial_3} C_2 \xrightarrow{\partial_2} C_1 \xrightarrow{\partial_1} C_0 \to 0
+$$
+$$
+\mathbb{Z} \xrightarrow{n \mapsto (-n, n, n, n)} \mathbb{Z}^4 \xrightarrow{(a,b,c,d) \mapsto (a+b, c-a, -b, a+d, b+d, c+d)} \mathbb{Z}^6 \xrightarrow{} \mathbb{Z}^4
+$$
+
+Simplex basis for the chains:
+$C_3$: $[0123]$
+$C_2$: $[012], [013], [023], [123]$
+$C_1$: $[01], [02], [03], [12], [13], [23]$
+$C_0$: $0, 1, 2, 3$
+
+$$
+\partial_3 [0123] = [123] - [023] + [013] - [012]
+$$
+
+Easy to see that $H_3 \cong 0 \cong H_2$.
+**Exercise:** $H_1 \cong 0, H_0 \cong \mathbb{Z}$.
+
+Geometrically, when is a 1-chain a 1-cycle in a simplicial complex $K$?
+![[IMG_20251010_170132.jpg]]
+
+
+1-cycle is also a boundary, hence gives 0 element in the homology. Consider the 1-cycle $e_{1}+e_{2}+e_{3} +e_{4} = \partial(\sigma+\tau)$. It is a boundary because $\partial \sigma = e_{1} - e_{5} + e_{4}, \partial(\tau)= e_{5}+e_{2}+e_{3}$.
+![[IMG_20251010_171522.jpg]]
+
