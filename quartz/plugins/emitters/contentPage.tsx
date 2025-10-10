@@ -6,6 +6,7 @@ import BodyConstructor from "../../components/Body"
 import { pageResources, renderPage } from "../../components/renderPage"
 import { FullPageLayout } from "../../cfg"
 import { pathToRoot } from "../../util/path"
+import { unescapeHTML } from "../../util/escape"
 import { defaultContentPageLayout, sharedPageComponents } from "../../../quartz.layout"
 import { Content } from "../../components"
 import { styleText } from "util"
@@ -35,8 +36,11 @@ async function processContent(
     tree,
     allFiles,
   }
+  const scriptregex = /<script\s+[^>]*type\s*=\s*(['"])text\/tikz\1[^>]*>[\s\S]*?<\/script>/gi
+  const content = renderPage(cfg, slug, componentData, opts, externalResources).replace(scriptregex, (match) => {
+    return unescapeHTML(match)
+  })
 
-  const content = renderPage(cfg, slug, componentData, opts, externalResources)
   return write({
     ctx,
     content,

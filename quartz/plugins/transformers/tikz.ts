@@ -9,8 +9,7 @@ export const Tikz: QuartzTransformerPlugin = () => {
                 return (tree, file) => {
                     visit(tree, 'element', (node) => {
                         if (node.tagName === 'pre' &&
-                            node.children.length != 0 &&
-                            node.children[0].properties.className.includes('language-tikz')) {
+                            node.children?.[0]?.properties?.className?.includes('language-tikz')) {
                             node.tagName = 'script'
                             node.properties['type'] = "text/tikz"
                             node.children = node.children[0].children
