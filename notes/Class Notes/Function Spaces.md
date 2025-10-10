@@ -2136,3 +2136,158 @@ $\implies f*g$ is continuous.
 We know that $f*g$ is $2\pi$ periodic and integrable. There exist sequences of continuous functions, $\{f_k\}$ and $\{g_k\}$, such that $\{f_k\} \to f$ in $L^1$ and $\{g_k\} \to g$ in $L^1$. i.e., $\int_{-\pi}^{\pi} |f_k(x)-f(x)|dx \to 0$ and $\int_{-\pi}^{\pi} |g_k(x)-g(x)|dx \to 0$ as $k\to\infty$.
 
 We will show that $\{f_k * g_k\} \to f*g$ uniformly. $f*g - f_k*g_k = (f-f_k)*g + f_k*(g-g_k)$. We will show that the first term goes to zero uniformly. $$ |(f-f_k)*g(x)| \leq \frac{1}{2\pi} \int_{-\pi}^\pi |(f-f_k)(y)| |g(x-y)| dy $$ $$ \leq \frac{1}{2\pi} \sup_{y\in[-\pi,\pi]} |g(y)| \int_{-\pi}^\pi |f(y)-f_k(y)| dy \to 0 \quad \text{as} \ k\to\infty. $$
+#incomplete 
+
+## Abel Summability
+
+$\sum_{k=0}^{\infty} c_k$ is called **Abel summable** to some value $S$ if for each $0 \le r < 1$,
+$$
+A(r) = \sum_{k=0}^{\infty} c_k r^k
+$$
+converges and
+$$
+S = \lim_{r \to 1^-} A(r).
+$$
+**Example:** $1 - 2 + 3 - 4 + 5 - \cdots = \sum_{k=0}^{\infty} (-1)^k (k+1)$.
+
+$$
+A(r) = \sum_{k=0}^{\infty} (-1)^k (k+1) r^k = \frac{1}{(1+r)^2}.
+$$
+$$
+\lim_{r \to 1^-} A(r) = \frac{1}{(1+1)^2} = \frac{1}{4}.
+$$
+But the above series is **not** Cesàro summable.
+
+If $\sum_{k=0}^{\infty} c_k$ is **Cesàro summable** then $c_n \to 0$ as $n \to \infty$.
+
+---
+
+$$
+\frac{S_0 + \cdots + S_{n-1}}{n} \to a \quad (\text{Cesàro})
+$$
+$$
+\frac{S_0 + \cdots + S_n}{n} \to a
+$$
+$$
+\implies \frac{S_0 + \cdots + S_n}{n} - \frac{S_0 + \cdots + S_{n-1}}{n} = \frac{S_n}{n} - \frac{S_0 + \cdots + S_{n-1}}{n(n)} \to 0
+$$
+$$
+\implies \frac{c_n}{n} \to 0 \quad \text{as } n \to \infty \text{ is not enough.}
+$$
+**Theorem:** Cesàro Summability $\implies$ Abel Summability
+
+---
+
+**Recall:** $0 \le r < 1$.
+$$
+P_r(\theta) = \sum_{n=-\infty}^{\infty} r^{|n|} e^{in\theta} = \frac{1-r^2}{1-2r\cos\theta+r^2}.
+$$
+$$
+f \sim \sum_{n=-\infty}^{\infty} \hat{f}(n) e^{in\theta}
+$$
+$$
+A_r(f)(\theta) = \sum_{n=-\infty}^{\infty} r^{|n|} \hat{f}(n) e^{in\theta} = \sum_{n=-\infty}^{\infty} r^{|n|} \left(\frac{1}{2\pi} \int_{-\pi}^{\pi} f(t)e^{-int} dt\right) e^{in\theta}
+$$
+
+---
+
+$$
+\frac{1}{2\pi} \sum_{n=-\infty}^{\infty} r^{|n|} \left| \int_{-\pi}^{\pi} f(t)e^{-int} dt \right| e^{in\theta}
+$$
+$$
+\le \frac{1}{2\pi} \sum_{n=-\infty}^{\infty} r^{|n|} \int_{-\pi}^{\pi} |f(t)| dt \le B \sum_{n=-\infty}^{\infty} r^{|n|} < \infty.
+$$
+$\implies (*)$ converges absolutely $\text{and}$ uniformly.
+So, we can interchange $\sum \text{ and } \int$.
+Therefore, $(*)$ implies:
+$$
+A_r(f)(\theta) = \frac{1}{2\pi} \int_{-\pi}^{\pi} f(t) \left( \sum_{n=-\infty}^{\infty} r^{|n|} e^{in(\theta-t)} \right) dt
+$$
+$$
+= f * P_r(\theta) \quad \left(f * P_r(\theta) \to f(\theta)\right)
+$$
+
+
+**Prop:** $\{P_r(\theta)\}_{0<r<1}$ is a family of **good kernels** as $r \to 1^-$.
+
+**Proof:**
+$$
+P_r(\theta) = \frac{1-r^2}{1-2r\cos\theta+r^2}
+$$
+$1-2r\cos\theta+r^2 = (1-r)^2 + 2r(1-\cos\theta)$. So $P_r(\theta) \ge 0$
+$\forall \ 0 \le r < 1$
+$$
+\frac{1}{2\pi} \int_{-\pi}^\pi P_r(\theta) d\theta = \frac{1}{2\pi} \int_{-\pi}^\pi |P_r(\theta)| d\theta
+$$
+$$
+= \frac{1}{2\pi} \int_{-\pi}^\pi \sum_{n=-\infty}^\infty r^{|n|} e^{in\theta} d\theta.
+$$
+$$
+= \frac{1}{2\pi} \sum_{n=-\infty}^\infty r^{|n|} \int_{-\pi}^\pi e^{in\theta} d\theta = 1.
+$$
+Properties (i) and (ii) of good kernels have been verified.
+
+---
+
+Let $\delta > 0$. For $\frac{1}{2} \le r < 1$ and $\delta \le |\theta| \le \pi$, then
+$$
+(1-r)^2 + 2r(1-\cos\theta) > C_\delta > 0.
+$$
+$$
+\frac{1}{2\pi} \int_{\delta \le |\theta| \le \pi} |P_r(\theta)| d\theta = \frac{1}{2\pi} \int_{\delta \le |\theta| \le \pi} \frac{1-r^2}{1-2r\cos\theta+r^2} \le \frac{1-r^2}{C_\delta} \to 0 \quad as \ r \to 1^-
+$$
+So, $\{P_r(\theta)\}_{0<r<1}$ is a good kernel as $r \to 1^-$.
+
+---
+
+Therefore, if $f$ is continuous at $\theta$,
+$$
+f * P_r(\theta) \to f(\theta).
+$$
+$\implies A_r(f)(\theta) \to f(\theta)$.
+$\implies$ Fourier Series of $f$ is Abel summable to $f$ at the point of continuity.
+
+Moreover, if $f$ is continuous on the circle, then the Fourier Series of $f$ uniformly Abel summable to $f$.
+
+**Next goal:**
+$$
+\int_{-\pi}^{\pi} |S_N(f)(\theta) - f(\theta)|^2 d\theta \to 0 \quad as \ N \to \infty.
+$$
+Mean Square Convergence or convergence in $L^2$ norm.
+
+## Inner Product
+
+Let $V$ be a vector space over $\mathbb{C}$.
+A map $\langle \cdot, \cdot \rangle: V \times V \to \mathbb{C}$ is called an **inner product** if:
+
+i) **(Positive definite norm)**
+$$
+\langle x, x \rangle \ge 0 \quad \forall x \in V
+$$
+$$
+\langle x, x \rangle = 0 \quad \text{iff } x = 0
+$$
+
+ii) **(Conjugate symmetry)**
+$$
+\langle x, y \rangle = \overline{\langle y, x \rangle}
+$$
+
+iii) **(Linearity in the first variable)** $\forall x, y, z \in V, \lambda \in \mathbb{C}$
+$$
+\langle \lambda x + y, z \rangle = \lambda \langle x, z \rangle + \langle y, z \rangle
+$$
+
+---
+
+Define $||\cdot||$ on $V$ by $||x|| = \sqrt{\langle x,x \rangle}$.
+We will show that $||x||$ is a norm on $V$. If $V$ is complete with respect to the norm, then $V$ is said to be a **Hilbert space**.
+
+**Ex:** $\mathbb{C}^n$ with the below inner product
+$$
+\langle x, y \rangle = \sum_{i=1}^n x_i \overline{y_i}.
+$$
+$x = (x_1, \ldots, x_n)$, $y = (y_1, \ldots, y_n)$.
+$$
+||x|| = \sqrt{\sum_{i=1}^n |x_i|^2}.
+$$

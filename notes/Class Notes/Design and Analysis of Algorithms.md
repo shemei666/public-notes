@@ -32,8 +32,7 @@ if n = 1 reutrn 1
 else return fib1(n-1) + fib1(n-2)
 ```
 
-```
-fib2
+```fib2
 if n = 0 return 0
 create an array f[0,...,n]
 f(0) = 0 f(1) = 1
