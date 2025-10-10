@@ -1350,7 +1350,7 @@ We observe that $St(v)$ is path-connected (as each $x$ is path-connected to $v$)
 (i) $v_1v_2 \in L_0$
 (ii) $St(v_1) \cap St(v_2) = \phi$
 
-Then $dim(g(\sigma)) = dim(\sigma)$ for any $\sigma \in L$. Moreover, if $g(\sigma_1) = g(\sigma_2)$, then $\sigma_1, \sigma_2$ are disjoint simplices.
+Then $\dim(g(\sigma)) = \dim(\sigma)$ for any $\sigma \in L$. Moreover, if $g(\sigma_1) = g(\sigma_2)$, then $\sigma_1, \sigma_2$ are disjoint simplices.
 
 **Proof:** **Exercise**
 
@@ -1431,3 +1431,67 @@ $$
 (-1)^{l-1}(-1)^k \quad \text{if we remove } v_k \text{ first and then } v_l.
 $$
 Therefore sum is 0. $\quad \blacksquare$
+
+---
+
+The sequence of maps $\cdots \to C_p(K) \xrightarrow{\partial_p} C_{p-1}(K) \xrightarrow{\partial_{p-1}} C_{p-2}(K) \to \cdots$ is called the (algebraic) **chain complex** of $K$.
+
+For any $p \in \mathbb{Z}$, we define the group of **p-cycles** to be
+$$
+Z_p(K) = \{ c \in C_p(K) \mid \partial_p c = 0 \}.
+$$
+i.e., these p-chains whose boundary is 0.
+
+The group of **p-boundaries** is
+$$
+B_p(K) = \{ \partial_{p+1}c \mid c \in C_{p+1}(K) \}.
+$$
+Thus $B_p(K) \subseteq Z_p(K) \subseteq C_p(K)$.
+
+**Def:** We define the p-th **homology group** of $K$ to be
+$$
+H_p(K) := \frac{Z_p(K)}{B_p(K)} \quad \left[\text{Note that } \frac{C_p(K)}{Z_p(K)} \cong B_{p-1}(K) \right] \quad \text{Exercise.}
+$$
+
+**Examples**
+1. **Hollow Triangle**
+$K = \{ v_0, v_1, v_2, e_{01}, e_{12}, e_{20} \}$. $\dim(K)=1$.
+The chain complex is
+$$
+0 \to C_1 \xrightarrow{\partial_1} C_0 \to 0
+$$
+$$
+C_1 = \mathbb{Z}e_{01} \oplus \mathbb{Z}e_{12} \oplus \mathbb{Z}e_{20} \to C_0 = \mathbb{Z}v_0 \oplus \mathbb{Z}v_1 \oplus \mathbb{Z}v_2.
+$$
+The map is: $$ \partial_1 (a, b, c) = (c-a, a-b, b-c) $$ $$ H_0(K) = \frac{Z_0(K)}{B_0(K)} = \frac{\{ (a, b, c) \mid c=b=a \}}{0} = a(1, 1, 1) $$ $$ \therefore \underbrace{ H_0(K) \cong \mathbb{Z} }_{ (1, 1, 1) \mapsto  1  } $$ $$
+H_0(K) = \frac{Z_0(K)}{B_0(K)} = \frac{C_0}{\text{im}(\partial_1)}
+$$
+
+Now consider the map
+$$
+\phi: C_0 \to \mathbb{Z}
+$$
+$$
+(x, y, z) \mapsto x+y+z
+$$
+
+Then we see that $\text{im}(\partial_1) \in \ker\phi$ and $\phi$ is onto. Finally observe that $\ker(\phi) \subseteq \text{im}(\partial_1)$ and hence they are equal. (Given $x+y+z=0$, try $c=0$, $a=-x$, $b=z$. )
+
+Thus,
+$$
+H_0(K) = \frac{C_0}{\text{im}(\partial_1)} = \frac{C_0}{\ker(\phi)} \cong \mathbb{Z}
+$$
+$$
+\overline{v_2} = \overline{v_1} = \overline{v_0} \quad \longleftarrow \quad 1
+$$
+2) Same triangle with one edge oriented the other way.
+$K = \{ v_0, v_1, v_2, e_{01}, e_{12}, e_{20} \}$.
+$$
+\mathbb{Z}e_{01} \oplus \mathbb{Z}e_{12} \oplus \mathbb{Z}e_{20} \to \mathbb{Z}v_0 \oplus \mathbb{Z}v_1 \oplus \mathbb{Z}v_2.
+$$
+$$
+(a, b, c) \mapsto (-c-a, a-b, b+c)
+$$
+
+
+
