@@ -994,19 +994,20 @@ G_{12} \ar[r,"k_1"] \ar[d,"k_2"] & G_1 \\
 G_2 &
 \end{tikzcd}
 \end{document}
-``` 
+```
 $(i)$ If $G_{i}, G_{12}$ are abelian, then $\exists$ a unique triple $(G,G_{1}\xrightarrow{j_{1}} G, G_{2}\xrightarrow{j_{2}}G)$ which is universal for other abelian groups:
+
 ```tikz
 \usepackage{tikz-cd}
 \begin{document}
 \begin{tikzcd}
-G_{12} \ar[r,"k_1"] \ar[d,"k_2"] & G_1 \ar[d,"j_1"] \ar[ddr,bend left=15,"f_1"] \\
+G_{12} \ar[r,"k_1"] \ar[d,"k_2"] & G_1 \ar[d,"j_1"] \ar[ddr,bend left=15,"f_1"] & \\
 G_2 \ar[r,"j_2"] \ar[drr,bend right=15,"f_2"'] & G \ar[dr,dashed,"\exists ! f"] & \\
 & & H
-
 \end{tikzcd}
 \end{document}
 ```
+
 and given an abelian group $H$ and maps $G_{i}\xrightarrow{j_{i}} H$ such that $f_{1}k_{1} = f_{2}k_{2}$ then $\exists!$ $f:G\to H$ such that $f_{i} = fj_{i}$
 
 $(ii)$ In general with $G_{i}$ not necessarily abelian, we have a similar universal triple for testing against a general group H.
@@ -1463,14 +1464,28 @@ $$
 $$
 C_1 = \mathbb{Z}e_{01} \oplus \mathbb{Z}e_{12} \oplus \mathbb{Z}e_{20} \to C_0 = \mathbb{Z}v_0 \oplus \mathbb{Z}v_1 \oplus \mathbb{Z}v_2.
 $$
-The map is: $$ \partial_1 (a, b, c) = (c-a, a-b, b-c) $$ $$ H_0(K) = \frac{Z_0(K)}{B_0(K)} = \frac{\{ (a, b, c) \mid c=b=a \}}{0} = a(1, 1, 1) $$ $$ \therefore \underbrace{ H_0(K) \cong \mathbb{Z} }_{ (1, 1, 1) \mapsto  1  } $$ $$
+The map is: 
+$$ 
+\partial_1 (a, b, c) = (c-a, a-b, b-c) 
+$$
+ $$
+H_0(K) = \frac{Z_0(K)}{B_0(K)} = \frac{\{ (a, b, c) \mid c=b=a \}}{0} = a(1, 1, 1) 
+$$
+
+$$
+\therefore \underbrace{ H_0(K) \cong \mathbb{Z} }_{ (1, 1, 1) \mapsto  1  } 
+$$
+
+$$
 H_0(K) = \frac{Z_0(K)}{B_0(K)} = \frac{C_0}{\text{im}(\partial_1)}
 $$
 
 Now consider the map
+
 $$
 \phi: C_0 \to \mathbb{Z}
 $$
+
 $$
 (x, y, z) \mapsto x+y+z
 $$
