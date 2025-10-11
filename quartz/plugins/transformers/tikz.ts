@@ -23,9 +23,9 @@ export const Tikz: QuartzTransformerPlugin = () => {
         },
         externalResources() {
             return {
-                css: [{ content: '/static/css/styles.css' }],
+                css: [{ content: 'https://shemei666.github.io/public-notes/static/css/styles.css' }],
                 js: [{
-                    src: '/static/js/tikzjax.js',
+                    src: 'https://shemei666.github.io/public-notes/static/js/tikzjax.js',
                     loadTime: "beforeDOMReady",
                     contentType: "external",
                 }]
