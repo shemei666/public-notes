@@ -581,10 +581,12 @@ tr {
   }
 }
 
-img {
+img,
+.tikzblock svg {
   max-width: 100%;
   border-radius: 5px;
   margin: 1rem 0;
+  padding: 2rem;
   content-visibility: auto;
   display: block;
   margin-left: auto;
@@ -592,15 +594,19 @@ img {
 
 }
 
-img[alt="diagram"] {
+.tikzblock svg text {
+  fill: black;
+}
+
+.tikzblock svg {
   transform: scale(1.5);
 }
 
-:root[saved-theme="dark"] img[alt="diagram"] {
+:root[saved-theme="dark"] .tikzblock svg {
   filter: invert(1);
 }
 
-:root[saved-theme="light"] img[alt="diagram"] {
+:root[saved-theme="light"] .tikzblock svg {
   filter: none;
 }
 
