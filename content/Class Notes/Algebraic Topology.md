@@ -1538,14 +1538,14 @@ $Z_{1}(L) = Z_{1}(K)$ as before, while $B_{1}(L)=im(\partial_{2})=\mathbb{Z}(1,1
 4) $K = \text{solid tetrahedron}$
 $= 3\text{-simplex}$
 
-The chain complex is:
+The chain complex is: #recheck 
 $$
 0 \to C_3 \xrightarrow{\partial_3} C_2 \xrightarrow{\partial_2} C_1 \xrightarrow{\partial_1} C_0 \to 0
 $$
 $$
 \mathbb{Z} \xrightarrow{n \mapsto (-n, n, n, n)} \mathbb{Z}^4 \xrightarrow{(a,b,c,d) \mapsto (a+b, c-a, -b, a+d, b+d, c+d)} \mathbb{Z}^6 \xrightarrow{} \mathbb{Z}^4
 $$
-
+![[IMG_20251010_165537.jpg]]
 Simplex basis for the chains:
 $C_3$: $[0123]$
 $C_2$: $[012], [013], [023], [123]$
@@ -1566,3 +1566,109 @@ Geometrically, when is a 1-chain a 1-cycle in a simplicial complex $K$?
 1-cycle is also a boundary, hence gives 0 element in the homology. Consider the 1-cycle $e_{1}+e_{2}+e_{3} +e_{4} = \partial(\sigma+\tau)$. It is a boundary because $\partial \sigma = e_{1} - e_{5} + e_{4}, \partial(\tau)= e_{5}+e_{2}+e_{3}$.
 ![[IMG_20251010_171522.jpg]]
 
+**Heuristics:** 1-chain is a 1-cycle iff it is an abelian sum of simple 1-cycles = simple loops. 1-cycle gives the 0-element in $H_1$ if it can be filled, i.e., $\partial(\text{2-chain})$. $H_1$ measures the presence of **1-dim'l holes** in $|K|$.
+
+Similarly one expects $H_n(K)$ to measure the size of $n$-dimensional holes in $|K|$.
+
+We say that a $p$-chain $c \in C_p(K)$ is **homologous to 0** or $c$ **bounds** / is a **boundary** if $c = \partial_{p+1} d$ for some $(p+1)$-chain $d$. In this case $c$ is also a $p$-cycle and its image in $H_p(K)$ is $0$.
+(In general, for a $p$-cycle $c$, its image in $H_p(K)$ is called its **homology class**.)
+
+---
+
+We say that 2 $p$-chains $c, c'$ are **homologous** (to each other) if $c-c'$ is homologous to 0.
+
+We say that a $p$-chain $c$ is **carried by a subcomplex $L \subseteq K$** (or $c$ is **supported in $L$**) if $c$, thought of as a function on the set of oriented simplices in $K$, is 0 on the simplices not in $L$.
+
+**Example**
+![[IMG_20251013_144546.jpg]]
+$M = \text{2-simplices}$ and its subsimplices.
+We'll prove that $H_1(M) \cong \mathbb{Z} \cong H_2(M)$.
+
+Let $\alpha$ be a 1-cycle on $M$. Then $\alpha = \sum_{i=1}^8 \lambda_i e_i$. We can knock down one of the coefficients. For example, $\alpha' = \alpha + \lambda \partial \sigma$.
+$\partial \sigma$ has $0$ coefficients for $e_1$ and so $\alpha'$ and $\alpha$ are homologous $(\alpha'-\alpha = \lambda\partial\sigma)$.
+Let $\alpha' = \sum_{i \geq2} \lambda'_i e_i'$.
+
+Now consider $\alpha'' = \alpha' + \lambda_2 '\partial\sigma_2$. Then $\alpha''$ is homologous to $\alpha'$ (and $\alpha$) and $\alpha'' = \sum_{i \ne 3} \lambda_i e_i$ as $\partial\sigma_2$ has no coeff for $e_1$.
+
+Finally $\alpha''' = \alpha'' + \lambda_3'' \partial\sigma_3$ is homologous to $\alpha'', \alpha'$ and $\alpha$.
+And $\alpha'''$ is supported on the subcomplex.
+
+(1-dimensional subcomplex).
+Moreover, $\alpha$ is a 1-cycle if $\alpha', \alpha'', \alpha'''$ are.
+Finally we see that if $\alpha''' = \sum_{i \geq 4} \lambda_i e_i$,
+then $\lambda_4''' = 0$ because the coefficient of $\alpha$ in $\partial \alpha'''$ is $\lambda_4'''$ and $\partial \alpha''' = 0$ as $\alpha'''$ is a 1-cycle.
+Thus every cycle $\alpha$ is homologous to a cycle supported on the outer square.
+
+---
+
+![[IMG_20251013_150850.jpg]]
+Now, if $\alpha$ is a 1-cycle supported on the outer square, then with
+$\alpha = \sum_{i \ne 5}^8 k_i e_i$, we see that $\lambda_5 = \lambda_6 = \lambda_7 = \lambda_8$.
+$(\partial \alpha)(v_2) = \lambda_5 - \lambda_6$; $\lambda_5 = \lambda_6$ as $\partial \alpha = 0$.
+
+Similarly $(\partial \alpha)(v_3) = \lambda_6 - \lambda_7 \implies \lambda_6 = \lambda_7$, etc...
+Thus $\alpha = n (\sum_{i \ne 5}^8 e_i)$ which is in fact $\partial(\sigma_1 + \sigma_2 + \sigma_3 + \sigma_4)$
+as $\partial (\sigma_i) = e_5 + e_6 - e_1 \ldots$ ($e_1, e_2, e_3$ get cancelled out).
+Thus $H_1(M)=0$.
+
+If $\beta$ is a 2-cycle, then $\beta = n_1 \sigma_1 + n_2 \sigma_2 + n_3 \sigma_3 + n_4 \sigma_4$.
+Now $\partial \beta(e_1) = n_1 \implies n_1=0$.
+$0$ (since $\beta$ is a 2-cycle).
+Similarly $n_2=0$ because $\partial\beta(e_2)=0$.
+$n_3=0$
+
+---
+
+**Lemma:** Let $L$ be the **simplicial complex** as shown
+![[IMG_20251013_155608.jpg]]
+$Bd(L)=$ outer rectangle (12 vertices, 12 edges).
+We orient each 2-simplex $\sigma_i$ anticlockwise and 1-simplex arbitrarily. Then
+1. Every 1-cycle $\alpha$ of $L$ is homologous to a 1-cycle supported on the boundary $Bd(L)$.
+2. If $\beta$ is a 2-chain of $L$ such that $\partial \beta$ is supported on $Bd(L)$, then $\beta$ is a $\mathbb{Z}$-multiple of $\sum \sigma_i$.
+
+**Proof:** This is similar to the previous example:
+1. We first check that any 1-cycle $\alpha$ is homologous to a 1-cycle supported on the figure
+![[IMG_20251013_160027.jpg]]
+We may therefore assume that $\alpha$ is supported on the outer square. Next we see that the coefficients of $\alpha$ along the 4 inner hanging edges is $0$ since $\partial\alpha(v_i)=0$. This proves (1). (2) Since $\partial\beta$ is supported on $Bd(L)$, hence $\partial\beta(e)=0$ for any edge $e$ not in $Bd(L)$. But $e$ occurs in exactly 2 2-simplices, say $\sigma$ and $\xi$, and since $\sigma$ and $\xi$ are oriented anti-clockwise.
+
+$\partial\sigma$ and $\partial\xi$ are negatives of each other and equal $\pm e$.
+
+Therefore if $\beta = \sum n_i \sigma_i$, then $\partial\beta=0$ forces $n_1=n_2$.
+
+Doing this for every edge not in $Bd(L)$ shows that all the $n_i$'s are equal. This proves (2). $\quad \blacksquare$
+
+**Theorem** Let $L=$  with $T = L/\sim$ (Torus).
+![[IMG_20251013_161332.jpg]]
+The edges of the large square are identified according to the labels: $a, b, c, d$ along the top, bottom, left, and right sides.
+
+Orient each 2-simplex $\sigma$ in $L$ anti-clockwise and induce this orientation on the 2-simplices of $T$.
+Then
+(a) $H_2(T) \cong \mathbb{Z}$, a generator being $\sum \sigma$.
+(b) $H_1(T) \cong \mathbb{Z} \oplus \mathbb{Z}$, generators being cycles.
+(c) $H_0(T) \cong \mathbb{Z}$, generated by any vertex.
+
+**Proof:** Consider the induced map $g: |L| \to |T|$.
+It is a quotient map. Then the outer rectangle $Bd(L)$ maps to a subset $A \subseteq T$ which looks like: [Diagram of two triangles joined by an edge, with vertices labeled and edges a, b, c labeled].
+![[IMG_20251013_162648.jpg]]
+Using the previous lemma, we get:
+(1) Every 1-cycle on $T$ is homologous to a 1-cycle supported on $A$.
+(2) If $\beta$ is a 2-chain such that $\partial\beta$ is supported on $A$, then $\beta$ is a $\mathbb{Z}$-multiple of $\sum \sigma$.
+In addition we have:
+1'. If $\alpha$ is a 1-cycle supported o A, then $\alpha=mw+mz$ for $m,n \in \mathbb{Z}$
+(2') $\partial_{2}(\sum \sigma_{i}) = 0$.
+
+Indeed for (1') we use that $A = \text{[Diagram of identified edges forming a square]}$
+![[IMG_20251013_163732.jpg]]
+and look at each vertex to get the desired form $(\partial\alpha=0)$.
+While (2') holds because $(\partial_2(\sum \sigma_i))(e) = 0$ for all edges by direct calculation as all 2-simplices are oriented anti-clockwise.
+Now we prove:
+(a) If $\beta$ is a 2-cycle, then $\partial\beta = 0$, and hence by (2), $\beta = n \sum \sigma_i$, which is a 2-cycle. $\implies H_2(T)$ is generated by $\sum \sigma_i$.
+
+---
+
+Since there are no 3-cycles, the 2-boundaries are $0$.
+$$
+H_2(T) \cong \mathbb{Z} \quad \text{with generator } \sum \sigma_i.
+$$
+(b) If $\alpha \in H_1(T)$, by (1), $\alpha$ may be assumed to be supported on $A$. Hence by (1'), $\alpha = m\omega + n\xi$, etc.
+$H_1(T)$ is generated by $\omega, \xi$. Now if $\alpha$ is homologous to $0$, then $\alpha = \partial_2 \sigma$ and by (2) $\beta = \sum_{}^{}\sigma_{i}$ and by (2') $\partial_{2}\beta = 0$.
