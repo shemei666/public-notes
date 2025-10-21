@@ -266,7 +266,7 @@ Pick $(i_{0},j_{0})$
 Assume that we have lifted F for the union of all $R_{ij} < R{i_{0}j_{0}}$ and the big L from the left and bottom edge of the square. Call this union A. then observe that $A \cap R_{ij}$ is always L-shaped
 #incomplete 
 
-**Theorem:** (Lifting of path homotopies) Let $p:(E,e_{0}) \to (B,b_{0})$ be a covering map. Let f,g be 2 paths in B with initial point $b_{0}$ and let $\tilde{f}, \tilde{g}$ denote the unique lifts in E starting at $e_{0}$. If $f , g$ are path homotopic with same final points, then so are $\tilde{f}$ and $\tilde{g}$ with same final points via the unique lift of the homotopy.
+**Theorem:** (Lifting of path homotopies) Let $p:(E,e_{0}) \to (B,b_{0})$ be a covering map. Let f,g be 2 paths in B with initial point $b_{0}$ and let $\tilde{f}, \tilde{g}$ denote the unique lifts in E starting at $e_{0}$. If $f , g$ are path homotopic with same final points, then so are $\tilde{f}$ and $\tilde{g}$ with same final points via the unique lift of the homotopy. 
 
 **Proof:** Assume that $F: I\times I \to B$ gives the path-homotopy from f to g with $f(1) = g(1) = b_{1}$. take the lift F and see that constant paths lift to constant paths, hence we can show that by uniqueness they have the same endpoint.
 #refactor
