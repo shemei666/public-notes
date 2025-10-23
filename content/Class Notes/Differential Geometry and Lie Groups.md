@@ -59,3 +59,17 @@ $$
 w(t_{0}) = w_{0}
 \frac{Dw}{dt}=0 ,\forall t
 $$
+
+# Post Midsem Material
+
+![[Pasted image 20251022213834.png]]
+
+![[Pasted image 20251022214130.png]]
+
+![[Pasted image 20251023002054.png]]
+
+![[Pasted image 20251023004033.png]]
+
+![[Pasted image 20251023010840.png]]
+
+![[Pasted image 20251023011320.png]]
