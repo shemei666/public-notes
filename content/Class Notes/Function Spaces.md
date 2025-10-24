@@ -2360,7 +2360,32 @@ $f * F_N(x) \to f(x)$
 $f * F_N \to f$ unif.
 
 $D_N(x) = \frac{\sin((N+1/2)x)}{\sin(x/2)}$
+$$
+F_N(x) = \frac{1}{N} \sum_{k=0}^{N-1} \frac{\sin((k+1/2)x)}{\sin(x/2)} = \frac{1}{N \sin(x/2)} \sum_{k=0}^{N-1} \sin((k+1/2)x)
+$$
+$$
+= \frac{1}{N \sin^2(x/2)} \sum_{k=1}^{N} (\cos(kx) - \cos((k+1)x))
+$$
+$$
+= \frac{1}{N \sin^2(x/2)} (1 - \cos(Nx)) = \frac{\sin^2(Nx/2)}{N \sin^2(x/2)}.
+$$
 
+**Proposition:** $F_N$ is a good kernel.
+(i) $\frac{1}{2\pi} \int F_N(x) dx = \frac{1}{2\pi} \int \frac{D_0(x) + \cdots + D_{N-1}(x)}{N} dx = 1$
+
+(ii) For any $n$, $\frac{1}{2\pi} \int_{-\pi}^\pi |F_N(x)| dx = \frac{1}{2\pi} \int_{-\pi}^\pi F_N(x) dx = 1$.
+
+(iii) For each $0 < \delta \le \pi$, $\sin^2(x/2) \ge C_\delta > 0 \quad \forall \delta \le |x| \le \pi$.
+$$
+\frac{1}{2\pi} \int_{\delta \le |x| \le \pi} |F_N(x)| dx = \frac{1}{2\pi} \int_{\delta \le |x| \le \pi} \frac{\sin^2(Nx/2)}{N \sin^2(x/2)} dx \le \frac{1}{2\pi} \int_{\delta \le |x| \le \pi} \frac{1}{N C_\delta} dx < \frac{1}{N C_\delta} \cdot \frac{1}{2\pi} 2\pi \to 0 \quad \text{as } N \to \infty.
+$$
+
+**Fejér's Theorem:** If $f$ is an integrable function on the circle, the Fourier Series of $f$ is Cesàro summable to $f(x)$ at the point of continuity. If $f$ is cont. on the circle, then the Fourier Series of $f$ uniformly Cesàro summable to $f$.
+$$
+f: [-\pi, \pi) \to \mathbb{R} \to \mathbb{R}.
+$$
+
+**Corollary:** Let $f$ be a continuous function on the circle, then $f$ can be approximated uniformly by a sequence of trigonometric polynomials.
 
 ## Abel Summability
 
