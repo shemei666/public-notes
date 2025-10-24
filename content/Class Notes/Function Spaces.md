@@ -2055,6 +2055,8 @@ $$
 = \frac{1-r^2}{1-2r\cos\theta+r^2\cos^2\theta+r^2\sin^2\theta} = \frac{1-r^2}{1-2r\cos\theta+r^2} 
 $$
 
+
+
 ### Convolution
 Let $f,g$ be two $2\pi$ periodic integrable functions on $\mathbb{R}$ then, the convolution of $f,g$, denoted by $f*g$ is 
 $$
