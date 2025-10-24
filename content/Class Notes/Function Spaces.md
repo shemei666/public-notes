@@ -2381,9 +2381,6 @@ $$
 $$
 
 **Fejér's Theorem:** If $f$ is an integrable function on the circle, the Fourier Series of $f$ is Cesàro summable to $f(x)$ at the point of continuity. If $f$ is cont. on the circle, then the Fourier Series of $f$ uniformly Cesàro summable to $f$.
-$$
-f: [-\pi, \pi) \to \mathbb{R} \to \mathbb{R}.
-$$
 
 **Corollary:** Let $f$ be a continuous function on the circle, then $f$ can be approximated uniformly by a sequence of trigonometric polynomials.
 
