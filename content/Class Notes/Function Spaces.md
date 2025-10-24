@@ -2291,3 +2291,4 @@ $x = (x_1, \ldots, x_n)$, $y = (y_1, \ldots, y_n)$.
 $$
 ||x|| = \sqrt{\sum_{i=1}^n |x_i|^2}.
 $$
+
