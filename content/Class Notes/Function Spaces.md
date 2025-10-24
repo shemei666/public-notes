@@ -2254,7 +2254,7 @@ $\implies f*g$ is continuous.
 
 **Lemma:** Let $f$ be integrable on the circle and bounded by $B$. Then there exists a sequence of continuous functions $\{f_k\}_{k=1}^\infty$ on the circle such that $\{f_k\} \to f$ in $L^1$, i.e., $\int_{-\pi}^{\pi} |f(x) - f_k(x)| dx \to 0$ as $k \to \infty$ and $\sup_{x\in[- \pi,\pi]} |f_k(x)| \leq B \quad \forall k$.
 
-**Proof:** We skip this proof😴
+**Proof:** We skip this proof😴(Refer Stein and Shakarchi)
 
 We know that $f*g$ is $2\pi$ periodic and integrable. There exist sequences of continuous functions, $\{f_k\}$ and $\{g_k\}$, such that $\{f_k\} \to f$ in $L^1$ and $\{g_k\} \to g$ in $L^1$. i.e., $\int_{-\pi}^{\pi} |f_k(x)-f(x)|dx \to 0$ and $\int_{-\pi}^{\pi} |g_k(x)-g(x)|dx \to 0$ as $k\to\infty$.
 
@@ -2272,11 +2272,11 @@ $$
 \widehat{f_k*g_k}(n) &  = &  \hat{f}_k(n) \hat{g}_k(n) \\
 \downarrow &  & \downarrow \\
 \widehat{f*g}(n)  & =  & \hat{f}(n) \hat{g}(n)
-\end{align}
+\end{matrix}
 $$
 $$
 \begin{align}
-\lim_{k\to\infty} \widehat{f_k*g}(x)  & = \lim_{k\to\infty} \frac{1}{2\pi} \int_{-\pi}^\pi (f_k*g)(y) e^{-in\theta} d\theta  \\
+\lim_{k\to\infty} \widehat{f_k*g_{k}}(x)  & = \lim_{k\to\infty} \frac{1}{2\pi} \int_{-\pi}^\pi (f_k*g_{k})(y) e^{-in\theta} d\theta  \\
  & = \frac{1}{2\pi} \int_{-\pi}^{\pi} (f * g) e^{-inx}dx  \\
  & = \widehat{f*g} (n)
 \end{align}
@@ -2291,14 +2291,7 @@ $$
 $$
 \implies \hat{f}_k(n) \to \hat{f}(n) \quad \forall k.
 $$
-Therefore, $\widehat{f_k*g_k}(n) \to \hat{f}(n) \hat{g}(n)$.
-$$
-\downarrow
-$$
-$$
-\widehat{f*g}(n)
-$$
-So, $\widehat{f*g}(n) = \hat{f}(n) \hat{g}(n) \quad \forall n \in \mathbb{Z}$.
+Therefore, $\widehat{f_k*g_k}(n) \to \hat{f}(n) \hat{g}(n) \widehat{f*g}(n)$. So, $\widehat{f*g}(n) = \hat{f}(n) \hat{g}(n) \quad \forall n \in \mathbb{Z}$.
 
 ---
 ## Good Kernels:
@@ -2306,6 +2299,8 @@ A family of functions $\{K_n(x)\}$ on the circle is called a **family of good ke
 i) $\frac{1}{2\pi} \int K_n(x) dx = 1 \quad \forall n \in \mathbb{Z}^+$.
 ii) $\frac{1}{2\pi} \int |K_n(x)| dx \le M \quad \forall n \ge 1$.
 iii) $\frac{1}{2\pi} \int_{\delta \le |x| \le \pi} |K_n(x)| dx \to 0 \quad \text{as } n \to \infty \text{ for any } 0 < \delta \le \pi$.
+
+
 ## Abel Summability
 
 $\sum_{k=0}^{\infty} c_k$ is called **Abel summable** to some value $S$ if for each $0 \le r < 1$,
