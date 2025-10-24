@@ -1682,3 +1682,39 @@ TODO: Homology calculation for surfaces rectangle, torus, klein, RP2, exercise: 
 
 $H_{0}$ of a simplicial complex, on the set of vertices $\{ v_{0},\dots,v_{n} \}$ of $K$ we define a relation: $v_{i} \sim v_{j}$ if $\exists$ a sequence of vertices $a_{0} = v_{i},a_{1},a_{2},\dots,a_{m-1},v_{j}=a_{m}$ such that $[a_{l},a_{l+1}]$ is a 1-simplex in $K$. Look at the equivalence relation relation formed by it also denoted as $\sim$ .
 
+![[IMG_20251023_164147.jpg]]
+
+![[IMG_20251023_164644.jpg]]
+
+![[IMG_20251023_165025.jpg]]
+
+![[IMG_20251023_165722.jpg]]
+
+![[IMG_20251023_170550.jpg]]
+![[IMG_20251023_173049.jpg]]
+... $\varepsilon(c)\omega$ if p=0
+
+![[IMG_20251023_173034.jpg]]
+
+![[IMG_20251024_153950.jpg]]
+
+![[IMG_20251024_155012.jpg]]
+indexing error on $H_n$ should be $n-1$ 
+
+![[IMG_20251024_160239.jpg]]
+
+![[IMG_20251024_161638.jpg]]
+
+![[IMG_20251024_162425.jpg]]
+
+![[IMG_20251024_164445.jpg]]
+
+![[IMG_20251024_170630.jpg]]
+
+![[IMG_20251024_171700.jpg]]
+
+![[IMG_20251024_172751.jpg]]
+
+![[IMG_20251024_174326.jpg]]
+
+![[IMG_20251024_174406.jpg]]
