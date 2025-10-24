@@ -2174,10 +2174,10 @@ $$
 $$
 For second part,
 $$
-\sum_{n=-\infty}^\infty |\hat{f}(n)| \le \sum_{n=-\infty}^\infty \frac{M}{n^2} = 2M \sum_{n=1}^\infty \frac{1}{|n|^2} < \infty.
+\sum_{n=-\infty}^\infty |\hat{f}(n)| \le \sum_{\substack{n \in \mathbb{Z} \\ \lvert n \rvert >a}} \frac{M}{n^2} \leq  2M \sum_{n=1}^\infty \frac{1}{|n|^2} < \infty
 $$
-Using the previous corollary, we conclude the Fourier series of $f$ converges absolutely and uniformly on the circle.
 
+Using the previous corollary, we conclude the Fourier series of $f$ converges absolutely and uniformly on the circle. $\quad \blacksquare$
 ### Convolution
 Let $f,g$ be two $2\pi$ periodic integrable functions on $\mathbb{R}$ then, the convolution of $f,g$, denoted by $f*g$ is 
 $$
@@ -2259,8 +2259,49 @@ $\implies f*g$ is continuous.
 We know that $f*g$ is $2\pi$ periodic and integrable. There exist sequences of continuous functions, $\{f_k\}$ and $\{g_k\}$, such that $\{f_k\} \to f$ in $L^1$ and $\{g_k\} \to g$ in $L^1$. i.e., $\int_{-\pi}^{\pi} |f_k(x)-f(x)|dx \to 0$ and $\int_{-\pi}^{\pi} |g_k(x)-g(x)|dx \to 0$ as $k\to\infty$.
 
 We will show that $\{f_k * g_k\} \to f*g$ uniformly. $f*g - f_k*g_k = (f-f_k)*g + f_k*(g-g_k)$. We will show that the first term goes to zero uniformly. $$ |(f-f_k)*g(x)| \leq \frac{1}{2\pi} \int_{-\pi}^\pi |(f-f_k)(y)| |g(x-y)| dy $$ $$ \leq \frac{1}{2\pi} \sup_{y\in[-\pi,\pi]} |g(y)| \int_{-\pi}^\pi |f(y)-f_k(y)| dy \to 0 \quad \text{as} \ k\to\infty. $$
-#incomplete 
+$f - f_k \to 0$ uniformly. ($\implies ||f-f_k||_\infty \to 0$). (The RHS of the inequality above is independent of $x$)
+Similarly $f_{k} * (g - g_{k}) \to 0$ uniformly,
+$$
+\implies f_k*g_{k} \to f*g \text{ uniformly}
+$$
+$$
+\implies f*g \text{ is continuous.}
+$$
+$$
+\widehat{f_k*g_k}(n) = \hat{f}_k(n) \hat{g}_k(n)
+$$
+?
+$$
+\widehat{f*g}(n) = \hat{f}(n) \hat{g}(n)
+$$
+$$
+\lim_{k\to\infty} \widehat{f_k*g}(x) = \lim_{k\to\infty} \frac{1}{2\pi} \int_{-\pi}^\pi (f_k*g)(y) e^{-in\theta} d\theta \quad (?)
+$$
+Also,
+$$
+|\hat{f}(n) - \hat{f}_k(n)| = \left| \frac{1}{2\pi} \int_{-\pi}^\pi (f(x) - f_k(x)) e^{-inx} dx \right|
+$$
+$$
+\le \frac{1}{2\pi} \int_{-\pi}^\pi |f(x) - f_k(x)| dx \to 0 \quad \text{as } k \to \infty.
+$$
+$$
+\implies \hat{f}_k(n) \to \hat{f}(n) \quad \forall k.
+$$
+Therefore, $\widehat{f_k*g_k}(n) \to \hat{f}(n) \hat{g}(n)$.
+$$
+\downarrow
+$$
+$$
+\widehat{f*g}(n)
+$$
+So, $\widehat{f*g}(n) = \hat{f}(n) \hat{g}(n) \quad \forall n \in \mathbb{Z}$.
 
+---
+## Good Kernels:
+A family of functions $\{K_n(x)\}$ on the circle is called a **family of good kernels** if:
+i) $\frac{1}{2\pi} \int K_n(x) dx = 1 \quad \forall n \in \mathbb{Z}^+$.
+ii) $\frac{1}{2\pi} \int |K_n(x)| dx \le M \quad \forall n \ge 1$.
+iii) $\frac{1}{2\pi} \int_{\delta \le |x| \le \pi} |K_n(x)| dx \to 0 \quad \text{as } n \to \infty \text{ for any } 0 < \delta \le \pi$.
 ## Abel Summability
 
 $\sum_{k=0}^{\infty} c_k$ is called **Abel summable** to some value $S$ if for each $0 \le r < 1$,
