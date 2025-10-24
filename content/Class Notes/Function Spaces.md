@@ -2294,7 +2294,7 @@ $$
 Therefore, $\widehat{f_k*g_k}(n) \to \hat{f}(n) \hat{g}(n) \widehat{f*g}(n)$. So, $\widehat{f*g}(n) = \hat{f}(n) \hat{g}(n) \quad \forall n \in \mathbb{Z}$.
 
 ---
-## Good Kernels:
+### Good Kernels:
 A family of functions $\{K_n(x)\}$ on the circle is called a **family of good kernels** if:
 i) $\frac{1}{2\pi} \int K_n(x) dx = 1 \quad \forall n \in \mathbb{Z}^+$.
 ii) $\frac{1}{2\pi} \int |K_n(x)| dx \le M \quad \forall n \ge 1$.
@@ -2335,7 +2335,7 @@ $$
 \frac{1}{2\pi} \int_{-\pi}^\pi |D_N(\theta)| d\theta \ge C \log N \quad \text{for large } N.
 $$
 
-## Cesàro Summability
+### Cesàro Summability
 
 $\sum a_k$
 $$
@@ -2343,7 +2343,7 @@ S_n = \sum_{k=0}^n a_k, \quad \sigma_N = \frac{S_0 + S_1 + \cdots + S_{N-1}}{N}
 $$
 If $\sigma_N \to S$, then we say $\sum a_n$ is **Cesàro summable** and $S$ is the Cesàro sum.
 
-## Fejér Kernel
+### Fejér Kernel
 
 Let $S_n(f)(\theta)$ be the partial sums of the Fourier series of $f$.
 $$
@@ -2384,7 +2384,7 @@ $$
 
 **Corollary:** Let $f$ be a continuous function on the circle, then $f$ can be approximated uniformly by a sequence of trigonometric polynomials.
 
-## Abel Summability
+### Abel Summability
 
 $\sum_{k=0}^{\infty} c_k$ is called **Abel summable** to some value $S$ if for each $0 \le r < 1$,
 $$
@@ -2501,7 +2501,7 @@ $$
 $$
 Mean Square Convergence or convergence in $L^2$ norm.
 
-## Inner Product
+### Inner Product
 
 Let $V$ be a vector space over $\mathbb{C}$.
 A map $\langle \cdot, \cdot \rangle: V \times V \to \mathbb{C}$ is called an **inner product** if:
@@ -2578,7 +2578,7 @@ $$
 \langle f, g \rangle_2 = \frac{1}{2\pi} \int_{-\pi}^\pi f(\theta) \overline{g(\theta)} d\theta
 $$
 
-**Thm:** Let $f$ be integrable on the circle. Then
+**Theorem:** Let $f$ be integrable on the circle. Then
 i) $||f - S_N(f)||_2 \to 0$ as $N \to \infty$. In other words,
 $$
 \frac{1}{2\pi} \int_{-\pi}^\pi |f(\theta) - S_N(f)(\theta)|^2 d\theta \to 0 \quad \text{as } N \to \infty.
