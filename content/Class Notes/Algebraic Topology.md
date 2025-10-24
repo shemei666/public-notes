@@ -1703,3 +1703,5 @@ indexing error on $H_n$ should be $n-1$
 
 ![[IMG_20251024_160239.jpg]]
 
+![[IMG_20251024_161638.jpg]]
+
