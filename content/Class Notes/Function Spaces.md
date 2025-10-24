@@ -2075,7 +2075,37 @@ We define
 $$
 P(\theta) = \epsilon + \cos\theta \text{ for some } \epsilon > 0 \text{ s.t. }
 $$
+$|P(\theta)| < 1 - \epsilon/2 \quad \forall \delta \le |\theta| \le \pi$.
+$\exists 0 < \eta < \delta \le \pi$ s.t.
+$$
+P(\theta) > 1 + \epsilon/2 \quad \forall 0 \le |\theta| < \eta.
+$$
+Define $P_k(\theta) = [P(\theta)]^k$. $P_k$ are **trigonometric polynomials**.
+Let $P_N(\theta) = \sum_{n=-N}^N a_n e^{in\theta}$.
+$$
+\int_{-\pi}^\pi P_k(\theta) f(\theta) d\theta = \int_{-\pi}^\pi \left( \sum_{n=-N}^N a_n e^{in\theta} \right) f(\theta) d\theta
+$$
+$$
+= \sum_{n=-N}^N a_n \int_{-\pi}^\pi e^{in\theta} f(\theta) d\theta = \sum_{n=-N}^N a_n \hat{f}(-n) = 0.
+$$
+$$
+\left| \int_{\delta \le |\theta| \le \pi} P_k(\theta) f(\theta) d\theta \right| \le (1-\epsilon/2)^k \cdot B \cdot \pi \to 0 \quad \text{as } k \to \infty.
+$$
+($f$ integrable, $\int |f| < \infty$, $|f| \le B$)
 
+$\int_{|\theta| \ge \delta} P_k(\theta) f(\theta) d\theta \to 0 \quad \forall k \in \mathbb{N}$.
+
+$$
+\int_{n \le |\theta| < \delta} P_k(\theta) f(\theta) d\theta \ge \left(\frac{1+\epsilon}{2}\right)^k \frac{f(0)}{2} 2\eta \to \infty \quad \text{as } k \to \infty.
+$$
+$$
+\int_{-\pi}^\pi P_k(\theta) f(\theta) d\theta = \int_{|\theta|<\eta} P_k(\theta) f(\theta) d\theta + \int_{\eta \le |\theta| < \delta} P_k(\theta) f(\theta) d\theta + \int_{\delta \le |\theta| \le \pi} P_k(\theta) f(\theta) d\theta.
+$$
+The first term $\to \infty$ as $k \to \infty$.
+The third term $\to 0$ as $k \to \infty$.
+The middle term $\to 0$ as $k \to \infty$.
+
+Therefore, $f(0)=0$.
 
 ### Convolution
 Let $f,g$ be two $2\pi$ periodic integrable functions on $\mathbb{R}$ then, the convolution of $f,g$, denoted by $f*g$ is 
