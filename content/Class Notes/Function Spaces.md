@@ -2055,6 +2055,26 @@ $$
 = \frac{1-r^2}{1-2r\cos\theta+r^2\cos^2\theta+r^2\sin^2\theta} = \frac{1-r^2}{1-2r\cos\theta+r^2} 
 $$
 
+**Question:** Let $f, g$ on $[-\pi, \pi]$, integrable $\text{and } \hat{f}(n) = \hat{g}(n) \ \forall n \in \mathbb{Z}$.
+Is $f=g$ everywhere?
+
+**Theorem:** Let $f$ be a function on circle that is integrable $\text{and } \hat{f}(n)=0 \ \forall n \in \mathbb{Z}$. Let $f$ be continuous at $\theta_{0}$ Then $f(\theta_0)=0$.
+
+**Proof:** Let $f$ be real valued $\text{and } \theta_0=0$. If possible, let $f(0)>0$. We will find a seq. of trigonometric polynomials $P_k$ such that
+$$
+\int P_k(\theta) f(\theta) d\theta = 0 \text{ but } \lim_{k\to\infty} \int P_k(\theta) f(\theta) d\theta = c + \in
+$$
+Observe that, since $f$ is cont. at $0$ $\text{and } f(0)>0$, $\exists \delta>0$ such that
+$$
+f(\theta) > \frac{f(0)}{2} \quad \forall |\theta|<\delta.
+$$
+$$
+\cos\theta = \frac{e^{i\theta} + e^{-i\theta}}{2}
+$$
+We define
+$$
+P(\theta) = \epsilon + \cos\theta \text{ for some } \epsilon > 0 \text{ s.t. }
+$$
 
 
 ### Convolution
