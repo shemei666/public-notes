@@ -2071,8 +2071,8 @@ $$
 2. $(cf)*g = c(f*g)$
 3. $(f*g)*h = f*(g*h)$
 4. $f*g = g*f$
-5. $f*g$  is continuous
-6. $\widehat{f*g}(n) = \hat{f}(n)*\hat{g}(n)$
+5. $\widehat{f*g}(n) = \hat{f}(n)*\hat{g}(n)$
+6. $f *g$ is continuous 
 
 **Proof:** 1. and 2. are easy to see
 3. Let $f,g,h$ be continuous
@@ -2096,7 +2096,7 @@ $$
 = \frac{1}{2\pi}\int_{-\pi}^\pi f(x-z)g(z)dz = (g*f)(x)
 $$
 
- 6
+ 5. 
 $$
 \widehat{(f*g)}(n) = \frac{1}{2\pi} \int_{-\pi}^{\pi} (f*g)(x)e^{-inx} dx
 $$
@@ -2110,7 +2110,7 @@ $$
 $$
 = \frac{1}{2\pi} \int_{-\pi}^{\pi} \hat{g}(n) \hat{f}(n)e^{-iny} dy = \hat{g}(n)\hat{f}(n)
 $$
-5. g is continuous on $\mathbb{R}$ and $2\pi$ periodic, so g is uniformly continuous on $\mathbb{R}$.
+6. g is continuous on $\mathbb{R}$ and $2\pi$ periodic, so g is uniformly continuous on $\mathbb{R}$.
 g continuous on $[-\pi, \pi]$
 
 >[!info]
