@@ -1699,4 +1699,5 @@ $H_{0}$ of a simplicial complex, on the set of vertices $\{ v_{0},\dots,v_{n} \}
 ![[IMG_20251024_153950.jpg]]
 
 ![[IMG_20251024_155012.jpg]]
-indexing error on $H
+indexing error on $H_n$ should be $n-1$ 
+
