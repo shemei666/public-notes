@@ -2538,7 +2538,35 @@ $$
 ||x|| = \sqrt{\sum_{i=1}^n |x_i|^2}.
 $$
 
+**Def:** Let $V$ be an **Inner Product Space** and $x, y \in V$. $x$ and $y$ are said to be **orthogonal** (denoted by $x \perp y$) if
+$$
+\langle x, y \rangle = 0.
+$$
 
+**Theorem:**
+(i) **(Pythagorean theorem)** If $x \perp y$, then $||x+y||^2 = ||x||^2 + ||y||^2$.
+
+(ii) **(Cauchy-Schwarz inequality)** $\forall x, y \in V$
+$$
+|\langle x, y \rangle| \le ||x|| \cdot ||y||.
+$$
+
+**Proof:** (i)
+$$
+||x+y||^2 = \langle x+y, x+y \rangle
+$$
+$$
+= \langle x, x \rangle + \langle y, x \rangle + \langle x, y \rangle + \langle y, y \rangle
+$$
+Since $x \perp y$, $\langle x, y \rangle = 0$, and by conjugate symmetry, $\langle y, x \rangle = \overline{\langle x, y \rangle} = 0$.
+$$
+= ||x||^2 + 0 + 0 + ||y||^2
+$$
+$$
+= ||x||^2 + ||y||^2
+$$
+
+#incomplete 
 
 
 
