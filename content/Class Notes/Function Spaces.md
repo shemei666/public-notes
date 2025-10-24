@@ -2300,6 +2300,67 @@ i) $\frac{1}{2\pi} \int K_n(x) dx = 1 \quad \forall n \in \mathbb{Z}^+$.
 ii) $\frac{1}{2\pi} \int |K_n(x)| dx \le M \quad \forall n \ge 1$.
 iii) $\frac{1}{2\pi} \int_{\delta \le |x| \le \pi} |K_n(x)| dx \to 0 \quad \text{as } n \to \infty \text{ for any } 0 < \delta \le \pi$.
 
+**Theorem:** Let $f$ be an integrable function on the circle, then
+$$
+\lim_{n\to\infty} f*K_n(x) \to f(x)
+$$
+when $f$ is cont. at $x$. If $f$ is cont. on the circle, then $f*K_n \to f$ uniformly.
+
+**Proof:** Let $f$ be cont. at $x \text{ and } \epsilon > 0$. Then $\exists \delta > 0$ s.t.
+$|f(x-y) - f(x)| < \epsilon$ when $|y| \le \delta$.
+$$
+|f*K_n(x) - f(x)| = \left| \frac{1}{2\pi} \int_{-\pi}^\pi K_n(y) f(x-y) dy - \frac{1}{2\pi} \int_{-\pi}^\pi K_n(y) f(x) dy \right|
+$$
+$$
+\le \frac{1}{2\pi} \int_{-\pi}^\pi |K_n(y)| |f(x-y) - f(x)| dy
+$$
+$$
+= \frac{1}{2\pi} \left[ \int_{|y| \le \delta} |K_n(y)| |f(x-y) - f(x)| dy + \int_{|y| > \delta} |K_n(y)| |f(x-y) - f(x)| dy \right]
+$$
+$$
+\le \frac{1}{2\pi} \left[ \epsilon \int_{|y| \le \delta} |K_n(y)| dy + 2B \int_{|y| > \delta} |K_n(y)| dy \right]
+$$
+$$
+< \frac{\epsilon M}{2\pi} + \frac{2B\epsilon}{2\pi} \quad \text{for } n \ge N(\delta, \epsilon) \text{ (since } f \text{ is bounded)}
+$$
+$$
+= \frac{C\epsilon}{2\pi}
+$$
+$\implies f*K_n(x) \to f(x)$ as $n \to \infty$.
+
+If $f$ is cont. on the circle, then $f$ is uniformly continuous. Then $\delta$ is independent of $x$. Therefore, $f*K_n \to f$ uniformly.
+
+**Note:** $S_N(\theta)$ is not a family of good kernels. One can show
+$$
+\frac{1}{2\pi} \int_{-\pi}^\pi |D_N(\theta)| d\theta \ge C \log N \quad \text{for large } N.
+$$
+
+## Cesàro Summability
+
+$\sum a_k$
+$$
+S_n = \sum_{k=0}^n a_k, \quad \sigma_N = \frac{S_0 + S_1 + \cdots + S_{N-1}}{N}
+$$
+If $\sigma_N \to S$, then we say $\sum a_n$ is **Cesàro summable** and $S$ is the Cesàro sum.
+
+## Fejér Kernel
+
+Let $S_n(f)(\theta)$ be the partial sums of the Fourier series of $f$.
+$$
+\sigma_N(f)(x) = \frac{S_0(f)(x) + S_1(f)(x) + \cdots + S_{N-1}(f)(x)}{N}
+$$
+$$
+= \frac{f * D_0(x) + f * D_1(x) + \cdots + f * D_{N-1}(x)}{N}
+$$
+$$
+= f * \left( \frac{D_0(x) + D_1(x) + \cdots + D_{N-1}(x)}{N} \right)
+$$
+Take $F_N(x) = \frac{D_0(x) + \cdots + D_{N-1}(x)}{N}$.
+$f * F_N(x) \to f(x)$
+$f * F_N \to f$ unif.
+
+$D_N(x) = \frac{\sin((N+1/2)x)}{\sin(x/2)}$
+
 
 ## Abel Summability
 
