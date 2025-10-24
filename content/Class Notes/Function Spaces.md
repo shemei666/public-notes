@@ -2572,14 +2572,184 @@ $$
 
 ![[IMG_20251024_141426.jpg]]
 
+$\mathcal{R} = \text{Set of all Riemann}$
+$L^2([-a, a])$
+$$
+\langle f, g \rangle_2 = \frac{1}{2\pi} \int_{-\pi}^\pi f(\theta) \overline{g(\theta)} d\theta
+$$
+
+**Thm:** Let $f$ be integrable on the circle. Then
+i) $||f - S_N(f)||_2 \to 0$ as $N \to \infty$. In other words,
+$$
+\frac{1}{2\pi} \int_{-\pi}^\pi |f(\theta) - S_N(f)(\theta)|^2 d\theta \to 0 \quad \text{as } N \to \infty.
+$$
+ii) **(Parseval's Equality):**
+$$
+\sum_{n=-\infty}^\infty |\hat{f}(n)|^2 = ||f||_2^2 = \frac{1}{2\pi} \int_{-\pi}^\pi |f(\theta)|^2 d\theta.
+$$
+
+**Proof:**
+For $n \in \mathbb{Z}$, let $\{e_n = e^{in\theta}\}$ be an orthonormal set in $R$.
+Because,
+$$
+\langle e_n, e_m \rangle = \frac{1}{2\pi} \int_{-\pi}^\pi e^{in\theta} e^{-im\theta} d\theta = \frac{1}{2\pi} \int_{-\pi}^\pi e^{i(n-m)\theta} d\theta
+$$
+$$
+= \begin{cases} 1 & \text{if } n=m \\ 0 & \text{otherwise} \end{cases}
+$$
+
 ![[IMG_20251024_141610.jpg]]
+
+Let $a_n = \langle f, e_n \rangle$. So, $S_N(f) = \sum_{|n|\le N} a_n e_n$.
+$$
+(f - S_N(f)) \perp e_n \quad \forall |n| \le N.
+$$
+$$
+\langle f - \sum_{|k|\le N} a_k e_k, e_n \rangle = \langle f, e_n \rangle - a_n \langle e_n, e_n \rangle = a_n - a_n = 0 \quad \forall |n| \le N.
+$$
+Therefore,
+$$
+(f - S_N(f)) \perp \sum_{|n|\le N} b_n e_n.
+$$
+
+---
+
+**Conclusion 1:**
+$$
+f = f - S_N(f) + \sum_{|n|\le N} a_n e_n
+$$
+$$
+\implies ||f||^2 = ||f - S_N(f)||^2 + \left|\left|\sum_{|n|\le N} a_n e_n\right|\right|^2 \quad \text{(Using Pythagoras)}
+$$
+$$
+= ||f - S_N(f)||^2 + \sum_{|n|\le N} |a_n|^2.
+$$
+$$
+\implies \sum_{|n|\le N} |a_n|^2 \le ||f||^2.
+$$
+$$
+\implies \sum_{n=-\infty}^\infty |a_n|^2 \le ||f||^2.
+$$
 
 ![[IMG_20251024_142526.jpg]]
 
+Let $\{\phi_n\}_{n\in\mathbb{Z}}$ be an orthonormal set and set $c_n = \langle f, \phi_n \rangle$.
+Then
+$$
+\sum_{n=-\infty}^\infty |c_n|^2 \le ||f||^2 \quad \text{(Bessel's Inequality)}
+$$
+**Conclusion 2:** For some complex number $\alpha$,
+$$
+||f - \sum_{|n|\le N} c_n \phi_n|| = ||f - S_N(f) + \sum_{|n|>N} c_n \phi_n|| \quad \text{where } c_n = \hat{f}(n).
+$$
+Using Pythagoras,
+$$
+||f - \sum_{|n|\le N} c_n \phi_n||^2 = ||f - S_N(f)||^2 + ||\sum_{|n|>N} c_n \phi_n||^2
+$$
+$$
+\implies ||f - S_N(f)|| \le ||f - \sum_{|n|\le N} c_n \phi_n||
+$$
+(Best approximation theorem)
+
 ![[IMG_20251024_143604.jpg]]
+
+
+Let $f$ be continuous. For $\epsilon > 0$, $\exists$ a trigonometric polynomial $P$ ($\text{deg } P = M, \text{ say}$) s.t.
+$$
+|f(\theta) - P(\theta)| < \epsilon \quad \forall \theta \in [-\pi, \pi]
+$$
+$$
+\implies \frac{1}{2\pi} \int_{-\pi}^\pi |f(\theta) - P(\theta)|^2 d\theta < \epsilon^2 \quad \left(P = \sum_{|n|\le M} c_n e_n\right)
+$$
+$$
+\implies ||f - P||_2^2 < \epsilon^2.
+$$
 
 ![[IMG_20251024_143627.jpg]]
 
+By Best Approximation Theorem,
+$$
+||f - S_N(f)||_2 \le ||f - P||_2 \le \epsilon \quad \forall N \ge M.
+$$
+$$
+\implies ||f - S_N(f)||_2 \to 0 \quad \text{as } N \to \infty \quad (\text{Since } \epsilon > 0 \text{ is arbitrary}).
+$$
+Now, if $f$ is Riemann integrable on $[-\pi, \pi]$, then for $\epsilon > 0$, $\exists$ a cont. function $g$ on $[-\pi, \pi]$ s.t.
+$$
+\sup_{\theta \in [-\pi, \pi]} |g(\theta)| \le \sup_{\theta \in [-\pi, \pi]} |f(\theta)| \quad \text{and } \frac{1}{2\pi} \int_{-\pi}^\pi |f(\theta) - g(\theta)| d\theta < \epsilon.
+$$
+
+---
+
+$$
+||f - g||_2^2 = \frac{1}{2\pi} \int_{-\pi}^\pi |f(\theta) - g(\theta)|^2 d\theta
+$$
+$$
+\le \frac{1}{2\pi} \int_{-\pi}^\pi |f(\theta) - g(\theta)| |f(\theta) - g(\theta)| d\theta
+$$
+$$
+\le \frac{2B}{2\pi} \int_{-\pi}^\pi |f(\theta) - g(\theta)| d\theta \quad (\text{where } 2B = \sup |f(\theta)-g(\theta)| \le 2 \sup |f|)
+$$
+$$
+\le \frac{B \epsilon}{2\pi}
+$$
+
 ![[IMG_20251024_150508.jpg]]
 
+Let $P$ be the trigonometric polynomial which approximates $g$.
+i.e., $||g - P||_2 < \epsilon$.
+$$
+||f - P||_2 \le ||f - g||_2 + ||g - P||_2
+$$
+$$
+\le \frac{B\epsilon}{2\pi} + \epsilon = \left(\frac{B}{2\pi} + 1\right)\epsilon.
+$$
+Using Best Approximation Theorem,
+$$
+||f - S_N(f)||_2 \le ||f - P||_2 < \left(\frac{B}{2\pi} + 1\right)\epsilon.
+$$
+Since $\epsilon$ is arbitrary, $||f - S_N(f)||_2 \to 0 \quad \text{as } N \to \infty$.
+
+---
+
+ii)
+$$
+||f||^2 = ||f - S_N(f)||^2 + \sum_{|n|\le N} |a_n|^2 \quad \left(\text{where } a_n = \langle f, e_n \rangle = \frac{1}{2\pi} \int_{-\pi}^\pi f(\theta) \overline{e_n(\theta)} d\theta\right)
+$$
+As $N \to \infty$, $||f - S_N(f)||^2 \to 0$.
+$$
+\implies \sum_{n=-\infty}^\infty |a_n|^2 = ||f||^2.
+$$
+$$
+\implies \sum_{n=-\infty}^\infty |\hat{f}(n)|^2 = ||f||_2^2 = \frac{1}{2\pi} \int_{-\pi}^\pi |f(\theta)|^2 d\theta.
+$$
+
 ![[IMG_20251024_150522.jpg]]
+
+**Remark:**
+$$
+\sum_{n \in \mathbb{Z}} |\hat{f}(n)|^2 = ||f||^2 < \infty.
+$$
+$\{ \hat{f}(n) \}_{n \in \mathbb{Z}} \in l^2(\mathbb{Z})$.
+
+**Riemann-Lebesgue Lemma:** Let $f$ be integrable on the circle. Then
+$$
+\hat{f}(n) \to 0 \quad \text{as } |n| \to \infty.
+$$
+**Proof:** Follows from the previous theorem.
+
+$S_N(f) \to f$ in $L^2$.
+$f \in L^2$. $f \in \mathcal{R}$. $\{e_n = e^{in\theta}\}$ is P.C.
+
+---
+
+For any inner product space the following result holds:
+
+**Prop:** Let $X$ be an **inner product space** and $\{u_n\}_{n=1}^\infty$ be an **orthonormal set** in $X$. Then
+$$
+\sum | \langle x, u_n \rangle |^2 \le ||x||^2 \quad \forall x \in X.
+$$
+Equality in the above holds iff
+$$
+x = \sum_{n=1}^\infty \langle x, u_n \rangle u_n.
+$$
