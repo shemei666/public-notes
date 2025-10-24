@@ -1695,3 +1695,4 @@ $H_{0}$ of a simplicial complex, on the set of vertices $\{ v_{0},\dots,v_{n} \}
 ... $\varepsilon(c)\omega$ if p=0
 
 ![[IMG_20251023_173034.jpg]]
+
