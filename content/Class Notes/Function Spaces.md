@@ -2268,14 +2268,18 @@ $$
 \implies f*g \text{ is continuous.}
 $$
 $$
-\widehat{f_k*g_k}(n) = \hat{f}_k(n) \hat{g}_k(n)
+\begin{matrix}
+\widehat{f_k*g_k}(n) &  = &  \hat{f}_k(n) \hat{g}_k(n) \\
+\downarrow &  & \downarrow \\
+\widehat{f*g}(n)  & =  & \hat{f}(n) \hat{g}(n)
+\end{align}
 $$
-?
 $$
-\widehat{f*g}(n) = \hat{f}(n) \hat{g}(n)
-$$
-$$
-\lim_{k\to\infty} \widehat{f_k*g}(x) = \lim_{k\to\infty} \frac{1}{2\pi} \int_{-\pi}^\pi (f_k*g)(y) e^{-in\theta} d\theta \quad (?)
+\begin{align}
+\lim_{k\to\infty} \widehat{f_k*g}(x)  & = \lim_{k\to\infty} \frac{1}{2\pi} \int_{-\pi}^\pi (f_k*g)(y) e^{-in\theta} d\theta  \\
+ & = \frac{1}{2\pi} \int_{-\pi}^{\pi} (f * g) e^{-inx}dx  \\
+ & = \widehat{f*g} (n)
+\end{align}
 $$
 Also,
 $$
