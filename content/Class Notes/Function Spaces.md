@@ -2071,7 +2071,7 @@ $$
 2. $(cf)*g = c(f*g)$
 3. $(f*g)*h = f*(g*h)$
 4. $f*g = g*f$
-5. $f*g = g*f$
+5. $f*g$  is continuous
 6. $\widehat{f*g}(n) = \hat{f}(n)*\hat{g}(n)$
 
 **Proof:** 1. and 2. are easy to see
@@ -2096,7 +2096,7 @@ $$
 = \frac{1}{2\pi}\int_{-\pi}^\pi f(x-z)g(z)dz = (g*f)(x)
 $$
 
-6 
+ 6
 $$
 \widehat{(f*g)}(n) = \frac{1}{2\pi} \int_{-\pi}^{\pi} (f*g)(x)e^{-inx} dx
 $$
@@ -2110,7 +2110,7 @@ $$
 $$
 = \frac{1}{2\pi} \int_{-\pi}^{\pi} \hat{g}(n) \hat{f}(n)e^{-iny} dy = \hat{g}(n)\hat{f}(n)
 $$
-**V)** g is continuous on $\mathbb{R}$ and $2\pi$ periodic, so g is uniformly continuous on $\mathbb{R}$.
+5. g is continuous on $\mathbb{R}$ and $2\pi$ periodic, so g is uniformly continuous on $\mathbb{R}$.
 g continuous on $[-\pi, \pi]$
 
 >[!info]
@@ -2291,6 +2291,10 @@ $x = (x_1, \ldots, x_n)$, $y = (y_1, \ldots, y_n)$.
 $$
 ||x|| = \sqrt{\sum_{i=1}^n |x_i|^2}.
 $$
+
+
+
+
 
 ![[IMG_20251024_141426.jpg]]
 
