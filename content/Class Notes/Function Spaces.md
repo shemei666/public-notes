@@ -2073,15 +2073,15 @@ $$
 $$
 We define
 $$
-P(\theta) = \epsilon + \cos\theta \text{ for some } \epsilon > 0 \text{ s.t. }
+P(\theta) = \epsilon + \cos\theta 
 $$
-$|P(\theta)| < 1 - \epsilon/2 \quad \forall \delta \le |\theta| \le \pi$.
-$\exists 0 < \eta < \delta \le \pi$ s.t.
+for some $\epsilon > 0$ such that $|P(\theta)| < 1 - \epsilon/2 \quad \forall \delta \le |\theta| \le \pi$ 
+$\exists 0 < \eta < \delta \le \pi$ such that
 $$
 P(\theta) > 1 + \epsilon/2 \quad \forall 0 \le |\theta| < \eta.
 $$
-Define $P_k(\theta) = [P(\theta)]^k$. $P_k$ are **trigonometric polynomials**.
-Let $P_N(\theta) = \sum_{n=-N}^N a_n e^{in\theta}$.
+Define $P_k(\theta) = [P(\theta)]^k$ where $P_k$ are **trigonometric polynomials**.
+Let $P_N(\theta) = \sum_{n=-N}^N a_n e^{in\theta}$
 $$
 \int_{-\pi}^\pi P_k(\theta) f(\theta) d\theta = \int_{-\pi}^\pi \left( \sum_{n=-N}^N a_n e^{in\theta} \right) f(\theta) d\theta
 $$
@@ -2089,23 +2089,94 @@ $$
 = \sum_{n=-N}^N a_n \int_{-\pi}^\pi e^{in\theta} f(\theta) d\theta = \sum_{n=-N}^N a_n \hat{f}(-n) = 0.
 $$
 $$
-\left| \int_{\delta \le |\theta| \le \pi} P_k(\theta) f(\theta) d\theta \right| \le (1-\epsilon/2)^k \cdot B \cdot \pi \to 0 \quad \text{as } k \to \infty.
+\left| \int_{\delta \le |\theta| \le \pi} P_k(\theta) f(\theta) d\theta \right| \le (1-\epsilon/2)^k \cdot B \cdot 2\pi \to 0 \quad \text{as } k \to \infty.
 $$
 ($f$ integrable, $\int |f| < \infty$, $|f| \le B$)
 
-$\int_{|\theta| \ge \delta} P_k(\theta) f(\theta) d\theta \to 0 \quad \forall k \in \mathbb{N}$.
+$$
+\int_{|\theta| \ge \delta} P_k(\theta) f(\theta) d\theta \to 0 \quad \forall k \in \mathbb{N}
+$$
 
 $$
-\int_{n \le |\theta| < \delta} P_k(\theta) f(\theta) d\theta \ge \left(\frac{1+\epsilon}{2}\right)^k \frac{f(0)}{2} 2\eta \to \infty \quad \text{as } k \to \infty.
+\int_{\eta \le |\theta| < \delta} P_k(\theta) f(\theta) d\theta \ge \left(1+\frac{\epsilon}{2}\right)^k \frac{f(0)}{2} 2\eta \to \infty \quad \text{as } k \to \infty.
 $$
 $$
-\int_{-\pi}^\pi P_k(\theta) f(\theta) d\theta = \int_{|\theta|<\eta} P_k(\theta) f(\theta) d\theta + \int_{\eta \le |\theta| < \delta} P_k(\theta) f(\theta) d\theta + \int_{\delta \le |\theta| \le \pi} P_k(\theta) f(\theta) d\theta.
+\begin{align}
+\int_{-\pi}^\pi P_k(\theta) f(\theta) d\theta  & = \int_{|\theta|<\eta} P_k(\theta) f(\theta) d\theta  \\
+ & + \int_{\eta \le |\theta| < \delta} P_k(\theta) f(\theta) d\theta \\
+  & + \int_{\delta \le |\theta| \le \pi} P_k(\theta) f(\theta) d\theta 
+\end{align}
 $$
 The first term $\to \infty$ as $k \to \infty$.
 The third term $\to 0$ as $k \to \infty$.
 The middle term $\to 0$ as $k \to \infty$.
 
-Therefore, $f(0)=0$.
+Which is a contradiction therefore $f(0)=0$
+Now for the general case let $f = u+iv$
+$$
+u(\theta) = \frac{f(\theta) + \overline{f(\theta)}}{2}, \quad v(\theta) = \frac{f(\theta) - \overline{f(\theta)}}{2i}
+$$
+Denote $\overline{f}(\theta) = \overline{f(\theta)}$
+$$
+\widehat{\overline{f}}(n) = \frac{1}{2\pi}\int_{-\pi}^{\pi} \overline{f(\theta)} e^{-in\theta} d\theta = \frac{1}{2\pi}\int_{-\pi}^{\pi} \overline{f(\theta) e^{in\theta}} d\theta = \overline{\hat{f}(-n)}.
+$$
+$\hat{u}(n) = \frac{1}{2}(\hat{f}(n) + \widehat{\overline{f}}(n)) = 0$ only if $\hat{v}(n) = 0 \quad \forall n \in \mathbb{Z}$.
+
+Applying previous assertion $\implies u(\theta)$ or $v(\theta)$ is $0$ at the point of continuity. So, $f(\theta)=0$ at the point of continuity. $\quad \blacksquare$
+
+**Corollary:** If $f$ is cont. on circle and $\hat{f}(n)=0 \ \forall n \in \mathbb{Z}$, then $f=0$.
+
+**Corollary:** If $f$ is cont. on circle and $\sum_{n=-\infty}^\infty |\hat{f}(n)| < \infty$, then $S_N(f)(\theta) \to f(\theta)$ uniformly $\text{and}$ absolutely.
+
+**Proof:** $\sum_{n=-\infty}^\infty \hat{f}(n) e^{in\theta}$ converges uniformly $\text{and}$ absolutely.
+Take $g(\theta) = \sum_{n=-\infty}^\infty \hat{f}(n) e^{in\theta}$.
+Since partial sums converge to $g(\theta)$ uniformly, so $g$ is continuous.
+$$
+\hat{g}(k) = \frac{1}{2\pi}\int_{-\pi}^{\pi} \left(\sum_{n=-\infty}^\infty \hat{f}(n) e^{in\theta}\right) e^{-ik\theta} d\theta
+$$
+$$
+= \frac{1}{2\pi} \sum_{n=-\infty}^\infty \hat{f}(n) \int_{-\pi}^{\pi} e^{i(n-k)\theta} d\theta
+$$
+$$
+= \hat{f}(k) \quad \forall k \in \mathbb{Z}.
+$$
+$\therefore f=g$ $\quad \blacksquare$
+
+6/10/25
+**Corollary:** If $f$ is cont. on circle $\text{and } \sum |\hat{f}(n)| < \infty$, then the Fourier Series of $f$ converges absolutely $\text{and}$ uniformly on the circle.
+
+**Notation:** $f(x) = O(g(x))$ as $x \to a$ means $|f(x)| \le C|g(x)|$ when $x$ approaches $a$.
+
+**Corollary:** Let $f$ be twice, continuously differentiable on the circle. Then $\hat{f}(n) = O(\frac{1}{n^2})$ as $|n| \to \infty$. Consequently, Fourier Series of $f$ converges absolutely $\text{and}$ uniformly on the circle.
+
+**Proof:** $\forall n \ge 1$,  we have,
+$$
+2\pi \hat{f}(n) = \int_{-\pi}^{\pi} f(\theta) e^{-in\theta} d\theta
+$$
+I.B.P. (Integration by Parts)
+$$
+= \left[ \frac{f(\theta) e^{-in\theta}}{-in} \right]_{-\pi}^{\pi} + \int_{-\pi}^{\pi} \frac{f'(\theta) e^{-in\theta}}{in} d\theta
+$$
+
+Since $f$ is on the circle, $f(\pi)=f(-\pi)$ and $e^{-in\pi} = e^{in\pi}$ (since $n \in \mathbb{Z}$), so the first term is 0.
+
+Again I.B.P.
+$$
+= \left[ \frac{f'(\theta) e^{-in\theta}}{(-in)^2} \right]_{-\pi}^{\pi} + \int_{-\pi}^{\pi} \frac{f''(\theta) e^{-in\theta}}{(-in)^2} d\theta
+$$
+The first term is $0$ since $f$ is $2\pi$-periodic, so is $f'$.
+$f''(\theta)$ is cont. $\implies \left| \int_{-\pi}^{\pi} f''(\theta) e^{-in\theta} d\theta \right| \le \int_{-\pi}^{\pi} |f''(\theta)| d\theta \le M$.
+$$
+\implies 2\pi |\hat{f}(n)| \le \frac{M}{n^2}.
+$$
+$$
+\implies \hat{f}(n) = O\left(\frac{1}{n^2}\right) \text{ as } |n| \to \infty \quad \blacksquare
+$$
+For second part,
+$$
+\sum_{n=-\infty}^\infty |\hat{f}(n)| \le \sum_{n=-\infty}^\infty \frac{M}{n^2} = 2M \sum_{n=1}^\infty \frac{1}{|n|^2} < \infty.
+$$
+Using the previous corollary, we conclude the Fourier series of $f$ converges absolutely and uniformly on the circle.
 
 ### Convolution
 Let $f,g$ be two $2\pi$ periodic integrable functions on $\mathbb{R}$ then, the convolution of $f,g$, denoted by $f*g$ is 
