@@ -2062,7 +2062,7 @@ Is $f=g$ everywhere?
 
 **Proof:** Let $f$ be real valued $\text{and } \theta_0=0$. If possible, let $f(0)>0$. We will find a seq. of trigonometric polynomials $P_k$ such that
 $$
-\int P_k(\theta) f(\theta) d\theta = 0 \text{ but } \lim_{k\to\infty} \int P_k(\theta) f(\theta) d\theta = c + \in
+\int P_k(\theta) f(\theta) d\theta = 0 \text{ but } \lim_{k\to\infty} \int P_k(\theta) f(\theta) d\theta = \infty 
 $$
 Observe that, since $f$ is cont. at $0$ $\text{and } f(0)>0$, $\exists \delta>0$ such that
 $$
