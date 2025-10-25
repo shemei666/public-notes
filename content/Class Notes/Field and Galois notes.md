@@ -49,6 +49,11 @@
 > [!Proof:]-
 > ![[Pasted image 20251025213723.png]]
 
+![[Pasted image 20251025231336.png]]
+
+![[Pasted image 20251025231733.png]]
+> [!Proof:]-
+> ![[Pasted image 20251025231751.png]]
 
 
 
