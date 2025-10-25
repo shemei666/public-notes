@@ -43,8 +43,11 @@
 > [!Proof:]-
 > ![[Pasted image 20251025212453.png]]
 
-
-
+![[Pasted image 20251025213104.png]]
+2. If $K/ F$ is purely inseparable, then $K / F$ is normal and $\text{Gal}(K / F) = \{ \text{id} \}$. Moreover, if $[K : F]<\infty$, and if $p = \text{char}(F)$, then $[K:F]=p^{n}$ for some $n$.
+![[Pasted image 20251025213358.png]]
+> [!Proof:]-
+> ![[Pasted image 20251025213723.png]]
 
 
 
