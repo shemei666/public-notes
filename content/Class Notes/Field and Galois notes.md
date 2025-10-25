@@ -33,6 +33,10 @@
 > [!Proof:]-
 > ![[Pasted image 20251025145159.png]]
 
+![[Pasted image 20251025152420.png]]
+> [!Proof:]-
+> ![[Pasted image 20251025152433.png]]
+
 
 
 
