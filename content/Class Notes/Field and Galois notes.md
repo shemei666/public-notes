@@ -62,6 +62,7 @@
 
 ## Fundamental Theorem of Galois Theory
 
+![[Pasted image 20251026131034.png]]
 
 
 
