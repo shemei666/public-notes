@@ -2348,7 +2348,7 @@ $$
 
 ### Cesàro Summability
 
-$\sum a_k$
+Let $\sum a_k$ be any series
 $$
 S_n = \sum_{k=0}^n a_k, \quad \sigma_N = \frac{S_0 + S_1 + \cdots + S_{N-1}}{N}
 $$
