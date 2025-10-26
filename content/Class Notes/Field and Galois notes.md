@@ -60,6 +60,8 @@
 > ![[Pasted image 20251026122000.png]]
 
 
+## Fundamental Theorem of Galois Theory
+
 
 
 
