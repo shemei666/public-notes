@@ -81,7 +81,11 @@
 > [!Proof:]-
 > ![[Pasted image 20251026221706.png]]
 
-## Normal Closures
+## Finite Fields
+
+![[Pasted image 20251027023553.png]]
+> [!Proof:]-
+> ![[Pasted image 20251027023857.png]]
 
 
 
