@@ -81,6 +81,8 @@
 > [!Proof:]-
 > ![[Pasted image 20251026221706.png]]
 
+## Normal Closures
+
 
 
 
