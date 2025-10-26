@@ -2264,11 +2264,12 @@ f*g - f_k*g_k = (f-f_k)*g + f_k*(g-g_k)
 $$
 We will show that the first term goes to zero uniformly. 
 $$
-|(f-f_k)*g(x)| \leq \frac{1}{2\pi} \int_{-\pi}^\pi |(f-f_k)(y)| |g(x-y)| dy 
+\begin{align}
+|(f-f_k)*g(x)|  & \leq \frac{1}{2\pi} \int_{-\pi}^\pi |(f-f_k)(y)| |g(x-y)| dy  \\
+ & \leq \frac{1}{2\pi} \sup_{y\in[-\pi,\pi]} |g(y)| \int_{-\pi}^\pi |f(y)-f_k(y)| dy \to 0 \quad \text{as} \ k\to\infty
+\end{align}
 $$
 
-$$
-\leq \frac{1}{2\pi} \sup_{y\in[-\pi,\pi]} |g(y)| \int_{-\pi}^\pi |f(y)-f_k(y)| dy \to 0 \quad \text{as} \ k\to\infty. $$
 $f - f_k \to 0$ uniformly. ($\implies ||f-f_k||_\infty \to 0$). (The RHS of the inequality above is independent of $x$)
 Similarly $f_{k} * (g - g_{k}) \to 0$ uniformly,
 $$
