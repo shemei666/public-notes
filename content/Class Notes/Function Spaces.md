@@ -2764,3 +2764,5 @@ Equality in the above holds iff
 $$
 x = \sum_{n=1}^\infty \langle x, u_n \rangle u_n.
 $$
+#incomplete 
+
