@@ -2766,3 +2766,9 @@ x = \sum_{n=1}^\infty \langle x, u_n \rangle u_n.
 $$
 #incomplete 
 
+![[IMG_20251027_100058.jpg]]
+![[IMG_20251027_100506.jpg]]
+
+![[IMG_20251027_102243.jpg]]
+
+![[IMG_20251027_102759.jpg]]
