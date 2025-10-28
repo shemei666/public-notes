@@ -87,6 +87,10 @@ $$
 
 ![[Pasted image 20251029000043.png]]
 
+![[Pasted image 20251029012309.png]]
+> [!Proof:]-
+> ![[Pasted image 20251029012331.png]]
+
 
 
 # Class Notes
