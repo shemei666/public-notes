@@ -76,6 +76,8 @@ $$
 
 ![[Pasted image 20251028205253.png]]
 
+![[Pasted image 20251028211040.png]]
+
 
 
 
