@@ -138,6 +138,9 @@
 ## Norm and Trace
 ![[Pasted image 20251030032332.png]]
 
+![[Pasted image 20251030034231.png]]
+
+![[Pasted image 20251030034307.png]]
 
 
 # Class Notes
