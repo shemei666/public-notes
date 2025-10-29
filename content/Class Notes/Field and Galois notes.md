@@ -112,6 +112,8 @@
 > [!Proof:]-
 > ![[Pasted image 20251029163601.png]]
 
+## Cyclotomic Extensions
+![[Pasted image 20251029220706.png]]
 
 
 
