@@ -100,6 +100,8 @@
 > ![[Pasted image 20251029130044.png]]
 
 ![[Pasted image 20251029130157.png]]
+> [!Proof:]-
+> ![[Pasted image 20251029131934.png]]
 
 
 
