@@ -107,7 +107,7 @@
 > [!Proof:]-
 > ![[Pasted image 20251029134727.png]]
 
-
+![[Pasted image 20251029142704.png]]
 
 
 
