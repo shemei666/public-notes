@@ -1,0 +1,8 @@
+- [x] Isometries and Conformal maps
+	- [x] Theory
+	- [x] Exercises
+- [x] Do problems in FFF
+- [x] Do problems in Curvature and second fundamental form
+- [ ] Review chain rule, implicit and inverse function theorems
+- [ ] Previous year papers
+- [ ] 

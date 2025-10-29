@@ -9,5 +9,4 @@ private/
 .replit
 replit.nix
 .pdf2svg/
-content/Agenda.md
 *.pdf
