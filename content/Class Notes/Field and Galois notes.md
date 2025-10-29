@@ -117,6 +117,10 @@
 
 ![[Pasted image 20251029222831.png]]
 
+![[Pasted image 20251030021113.png]]
+> [!Proof:]-
+> ![[Pasted image 20251030021129.png]]
+
 
 
 # Class Notes
