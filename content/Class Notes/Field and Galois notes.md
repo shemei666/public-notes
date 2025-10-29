@@ -133,6 +133,7 @@
 > [!Proof:]-
 > ![[Pasted image 20251030023702.png]]
 
+![[Pasted image 20251030030619.png]]
 
 
 # Class Notes
