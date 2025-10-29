@@ -121,6 +121,18 @@
 > [!Proof:]-
 > ![[Pasted image 20251030021129.png]]
 
+![[Pasted image 20251030022439.png]]
+
+![[Pasted image 20251030022620.png]]
+
+![[Pasted image 20251030022941.png]]
+> [!Proof:]-
+> ![[Pasted image 20251030023435.png]]
+
+![[Pasted image 20251030023612.png]]
+> [!Proof:]-
+> ![[Pasted image 20251030023702.png]]
+
 
 
 # Class Notes
