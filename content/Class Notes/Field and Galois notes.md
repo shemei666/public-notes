@@ -115,6 +115,8 @@
 ## Cyclotomic Extensions
 ![[Pasted image 20251029220706.png]]
 
+![[Pasted image 20251029222831.png]]
+
 
 
 # Class Notes
