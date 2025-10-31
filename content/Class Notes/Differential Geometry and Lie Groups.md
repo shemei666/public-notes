@@ -95,6 +95,7 @@ $$
 
 ![[Pasted image 20251029015947.png]]
 
+![[Pasted image 20251031140113.png]]
 
 
 # Class Notes
