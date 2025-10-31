@@ -101,6 +101,18 @@ $$
 
 ![[Pasted image 20251031161824.png]]
 
+![[Pasted image 20251031203201.png]]
+> [!Proof:]-
+> ![[Pasted image 20251031203217.png]]
+
+![[Pasted image 20251031203329.png]]
+> [!Proof:]-
+> ![[Pasted image 20251031203345.png]]
+
+![[Pasted image 20251031203357.png]]
+> [!Proof:]-
+> ![[Pasted image 20251031203408.png]]
+
 
 
 
