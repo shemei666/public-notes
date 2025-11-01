@@ -113,7 +113,23 @@ $$
 > [!Proof:]-
 > ![[Pasted image 20251031203408.png]]
 
+![[Pasted image 20251101111407.png]]
 
+![[Pasted image 20251101111434.png]]
+
+![[Pasted image 20251101111451.png]]
+
+![[Pasted image 20251101111459.png]]
+> [!Proof:]-
+> ![[Pasted image 20251101111514.png]]
+
+![[Pasted image 20251101111526.png]]
+> [!Proof:]-
+> ![[Pasted image 20251101111539.png]]
+
+![[Pasted image 20251101111549.png]]
+> [!Proof:]-
+> ![[Pasted image 20251101111559.png]]
 
 
 
