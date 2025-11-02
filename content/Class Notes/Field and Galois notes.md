@@ -176,6 +176,10 @@
 
 ![[Pasted image 20251103024257.png]]
 
+![[Pasted image 20251103025600.png]]
+> [!Proof:]-
+> ![[Pasted image 20251103025617.png]]
+
 
 
 
