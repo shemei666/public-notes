@@ -170,6 +170,9 @@
 > [!Proof:]-
 > ![[Pasted image 20251103020101.png]]
 
+## Cyclic Extensions
+
+![[Pasted image 20251103021136.png]]
 
 
 
