@@ -2256,6 +2256,8 @@ $\implies f*g$ is continuous.
 
 **Proof:** We skip this proof😴(Refer Stein and Shakarchi)
 
+Now we show 5 and 6 for $f,g$ integrable on the circle.
+
 We know that $f*g$ is $2\pi$ periodic and integrable. There exist sequences of continuous functions, $\{f_k\}$ and $\{g_k\}$, such that $\{f_k\} \to f$ in $L^1$ and $\{g_k\} \to g$ in $L^1$. i.e., $\int_{-\pi}^{\pi} |f_k(x)-f(x)|dx \to 0$ and $\int_{-\pi}^{\pi} |g_k(x)-g(x)|dx \to 0$ as $k\to\infty$.
 
 We will show that $\{f_k * g_k\} \to f*g$ uniformly. We have,
