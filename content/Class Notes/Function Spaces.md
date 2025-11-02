@@ -2218,12 +2218,12 @@ $$
 $$
 = \frac{1}{2\pi}\int_{-\pi}^\pi f(x-z)g(z)dz = (g*f)(x)
 $$
-
+_5 and 6 we first prove for continuous functions._
  5. 
 $$
 \widehat{(f*g)}(n) = \frac{1}{2\pi} \int_{-\pi}^{\pi} (f*g)(x)e^{-inx} dx
 $$
-($f, g$ continuous)
+($f, g$ continuous) 
 $$
 = \frac{1}{(2\pi)^2} \int_{-\pi}^{\pi} \left( \int_{-\pi}^{\pi} f(y)g(x-y)dy \right) e^{-inx} dx
 $$
