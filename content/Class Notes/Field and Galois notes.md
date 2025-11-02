@@ -152,6 +152,8 @@
 > [!Proof:]-
 > ![[Pasted image 20251103003442.png]]
 
+![[Pasted image 20251103005424.png]]
+
 
 
 
