@@ -200,6 +200,9 @@
 ## Hilbert Theorem 90
 
 ![[Pasted image 20251103201513.png]]
+> [!Proof:]-
+> ![[Pasted image 20251103211414.png]]
+
 
 
 
