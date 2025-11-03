@@ -2646,21 +2646,21 @@ $$
 
 ![[IMG_20251024_142526.jpg]]
 
-Let $\{\phi_n\}_{n\in\mathbb{Z}}$ be an orthonormal set and set $c_n = \langle f, \phi_n \rangle$.
+Let $\{e_n\}_{n\in\mathbb{Z}}$ be an orthonormal set and set $c_n = \langle f, e_n \rangle$.
 Then
 $$
 \sum_{n=-\infty}^\infty |c_n|^2 \le ||f||^2 \quad \text{(Bessel's Inequality)}
 $$
-**Conclusion 2:** For some complex number $\alpha$,
+**Conclusion 2:** For some complex number $c_{n}$,
 $$
-||f - \sum_{|n|\le N} c_n \phi_n|| = ||f - S_N(f) + \sum_{|n|>N} c_n \phi_n|| \quad \text{where } c_n = \hat{f}(n).
+f - \sum_{|n|\le N} c_n e_n = f - S_N(f) + \sum_{|n|\leq N} b_n e_n \quad \text{where } b_n = c_{n} - a_{n}
 $$
 Using Pythagoras,
 $$
-||f - \sum_{|n|\le N} c_n \phi_n||^2 = ||f - S_N(f)||^2 + ||\sum_{|n|>N} c_n \phi_n||^2
+||f - \sum_{|n|\le N} c_n e_n||^2 = ||f - S_N(f)||^2 + ||\sum_{|n|>N} c_n e_n||^2
 $$
 $$
-\implies ||f - S_N(f)|| \le ||f - \sum_{|n|\le N} c_n \phi_n||
+\implies ||f - S_N(f)|| \le ||f - \sum_{|n|\le N} c_n e_n||
 $$
 (Best approximation theorem)
 
