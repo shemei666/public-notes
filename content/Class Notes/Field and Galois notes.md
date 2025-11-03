@@ -180,6 +180,11 @@
 > [!Proof:]-
 > ![[Pasted image 20251103025617.png]]
 
+![[Pasted image 20251103115114.png]]
+> [!Proof:]-
+> ![[Pasted image 20251103115240.png]]
+> 
+
 
 
 
