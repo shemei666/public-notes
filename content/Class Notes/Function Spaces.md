@@ -2417,7 +2417,7 @@ $$
 $$
 But the above series is **not** Cesàro summable.
 
-If $\sum_{k=0}^{\infty} c_k$ is **Cesàro summable** then $c_n \to 0$ as $n \to \infty$.
+If $\sum_{k=0}^{\infty} c_k$ is **Cesàro summable** then $c_n/n \to 0$ as $n \to \infty$.
 
 ---
 
@@ -2428,7 +2428,7 @@ $$
 \frac{S_0 + \cdots + S_n}{n} \to a
 $$
 $$
-\implies \frac{S_0 + \cdots + S_n}{n} - \frac{S_0 + \cdots + S_{n-1}}{n} = \frac{S_n}{n} - \frac{S_0 + \cdots + S_{n-1}}{n(n)} \to 0
+\implies \frac{S_0 + \cdots + S_n}{n} - \frac{S_0 + \cdots + S_{n-1}}{n} = \frac{\sigma_n}{n} \to 0
 $$
 $$
 \implies \frac{c_n}{n} \to 0 \quad \text{as } n \to \infty \text{ is not enough.}
