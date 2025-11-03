@@ -203,6 +203,13 @@
 > [!Proof:]-
 > ![[Pasted image 20251103211414.png]]
 
+![[Pasted image 20251103211926.png]]
+
+## Kummer Extensions
+
+![[Pasted image 20251103212330.png]]
+
+
 
 
 
