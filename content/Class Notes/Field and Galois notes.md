@@ -215,6 +215,8 @@
 
 ![[Pasted image 20251104005307.png]]
 
+![[Pasted image 20251104032354.png]]
+
 
 
 
