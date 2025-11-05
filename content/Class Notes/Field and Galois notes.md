@@ -172,6 +172,7 @@
 
 ## Cyclic Extensions
 
+
 ![[Pasted image 20251103021136.png]]
 
 ![[Pasted image 20251103024257.png]]
