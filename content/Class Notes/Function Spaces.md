@@ -1099,7 +1099,7 @@ $(X,M,\mu)$ is called a measure space. Elements of M are called measurable sets.
 $$
 \mu(E) \leq \mu(F)
 $$
-2. (countable subaddition) If $\{ E_{i} \} \subseteq M$ then,
+2. (countable subadditivity) If $\{ E_{i} \} \subseteq M$ then,
    $$
    \mu\left( \bigcup E_{i} \right) \leq \sum_{i=1}^{\infty} \mu(E_{i})
    $$
@@ -1135,7 +1135,7 @@ $$
 $$
 \begin{align}
 \mu\left( \bigcup E_{i} \right) = &  \mu\left( \bigcup(E_{i}\setminus E_{i-1}) \right) \\
- = &  \sum_{}^{ } \mu(E_{i}\setminus E_{I-1}) \\
+ = &  \sum_{}^{ } \mu(E_{i}\setminus E_{i-1}) \\
 =  & \lim_{ n \to \infty } \sum_{i=1}^{n} \mu(E_{i}\setminus E_{i-1}) \\
 =  & \lim_{ n \to \infty } \mu\left( \bigcup_{i=1}^{n}(E_{i}\setminus E_{i-1}) \right) \\
 =  &  \lim_{ n \to \infty } \mu(E_{n})
