@@ -1237,6 +1237,7 @@ $$
 $$
 
 **Theorem:**(Caratheodory's Theorem) Let $\mu^{*}$ be an outer measure on $X$ and $\mathscr{M}$ be the collection of all $\mu^{*}$-measurable sets. Then $\mathscr{M}$ is a $\sigma$-algebra and $\mu^{*}$ is a measure on $\mathscr{M}$
+
 **Proof.** If $A$ is $\mu^*$–measurable then so is $A^c$. For $A,B \in \mathcal{M}$ and $\forall\, E \subseteq X$ we have,
 
 $$
