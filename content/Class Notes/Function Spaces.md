@@ -1142,7 +1142,7 @@ $$
 \end{align}
 $$
 
-4. Define $F_{i} = E_{i}\setminus E_{i} \forall i$ 
+4. Define $F_{i} = E_{1}\setminus E_{i} \quad \forall i$ 
 $$
 F_{1} \subseteq F_{2} \subseteq F_{3} \subseteq\dots 
 $$
@@ -1151,7 +1151,7 @@ $$
 $$
 So, $\mu(E_{1}) = \mu(F_{i}) + \mu(E_{i})$ , hence
 $$
-\mu\left( \bigcup F_{i} \right) = \lim_{ n \to \infty } [\mu(E_{i}) - \mu(E_{n})] 
+\mu\left( \bigcup F_{i} \right) = \lim_{ n \to \infty } [\mu(E_{1}) - \mu(E_{n})] 
 $$
 Also,  $\bigcup F_{i} = E_{1} \setminus \bigcap E_{i}$, $\implies \mu\left( \bigcup F_{i} \right) + \mu\left( \bigcap E_{i} \right) = \mu(E_{1})$. So from $(*)$,
 $$
@@ -1165,7 +1165,7 @@ Instead of $\mu(E_{1})<\infty$ if we assume $\mu(E_{n})<\infty$ for some $n \in 
 **Def:** $E \in M$ is said to be a null set (measure zero) if $\mu(E) = 0$. If a property holds on $X$ except a set of measure zero then we say that the property holds almost everywhere on $X$.
 
 >[!info]
->$f = g$ on $E^{c}$ where $\mu(E)=0$, $\mu$ is some measure then we say $f=g \text{ a.s}$
+>$f = g$ on $E^{c}$ where $\mu(E)=0$, $\mu$ is some measure then we say $f=g \text{ a.e}$
 
 **Def:** Let $(X,M,\mu)$ be a measure space $\mu$ is said to be _complete measure_ if whenever $F \subset N$ and $\mu (N) = 0$ then $F \in M$.
 
@@ -1177,9 +1177,9 @@ Then, $\overline{M}$ is a $\sigma$-algebra and there is an extension of $\mu$ to
 
 **Proof:** 
 $$
-\bigcup (E_{i} U F_{i}) = \left( \bigcup E_{i} \right) \cup \left( \bigcup F_{i} \right)
+\bigcup_{i=1}^{\infty } (E_{i} U F_{i}) = \left( \bigcup_{i=0}^{\infty} E_{i} \right) \cup \left( \bigcup_{i=1}^{\infty} F_{i} \right)
 $$
-The first term in the RHS in in $\mathscr{M}$ while the other is a null set, so we have $\bigcup (E_{i} \cup F_{i}) \in \overline{M}$
+The first term in the RHS is in $M$ while the other is a subset of a null set, so we have $\bigcup (E_{i} \cup F_{i}) \in \overline{M}$
 
 We have to check for $E \in M, F \in N$, if $E \cup F \in \overline{M}$ then $(E \cup F)^{c} \in \overline{M}$. We can always assume $E \cap N = \varnothing$,
 $$
@@ -1194,7 +1194,7 @@ E\cup F = & (E \cup N) \setminus (N \setminus F) \\
 $$
 So, $\overline{M}$ is a $\sigma$-algebra. Define $\bar{\mu}(E \cup F) = \mu(E), \forall E\cup F \in \overline{M}$
 **Well definedness of $\bar{\mu}$**:
-Let $E_{1} \cup  F_{1} = E_{2} \cup F_{2}$, where the $E_{i},F_{i}$ are from there their usual collections, $E_{1} \subseteq E_{2} \cup F_{2}, E_{2} \cup N_{2}$, Hence we have $\mu(E_{1}) \leq \mu(E_{2})+\mu(N_{2}) = \mu(E_{2})$, Similarly we get the other direction. We can also easily check it is measure also.
+Let $E_{1} \cup  F_{1} = E_{2} \cup F_{2}$, where the $E_{i},F_{i}$ are from there their usual collections, $E_{1} \subseteq E_{2} \cup F_{2}, E_{2} \cup N_{2}$, Hence we have $\mu(E_{1}) \leq \mu(E_{2})+\mu(N_{2}) = \mu(E_{2})$, Similarly we get the other direction. We can also easily check it is measure also. $\quad \blacksquare$
 
 ### Outer measure
 
