@@ -1233,7 +1233,7 @@ $\quad \blacksquare$
 
 **Def:** Let $\mu^{*}$ be an outer measure on $X$. A subset $A \subseteq X$ is said to be _$\mu^{*}$-measurable_ if
 $$
-\mu^{*}(E) = \mu^{*} (E \cap A) + \mu^{*}(E \cap A^{*}) \quad \forall E \subseteq X
+\mu^{*}(E) = \mu^{*} (E \cap A) + \mu^{*}(E \cap A^{c}) \quad \forall E \subseteq X
 $$
 
 **Theorem:**(Caratheodory's Theorem) Let $\mu^{*}$ be an outer measure on $X$ and $\mathscr{M}$ be the collection of all $\mu^{*}$-measurable sets. Then $\mathscr{M}$ is a $\sigma$-algebra and $\mu^{*}$ is a measure on $\mathscr{M}$
