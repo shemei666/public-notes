@@ -1438,6 +1438,7 @@ $$
 $$
 \geq \mu_0\left(\bigcup_{i=1}^\infty I_{j_i}\right) = \mu\left(J_j \setminus \bigcup_{i=1}^n I_{j_i}\right) \geq \sum_{i=1}^n \mu_0(I_{j_i}) \quad \forall \ n
 $$
+
 $$
 \implies \mu_0(J_j) \geq \sum_{i=1}^\infty \mu_0(I_{j_i}) \quad \text{as} \ n \to \infty. \quad \blacksquare
 $$
