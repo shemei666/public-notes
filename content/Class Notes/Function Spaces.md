@@ -1408,9 +1408,8 @@ $$
 $$
 ### Construction of Lebesgue Measure
 
-Let $A = \{\text{finite disjoint union of } (a,b] \text{intervals in } \mathbb{R}\} \subseteq \mathcal{B}_\mathbb{R}.$
+Let $A = \{\text{finite disjoint union of } (a,b] \text{intervals in } \mathbb{R}\} \subseteq \mathscr{B}_\mathbb{R}.$
 **Exercise:** A is an algebra
-**Solution:**
 
 **Proposition 16.2.** Let $((a_i, b_i]]_{i=1}^n$ be any disjoint collection in $A$. Define
 $$
