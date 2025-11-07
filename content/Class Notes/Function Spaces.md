@@ -1411,7 +1411,7 @@ $$
 Let $A = \{\text{finite disjoint union of } (a,b] \text{intervals in } \mathbb{R}\} \subseteq \mathscr{B}_\mathbb{R}.$
 **Exercise:** A is an algebra
 
-**Proposition 16.2.** Let $((a_i, b_i]]_{i=1}^n$ be any disjoint collection in $A$. Define
+**Proposition:** Let $((a_i, b_i]]_{i=1}^n$ be any disjoint collection in $A$. Define
 $$
 \mu_0\left(\bigcup_{i=1}^n (a_i, b_i]\right) = \sum_{i=1}^n (b_i - a_i), \quad \mu_0(\emptyset)=0 \implies
 $$
@@ -1448,7 +1448,7 @@ $$
 $$
 Then $M'$ = {collection of $\mu^*$-measure sets}. We have that $\mu^*|_{M'}$ is a measure, $A \subseteq M'$. Let $M = \mathcal{M}(A) \implies M \subseteq M'$. Then $\mu^*$ is a measure on $M$ which returns $\mu_0$ if $\mu_0$ is $\sigma$-finite on $X$. Then $\mu^*|_M$ is a unique measure which extends $\mu_0$. An h-interval is of the form $(-\infty, b], (a, b], (a, \infty)$, $a, b \in \mathbb{R}$ and $A = \{\text{finite disjoint unions of h-intervals}\}$ is an algebra.
 
-**Proposition 17.1.** On $A$ define $\mu_0$ by
+**Proposition:** On $A$ define $\mu_0$ by
 $$
 \mu_0\left(\bigcup_{i=1}^n (a_i, b_i]\right) = \sum_{i=1}^n (b_i - a_i).
 $$
