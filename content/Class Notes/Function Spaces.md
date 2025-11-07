@@ -1406,7 +1406,7 @@ Since $\varepsilon$ is arbitrary $\mu(E)\leq \nu(E)$, combined with $(ii)$ we ha
 $$ 
 \mu(E) = \sum_{i=1}^\infty \mu(E \cap A_i) = \sum_{i=1}^\infty \nu(E \cap A_i) = \nu(E)
 $$
-## Construction of Lebesgue Measure
+### Construction of Lebesgue Measure
 
 Let $A = \{\text{finite disjoint union of } (a,b] \text{intervals in } \mathbb{R}\} \subseteq \mathcal{B}_\mathbb{R}.$
 **Exercise:** A is an algebra
@@ -1851,7 +1851,7 @@ $$
 $$
 = \lim_{n\to\infty} \int |f_n - f| d\mu = 0.
 $$
-## Role played by measure zero sets
+### Role played by measure zero sets
 
 **Proposition:** $(X,M,\mu)$ complete measure space
 1. Let $f = g$ a.e then f is measurable iff g is
@@ -1880,7 +1880,7 @@ $$
 $$
 2. $f = u+iv$ Then we have that $\int u d\mu = 0 , \int v d\mu = 0$, hence from above we have $f = 0$ a.e on X. 
 
-## $L^{p}$ spaces
+### $L^{p}$ spaces
 
 We say that $f \sim g$ if $f = g$ a.e on $X$.
 $$
