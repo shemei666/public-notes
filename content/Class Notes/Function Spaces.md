@@ -1446,7 +1446,7 @@ We extend $\mu_0$ on $A$ to $M$ to $\mu^*$ on $\mathcal{P}(X)$ where
 $$
 \mu^*(A) = \inf\left\{\sum_i \mu_0(A_i) \ | \ A \subseteq \bigcup_i A_i, A_i \in \mathcal{A}\right\}.
 $$
-Then $M'$ = {collection of $\mu^*$-measure sets}. We have that $\mu^*|_{M'}$ is a measure, $A \subseteq M'$. Let $M = \mathcal{M}(A) \implies M \subseteq M'$. Then $\mu^*$ is a measure on $M$ which returns $\mu_0$ if $\mu_0$ is $\sigma$-finite on $X$. Then $\mu^*|_M$ is a unique measure which extends $\mu_0$. An h-interval is of the form $(-\infty, b], (a, b], (a, \infty)$, $a, b \in \mathbb{R}$ and $A = \{\text{finite disjoint unions of h-intervals}\}$ is an algebra.
+Then $M'$ = {collection of $\mu^*$-measure sets}. We have that $\mu^*|_{M'}$ is a measure, $A \subseteq M'$. Let $M = \mathcal{M}(A) \implies M \subseteq M'$. Then $\mu^*$ is a measure on $M$ which returns $\mu_0$ if $\mu_0$ is $\sigma$-finite on $X$. Then $\mu^*|_M$ is a unique measure which extends $\mu_0$.
 
 **Proposition:** On $A$ define $\mu_0$ by
 $$
