@@ -1419,24 +1419,22 @@ $\mu_0$ is a premeasure on $A$.
 
 **Proof.** Let $\{I_i\}_1^n$ and $\{J_j\}_1^m$ be two disjoint collections of h-intervals. Then
 $$
-\sum_{i=1}^n I_i = \sum_{j=1}^m J_j \implies \mu_0\left(\bigcup_{i=1}^n I_i\right) = \sum_{i=1}^n \mu_0(I_i) = \sum_{i=1}^n \mu_0(I_i \cap \bigcup_{j=1}^m J_j)
+\bigcup_{i=1}^n I_i = \bigcup _{j=1}^m J_j \implies \mu_0\left(\bigcup_{i=1}^n I_i\right) = \sum_{i=1}^n \mu_0(I_i) = \sum_{i=1}^n \mu_0\left( I_i \cap \bigcup_{j=1}^m J_j \right)
 $$
 $$
 = \sum_{j=1}^m \mu_0(J_j) = \mu_0\left(\bigcup_{j=1}^m J_j\right).
 $$
 
 So $\mu_0$ is well-defined. From the definition of $\mu_0$, it is clear that $\mu_0$ is finitely additive.
-Remains to prove, if $\bigcup_{i=1}^\infty I_i \in A$ then $\mu_0\left(\bigcup_{i=1}^\infty I_i\right) = \sum_{i=1}^\infty \mu_0(I_i)$. Since $\bigcup_{i=1}^\infty I_i \in A$, $\bigcup_{i=1}^\infty I_i$ is the finite disjoint union of h-intervals $\{J_j\}_{j=1}^m$, i.e.,
+Remains to prove, if $\bigcup_{i=1}^\infty I_i \in A$ then $\mu_0\left(\bigcup_{i=1}^\infty I_i\right) = \sum_{i=1}^\infty \mu_0(I_i)$. Since $\bigcup_{i=1}^\infty I_i \in A$, $\bigcup_{i=1}^\infty I_i$ is the finite disjoint union of h-intervals $\{J_j\}_{j=1}^m$,
 $$
-J_j = \sum_{i=1}^\infty I_{j_i} \quad \forall \ j \leq m
+J_j = \bigcup _{i=1}^\infty I_{j_i} \quad \forall \ j \leq m
 $$
-where $\{J_{j_i}\}_{i=1}^\infty$ is some subsequence of $\{I_i\}_{i=1}^\infty$. Then
+where $\{I_{j_i}\}_{i=1}^\infty$ is some subsequence of $\{I_i\}_{i=1}^\infty$. Then
 $$
 \mu_0\left(\bigcup_{i=1}^\infty I_i\right) = \mu_0\left(\bigcup_{j=1}^m J_j\right) = \sum_{j=1}^m \mu_0(J_j) \quad \left(\mu_0(J_j) = \sum_{i=1}^\infty \mu_0(I_{j_i})\right)
 $$
-$$
-\in A
-$$
+
 $$
 \geq \mu_0\left(\bigcup_{i=1}^\infty I_{j_i}\right) = \mu\left(J_j \setminus \bigcup_{i=1}^n I_{j_i}\right) \geq \sum_{i=1}^n \mu_0(I_{j_i}) \quad \forall \ n
 $$
