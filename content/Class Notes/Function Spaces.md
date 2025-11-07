@@ -1330,7 +1330,7 @@ $$
 \mu^*(E) = \inf \left\{ \sum_{i=1}^{\infty} \mu_0(A_i) \,\Big|\, E \subseteq \bigcup_{i=1}^{\infty} A_i,\, A_i \in \mathscr{A} \right\}.
 $$
 Now to check:
-1. Suppose $E \in \mathcal{A}$. Then for any $\{ A_{i} \} \subseteq \mathscr{A}$ with $E \subseteq \bigcup_{i=1}^\infty A_i$ . Then $B_n := E \cap \left(A_n \setminus \bigcup_{i=1}^{n-1} A_i\right)$ is a disjoint collection and $E = \bigcup_{n=1}^\infty B_n$. So
+1. Suppose $E \in \mathscr{A}$. Then for any $\{ A_{i} \} \subseteq \mathscr{A}$ with $E \subseteq \bigcup_{i=1}^\infty A_i$ . Then $B_n := E \cap \left(A_n \setminus \bigcup_{i=1}^{n-1} A_i\right)$ is a disjoint collection and $E = \bigcup_{n=1}^\infty B_n$. So
 
 $$
 \mu_0(E) = \sum_{i=1}^{\infty} \mu_0(B_n) \leq \sum_{n=1}^{\infty} \mu_0(A_n).
@@ -1344,7 +1344,7 @@ $$
 
 Thus $\mu^*(E) = \mu_0(E)$ $\forall\, E \in \mathcal{A}$.
 
-2. Let $A \in \mathcal{A}$, $E \subseteq X$, $\epsilon > 0$. Then $\exists$ a sequence $\{B_i\}$ s.t. $E \subseteq \bigcup_{i=1}^\infty B_i$.
+2. Let $A \in \mathscr{A}$, $E \subseteq X$, $\epsilon > 0$. Then $\exists$ a sequence $\{B_i\}$ s.t. $E \subseteq \bigcup_{i=1}^\infty B_i$.
 
 $$
 \sum_{i=1}^\infty \mu_0(B_i) \leq \mu^*(E) + \epsilon \implies \sum_{i=1}^\infty \mu_0(B_i \cap A) + \sum_{i=1}^\infty \mu_0(B_i \cap A^c) \leq \mu^*(E) + \epsilon
