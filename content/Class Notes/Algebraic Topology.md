@@ -1240,8 +1240,10 @@ G is continuous at $x \neq 0$ in $B^{n}$ clearly. Near $x = 0$ we see that if $\
 2. ![[Drawing 2025-09-19 16.55.16.excalidraw.svg]]
 3. ![[Drawing 2025-09-19 16.55.58.excalidraw.svg]]
 Not a simplex
+![[Pasted image 20251108161130.png]]
 
-#incomplete 
+![[Pasted image 20251108161143.png]]
+
 
 $$
 g\left( \sum_{}^{}t_{i}a_{i} \right) = \sum_{}^{} t_{i}g(a_{i}) = \sum_{}^{} t_{i}f(a_{i})
