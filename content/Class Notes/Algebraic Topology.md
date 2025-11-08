@@ -1208,7 +1208,8 @@ $$
 6. $Int(\sigma)$ is convex and open in the affine span of $\{ a_{i} \}$. The closure of $Int(\sigma)$ is $\sigma$. $Int(\sigma) =$ disjoint union of open line segments joining $a_{o}$ to points of the opposite face.
 7. $\sigma$ homeomorphic to $B^{n}$ with $\partial \sigma \cong S^{n-1}$ . Given $u \in \mathbb{R}^{N}$, define a ray from u, along $V \in \mathbb{R}^{N}$ to be $\mathscr{R}= \{ u+tv\mid t\geq 0, t \in \mathbb{R} \} \cong \mathbb{R} \geq0$ 
 We prove (7) by a more general lemma:
-Let $U \subseteq \mathbb{R}^{N}$ be an open bounded convex subset. Let $u \in U$.
+
+**Lemma:** Let $U \subseteq \mathbb{R}^{N}$ be an open bounded convex subset. Let $u \in U$.
 (a) Any ray from u intersects $\partial U = \overline{U}\setminus U$ in a unique point.
 (b) This induces a homeomorphism $\overline{U} \cong B^{n}$ with $\partial U \cong S^{n-1}$
 **Proof:** (a) Under the identification $\mathscr{R}\leftrightarrow \mathbb{R}_{>0}$, we see that $\mathscr{R} \cap U$ corresponds to an open, convex (hence connected) bounded subset of $\mathbb{R}_{\geq0}$, i.e. an interval $[0,a)$ for some $a>0$.	Therefore $u + av \in \overline{U} \setminus U$. Assume WLOG that boundary point is $0$, $v=-u,a=1$ 
@@ -1237,9 +1238,7 @@ G is continuous at $x \neq 0$ in $B^{n}$ clearly. Near $x = 0$ we see that if $\
 **Examples:** 
 1. If $\sigma$ is a simplex, then $\sigma$ together with all its faces forms a simplicial complex.
 2. ![[Drawing 2025-09-19 16.55.16.excalidraw.svg]]
-%%[[Drawing 2025-09-19 16.55.16.excalidraw.md|🖋 Edit in Excalidraw]]%%
 3. ![[Drawing 2025-09-19 16.55.58.excalidraw.svg]]
-%%[[Drawing 2025-09-19 16.55.58.excalidraw.md|🖋 Edit in Excalidraw]]%%
 Not a simplex
 
 #incomplete 
