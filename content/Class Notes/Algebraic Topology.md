@@ -1115,7 +1115,7 @@ but the value of $\varphi_j$ remains the same for either choice, because $\varph
 In particular, $\varphi$ gets defined at the level of loops themselves and not just at the loop classes. This also implies that $\varphi$ is a homomorphism because doing this process for loops $f, f'$ at $x_{0}$ also does it for $f * f'$.
 
 **Proof:**
-
+%% 
 Independence of choice of $\alpha_i$.
 
 Suppose we used $\beta_i$ as a path from $x_0$ to $x_i$.
@@ -1159,7 +1159,7 @@ $$
 #recheck
 $g_{i+1} \hspace{2em} g_{i+1}''$
 
-(diagram: $x_0$ connected to $x_i$, $y$ via $\alpha_i$, $\beta$; loops $f_{i+1}$, $f_{i+1}''$ at $x_i$, $y$)
+(diagram: $x_0$ connected to $x_i$, $y$ via $\alpha_i$, $\beta$; loops $f_{i+1}$, $f_{i+1}''$ at $x_i$, $y$) %%
 [see for reference munkres]
 
 
@@ -1244,7 +1244,7 @@ Not a simplex
 
 ![[Pasted image 20251108161143.png]]
 ![[Pasted image 20251108175430.png]]
-
+![[Pasted image 20251108180859.png]]
 
 $$
 g\left( \sum_{}^{}t_{i}a_{i} \right) = \sum_{}^{} t_{i}g(a_{i}) = \sum_{}^{} t_{i}f(a_{i})

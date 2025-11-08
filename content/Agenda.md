@@ -1,4 +1,5 @@
-- [ ] Finish till discriminant theory
-- [ ] complete field Galois homework
-- [ ] Complete diff geo theory
-- [ ] Read alg topo
+- [ ] Simplices
+- [ ] Homology
+- [ ] Simplicial approximations
+- [ ] Van Kampen 
+- [ ] Premidsem
