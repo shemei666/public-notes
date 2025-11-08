@@ -1243,6 +1243,7 @@ Not a simplex
 ![[Pasted image 20251108161130.png]]
 
 ![[Pasted image 20251108161143.png]]
+![[Pasted image 20251108175430.png]]
 
 
 $$
