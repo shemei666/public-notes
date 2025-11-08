@@ -1163,6 +1163,8 @@ $g_{i+1} \hspace{2em} g_{i+1}''$
 [see for reference munkres]
 
 
+#incomplete 
+
 3. $\sigma$ is compact and convex (Closed and bounded) and convex. Use the homeomorphism to standard simplex. 
 $$
 \sum_{}^{} t_{i}a_{i} \leftarrow (t_{0},t_{1},\dots,t_{n},0,\dots,0)
