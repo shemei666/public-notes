@@ -1683,7 +1683,7 @@ is called the **characteristic** function on the set $E$.
 **Remark:** $\chi_E$ is measurable.
 
 **Def:** **(Simple Function)**
-A function $\phi:(X,\mathscr{M})\to\mathbb{R}$ is called a **simple** function if $\text{img}(\phi)$ has only finitely many points. Let $\text{img}(\phi)=\{a_1,\ldots,a_n\}$. Then
+A function $\phi:(X,\mathscr{M})\to\mathbb{R}$ is called a **simple** function if $\text{img}(\phi)$ has only finitely many points. Let $\text{img}(\phi)=\{a_1,\ldots,a_n\}$. Then we can write $\phi$ as
 $$
 \phi=\sum_{i=1}^n a_i\chi_{E_i} \text{ where } E_i=\phi^{-1}(a_i).
 $$
