@@ -1855,7 +1855,7 @@ $$
 
 **Proposition:** $(X,M,\mu)$ complete measure space
 1. Let $f = g$ a.e then f is measurable iff g is
-2. Let $\{ f_n \}$ be a seq of measurable functions such that $\{ fn \}\to f$ pointwise a.e then f is measurable.
+2. Let $\{ f_n \}$ be a seq of measurable functions such that $\{ f_n \}\to f$ pointwise a.e then f is measurable.
 **Proof:** **Exercise**
 
 **Theorem:** Let $(X,M,\mu)$ be a measure space,
