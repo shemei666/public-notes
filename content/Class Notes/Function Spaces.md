@@ -1560,10 +1560,11 @@ Take $H_n=\bigcup_{i=-N}^N K_i,$ then:
 
 $$
 \begin{gather}
-m\left(\bigcup_{i=-N}^N E_i\right)\leq m\left(\bigcup_{i=-N}^N H_i\right)+\epsilon\implies m\left(\bigcup_{i=-\infty}^\infty E_i\right)=\lim_{N\to\infty} m\left(\bigcup_{i=-N}^N E_i\right) \\
-= \lim_{N\to\infty}\sup\left\{m(K)| K\subseteq \bigcup_{i=-N}^N E_i\right\} \quad \blacksquare
+m\left(\bigcup_{i=-N}^N E_i\right)\leq m\left(\bigcup_{i=-N}^N H_i\right)+\epsilon \\
+\implies m(E) \leq \sup \{ m(K) \mid K \text{ compact }K \subseteq E \}  \quad \blacksquare
 \end{gather}
-$$ 
+$$
+
 
 **Proposition:** If $E \subseteq \mathbb{R}$ TFAE
 1. $E \in \mathcal{L}$
@@ -1590,7 +1591,7 @@ N_2=\bigcup_{k\in \mathbb{Z}}N_2^k
 $$ 
 Then we are done as $(2 \implies 1)$ and $(3 \implies 1)$ are obvious.
 
-**Remark:** L is the completion of $B_{\mathbb{R}}$ where
+**Remark:** $\mathcal{L}$ is the completion of $B_{\mathbb{R}}$ where
 $$m(E)=\inf\left\{\sum_{i=1}^\infty m(a_i,b_i)\mid E\subset \bigcup_{i=1}^\infty (a_i,b_i)\right\}$$
 and any element $F\in\mathcal{L}$ can be written as $F=E \cup N$ where $E\in\mathscr{B}_\mathbb{R}$ and $N\subseteq N_1$ where $m|_{\mathscr{B}_\mathbb{R}} (N_1)=0.$
 
