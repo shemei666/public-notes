@@ -1454,6 +1454,9 @@ $$
 $$
 Then $\mu_0$ is a premeasure on $A$.
 
+**Proof:** 
+
+
 **Proof.** Let $\{A_i\}_{i=1}^\infty$ is a countable disjoint collection of sets in $A$ if $\bigsqcup_{i=1}^\infty A_i\in A.$ We need to prove that $\mu_0(\bigsqcup_{i=1}^\infty A_i)=\sum_{i=1}^\infty\mu_0(A_i).$ Let $\bigsqcup_{i=1}^\infty A_i=\bigsqcup_{j=1}^k(a_i,b_j]$ where $(a_i,b_j]=\bigsqcup_{i,j}^\infty C_{ij}$ where $C_{ij}  \subseteq \{ A_{i} \}$, so it is enough to show that 
 $$
 \mu_0(a_i,b_j]=\sum_{i=1}^\infty \mu_0(a_{j_i},b_{j_i})
