@@ -1693,7 +1693,7 @@ $$
 **Remark:**
 Simple functions are measurable iff $E_i$'s are measurable.
 
-**Notation:** $\mathcal{L^+}=$ Set of all measurable functions $f:(X,\mathscr{M})\to [0,\infty]$.
+**Notation:** $L^+=$ Set of all measurable functions $f:(X,\mathscr{M})\to [0,\infty]$.
 
 Let $\phi=\sum_{i=1}^\infty a_i\chi_{E_i}\in \mathcal{L^+}$. Then
 $$
