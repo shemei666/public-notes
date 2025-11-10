@@ -1494,7 +1494,7 @@ Now
 $$
 (a_i, b_i) = \bigsqcup_{k=1}^\infty (c_k^i, c_{k+1}^i] \implies E \subseteq \bigsqcup_{k=1}^\infty (c_k^i, c_{k+1}^i].
 $$
-Then $$\sum_{i=1}^\infty m(a_i,b_i)=\sum_{i,k=1}^\infty m(c_k^i,c_{k+1}^i]\implies m(E)=\mu^*(E)\leq\nu(E).$$ We need to show that $\nu(E)\leq m(E).$ Given $\epsilon>0,\ \exists\ \{(a_i,b_i]\}_{i=1}^\infty$ such that $$\sum_{i=1}^\infty m(a_i,b_i]\leq m(E)+\epsilon.$$ Take $\delta_i<\frac\epsilon{2^i}.$  Then $$\sum_{i=1}^\infty m(a_i,b_i+\delta_i)\leq\sum_{i=1}^\infty m(a_i,b_i]+\epsilon\leq m(E)+2\epsilon.$$ Since $\epsilon>0$ arbitrary, $\nu(E)\leq m(E).$ Therefore $\nu(E)=m(E).$
+Then $$\sum_{i=1}^\infty m (a_i,b_i)=\sum_{i,k=1}^\infty m(c_k^i,c_{k+1}^i]\implies m(E)=\mu^*(E)\leq\nu(E).$$ We need to show that $\nu(E)\leq m(E).$ Given $\epsilon>0,\ \exists\ \{(a_i,b_i]\}_{i=1}^\infty$ such that $$\sum_{i=1}^\infty m(a_i,b_i]\leq m(E)+\epsilon.$$ Take $\delta_i<\frac\epsilon{2^i}.$  Then $$\sum_{i=1}^\infty m(a_i,b_i+\delta_i)\leq\sum_{i=1}^\infty m(a_i,b_i]+\epsilon\leq m(E)+2\epsilon.$$ Since $\epsilon>0$ arbitrary, $\nu(E)\leq m(E).$ Therefore $\nu(E)=m(E).$
 
 **Theorem:** If $E \in \mathcal{L}$, Then
 
