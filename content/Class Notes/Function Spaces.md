@@ -1488,7 +1488,7 @@ m(E) = \inf\left\{\sum_{i=1}^\infty m(a_i, b_i] \ | \ E \subseteq \bigcup_{i=1}^
 $$
 **Proof.** Let
 $$
-\nu(E) := \inf\left\{\sum_{i=1}^\infty m(a_i, b_i] \ | \ E \subseteq \bigcup_{i=1}^\infty (a_i, b_i]\right\}.
+\nu(E) := \inf\left\{\sum_{i=1}^\infty m(a_i, b_i) \ | \ E \subseteq \bigcup_{i=1}^\infty (a_i, b_i)\right\}.
 $$
 Now
 $$
