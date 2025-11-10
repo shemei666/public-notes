@@ -1564,7 +1564,7 @@ m\left(\bigcup_{i=-N}^N E_i\right)\leq m\left(\bigcup_{i=-N}^N H_i\right)+\epsil
 \implies m(E) \leq \sup \{ m(K) \mid K \text{ compact }K \subseteq E \}  \quad \blacksquare
 \end{gather}
 $$
-
+**Def:** **($G_\delta$ Set)** A subset of a topological space $X$ is called a **$G_\delta$ set** if it can be written as the **countable intersection of open sets**. $$ A \text{ is } G_\delta \iff A = \bigcap_{i=1}^\infty U_i, \quad \text{where } U_i \text{ is open in } X. $$ **Def:** **($F_\sigma$ Set)** A subset of a topological space $X$ is called an **$F_\sigma$ set** if it can be written as the **countable union of closed sets**. $$ B \text{ is } F_\sigma \iff B = \bigcup_{i=1}^\infty F_i, \quad \text{where } F_i \text{ is closed in } X. $$ **Remark:** A set $A$ is $G_\delta$ if and only if its complement $A^c$ is $F_\sigma$.
 
 **Proposition:** If $E \subseteq \mathbb{R}$ TFAE
 1. $E \in \mathcal{L}$
@@ -1580,7 +1580,7 @@ Now take $V=\bigcap_{i=1}^\infty U_i$ and $W=\bigcup_{i=1}^\infty K_i.$ Then $m(
 $$
 m(N_1)=m(N_2)=0
 $$
-If $m(E)=\infty$ write $E=\bigcup_{k\in \mathbb{Z}}\underbrace{E\ \cap\ (k,k+1)}_{E_k}.$ Now $m(E_k)<\infty,\ \exists$ some $V_\delta$ set $V_k$ and $F_\delta$ set $W_k$ such that $m(N_1^k)=m(N_2^k)=0$ and  $E_k=V_k\setminus N_1^k$ and $E_k=W_k\ \cup\ N_2^k.$ Take 
+If $m(E)=\infty$ write $E=\bigcup_{k\in \mathbb{Z}}\underbrace{E\ \cap\ (k,k+1)}_{E_k}.$ Now $m(E_k)<\infty,\ \exists$ some $G_\delta$ set $V_k$ and $F_\sigma$ set $W_k$ such that $m(N_1^k)=m(N_2^k)=0$ and  $E_k=V_k\setminus N_1^k$ and $E_k=W_k\ \cup\ N_2^k.$ Take 
 $$
 \begin{gather}
 V=\bigcup_{k\in \mathbb{Z}} V_k \\
@@ -1591,7 +1591,7 @@ N_2=\bigcup_{k\in \mathbb{Z}}N_2^k
 $$ 
 Then we are done as $(2 \implies 1)$ and $(3 \implies 1)$ are obvious.
 
-**Remark:** $\mathcal{L}$ is the completion of $B_{\mathbb{R}}$ where
+**Remark:** $\mathcal{L}$ is the completion of $\mathscr{B}_{\mathbb{R}}$ where
 $$m(E)=\inf\left\{\sum_{i=1}^\infty m(a_i,b_i)\mid E\subset \bigcup_{i=1}^\infty (a_i,b_i)\right\}$$
 and any element $F\in\mathcal{L}$ can be written as $F=E \cup N$ where $E\in\mathscr{B}_\mathbb{R}$ and $N\subseteq N_1$ where $m|_{\mathscr{B}_\mathbb{R}} (N_1)=0.$
 
