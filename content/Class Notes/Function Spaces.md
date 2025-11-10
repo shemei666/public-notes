@@ -1538,11 +1538,9 @@ $$
 K = \overline{E}\setminus U \implies E = K \sqcup (E \cap U) \implies m(K) = m(E) - [m(U) - m(U\setminus E)] 
 $$
 $$
-\begin{gather}
-\overline{E} = (\overline{E} \setminus U) \sqcup U \\
-m(\bar{E})=m(\bar{E}\setminus U)+m(U)\leq m(\bar{E}\setminus E)+\epsilon+m(K)=m(\bar{E})-m(E)+\epsilon+m(K)
-\end{gather}
+\geq m(E) - m(U) + m(\overline{E} \setminus E) \geq m(E) - \varepsilon 
 $$
+
 $$
 \implies m(E)\leq m(K)+\epsilon\implies m(E)=\sup\{\mu(K)|K\subseteq E, K\text{ compact}\}
 $$
