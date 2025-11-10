@@ -1454,7 +1454,7 @@ $$
 $$
 Then $\mu_0$ is a premeasure on $A$.
 
-**Proof.** Let $\{A_i\}_{i=1}^\infty$ is a countable disjoint collection of sets in $A$ if $\bigsqcup_{i=1}^\infty A_i\in A.$ We need to prove that $\mu_0(\bigsqcup_{i=1}^\infty A_i)=\sum_{i=1}^\infty\mu_0(A_i).$ Let $\bigsqcup_{i=1}^\infty A_i=\bigsqcup_{j=1}^k(a_i,b_j]$ where $(a_i,b_j]=\bigsqcup_{i,j}^\infty C_{ij}$ where $A_i=\bigsqcup_{j=1}^\infty C_{ij}.$ It is enough to show that 
+**Proof.** Let $\{A_i\}_{i=1}^\infty$ is a countable disjoint collection of sets in $A$ if $\bigsqcup_{i=1}^\infty A_i\in A.$ We need to prove that $\mu_0(\bigsqcup_{i=1}^\infty A_i)=\sum_{i=1}^\infty\mu_0(A_i).$ Let $\bigsqcup_{i=1}^\infty A_i=\bigsqcup_{j=1}^k(a_i,b_j]$ where $(a_i,b_j]=\bigsqcup_{i,j}^\infty C_{ij}$ where $A_i=\bigsqcu enough to show that 
 $$
 \mu_0(a_i,b_j]=\sum_{i=1}^\infty \mu_0(a_{j_i},b_{j_i})
 $$ 
@@ -1462,7 +1462,7 @@ Basically if $[a,b]=\bigsqcup_{i=1}^\infty (a_i,b_i]$ then $\mu_0(a,b]=\sum_{j=1
 $$
 \bigsqcup_{i=1}^\infty (a_i,b_i]=\bigsqcup_{i=1}^N (a_i,b_i]+\bigsqcup_{i=N+1}^\infty (a_i,b_i]\implies \mu_0(\bigsqcup_{i=1}^\infty (a_i,b_i])\geq \mu_0(\bigsqcup_{i=1}^N (a_i,b_i])=\sum_{i=1}^N\mu_0(a_i,b_i]
 $$
-Taking $N\to\infty,$ $$\mu_0(a,b]=\mu_0(\bigsqcup_{i=1}^\infty(a_i,b_i])\geq\sum_{i=1}^\infty\mu_0(a_i,b_i].$$
+Taking $N\to\infty,$ $$\mu_0(a,b]=\mu_0(\bigsqcup_{i=1}^\infty(a_i,b_i])\geq\sum_{i=1}^\infty\mu_0(a_i,b_i]$$
 Choose $\epsilon>0$ and take $\delta,\delta_i$ s.t $\delta<\epsilon,\ \delta_i< \frac{\epsilon}{2^{i}}$ Then $[a+\delta,b]\subseteq\bigcup_{i=1}^\infty (a_i,b_i+\delta_i).$ Since $[a+\delta,b]$ is compact, $[a+\delta,b]=\bigcup_{i=1}^N(a_i,b_i+\delta_i).$ Now, 
 $$
 \begin{align}
