@@ -1552,7 +1552,7 @@ E=\bigsqcup_{i=0}^\infty (E\ \cap\ (i,i+1]) \\
 \text{Let }E_i=E\ \cap\ (i,i+1]
 \end{gather}
 $$
-Therefore for $\epsilon>0,\exists\ K_i$ such that  
+Therefore for $\epsilon>0,\exists\ K_i$ as shown above such that  
 $$
 m(E_i)\leq m(K_i)+\frac \epsilon{2^i}
 $$
