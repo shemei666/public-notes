@@ -1717,7 +1717,7 @@ Observe that if $f,g\in L^+$ and $f\leq g$ then $\int f d\mu\leq\int g d\mu$. Al
 **Proof:** For $n=1,2,\dots$ and $\forall 0\leq k\leq 2^{2n}-1$
 $$
 \begin{gather}
-E_{n}^{k} = f^{-1}((2^{-n},2^{-n}(k+1)]) \\
+E_{n}^{k} = f^{-1}((2^{-n}k,2^{-n}(k+1)]) \\
 F_{n} = f^{-1}((2^{n},\infty ]) \\
 \phi_{n} = \sum_{k=1}^{2^{2n}-1} 2^{-n}k \chi_{E_{n}^{k}} + 2^{n}\chi_{F_{n}}
 \end{gather}
