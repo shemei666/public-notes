@@ -11,3 +11,8 @@ We add the smaller one to the root of the bigger one
 
 ![[Pasted image 20251112190016.png]]
 ![[Pasted image 20251112193211.png]]
+
+## Dynamic Programming
+![[Pasted image 20251112231339.png]]
+![[Pasted image 20251112231553.png]]
+![[Pasted image 20251112231606.png]]
