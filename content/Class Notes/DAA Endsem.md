@@ -19,3 +19,6 @@ We add the smaller one to the root of the bigger one
 ![[Pasted image 20251112232634.png]]
 c is the length table and b helps to generate the lcs
 ![[Pasted image 20251112234152.png]]
+![[Pasted image 20251112235613.png]]
+![[Pasted image 20251112235921.png]]
+![[Pasted image 20251113000002.png]]
