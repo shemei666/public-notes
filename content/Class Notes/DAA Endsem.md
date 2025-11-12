@@ -6,4 +6,5 @@
 
 ![[Pasted image 20251112091655.png]]
 We add the smaller one to the root of the bigger one
+![[Pasted image 20251112103628.png]]
 
