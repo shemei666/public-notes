@@ -51,4 +51,5 @@ c is the length table and b helps to generate the lcs
 
 Branch and bound
 ![[Pasted image 20251113234422.png]]![[Pasted image 20251114000910.png]]
-
+CAN BE MADE INTO SET COVER algo which has approx ratio as ln n
+![[Pasted image 20251114002151.png]]
