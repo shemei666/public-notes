@@ -57,3 +57,4 @@ CAN BE MADE INTO SET COVER algo which has approx ratio as ln n
 ![[Pasted image 20251114003532.png]]
 ![[Pasted image 20251114003543.png]]
 ![[Pasted image 20251114005614.png]]![[Pasted image 20251114010821.png]]![[Pasted image 20251114010832.png]]![[Pasted image 20251114012710.png]]![[Pasted image 20251114013604.png]]![[Pasted image 20251114015036.png]]
+![[Pasted image 20251114015545.png]]
