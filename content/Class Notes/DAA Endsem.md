@@ -35,3 +35,5 @@ c is the length table and b helps to generate the lcs
 ![[Pasted image 20251113014508.png]]![[Pasted image 20251113014822.png]]
 ![[Pasted image 20251113015726.png]]
 ![[Pasted image 20251113015759.png]]
+![[Pasted image 20251113131216.png]]
+![[Pasted image 20251113131200.png]]
