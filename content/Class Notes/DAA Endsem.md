@@ -45,4 +45,6 @@ c is the length table and b helps to generate the lcs
 
 ![[Pasted image 20251113233851.png]]
 
-![[Pasted image 20251113234422.png]]
+Branch and bound
+![[Pasted image 20251113234422.png]]![[Pasted image 20251114000910.png]]
+
