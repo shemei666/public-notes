@@ -44,3 +44,5 @@ c is the length table and b helps to generate the lcs
 ![[Pasted image 20251113170323.png]]
 
 ![[Pasted image 20251113233851.png]]
+
+![[Pasted image 20251113234422.png]]
