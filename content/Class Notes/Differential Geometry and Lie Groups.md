@@ -134,9 +134,22 @@ $$
 ![[Pasted image 20251115122151.png]]
 ![[Pasted image 20251115122225.png]]
 
-
+![[Pasted image 20251115123657.png]]
  
+![[Pasted image 20251115123710.png]]
 
+![[Pasted image 20251115123748.png]]
+![[Pasted image 20251115123801.png]]
+![[Pasted image 20251115123820.png]]
+## Existence Theorem
+
+![[Pasted image 20251115123916.png]]
+
+![[Pasted image 20251115124257.png]]
+
+![[Pasted image 20251115124311.png]]
+
+![[Pasted image 20251115124336.png]]
 
 # Class Notes
 ![[IMG_20251023_152530.jpg]]
