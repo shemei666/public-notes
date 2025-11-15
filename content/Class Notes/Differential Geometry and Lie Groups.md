@@ -151,6 +151,13 @@ $$
 
 ![[Pasted image 20251115124336.png]]
 
+## Differentiation of Vector fields
+
+![[Pasted image 20251115153500.png]]
+
+
+
+
 # Class Notes
 ![[IMG_20251023_152530.jpg]]
 
