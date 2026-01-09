@@ -1,7 +1,6 @@
 ## Introduction
 
 
-
 ## Graph theory
 
 
