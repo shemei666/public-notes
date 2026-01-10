@@ -81,10 +81,12 @@ If $G$ is a bipartite graph with vertex partitions $U$ and $V$ of sizes $m$ and 
 $$A = \begin{pmatrix} \mathbf{0}_{m \times m} & B \\ B^T & \mathbf{0}_{n \times n} \end{pmatrix}$$
 where $B$ is an $m \times n$ matrix such that $b_{ij} = 1$ if there is an edge between $u_i \in U$ and $v_j \in V$, and $0$ otherwise.
 
-For a bipartite graph $G$ with partitions $U$ and $V$ of equal size $n$
 
-**Theorem:** $G$ has a perfect matching if and only if $\det(B(x))$ is not the zero polynomial.
+**Theorem:** For a bipartite graph $G$ with partitions $U$ and $V$ of equal size $n$, $G$ has a perfect matching if and only if $\det(B)$ is not zero.
 
+**Lemma (Leibniz Formula):** 
+$$\det(B) = \sum_{\sigma \in S_n} \text{sgn}(\sigma) \prod_{i=1}^n b_{i, \sigma(i)}$$
+where $S_n$ is the symmetric group of all permutations of the set $\{1, 2, \dots, n\}$, and $\text{sgn}(\sigma)$ denotes the sign of the permutation $\sigma$ ($+1$ for even and $-1$ for odd permutations).
 
 
 
