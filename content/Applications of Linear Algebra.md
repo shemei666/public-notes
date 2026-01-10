@@ -127,6 +127,27 @@ Any polynomial $p(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0$ can be u
 ### Polynomial Interpolation
 **Problem:** Given $n+1$ distinct points $(x_0, y_0), (x_1, y_1), \dots, (x_n, y_n)$ in $\mathbb{F}^2$, does there exist a unique polynomial $p(x) \in \mathcal{P}_n$ such that $p(x_i) = y_i$ for all $i = 0, 1, \dots, n$?
 
+$$
+\begin{cases}
+a_0 + a_1 x_0 + a_2 x_0^2 + \dots + a_n x_0^n = y_0 \\
+a_0 + a_1 x_1 + a_2 x_1^2 + \dots + a_n x_1^n = y_1 \\
+\vdots \\
+a_0 + a_1 x_n + a_2 x_n^2 + \dots + a_n x_n^n = y_n
+\end{cases}
+$$
+In matrix form, this is $V\mathbf{a} = \mathbf{y}$ where $V$ is the **Vandermonde matrix**:
+$$
+\begin{pmatrix} 
+1 & x_0 & x_0^2 & \dots & x_0^n \\ 
+1 & x_1 & x_1^2 & \dots & x_1^n \\ 
+\vdots & \vdots & \vdots & \ddots & \vdots \\ 
+1 & x_n & x_n^2 & \dots & x_n^n 
+\end{pmatrix} 
+\begin{pmatrix} a_0 \\ a_1 \\ \vdots \\ a_n \end{pmatrix} = 
+\begin{pmatrix} y_0 \\ y_1 \\ \vdots \\ y_n \end{pmatrix}
+$$
+Since the points $x_i$ are distinct, $\det(V) = \prod_{0 \le i < j \le n} (x_j - x_i) \neq 0$, ensuring a unique solution for the coefficients.
+
 
 ### Resultant and Sylvester Matrix
 The **resultant** of two polynomials $p(x)$ and $q(x)$ is a scalar value that determines whether they share a common root.
@@ -250,4 +271,36 @@ $$x^T M x \ge 0$$
 \end{document}
 ```
 
+**Problem:** When can a rectangle with side lengths $1$ and $x$ be tiled by finitely many squares?
+
+If $x \in \mathbb{Q}$, say $x = \frac{p}{q}$ for $p, q \in \mathbb{N}$, the rectangle can be tiled with $pq$ squares of side length $\frac{1}{q}$. 
+
+**Theorem.** A rectangle $R$ with side lengths $1$ and $x$, where $x$ is irrational, cannot be "tiled" by finitely many squares (so that the squares have disjoint interiors and cover all of $R$).
+
+
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[x=0.8cm, y=0.8cm, thick]
+% Outer boundary: 7 units wide, 5 units high
+\draw (0,0) rectangle (7, 5);
+
+% Main vertical solid divider (separates left 3 units from right 4 units)
+\draw (3, 0) -- (3, 5);
+
+% Solid lines on the left side
+\draw (0, 3) -- (3, 3);      % Horizontal divider above the 3x3 square
+\draw (2, 3) -- (2, 5);      % Vertical divider for the 2x2 square
+\draw (2, 4) -- (3, 4);      % Horizontal divider between the two 1x1 squares
+
+% Dotted lines tracing the boundaries
+\begin{scope}[dotted]
+    \draw (2, 0) -- (2, 3);        % Vertical dotted line extending from the 2x2 square down
+    \draw (0, 4) -- (2, 4);        % Horizontal dotted line extending from the 1x1 divider left
+    \draw (3, 4) -- (7, 4);        % Horizontal dotted line extending from the 1x1 divider right
+    \draw (3, 3) -- (7, 3);        % Horizontal dotted line extending from the 3x3 divider right
+\end{scope}
+\end{tikzpicture}
+\end{document}
+```
 
