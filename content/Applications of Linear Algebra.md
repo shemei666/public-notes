@@ -60,10 +60,16 @@ For a graph with vertices $V = \{v_1, v_2, v_3, v_4\}$ and edges $E = \{(v_1, v_
 $$A = \begin{pmatrix} 0 & 1 & 1 & 0 \\ 1 & 0 & 1 & 0 \\ 1 & 1 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{pmatrix}$$
 
 
-### Properties
+### Remarks
 *   **Symmetry:** For an undirected graph, the adjacency matrix is symmetric ($A = A^T$).
 *   **Vertex Degree:** The sum of the entries in the $i$-th row (or column) of $A$ is equal to the degree $d(v_i)$ of the vertex $v_i$.
 
+### Powers of the Adjacency Matrix
+**Theorem:** Let $A$ be the adjacency matrix of a graph $G$. The entry $(A^k)_{ij}$ is equal to the number of walks of length $k$ from vertex $v_i$ to vertex $v_j$.
+
+**Corollary:** The number of triangles in a simple graph $G$ is given by:
+$$\text{Number of triangles} = \frac{1}{6} \text{tr}(A^3)$$
+where $\text{tr}(A^3)$ is the trace of $A^3$. This follows from the theorem for $k=3$, as $(A^3)_{ii}$ counts the number of walks of length 3 from $v_i$ to itself. In a simple graph, such a walk must be a triangle, and each triangle is counted 6 times (starting at each of the 3 vertices and traversing in 2 directions). Alternatively, using $A^2$, the number of triangles is $\frac{1}{2} \sum_{i <
 
 
 
