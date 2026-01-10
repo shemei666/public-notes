@@ -151,3 +151,79 @@ A complex number $\alpha$ is called an **algebraic number** if it is a root of a
 
 
 ## Geometry
+
+### Euclidean distances
+**Problem:** Given three points $P_1, P_2, P_3$ and their pairwise distances $d_{12}, d_{23}, d_{31}$, how can we determine if these points can be constructed in the Euclidean plane $\mathbb{R}^2$?
+
+The points can be embedded in $\mathbb{R}^2$ if and only if they satisfy the **triangle inequality**:
+$$d_{ij} \le d_{ik} + d_{kj}$$
+for all distinct $i, j, k \in \{1, 2, 3\}$.
+
+**Example:**
+Can we find points $p, q, r$ such that $|p - q| = 1, |q - r| = 1$, and $|p - r| = 3$?
+No, because the triangle inequality requires:
+$$|p - r| \le |p - q| + |q - r| \implies 3 \le 1 + 1 = 2$$
+This is a contradiction, so such points cannot exist in any Euclidean space.
+
+**Sufficiency for $n=3$:**
+The triangle inequality is also **sufficient** for three points. Geometrically, we can construct the points by placing $P_1$ and $P_2$ at a distance $d_{12}$ apart. Consider two circles: $\mathcal{C}_1$ centered at $P_1$ with radius $d_{13}$, and $\mathcal{C}_2$ centered at $P_2$ with radius $d_{23}$. These circles intersect at a point $P_3$ if and only if the distance between their centers $d_{12}$ satisfies:
+$$|d_{13} - d_{23}| \le d_{12} \le d_{13} + d_{23}$$
+This condition is equivalent to the triangle inequalities for the three distances.
+
+### General case for $n$ points
+**Problem:** Given $n$ points and their pairwise distances $d_{ij}$, how can we determine if these points can be embedded in a Euclidean space $\mathbb{R}^k$?
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=3,thick]
+% Define coordinates for the square vertices
+
+\coordinate (s) at (0,1);
+
+\coordinate (r) at (1,1);
+
+\coordinate (p) at (0,0);
+
+\coordinate (q) at (1,0);
+
+% Draw edges with weights
+
+% Top edge
+
+\draw (s) -- (r) node[midway, above] {2};
+
+% Bottom edge
+
+\draw (p) -- (q) node[midway, below] {2};
+
+% Left edge
+
+\draw (s) -- (p) node[midway, left] {2};
+
+% Right edge
+
+\draw (r) -- (q) node[midway, right] {2};
+
+% Draw diagonals with weights
+
+% Diagonal from s to q (top-left to bottom-right)
+
+\draw (s) -- (q) node[pos=0.25, above right] {3};
+
+% Diagonal from p to r (bottom-left to top-right)
+
+\draw (p) -- (r) node[pos=0.75, above left] {3};
+
+% Draw the vertices (bullets) and their labels
+
+\foreach \n/\pos in {s/left, r/right, p/left, q/right}
+
+\fill (\n) circle (1.5pt) node[\pos] {$\mathbf{\n}$};
+\end{tikzpicture}
+\end{document}
+```
+In the figure above, every subset of three points satisfies the triangle inequality (e.g., for triangle $pqr$, $2+2 > 3$). However, these four points cannot be embedded in any Euclidean space $\mathbb{R}^k$.
+
+
+
+
