@@ -81,6 +81,10 @@ If $G$ is a bipartite graph with vertex partitions $U$ and $V$ of sizes $m$ and 
 $$A = \begin{pmatrix} \mathbf{0}_{m \times m} & B \\ B^T & \mathbf{0}_{n \times n} \end{pmatrix}$$
 where $B$ is an $m \times n$ matrix such that $b_{ij} = 1$ if there is an edge between $u_i \in U$ and $v_j \in V$, and $0$ otherwise.
 
+For a bipartite graph $G$ with partitions $U$ and $V$ of equal size $n$
+
+**Theorem:** $G$ has a perfect matching if and only if $\det(B(x))$ is not the zero polynomial.
+
 
 
 
