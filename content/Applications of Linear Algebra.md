@@ -87,6 +87,10 @@ where $B$ is an $m \times n$ matrix such that $b_{ij} = 1$ if there is an edge b
 **Lemma (Leibniz Formula):** 
 $$\det(B) = \sum_{\sigma \in S_n} \text{sgn}(\sigma) \prod_{i=1}^n b_{i, \sigma(i)}$$
 where $S_n$ is the symmetric group of all permutations of the set $\{1, 2, \dots, n\}$, and $\text{sgn}(\sigma)$ denotes the sign of the permutation $\sigma$ ($+1$ for even and $-1$ for odd permutations).
+**Proof of Lemma:**
+By the multilinearity of the determinant with respect to its rows, we can expand $\det(B)$ as:
+$$\det(B) = \det\left(\sum_{j_1=1}^n b_{1,j_1} \mathbf{e}_{j_1}, \dots, \sum_{j_n=1}^n b_{n,j_n} \mathbf{e}_{j_n}\right) = \sum_{j_1, \dots, j_n} \left( \prod_{i=1}^n b_{i,j_i} \right) \det(\mathbf{e}_{j_1}, \dots, \mathbf{e}_{j_n})$$
+
 
 
 
