@@ -149,6 +149,9 @@ $$
 Since the points $x_i$ are distinct, $\det(V) = \prod_{0 \le i < j \le n} (x_j - x_i) \neq 0$, ensuring a unique solution for the coefficients.
 
 
+
+
+
 ### Resultant and Sylvester Matrix
 The **resultant** of two polynomials $p(x)$ and $q(x)$ is a scalar value that determines whether they share a common root.
 
