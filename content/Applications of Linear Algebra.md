@@ -143,6 +143,8 @@ b_m & b_{m-1} & \dots & b_0 & 0 & \dots & 0 \\
 0 & \dots & 0 & b_m & b_{m-1} & \dots & b_0 \\ 
 \end{pmatrix}$$
 
+### Algebraic Numbers
+A complex number $\alpha$ is called an **algebraic number** if it is a root of a non-zero polynomial with coefficients in $\mathbb{Q}$. That is, there exists $p(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_0$ where $a_i \in \mathbb{Q}$ and $a_n \neq 0$, such that $p(\alpha) = 0$.
 
 
 
