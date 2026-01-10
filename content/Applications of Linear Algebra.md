@@ -152,6 +152,7 @@ Since the points $x_i$ are distinct, $\det(V) = \prod_{0 \le i < j \le n} (x_j -
 
 
 
+
 ### Resultant and Sylvester Matrix
 The **resultant** of two polynomials $p(x)$ and $q(x)$ is a scalar value that determines whether they share a common root.
 
@@ -167,9 +168,54 @@ b_m & b_{m-1} & \dots & b_0 & 0 & \dots & 0 \\
 0 & \dots & 0 & b_m & b_{m-1} & \dots & b_0 \\ 
 \end{pmatrix}$$
 
+The **resultant** of $p$ and $q$ is defined as $\text{res}(p, q) = \det(S(p, q))$. If $\text{res}(p, q) \neq 0$, then $p$ and $q$ have no common roots.
+
+Now if $p,q$ are polynomials of degree $n,m$ respectively, then $\gcd(p,q) \neq 0$ iff
+$$
+\begin{align}
+p(x)  & = p'(x)d(x)  &  \deg(p) \leq  n-1\\
+q(x)  & = q'(x)d(x)  &  \deg(m) \leq  m-1\\ 
+\end{align}
+$$
+$$
+q'(x)p(x) - p'(x)q(x)   \equiv  0
+$$
+
+We can compare both sides of the above equation to get a matrix equation,
+$$
+S(p, q)^T \begin{pmatrix} q'_{m-1} \\ \vdots \\ q'_0 \\ -p'_{n-1} \\ \vdots \\ -p'_0 \end{pmatrix} = \mathbf{0}
+$$
+
+Hence this has solutions if and only if $\det(S(p, q)) = 0$.
+
+
+A polynomial $p(x)$ has a repeated root if and only if $p(x)$ and its derivative $p'(x)$ share a common root. Applying the property of the resultant, we have:
+$$p(x) \text{ has a repeated root} \iff \text{res}(p, p') = 0$$
+This condition is the basis for the **discriminant** $\Delta(p)$, which is a scalar proportional to $\text{res}(p, p')$ used to identify the presence of multiple roots.
+
+
+
+
 ### Algebraic Numbers
 A complex number $\alpha$ is called an **algebraic number** if it is a root of a non-zero polynomial with coefficients in $\mathbb{Q}$. That is, there exists $p(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_0$ where $a_i \in \mathbb{Q}$ and $a_n \neq 0$, such that $p(\alpha) = 0$.
 
+**Problem:** Is the set of algebraic numbers $\overline{\mathbb{Q}}$ a field?
+i.e given $\alpha, \beta \in \overline{\mathbb{Q}}$ does it have:
+*   **Addition**: $\alpha + \beta \in \overline{\mathbb{Q}}$
+*   **Additive Inverse**: $-\alpha \in \overline{\mathbb{Q}}$
+*   **Subtraction**: $\alpha - \beta \in \overline{\mathbb{Q}}$
+*   **Multiplication**: $\alpha \beta \in \overline{\mathbb{Q}}$
+*   **Multiplicative Inverse**: $1 / \beta \in \overline{\mathbb{Q}}$ (for $\beta \neq 0$)
+
+The existence of inverses is straightforward:
+*   **Additive Inverse:** If $p(\alpha) = 0$, then $-\alpha$ is a root of $q(x) = p(-x) \in \mathbb{Q}[x]$.
+*   **Multiplicative Inverse:** If $p(\alpha) = 0$ for $\alpha \neq 0$, then $1/\alpha$ is a root of the reciprocal polynomial $q(x) = x^{\deg p} p(1/x) \in \mathbb{Q}[x]$.
+
+Closure under addition and multiplication follows from the properties of the resultant:
+*   $\alpha + \beta$ is a root of $r(x) = \text{res}_y(p(x-y), q(y))$.
+*   $\alpha \beta$ is a root of 
+
+Since the resultant is the determinant of the Sylvester matrix (composed of rational coefficients), the resulting polynomials $r(x)$ also have rational coefficients. Thus, $\overline{\mathbb{Q}}$ is a field.
 
 
 
