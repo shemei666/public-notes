@@ -128,12 +128,22 @@ Any polynomial $p(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0$ can be u
 **Problem:** Given $n+1$ distinct points $(x_0, y_0), (x_1, y_1), \dots, (x_n, y_n)$ in $\mathbb{F}^2$, does there exist a unique polynomial $p(x) \in \mathcal{P}_n$ such that $p(x_i) = y_i$ for all $i = 0, 1, \dots, n$?
 
 
+### Resultant and Sylvester Matrix
+The **resultant** of two polynomials $p(x)$ and $q(x)$ is a scalar value that determines whether they share a common root.
+
+Let $p(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_0$ and $q(x) = b_m x^m + b_{m-1} x^{m-1} + \dots + b_0$. The **Sylvester matrix** $S(p, q)$ is an $(n+m) \times (n+m)$ matrix constructed from their coefficients:
+$$S(p, q) = \begin{pmatrix} 
+a_n & a_{n-1} & \dots & a_0 & 0 & \dots & 0 \\ 
+0 & a_n & a_{n-1} & \dots & a_0 & \dots & 0 \\ 
+\vdots & \vdots & \vdots & \ddots & \vdots & \ddots & \vdots \\ 
+0 & \dots & 0 & a_n & a_{n-1} & \dots & a_0 \\ 
+b_m & b_{m-1} & \dots & b_0 & 0 & \dots & 0 \\ 
+0 & b_m & b_{m-1} & \dots & b_0 & \dots & 0 \\ 
+\vdots & \vdots & \vdots & \ddots & \vdots & \ddots & \vdots \\ 
+0 & \dots & 0 & b_m & b_{m-1} & \dots & b_0 \\ 
+\end{pmatrix}$$
 
 
-This problem can be formulated as a system of linear equations $V\mathbf{a} = \mathbf{y}$, where $\mathbf{a}$ is the vector of coefficients and $V$ is the **Vandermonde matrix**:
-$$V = \begin{pmatrix} 1 & x_0 & x_0^2 & \dots & x_0^n \\ 1 & x_1 & x_1^2 & \dots & x_1^n \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 1 & x_n & x_n^2 & \dots & x_n^n \end{pmatrix}$$
-
-Since the $x_i$ are distinct, $\det(V) = \prod_{0 \le i < j \le n} (x_j - x_i) \neq 0$, implying that $V$ is invertible and a unique solution for the coefficients $a_i$ always exists.
 
 
 
