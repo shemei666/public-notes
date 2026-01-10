@@ -38,7 +38,7 @@ A **graph** $G = (V, E)$ consists of:
 *   **Vertices:** A set $V = \{v_1, v_2, \dots, v_n\}$ representing the objects.
 *   **Edges:** A set $E$ of pairs of vertices representing the connections between them.
 
-### Key Terminology
+### Definitions
 *   **Degree:** The degree of a vertex $v$, denoted $d(v)$, is the number of edges incident to it.
 *   **Walk:** A sequence of vertices and edges $v_0, e_1, v_1, e_2, \dots, e_k, v_k$ starting and ending at vertices.
 *   **Trail:** A walk in which no edges are repeated.
@@ -69,7 +69,22 @@ $$A = \begin{pmatrix} 0 & 1 & 1 & 0 \\ 1 & 0 & 1 & 0 \\ 1 & 1 & 0 & 1 \\ 0 & 0 &
 
 **Corollary:** The number of triangles in a simple graph $G$ is given by:
 $$\text{Number of triangles} = \frac{1}{6} \text{tr}(A^3)$$
-where $\text{tr}(A^3)$ is the trace of $A^3$. This follows from the theorem for $k=3$, as $(A^3)_{ii}$ counts the number of walks of length 3 from $v_i$ to itself. In a simple graph, such a walk must be a triangle, and each triangle is counted 6 times (starting at each of the 3 vertices and traversing in 2 directions). Alternatively, using $A^2$, the number of triangles is $\frac{1}{2} \sum_{i <
+where $\text{tr}(A^3)$ is the trace of $A^3$. This follows from the theorem for $k=3$, as $(A^3)_{ii}$ counts the number of walks of length 3 from $v_i$ to itself. In a simple graph, such a walk must be a triangle, and each triangle is counted 6 times (starting at each of the 3 vertices and traversing in 2 directions).
+
+### Matchings
+A **matching** $M$ in a graph $G = (V, E)$ is a subset of edges such that no two edges share a common vertex.
+
+A **perfect matching** is a matching that covers all vertices of the graph. A matching $M$ is perfect if every vertex $v \in V$ is incident to exactly one edge in $M$. This implies that the total number of vertices $|V|$ must be even, and the matching contains exactly $|V|/2$ edges.
+
+### Adjacency Matrix of Bipartite Graphs
+If $G$ is a bipartite graph with vertex partitions $U$ and $V$ of sizes $m$ and $n$ respectively, its adjacency matrix $A$ can be expressed in block form by ordering the vertices of $U$ before $V$:
+$$A = \begin{pmatrix} \mathbf{0}_{m \times m} & B \\ B^T & \mathbf{0}_{n \times n} \end{pmatrix}$$
+where $B$ is an $m \times n$ matrix such that $b_{ij} = 1$ if there is an edge between $u_i \in U$ and $v_j \in V$, and $0$ otherwise.
+
+
+
+
+
 
 
 
