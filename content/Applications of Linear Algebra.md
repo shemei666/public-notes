@@ -103,13 +103,39 @@ $$m_{ij} = \begin{cases} 1 & \text{if vertex } v_i \text{ is incident to edge } 
 2. The sum of the entries in the $i$-th row is equal to the degree $d(v_i)$ of vertex $v_i$.
 
 
+**Lemma:** For a connected graph $G$ with $n$ vertices, the rank of the oriented incidence matrix is $n-1$. 
+**Proof Sketch:** The sum of all rows in $M$ is the zero vector, as each column contains exactly one $1$ and
 
+one $-1$.
 
-
+**Theorem:** If $G$ is a graph on $n$ vertices and has $k$ connected components, then $\text{rank}(Q(G)) = n - k$.
+**Corollary:** The dimension of the null space of $Q(G)$ is equal to the number of connected components $k$.
 
 
 
 
 ## Polynomials
+The set of all polynomials over a field $\mathbb{F}$, denoted by $\mathcal{P}$, forms an infinite-dimensional vector space under the operations of polynomial addition and scalar multiplication.
+
+For any $n \in \mathbb{N}$, the set of polynomials of degree at most $n$, denoted by $\mathcal{P}_n$, is a subspace of $\mathcal{P}$.
+
+**Standard Basis for $\mathcal{P}_n$:**
+The standard basis for $\mathcal{P}_n$ is the set of monomials:
+$$\mathcal{B} = \{1, x, x^2, \dots, x^n\}$$
+Any polynomial $p(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x + a_0$ can be uniquely represented as a linear combination of these basis vectors, which implies $\dim(\mathcal{P}_n) = n+1$.
+
+### Polynomial Interpolation
+**Problem:** Given $n+1$ distinct points $(x_0, y_0), (x_1, y_1), \dots, (x_n, y_n)$ in $\mathbb{F}^2$, does there exist a unique polynomial $p(x) \in \mathcal{P}_n$ such that $p(x_i) = y_i$ for all $i = 0, 1, \dots, n$?
+
+
+
+
+This problem can be formulated as a system of linear equations $V\mathbf{a} = \mathbf{y}$, where $\mathbf{a}$ is the vector of coefficients and $V$ is the **Vandermonde matrix**:
+$$V = \begin{pmatrix} 1 & x_0 & x_0^2 & \dots & x_0^n \\ 1 & x_1 & x_1^2 & \dots & x_1^n \\ \vdots & \vdots & \vdots & \ddots & \vdots \\ 1 & x_n & x_n^2 & \dots & x_n^n \end{pmatrix}$$
+
+Since the $x_i$ are distinct, $\det(V) = \prod_{0 \le i < j \le n} (x_j - x_i) \neq 0$, implying that $V$ is invertible and a unique solution for the coefficients $a_i$ always exists.
+
+
+
 
 ## Geometry
