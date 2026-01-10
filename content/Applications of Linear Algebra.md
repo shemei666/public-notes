@@ -104,9 +104,8 @@ $$m_{ij} = \begin{cases} 1 & \text{if vertex } v_i \text{ is incident to edge } 
 
 
 **Lemma:** For a connected graph $G$ with $n$ vertices, the rank of the oriented incidence matrix is $n-1$. 
-**Proof Sketch:** The sum of all rows in $M$ is the zero vector, as each column contains exactly one $1$ and
+**Proof Sketch:** 
 
-one $-1$.
 
 **Theorem:** If $G$ is a graph on $n$ vertices and has $k$ connected components, then $\text{rank}(Q(G)) = n - k$.
 **Corollary:** The dimension of the null space of $Q(G)$ is equal to the number of connected components $k$.
@@ -203,7 +202,6 @@ A complex number $\alpha$ is called an **algebraic number** if it is a root of a
 i.e given $\alpha, \beta \in \overline{\mathbb{Q}}$ does it have:
 *   **Addition**: $\alpha + \beta \in \overline{\mathbb{Q}}$
 *   **Additive Inverse**: $-\alpha \in \overline{\mathbb{Q}}$
-*   **Subtraction**: $\alpha - \beta \in \overline{\mathbb{Q}}$
 *   **Multiplication**: $\alpha \beta \in \overline{\mathbb{Q}}$
 *   **Multiplicative Inverse**: $1 / \beta \in \overline{\mathbb{Q}}$ (for $\beta \neq 0$)
 
@@ -211,13 +209,14 @@ The existence of inverses is straightforward:
 *   **Additive Inverse:** If $p(\alpha) = 0$, then $-\alpha$ is a root of $q(x) = p(-x) \in \mathbb{Q}[x]$.
 *   **Multiplicative Inverse:** If $p(\alpha) = 0$ for $\alpha \neq 0$, then $1/\alpha$ is a root of the reciprocal polynomial $q(x) = x^{\deg p} p(1/x) \in \mathbb{Q}[x]$.
 
-Closure under addition and multiplication follows from the properties of the resultant:
-*   $\alpha + \beta$ is a root of $r(x) = \text{res}_y(p(x-y), q(y))$.
-*   $\alpha \beta$ is a root of 
+Given 2 polynomials $p(x),q(x)$, with roots $\alpha,\beta$ respectively we can use the resultant to find polynomials $r(x),s(x)$ with roots $\alpha+\beta,\alpha\beta$ respectively. 
 
-Since the resultant is the determinant of the Sylvester matrix (composed of rational coefficients), the resulting polynomials $r(x)$ also have rational coefficients. Thus, $\overline{\mathbb{Q}}$ is a field.
-
-
+$$
+\begin{align}
+r(x) = \text{res}_{y}\left(p(y),\text{res}_{z}(q(z),x-y-z)\right) \\
+s(x) = \text{res}_{y}(p(y),\text{res}_{z}(q(z),x-yz))
+\end{align}
+$$
 
 
 ## Geometry
@@ -238,7 +237,6 @@ This is a contradiction, so such points cannot exist in any Euclidean space.
 **Sufficiency for $n=3$:**
 The triangle inequality is also **sufficient** for three points. Geometrically, we can construct the points by placing $P_1$ and $P_2$ at a distance $d_{12}$ apart. Consider two circles: $\mathcal{C}_1$ centered at $P_1$ with radius $d_{13}$, and $\mathcal{C}_2$ centered at $P_2$ with radius $d_{23}$. These circles intersect at a point $P_3$ if and only if the distance between their centers $d_{12}$ satisfies:
 $$|d_{13} - d_{23}| \le d_{12} \le d_{13} + d_{23}$$
-This condition is equivalent to the triangle inequalities for the three distances.
 
 ### General case for $n$ points
 **Problem:** Given $n$ points and their pairwise distances $d_{ij}$, how can we determine if these points can be embedded in a Euclidean space $\mathbb{R}^k$?
