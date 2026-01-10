@@ -224,6 +224,30 @@ This condition is equivalent to the triangle inequalities for the three distance
 ```
 In the figure above, every subset of three points satisfies the triangle inequality (e.g., for triangle $pqr$, $2+2 > 3$). However, these four points cannot be embedded in any Euclidean space $\mathbb{R}^k$.
 
+**Definition:** A symmetric matrix $M \in \mathbb{R}^{n \times n}$ is **positive semi-definite (PSD)** if for every vector $x \in \mathbb{R}^n$, the quadratic form is non-negative:
+$$x^T M x \ge 0$$
 
+**Fact:** A real symmetric $n \times n$ matrix $A$ is positive semi-definite if and only if there exists an $n \times n$ real matrix $X$ such that $A = X^T X$.
+
+
+### Squaring a rectangle
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=2]
+% Draw the rectangle and label the sides
+
+\draw (0,0) -- (2.5,0) node[midway, below] {$x$}
+-- (2.5,1) node[midway, right] {}
+-- (0,1) node[midway, above] {}
+-- (0,0) node[midway, left] {$1$};
+
+% Optionally, fill the rectangle with a light color for better visibility
+
+
+\draw (0,0) rectangle (2.5,1);
+\end{tikzpicture}
+\end{document}
+```
 
 
