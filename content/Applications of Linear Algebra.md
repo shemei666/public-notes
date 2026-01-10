@@ -32,6 +32,39 @@ where $I$ is the $n \times n$ identity matrix. The determinant yields a polynomi
 
 
 ## Graph theory
+Graph theory is the study of graphs, which are mathematical structures used to model pairwise relations between objects.
+
+A **graph** $G = (V, E)$ consists of:
+*   **Vertices:** A set $V = \{v_1, v_2, \dots, v_n\}$ representing the objects.
+*   **Edges:** A set $E$ of pairs of vertices representing the connections between them.
+
+### Key Terminology
+*   **Degree:** The degree of a vertex $v$, denoted $d(v)$, is the number of edges incident to it.
+*   **Walk:** A sequence of vertices and edges $v_0, e_1, v_1, e_2, \dots, e_k, v_k$ starting and ending at vertices.
+*   **Trail:** A walk in which no edges are repeated.
+*   **Path:** A walk in which no vertices (and consequently no edges) are repeated.
+*   **Connectedness:** A graph is **connected** if there is a path between every pair of vertices. A graph that is not connected is called **disconnected**.
+*   **Connected Component:** A maximal connected subgraph of a graph. Every graph can be uniquely partitioned into its connected components.
+
+### Special Graphs
+*   **Complete Graph ($K_n$):** A graph where every pair of distinct vertices is connected by a unique edge. It has $\binom{n}{2}$ edges.
+*   **Bipartite Graph:** A graph whose vertices can be partitioned into two disjoint sets $U$ and $V$ such that every edge connects a vertex in $U$ to one in $V$. A **complete bipartite graph** $K_{m,n}$ contains all possible edges between the two sets.
+*   **Tree:** A connected graph that contains no cycles. For a graph with $n$ vertices, being a tree is equivalent to being connected and having exactly $n-1$ edges.
+
+## Adjacency Matrix
+The **adjacency matrix** $A$ of a graph $G$ with $n$ vertices is an $n \times n$ matrix where the entry $a_{ij}$ is defined as:
+$$a_{ij} = \begin{cases} 1 & \text{if there is an edge between } v_i \text{ and } v_j \\ 0 & \text{otherwise} \end{cases}$$
+
+**Example:**
+For a graph with vertices $V = \{v_1, v_2, v_3, v_4\}$ and edges $E = \{(v_1, v_2), (v_1, v_3), (v_2, v_3), (v_3, v_4)\}$, the adjacency matrix $A$ is:
+$$A = \begin{pmatrix} 0 & 1 & 1 & 0 \\ 1 & 0 & 1 & 0 \\ 1 & 1 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{pmatrix}$$
+
+
+### Properties
+*   **Symmetry:** For an undirected graph, the adjacency matrix is symmetric ($A = A^T$).
+*   **Vertex Degree:** The sum of the entries in the $i$-th row (or column) of $A$ is equal to the degree $d(v_i)$ of the vertex $v_i$.
+
+
 
 
 
