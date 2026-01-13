@@ -56,7 +56,25 @@ The **adjacency matrix** $A$ of a graph $G$ with $n$ vertices is an $n \times n$
 $$a_{ij} = \begin{cases} 1 & \text{if there is an edge between } v_i \text{ and } v_j \\ 0 & \text{otherwise} \end{cases}$$
 
 **Example:**
-For a graph with vertices $V = \{v_1, v_2, v_3, v_4\}$ and edges $E = \{(v_1, v_2), (v_1, v_3), (v_2, v_3), (v_3, v_4)\}$, the adjacency matrix $A$ is:
+For a graph with vertices $V = \{v_1, v_2, v_3, v_4\}$ and edges $E = \{(v_1, v_2), (v_1, v_3), (v_2, v_3), (v_3, v_4)\}$, 
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=1.5,thick,every node/.style={circle,draw,minimum size=0.3cm}]
+    \node (v1) at (0,1) {$v_1$};
+    \node (v2) at (1,1) {$v_2$};
+    \node (v3) at (0.5,0.13) {$v_3$};
+    \node (v4) at (0.5,-0.8) {$v_4$};
+
+    \draw (v1) -- (v2);
+    \draw (v2) -- (v3);
+    \draw (v1) -- (v3);
+    \draw (v3) -- (v4);
+\end{tikzpicture}
+\end{document}
+```
+
+the adjacency matrix $A$ is:
 $$A = \begin{pmatrix} 0 & 1 & 1 & 0 \\ 1 & 0 & 1 & 0 \\ 1 & 1 & 0 & 1 \\ 0 & 0 & 1 & 0 \end{pmatrix}$$
 
 
@@ -93,14 +111,37 @@ $$\det(B) = \det\left(\sum_{j_1=1}^n b_{1,j_1} \mathbf{e}_{j_1}, \dots, \sum_{j_
 
 
 ### Incidence Matrix
+
 For a graph $G = (V, E)$ with $n$ vertices and $m$ edges, the **incidence matrix** $M$ is an $n \times m$ matrix.
 
-For an **undirected graph**, the entries $m_{ij}$ are defined as:
-$$m_{ij} = \begin{cases} 1 & \text{if vertex } v_i \text{ is incident to edge } e_j \\ 0 & \text{otherwise} \end{cases}$$
+To define the **incidence matrix** $Q$, we assign an arbitrary direction to each edge $e_j \in E$. The entries $q_{ij}$ are defined as:
+$$q_{ij} = \begin{cases} -1 & \text{if } v_i \text{ is the tail (source) of } e_j \\ 1 & \text{if } v_i \text{ is the head (target) of } e_j \\ 0 & \text{otherwise} \end{cases}$$
 
-**Properties:**
-1. The sum of the entries in each column is exactly 2.
-2. The sum of the entries in the $i$-th row is equal to the degree $d(v_i)$ of vertex $v_i$.
+In the oriented case, the sum of the entries in each column is exactly 0.
+
+**Example:**
+Using the oriented edges $e_1: v_1 \to v_2$, $e_2: v_1 \to v_3$, $e_3: v_2 \to v_3$, $e_4: v_3 \to v_4$:
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=1.5,thick,every node/.style={circle,draw,minimum size=0.3cm}]
+    \node (v1) at (0,1) {$v_1$};
+    \node (v2) at (1,1) {$v_2$};
+    \node (v3) at (0.5,0.13) {$v_3$};
+    \node (v4) at (0.5,-0.8) {$v_4$};
+
+    \draw[->,>=stealth] (v1) -- (v2) node[midway, above] {$e_1$};
+    \draw[->,>=stealth] (v1) -- (v3) node[midway, left] {$e_2$};
+    \draw[->,>=stealth] (v2) -- (v3) node[midway, right] {$e_3$};
+    \draw[->,>=stealth] (v3) -- (v4) node[midway, right] {$e_4$};
+\end{tikzpicture}
+\end{document}
+```
+
+$$Q = \begin{pmatrix} -1 & -1 & 0 & 0 \\ 1 & 0 & -1 & 0 \\ 0 & 1 & 1 & -1 \\ 0 & 0 & 0 & 1 \end{pmatrix}$$
+
+
+
 
 
 **Lemma:** For a connected graph $G$ with $n$ vertices, the rank of the oriented incidence matrix is $n-1$. 
@@ -147,6 +188,16 @@ $$
 $$
 Since the points $x_i$ are distinct, $\det(V) = \prod_{0 \le i < j \le n} (x_j - x_i) \neq 0$, ensuring a unique solution for the coefficients.
 
+We look for a different basis for $\mathcal{P}_n$ that simplifies the interpolation problem. Given $n+1$ distinct points $x_0, x_1, \dots, x_n$, the **Lagrange basis** $\{L_0(x), L_1(x), \dots, L_n(x)\}$ is defined such that:
+$$L_j(x_i) = \delta_{ij} = \begin{cases} 1 & \text{if } i = j \\ 0 & \text{if } i \neq j \end{cases}$$
+
+The basis polynomials are given by:
+$$L_j(x) = \prod_{\substack{0 \le i \le n \\ i \neq j}} \frac{x - x_i}{x_j - x_i}$$
+
+In this basis, the unique interpolating polynomial $p(x)$ is simply:
+$$p(x) = \sum_{j=0}^n y_j L_j(x)$$
+
+**Remark:** In the Lagrange basis, the matrix representation of the interpolation problem $V\mathbf{a} = \mathbf{y}$ becomes the identity matrix $I$, as the coefficients of $p(x)$ are exactly the values $y_j$.
 
 
 
@@ -217,7 +268,7 @@ r(x) = \text{res}_{y}\left(p(y),\text{res}_{z}(q(z),x-y-z)\right) \\
 s(x) = \text{res}_{y}(p(y),\text{res}_{z}(q(z),x-yz))
 \end{align}
 $$
-
+See that $\text{res}_{z}(q(z),x-y-z)$ becomes 0 when $x-y = \beta$, hence it is a polynomial in $y$ with $x-\beta$  as a root. Hence $r(x)$ becomes zero when $\alpha = x- \beta$, i.e $x = \alpha + \beta$.
 
 ## Geometry
 
@@ -237,6 +288,8 @@ This is a contradiction, so such points cannot exist in any Euclidean space.
 **Sufficiency for $n=3$:**
 The triangle inequality is also **sufficient** for three points. Geometrically, we can construct the points by placing $P_1$ and $P_2$ at a distance $d_{12}$ apart. Consider two circles: $\mathcal{C}_1$ centered at $P_1$ with radius $d_{13}$, and $\mathcal{C}_2$ centered at $P_2$ with radius $d_{23}$. These circles intersect at a point $P_3$ if and only if the distance between their centers $d_{12}$ satisfies:
 $$|d_{13} - d_{23}| \le d_{12} \le d_{13} + d_{23}$$
+
+
 
 ### General case for $n$ points
 **Problem:** Given $n$ points and their pairwise distances $d_{ij}$, how can we determine if these points can be embedded in a Euclidean space $\mathbb{R}^k$?
@@ -296,6 +349,11 @@ In the figure above, every subset of three points satisfies the triangle inequal
 $$x^T M x \ge 0$$
 
 **Fact:** A real symmetric $n \times n$ matrix $A$ is positive semi-definite if and only if there exists an $n \times n$ real matrix $X$ such that $A = X^T X$.
+
+**Theorem.** Let $m_{ij}, i, j = 0, 1, \dots, n$, be nonnegative real numbers with $m_{ij} = m_{ji}$ for all $i, j$ and $m_{ii} = 0$ for all $i$. Then points $\mathbf{p}_0, \mathbf{p}_1, \dots, \mathbf{p}_n \in \mathbb{R}^n$ with $\|\mathbf{p}_i - \mathbf{p}_j\| = m_{ij}$ for all $i, j$ exist if and only if the $n \times n$ matrix $G$ with 
+$$g_{ij} = \frac{1}{2}(m_{0i}^2 + m_{0j}^2 - m_{ij}^2)$$
+is positive semi-definite.
+
 
 
 ### Squaring a rectangle

@@ -1,0 +1,15 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Basis and Dimension}{5}{0}{1}
+\beamer@subsectionintoc {1}{2}{Eigenvalues and Eigenvectors}{6}{0}{1}
+\beamer@sectionintoc {2}{Graph theory}{7}{0}{2}
+\beamer@subsectionintoc {2}{1}{Adjacency Matrix}{10}{0}{2}
+\beamer@subsectionintoc {2}{2}{Matchings}{14}{0}{2}
+\beamer@subsectionintoc {2}{3}{Adjacency Matrix of Bipartite Graphs}{15}{0}{2}
+\beamer@subsectionintoc {2}{4}{Incidence Matrix}{18}{0}{2}
+\beamer@sectionintoc {3}{Polynomials}{22}{0}{3}
+\beamer@subsectionintoc {3}{1}{Polynomial Interpolation}{23}{0}{3}
+\beamer@subsectionintoc {3}{2}{Resultant and Sylvester Matrix}{27}{0}{3}
+\beamer@subsectionintoc {3}{3}{Algebraic Numbers}{30}{0}{3}
+\beamer@sectionintoc {4}{Geometry}{33}{0}{4}
+\beamer@subsectionintoc {4}{1}{Euclidean distances}{33}{0}{4}
+\beamer@subsectionintoc {4}{2}{Squaring a rectangle}{38}{0}{4}
