@@ -43,6 +43,8 @@ For $\alpha \in \mathbb{R}, H_{\alpha \vec{a} ,\alpha b} = H_{\vec{a},b}$ , So w
 
 ## Half-spaces
 A closed half space in $\mathbb{R}^{n}$ is a set of the form $H_{\vec{a},b}:= \{  \vec{x} \in \mathbb{R}^{n} \mid \vec{a}^{T}\vec{x} \leq b \}$
+We denote the typical lower and upper closed half-spaces as:
+$$ H_{\vec{a},b}^- = \{ \vec{x} \in \mathbb{R}^{n} \mid \vec{a}^T\vec{x} \leq b \} \quad \text{and} \quad H_{\vec{a},b}^+ = \{ \vec{x} \in \mathbb{R}^{n} \mid \vec{a}^T\vec{x} \geq b \} $$
 ```tikz
 \begin{document}
 \begin{tikzpicture}[>=stealth, scale=1.2]
@@ -82,3 +84,8 @@ $$
 - Half-spaces are convex but not affine. Intersection of closed half-spaces are either empty of convex.
 
 The boundary of $H_{\vec{a} ,b}^{+},H_{\vec{a},b}^{-}$ is $H_{\vec{a},b}$  
+> **Argument:** Let $\vec{x}_{0} \in H_{\vec{a},b}$. Consider points of the form $\vec{x} = \vec{x}_{0} + \epsilon \vec{a}$.
+> $\vec{a}^{T}(\vec{x}_{0} + \epsilon \vec{a}) = \vec{a}^{T}\vec{x}_{0} + \epsilon \lVert \vec{a} \rVert^{2} = b + \epsilon \lVert \vec{a} \rVert^{2}$.
+> For $\epsilon > 0$, $\vec{a}^{T}\vec{x} > b$ (strictly outside $H_{\vec{a},b}^{-}$).
+> For $\epsilon < 0$, $\vec{a}^{T}\vec{x} < b$ (strictly inside $H_{\vec{a},b}^{-}$).
+> Thus, any neighborhood of $\vec{x}_{0}$ contains points in $H_{\vec{a},b}^{-}$ and points in its complement.  
