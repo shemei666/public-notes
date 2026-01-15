@@ -70,7 +70,15 @@ A closed half space in $\mathbb{R}^{n}$ is a set of the form $H_{\vec{a},b}:= \{
 \end{document}
 ```
 The normal vector $\vec{a}$ points in the direction of increasing values of the linear functional $f(\vec{x}) = \vec{a}^T\vec{x}$. Therefore, the half-space defined by $\vec{a}^T\vec{x} \leq b$ is the region extending in the direction opposite to $\vec{a}$ from the boundary hyperplane.
+$$
+\begin{align}
+\vec{a}^{T}\vec{x_{0}} = b \\
+\vec{a}^{T} (\vec{x} - \vec{x_{0}}) = 0 \\
+\implies  \vec{a}^{T}\vec{x} \leq b = \vec{a}^{T}\vec{x_{0}} \iff  \vec{a}^{T} (\vec{x} - \vec{x_{0}}) \leq 0
+\end{align}
+$$
 
 - Hyperplane are affine set
 - Half-spaces are convex but not affine. Intersection of closed half-spaces are either empty of convex.
 
+The boundary of $H_{\vec{a} ,b}^{+},H_{\vec{a},b}^{-}$ is $H_{\vec{a},b}$  
