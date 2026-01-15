@@ -1,3 +1,6 @@
+---
+publish: true
+---
 
 **Def:** Proper cone $K \subseteq \mathbb{R}^{n}$ is a cone such that,
 1. K is convex
@@ -51,7 +54,7 @@ A closed half space in $\mathbb{R}^{n}$ is a set of the form $H_{\vec{a},b}:= \{
     \fill[blue!10] (A) -- (B) -- (2.5, -2.5) -- (-2.5, -2.5) -- cycle;
     
     % Draw the hyperplane boundary
-    \draw[thick, blue!80!black] (A) -- (B) node[midway, below left, black] {$H_{\vec{a},b}$};
+    \draw[thick, blue!80!black] (A) -- (B) node[midway, below left, blue] {$H_{\vec{a},b}$};
     
     % Draw the normal vector 'a'
     % The line vector is (5, -2). A perpendicular vector is (2, 5)
@@ -68,3 +71,4 @@ A closed half space in $\mathbb{R}^{n}$ is a set of the form $H_{\vec{a},b}:= \{
 ```
 
 - Hyperplane are affine set
+- Half-spaces are convex but not affine. Intersection of closed half-spaces are either empty of convex.
