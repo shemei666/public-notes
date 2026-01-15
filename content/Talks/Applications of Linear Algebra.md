@@ -1,3 +1,7 @@
+---
+publish: true
+---
+
 ## Introduction
 A **vector space** $V$ over a field $F$ (e.g., $\mathbb{R}, \mathbb{C}, \mathbb{Q}$) is a set of vectors satisfying given axioms under addition and scalar multiplication:
 1. **Addition:** Must be associative, commutative, have an identity ($\mathbf{0}$), and have inverses ($-\mathbf{v}$).
