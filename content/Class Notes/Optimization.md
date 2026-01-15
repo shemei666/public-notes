@@ -40,8 +40,6 @@ For $\alpha \in \mathbb{R}, H_{\alpha \vec{a} ,\alpha b} = H_{\vec{a},b}$ , So w
 
 ## Half-spaces
 A closed half space in $\mathbb{R}^{n}$ is a set of the form $H_{\vec{a},b}:= \{  \vec{x} \in \mathbb{R}^{n} \mid \vec{a}^{T}\vec{x} \leq b \}$
-
-
 ```tikz
 \begin{document}
 \begin{tikzpicture}[>=stealth, scale=1.2]
@@ -53,15 +51,15 @@ A closed half space in $\mathbb{R}^{n}$ is a set of the form $H_{\vec{a},b}:= \{
     \fill[blue!10] (A) -- (B) -- (2.5, -2.5) -- (-2.5, -2.5) -- cycle;
     
     % Draw the hyperplane boundary
-    \draw[thick, blue!70!black] (A) -- (B) node[midway, below left, black] {$H_{\vec{a},b}$};
+    \draw[thick, blue!80!black] (A) -- (B) node[midway, below left, black] {$H_{\vec{a},b}$};
     
     % Draw the normal vector 'a'
     % The line vector is (5, -2). A perpendicular vector is (2, 5)
     \coordinate (M) at (0, -0.5); % A point on the line
-    \draw[->, ultra thick, red!70!black] (M) -- ($(M)+(0.6, 1.5)$) node[above] {$\vec{a}$};
+    \draw[->, ultra thick, red!70!black] (M) -- ++(0.6, 1.5) node[above] {$\vec{a}$};
     
     % Right angle symbol
-    \draw[gray] ($(M)+(0.1, 0.25)$) -- ++(0.2, -0.08) -- ++(-0.1, -0.25);
+    \draw[gray] (M) ++(0.1, 0.25) -- ++(0.2, -0.08) -- ++(-0.1, -0.25);
     
     % Label the half-space
     \node[blue!80!black] at (-0.5, -1.5) {$\{\vec{x} \mid \vec{a}^T\vec{x} \leq b\}$};
@@ -69,3 +67,4 @@ A closed half space in $\mathbb{R}^{n}$ is a set of the form $H_{\vec{a},b}:= \{
 \end{document}
 ```
 
+- Hyperplane are affine set
