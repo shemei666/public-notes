@@ -33,7 +33,7 @@ Let $C$ be a line-free closed convex set in $\mathbb{R}^{n}$. What is the smalle
 > $$f(\vec{x}) = \sum_{i=1}^n x_i a_i = \langle \vec{a}, \vec{x} \rangle$$
 
 $$
-\text{non-zero lienar functionals } \longleftrightarrow  \text{(n-1)-dimensional subspace of $\mathbb{R}^{n}$}
+\text{non-zero lienar functionals } \longleftrightarrow  \text{$(n-1)$-dimensional subspace of $\mathbb{R}^{n}$}
 $$
 $$ \rho \longleftrightarrow \ker \rho$$
 **Exercise:** Let $P_{1},P_{2}$ be linear functionals on $\mathbb{R}^{n}$ such that $\ker P_{1} = \ker P_{2}$. Prove that $P_{1} = \alpha P_{2}, \alpha \in \mathbb{R}$ 
@@ -101,3 +101,5 @@ $$
 - A polyhedron is the intersection of a finite number of half-spaces and hyperplanes.
 - Affine sets, rays, line segments, half-spaces, hyperplanes are all polyhedra.
 
+
+![[Assets/IMG_20260115_124838.jpg]]
