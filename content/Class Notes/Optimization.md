@@ -17,24 +17,32 @@ $f_0: \mathbb{R}^n \to \mathbb{R}, \quad f_i: \mathbb{R}^n \to \mathbb{R}$
 (2) A vector $x^*$ is called *optimal* or a sol^n to op if it has the smallest objective score among all vectors satisfying the constraints.
 
 **Examples**:
-1. Least square optimization
-Decision space: $(\beta_0, \beta_1) \in \mathbb{R}^2 \iff y = \beta_0 + \beta_1 x$
-$f = \sum_{i=1}^m (Y_i - \beta_0 - \beta_1 Y_i)^2$
+1. **Least Square Optimization**:
+   Fitting a linear model $y = \beta_0 + \beta_1 x$ to a set of data points $(x_i, Y_i)$.
+   - **Decision Space**: $(\beta_0, \beta_1) \in \mathbb{R}^2$ represents the parameters of the line.
+   - **Objective Function**: Minimize the sum of squared errors:
+$$ 
+f(\beta_0, \beta_1) = \sum_{i=1}^m (Y_i - \beta_0 - \beta_1 x_i)^2 
+$$
 
-2. $\min c^T \vec{x}$
-subject to $\vec{a}_i^T \vec{x} \leq b_i$
-![[IMG_20260115_223557.jpg]]
+2. **Linear Programming (LP)**:
+   Optimizing a linear objective function subject to linear equality and inequality constraints.
+   $$ \min_{\vec{x}} c^T \vec{x} $$
+   Subject to: $\vec{a}_i^T \vec{x} \leq b_i$ for $i=1,\dots,k$ (polyhedral constraints).
 
-3. **Optimal Transport**.
-$C: M \times F \to \mathbb{R}_+$
-Transport plan, $T: M \to F$
-$C(T) = \sum_{m \in M} c(m, T(m))$
+   ![[IMG_20260115_223557.jpg]]
 
-4. **Variational analysis** (Brachistochrone problem)
-Decision space: space of smooth curves.
-Objective: time taken.
+3. **Optimal Transport**:
+   Finding the most efficient way to transport mass from one distribution to another.
+   - **Cost Function**: $c: M \times F \to \mathbb{R}_+$ (cost to move unit mass from $m \in M$ to $f \in F$).
+   - **Transport Plan**: $T: M \to F$ (map indicating destination for each source point).
+   - **Objective**: Minimize total transport cost $C(T) = \sum_{m \in M} c(m, T(m))$.
 
-5. **Convex Geometry**.
+4. **Variational Analysis (Brachistochrone Problem)**:
+   Finding the path between two points that a particle would slide down in the shortest time under gravity.
+   - **Decision Space**: Space of smooth curves connecting points A and B.
+   - **Objective**: Minimize the time taken for descent.
+
 ![[IMG_20260112_142612.jpg]]
 
 $\min f_0(x_1, \dots, x_n)$
@@ -76,7 +84,7 @@ Yes, as long as you allow collection being infinite."
 ![[IMG_20260112_155516.jpg]]
 
 every convex function is a supremum of linear function
-Qh: Is the closure of a convex set also convex? (Think about this)
+Qh: Is the closure of a convex set also convex? 
 $t x_n \to t x \quad 1-t y_n \to 1-t y$
 
 **Convex hull** of $S \subseteq \mathbb{R}^n$: smallest convex set in $\mathbb{R}^n$ containing $S$.
@@ -103,35 +111,12 @@ $C$ is closed under non-negative linear combinations (conic combination).
 
 ![[IMG_20260112_161514 1.jpg]]
 
-$$
-\begin{bmatrix} a & b \\ c & d \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}
-$$
-$ad-bc \neq 0$
-$ax + by = 1$
-$cx + dy = 0$
 
-Line in a polyhedron:
-$\langle \vec{x}, \vec{v}_i \rangle = 0$
-
-**Polytope**: A bounded polyhedron is said to be a polytope. (Polytope is always compact)
 ![[IMG_20260112_161522.jpg]]
+**Convex hull** of $S \subseteq \mathbb{R}^n$ smallest convex set in $\mathbb{R}^n$ containing $S$
+$conv(S) = \{ \theta_1 \vec{x}_1 + \dots + \theta_k \vec{x}_k \dots \}$
 
-**Relevance to LP**
-$A \vec{x} \le \vec{b}$ "generalized inequalities"
 
-A cone $K \subseteq \mathbb{R}^n$ is called a *proper cone* if:
-(1) K is convex
-(2) K is closed
-(3) K has non-empty interior
-(4) K contains no lines (pointed)
-
-A proper cone defines a partial ordering $\le_K$:
-$\vec{x} \le_K \vec{y}$ if $\vec{y} - \vec{x} \in K$
-
-Example:
-(1) $K = [0, \infty)$ is a proper cone in $\mathbb{R}$ ($\le_K$ is same as $\le$)
-(2) $K = [0, \infty)^n$ is a proper cone in $\mathbb{R}^n$
-$\vec{x} \le_K \vec{y}$ if $x_i \le y_i \forall 1 \le i \le n$
 
 **Def:** Proper cone $K \subseteq \mathbb{R}^{n}$ is a cone such that,
 1. K is convex
@@ -143,6 +128,18 @@ If $\vec{x} \leq_{K} \vec{y}$
 1. $\vec{x} + \vec{z} \leq_{K} \vec{y} + \vec{z}$ for all $\vec{z} \in \mathbb{R}^{n}$
 2. $\alpha \vec{x} \leq_{K} \alpha \vec{y}$ for all $\alpha \geq 0$
 
+Example:
+(1) $K = [0, \infty)$ is a proper cone in $\mathbb{R}$ ($\le_K$ is same as $\le$)
+(2) $K = [0, \infty)^n$ is a proper cone in $\mathbb{R}^n$
+$\vec{x} \le_K \vec{y}$ if $x_i \le y_i \forall 1 \le i \le n$
+
+If $\vec{x} \le_K \vec{y}$, then:
+(i) $\vec{x} + \vec{z} \le_K \vec{y} + \vec{z}$ for all $\vec{z} \in \mathbb{R}^n$
+(ii) $\alpha \vec{x} \le_K \alpha \vec{y}, \forall \alpha \ge 0$
+(iii) $\vec{x}_j \le_K \vec{y}_j \forall j \in \mathbb{N}$ and $\vec{x}_j \to \vec{x}, \vec{y}_j \to \vec{y}$ then $\vec{x} \le_K \vec{y}$ (proper cones $\to$ generalized inequalities involving vectors)
+
+**Relevance to LP**
+$A \vec{x} \le \vec{b}$ "generalized inequalities"
 **Goal 2:** To make a computer understand structure of the decision space.
 
 let S be a set in $\mathbb{R}^{r}$
@@ -234,14 +231,22 @@ $$
 
 
 ![[Assets/IMG_20260115_124838.jpg]]
+**Why are points and lines polyhedra?**
 
-**Convex hull** of $S \subseteq \mathbb{R}^n$ smallest convex set in $\mathbb{R}^n$ containing $S$
-$conv(S) = \{ \theta_1 \vec{x}_1 + \dots + \theta_k \vec{x}_k \dots \}$
+1. **Point**: A single point $\{P\}$ in $\mathbb{R}^n$ is a polyhedron.
+   Example in $\mathbb{R}^2$: The intersection of two non-parallel lines defines a unique point.
+   $$
+   \begin{bmatrix} a & b \\ c & d \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}
+   $$
+   With $ad-bc \neq 0$, the solution is unique. Thus, a point is defined by a finite number of linear equalities (hyperplanes).
 
-If $\vec{x} \le_K \vec{y}$, then:
-(i) $\vec{x} + \vec{z} \le_K \vec{y} + \vec{z}$ for all $\vec{z} \in \mathbb{R}^n$
-(ii) $\alpha \vec{x} \le_K \alpha \vec{y}, \forall \alpha \ge 0$
-(iii) $\vec{x}_j \le_K \vec{y}_j \forall j \in \mathbb{N}$ and $\vec{x}_j \to \vec{x}, \vec{y}_j \to \vec{y}$ then $\vec{x} \le_K \vec{y}$ (proper cones $\to$ generalized inequalities involving vectors)
+2. **Line**: A line is an affine set. As every affine set is an intersection of hyperplanes, it is a polyhedron.
+   A line in $\mathbb{R}^n$ can be defined as the intersection of $n-1$ independent hyperplanes:
+   $$ \langle \vec{x}, \vec{v}_i \rangle = c_i, \quad i=1,\dots,n-1 $$
+
+**Polytope**: A bounded polyhedron is said to be a polytope. (Polytope is always compact)
+
+
 
 ![[IMG_20260115_130759.jpg]]
 
