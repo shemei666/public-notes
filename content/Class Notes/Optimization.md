@@ -92,9 +92,12 @@ Thus, any neighborhood of $\vec{x}_{0}$ contains points in $H_{\vec{a},b}^{-}$ a
 
 ## Polyhedron
 
-A polyhedron is a solution set of a finite number of linear inequalities.
+A polyhedron is a solution set of a finite number of linear equalities and inequalities.
 $$
 \begin{align}
-\mathcal{P} := \{ \vec{x} \in \mathbb{R}^{n} \mid \vec{a}_{i}^{T}\vec{x} \leq b_{i}, i = 1,\dots,m \}
+\mathcal{P} := \{ \vec{x} \in \mathbb{R}^{n} \mid \vec{a}_{i}^{T}\vec{x} \leq b_{i}, i = 1,\dots,m, \quad \vec{c}_{j}^{T}\vec{x} = d_{j}, j = 1,\dots,p \}
 \end{align}
 $$
+- A polyhedron is the intersection of a finite number of half-spaces and hyperplanes.
+- Affine sets, rays, line segments, half-spaces, hyperplanes are all polyhedra.
+
