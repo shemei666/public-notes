@@ -2,6 +2,137 @@
 publish: true
 ---
 
+![[IMG_20260115_223542.jpg]]
+
+(1) decision space $X$
+(2) Objective function ($f$) on $X$
+
+**Optimization problem**:
+1. minimize $f$ on $X$
+2. Find $\arg \min_{x \in X} f(x)$
+
+(1) minimize $f_0(x)$
+$f_i(x) \leq b_i \quad x = (x_1, \dots, x_n)$
+$f_0: \mathbb{R}^n \to \mathbb{R}, \quad f_i: \mathbb{R}^n \to \mathbb{R}$
+(2) A vector $x^*$ is called *optimal* or a sol^n to op if it has the smallest objective score among all vectors satisfying the constraints.
+
+**Examples**:
+1. Least square optimization
+Decision space: $(\beta_0, \beta_1) \in \mathbb{R}^2 \iff y = \beta_0 + \beta_1 x$
+$f = \sum_{i=1}^m (Y_i - \beta_0 - \beta_1 Y_i)^2$
+
+2. $\min c^T \vec{x}$
+subject to $\vec{a}_i^T \vec{x} \leq b_i$
+![[IMG_20260115_223557.jpg]]
+
+3. **Optimal Transport**.
+$C: M \times F \to \mathbb{R}_+$
+Transport plan, $T: M \to F$
+$C(T) = \sum_{m \in M} c(m, T(m))$
+
+4. **Variational analysis** (Brachistochrone problem)
+Decision space: space of smooth curves.
+Objective: time taken.
+
+5. **Convex Geometry**.
+![[IMG_20260112_142612.jpg]]
+
+$\min f_0(x_1, \dots, x_n)$
+$c_1 x_1 + \dots + c_n x_n \quad (c_1, \dots, c_n \to \text{cost associated with the variable})$
+subject to
+$$
+\begin{pmatrix} a_{11} x_1 + \dots + a_{1n} x_n \leq b_1 \\ \vdots \\ a_{m1} x_1 + \dots + a_{mn} x_n \leq b_m \end{pmatrix}
+$$
+LPP Linear programming program.
+$C_n, \quad \{a_{ij}\}_{\substack{1 \le i \le m \\ 1 \le j \le n}}, \quad b_1, \dots, b_m$
+
+**GOAL**: Understand the geometry of the decision space.
+Affine set, convex sets, convex cones $\subseteq \mathbb{R}^n$
+**Affine set**: A set $C \subseteq \mathbb{R}^n$ is said to be *affine* if the unique line through two distinct points in $C$ lies in $C$.
+![[IMG_20260112_152624.jpg]]
+
+$\vec{x} + \epsilon \vec{y} \quad \vec{x}$ is in the interior
+$\vec{y} \in S^{n-1} \quad \vec{y} = \frac{\vec{c}}{\|\vec{c}\|}$
+$\vec{c}^T(\vec{x} + \epsilon \vec{y}) = \vec{c}^T \vec{x} + \epsilon \vec{c}^T \vec{y}$
+
+$$
+aff(S) = \{ \theta_1 \vec{x}_1 + \dots + \theta_k \vec{x}_k : \vec{x}_1, \dots, \vec{x}_k \in S, \theta_1 + \dots + \theta_k = 1, k \text{ can vary} \}
+$$
+(set of all affine combinations of vectors in $S$)
+
+**CONVEX SETS**
+**Convex set**: A set $C \subseteq \mathbb{R}^n$ is said to be *convex* if the line segment joining any two distinct points in $C$, lies in $C$.
+Equivalently, if $\vec{x}_1, \vec{x}_2 \in C$, then $\theta \vec{x}_1 + (1-\theta) \vec{x}_2 \in C$ for $\theta \in [0, 1]$.
+(or $\theta_1 \vec{x}_1 + \theta_2 \vec{x}_2 \in C$ for $\theta_1, \theta_2 \ge 0, \theta_1 + \theta_2 = 1$)
+![[IMG_20260112_154714.jpg]]
+
+$a_{11} x_1 + \dots + a_{1n} x_n \leq b_1, \quad a_{11} y_1 + \dots + a_{1n} y_n \leq b_1$
+$a_{1\cdot}(\theta x_1 + (1-\theta) y_1) + \dots + a_{1n} (\theta x_n + (1-\theta) y_n)$
+$\theta \vec{x} + (1-\theta) \vec{y} \le \theta b_1 + (1-\theta) b_1 = b_1 \quad (\text{since } \theta \ge 0)$
+
+"Question about the converse:
+Is every convex subset of $\mathbb{R}^n$ given by a collection of linear inequalities?
+Yes, as long as you allow collection being infinite."
+![[IMG_20260112_155516.jpg]]
+
+every convex function is a supremum of linear function
+Qh: Is the closure of a convex set also convex? (Think about this)
+$t x_n \to t x \quad 1-t y_n \to 1-t y$
+
+**Convex hull** of $S \subseteq \mathbb{R}^n$: smallest convex set in $\mathbb{R}^n$ containing $S$.
+$conv(S) = \{ \theta_1 \vec{x}_1 + \dots + \theta_k \vec{x}_k : \vec{x}_1, \dots, \vec{x}_k \in S, \theta_1 + \dots + \theta_k = 1, \theta_i \ge 0, k \text{ can vary} \}$
+(set of all convex combinations of vectors in $S$)
+
+$\vec{x}_1, \vec{x}_2 \in C_1 \cap C_2 \implies [\theta \vec{x}_1 + (1-\theta) \vec{x}_2] \in C_1 \cap C_2$
+![[IMG_20260112_160506.jpg]]
+
+**Cones in $\mathbb{R}^n$**
+A set $C \subseteq \mathbb{R}^n$ is said to be a *cone* if for every $\vec{x} \in C$, and $\theta \ge 0$, we have $\theta \vec{x} \in C$.
+It is said to be a *convex cone* if it is convex and a cone.
+For any $\vec{x}_1, \vec{x}_2 \in C$ and $\theta_1, \theta_2 \ge 0 \implies \theta_1 \vec{x}_1 + \theta_2 \vec{x}_2 \in C$
+
+| Type | Combination | Condition |
+| :--- | :--- | :--- |
+| Affine | $\theta_1 \vec{x}_1 + \theta_2 \vec{x}_2$ | $\theta_1 + \theta_2 = 1$ |
+| Convex | $\theta_1 \vec{x}_1 + \theta_2 \vec{x}_2$ | $\theta_1 + \theta_2 = 1, \theta_1, \theta_2 \ge 0$ |
+| Cone | $\theta_1 \vec{x}_1 + \theta_2 \vec{x}_2$ | $\theta_1, \theta_2 \ge 0$ |
+
+$C$ is closed under non-negative linear combinations (conic combination).
+*Conic hull* of $S \subseteq \mathbb{R}^n$: smallest convex cone containing $S$.
+
+
+![[IMG_20260112_161514 1.jpg]]
+
+$$
+\begin{bmatrix} a & b \\ c & d \end{bmatrix} \begin{bmatrix} x \\ y \end{bmatrix} = \begin{bmatrix} 1 \\ 0 \end{bmatrix}
+$$
+$ad-bc \neq 0$
+$ax + by = 1$
+$cx + dy = 0$
+
+Line in a polyhedron:
+$\langle \vec{x}, \vec{v}_i \rangle = 0$
+
+**Polytope**: A bounded polyhedron is said to be a polytope. (Polytope is always compact)
+![[IMG_20260112_161522.jpg]]
+
+**Relevance to LP**
+$A \vec{x} \le \vec{b}$ "generalized inequalities"
+
+A cone $K \subseteq \mathbb{R}^n$ is called a *proper cone* if:
+(1) K is convex
+(2) K is closed
+(3) K has non-empty interior
+(4) K contains no lines (pointed)
+
+A proper cone defines a partial ordering $\le_K$:
+$\vec{x} \le_K \vec{y}$ if $\vec{y} - \vec{x} \in K$
+
+Example:
+(1) $K = [0, \infty)$ is a proper cone in $\mathbb{R}$ ($\le_K$ is same as $\le$)
+(2) $K = [0, \infty)^n$ is a proper cone in $\mathbb{R}^n$
+$\vec{x} \le_K \vec{y}$ if $x_i \le y_i \forall 1 \le i \le n$
+
 **Def:** Proper cone $K \subseteq \mathbb{R}^{n}$ is a cone such that,
 1. K is convex
 2. K has non-empty interior
@@ -103,3 +234,21 @@ $$
 
 
 ![[Assets/IMG_20260115_124838.jpg]]
+
+**Convex hull** of $S \subseteq \mathbb{R}^n$ smallest convex set in $\mathbb{R}^n$ containing $S$
+$conv(S) = \{ \theta_1 \vec{x}_1 + \dots + \theta_k \vec{x}_k \dots \}$
+
+If $\vec{x} \le_K \vec{y}$, then:
+(i) $\vec{x} + \vec{z} \le_K \vec{y} + \vec{z}$ for all $\vec{z} \in \mathbb{R}^n$
+(ii) $\alpha \vec{x} \le_K \alpha \vec{y}, \forall \alpha \ge 0$
+(iii) $\vec{x}_j \le_K \vec{y}_j \forall j \in \mathbb{N}$ and $\vec{x}_j \to \vec{x}, \vec{y}_j \to \vec{y}$ then $\vec{x} \le_K \vec{y}$ (proper cones $\to$ generalized inequalities involving vectors)
+
+![[IMG_20260115_130759.jpg]]
+
+**Relevance to LP**
+If the decision space is a polytope, existence of a (max) minimum of the objective function is guaranteed.
+$\min f_0(x)$ subject to ...
+
+**Def**: $S \subseteq \mathbb{R}^n$. $cl(S)$ closure, $int(S)$ interior, $bd(S)$ boundary.
+The sets $relint(S)$, $relbd(S)$ are the *relative interior* and *relative boundary*, with respect to the *affine hull* of $S$.
+* every convex set has non-empty relative interior.
