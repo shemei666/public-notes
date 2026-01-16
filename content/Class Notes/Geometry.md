@@ -1,3 +1,6 @@
+---
+publish: true
+---
 
 **Def**: Affine Space $(\mathscr{A}, V, \theta)$
 $\theta: \mathscr{A} \times \mathscr{A} \to V$, $\theta: (P, Q) \mapsto \overrightarrow{PQ}$
@@ -131,3 +134,35 @@ Thus, $\varphi(C)$ divides the segment $\varphi(A)\varphi(B)$ in the same ratio 
 ```
 $\quad \blacksquare$
 
+## Fundamental theorem of Affine geometry
+
+**Theorem:** Any triangle can be mapped onto any other triangle by a unique affine transformation.
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=0.8, >=stealth]
+    % Triangle 1
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (2,0.5);
+    \coordinate (C) at (0.5,2);
+    \draw[thick, fill=blue!10] (A) -- (B) -- (C) -- cycle;
+    \filldraw (A) circle (2pt) node[below left] {$A$};
+    \filldraw (B) circle (2pt) node[below right] {$B$};
+    \filldraw (C) circle (2pt) node[above] {$C$};
+
+    % Mapping
+    \draw[->, thick, bend left] (2.5, 1) to node[above] {$\varphi$} (4.5, 1);
+
+    % Triangle 2
+    \coordinate (Ap) at (5,0);
+    \coordinate (Bp) at (7,0);
+    \coordinate (Cp) at (6,2);
+    \draw[thick, fill=red!10] (Ap) -- (Bp) -- (Cp) -- cycle;
+    \filldraw (Ap) circle (2pt) node[below left] {$A'$};
+    \filldraw (Bp) circle (2pt) node[below right] {$B'$};
+    \filldraw (Cp) circle (2pt) node[above] {$C'$};
+\end{tikzpicture}
+\end{document}
+```
+
+**Proof:** 
