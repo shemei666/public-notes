@@ -111,7 +111,7 @@ $\sum_{n\geq 1}^{} \frac{z^{n}}{n!}$ $R = \infty$
 4. **Abel's Test**:
    If the series $\sum_{n=0}^\infty a_n$ converges and $\{b_n\}$ is a bounded, monotonic sequence of real numbers, then the series $\sum_{n=0}^\infty a_n b_n$ converges.
 
-**Differentiation of Power Series**:
+## Differentiation of Power Series
    
    **Theorem**: The power series $f(z) = \sum_{n=0}^\infty a_n (z-z_0)^n$ has the same radius of convergence $R$ as its derived series $g(z) = \sum_{n=1}^\infty n a_n (z-z_0)^{n-1}$. Furthermore, $f'(z) = g(z)$ for all $|z-z_0| < R$.
 
