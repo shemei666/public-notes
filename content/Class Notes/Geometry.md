@@ -291,3 +291,11 @@ Conversely, we can construct parallel lines to $L_{1}$ and see that they have th
 ```
 
 **Proof:** Let $O \in D \cap D'$ Let $\varphi, \psi$ be the scaling of center $O$ such that $\varphi(A) = B, \psi(B) = C$
+$$
+\frac{\overrightarrow{OA}}{\overrightarrow{OB}} = \frac{\overrightarrow{OB'}}{\overrightarrow{OA'}} \implies \overrightarrow{OA'} = \frac{\overrightarrow{OB}}{\overrightarrow{OA}} \overrightarrow{OB'}
+$$
+**Claim:** $\varphi(B') = A'$
+
+
+
+
