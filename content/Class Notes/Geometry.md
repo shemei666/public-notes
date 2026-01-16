@@ -199,4 +199,8 @@ If $L_1 \parallel L_3$ and the ratios of the intercepts are equal, i.e.,
 $$ \frac{\overrightarrow{A_1 A_2}}{\overrightarrow{A_1 A_3}} = \frac{\overrightarrow{A_1' A_2'}}{\overrightarrow{A_1' A_3'}} $$
 then the line $L_2$ is parallel to $L_1$ and $L_3$.
 **Proof:** 
-Let $\frac{\overrightarrow{A_{1}A_{3}}}{\overrightarrow{A_{1}A_{2}}} = \lambda$ . Let $\pi$ be the affine projection on $D_{2}$. Let P be the associated linear projection. $\pi(A_{1})=A_{1}'$, $\pi(A_{2})= A_{2}$, $\pi(A_{3}) = A_{3}$
+Let $\varphi$ be the affine projection onto $D_2$ parallel to $L_1$ and $L_3$, and let $\pi$ be the associated linear map.
+The vectors $\overrightarrow{A_1 A_3}$ and $\overrightarrow{A_1 A_2}$ are projected as:
+$$ \pi(\overrightarrow{A_1 A_3}) = \varphi(A_3) - \varphi(A_1) = \overrightarrow{A_1' A_3'} $$
+$$ \pi(\overrightarrow{A_1 A_2}) = \varphi(A_2) - \varphi(A_1) = \overrightarrow{A_1' A_2'} $$
+Since $\overrightarrow{A_1 A_3} = \lambda \overrightarrow{A_1 A_2}$, linearity implies $\pi(\overrightarrow{A_1 A_3}) = \lambda \pi(\overrightarrow{A_1 A_2})$, hence $\overrightarrow{A_1' A_3'} = \lambda \overrightarrow{A_1' A_2'}$. $\blacksquare$
