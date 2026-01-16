@@ -168,7 +168,7 @@ $\quad \blacksquare$
 **Proof:** 
 
 **Theorem(Thales):** Let $L_1, L_2, L_3$ be three parallel lines in an affine plane. Let $D_1, D_2$ be two transversals intersecting these lines at $A_1, A_2, A_3$ and $A_1', A_2', A_3'$ respectively. Then:
-$$ \frac{\overline{A_1 A_2}}{\overline{A_1 A_3}} = \frac{\overline{A_1' A_2'}}{\overline{A_1' A_3'}} $$
+$$ \frac{\overrightarrow{A_1 A_2}}{\overrightarrow{A_1 A_3}} = \frac{\overrightarrow{A_1' A_2'}}{\overrightarrow{A_1' A_3'}} $$
 
 ```tikz
 \begin{document}
@@ -191,9 +191,12 @@ $$ \frac{\overline{A_1 A_2}}{\overline{A_1 A_3}} = \frac{\overline{A_1' A_2'}}{\
     \filldraw (5, 0) circle (2pt) node[below right] {$A_3'$};
 \end{tikzpicture}
 \end{document}
+```
+
 **Converse of Thales Theorem:**
 Let $L_1, L_2, L_3$ be three distinct lines intersecting two transversals $D_1, D_2$ at $A_1, A_2, A_3$ and $A_1', A_2', A_3'$ respectively.
 If $L_1 \parallel L_3$ and the ratios of the intercepts are equal, i.e.,
-$$ \frac{\overline{A_1 A_2}}{\overline{A_1 A_3}} = \frac{\overline{A_1' A_2'}}{\overline{A_1' A_3'}} $$
+$$ \frac{\overrightarrow{A_1 A_2}}{\overrightarrow{A_1 A_3}} = \frac{\overrightarrow{A_1' A_2'}}{\overrightarrow{A_1' A_3'}} $$
 then the line $L_2$ is parallel to $L_1$ and $L_3$.
-**Proof:** Let $\vec{A_{1}A_{3}}$
+**Proof:** 
+Let $\frac{\overrightarrow{A_{1}A_{3}}}{\overrightarrow{A_{1}A_{2}}} = \lambda$ . Let $\pi$ be the affine projection on $D_{2}$. Let P be the associated linear projection. $\pi(A_{1})=A_{1}'$, $\pi(A_{2})= A_{2}$, $\pi(A_{3}) = A_{3}$
