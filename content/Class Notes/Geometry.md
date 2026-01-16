@@ -167,29 +167,33 @@ $\quad \blacksquare$
 
 **Proof:** 
 
-**Theorem(Thales):** Let $H_1, H_2, H_3$ be three parallel lines in an affine plane. Let $L, L'$ be two transversals intersecting these lines at $A, B, C$ and $A', B', C'$ respectively. Then:
-$$ \frac{\overline{AB}}{\overline{AC}} = \frac{\overline{A'B'}}{\overline{A'C'}} $$
+**Theorem(Thales):** Let $L_1, L_2, L_3$ be three parallel lines in an affine plane. Let $D_1, D_2$ be two transversals intersecting these lines at $A_1, A_2, A_3$ and $A_1', A_2', A_3'$ respectively. Then:
+$$ \frac{\overline{A_1 A_2}}{\overline{A_1 A_3}} = \frac{\overline{A_1' A_2'}}{\overline{A_1' A_3'}} $$
 
 ```tikz
 \begin{document}
 \begin{tikzpicture}[>=stealth, scale=1.2]
     % Horizontal Parallel Lines
-    \draw[blue, thick] (-0.5, 3) -- (6, 3) node[right] {$H_1$};
-    \draw[blue, thick] (-0.5, 1.5) -- (6, 1.5) node[right] {$H_2$};
-    \draw[blue, thick] (-0.5, 0) -- (6, 0) node[right] {$H_3$};
+    \draw[blue, thick] (-0.5, 3) -- (6, 3) node[right] {$L_1$};
+    \draw[blue, thick] (-0.5, 1.5) -- (6, 1.5) node[right] {$L_2$};
+    \draw[blue, thick] (-0.5, 0) -- (6, 0) node[right] {$L_3$};
 
     % Transversal 1 (Slope -3)
-    \draw[thick] (0.83, 3.5) -- (2.17, -0.5) node[below] {$L$};
-    \filldraw (1, 3) circle (2pt) node[above left] {$A$};
-    \filldraw (1.5, 1.5) circle (2pt) node[above left] {$B$};
-    \filldraw (2, 0) circle (2pt) node[below left] {$C$};
+    \draw[thick] (0.83, 3.5) -- (2.17, -0.5) node[below] {$D_1$};
+    \filldraw (1, 3) circle (2pt) node[above left] {$A_1$};
+    \filldraw (1.5, 1.5) circle (2pt) node[above left] {$A_2$};
+    \filldraw (2, 0) circle (2pt) node[below left] {$A_3$};
 
     % Transversal 2 (Slope -1.5, slightly non-parallel)
-    \draw[thick] (2.67, 3.5) -- (5.33, -0.5) node[below] {$L'$};
-    \filldraw (3, 3) circle (2pt) node[above right] {$A'$};
-    \filldraw (4, 1.5) circle (2pt) node[above right] {$B'$};
-    \filldraw (5, 0) circle (2pt) node[below right] {$C'$};
+    \draw[thick] (2.67, 3.5) -- (5.33, -0.5) node[below] {$D_2$};
+    \filldraw (3, 3) circle (2pt) node[above right] {$A_1'$};
+    \filldraw (4, 1.5) circle (2pt) node[above right] {$A_2'$};
+    \filldraw (5, 0) circle (2pt) node[below right] {$A_3'$};
 \end{tikzpicture}
 \end{document}
-```
-**Proof:**
+**Converse of Thales Theorem:**
+Let $L_1, L_2, L_3$ be three distinct lines intersecting two transversals $D_1, D_2$ at $A_1, A_2, A_3$ and $A_1', A_2', A_3'$ respectively.
+If $L_1 \parallel L_3$ and the ratios of the intercepts are equal, i.e.,
+$$ \frac{\overline{A_1 A_2}}{\overline{A_1 A_3}} = \frac{\overline{A_1' A_2'}}{\overline{A_1' A_3'}} $$
+then the line $L_2$ is parallel to $L_1$ and $L_3$.
+**Proof:** Let $\vec{A_{1}A_{3}}$
