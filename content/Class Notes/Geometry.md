@@ -303,9 +303,45 @@ $$ (\varphi \circ \psi)(B') = \varphi(\psi(B')) = \varphi(C') $$
 Thus $\psi(A') = \varphi(C')$.
 Also $(\psi \circ \varphi)(A) = \psi(B) = C$.  and $\varphi \circ \psi(C') = A'$, the result then follows from converse of Thales.
 
-**Theorem(Desargues):** 
+**Theorem(Desargues):** If two triangles $ABC$ and $A'B'C'$ correspond such that their sides are parallel ($AB \parallel A'B'$, $BC \parallel B'C'$, $AC \parallel A'C'$), then the lines joining corresponding vertices ($AA', BB', CC'$) intersect at a common point (or are parallel).
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[scale=0.8]
+    % Center O
+    \coordinate (O) at (0, 0);
+    \filldraw (O) circle (2pt) node[below left] {$O$};
+
+    % Triangle 1 (Small)
+    \coordinate (A) at (2, 1);
+    \coordinate (B) at (3, 3);
+    \coordinate (C) at (4, 1.5);
+    
+    \draw (A) -- (B) -- (C) -- cycle;
+    \filldraw (A) circle (2pt) node[left] {$A$};
+    \filldraw (B) circle (2pt) node[left] {$B$};
+    \filldraw (C) circle (2pt) node[below] {$C$};
+
+    % Triangle 2 (Large)
+    \coordinate (Ap) at (4, 2);   % 2*A
+    \coordinate (Bp) at (6, 6);   % 2*B
+    \coordinate (Cp) at (8, 3);   % 2*C
+    
+    \draw (Ap) -- (Bp) -- (Cp) -- cycle;
+    \filldraw (Ap) circle (2pt) node[left] {$A'$};
+    \filldraw (Bp) circle (2pt) node[right] {$B'$};
+    \filldraw (Cp) circle (2pt) node[right] {$C'$};
+
+    % Connecting lines
+    \draw[dashed] (O) -- (Bp);
+    \draw[dashed] (O) -- (Cp);
+    \draw[dashed] (O) -- (Ap);
+
+\end{tikzpicture}
+\end{document}
+```
 
 **Proof:**
-
+Let $AA'$ and $BB'$ intersect at $O$, Let 
 
 
