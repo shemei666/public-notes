@@ -352,3 +352,6 @@ $$
 $$
 \frac{\overrightarrow{OC''}}{\overrightarrow{OC}  } = \frac{\overrightarrow{OA'}}{\overrightarrow{OA}} =  \frac{\overrightarrow{AC''}}{\overrightarrow{AC}} = \lambda 
 $$
+$$
+\frac{\overrightarrow{OC''}}{\overrightarrow{OC}} = \frac{\overrightarrow{OB'}}{\overrightarrow{OB}} = \frac{\overrightarrow{B'C''}}{\overrightarrow{BC}} = \lambda
+$$
