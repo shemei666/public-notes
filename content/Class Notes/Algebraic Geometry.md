@@ -1,3 +1,7 @@
 ---
 publish: true
 ---
+
+**(2.5) Lemma.** Suppose that $k$ is an infinite field, and let $F \in S_d$.
+(i) Let $L \subset \mathbb{P}^2_k$ be a line; if $F \equiv 0$ on $L$, then $F$ is divisible in $k[X, Y, Z]$ by the equation of $L$. That is, $F = H \cdot F'$ where $H$ is the equation of $L$ and $F' \in S_{d-1}$.
+(ii) Let $C \subset \mathbb{P}^2_k$ be a non-empty non-degenerate conic; if $F \equiv 0$ on $C$, then $F$ is divisible in $k[X, Y, Z]$ by the equation of $C$. That is, $F = Q \cdot F'$ where $Q$ is the equation of $C$ and $F' \in S_{d-2}$.
