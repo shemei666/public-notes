@@ -332,6 +332,13 @@ Also $(\psi \circ \varphi)(A) = \psi(B) = C$.  and $\varphi \circ \psi(C') = A'$
     \filldraw (Bp) circle (2pt) node[right] {$B'$};
     \filldraw (Cp) circle (2pt) node[right] {$C'$};
 
+    % C'' shifted slightly for visual distinction
+    \coordinate (Cpp) at (8.15, 2.85);
+    \filldraw[red] (Cpp) circle (2pt) node[below right] {$C''$};
+    %% \draw[->, red, thin] (Cpp) -- (Cp); %%
+    \draw[red, thin] (Cpp) -- (Ap);
+    \draw[red, thin] (Cpp) -- (Bp);
+
     % Connecting lines
     \draw[dashed] (O) -- (Bp);
     \draw[dashed] (O) -- (Cp);
