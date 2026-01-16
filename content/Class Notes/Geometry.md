@@ -303,7 +303,7 @@ $$ (\varphi \circ \psi)(B') = \varphi(\psi(B')) = \varphi(C') $$
 Thus $\psi(A') = \varphi(C')$.
 Also $(\psi \circ \varphi)(A) = \psi(B) = C$.  and $\varphi \circ \psi(C') = A'$, the result then follows from converse of Thales.
 
-**Theorem:**
+**Theorem(Desargues):** 
 
 **Proof:**
 
