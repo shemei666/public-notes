@@ -166,3 +166,7 @@ $\quad \blacksquare$
 ```
 
 **Proof:** 
+
+**Theorem(Thales):** 
+
+**Proof:**
