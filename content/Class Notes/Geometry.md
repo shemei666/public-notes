@@ -255,38 +255,39 @@ Conversely, we can construct parallel lines to $L_{1}$ and see that they have th
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[>=stealth, scale=1.0]
-    % Two lines D and D'
-    \draw[thick] (-0.5, 3) -- (5.5, 3) node[right] {$D$};
-    \draw[thick] (-0.5, 0) -- (5.5, 0) node[right] {$D'$};
+\begin{tikzpicture}[scale=1.0]
+    % Line 1
+    \draw (-0.5, 3) -- (5.5, 3);
+    \node at (5.7, 3) {$D$};
 
-    % Points on D
+    % Line 2
+    \draw (-0.5, 0) -- (5.5, 0);
+    \node at (5.7, 0) {$D'$};
+
+    % Points
     \filldraw (0.5, 3) circle (2pt) node[above] {$A$};
     \filldraw (2.5, 3) circle (2pt) node[above] {$B$};
     \filldraw (4.5, 3) circle (2pt) node[above] {$C$};
 
-    % Points on D'
-    \filldraw (1, 0) circle (2pt) node[below] {$A'$};
+    % Flipped order: C', B', A'
+    \filldraw (1, 0) circle (2pt) node[below] {$C'$};
     \filldraw (3, 0) circle (2pt) node[below] {$B'$};
-    \filldraw (5, 0) circle (2pt) node[below] {$C'$};
+    \filldraw (5, 0) circle (2pt) node[below] {$A'$};
 
-    % Pair 1: AB' || BA' (Blue)
-    \draw[blue, thick] (0.5, 3) -- (3, 0); % AB'
-    \draw[blue, thick] (2.5, 3) -- (1, 0); % BA'
-    \node[blue, right, scale=0.8] at (5.5, 2.5) {$AB' \parallel BA'$};
+    % Connections
+    % Pair 1: AB' || BA'
+    \draw (0.5, 3) -- (3, 0); % A-B'
+    \draw (2.5, 3) -- (5, 0); % B-A'
 
-    % Pair 2: BC' || CB' (Red)
-    \draw[red, thick] (2.5, 3) -- (5, 0); % BC'
-    \draw[red, thick] (4.5, 3) -- (3, 0); % CB'
-    \node[red, right, scale=0.8] at (5.5, 2.0) {$BC' \parallel CB'$};
+    % Pair 2: BC' || CB'
+    \draw (2.5, 3) -- (1, 0); % B-C'
+    \draw (4.5, 3) -- (3, 0); % C-B'
 
-    % Pair 3: AC' || CA' (Green - Result)
-    \draw[green!60!black, dashed, thick] (0.5, 3) -- (5, 0); % AC'
-    \draw[green!60!black, dashed, thick] (4.5, 3) -- (1, 0); % CA'
-    \node[green!60!black, right, scale=0.8] at (5.5, 1.5) {$\implies AC' \parallel CA'$};
-
+    % Pair 3: AC' || CA' (Result)
+    \draw[dashed] (0.5, 3) -- (1, 0); % A-C'
+    \draw[dashed] (4.5, 3) -- (5, 0); % C-A'
 \end{tikzpicture}
 \end{document}
 ```
 
-**Proof:** Let $O \in D \int $
+**Proof:** Let $O \in D \cap D'$ Let $\varphi, \psi$ be the scaling of center $O$ such that $\varphi(A) = B, \psi(B) = C$
