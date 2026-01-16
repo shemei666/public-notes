@@ -247,13 +247,46 @@ Conversely, we can construct parallel lines to $L_{1}$ and see that they have th
     % B3 is same as A3'
     \node[red, below right] at (5.1, -0.2) {$B_3$};
 
-    % Annotation
-    \node[red, align=center] at (3.5, 0.5) {Construct $L_4, L_5 \parallel L_1$. \\ $B_2 \in D_2 \cap L_4$, $B_3 \in D_2 \cap L_5$.};
+\end{tikzpicture}
+\end{document}
+```
+
+**Theorem (Pappus):**  Given $AB' \parallel BA'$, $BC' \parallel CB'$, then $AC'\parallel CA'$
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1.0]
+    % Two lines D and D'
+    \draw[thick] (-0.5, 3) -- (5.5, 3) node[right] {$D$};
+    \draw[thick] (-0.5, 0) -- (5.5, 0) node[right] {$D'$};
+
+    % Points on D
+    \filldraw (0.5, 3) circle (2pt) node[above] {$A$};
+    \filldraw (2.5, 3) circle (2pt) node[above] {$B$};
+    \filldraw (4.5, 3) circle (2pt) node[above] {$C$};
+
+    % Points on D'
+    \filldraw (1, 0) circle (2pt) node[below] {$A'$};
+    \filldraw (3, 0) circle (2pt) node[below] {$B'$};
+    \filldraw (5, 0) circle (2pt) node[below] {$C'$};
+
+    % Pair 1: AB' || BA' (Blue)
+    \draw[blue, thick] (0.5, 3) -- (3, 0); % AB'
+    \draw[blue, thick] (2.5, 3) -- (1, 0); % BA'
+    \node[blue, right, scale=0.8] at (5.5, 2.5) {$AB' \parallel BA'$};
+
+    % Pair 2: BC' || CB' (Red)
+    \draw[red, thick] (2.5, 3) -- (5, 0); % BC'
+    \draw[red, thick] (4.5, 3) -- (3, 0); % CB'
+    \node[red, right, scale=0.8] at (5.5, 2.0) {$BC' \parallel CB'$};
+
+    % Pair 3: AC' || CA' (Green - Result)
+    \draw[green!60!black, dashed, thick] (0.5, 3) -- (5, 0); % AC'
+    \draw[green!60!black, dashed, thick] (4.5, 3) -- (1, 0); % CA'
+    \node[green!60!black, right, scale=0.8] at (5.5, 1.5) {$\implies AC' \parallel CA'$};
 
 \end{tikzpicture}
 \end{document}
 ```
 
-**Theorem (Pappus):** 
-
-**Proof:**
+**Proof:** Let $O \in D \int $
