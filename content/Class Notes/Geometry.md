@@ -295,7 +295,13 @@ $$
 \frac{\overrightarrow{OA}}{\overrightarrow{OB}} = \frac{\overrightarrow{OB'}}{\overrightarrow{OA'}} \implies \overrightarrow{OA'} = \frac{\overrightarrow{OB}}{\overrightarrow{OA}} \overrightarrow{OB'}
 $$
 **Claim:** $\varphi(B') = A'$
-
+Since $\varphi$ is a centered scaling at $O$ with ratio $k_\varphi = \frac{\overrightarrow{OB}}{\overrightarrow{OA}}$, and the Thales condition gives $\overrightarrow{OA'} = k_\varphi \overrightarrow{OB'}$, we have $\varphi(B') = A'$.
+Similarly, for the pair $BC' \parallel CB'$, the scaling $\psi$ (mapping $B \to C$) satisfies $\psi(C') = B'$.
+Now consider the composition $\psi \circ \varphi$. Since scalings with the same center commute:
+$$ (\psi \circ \varphi)(B') = \psi(\varphi(B')) = \psi(A') $$
+$$ (\varphi \circ \psi)(B') = \varphi(\psi(B')) = \varphi(C') $$
+Thus $\psi(A') = \varphi(C')$.
+Also $(\psi \circ \varphi)(A) = \psi(B) = C$. 
 
 
 
