@@ -69,4 +69,24 @@ $$ \overrightarrow{\phi(M)} = \vec{M} + u \quad \forall M \in \mathscr{A} \impli
 $$
 T(x) = Ax + b, A \in GL_{2\times 2}(\mathbb{R}),\quad b \in \mathbb{R}^{2}
 $$
-$L:= \{ p + \lambda v \mid \lambda \in \mathbb{R} \}$, $T(p+\lambda )$
+$L:= \{ p + \lambda v \mid \lambda \in \mathbb{R} \}$, 
+$$
+\begin{align}
+
+T(p+\lambda v ) = A(p + \lambda v) =  & A(p + \lambda v) + b \\
+ =& A(p) + \lambda Av + b \\
+=  & A(p) + v + \lambda A v \\
+=  & T(p) + \lambda A v
+\end{align}
+$$
+So we have $T(L) = \{  T(p) + \lambda A v \mid \lambda \in \mathbb{R} \}$ $\quad \blacksquare$
+
+**Theorem:**  Affine transformation sends $\parallel$ lines to $\parallel$ lines.
+
+**Proof:** 
+$l_{1},l_{2} , l_{1} \parallel l_{2}$
+
+
+**Theorem:** Affine transformation preserves ratios of lengths along a straight line
+
+**Proof:**
