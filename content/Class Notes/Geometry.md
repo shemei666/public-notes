@@ -342,6 +342,13 @@ Also $(\psi \circ \varphi)(A) = \psi(B) = C$.  and $\varphi \circ \psi(C') = A'$
 ```
 
 **Proof:**
-Let $AA'$ and $BB'$ intersect at $O$, Let 
+Let $AA'$ and $BB'$ intersect at $O$, let $\varphi$ be the dilation that maps $A \mapsto A', B \mapsto B'$, Let $\lambda$ be the corresponding scaling. Let $\varphi(C) = C''$
 
+From Thales, 
+$$
+\frac{\overrightarrow{OA'}}{\overrightarrow{OA}} = \frac{\overrightarrow{OB'}}{\overrightarrow{OB}} = \frac{\overrightarrow{A'B'}}{\overrightarrow{AB}}  = \lambda 
+$$
 
+$$
+\frac{\overrightarrow{OC''}}{\overrightarrow{OC}  } = \frac{\overrightarrow{OA'}}{\overrightarrow{OA}} =  \frac{\overrightarrow{AC''}}{\overrightarrow{AC}} = \lambda 
+$$
