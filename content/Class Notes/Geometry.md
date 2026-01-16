@@ -83,10 +83,11 @@ So we have $T(L) = \{  T(p) + \lambda A v \mid \lambda \in \mathbb{R} \}$ $\quad
 
 **Theorem:**  Affine transformation sends $\parallel$ lines to $\parallel$ lines.
 
-**Proof:** 
-$l_{1},l_{2} , l_{1} \parallel l_{2}$
+**Proof:** $l_{1},l_{2} , l_{1} \parallel l_{2} \implies l_1 = p_1 + \mathbb{R}v, l_2 = p_2 + \mathbb{R}v$.
+From the previous theorem, $T(l_1) = T(p_1) + \mathbb{R}Av$ and $T(l_2) = T(p_2) + \mathbb{R}Av$.
+Since both lines have the direction vector $Av$, $T(l_1) \parallel T(l_2)$. $\blacksquare$
 
 
 **Theorem:** Affine transformation preserves ratios of lengths along a straight line
 
-**Proof:**
+**Proof:** 
