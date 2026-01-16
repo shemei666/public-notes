@@ -91,3 +91,43 @@ Since both lines have the direction vector $Av$, $T(l_1) \parallel T(l_2)$. $\bl
 **Theorem:** Affine transformation preserves ratios of lengths along a straight line
 
 **Proof:** 
+Let $A, B$ be distinct points on a line, and let $C$ be a point on the segment $AB$.
+Since $C$ is on the line determined by $A$ and $B$, we can write $C = (1-t)A + tB$ for some $t \in \mathbb{R}$.
+The ratio of signed lengths (or vectors) is $\frac{C-A}{B-A} = t$.
+Let $\varphi(x) = Tx + b$ be an affine transformation.
+$$ \varphi(C) = T(C) + b = T((1-t)A + tB) + b = (1-t)T(A) + tT(B) + ((1-t)+t)b $$
+$$ \varphi(C) = (1-t)(T(A)+b) + t(T(B)+b) = (1-t)\varphi(A) + t\varphi(B) $$
+Thus, $\varphi(C)$ divides the segment $\varphi(A)\varphi(B)$ in the same ratio $t$.
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=0.85]
+    % Original Line
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (3,0);
+    \coordinate (C) at (2.25,0); % t = 0.75
+    
+    \draw[thick] (A) -- (B);
+    \filldraw (A) circle (2pt) node[below] {$A$};
+    \filldraw (B) circle (2pt) node[below] {$B$};
+    \filldraw (C) circle (2pt) node[below] {$C$};
+    \node at (1.5, -0.6) {$AC/AB = t$};
+    
+    % Transformation Arrow
+    \draw[->, thick, bend left] (3.5, 0.5) to node[above] {$\varphi$} (5, 0.5);
+    
+    % Transformed Line
+    \coordinate (Ap) at (5.5, 1);
+    \coordinate (Bp) at (8.5, 2.5);
+    \coordinate (Cp) at (7.75, 2.125); % (1-0.75)Ap + 0.75Bp
+    
+    \draw[thick] (Ap) -- (Bp);
+    \filldraw (Ap) circle (2pt) node[above left] {$\varphi(A)$};
+    \filldraw (Bp) circle (2pt) node[above right] {$\varphi(B)$};
+    \filldraw (Cp) circle (2pt) node[above left] {$\varphi(C)$};
+    \node[right, align=left] at (6.5, 3.2) {$\frac{\varphi(C)-\varphi(A)}{\varphi(B)-\varphi(A)}$ \\ $= t$};
+\end{tikzpicture}
+\end{document}
+```
+$\quad \blacksquare$
+
