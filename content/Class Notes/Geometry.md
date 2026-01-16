@@ -208,36 +208,69 @@ Conversely, we can construct parallel lines to $L_{1}$ and see that they have th
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[>=stealth, scale=1.2]
-    % Lines L1 and L3 (Parallel)
-    \draw[blue, thick] (-0.5, 3) -- (6, 3) node[right] {$L_1$};
-    \draw[blue, thick] (-0.5, 0) -- (6, 0) node[right] {$L_3$};
-
-    % Transversals
-    \draw[thick] (0.83, 3.5) -- (2.17, -0.5) node[below] {$D_1$};
-    \draw[thick] (2.67, 3.5) -- (5.33, -0.5) node[below] {$D_2$};
-
-    % Points
-    \filldraw (1, 3) circle (2pt) node[above left] {$A_1$};
-    \filldraw (1.5, 1.5) circle (2pt) node[above left] {$A_2$};
-    \filldraw (2, 0) circle (2pt) node[below left] {$A_3$};
-
-    \filldraw (3, 3) circle (2pt) node[above right] {$A_1'$};
-    \filldraw (5, 0) circle (2pt) node[below right] {$A_3'$};
+\begin{tikzpicture}[>=stealth, scale=1.0]
     
-    % Point A2' assumed on D2
-    \filldraw (4, 1.5) circle (2pt) node[above right] {$A_2'$};
+    % --- Panel 1: Given Configuration (Hypothesis) ---
+    \begin{scope}[shift={(0,0)}]
+        \node[font=\bfseries] at (2.5, 4) {1. Given Configuration};
+        
+        % Lines L1 and L3 (Parallel)
+        \draw[blue, thick] (-0.5, 3) -- (5.5, 3) node[right] {$L_1$};
+        \draw[blue, thick] (-0.5, 0) -- (5.5, 0) node[right] {$L_3$};
+        
+        % Transversals
+        \draw[thick] (0.83, 3.5) -- (2.17, -0.5) node[below] {$D_1$};
+        \draw[thick] (2.67, 3.5) -- (5.33, -0.5) node[below] {$D_2$};
+        
+        % Points
+        \filldraw (1, 3) circle (2pt) node[above left] {$A_1$};
+        \filldraw (1.5, 1.5) circle (2pt) node[above left] {$A_2$};
+        \filldraw (2, 0) circle (2pt) node[below left] {$A_3$};
+        
+        \filldraw (3, 3) circle (2pt) node[above right] {$A_1'$};
+        \filldraw (5, 0) circle (2pt) node[below right] {$A_3'$};
+        
+        % A2' placed slightly off-parallel to show L2 isn't necessarily parallel
+        \coordinate (A2p) at (4.0, 1.2); 
+        \filldraw (A2p) circle (2pt) node[right] {$A_2'$};
+        
+        % Line L2 (The one in question)
+        \draw[thick] (-0.5, 1.4) -- (5.5, 1.15) node[right] {$L_2$};
+        \draw[dotted] (1.5, 1.5) -- (A2p);
+    \end{scope}
 
-    % Constructed parallel line passing through A2 (Dotted)
-    \draw[red, dashed, thick] (-0.5, 1.5) -- (6, 1.5) node[right] {$L_2'$ (constructed $\parallel$)};
-
-    % Line L2 connecting A2 and A2' (shown coinciding or very close if we want to imply proof)
-    % Here we draw it solid on top to show they are the same in the intended result
-    %\draw[green!60!black, thick, opacity=0.5] (-0.5, 1.45) -- (6, 1.55) node[above right] {$L_2?$};
-    
-    % Annotation
-    \node[red, align=center] at (3.5, 1) {If $A_2'$ satisfies ratio,\\it must lie on $L_2'$};
-
+    % --- Panel 2: Construction (Proof Step) ---
+    \begin{scope}[shift={(7,0)}]
+        \node[font=\bfseries] at (2.5, 4) {2. Construction};
+        
+        % Lines L1 and L3 (Parallel)
+        \draw[blue, thick] (-0.5, 3) -- (5.5, 3) node[right] {$L_1$};
+        \draw[blue, thick] (-0.5, 0) -- (5.5, 0) node[right] {$L_3$};
+        
+        % Transversals
+        \draw[thick] (0.83, 3.5) -- (2.17, -0.5) node[below] {$D_1$};
+        \draw[thick] (2.67, 3.5) -- (5.33, -0.5) node[below] {$D_2$};
+        
+        % Points (Same as Left)
+        \filldraw (1, 3) circle (2pt) node[above left] {$A_1$};
+        \filldraw (1.5, 1.5) circle (2pt) node[above left] {$A_2$};
+        \filldraw (2, 0) circle (2pt) node[below left] {$A_3$};
+        \filldraw (3, 3) circle (2pt) node[above right] {$B_1$};
+        \filldraw (5, 0) circle (2pt) node[below right] {$B_3$};
+        
+        \coordinate (A2p) at (4.0, 1.2);
+        \filldraw (A2p) circle (2pt) node[right] {$A_2'$};
+        
+        % Constructed Parallel Line L' passing through A2
+        \draw[red, dashed, thick] (-0.5, 1.5) -- (5.5, 1.5) node[right] {$L'$};
+        
+        % Intersection B2
+        \coordinate (B2) at (4.0, 1.5); % Intersection of y=1.5 and D2
+        \filldraw[red] (B2) circle (2pt) node[above right] {$B_2$};
+        
+        \draw[->, red, semithick] (2.5, 1.5) -- (3.2, 1.5) node[midway, below] {$\parallel$};
+        
+    \end{scope}
 \end{tikzpicture}
 \end{document}
 ```
