@@ -61,3 +61,12 @@ $$ \overrightarrow{\phi(M)} = \vec{M} + u \quad \forall M \in \mathscr{A} \impli
 
 
 **Prop**: Fix $O \in \mathscr{A}$. Any affine mapping $\varphi: \mathscr{A} \to \mathscr{A}$ can be written in a unique way in the form $\varphi = \tau_v \circ \psi$, where $v \in V$ and $\psi(O) = O$.
+
+
+**Theorem:** Affine transformations maps straight lines to straight lines
+
+**Proof:** We prove for $n=2$, Let $T$ be an affine transformation,
+$$
+T(x) = Ax + b, A \in GL_{2\times 2}(\mathbb{R}),\quad b \in \mathbb{R}^{2}
+$$
+$L:= \{ p + \lambda v \mid \lambda \in \mathbb{R} \}$, $T(p+\lambda )$
