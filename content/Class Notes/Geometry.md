@@ -199,8 +199,10 @@ If $L_1 \parallel L_3$ and the ratios of the intercepts are equal, i.e.,
 $$ \frac{\overrightarrow{A_1 A_2}}{\overrightarrow{A_1 A_3}} = \frac{\overrightarrow{A_1' A_2'}}{\overrightarrow{A_1' A_3'}} $$
 then the line $L_2$ is parallel to $L_1$ and $L_3$.
 **Proof:** 
-Let $\varphi$ be the affine projection onto $D_2$ parallel to $L_1$ and $L_3$, and let $\pi$ be the associated linear map.
+Let $\pi$ be the affine projection of $D_{1}$ onto $D_2$ parallel to $L_i$ , and let $P$ be the associated linear map.
 The vectors $\overrightarrow{A_1 A_3}$ and $\overrightarrow{A_1 A_2}$ are projected as:
-$$ \pi(\overrightarrow{A_1 A_3}) = \varphi(A_3) - \varphi(A_1) = \overrightarrow{A_1' A_3'} $$
-$$ \pi(\overrightarrow{A_1 A_2}) = \varphi(A_2) - \varphi(A_1) = \overrightarrow{A_1' A_2'} $$
-Since $\overrightarrow{A_1 A_3} = \lambda \overrightarrow{A_1 A_2}$, linearity implies $\pi(\overrightarrow{A_1 A_3}) = \lambda \pi(\overrightarrow{A_1 A_2})$, hence $\overrightarrow{A_1' A_3'} = \lambda \overrightarrow{A_1' A_2'}$. $\blacksquare$
+$$ P(\overrightarrow{A_1 A_3}) = \overrightarrow{\pi(A_3)  \pi(A_1)} = \overrightarrow{A_1' A_3'} $$
+$$ P(\overrightarrow{A_1 A_2}) = \overrightarrow{\pi(A_2)\pi(A_1)} = \overrightarrow{A_1' A_2'} $$
+Since $\overrightarrow{A_1 A_3} = \lambda \overrightarrow{A_1 A_2}$, linearity implies $P(\overrightarrow{A_1 A_3}) = \lambda P(\overrightarrow{A_1 A_2})$, hence $\overrightarrow{A_1' A_3'} = \lambda \overrightarrow{A_1' A_2'}$. 
+Conversely, 
+
