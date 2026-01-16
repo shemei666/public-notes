@@ -167,6 +167,29 @@ $\quad \blacksquare$
 
 **Proof:** 
 
-**Theorem(Thales):** 
+**Theorem(Thales):** Let $H_1, H_2, H_3$ be three parallel lines in an affine plane. Let $L, L'$ be two transversals intersecting these lines at $A, B, C$ and $A', B', C'$ respectively. Then:
+$$ \frac{\overline{AB}}{\overline{AC}} = \frac{\overline{A'B'}}{\overline{A'C'}} $$
 
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1.2]
+    % Horizontal Parallel Lines
+    \draw[blue, thick] (-0.5, 3) -- (6, 3) node[right] {$H_1$};
+    \draw[blue, thick] (-0.5, 1.5) -- (6, 1.5) node[right] {$H_2$};
+    \draw[blue, thick] (-0.5, 0) -- (6, 0) node[right] {$H_3$};
+
+    % Transversal 1 (Slope -3)
+    \draw[thick] (0.83, 3.5) -- (2.17, -0.5) node[below] {$L$};
+    \filldraw (1, 3) circle (2pt) node[above left] {$A$};
+    \filldraw (1.5, 1.5) circle (2pt) node[above left] {$B$};
+    \filldraw (2, 0) circle (2pt) node[below left] {$C$};
+
+    % Transversal 2 (Slope -1.5, slightly non-parallel)
+    \draw[thick] (2.67, 3.5) -- (5.33, -0.5) node[below] {$L'$};
+    \filldraw (3, 3) circle (2pt) node[above right] {$A'$};
+    \filldraw (4, 1.5) circle (2pt) node[above right] {$B'$};
+    \filldraw (5, 0) circle (2pt) node[below right] {$C'$};
+\end{tikzpicture}
+\end{document}
+```
 **Proof:**
