@@ -204,5 +204,40 @@ The vectors $\overrightarrow{A_1 A_3}$ and $\overrightarrow{A_1 A_2}$ are projec
 $$ P(\overrightarrow{A_1 A_3}) = \overrightarrow{\pi(A_3)  \pi(A_1)} = \overrightarrow{A_1' A_3'} $$
 $$ P(\overrightarrow{A_1 A_2}) = \overrightarrow{\pi(A_2)\pi(A_1)} = \overrightarrow{A_1' A_2'} $$
 Since $\overrightarrow{A_1 A_3} = \lambda \overrightarrow{A_1 A_2}$, linearity implies $P(\overrightarrow{A_1 A_3}) = \lambda P(\overrightarrow{A_1 A_2})$, hence $\overrightarrow{A_1' A_3'} = \lambda \overrightarrow{A_1' A_2'}$. 
-Conversely, 
+Conversely, we can construct parallel lines to $L_{1}$ and see that they have the same ratio, and hence must coincide.
 
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1.2]
+    % Lines L1 and L3 (Parallel)
+    \draw[blue, thick] (-0.5, 3) -- (6, 3) node[right] {$L_1$};
+    \draw[blue, thick] (-0.5, 0) -- (6, 0) node[right] {$L_3$};
+
+    % Transversals
+    \draw[thick] (0.83, 3.5) -- (2.17, -0.5) node[below] {$D_1$};
+    \draw[thick] (2.67, 3.5) -- (5.33, -0.5) node[below] {$D_2$};
+
+    % Points
+    \filldraw (1, 3) circle (2pt) node[above left] {$A_1$};
+    \filldraw (1.5, 1.5) circle (2pt) node[above left] {$A_2$};
+    \filldraw (2, 0) circle (2pt) node[below left] {$A_3$};
+
+    \filldraw (3, 3) circle (2pt) node[above right] {$A_1'$};
+    \filldraw (5, 0) circle (2pt) node[below right] {$A_3'$};
+    
+    % Point A2' assumed on D2
+    \filldraw (4, 1.5) circle (2pt) node[above right] {$A_2'$};
+
+    % Constructed parallel line passing through A2 (Dotted)
+    \draw[red, dashed, thick] (-0.5, 1.5) -- (6, 1.5) node[right] {$L_2'$ (constructed $\parallel$)};
+
+    % Line L2 connecting A2 and A2' (shown coinciding or very close if we want to imply proof)
+    % Here we draw it solid on top to show they are the same in the intended result
+    %\draw[green!60!black, thick, opacity=0.5] (-0.5, 1.45) -- (6, 1.55) node[above right] {$L_2?$};
+    
+    % Annotation
+    \node[red, align=center] at (3.5, 1) {If $A_2'$ satisfies ratio,\\it must lie on $L_2'$};
+
+\end{tikzpicture}
+\end{document}
+```
