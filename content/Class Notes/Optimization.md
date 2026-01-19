@@ -408,21 +408,11 @@ $$
 (unique closest point in $K$ from $\vec{x}$)
 
 **Proof:** For any closed set $S$ in $\mathbb{R}^{n}$ for every $\vec{x} \in \mathbb{R}^{n}$ there is a point $P_{S}(\vec{x}) \in S$ such that $\lvert \vec{x} - P_{S}(\vec{x}) \rvert = d(\vec{x},S)$.
-For uniqueness if we have 2 distinct points $\vec{y}_{1},\vec{y}_{2} \in K$ with same distance $d = d(\vec{x},K)$ from $\vec{x}$, then by the Parallelogram Law:
-
+For uniqueness if we have 2 distinct points $\vec{y}_{1},\vec{y}_{2} \in K$ with same distance $d = d(\vec{x},K)$ from $\vec{x}$,  
 $$
-\left\lvert \vec{x} - \frac{\vec{y}_{1} + \vec{y}_{2}}{2} \right\rvert^2 = \frac{1}{2}\lvert \vec{x} - \vec{y}_{1} \rvert^2 + \frac{1}{2}\lvert \vec{x} - \vec{y}_{2} \rvert^2 - \frac{1}{4}\lvert \vec{y}_{1} - \vec{y}_{2} \rvert^2
-$$
-
-Since $\lvert \vec{x} - \vec{y}_{1} \rvert = \lvert \vec{x} - \vec{y}_{2} \rvert = d$, we have:
-
-$$
-\left\lvert \vec{x} - \frac{\vec{y}_{1} + \vec{y}_{2}}{2} \right\rvert^2 = d^2 - \frac{1}{4}\lvert \vec{y}_{1} - \vec{y}_{2} \rvert^2
+ \frac{\vec{y_{1}}  + \vec{y_{2}}}{2} - \vec{x}+ \vec{y_{1}} - \frac{\vec{y_{1}}  + \vec{y_{2}}}{2}
 $$
 
-Since $K$ is convex, $\frac{\vec{y}_{1} + \vec{y}_{2}}{2} \in K$, which implies $\left\lvert \vec{x} - \frac{\vec{y}_{1} + \vec{y}_{2}}{2} \right\rvert \geq d$.
-Thus, we must have $d^2 - \frac{1}{4}\lvert \vec{y}_{1} - \vec{y}_{2} \rvert^2 \geq d^2$, which implies $-\frac{1}{4}\lvert \vec{y}_{1} - \vec{y}_{2} \rvert^2 \geq 0$.
-This is only possible if $\lvert \vec{y}_{1} - \vec{y}_{2} \rvert = 0 \implies \vec{y}_{1} = \vec{y}_{2}$.
-Thus the projection is unique.
+**Def:** The mapping $P_{k}: \mathbb{R}^{n} \to K$ is called the metric projection or nearest point map of $K$, ($d(\vec{x},)$)
 
 
