@@ -408,8 +408,21 @@ $$
 (unique closest point in $K$ from $\vec{x}$)
 
 **Proof:** For any closed set $S$ in $\mathbb{R}^{n}$ for every $\vec{x} \in \mathbb{R}^{n}$ there is a point $P_{S}(\vec{x}) \in S$ such that $\lvert \vec{x} - P_{S}(\vec{x}) \rvert = d(\vec{x},S)$.
-For uniqueness if we have 2 points $y_{1},y_{2} \in K$ with the same distance from $\vec{x}$ then we have
+For uniqueness if we have 2 distinct points $\vec{y}_{1},\vec{y}_{2} \in K$ with same distance $d = d(\vec{x},K)$ from $\vec{x}$, then by the Parallelogram Law:
 
 $$
-\lvert \vec{x} - \frac{\vec{y}_1 + \vec{y}_2}{2} \rvert^2 = \frac{1}{2}\lvert \vec{x} - \vec{y}_1 \rvert^2 + \frac{1}{2}\lvert \vec{x} - \vec{y}_2 \rvert^2 - \frac{1}{4}\lvert \vec{y}_1 - \vec{y}_2 \rvert^2 < d(\vec{x}, K)^2
+\left\lvert \vec{x} - \frac{\vec{y}_{1} + \vec{y}_{2}}{2} \right\rvert^2 = \frac{1}{2}\lvert \vec{x} - \vec{y}_{1} \rvert^2 + \frac{1}{2}\lvert \vec{x} - \vec{y}_{2} \rvert^2 - \frac{1}{4}\lvert \vec{y}_{1} - \vec{y}_{2} \rvert^2
 $$
+
+Since $\lvert \vec{x} - \vec{y}_{1} \rvert = \lvert \vec{x} - \vec{y}_{2} \rvert = d$, we have:
+
+$$
+\left\lvert \vec{x} - \frac{\vec{y}_{1} + \vec{y}_{2}}{2} \right\rvert^2 = d^2 - \frac{1}{4}\lvert \vec{y}_{1} - \vec{y}_{2} \rvert^2
+$$
+
+Since $K$ is convex, $\frac{\vec{y}_{1} + \vec{y}_{2}}{2} \in K$, which implies $\left\lvert \vec{x} - \frac{\vec{y}_{1} + \vec{y}_{2}}{2} \right\rvert \geq d$.
+Thus, we must have $d^2 - \frac{1}{4}\lvert \vec{y}_{1} - \vec{y}_{2} \rvert^2 \geq d^2$, which implies $-\frac{1}{4}\lvert \vec{y}_{1} - \vec{y}_{2} \rvert^2 \geq 0$.
+This is only possible if $\lvert \vec{y}_{1} - \vec{y}_{2} \rvert = 0 \implies \vec{y}_{1} = \vec{y}_{2}$.
+Thus the projection is unique.
+
+
