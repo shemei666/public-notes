@@ -417,7 +417,16 @@ $$
 
 $P_{K}|_{\mathbb{R}^{n}\setminus K}$, what is the image? $\partial K$?
 $$
-R(K,\vec{x}) := \langle P_{K}(\vec{x}) + \lambda u(K,\vec{x}) \rangle
+R(K,\vec{x}) := \langle P_{K}(\vec{x}) + \lambda u(K,\vec{x}) \rangle \quad \lambda \geq 0
 $$
+ray through $\vec{x}$ with endpoint  $P_{K}(\vec{x})$
+
+**Theorem:** $P_{k}$ is a contractive mapping
+$$
+\lvert  P_{K}(\vec{x}) - P_{K}(\vec{y})\rvert  \leq \lvert \vec{x} - y \vec{} \rvert  \quad \forall \vec{x}, \vec{y} \in \mathbb{R}^{n}
+$$
+
+
+**Proof:**
 
 
