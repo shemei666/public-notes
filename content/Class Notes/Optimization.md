@@ -413,6 +413,11 @@ $$
  \frac{\vec{y_{1}}  + \vec{y_{2}}}{2} - \vec{x}+ \vec{y_{1}} - \frac{\vec{y_{1}}  + \vec{y_{2}}}{2}
 $$
 
-**Def:** The mapping $P_{k}: \mathbb{R}^{n} \to K$ is called the metric projection or nearest point map of $K$, ($d(\vec{x},)$)
+**Def:** The mapping $P_{k}: \mathbb{R}^{n} \to K$ is called the metric projection or nearest point map of $K$, ($d(\vec{x},K) = \lvert  \vec{x} - P_{K}(\vec{x}) \rvert$) For $\vec{x} \in \mathbb{R}^{n} \setminus K$, $u(K,\vec{x}):= \frac{\vec{x} - P_{K}(\vec{x})}{d(K,\vec{x})}$. 
+
+$P_{K}|_{\mathbb{R}^{n}\setminus K}$, what is the image? $\partial K$?
+$$
+R(K,\vec{x}) := \langle P_{K}(\vec{x}) + \lambda u(K,\vec{x}) \rangle
+$$
 
 
