@@ -408,25 +408,76 @@ $$
 (unique closest point in $K$ from $\vec{x}$)
 
 **Proof:** For any closed set $S$ in $\mathbb{R}^{n}$ for every $\vec{x} \in \mathbb{R}^{n}$ there is a point $P_{S}(\vec{x}) \in S$ such that $\lvert \vec{x} - P_{S}(\vec{x}) \rvert = d(\vec{x},S)$.
-For uniqueness if we have 2 distinct points $\vec{y}_{1},\vec{y}_{2} \in K$ with same distance $d = d(\vec{x},K)$ from $\vec{x}$,  
+For uniqueness if we have 2 distinct points $\vec{y}_{1},\vec{y}_{2} \in K$ with same distance $d = d(\vec{x},K)$ from $\vec{x}$,
+
 $$
  \frac{\vec{y_{1}}  + \vec{y_{2}}}{2} - \vec{x}+ \vec{y_{1}} - \frac{\vec{y_{1}}  + \vec{y_{2}}}{2}
 $$
 
-**Def:** The mapping $P_{k}: \mathbb{R}^{n} \to K$ is called the metric projection or nearest point map of $K$, ($d(\vec{x},K) = \lvert  \vec{x} - P_{K}(\vec{x}) \rvert$) For $\vec{x} \in \mathbb{R}^{n} \setminus K$, $u(K,\vec{x}):= \frac{\vec{x} - P_{K}(\vec{x})}{d(K,\vec{x})}$. 
+**Def:** The mapping $P_{k}: \mathbb{R}^{n} \to K$ is called the metric projection or nearest point map of $K$, ($d(\vec{x},K) = \lvert  \vec{x} - P_{K}(\vec{x}) \rvert$) For $\vec{x} \in \mathbb{R}^{n} \setminus K$, $u(K,\vec{x}):= \frac{\vec{x} - P_{K}(\vec{x})}{d(K,\vec{x})}$.
 
 $P_{K}|_{\mathbb{R}^{n}\setminus K}$, what is the image? $\partial K$?
+
 $$
 R(K,\vec{x}) := \langle P_{K}(\vec{x}) + \lambda u(K,\vec{x}) \rangle \quad \lambda \geq 0
 $$
-ray through $\vec{x}$ with endpoint  $P_{K}(\vec{x})$
+
+ray through $\vec{x}$ with endpoint $P_{K}(\vec{x})$
 
 **Theorem:** $P_{k}$ is a contractive mapping
+
 $$
-\lvert  P_{K}(\vec{x}) - P_{K}(\vec{y})\rvert  \leq \lvert \vec{x} - y \vec{} \rvert  \quad \forall \vec{x}, \vec{y} \in \mathbb{R}^{n}
+\lvert  P_{K}(\vec{x}) - P_{K}(\vec{y})\rvert  \leq \lvert \vec{x} - \vec{y} \rvert  \quad \forall \vec{x}, \vec{y} \in \mathbb{R}^{n}
 $$
 
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1.3]
+    % Draw Convex Set K (Smooth curve boundary)
+    \fill[blue!10] (-2,0) rectangle (3,-2);
+    \draw[thick, blue!80!black] (-2,0) -- (3,0);
+    \fill[blue!10] (-2,0) .. controls (0,0.5) and (1,0.5) .. (3,0) -- (3,-1) -- (-2,-1) -- cycle;
+    % Actually simpler: Just a flat line or slightly curved set to show projection clearly
 
-**Proof:**
+    % Let's use a standard "kidney" or oval shape for generic K
+    \filldraw[fill=blue!10, draw=blue!80!black, thick] (-1, -1);
+    \node[blue!80!black] at (2, -0.5) {$K$};
 
+    % Points x and y
+    \coordinate (X) at (0, 1.5);
+    \coordinate (Y) at (2.5, 2.0);
 
+    \fill[black] (X) circle (1.5pt) node[above left] {$\vec{x}$};
+    \fill[black] (Y) circle (1.5pt) node[above right] {$\vec{y}$};
+
+    % Projections Px and Py
+    % Since K is a rectangle [ -1, 4 ] x [ -1, 0 ],
+    % Lx = 0, Ly = 2.5. Top edge is y=0.
+    % So Px = (0,0), Py = (2.5,0)
+    \coordinate (Px) at (0, 0);
+    \coordinate (Py) at (2.5, 0);
+
+    \fill[black] (Px) circle (1.5pt) node[below] {$P_K(\vec{x})$};
+    \fill[black] (Py) circle (1.5pt) node[below] {$P_K(\vec{y})$};
+
+    % Projection lines (dashed)
+    \draw[dashed, thin, gray] (X) -- (Px);
+    \draw[dashed, thin, gray] (Y) -- (Py);
+
+    % Distance lines
+    \draw[<->, thick, red!80!black] (X) -- (Y) node[midway, above, sloped] {$|\vec{x} - \vec{y}|$};
+    \draw[<->, thick, green!40!black] (Px) -- (Py) node[midway, above, sloped] {$|P_K(\vec{x}) - P_K(\vec{y})|$};
+
+    % Obtuse angle visualization (optional but helpful for intuition)
+    % The angle between x-Px and Px-Py is >= 90 deg
+    \draw[thin, gray] (0, 0.2) -- (0.2, 0.2) -- (0.2, 0);
+    \draw[thin, gray] (2.5, 0.2) -- (2.3, 0.2) -- (2.3, 0);
+
+\end{tikzpicture}
+\end{document}
+```
+
+**Proof:** Assume, $\vec{x} = P_{K}(\vec{x}) - P_{K}(\vec{y}) \neq 0$, 
+$$
+\langle \vec{x} - P_{K}(\vec{x}) , \vec{v}\rangle \geq 0 \iff 
+$$
