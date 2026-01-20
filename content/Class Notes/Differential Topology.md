@@ -24,4 +24,12 @@ U \arrow[r, "i"] & U \times V
 where $\phi: X_1 \cong U \subseteq \mathbb{R}^{\dim X}$ and $\psi: Y_1 \cong U \times V \subseteq \mathbb{R}^{\dim Y}$ are charts such that $\psi \circ f \circ \phi^{-1} = i$, with $i(u) = (u, 0)$.
 
 Assuming this claim, we see that $2$ holds as $U$ diffeomorphic to its image in $V \implies  X_{1} \xrightarrow{\sim } Y_{1}$ Since $X_{1} = f^{-1} f(X_{1})$, we see that $X\to f(X)$ is a bijective local diffeomorphism, hence $2$.
-Similarly we see that **Claim** $\implies 4$. 
+Similarly we see that **Claim** $\implies 4$. #todo 
+
+**Def:** A map of manifolds $f:X\to Y$ is called an embedding if it is an injective immersion satisfying above equivalent conditions,
+
+Thus $f:X\to Y$ embedding $\implies X \cong f(X)$ diffeo. and $f(X)$ is a locally closed subset of $Y$.
+
+We call $Z \subseteq Y$ a locally closed set if $Z=$ intersection of a closed set and open set in $Y$. 
+
+If $X$ is a submanifold of $Y$, then $X \hookrightarrow Y$ is an embedding. If $X$ is compact and $f:X\to Y$ is an injective immersion, then f is an embedding.
