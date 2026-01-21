@@ -380,3 +380,29 @@ A',B' \in C \implies A'B' \in C \\
 A,B \in \phi ^{-1}(A'B') \implies AB \subseteq \phi ^{-1}(A'B') \implies AB \text{is convex}
 \end{align}
 $$
+## Euclidean Vector space
+**Def:** (Convex hull) Intersection of all the convex sets containing $S$ is the convex hull of $S$
+**Def:** A vector space with an inner product $\langle\cdot ,\cdot \rangle$ is called a Euclidean vector space.
+
+**Def:** (Euclidean Affine space) $\mathscr{E}$ is an Euclidean affine space if its associated v.s is an Euclidean v.s
+$$
+d(A,B) = \lvert \overrightarrow{AB} \rvert
+$$
+
+**Exercise:** Check $d$ is a metric.
+**Def:**  $T:V\to W$ a linear map is called a **linear isometry** if $\lvert T(u) \rvert = \lvert u \rvert, \forall u \in V$.
+**Def:** $\phi:\mathscr{E}\to \mathscr{F}$ is an **affine isometry** if $d(\phi(A),\phi(B)) = d(A,B),\forall A,B \in \mathscr{E}$.
+
+**Note:** An affine mapping $\phi: \mathscr{E}\to \mathscr{F}$ is an affine isometry iff the ALM is linear isometry.
+
+**Theorem:** The set $\underbrace{ Isom }_{ \text{affine isom.} }$ forms a group under the compositions of mapping.
+	**Proof:** Let $\varphi \in Isom(\mathscr{E}) \implies$ the ALM $T$ is a linear isom. $T^{-1}$ is an linear isom. $\implies \varphi ^{-1}$ is an affine isom.
+
+**Note:** Euclidean v.s are assumed finite dimensional unless mentioned.
+**Reflections** It is orthogonal symmetries about hyperplanes, Let $H$ be a hyperplane in an Euclidean vector space $V$, Let $x_{0} \in H^{\perp}$. The reflection $S_{H}(x)= x - \frac{2\langle x,x_{0} \rangle}{\lVert x_{0} \rVert^{2}}x_{0}$
+
+**Theorem:** Let V be a Euclidean v.s of dim n. Any affine linear isometry of V can be written as the composition of p reflections, where $p\leq n$.
+
+**Proof:**
+
+
