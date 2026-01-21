@@ -100,9 +100,15 @@ If $y$ is a critical value, $f^{-1}(y)$ may or may not be a manifold.
 
 Let us work with more functions: Consider a map $U\subseteq \mathbb{R}^{k}\to \mathbb{R}^{l}$ or more generally, $X \xrightarrow{g}\mathbb{R}^{l}$ where $X$ is a manifold. If $0 \in \mathbb{R}^{l}$ is a regular value of $g$, then $g^{-1}(0)$ is a manifold in $X$ of dimension $k-l$.
 
-**Linear algebra lemma:** Let $V \xrightarrow{\phi}\mathbb{R}^{l}$ be a linear map with $\phi = (\phi_{1},\dots,\phi_{l})$, $\phi_{i} \in V^{*}$. Then $\phi$ is onto $\iff$ $\phi_{1},\dots,\phi_{l}$ are linearly independent in $V^{*}$.
+**Linear algebra lemma:** Let $V \xrightarrow{\phi}\mathbb{R}^{l}$ be a linear map with $\phi = (\phi_{1},\dots,\phi_{l})$, $\phi_{i} \in V^{*}$.  Then $\phi$ is onto $\iff$ $\phi_{1},\dots,\phi_{l}$ are linearly independent in $V^{*}$.
+**Proof:**
 
 $$
-c_{1}\phi_{1} + \dots+c_{l}\phi_{l} = 0 \implies \phi(v) \in (c_{1},\dots,c_{l})^{\perp } \subset neq
+c_{1}\phi_{1} + \dots+c_{l}\phi_{l} = 0 \implies \phi(v) \in (c_{1},\dots,c_{l})^{\perp } \subsetneq \mathbb{R}^{l}
 $$
+Conversely, if $\phi$ is not onto, pick $c_{1},\dots,c_{l} \in im(\phi)^{\perp }$ , then $c_{1}\phi_{1}+\dots+c_{l}\phi_{l} =0$
+
+---
+Back to $g=(g_{1},\dots,g_{l}):X\to \mathbb{R}^{l}$, we say that $g_{1},\dots,g_{l}$ are independent functions at $x$ if $dg_{x}:T_{x}X\to T_{g(x)}\mathbb{R}^{l}=\mathbb{R}^{l}$ is onto, i.e if $dg_{1_{x}},\dots,dg_{l_{x}}$ are  linearly independent functions of $(T_{x}X)^{*}$. $dg_{i_{x}}:T_{}$
+
 
