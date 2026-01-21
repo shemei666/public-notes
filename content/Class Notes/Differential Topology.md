@@ -113,6 +113,6 @@ Back to $g=(g_{1},\dots,g_{l}):X\to \mathbb{R}^{l}$, we say that $g_{1},\dots,g_
 
 **Proposition:** Let $g_{1},\dots,g_{l}:X\to \mathbb{R}$ be smooth functions. Pick a point in $\mathbb{R}$, say $0\in \mathbb{R}$ Set $Z:= \bigcap_{i=1}^{l} \{ g_{i}=0 \}$. If $Z$ is non-empty and $g_{i}$ are independent at each point of $Z$, then $Z$ is a manifold of dimension $\dim(X)-l$.
 
-**Proof:** Use preimage theorem for $X \xrightarrow{ g} \mathbb{R}^{l}$ 
+**Proof:** Use preimage theorem for $X \xrightarrow{ g} \mathbb{R}^{l}$, $g=(g_{1},\dots,g_{l})$ then $0$ is a regular value for $g$ and $Z=g^{-1}(0)$.
 
 
