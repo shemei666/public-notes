@@ -90,4 +90,6 @@ Note that the composite $U \xrightarrow{G} V \times W \xrightarrow{\text{std pro
 
 **Theorem:(Pre-Image Theorem)** If $y \in Y$ is a regular value of $f$, then $f^{-1}(y)$ is either empty or a manifold of dimension $\dim(X)-\dim(Y)$.
 
-If $y$ is a critical value, $f$
+If $y$ is a critical value, $f^{-1}(y)$ may or may not be a manifold.
+
+**Examples:** Sphere in $\mathbb{R}^{n+1}$ $f:\mathbb{R}^{n+1}\to \mathbb{R}$ smooth function, given by $x \mapsto \lvert x \rvert^{2}$
