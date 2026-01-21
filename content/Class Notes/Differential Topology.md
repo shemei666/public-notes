@@ -24,13 +24,13 @@ U \arrow[r, "i"] & U \times V
 where $\phi: X_1 \cong U \subseteq \mathbb{R}^{\dim X}$ and $\psi: Y_1 \cong U \times V \subseteq \mathbb{R}^{\dim Y}$ are charts such that $\psi \circ f \circ \phi^{-1} = i$, with $i(u) = (u, 0)$.
 
 Assuming this claim, we see that $2$ holds as $U$ diffeomorphic to its image in $V \implies  X_{1} \xrightarrow{\sim } Y_{1}$ Since $X_{1} = f^{-1} f(X_{1})$, we see that $X\to f(X)$ is a bijective local diffeomorphism, hence $2$.
-Similarly we see that **Claim** $\implies 4$. #todo 
+Similarly we see that **Claim** $\implies 4$. #todo
 
 **Def:** A map of manifolds $f:X\to Y$ is called an embedding if it is an injective immersion satisfying above equivalent conditions,
 
 Thus $f:X\to Y$ embedding $\implies X \cong f(X)$ diffeo. and $f(X)$ is a locally closed subset of $Y$.
 
-**Def:** We call $Z \subseteq Y$ a locally closed set if $Z=$ intersection of a closed set and open set in $Y$. 
+**Def:** We call $Z \subseteq Y$ a locally closed set if $Z=$ intersection of a closed set and open set in $Y$.
 
 If $X$ is a submanifold of $Y$, then $X \hookrightarrow Y$ is an embedding. If $X$ is compact and $f:X\to Y$ is an injective immersion, then f is an embedding.
 
@@ -38,3 +38,50 @@ If $X$ is a submanifold of $Y$, then $X \hookrightarrow Y$ is an embedding. If $
 **Proof:** Use the bottom row of key lemma to define coordinate functions there $U$ is given by the $l-k$ coordinates functions for $W$
 
 _suggested exercises:_ 3.9,3.10
+
+**Theorem:(Local Submersion Theorem)** Let $f:X\to Y$ be a submersion at $x \in X$ Then, local coordinates around $x$, $y=f(x)$, $f$ is a canonical submersion.
+
+**Proof:** Pick local coordinates around $x,y$ in $X,Y$
+
+```tikz
+\usepackage{tikz-cd}
+\usepackage{amssymb}
+\begin{document}
+\begin{tikzcd}
+X \arrow[r,"f"] & Y\\
+U_1 \subseteq \mathbb{R}^{k} \arrow[u,"\varphi"] \arrow[r,"g"] & V_1 \subseteq \mathbb{R}^{l}\arrow[u,"\psi"]
+\end{tikzcd}
+\end{document}
+```
+
+Since $f$ is a submersion at $x$, $g$ is a submersion at $0$, i.e $dg_{0}$ is an onto map $\mathbb{R}^{k} \twoheadrightarrow \mathbb{R}^{l}.$ WLOG by change of coords,
+
+$$
+dg_{0} = \begin{pmatrix}
+I_{l\times l} | 0
+\end{pmatrix}
+$$
+
+Define a smooth function $U \xrightarrow{G} V_{1} \times \mathbb{R}^{k-l}$ by $G(x_{1},\dots,x_{k}) := (\underbrace{g_{1},\dots,g_l},x_{l+1},\dots,x_{k})$
+
+Clearly $G$ is smooth and $dG_{0} = \begin{bmatrix}I & 0 \\ 0  & I\end{bmatrix}$ and thus, by Inverse function theorem, $G$ is a local diffeo. around $0 \in U_{1}$, By shrinking we get open nbd $U \subseteq U_{1}$ of 0 such that $G(U)$ is of the form $V\times W$ for open sets $V \subseteq V_{1}$, $W \subseteq \mathbb{R}^{k-l}$ Now we have coordinate nbd.
+
+```tikz
+\usepackage{tikz-cd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\begin{document}
+\begin{tikzcd}
+X \ar[r,"f"] & Y \\
+V \times W \ar[u,"\phi \circ G^{-1}"] \ar[r,"\text{std proj.}"] & V \ar[u,"\psi"]
+\end{tikzcd}
+\end{document}
+```
+
+Note that the composite $U \xrightarrow{G} V \times W \xrightarrow{\text{std proj}} V$ is $g$
+
+**Corollary:** If $f:X\to Y$ is a submersion at $x$, then it is also one in an open nbd of $x$, moreover $f(X)$ contains an open nbd of $f(x)$ in $Y$. In particular if $f$ is a submersion everywhere then $f$ is an open map.
+**Proof:** Follows from the above diagram.
+
+**Corollary:** If $f:X\to Y$ is a submersion, then with $y =f(x)$, the set $f^{-1}(y)\subseteq X$ is a $k-l$ manifold around $x$, i.e $\exists$ an open nbd around $x$ in X over which it is given by vanishing of $l$ coordinate functions.
+**Proof:** As before, in local coordinates, the coordinates functions on $V$ pull back to give $l$ coordinate functions on $V\times W$ whose vanishing gives $0 \times W \subseteq V \times W$
