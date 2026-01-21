@@ -30,6 +30,11 @@ Similarly we see that **Claim** $\implies 4$. #todo
 
 Thus $f:X\to Y$ embedding $\implies X \cong f(X)$ diffeo. and $f(X)$ is a locally closed subset of $Y$.
 
-We call $Z \subseteq Y$ a locally closed set if $Z=$ intersection of a closed set and open set in $Y$. 
+**Def:** We call $Z \subseteq Y$ a locally closed set if $Z=$ intersection of a closed set and open set in $Y$. 
 
 If $X$ is a submanifold of $Y$, then $X \hookrightarrow Y$ is an embedding. If $X$ is compact and $f:X\to Y$ is an injective immersion, then f is an embedding.
+
+**Corollary to Lemma:** Let $X \subseteq Y$ be a submanifold with $\dim X =k,\dim Y =l$ Then for any point $p \in X$, $\exists$ a nbd $Y_{1} \subseteq Y$ such that $X \cap Y_{1}$ is given by the vanishing of $l-k$ functions from $l$ coordinate functions around $p$.
+**Proof:** Use the bottom row of key lemma to define coordinate functions there $U$ is given by the $l-k$ coordinates functions for $W$
+
+_suggested exercises:_ 3.9,3.10
