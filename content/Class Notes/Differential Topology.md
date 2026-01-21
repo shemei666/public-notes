@@ -92,4 +92,6 @@ Note that the composite $U \xrightarrow{G} V \times W \xrightarrow{\text{std pro
 
 If $y$ is a critical value, $f^{-1}(y)$ may or may not be a manifold.
 
-**Examples:** Sphere in $\mathbb{R}^{n+1}$ $f:\mathbb{R}^{n+1}\to \mathbb{R}$ smooth function, given by $x \mapsto \lvert x \rvert^{2}$
+**Examples:** 
+1. **Sphere in $\mathbb{R}^{n+1}$** $f:\mathbb{R}^{n+1}\to \mathbb{R}$ smooth function, given by $x \mapsto \lvert x \rvert^{2}$, then $df$ at $p=(a_{1},\dots,a_{n+1})$ is given by $T_{p}\mathbb{R}^{n+1} = \mathbb{R}^{n+1} \xrightarrow{[2a_{1},\dots,2a_{n+1}]} \mathbb{R}$ which is submersion iff it is non zero. i.e if it is not $a_{1}=\dots=a_{n+1} =0$, Thus $c \in \mathbb{R}$ is regular iff $c\neq 0$. Since $c<0,f^{-1}(c) = \varnothing, c>0, f^{-1}(c)$ is a sphere.
+2. More generally, for any smooth function $f:U\to \mathbb{R}$, $U \subseteq  \mathbb{R}$
