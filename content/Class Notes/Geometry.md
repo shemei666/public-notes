@@ -362,3 +362,20 @@ $$
 $$
 \frac{\overrightarrow{OC''}}{\overrightarrow{OC}} = \frac{\overrightarrow{OB'}}{\overrightarrow{OB}} = \frac{\overrightarrow{B'C''}}{\overrightarrow{BC}} = \lambda
 $$
+## Convex set
+**Def:** $A \subseteq \mathscr{E}$, affine space, is a convex set if the segment $AB \subseteq  \mathscr{A}$, $\forall AB \in \mathscr{A}$.
+
+**Proposition:** Any intersection of convex sets in convex.
+**Note:** It is not true for union
+**Proposition:** Image of a convex set under an affine mapping is convex.
+**Proof:** seen before
+
+**Proposition:** Inverse image of an convex set under an affine mapping is convex
+**Proof:** $\phi:\mathscr{E}\to \mathscr{F}$, Let $C \subseteq \mathscr{F}$ is a convex set, $A,B \in \phi ^{-1}(C)$ we have to show $AB \subseteq \phi ^{-1}(C)$.
+$$
+\begin{align}
+A' = \phi(A)  \\
+B' = \phi(B) \\
+A',B' \in C \implies A'B' \in C
+\end{align}
+$$
