@@ -7,6 +7,12 @@ we have $\phi(e_{1},e_{1}) = 0$ since $\phi$ is non degenerate we have $\phi(e_{
 $$
 \begin{gather}
 e_{2} = e_{2}' - \phi(e_{2}', e_{1})e_{3} \implies \phi(e_{2},e_{1}) = \phi(e_{2}',e_{1})- \phi(e_{2}',e_{1}) = 0 \\
-\phi(e_{2},e_{3}) = \phi(e_{2}',e_{3}) - \phi
+\phi(e_{2},e_{3}) = \phi(e_{3},e_{3}) \implies \phi(e_{2}-e_{3},e_{3}) =0
 \end{gather}
+$$
+$$
+
+$$
+$$
+
 $$
