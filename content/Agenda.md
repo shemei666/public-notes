@@ -1,6 +1,1 @@
-- [ ] Linear algebra revision
-	- [ ] Jordan canonical forms
-	- [ ] Spectral theory
-	- [ ] Inner product spaces
-	- [ ] quadratic forms
-- [ ] 
+-[ ]
