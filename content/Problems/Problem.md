@@ -1,0 +1,1 @@
+$f_1,f_2,...,f_k,f$ linear functionals $f$ is linear combination of $f_i \iff \bigcap \ker f_i \subseteq \ker f$ 
