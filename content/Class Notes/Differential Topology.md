@@ -117,3 +117,9 @@ Back to $g=(g_{1},\dots,g_{l}):X\to \mathbb{R}^{l}$, we say that $g_{1},\dots,g_
 **Proposition:** Let $g_{1},\dots,g_{l}:X\to \mathbb{R}$ be smooth functions. Pick a point in $\mathbb{R}$, say $0\in \mathbb{R}$ Set $Z:= \bigcap_{i=1}^{l} \{ g_{i}=0 \}$. If $Z$ is non-empty and $g_{i}$ are independent at each point of $Z$, then $Z$ is a manifold of dimension $\dim(X)-l$.
 
 **Proof:** Use preimage theorem for $X \xrightarrow{ g} \mathbb{R}^{l}$, $g=(g_{1},\dots,g_{l})$ then $0$ is a regular value for $g$ and $Z=g^{-1}(0)$.
+
+**Proposition:**
+1. Let $f:X\to Y$ be a smooth map with $y \in Y$ a regular value. Then $f^{-1}(y)$ is the common zero set of independent functions around $f^{-1}(y)$.
+2. Any submanifold $Z \subseteq X$ is locally the common zero set of $\codim_{X}(Z)$ independent functions.
+
+**Proof:**
