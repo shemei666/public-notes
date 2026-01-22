@@ -521,6 +521,44 @@ $$
 
 **Exercise:** Prove that $\phi(t) = \lVert  \vec{x} - ((1-t)P_{K}(\vec{x})+t\vec{z}) \rVert$, $z \in K$, is a strictly increasing function on $[0,1]$
 
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1.3]
+    % Sphere S
+    \draw[thick, blue] (0,0) circle (3cm);
+    \node[blue] at (2.5, 2.5) {$S$};
+
+    % Convex Set K
+    \filldraw[fill=gray!10, draw=black, thick] (0,0) ellipse (1.5cm and 1cm);
+    \node at (0,0) {$K$};
+
+    % Point v on boundary
+    \coordinate (v) at (1.3, 0.5);
+    \fill[red] (v) circle (1.5pt) node[left] {$\vec{v}$};
+
+    % Point P(x_n) near v
+    \coordinate (Pxn) at (1.4, 0.34);
+    \fill[black] (Pxn) circle (1.5pt) node[below left] {$P(\vec{x}_n)$};
+
+    % Target point y_n on circle
+    \coordinate (yn) at (2.8, 1.0);
+
+    % Draw Ray R_K(x_n)
+    \draw[thick, ->, orange!80!black] (Pxn) -- (yn) node[midway, above] {$R_K(\vec{x}_n)$};
+    \fill[black] (yn) circle (1.5pt) node[right] {$\vec{y}_n$};
+
+    % x_n on the segment, close to Pxn
+    % x_n on the segment, close to Pxn
+    \path (Pxn) -- (yn) coordinate[pos=0.2] (xn);
+    \fill[black] (xn) circle (1.5pt) node[above left] {$\vec{x}_n$};
+
+    % Distance indicator (optional)
+    \draw[dashed, gray] (v) -- (xn);
+
+\end{tikzpicture}
+\end{document}
+```
+
 **Proof of Lemma:** $P(S) \subseteq \partial K$, Let $\vec{v} \in \partial K$, for $n \in \mathbb{N}$, choose $x_{n} \in Int(S)\setminus K$ such that $\lVert  \vec{x_{n}} - \vec{v} \rVert < \frac{1}{n}$, $\lVert  \vec{v} - P(x_{n}) \rVert \leq \lVert  \vec{v} - \vec{x_{n}} \rVert \leq \frac{1}{n}$ , $R_{K}(\vec{x_{n}})$ intersects $S$ at a point $\vec{y_{n}}$.
 
 $$
@@ -536,11 +574,17 @@ $\vec{y_{n}}$ has a convergent subsequence. Let $\vec{y}$ be a limit point
 $$
 \lVert  \vec{v} - P(\vec{y}) \rVert = 0 \implies P(\vec{y} ) = \vec{v}
 $$
+
 ## Support properties of convex sets
+
 **Lemma:** Let $K \subseteq \mathbb{R}^{n}$ be non-empty closed convex set, Let $x \in \mathbb{R}^{n}\setminus K$. The hyperplane passing through $P_{K}(\vec{x})$ and orthogonal to $U(K,\vec{x})$(unit vector) is a supporting hyperplane for $K$.
 
-**Proof:** 
+**Proof:**
+
 $$
 \langle  x - P(x), z - P(x) \rangle \leq 0 \forall z \in K
 $$
 
+**Theorem:** Let $K \subseteq \mathbb{R}^{n}$ be a nonempty closed convex set. If $K$ is bounded then to each vector $u \in \mathbb{R}^{n}\setminus 0$ there is a support plane to $K$ with exterior normal vector $\vec{u}$ , $U_{K}: \mathbb{R}^{n} \setminus 0 \to S^{n-1}$, $U_{K}$ is surjective.
+
+**Proof:**
