@@ -402,7 +402,7 @@ and each nonempty line free closed convex set $C \subseteq \mathbb{R}^{n}$ is th
 **Lemma:** $K$ nonempty closed convex set, for each $\vec{x} \in \mathbb{R}^{n}$, there is a unique point $P_{K}(\vec{x})$ ($P_{K}:\mathbb{R}^{n}\to K$) satisfying
 
 $$
-\lvert  \vec{x} -P_{k} (\vec{x})\rvert  \leq \lvert  \vec{x} - y \vec{} \rvert  \quad \forall \vec{y} \in K
+\lVert  \vec{x} -P_{k} (\vec{x})\rVert  \leq \lVert  \vec{x} - \vec{y} \rVert  \quad \forall \vec{y} \in K
 $$
 
 (unique closest point in $K$ from $\vec{x}$)
@@ -424,7 +424,7 @@ $$
 
 ray through $\vec{x}$ with endpoint $P_{K}(\vec{x})$
 
-**Theorem:** $P_{k}$ is a contractive mapping
+**Theorem:** $P_{K}$ is a contractive mapping, $P_{K}:\mathbb{R}^{n}\to K$
 
 $$
 \lvert  P_{K}(\vec{x}) - P_{K}(\vec{y})\rvert  \leq \lvert \vec{x} - \vec{y} \rvert  \quad \forall \vec{x}, \vec{y} \in \mathbb{R}^{n}
@@ -477,7 +477,44 @@ $$
 \end{document}
 ```
 
-**Proof:** Assume, $\vec{x} = P_{K}(\vec{x}) - P_{K}(\vec{y}) \neq 0$, 
+**Proof:**
+
 $$
-\langle \vec{x} - P_{K}(\vec{x}) , \vec{v}\rangle \geq 0 \iff 
+\phi(t) = \lVert  \vec{x} - (1-t)P_{K}(\vec{x})+ tP_{K}(\vec{y}) \rVert ^{2}
 $$
+
+$$
+\begin{gather}
+\phi:[0,1] \to \mathbb{R}_{\geq_{0}} \\
+\phi(t) = \lVert \vec{x} - P_{K}(\vec{x})+t(P_{K}(\vec{x})-P_{K}(\vec{y})) \rVert ^{2} \\
+= \lVert \vec{x} - P_{K}(\vec{x}) \rVert^2 + 2t \langle \vec{x} - P_{K}(\vec{x}), P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle + t^2 \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert^2 \\
+\phi'(t) = 2 \langle \vec{x} - P_{K}(\vec{x}), P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle + 2t \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert^2 \\
+\implies \phi'(0) \geq 0 \\
+2 \langle P_{K}(\vec{x}) -P_{K}(\vec{y}), \vec{x} - P_{K}(\vec{x}) \rangle \geq 0 \\
+\implies \langle \vec{x} - P_{K}(\vec{x}),P_{K}(\vec{y})-P_{K}(\vec{x}) \rangle \leq 0
+\end{gather}
+$$
+
+A symmetric argument gives,
+
+$$
+\begin{gather}
+\langle  \vec{y} - P_{K}(\vec{y}),P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle \leq 0 \\
+\langle P_{k}(\vec{y}) - \vec{y}, P_{K}(\vec{y}) - P_{K}(\vec{x}) \rangle \leq 0
+\end{gather}
+$$
+
+Adding them we get,
+
+$$
+\begin{gather}
+\langle  \vec{x} - \vec{y}, P_{K}(\vec{y})-P_{K}(\vec{x}) \rangle \leq \langle  P_{K}(\vec{x})-P_{K}(\vec{y}), P_{K}(\vec{y})-P_{K}(\vec{x}) \rangle \\
+
+\implies \langle  \vec{x} - \vec{y},P_{K}(\vec{x})-P_{K}(\vec{y}) \rangle\geq \lVert  P_{K}(\vec{x})-P_{K}(\vec{y}) \rVert ^{2} \\
+\lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert ^{2} \leq \lVert \vec{x}-\vec{y} \rVert  \lVert P_{K}(\vec{x})-P_{K}(\vec{y}) \rVert \\
+\implies \lVert  P_{K}(\vec{x})- P_{K}(\vec{y}) \rVert \text{ Given } P(x) \neq P(y)
+\end{gather}
+$$
+
+**Lemma:** Let $S$ be a sphere containing $K$ (non-empty closed convex set) in its interior then $P_{K}(S) = \partial K$ ($K$ is compact)
+**Corollary:** Let $K$ be a non-empty closed convex proper subset of $\mathbb{R}^{n}$. Then $P_{K}(\mathbb{R}^{n}\setminus K) = \partial K$
