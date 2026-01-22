@@ -86,33 +86,34 @@ Note that the composite $U \xrightarrow{G} V \times W \xrightarrow{\text{std pro
 **Corollary:** If $f:X\to Y$ is a submersion, then with $y =f(x)$, the set $f^{-1}(y)\subseteq X$ is a $k-l$ manifold around $x$, i.e $\exists$ an open nbd around $x$ in X over which it is given by vanishing of $l$ coordinate functions.
 **Proof:** As before, in local coordinates, the coordinates functions on $V$ pull back to give $l$ coordinate functions on $V\times W$ whose vanishing gives $0 \times W \subseteq V \times W$
 
-**Def:** Let $f:X \to  Y$  be a smooth map of manifolds, then $y \in Y$ is a regular value of $f$ if $\forall x \in f^{-1}(y), df_{x}$ onto. If $y \in Y$ is not a regular value, we call it a critical value of $f$.
+**Def:** Let $f:X \to  Y$ be a smooth map of manifolds, then $y \in Y$ is a regular value of $f$ if $\forall x \in f^{-1}(y), df_{x}$ onto. If $y \in Y$ is not a regular value, we call it a critical value of $f$.
 
 **Theorem:(Pre-Image Theorem)** If $y \in Y$ is a regular value of $f$, then $f^{-1}(y)$ is either empty or a manifold of dimension $\dim(X)-\dim(Y)$.
 
 If $y$ is a critical value, $f^{-1}(y)$ may or may not be a manifold.
 
-**Examples:** 
+**Examples:**
+
 1. **Sphere in $\mathbb{R}^{n+1}$** $f:\mathbb{R}^{n+1}\to \mathbb{R}$ smooth function, given by $x \mapsto \lvert x \rvert^{2}$, then $df$ at $p=(a_{1},\dots,a_{n+1})$ is given by $T_{p}\mathbb{R}^{n+1} = \mathbb{R}^{n+1} \xrightarrow{[2a_{1},\dots,2a_{n+1}]} \mathbb{R}$ which is submersion iff it is non zero. i.e if it is not $a_{1}=\dots=a_{n+1} =0$, Thus $c \in \mathbb{R}$ is regular iff $c\neq 0$. Since $c<0,f^{-1}(c) = \varnothing, c>0, f^{-1}(c)$ is a sphere.
 2. More generally, for any smooth function $f:U\to \mathbb{R}$, $U \subseteq  \mathbb{R}^{n}$ $df$ determines whether $f$ is a submersion at $p \in U$, namely iff $df_{p} \neq 0$.
 3. $f:\mathbb{R}^{2}\to \mathbb{R}$ $f(x,y)= x^{2}-y^{2}$, $df = (2x,-2y)$. So it fails to be a submersion at $p=(0,0)$.
-4. Bad examples: $f = (x^{2}+y^{2}-1)^{2}$, On $S^{1}$, $df = 0$, Here $0$ is a critical value for $f$ but $f^{-1}(0)$ is  $S^{1}$ which is a manifold.
+4. Bad examples: $f = (x^{2}+y^{2}-1)^{2}$, On $S^{1}$, $df = 0$, Here $0$ is a critical value for $f$ but $f^{-1}(0)$ is $S^{1}$ which is a manifold.
 
 Let us work with more functions: Consider a map $U\subseteq \mathbb{R}^{k}\to \mathbb{R}^{l}$ or more generally, $X \xrightarrow{g}\mathbb{R}^{l}$ where $X$ is a manifold. If $0 \in \mathbb{R}^{l}$ is a regular value of $g$, then $g^{-1}(0)$ is a manifold in $X$ of dimension $k-l$.
 
-**Linear algebra lemma:** Let $V \xrightarrow{\phi}\mathbb{R}^{l}$ be a linear map with $\phi = (\phi_{1},\dots,\phi_{l})$, $\phi_{i} \in V^{*}$.  Then $\phi$ is onto $\iff$ $\phi_{1},\dots,\phi_{l}$ are linearly independent in $V^{*}$.
+**Linear algebra lemma:** Let $V \xrightarrow{\phi}\mathbb{R}^{l}$ be a linear map with $\phi = (\phi_{1},\dots,\phi_{l})$, $\phi_{i} \in V^{*}$. Then $\phi$ is onto $\iff$ $\phi_{1},\dots,\phi_{l}$ are linearly independent in $V^{*}$.
 **Proof:**
 
 $$
 c_{1}\phi_{1} + \dots+c_{l}\phi_{l} = 0 \implies \phi(v) \in (c_{1},\dots,c_{l})^{\perp } \subsetneq \mathbb{R}^{l}
 $$
+
 Conversely, if $\phi$ is not onto, pick $c_{1},\dots,c_{l} \in im(\phi)^{\perp }$ , then $c_{1}\phi_{1}+\dots+c_{l}\phi_{l} =0$
 
 ---
+
 Back to $g=(g_{1},\dots,g_{l}):X\to \mathbb{R}^{l}$, we say that $g_{1},\dots,g_{l}$ are independent functions at $x$ if $dg_{x}:T_{x}X\to T_{g(x)}\mathbb{R}^{l}=\mathbb{R}^{l}$ is onto, i.e if $dg_{1_{x}},\dots,dg_{l_{x}}$ are linearly independent functions of $(T_{x}X)^{*}$.
 
 **Proposition:** Let $g_{1},\dots,g_{l}:X\to \mathbb{R}$ be smooth functions. Pick a point in $\mathbb{R}$, say $0\in \mathbb{R}$ Set $Z:= \bigcap_{i=1}^{l} \{ g_{i}=0 \}$. If $Z$ is non-empty and $g_{i}$ are independent at each point of $Z$, then $Z$ is a manifold of dimension $\dim(X)-l$.
 
 **Proof:** Use preimage theorem for $X \xrightarrow{ g} \mathbb{R}^{l}$, $g=(g_{1},\dots,g_{l})$ then $0$ is a regular value for $g$ and $Z=g^{-1}(0)$.
-
-
