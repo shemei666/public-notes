@@ -536,3 +536,11 @@ $\vec{y_{n}}$ has a convergent subsequence. Let $\vec{y}$ be a limit point
 $$
 \lVert  \vec{v} - P(\vec{y}) \rVert = 0 \implies P(\vec{y} ) = \vec{v}
 $$
+## Support properties of convex sets
+**Lemma:** Let $K \subseteq \mathbb{R}^{n}$ be non-empty closed convex set, Let $x \in \mathbb{R}^{n}\setminus K$. The hyperplane passing through $P_{K}(\vec{x})$ and orthogonal to $U(K,\vec{x})$(unit vector) is a supporting hyperplane for $K$.
+
+**Proof:** 
+$$
+\langle  x - P(x), z - P(x) \rangle \leq 0 \forall z \in K
+$$
+
