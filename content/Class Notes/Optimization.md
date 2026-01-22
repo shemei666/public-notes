@@ -518,3 +518,21 @@ $$
 
 **Lemma:** Let $S$ be a sphere containing $K$ (non-empty closed convex set) in its interior then $P_{K}(S) = \partial K$ ($K$ is compact)
 **Corollary:** Let $K$ be a non-empty closed convex proper subset of $\mathbb{R}^{n}$. Then $P_{K}(\mathbb{R}^{n}\setminus K) = \partial K$
+
+**Exercise:** Prove that $\phi(t) = \lVert  \vec{x} - ((1-t)P_{K}(\vec{x})+t\vec{z}) \rVert$, $z \in K$, is a strictly increasing function on $[0,1]$
+
+**Proof of Lemma:** $P(S) \subseteq \partial K$, Let $\vec{v} \in \partial K$, for $n \in \mathbb{N}$, choose $x_{n} \in Int(S)\setminus K$ such that $\lVert  \vec{x_{n}} - \vec{v} \rVert < \frac{1}{n}$, $\lVert  \vec{v} - P(x_{n}) \rVert \leq \lVert  \vec{v} - \vec{x_{n}} \rVert \leq \frac{1}{n}$ , $R_{K}(\vec{x_{n}})$ intersects $S$ at a point $\vec{y_{n}}$.
+
+$$
+\begin{gather}
+P(\vec{y_{n}}) = P(\vec{x_{n}}) \text{ Ex.} \\
+P(\vec{y}) = P(\vec{x_{n}}) \quad \forall \vec{y} \in R_{K}(\vec{x_{n}}) \\
+\lVert  \vec{v} - P(\vec{y_{n}}) \rVert  < \frac{1}{n}
+\end{gather}
+$$
+
+$\vec{y_{n}}$ has a convergent subsequence. Let $\vec{y}$ be a limit point
+
+$$
+\lVert  \vec{v} - P(\vec{y}) \rVert = 0 \implies P(\vec{y} ) = \vec{v}
+$$
