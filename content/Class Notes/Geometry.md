@@ -407,3 +407,13 @@ $$
 
 **Theorem:** Let $\mathscr{E}$ be an affine space of dimension $n$, every affine isometry of $\mathscr{E}$ can be written as composition of $p$ reflections, where $p\leq n$
 **Proof:** 
+
+**Def:** An affine isometry is called a rigid motion if the determinant of the ALM is +1. Class of rigid motion is denoted by $Isom^{+}(\mathscr{E})$, 
+$$
+Isom(\mathscr{E})\xrightarrow{\det } \{ \pm 1 \} \quad \ker = Isom^{+}(\mathscr{E})
+$$
+$\implies Isom^{+}(\mathscr{E})$ is a normal subgroup.
+
+**Proposition:** Let $\phi$ be an affine isometry of the affine Euclidean space $\mathscr{E}$, $\exists$ a isometry $\psi$ is a translation $t_{v}$ of $\mathscr{E}$ such that $\phi = t_{v} \circ \psi$ such that $\psi$ has fixed points.
+
+**Proof:**
