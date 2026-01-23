@@ -21,5 +21,5 @@ That is, $E(K) \cong \mathbb{Z}^r \oplus T$, where $r \ge 0$ is the rank and $T$
 
 **Lemma:** let $k$ be a infinite field, $A$ an f.g $k$-algebra Then $A$ is a field $\iff$ $A$ is algebraic over $k$
 
-**Proof:** Let $m$ be a max ideal, $K = k[x_{1},\dots,x_{n}] / m$ ,$K$ is a field, since $k \hookrightarrow K$ $\implies K$ is algebraic over $k$. but $k = \overline{k}$ $\implies k = K$ 
-Let $b_{i} =$ image of $X_{i}$ under the map
+**Proof:** Let $m$ be a max ideal, $K = k[x_{1},\dots,x_{n}] / m$ ,$K$ is a field, since $k \hookrightarrow K$ $\implies K$ is algebraic over $k$. but $k = \overline{k}$ $\implies k = K$
+Let $b_{i} =$ image of $X_{i}$ under the map, 
