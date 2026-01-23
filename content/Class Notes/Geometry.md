@@ -403,6 +403,7 @@ $$
 
 **Theorem:** Let V be a Euclidean v.s of dim n. Any affine linear isometry of V can be written as the composition of p reflections, where $p\leq n$.
 
-**Proof:**
+**Proof:** #todo 
 
-
+**Theorem:** Let $\mathscr{E}$ be an affine space of dimension $n$, every affine isometry of $\mathscr{E}$ can be written as composition of $p$ reflections, where $p\leq n$
+**Proof:** 
