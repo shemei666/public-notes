@@ -1,3 +1,12 @@
+- [ ] Complete geometry notes and study
+- [ ] Do the same for complex
+- [ ] 
+
+
+
+
+# Problems
+
 ## Complex analysis
 
 
