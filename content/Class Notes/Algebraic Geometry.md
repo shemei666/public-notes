@@ -12,7 +12,7 @@ That is, $E(K) \cong \mathbb{Z}^r \oplus T$, where $r \ge 0$ is the rank and $T$
 ## Assignments: Chapter 1
 
 1.2, 1.5, 1.7, 1.8,1.10
-
+## Nullstellensatz
 **Theorem (Hilbert's Nullstellensatz).** Let $k$ be an algebraically closed field and $k[x_1, \dots, x_n] = A$.
 
 1.  **Weak Nullstellensatz:** Every maximal ideal $\mathfrak{m} \subset A$ is of the form $\mathfrak{m} = (x_1 - a_1, \dots, x_n - a_n)$ for some point $(a_1, \dots, a_n) \in \mathbb{A}^n_k$.
@@ -138,6 +138,7 @@ $$
 1. A poly map $f: V\to W$ induces a ring homomorphism $f^{*}: k[W]\to k[V]$
 2. If $\varphi : k[W]\to k[V]$ is a ring hom, then $\varphi = f^{*}$ for some $f:V\to W$
 3. $f:V\to W$, $g:W \to U$
+
 ```tikz
 \usepackage{tikz-cd}
 \begin{document}
@@ -147,10 +148,79 @@ k[U] \arrow[r, "g^*"] \arrow[dr, "{(g \circ f)^*}"'] & k[W] \arrow[d, "f^*"] \\
 \end{tikzcd}
 \end{document}
 ```
-   Thus $(g \circ f)^* = f^* \circ g^*$.
+
+Thus $(g \circ f)^* = f^* \circ g^*$.
+
+**Proof Sketch:**
+
+1.  **$f \implies f^*$**: Define $f^*(h) = h \circ f$. Since composition preserves algebraic operations (addition, multiplication), $f^*$ is valid ring homomorphism.
+2.  **$\phi \implies f$**: Let $Y_1, \dots, Y_m$ be coordinate functions on $W$. Set $F_i = \phi(Y_i) \in k[V]$. Define $f: V \to \mathbb{A}^m$ by $p \mapsto (F_1(p), \dots, F_m(p))$. One can verify $f(V) \subseteq W$ and induced map is $\phi$.
+3.  **Functoriality**: $(g \circ f)^*(h) = h \circ (g \circ f) = (h \circ g) \circ f = f^*(h \circ g) = f^*(g^*(h))$.
 
 **Proof:** $f: V\to W$, $f^{*}: k[W]\to k[V]$, If $g \in k[W]$, we have
+
 $$
+
 f^{*}(g)(p) = g(f(p))
+
 $$
-$\phi :k[W] \to k[V]$ is a homomorphism 
+
+$\phi :k[W] \to k[V]$ is a homomorphism #todo 
+
+**Corollary:** $f:V\to W$ is an isomorphism $\iff$ $f ^{*}: k[W]\to k[V]$ is an isomorphism.
+**Proof:**
+
+---
+$k[V]$ is an invariant of the isomorphism class of an affine variety. An affine variety over a field $k$ is a set $V$ along with a ring $k[V]$ of $k$-valued function of $k[V]$ is an f.g $k$-algebra, For some choice of $x_{1},\dots,x_{n}$ generatoes of $k[V] /k$ embeds $V$ as an irreducible algebraic set.
+
+## Function Fields
+If $V$ is an affine variety $\implies I(V)$ is aprime ideal $\implies$ $k[V] = k[X_{1},\dots,X_{n}] / I(V)$ is a domain, The **Function field** of $V$ is the quotient ffield of $k[V]$
+$$
+k(V) =  \left\{  \frac{f}{g} \mid f,g \in k[V] , g \neq 0  \right\}
+$$
+
+$f = \frac{g}{h}$ is called a rational "function since it is not a function on all of $V$, If $h(p) =0$ it is not defined
+
+Let $f \in k(V), P \in V$, we say $f$ is regular at $p$ if  $\exists g,h$ such that $f = \frac{g}{h}$ and $h(p)\neq 0$
+
+- The domain of  definitions of $f$
+$$
+dom(f) = \{  P \mid f \text{is regualr at } P\} 
+$$
+$$
+\begin{align}
+O_{V,P} = &  \{  f \in k(V) \mid f \text{ is regular at } P\} = S^{-1}k[V] \\
+S = &  \{  h \in k[V] \mid h(p) \neq 0 \} \\
+m_{p} = &  \{  h \mid h(p) = 0 \} \text{ is a max ideal}
+\end{align}
+$$
+**Theorem:** 
+1. $dom(f)$ is open and dense
+2. If $k = \overline{k}$
+$$
+dom (f) = V \iff f \in k[V]
+$$
+3. Let $V_{h} = V - V(h) = \{  p \mid h(p) \neq 0 \}$
+$$
+dom(f) \supseteq V_{h} \iff f \in k[V][h^{-1}]
+$$
+$$
+\begin{align}
+D_{f}  & = \{  h \in k[V] \mid hf \in k[V]\} \\
+ & = \left\{   h \in k[V] \mid f = \frac{g}{h} , g \in k[V]  \right\} \cup  \{  0 \}
+\end{align}
+$$
+
+**Proof:** 
+$D_{f}$ is an ideal $V- dom(f)= V(D_{f})$, so $dom(f)$ is open and dense,  since $V$ is irreducible)
+
+$$
+dom(f) = V \iff V(D_{f}) = \varnothing
+$$
+By **[[Algebraic Geometry#Nullstellensatz|Nullstellensatz]]** $V(D_{f}) = \varnothing \iff 1 \in D_{f}$
+$$
+\iff  1_{f} \in k[V] \iff f \in k[V]
+$$
+
+
+2.(1,2,3,7,8,10,11,12(read,no write))
