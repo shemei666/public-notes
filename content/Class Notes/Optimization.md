@@ -23,9 +23,9 @@ $f_0: \mathbb{R}^n \to \mathbb{R}, \quad f_i: \mathbb{R}^n \to \mathbb{R}$
    Fitting a linear model $y = \beta_0 + \beta_1 x$ to a set of data points $(x_i, Y_i)$.
    - **Decision Space**: $(\beta_0, \beta_1) \in \mathbb{R}^2$ represents the parameters of the line.
    - **Objective Function**: Minimize the sum of squared errors:
-     $$
-     f(\beta_0, \beta_1) = \sum_{i=1}^m (Y_i - \beta_0 - \beta_1 x_i)^2
-     $$
+$$
+f(\beta_0, \beta_1) = \sum_{i=1}^m (Y_i - \beta_0 - \beta_1 x_i)^2
+$$
 
 2. **Linear Programming (LP)**:
    Optimizing a linear objective function subject to linear equality and inequality constraints.
@@ -116,8 +116,6 @@ _Conic hull_ of $S \subseteq \mathbb{R}^n$: smallest convex cone containing $S$.
 ![[IMG_20260112_161514 1.jpg]]
 
 ![[IMG_20260112_161522.jpg]]
-**Convex hull** of $S \subseteq \mathbb{R}^n$ smallest convex set in $\mathbb{R}^n$ containing $S$
-$conv(S) = \{ \theta_1 \vec{x}_1 + \dots + \theta_k \vec{x}_k \dots \}$
 
 **Def:** Proper cone $K \subseteq \mathbb{R}^{n}$ is a cone such that,
 
@@ -127,36 +125,29 @@ $conv(S) = \{ \theta_1 \vec{x}_1 + \dots + \theta_k \vec{x}_k \dots \}$
 
 We have a $\leq_{K}$ partial ordering on $\mathbb{R}^{n}$, by $\vec{x}\leq_{K} \vec{y}$ if $\vec{y} - \vec{x} \in K$
 If $\vec{x} \leq_{K} \vec{y}$
-
 1. $\vec{x} + \vec{z} \leq_{K} \vec{y} + \vec{z}$ for all $\vec{z} \in \mathbb{R}^{n}$
 2. $\alpha \vec{x} \leq_{K} \alpha \vec{y}$ for all $\alpha \geq 0$
+3. $\vec{x}_j \le_K \vec{y}_j \forall j \in \mathbb{N}$ and $\vec{x}_j \to \vec{x}, \vec{y}_j \to \vec{y}$ then $\vec{x} \le_K \vec{y}$ (proper cones $\to$ generalized inequalities involving vectors)
 
-Example:
+**Example**:
 (1) $K = [0, \infty)$ is a proper cone in $\mathbb{R}$ ($\le_K$ is same as $\le$)
 (2) $K = [0, \infty)^n$ is a proper cone in $\mathbb{R}^n$
 $\vec{x} \le_K \vec{y}$ if $x_i \le y_i \forall 1 \le i \le n$
 
-If $\vec{x} \le_K \vec{y}$, then:
-(i) $\vec{x} + \vec{z} \le_K \vec{y} + \vec{z}$ for all $\vec{z} \in \mathbb{R}^n$
-(ii) $\alpha \vec{x} \le_K \alpha \vec{y}, \forall \alpha \ge 0$
-(iii) $\vec{x}_j \le_K \vec{y}_j \forall j \in \mathbb{N}$ and $\vec{x}_j \to \vec{x}, \vec{y}_j \to \vec{y}$ then $\vec{x} \le_K \vec{y}$ (proper cones $\to$ generalized inequalities involving vectors)
-
 **Relevance to LP**
-$A \vec{x} \le \vec{b}$ "generalized inequalities"
-**Goal 2:** To make a computer understand structure of the decision space.
+The problem can be extended to $A \vec{x} \le_{K} \vec{b}$ "generalized inequalities"
 
-let S be a set in $\mathbb{R}^{r}$
-
+Let S be a set in $\mathbb{R}^{r}$
 1. **Convex hull** of S is the smallest convex set containing S
 2. **Affine hull** of S is the smallest affine set containing S
 3. **Convex hull** of S is the smallest convex set containing S
-4. **positive hull** of S is the smallest convex cone containing S
+4. **Positive hull** of S is the smallest convex cone containing S
 
 Let $C$ be a line-free closed convex set in $\mathbb{R}^{n}$. What is the smallest set S in $\mathbb{R}^{n}$ such that $C$ is the convex hull of S? $conv(S) = C$
 
 ## Some examples of convex sets
 
-1. Hyperplanes and half-spaces
+### Hyperplanes
    A hyperplane in $\mathbb{R}^{n}$ is a set of the form, $H_{\vec{a},b}= \{ \vec{x} \in \mathbb{R}^{n} \mid \vec{a}^{T}\vec{x} = b \}$
    > [!Riesz representation theorem:]-
    > Every linear function on $\mathbb{R}^{n}$ is of the form $\vec{x} \mapsto \langle \vec{a}, \vec{x} \rangle$ for some $\vec{a} \in \mathbb{R}^{n}$
@@ -170,12 +161,12 @@ $$
 $$
 
 $$ \rho \longleftrightarrow \ker \rho$$
-**Exercise:** Let $P_{1},P_{2}$ be linear functionals on $\mathbb{R}^{n}$ such that $\ker P_{1} = \ker P_{2}$. Prove that $P_{1} = \alpha P_{2}, \alpha \in \mathbb{R}$
+**Exercise:** Let $P_{1},P_{2}$ be linear functionals on $\mathbb{R}^{n}$ such that $\ker P_{1} = \ker P_{2}$. Prove that $P_{1} = \alpha P_{2}, \alpha \in \mathbb{R}\setminus \{ 0 \}$
 
 Geometrically, $H_{\vec{a},b}$ has normal vector $\vec{a}$, with offset $b$ from origin
 For $\alpha \in \mathbb{R}, H_{\alpha \vec{a} ,\alpha b} = H_{\vec{a},b}$ , So we assume $\lvert \vec{a} \rvert =1$
 
-## Half-spaces
+### Half-spaces
 
 A closed half space in $\mathbb{R}^{n}$ is a set of the form $H_{\vec{a},b}:= \{  \vec{x} \in \mathbb{R}^{n} \mid \vec{a}^{T}\vec{x} \leq b \}$
 We denote the typical lower and upper closed half-spaces as:
@@ -228,7 +219,7 @@ For $\epsilon > 0$, $\vec{a}^{T}\vec{x} > b$ (strictly outside $H_{\vec{a},b}^{-
 For $\epsilon < 0$, $\vec{a}^{T}\vec{x} < b$ (strictly inside $H_{\vec{a},b}^{-}$).
 Thus, any neighborhood of $\vec{x}_{0}$ contains points in $H_{\vec{a},b}^{-}$ and points in its complement.
 
-## Polyhedron
+### Polyhedron
 
 A polyhedron is a solution set of a finite number of linear equalities and inequalities.
 
