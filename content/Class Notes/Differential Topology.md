@@ -112,14 +112,116 @@ Conversely, if $\phi$ is not onto, pick $c_{1},\dots,c_{l} \in im(\phi)^{\perp }
 
 ---
 
-Back to $g=(g_{1},\dots,g_{l}):X\to \mathbb{R}^{l}$, we say that $g_{1},\dots,g_{l}$ are independent functions at $x$ if $dg_{x}:T_{x}X\to T_{g(x)}\mathbb{R}^{l}=\mathbb{R}^{l}$ is onto, i.e if $dg_{1_{x}},\dots,dg_{l_{x}}$ are linearly independent functions of $(T_{x}X)^{*}$.
+Back to $g=(g_{1},\dots,g_{l}):X\to \mathbb{R}^{l}$, we say that $g_{1},\dots,g_{l}$ are independent functions at $x$ if $dg_{x}:T_{x}X\to T_{g(x)}\mathbb{R}^{l}=\mathbb{R}^{l}$ is onto, i.e. if $dg_{1_{x}},\dots,dg_{l_{x}}$ are linearly independent functions of $(T_{x}X)^{*}$.
 
 **Proposition:** Let $g_{1},\dots,g_{l}:X\to \mathbb{R}$ be smooth functions. Pick a point in $\mathbb{R}$, say $0\in \mathbb{R}$ Set $Z:= \bigcap_{i=1}^{l} \{ g_{i}=0 \}$. If $Z$ is non-empty and $g_{i}$ are independent at each point of $Z$, then $Z$ is a manifold of dimension $\dim(X)-l$.
 
 **Proof:** Use preimage theorem for $X \xrightarrow{ g} \mathbb{R}^{l}$, $g=(g_{1},\dots,g_{l})$ then $0$ is a regular value for $g$ and $Z=g^{-1}(0)$.
 
 **Proposition:**
+
 1. Let $f:X\to Y$ be a smooth map with $y \in Y$ a regular value. Then $f^{-1}(y)$ is the common zero set of independent functions around $f^{-1}(y)$.
-2. Any submanifold $Z \subseteq X$ is locally the common zero set of $\codim_{X}(Z)$ independent functions.
+2. Any submanifold $Z \subseteq X$ is locally the common zero set of $\text{codim}_{X}(Z)$ independent functions.
 
 **Proof:**
+![[1769503249938.jpg]]
+
+1. We already saw this when proving Pre-Image Thm. Since the condition is local, it suffices to check in local coordinates (by Submersion Thm), where $f$ looks like a projection. Thus locally $f^{-1}(y)$ is given by the vanishing of some coordinate functions, which are independent.
+2. This follows immediately from the corollary to the key lemma (slice chart). Recall that locally $Z \subseteq X$ is given, in standard coordinates, as the vanishing of coordinate functions. And coordinate functions are always independent.
+
+**Proposition:** $f: X \to Y$ smooth, $y \in Y$ regular value of $f$, then for any $x \in Z:= f^{-1}(y)$, $T_{x}Z =$ kernel $df_{x}:T_{x}X \to T_{y}Y$
+
+**Proof:**
+![[IMG_20260127_142539.jpg]]
+The composite $f \circ i$ is a constant map:
+
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+Z \arrow[r, "i"] \arrow[dr, "const"'] & X \arrow[d, "f"] \\
+& Y
+\end{tikzcd}
+\end{document}
+```
+
+$\therefore$ By chain rule, $d(f \circ i)_x = 0$, i.e., $df_x \circ di_x = 0$.
+Since $di_x: T_x Z \to T_x X$ is an inclusion, we get $df_x(T_x Z) = 0$.
+Thus $T_x Z \subseteq \ker(df_x)$.
+
+Comparing dimensions, we see that equality holds:
+
+$$
+\dim(T_x Z) = \dim Z = \dim(X) - \dim(Y) \quad (\text{by Preimage Theorem})
+$$
+
+As $y$ is regular, $df_x$ is onto, so:
+
+$$
+\dim(\ker(df_x)) = \dim(X) - \dim(Y)
+$$
+
+$\therefore T_x Z = \ker(df_x)$.
+Q.E.D.
+
+![[IMG_20260127_143309.jpg]]
+
+**Example:** The tangent space of a hypersurface or level surface $f(x_{1},\dots,x_{n})-c=0$ (if $c$ is a regular value of $f$) is $(\nabla f)^{\perp}$ at any point.
+
+$$
+T_{p}\mathbb{R}^{n} \xrightarrow{\nabla f} T_{c}\mathbb{R} \quad f(p)=c
+$$
+
+Let $M(n) = n \times n$ matrices over $\mathbb{R} = \mathbb{R}^{n^{2}}$ Euclidean space.
+$\forall A \in M(n)$, $T_{A}(M(n))$ is also $\mathbb{R}^{n^{2}}$ and we identify with $M(n)$ in the same way.
+
+Consider the polynomial map
+
+$$
+\begin{align}
+M(n) \to M(n) \\
+A \mapsto AA^{t}
+\end{align}
+$$
+
+The iamge lies in the subspace $S(n)$ of all summetric metrices we also identify the tangent space at any point of $S(n)$ with $S(n) \subseteq M(n)$ again
+
+$$
+\begin{align}
+f : M(n) \to S(n) \\
+A \mapsto AA^{t}
+\end{align}
+$$
+
+Let us calculate $df_{A}:T_{A}(M(n)) = M(n) \to S(n) = T(S(n))$
+
+$$
+\begin{align}
+
+df_{A}(B) = \lim_{ s \to 0} \frac{1}{s} [f(A + sB) - f(A)] \\
+= \lim_{ s \to 0 }  \frac{1}{s} [(A+sB)(A + sB)^{T} - AA^{T}] \\
+= AB^{T} + BA^{T}
+\end{align}
+$$
+
+This is clearly not onto for some choices of $A$ (e.g $A=0$), for $A$ invertible this is onto: for any $C \in S(n)$, we use $AB^{t} = \frac{c}{2} = BA^{t}$. Then we get $B = \frac{1}{2} C(At)^{-1}$. Thus we can solve for $B$,
+
+Thus $f$ is a submersion over the dense open subset $GL(n)$ ( the set of all ivnertible matrices) in $M(n)$. ==It follows that the image $f$ contains an open subset of $S(n)$==.
+
+For any $D \in S(n)$, if $D$ is invertible, then $D$ is a regular value of $f$, either $f^{-1}D$ is empty or if $A \in f^{-1}(D)$, then $\det(A) \neq 0$.
+![[IMG_20260127_145606.jpg]]
+Thus $f^{-1}(D)$ is either empty or a manifold of $n^{2} - \frac{n(n+1)}{2} = \frac{n(n-1)}{2}$.
+
+Pick $D=I$ identity matrix. Then $f^{-1}I = O(n)$ the set of all orthogonal matrices.
+
+For any $P \in O(n)$, we get $T_{P}(O(n)) = \ker(df_{P})$.
+In particular, if $P = O(n)$, we get $T_{I}(O(n)) = \ker(B \mapsto B + B^{t}) = Sk(n)$
+
+**Exercise:**
+1. $T_{p}(O(n)) = Sk(n)P \subseteq M(n)$
+2. For $D \in S(n)$, if $D$ is non-singular and $f^{-1}D = \varnothing$  then $f^{-1}D$ is a left coset of the subgeroup $O(n) \subseteq GL(n)$
+3. The image of $GL(n)$ under $f$ is the set of all positive definite matrices in $S(n)$
+
+## Transversality
+
+
