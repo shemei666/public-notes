@@ -89,7 +89,7 @@ Yes, as long as you allow collection being infinite."
 ![[IMG_20260112_155516.jpg]]
 
 every convex function is a supremum of linear function
-Qh: Is the closure of a convex set also convex?
+Q: Is the closure of a convex set also convex?
 $t x_n \to t x \quad 1-t y_n \to 1-t y$
 
 **Convex hull** of $S \subseteq \mathbb{R}^n$: smallest convex set in $\mathbb{R}^n$ containing $S$.
