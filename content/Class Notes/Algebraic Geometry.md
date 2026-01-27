@@ -77,20 +77,80 @@ But $A = A'[a_n]$.
 $A$ is finite over $A'$ (since $a_n$ is integral over $A'$), and $A'$ is finite over $S$.
 $\implies A$ is finite over $S$.
 
-**Proof of Lemma:** 
+**Proof of Lemma:**
 
 ---
+
 Let $k$ be a field, If $V \subseteq \mathbb{A}^{n}_{k}$ is an algebraic set $V = V(I)$ and $I(V)$ is its ideal, then
+
 $$
 k[X_{1},\dots,X_{n}] / I(V) = k[V]
 $$
+
 is called the coordinate ring of $V$, A polynomial function $f: V\to k$ is a function given by $P \to F(P)$ where $F \in k[X_{1},\dots,X_{n}]$ is a poly
 
 So $k[V] =$ ring of polynomial function on $V$. Smallest ring of function contrary the coordinate function $X_{1},\dots,X_{n}$
 
 ---
+
 $X \subseteq \mathbb{A}^{n}$ is an algebraic set $X \subseteq V$, $\implies I(X) \supset I(V)$ and if $I \subset J$ then $V(J) \subseteq V = V(I)$
+
 $$
-\{  \text{Ideals I} \subset J \} \leftrightarrow \{ \text{Ideal of } k[V] \} 
+\{  \text{Ideals I} \subset J \} \leftrightarrow \{ \text{Ideal of } k[V] \}
 $$
 
+**Proposition:** LEt $V$ be an algerbaic subset of $\mathbb{A}^{n}$
+The following are equivalent
+
+1. $V$ is irreducible
+2. Any two non empy open subsets has nonempty intersection
+3. Any nonempty open set is dense
+   **Proof:**
+
+A polynomial map $V \subseteq \mathbb{ A}^{n}, W \subseteq \mathbb{A}^{m}$
+
+$$
+f: V \to W
+$$
+
+is a map given by $F_{1},\dots,F_{m}$ poly in $k[X_{1},..,X^{n}]$
+
+$$
+ p \to f(p) = (F_{1}(p),\dots,F_m(p))
+$$
+
+$f$ is said to be an isomorphism if $\exists g$ such that $f \circ g = g \circ f = Id$
+
+An irreducible algebraic set is called an Affine variety.
+**Example:**
+
+$$
+\begin{align}
+C: Y ^{2} = X^{3} \\
+X = t^{2} \\
+Y = t^{3} \\
+\mathbb{A}^{1} \to C \subseteq \mathbb{A}^{2}
+\end{align}
+$$
+
+**Theorem:** $V \subseteq \mathbb{A}^{n}, W \subseteq \mathbb{A}^{m}$
+
+1. A poly map $f: V\to W$ induces a ring homomorphism $f^{*}: k[W]\to k[V]$
+2. If $\varphi : k[W]\to k[V]$ is a ring hom, then $\varphi = f^{*}$ for some $f:V\to W$
+3. $f:V\to W$, $g:W \to U$
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+k[U] \arrow[r, "g^*"] \arrow[dr, "{(g \circ f)^*}"'] & k[W] \arrow[d, "f^*"] \\
+& k[V]
+\end{tikzcd}
+\end{document}
+```
+   Thus $(g \circ f)^* = f^* \circ g^*$.
+
+**Proof:** $f: V\to W$, $f^{*}: k[W]\to k[V]$, If $g \in k[W]$, we have
+$$
+f^{*}(g)(p) = g(f(p))
+$$
+$\phi :k[W] \to k[V]$ is a homomorphism 
