@@ -334,7 +334,7 @@ For non-empty closed convex sets on $\mathbb{R}^{n}$.
 
 **Theorem:** Each nonempty closed convex set in $\mathbb{R}^{n}$ is the intersection of its supporting half-spaces ( hence given by a collection of linear inequalities).
 
-**Theorem:** (**Extremal representation**)Each nonempty closed convex set $C \subseteq \mathbb{R}^n$ is of the form $C = C_{lf} \oplus V$, where $V$ is a linear subspace of $\mathbb{R}^n$ and $C_{lf}$ is a line-free closed convex set in a subspace complementary to $V$ (linear part + line-free part).
+**Theorem:** (**Extremal representation**) Each nonempty closed convex set $C \subseteq \mathbb{R}^n$ is of the form $C = C_{lf} \oplus V$, where $V$ is a linear subspace of $\mathbb{R}^n$ and $C_{lf}$ is a line-free closed convex set in a subspace complementary to $V$ (linear part + line-free part).
 
 ```tikz
 \begin{document}
