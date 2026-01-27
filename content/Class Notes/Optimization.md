@@ -254,7 +254,6 @@ $$
 
 **Relevance to LP**
 If the decision space is a polytope, existence of a (max) minimum of the objective function is guaranteed.
-$\min f_0(x)$ subject to ...
 
 **Def**: $S \subseteq \mathbb{R}^n$. $cl(S)$ closure, $int(S)$ interior, $bd(S)$ boundary.
 The sets $relint(S)$, $relbd(S)$ are the _relative interior_ and _relative boundary_, with respect to the _affine hull_ of $S$.
