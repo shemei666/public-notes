@@ -78,3 +78,19 @@ $A$ is finite over $A'$ (since $a_n$ is integral over $A'$), and $A'$ is finite 
 $\implies A$ is finite over $S$.
 
 **Proof of Lemma:** 
+
+---
+Let $k$ be a field, If $V \subseteq \mathbb{A}^{n}_{k}$ is an algebraic set $V = V(I)$ and $I(V)$ is its ideal, then
+$$
+k[X_{1},\dots,X_{n}] / I(V) = k[V]
+$$
+is called the coordinate ring of $V$, A polynomial function $f: V\to k$ is a function given by $P \to F(P)$ where $F \in k[X_{1},\dots,X_{n}]$ is a poly
+
+So $k[V] =$ ring of polynomial function on $V$. Smallest ring of function contrary the coordinate function $X_{1},\dots,X_{n}$
+
+---
+$X \subseteq \mathbb{A}^{n}$ is an algebraic set $X \subseteq V$, $\implies I(X) \supset I(V)$ and if $I \subset J$ then $V(J) \subseteq V = V(I)$
+$$
+\{  \text{Ideals I} \subset J \} \leftrightarrow \{ \text{Ideal of } k[V] \} 
+$$
+
