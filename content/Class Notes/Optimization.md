@@ -89,7 +89,7 @@ Yes, as long as you allow collection being infinite."
 ![[IMG_20260112_155516.jpg]]
 
 every convex function is a supremum of linear function
-Q: Is the closure of a convex set also convex?
+Qh: Is the closure of a convex set also convex?
 $t x_n \to t x \quad 1-t y_n \to 1-t y$
 
 **Convex hull** of $S \subseteq \mathbb{R}^n$: smallest convex set in $\mathbb{R}^n$ containing $S$.
@@ -334,7 +334,7 @@ For non-empty closed convex sets on $\mathbb{R}^{n}$.
 
 **Theorem:** Each nonempty closed convex set in $\mathbb{R}^{n}$ is the intersection of its supporting half-spaces ( hence given by a collection of linear inequalities).
 
-**Theorem:** (**Extremal representation**) Each nonempty closed convex set $C \subseteq \mathbb{R}^n$ is of the form $C = C_{lf} \oplus V$, where $V$ is a linear subspace of $\mathbb{R}^n$ and $C_{lf}$ is a line-free closed convex set in a subspace complementary to $V$ (linear part + line-free part).
+**Theorem:** (**Extremal representation**)Each nonempty closed convex set $C \subseteq \mathbb{R}^n$ is of the form $C = C_{lf} \oplus V$, where $V$ is a linear subspace of $\mathbb{R}^n$ and $C_{lf}$ is a line-free closed convex set in a subspace complementary to $V$ (linear part + line-free part).
 
 ```tikz
 \begin{document}
@@ -383,7 +383,7 @@ For non-empty closed convex sets on $\mathbb{R}^{n}$.
 
 and each nonempty line free closed convex set $C \subseteq \mathbb{R}^{n}$ is the convex hull of its extreme points and extreme rays.
 
-**Def:** $C$ nonempty closed convex set $\vec{v} \in C$ is said to be an extreme point for $C$ if $\frac{\vec{x} + \vec{y}}{2} = \vec{v}$ for $\vec{x},\vec{y} \in C$ then $\vec{x} = \vec{y} = \vec{v}$
+**Def:** $C$ nonempty closed convex set $\vec{v} \in C$ is said to be an **extreme point** for $C$ if $\frac{\vec{x} + \vec{y}}{2} = \vec{v}$ for $\vec{x},\vec{y} \in C$ then $\vec{x} = \vec{y} = \vec{v}$
 
 **Exercise:** Prove that $C \subseteq  \mathbb{R}^{n}$ _closed_ set with the properties whenever $\vec{x},\vec{y} \in C$ $\vec{x}+ \vec{y} /2 \in C$, is a convex set.
 
