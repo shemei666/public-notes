@@ -526,6 +526,9 @@ $$
 $$
 
 **Lemma:** Let $S$ be a sphere containing $K$ (non-empty closed convex set) in its interior then $P_{K}(S) = \partial K$ ($K$ is compact)
+**Corollary:** Let $K$ be a non-empty closed convex proper subset of $\mathbb{R}^{n}$. Then $P_{K}(\mathbb{R}^{n}\setminus K) = \partial K$
+
+**Exercise:** Prove that $\phi(t) = \lVert  \vec{x} - ((1-t)P_{K}(\vec{x})+t\vec{z}) \rVert$, $z \in K$, is a strictly increasing function on $[0,1]$
 
 ```tikz
 \begin{document}
@@ -580,29 +583,6 @@ $\vec{y_{n}}$ has a convergent subsequence. Let $\vec{y}$ be a limit point
 $$
 \lVert  \vec{v} - P(\vec{y}) \rVert = 0 \implies P(\vec{y} ) = \vec{v}
 $$
-
-**Corollary:** Let $K$ be a non-empty closed convex proper subset of $\mathbb{R}^{n}$. Then $P_{K}(\mathbb{R}^{n}\setminus K) = \partial K$
-
-**Proof of Corollary:**
-
-1. **$P_K(\mathbb{R}^n \setminus K) \subseteq \partial K$**:
-   For any $\vec{x} \notin K$, $P_K(\vec{x})$ must be on the boundary. If it were interior, we could approach $\vec{x}$ closer within $K$.
-2. **$\partial K \subseteq P_K(\mathbb{R}^n \setminus K)$**:
-   Let $\vec{y} \in \partial K$. Since $\vec{y}$ is on the boundary, there exists a sequence $\vec{z}_k \notin K$ such that $\vec{z}_k \to \vec{y}$.
-   Let $\vec{p}_k = P_K(\vec{z}_k)$. By the projection property: $\lVert \vec{z}_k - \vec{p}_k \rVert = d(\vec{z}_k, K) \leq \lVert \vec{z}_k - \vec{y} \rVert$.
-   As $\vec{z}_k \to \vec{y}$, the RHS goes to 0, so $\vec{p}_k \to \vec{y}$.
-   Define unit vectors $\vec{u}_k = \frac{\vec{z}_k - \vec{p}_k}{\lVert \vec{z}_k - \vec{p}_k \rVert}$. Since the unit sphere is compact, there exists a subsequence converging to some unit vector $\vec{u}$.
-   By the variational inequality for $\vec{p}_k$:
-   $$ \langle \vec{w} - \vec{p}\_k, \vec{z}\_k - \vec{p}\_k \rangle \leq 0 \quad \forall \vec{w} \in K $$
-   Dividing by the norm and taking the limit:
-   $$ \langle \vec{w} - \vec{y}, \vec{u} \rangle \leq 0 \quad \forall \vec{w} \in K $$
-   This shows $\vec{u}$ is an exterior normal vector at $\vec{y}$.
-   Now consider $\vec{x} = \vec{y} + \vec{u}$. Since $\vec{u} \neq 0$ and points outwards, $\vec{x} \notin K$.
-   Checking the projection condition for $\vec{y}$ from $\vec{x}$:
-   $$ \langle \vec{w} - \vec{y}, \vec{x} - \vec{y} \rangle = \langle \vec{w} - \vec{y}, \vec{u} \rangle \leq 0 $$
-   Thus $P_K(\vec{x}) = \vec{y}$. So $\vec{y}$ is in the image.
-
-**Exercise:** Prove that $\phi(t) = \lVert  \vec{x} - ((1-t)P_{K}(\vec{x})+t\vec{z}) \rVert$, $z \in K$, is a strictly increasing function on $[0,1]$
 
 ## Support properties of convex sets
 
