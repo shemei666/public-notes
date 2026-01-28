@@ -307,8 +307,10 @@ Similarly we define a property $P$ to be local on the source/domain
 3. .
 
 ## Homotopy & Stability
-We call a smooth function $f:X\to Y$ to be smoothly homotopic to a smooth function $g:X\to Y$. If $\exists$ a smooth map $F:X\times I \to Y$ such that 
+We call a smooth function $f:X\to Y$ to be smoothly homotopic to a smooth function $g:X\to Y$. If $\exists$ a smooth map $F:X\times \underbrace{ I }_{ \text{time domain} } \to Y$ such that 
 $$
 F_{|X\times \{ 0 \}} = f \quad F_{|X\times \{ 1 \}} = g
 $$
-We also write $F(x,t)$ as $f_{t}(x)$. Then $f_{0}(x)=f,f_{1}(x)=g$.
+We also write $F(x,t)$ as $f_{t}(x)$. Then $f_{0}(x)=f,f_{1}(x)=g$ and $f_{t}(x)$ denote intermediate functions. Thus as $t$ goes from $0$ to $1$, $f$ deforms to $g$.
+
+Fix $X,Y$. We write $f \sim g$ if such and $F$ exists. (refer **[[Algebraic Topology|AlgTop]]**)
