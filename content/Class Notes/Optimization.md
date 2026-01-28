@@ -489,63 +489,40 @@ $$
 **Proof:**
 
 $$
-\phi(t) = \lVert \vec{x} - P_{K}(\vec{x}) + t(P_{K}(\vec{x})-P_{K}(\vec{y})) \rVert ^{2}
+\phi(t) = \lVert  \vec{x} - (1-t)P_{K}(\vec{x})- tP_{K}(\vec{y}) \rVert ^{2}
 $$
 
-Consider the function $\phi:[0,1] \to \mathbb{R}_{\geq 0}$ defined along the segment connecting $P_K(\vec{x})$ and $P_K(\vec{y})$:
-
 $$
-\begin{align}
-\phi(t) &= \lVert \vec{x} - P_{K}(\vec{x}) + t(P_{K}(\vec{x})-P_{K}(\vec{y})) \rVert ^{2} \\
-&= \lVert \vec{x} - P_{K}(\vec{x}) \rVert^2 + 2t \langle \vec{x} - P_{K}(\vec{x}), P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle + t^2 \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert^2
-\end{align}
-$$
-
-The derivative with respect to $t$ is:
-
-$$
-\phi'(t) = 2 \langle \vec{x} - P_{K}(\vec{x}), P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle + 2t \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert^2
+\begin{gather}
+\phi:[0,1] \to \mathbb{R}_{\geq_{0}} \\
+\phi(t) = \lVert \vec{x} - P_{K}(\vec{x})+t(P_{K}(\vec{x})-P_{K}(\vec{y})) \rVert ^{2} \\
+= \lVert \vec{x} - P_{K}(\vec{x}) \rVert^2 + 2t \langle \vec{x} - P_{K}(\vec{x}), P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle + t^2 \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert^2 \\
+\phi'(t) = 2 \langle \vec{x} - P_{K}(\vec{x}), P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle + 2t \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert^2 \\
+\implies \phi'(0) \geq 0 \\
+2 \langle P_{K}(\vec{x}) -P_{K}(\vec{y}), \vec{x} - P_{K}(\vec{x}) \rangle \geq 0 \\
+\implies \langle \vec{x} - P_{K}(\vec{x}),P_{K}(\vec{y})-P_{K}(\vec{x}) \rangle \leq 0
+\end{gather}
 $$
 
-Since $P_K(\vec{x})$ minimizes the distance to $K$, $\phi(t)$ is minimized at $t=0$, so $\phi'(0) \geq 0$:
+A symmetric argument gives,
 
 $$
-\begin{align}
-2 \langle \vec{x} - P_{K}(\vec{x}), P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle &\geq 0 \\
-\implies \langle \vec{x} - P_{K}(\vec{x}), P_{K}(\vec{y}) - P_{K}(\vec{x}) \rangle &\leq 0
-\end{align}
+\begin{gather}
+\langle  \vec{y} - P_{K}(\vec{x}),P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle \leq 0 \\
+\langle P_{k}(\vec{x}) - \vec{y}, P_{K}(\vec{y}) - P_{K}(\vec{x}) \rangle \leq 0
+\end{gather}
 $$
 
-A symmetric argument for $\vec{y}$ gives:
+Adding them we get,
 
 $$
-\begin{align}
-\langle \vec{y} - P_{K}(\vec{y}), P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle \leq 0
-\end{align}
-$$
+\begin{gather}
+\langle  \vec{x} - \vec{y}, P_{K}(\vec{y})-P_{K}(\vec{x}) \rangle \leq \langle  P_{K}(\vec{x})-P_{K}(\vec{y}), P_{K}(\vec{y})-P_{K}(\vec{x}) \rangle \\
 
-Adding the two inequalities:
-
-$$
-\begin{align}
-\langle \vec{x} - P_K(\vec{x}), P_K(\vec{y}) - P_K(\vec{x}) \rangle + \langle \vec{y} - P_K(\vec{y}), P_K(\vec{x}) - P_K(\vec{y}) \rangle &\leq 0 \\
-\langle \vec{x} - P_K(\vec{x}) - (\vec{y} - P_K(\vec{y})), P_K(\vec{y}) - P_K(\vec{x}) \rangle &\leq 0 \\
-\langle (\vec{x} - \vec{y}) - (P_K(\vec{x}) - P_K(\vec{y})), -(P_K(\vec{x}) - P_K(\vec{y})) \rangle &\leq 0 \\
--\langle \vec{x} - \vec{y}, P_K(\vec{x}) - P_K(\vec{y}) \rangle + \lVert P_K(\vec{x}) - P_K(\vec{y}) \rVert^2 &\leq 0 \\
-\lVert P_K(\vec{x}) - P_K(\vec{y}) \rVert^2 &\leq \langle \vec{x} - \vec{y}, P_K(\vec{x}) - P_K(\vec{y}) \rangle
-\end{align}
-$$
-
-Using Cauchy-Schwarz inequality:
-
-$$
-\lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert ^{2} \leq \lVert \vec{x}-\vec{y} \rVert \cdot \lVert P_{K}(\vec{x})-P_{K}(\vec{y}) \rVert
-$$
-
-Assuming $P_K(\vec{x}) \neq P_K(\vec{y})$, we can divide by $\lVert P_{K}(\vec{x})- P_{K}(\vec{y}) \rVert$:
-
-$$
-\lVert P_{K}(\vec{x})- P_{K}(\vec{y}) \rVert \leq \lVert \vec{x}-\vec{y} \rVert
+\implies \langle  \vec{x} - \vec{y},P_{K}(\vec{x})-P_{K}(\vec{y}) \rangle\geq \lVert  P_{K}(\vec{x})-P_{K}(\vec{y}) \rVert ^{2} \\
+\lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert ^{2} \leq \lVert \vec{x}-\vec{y} \rVert  \lVert P_{K}(\vec{x})-P_{K}(\vec{y}) \rVert \\
+\implies \lVert  P_{K}(\vec{x})- P_{K}(\vec{y}) \rVert \text{ Given } P(x) \neq P(y)
+\end{gather}
 $$
 
 **Lemma:** Let $S$ be a sphere containing $K$ (non-empty closed convex set) in its interior then $P_{K}(S) = \partial K$ ($K$ is compact)
