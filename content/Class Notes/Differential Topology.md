@@ -1,3 +1,4 @@
+## Embeddings
 **Theorem:(Embedding Theorem)** For an injective immersion $f:X\to Y$, TFAE
 
 1. $f(X)$ is a submanifold of Y of dimension $\dim(X)$
@@ -7,7 +8,7 @@
    **Proof:**  
    $2 \implies 1, 3$ is obvious,
    $1 \implies 2$: $X \to f(X)$ is a bijective immersion of manifolds of same dimension, hence a local diffeomorphism, which is a diffeomorphism
-   $4 \implies 3$ Since $X\to Y'$ is locally proper, it is closed map, hence the same is true for the bijection $X\to f(X)$. Thus $X \to f(X)$ is a homeomorphism
+   $4 \implies 3$ Since $X\to Y'$ is locally proper, it is a closed map, hence the same is true for the bijection $X\to f(X)$. Thus $X \to f(X)$ is a homeomorphism
    $3\implies 2,4$ we need the following claim:
    **Claim:** Under the hypothesis of $3$ around any $y=f(x) ,\exists$ an open subset $Y_{1} \subseteq Y$ such that for $X_{1}=f^{-1}(Y_{1})$ we have a commutative diagram
 
@@ -28,18 +29,19 @@ Similarly we see that **Claim** $\implies 4$. #todo
 
 **Def:** A map of manifolds $f:X\to Y$ is called an embedding if it is an injective immersion satisfying above equivalent conditions,
 
-Thus $f:X\to Y$ embedding $\implies X \cong f(X)$ diffeo. and $f(X)$ is a locally closed subset of $Y$.
+Thus if $f:X\to Y$ is an embedding $\implies X \cong f(X)$ is a diffeomorphism and $f(X)$ is a locally closed subset of $Y$.
 
 **Def:** We call $Z \subseteq Y$ a locally closed set if $Z=$ intersection of a closed set and open set in $Y$.
 
 If $X$ is a submanifold of $Y$, then $X \hookrightarrow Y$ is an embedding. If $X$ is compact and $f:X\to Y$ is an injective immersion, then f is an embedding.
 
 **Corollary to Lemma:** Let $X \subseteq Y$ be a submanifold with $\dim X =k,\dim Y =l$ Then for any point $p \in X$, $\exists$ a nbd $Y_{1} \subseteq Y$ such that $X \cap Y_{1}$ is given by the vanishing of $l-k$ functions from $l$ coordinate functions around $p$.
-**Proof:** Use the bottom row of key lemma to define coordinate functions there $U$ is given by the $l-k$ coordinates functions for $W$
+**Proof:** Use the bottom row of Key Lemma to define coordinate functions there $U$ is given by the $l-k$ coordinates functions for $W$
 
 _suggested exercises:_ 3.9,3.10
 
-**Theorem:(Local Submersion Theorem)** Let $f:X\to Y$ be a submersion at $x \in X$ Then, local coordinates around $x$, $y=f(x)$, $f$ is a canonical submersion.
+## Local Submersion Theorem
+**Theorem:** Let $f:X\to Y$ be a submersion at $x \in X$ Then, in local coordinates around $x$, $y=f(x)$, $f$ is a canonical submersion.
 
 **Proof:** Pick local coordinates around $x,y$ in $X,Y$
 
@@ -64,7 +66,7 @@ $$
 
 Define a smooth function $U \xrightarrow{G} V_{1} \times \mathbb{R}^{k-l}$ by $G(x_{1},\dots,x_{k}) := (\underbrace{g_{1},\dots,g_l},x_{l+1},\dots,x_{k})$
 
-Clearly $G$ is smooth and $dG_{0} = \begin{bmatrix}I & 0 \\ 0  & I\end{bmatrix}$ and thus, by Inverse function theorem, $G$ is a local diffeo. around $0 \in U_{1}$, By shrinking we get open nbd $U \subseteq U_{1}$ of 0 such that $G(U)$ is of the form $V\times W$ for open sets $V \subseteq V_{1}$, $W \subseteq \mathbb{R}^{k-l}$ Now we have coordinate nbd.
+Clearly $G$ is smooth and $dG_{0} = \begin{bmatrix}I & 0 \\ 0  & I\end{bmatrix}$ and thus, by Inverse function theorem, $G$ is a local diffeomorphism around $0 \in U_{1}$. By shrinking we get open neighborhood $U \subseteq U_{1}$ of 0 such that $G(U)$ is of the form $V\times W$ for open sets $V \subseteq V_{1}$, $W \subseteq \mathbb{R}^{k-l}$ Now we have coordinate neighborhood.
 
 ```tikz
 \usepackage{tikz-cd}
@@ -80,12 +82,13 @@ V \times W \ar[u,"\phi \circ G^{-1}"] \ar[r,"\text{std proj.}"] & V \ar[u,"\psi"
 
 Note that the composite $U \xrightarrow{G} V \times W \xrightarrow{\text{std proj}} V$ is $g$
 
-**Corollary:** If $f:X\to Y$ is a submersion at $x$, then it is also one in an open nbd of $x$, moreover $f(X)$ contains an open nbd of $f(x)$ in $Y$. In particular if $f$ is a submersion everywhere then $f$ is an open map.
+**Corollary:** If $f:X\to Y$ is a submersion at $x$, then it is also one in an open neighborhood of $x$, moreover $f(X)$ contains an open neighborhood of $f(x)$ in $Y$. In particular if $f$ is a submersion everywhere then $f$ is an open map.
 **Proof:** Follows from the above diagram.
 
 **Corollary:** If $f:X\to Y$ is a submersion, then with $y =f(x)$, the set $f^{-1}(y)\subseteq X$ is a $k-l$ manifold around $x$, i.e $\exists$ an open nbd around $x$ in X over which it is given by vanishing of $l$ coordinate functions.
 **Proof:** As before, in local coordinates, the coordinates functions on $V$ pull back to give $l$ coordinate functions on $V\times W$ whose vanishing gives $0 \times W \subseteq V \times W$
 
+## Regular Values and Pre-Image Theorem
 **Def:** Let $f:X \to  Y$ be a smooth map of manifolds, then $y \in Y$ is a regular value of $f$ if $\forall x \in f^{-1}(y), df_{x}$ onto. If $y \in Y$ is not a regular value, we call it a critical value of $f$.
 
 **Theorem:(Pre-Image Theorem)** If $y \in Y$ is a regular value of $f$, then $f^{-1}(y)$ is either empty or a manifold of dimension $\dim(X)-\dim(Y)$.
@@ -94,7 +97,7 @@ If $y$ is a critical value, $f^{-1}(y)$ may or may not be a manifold.
 
 **Examples:**
 
-1. **Sphere in $\mathbb{R}^{n+1}$** $f:\mathbb{R}^{n+1}\to \mathbb{R}$ smooth function, given by $x \mapsto \lvert x \rvert^{2}$, then $df$ at $p=(a_{1},\dots,a_{n+1})$ is given by $T_{p}\mathbb{R}^{n+1} = \mathbb{R}^{n+1} \xrightarrow{[2a_{1},\dots,2a_{n+1}]} \mathbb{R}$ which is submersion iff it is non zero. i.e if it is not $a_{1}=\dots=a_{n+1} =0$, Thus $c \in \mathbb{R}$ is regular iff $c\neq 0$. Since $c<0,f^{-1}(c) = \varnothing, c>0, f^{-1}(c)$ is a sphere.
+1. **Sphere in $\mathbb{R}^{n+1}$** $f:\mathbb{R}^{n+1}\to \mathbb{R}$ smooth function, given by $x \mapsto \lvert x \rvert^{2}$, then $df$ at $p=(a_{1},\dots,a_{n+1})$ is given by $T_{p}\mathbb{R}^{n+1} = \mathbb{R}^{n+1} \xrightarrow{[2a_{1},\dots,2a_{n+1}]} \mathbb{R}$ which is a submersion iff it is non zero. i.e if it is not $a_{1}=\dots=a_{n+1} =0$, Thus $c \in \mathbb{R}$ is regular iff $c\neq 0$. Since $c<0,f^{-1}(c) = \varnothing, c>0, f^{-1}(c)$ is a sphere.
 2. More generally, for any smooth function $f:U\to \mathbb{R}$, $U \subseteq  \mathbb{R}^{n}$ $df$ determines whether $f$ is a submersion at $p \in U$, namely iff $df_{p} \neq 0$.
 3. $f:\mathbb{R}^{2}\to \mathbb{R}$ $f(x,y)= x^{2}-y^{2}$, $df = (2x,-2y)$. So it fails to be a submersion at $p=(0,0)$.
 4. Bad examples: $f = (x^{2}+y^{2}-1)^{2}$, On $S^{1}$, $df = 0$, Here $0$ is a critical value for $f$ but $f^{-1}(0)$ is $S^{1}$ which is a manifold.
@@ -116,7 +119,7 @@ Back to $g=(g_{1},\dots,g_{l}):X\to \mathbb{R}^{l}$, we say that $g_{1},\dots,g_
 
 **Proposition:** Let $g_{1},\dots,g_{l}:X\to \mathbb{R}$ be smooth functions. Pick a point in $\mathbb{R}$, say $0\in \mathbb{R}$ Set $Z:= \bigcap_{i=1}^{l} \{ g_{i}=0 \}$. If $Z$ is non-empty and $g_{i}$ are independent at each point of $Z$, then $Z$ is a manifold of dimension $\dim(X)-l$.
 
-**Proof:** Use preimage theorem for $X \xrightarrow{ g} \mathbb{R}^{l}$, $g=(g_{1},\dots,g_{l})$ then $0$ is a regular value for $g$ and $Z=g^{-1}(0)$.
+**Proof:** Use [[#Regular Values and Pre-Image Theorem|preimage theorem]] for $X \xrightarrow{ g} \mathbb{R}^{l}$, $g=(g_{1},\dots,g_{l})$ then $0$ is a regular value for $g$ and $Z=g^{-1}(0)$.
 
 **Proposition:**
 
@@ -126,9 +129,10 @@ Back to $g=(g_{1},\dots,g_{l}):X\to \mathbb{R}^{l}$, we say that $g_{1},\dots,g_
 **Proof:**
 ![[1769503249938.jpg]]
 
-1. We already saw this when proving Pre-Image Thm. Since the condition is local, it suffices to check in local coordinates (by Submersion Thm), where $f$ looks like a projection. Thus locally $f^{-1}(y)$ is given by the vanishing of some coordinate functions, which are independent.
+1. We already saw this when proving [[#Regular Values and Pre-Image Theorem|Pre-Image Thm]]. Since the condition is local, it suffices to check in local coordinates (by [[#Local Submersion Theorem|Submersion Thm]]), where $f$ looks like a projection. Thus locally $f^{-1}(y)$ is given by the vanishing of some coordinate functions, which are independent.
 2. This follows immediately from the corollary to the key lemma (slice chart). Recall that locally $Z \subseteq X$ is given, in standard coordinates, as the vanishing of coordinate functions. And coordinate functions are always independent.
 
+## Tangent Spaces of Level Sets
 **Proposition:** $f: X \to Y$ smooth, $y \in Y$ regular value of $f$, then for any $x \in Z:= f^{-1}(y)$, $T_{x}Z =$ kernel $df_{x}:T_{x}X \to T_{y}Y$
 
 **Proof:**
@@ -184,7 +188,7 @@ A \mapsto AA^{t}
 \end{align}
 $$
 
-The iamge lies in the subspace $S(n)$ of all summetric metrices we also identify the tangent space at any point of $S(n)$ with $S(n) \subseteq M(n)$ again
+The image lies in the subspace $S(n)$ of all symmetric matrices. We also identify the tangent space at any point of $S(n)$ with $S(n) \subseteq M(n)$ again
 
 $$
 \begin{align}
@@ -206,7 +210,7 @@ $$
 
 This is clearly not onto for some choices of $A$ (e.g $A=0$), for $A$ invertible this is onto: for any $C \in S(n)$, we use $AB^{t} = \frac{c}{2} = BA^{t}$. Then we get $B = \frac{1}{2} C(At)^{-1}$. Thus we can solve for $B$,
 
-Thus $f$ is a submersion over the dense open subset $GL(n)$ ( the set of all ivnertible matrices) in $M(n)$. ==It follows that the image $f$ contains an open subset of $S(n)$==.
+Thus $f$ is a submersion over the dense open subset $GL(n)$ ( the set of all invertible matrices) in $M(n)$. ==It follows that the image $f$ contains an open subset of $S(n)$==.
 
 For any $D \in S(n)$, if $D$ is invertible, then $D$ is a regular value of $f$, either $f^{-1}D$ is empty or if $A \in f^{-1}(D)$, then $\det(A) \neq 0$.
 ![[IMG_20260127_145606.jpg]]
@@ -220,19 +224,19 @@ In particular, if $P = O(n)$, we get $T_{I}(O(n)) = \ker(B \mapsto B + B^{t}) = 
 **Exercise:**
 
 1. $T_{p}(O(n)) = Sk(n)P \subseteq M(n)$
-2. For $D \in S(n)$, if $D$ is non-singular and $f^{-1}D = \varnothing$ then $f^{-1}D$ is a left coset of the subgroup $O(n) \subseteq GL(n)$
+2. For $D \in S(n)$, if $D$ is non-singular and $f^{-1}(D) = \varnothing$ then $f^{-1}(D)$ is a left coset of the subgroup $O(n) \subseteq GL(n)$
 3. The image of $GL(n)$ under $f$ is the set of all positive definite matrices in $S(n)$
 
 ## Transversality
 
-**Preimage theorem:** Given $f:X\to Y$ sufficient condition for $f^{-1}(y)$ to be a manifold is that $y$ be regular $\{ y \}=0 \dim$ manifold.
+**Preimage theorem:** Given $f:X\to Y$ sufficient condition for $f^{-1}(y)$ to be a manifold is that $y$ be regular $\{ y \}=0 \dim$ manifold. (See [[#Regular Values and Pre-Image Theorem|Pre-Image Theorem]])
 
 **Q:** Is there a similar condition for $Z \subseteq Y$ submanifold i.e. when is $f^{-1}Z$ a manifold.
 
 Fix $y \in Z$ and pick $x \in f^{-1}(y)$ assumed nonempty, since $Z$ is locally given by vanishing of $\text{codim}(Z)=l$ independent functions near y, we may replace $Y$ by open set $Y_{1}$ to get,
 
 $$
-X_{1} = f^{-1}(Y_{1}) \xrightarrow{f}  Y_{1} \xrightarrow{ g}  \mathbb{R}^{l} \quad g =\underbrace{   (g_{1},\dots,g_{l}) }_{\text{ind. fns going to 0}}
+X_{1} = f^{-1}(Y_{1}) \xrightarrow{f}  Y_{1} \xrightarrow{ g}  \mathbb{R}^{l} \quad g =\underbrace{   (g_{1},\dots,g_{l}) }_{\text{ind. funcs going to 0}}
 $$
 
 where $Z \cap Y_{1} = g^{-1}(0)$
@@ -241,7 +245,7 @@ $$
 T_{x}X \xrightarrow{df_{x}}  T_{y}Y \xtwoheadrightarrow{dg_{y}} T_{0} \mathbb{R}^{l} = \mathbb{R}^{l}
 $$
 
-It follows that $f^{-1} (Z \cap Y_{1} = Z_{1})  =f^{-1} g^{-1}(0) = (gf)^{-1} (0)$. Thus a sufficient criterion fo r$f^{-1} Z$ to be a manifold is $0$ being a regular value for $gf$, $d(gf)_{x}$ is onto forall $x \in f^{-1} Z_{1}$
+It follows that $f^{-1} (Z \cap Y_{1} = Z_{1})  =f^{-1} g^{-1}(0) = (gf)^{-1} (0)$. Thus a sufficient criterion for $f^{-1} Z$ to be a manifold is $0$ being a regular value for $gf$, $d(gf)_{x}$ is onto forall $x \in f^{-1} Z_{1}$
 
 **Linear algebra fact:** $U \xrightarrow{\alpha} V \xtwoheadrightarrow{\beta} W$ linear map then $\beta \circ \alpha$ is onto $\iff im(\alpha) + \ker(\beta) = V$
 
@@ -259,12 +263,13 @@ $$
 **Notation**: $f \pitchfork Z$, when $Z$ is a point $\{ y \}$ then we have $f \pitchfork \{ y \}$, iff $y$ is regular value.
 
 **Examples:**
-1. 
+
+1.  
 $$
 \begin{align}
 Y = \mathbb{R}^{2}, Z = \text{X-axis in } \mathbb{R}^{2} \\
 f:\mathbb{R} \to \mathbb{R}^{2} \quad t \mapsto (at,bt) \\
-f^{-1} Z = \{  0 \} 
+f^{-1} Z = \{  0 \}
 \end{align}
 $$
 Note that $t \mapsto (at^{3},bt^{3})$, has the same image, but is not transversal to $Z$. (In this case $im(df_{0})$ is trivial)
@@ -272,30 +277,31 @@ Note that $t \mapsto (at^{3},bt^{3})$, has the same image, but is not transversa
 $$
 \begin{align}
 g:\mathbb{R} \to \mathbb{R}^{2}  & \quad t \mapsto (t,t^{2}) \\
-
 \end{align}
 $$
 is not transversal since $dg_{0}=\mathbb{R}e_{1}$
 
 ---
-[add image here]
+
+![[IMG_20260128_150228.jpg]]
 
 
-
-
-We say that two submanifolds $X,Z \subseteq Z$ intersect transversally if $i :X \hookrightarrow Y$ is transversal to $Z$, or simply $\forall p \in X \cap Z$ we have $T_{p}X + T_{p}Z = T_{p}Y$ (or $X \cap Z = \varnothing$). We say $X \pitchfork_{Y} Z$.
+We say that two submanifolds $X,Z \subseteq Y$ intersect transversally if $i :X \hookrightarrow Y$ is transversal to $Z$, or simply $\forall p \in X \cap Z$ we have $T_{p}X + T_{p}Z = T_{p}Y$ (or $X \cap Z = \varnothing$). We say $X \pitchfork_{Y} Z$.
 **Theorem:** If $X \pitchfork_{Y} Z$ and $X \cap Z \neq \varnothing$, then $X \cap Z$ is a submanifold of $Y$ of codimension $\text{codim}_{Y}(X) + \text{codim}_{Y}(Z)$
 
 **Proof:** Follows from previous theorem we have
 $$
+
 \text{codim}_{Y}(Z) = \text{codim}_{X}(Z \cap X) = \text{codim}_{Y}(Z \cap X) - \text{codim}_{Y}(X) \quad \blacksquare
+
 $$
 
 ---
-Thus if $X,Z$ intersect transversally in $Y$ and $X,Z$ are localy given by vanishing of $m,n$ functions respectively, then $X \cap  Z$ is locally given by vanishing of $m+n$ functions,
+Thus if $X,Z$ intersect transversally in $Y$ and $X,Z$ are locally given by vanishing of $m,n$ functions respectively, then $X \cap  Z$ is locally given by vanishing of $m+n$ functions,
 
 **Example:** Any 2 lines intersect transversally unless they are the same, Any 2 lines in $\mathbb{R}^{3}$ intersect transversally iff the intersection is empty ,any 2 planes in $\mathbb{R}^{3}$ intersect transversally unless they are the same.
 
+## Local Properties
 **Def:** We say that a property $P$ of smooth maps is local on the base/codomain if for any smooth map $f:X\to Y$ the following are equivalent:
 1. $f$ satisfies $P$
 2. $\forall$ open $Y_{1} \subseteq Y, f:X_{1}= f^{-1}Y_{1}\to Y_{1}$ satisfies $P$
@@ -303,15 +309,29 @@ Thus if $X,Z$ intersect transversally in $Y$ and $X,Z$ are localy given by vanis
 ---
 Similarly we define a property $P$ to be local on the source/domain
 1. $f$ satisfies $P$
-2. .
-3. .
-
+2. $\forall$ open $U \subseteq X, f|_U:U \to Y$ satisfies $P$
+3. $\exists$ an open cover $\{ U_{\alpha} \}$ of $X$ such that $f|_{U_{\alpha}} : U_{\alpha} \to Y$ satisfies $P$.
+**Examples:**
+- $P=$ immersion: local on source & base
+- $P=$ submersion: local on source & base
+- $P=$ diffeomorphism: local **only** on base
+- $P=$ local diffeomorphism: local on base and source
+- $P= f \pitchfork Z$ for a given $Z \subseteq Y$: local on base & source
+- $P=$ embedding: local **only** on the base
+- $P=$ one-one / onto / bijection: local **only** on the base
+- $P=$ proper?
 ## Homotopy & Stability
-We call a smooth function $f:X\to Y$ to be smoothly homotopic to a smooth function $g:X\to Y$. If $\exists$ a smooth map $F:X\times \underbrace{ I }_{ \text{time domain} } \to Y$ such that 
+We say a smooth function $f:X\to Y$ is smoothly homotopic to a smooth function $g:X\to Y$ if $\exists$ a smooth map $F:X\times \underbrace{ I }_{ \text{time domain} } \to Y$ such that
 $$
-F_{|X\times \{ 0 \}} = f \quad F_{|X\times \{ 1 \}} = g
+
+F|_{X\times \{ 0 \}} = f \quad F|_{X\times \{ 1 \}} = g
+
 $$
 We also write $F(x,t)$ as $f_{t}(x)$. Then $f_{0}(x)=f,f_{1}(x)=g$ and $f_{t}(x)$ denote intermediate functions. Thus as $t$ goes from $0$ to $1$, $f$ deforms to $g$.
 
-Fix $X,Y$. We write $f \sim g$ if such and $F$ exists. (refer **[[Algebraic Topology|AlgTop]]**)
-[add image on homotopy composition]
+Fix $X,Y$. We write $f \sim g$ if such an $F$ exists. (refer **[[Algebraic Topology|AlgTop]]**)
+(We also write $f \overset{F}{\sim} g$ sometimes).
+
+1. $f \sim f$: Use $f_{t} \equiv f, \forall t$. ($X \times I \to Y, (x,t) \mapsto f(x)$)
+2. $f \sim g \implies g \sim f$: Use $G(x,t) = F(x, 1-t)$ for going from $g$ to $f$.
+3. $f \sim g \text{ \& } g \sim h \implies f \sim h$: 
