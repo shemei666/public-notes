@@ -218,10 +218,64 @@ For any $P \in O(n)$, we get $T_{P}(O(n)) = \ker(df_{P})$.
 In particular, if $P = O(n)$, we get $T_{I}(O(n)) = \ker(B \mapsto B + B^{t}) = Sk(n)$
 
 **Exercise:**
+
 1. $T_{p}(O(n)) = Sk(n)P \subseteq M(n)$
-2. For $D \in S(n)$, if $D$ is non-singular and $f^{-1}D = \varnothing$  then $f^{-1}D$ is a left coset of the subgeroup $O(n) \subseteq GL(n)$
+2. For $D \in S(n)$, if $D$ is non-singular and $f^{-1}D = \varnothing$ then $f^{-1}D$ is a left coset of the subgroup $O(n) \subseteq GL(n)$
 3. The image of $GL(n)$ under $f$ is the set of all positive definite matrices in $S(n)$
 
 ## Transversality
 
+**Preimage theorem:** Given $f:X\to Y$ sufficient condition for $f^{-1}(y)$ to be a manifold is that $y$ be regular $\{ y \}=0 \dim$ manifold.
+
+**Q:** Is there a similar condition for $Z \subseteq Y$ submanifold i.e. when is $f^{-1}Z$ a manifold.
+
+Fix $y \in Z$ and pick $x \in f^{-1}(y)$ assumed nonempty, since $Z$ is locally given by vanishing of $\text{codim}(Z)=l$ independent functions near y, we may replace $Y$ by open set $Y_{1}$ to get,
+
+$$
+X_{1} = f^{-1}(Y_{1}) \xrightarrow{f}  Y_{1} \xrightarrow{ g}  \mathbb{R}^{l} \quad g =\underbrace{   (g_{1},\dots,g_{l}) }_{\text{ind. fns going to 0}}
+$$
+
+where $Z \cap Y_{1} = g^{-1}(0)$
+
+$$
+T_{x}X \xrightarrow{df_{x}}  T_{y}Y \xtwoheadrightarrow{dg_{y}} T_{0} \mathbb{R}^{l} = \mathbb{R}^{l}
+$$
+
+It follows that $f^{-1} (Z \cap Y_{1} = Z_{1})  =f^{-1} g^{-1}(0) = (gf)^{-1} (0)$. Thus a sufficient criterion fo r$f^{-1} Z$ to be a manifold is $0$ being a regular value for $gf$, $d(gf)_{x}$ is onto forall $x \in f^{-1} Z_{1}$
+
+**Linear algebra fact:** $U \xrightarrow{\alpha} V \xtwoheadrightarrow{\beta} W$ linear map then $\beta \circ \alpha$ is onto $\iff im(\alpha) + \ker(\beta) = V$
+
+Thus we need $im(df_{x}) + \ker(dg_{y}) = T_{y}Y$ , Since $ker(dg_{y}) = T_{y}Z$, we get
+
+$$
+im(df_{x}) + T_{y}Z = T_{y}Y
+$$
+
+**Def:** Let $f:X\to Y$ be a smooth map and $Z \subseteq Y$ a submanifold, We say that $f$ is transversal to $Z$ if $f^{-1}Z$ is empty or $\forall x \in f^{-1}Z$, the condition $im(df_{x})+T_{y}Y$ holds.
+
+**Theorem:** If $f:X\to Y$ is transversal to a submanifold $Z \subseteq Y$ then $f^{-1}Z$ is empty or a submanifold in $X$ of $\text{codim}_{Y}(Z)$.
+
+**Proof:** Proved above.
+**Notation**: $f \pitchfork Z$, when $Z$ is a point $\{ y \}$ then we have $f \pitchfork \{ y \}$, iff $y$ is regular value.
+
+**Examples:**
+1. 
+$$
+\begin{align}
+Y = \mathbb{R}^{2}, Z = \text{X-axis in } \mathbb{R}^{2} \\
+f:\mathbb{R} \to \mathbb{R}^{2} \quad t \mapsto (at,bt) \\
+f^{-1} Z = \{  0 \} 
+\end{align}
+$$
+Note that $t \mapsto (at^{3},bt^{3})$, has the same image, but is not transversal to $Z$. (In this case $im(df_{0})$ is trivial)
+2.  
+$$
+\begin{align}
+g:\mathbb{R} \to \mathbb{R}^{2}  & \quad t \mapsto (t,t^{2}) \\
+
+\end{align}
+$$
+is not transversal since $dg_{0}=\mathbb{R}e_{1}$
+
+---
 
