@@ -23,9 +23,9 @@ $f_0: \mathbb{R}^n \to \mathbb{R}, \quad f_i: \mathbb{R}^n \to \mathbb{R}$
    Fitting a linear model $y = \beta_0 + \beta_1 x$ to a set of data points $(x_i, Y_i)$.
    - **Decision Space**: $(\beta_0, \beta_1) \in \mathbb{R}^2$ represents the parameters of the line.
    - **Objective Function**: Minimize the sum of squared errors:
-$$
-f(\beta_0, \beta_1) = \sum_{i=1}^m (Y_i - \beta_0 - \beta_1 x_i)^2
-$$
+     $$
+     f(\beta_0, \beta_1) = \sum_{i=1}^m (Y_i - \beta_0 - \beta_1 x_i)^2
+     $$
 
 2. **Linear Programming (LP)**:
    Optimizing a linear objective function subject to linear equality and inequality constraints.
@@ -125,6 +125,7 @@ _Conic hull_ of $S \subseteq \mathbb{R}^n$: smallest convex cone containing $S$.
 
 We have a $\leq_{K}$ partial ordering on $\mathbb{R}^{n}$, by $\vec{x}\leq_{K} \vec{y}$ if $\vec{y} - \vec{x} \in K$
 If $\vec{x} \leq_{K} \vec{y}$
+
 1. $\vec{x} + \vec{z} \leq_{K} \vec{y} + \vec{z}$ for all $\vec{z} \in \mathbb{R}^{n}$
 2. $\alpha \vec{x} \leq_{K} \alpha \vec{y}$ for all $\alpha \geq 0$
 3. $\vec{x}_j \le_K \vec{y}_j \forall j \in \mathbb{N}$ and $\vec{x}_j \to \vec{x}, \vec{y}_j \to \vec{y}$ then $\vec{x} \le_K \vec{y}$ (proper cones $\to$ generalized inequalities involving vectors)
@@ -138,6 +139,7 @@ $\vec{x} \le_K \vec{y}$ if $x_i \le y_i \forall 1 \le i \le n$
 The problem can be extended to $A \vec{x} \le_{K} \vec{b}$ "generalized inequalities"
 
 Let S be a set in $\mathbb{R}^{r}$
+
 1. **Convex hull** of S is the smallest convex set containing S
 2. **Affine hull** of S is the smallest affine set containing S
 3. **Convex hull** of S is the smallest convex set containing S
@@ -148,13 +150,15 @@ Let $C$ be a line-free closed convex set in $\mathbb{R}^{n}$. What is the smalle
 ## Some examples of convex sets
 
 ### Hyperplanes
-   A hyperplane in $\mathbb{R}^{n}$ is a set of the form, $H_{\vec{a},b}= \{ \vec{x} \in \mathbb{R}^{n} \mid \vec{a}^{T}\vec{x} = b \}$
-   > [!Riesz representation theorem:]-
-   > Every linear function on $\mathbb{R}^{n}$ is of the form $\vec{x} \mapsto \langle \vec{a}, \vec{x} \rangle$ for some $\vec{a} \in \mathbb{R}^{n}$
-   > **Proof:** Let $f: \mathbb{R}^n \to \mathbb{R}$ be a linear function. Let $\{\vec{e}_1, \dots, \vec{e}_n\}$ be the standard basis for $\mathbb{R}^n$. Any $\vec{x} \in \mathbb{R}^n$ can be written as $\vec{x} = \sum_{i=1}^n x_i \vec{e}_i$. By linearity:
-   > $$f(\vec{x}) = f\left(\sum_{i=1}^n x_i \vec{e}_i\right) = \sum_{i=1}^n x_i f(\vec{e}_i)$$
-   > Let $a_i = f(\vec{e}_i)$ and $\vec{a} = (a_1, \dots, a_n)^T$. Then:
-   > $$f(\vec{x}) = \sum_{i=1}^n x_i a_i = \langle \vec{a}, \vec{x} \rangle$$
+
+A hyperplane in $\mathbb{R}^{n}$ is a set of the form, $H_{\vec{a},b}= \{ \vec{x} \in \mathbb{R}^{n} \mid \vec{a}^{T}\vec{x} = b \}$
+
+> [!Riesz representation theorem:]-
+> Every linear function on $\mathbb{R}^{n}$ is of the form $\vec{x} \mapsto \langle \vec{a}, \vec{x} \rangle$ for some $\vec{a} \in \mathbb{R}^{n}$
+> **Proof:** Let $f: \mathbb{R}^n \to \mathbb{R}$ be a linear function. Let $\{\vec{e}_1, \dots, \vec{e}_n\}$ be the standard basis for $\mathbb{R}^n$. Any $\vec{x} \in \mathbb{R}^n$ can be written as $\vec{x} = \sum_{i=1}^n x_i \vec{e}_i$. By linearity:
+> $$f(\vec{x}) = f\left(\sum_{i=1}^n x_i \vec{e}_i\right) = \sum_{i=1}^n x_i f(\vec{e}_i)$$
+> Let $a_i = f(\vec{e}_i)$ and $\vec{a} = (a_1, \dots, a_n)^T$. Then:
+> $$f(\vec{x}) = \sum_{i=1}^n x_i a_i = \langle \vec{a}, \vec{x} \rangle$$
 
 $$
 \text{non-zero lienar functionals } \longleftrightarrow  \text{$(n-1)$-dimensional subspace of $\mathbb{R}^{n}$}
@@ -387,7 +391,6 @@ and each nonempty line free closed convex set $C \subseteq \mathbb{R}^{n}$ is th
 
 **Exercise:** Prove that $C \subseteq  \mathbb{R}^{n}$ _closed_ set with the properties whenever $\vec{x},\vec{y} \in C$ $\vec{x}+ \vec{y} /2 \in C$, is a convex set.
 
-
 **Corollary:(Minkowski's Theorem)** Each nonempty compact convex set $K\subseteq \mathbb{R}^{n}$ is the convex hull of its extreme points.
 
 **Lemma:** $K$ nonempty closed convex set, for each $\vec{x} \in \mathbb{R}^{n}$, there is a unique point $P_{K}(\vec{x})$ ($P_{K}:\mathbb{R}^{n}\to K$) satisfying
@@ -402,7 +405,22 @@ $$
 For uniqueness if we have 2 distinct points $\vec{y}_{1},\vec{y}_{2} \in K$ with same distance $d = d(\vec{x},K)$ from $\vec{x}$,
 
 $$
- \frac{\vec{y_{1}}  + \vec{y_{2}}}{2} - \vec{x}+ \vec{y_{1}} - \frac{\vec{y_{1}}  + \vec{y_{2}}}{2}
+\begin{align}
+\left\lVert \vec{y}_1 - \vec{x} \right\rVert^2 &= \left\lVert \left(\vec{y}_1 - \frac{\vec{y}_1+\vec{y}_2}{2}\right) + \left(\frac{\vec{y}_1+\vec{y}_2}{2} - \vec{x}\right) \right\rVert^2 \\
+\left\lVert \vec{y}_2 - \vec{x} \right\rVert^2 &= \left\lVert \left(\vec{y}_2 - \frac{\vec{y}_1+\vec{y}_2}{2}\right) + \left(\frac{\vec{y}_1+\vec{y}_2}{2} - \vec{x}\right) \right\rVert^2
+\end{align}
+$$
+
+Adding the two equations (Parallelogram Law):
+
+$$
+2d^2 = 2 \left\lVert \frac{\vec{y}_1 - \vec{y}_2}{2} \right\rVert^2 + 2 \left\lVert \frac{\vec{y}_1+\vec{y}_2}{2} - \vec{x} \right\rVert^2
+$$
+
+Since $K$ is convex, $\frac{\vec{y}_1+\vec{y}_2}{2} \in K$, so $\left\lVert \frac{\vec{y}_1+\vec{y}_2}{2} - \vec{x} \right\rVert \ge d$.
+
+$$
+2d^2 \ge \frac{1}{2} \lVert \vec{y}_1 - \vec{y}_2 \rVert^2 + 2d^2 \implies \lVert \vec{y}_1 - \vec{y}_2 \rVert = 0 \implies \vec{y}_1 = \vec{y}_2
 $$
 
 **Def:** The mapping $P_{k}: \mathbb{R}^{n} \to K$ is called the metric projection or nearest point map of $K$, ($d(\vec{x},K) = \lvert  \vec{x} - P_{K}(\vec{x}) \rvert$) For $\vec{x} \in \mathbb{R}^{n} \setminus K$, $u(K,\vec{x}):= \frac{\vec{x} - P_{K}(\vec{x})}{d(K,\vec{x})}$.
