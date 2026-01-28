@@ -497,17 +497,17 @@ $$
     \coordinate (C) at (1.5, -0.33);
 
     % Draw Angles
-    % At A
-    \draw[red] ($(A)+(0,-0.3)$) arc (-90:-130:0.3);
-    \node[red] at ($(A)+(-0.2,-0.4)$) {$\alpha$};
+    % At A (Top) - Angle between C2 and C3
+    \draw[red] ($(A)+(0,-0.3)$) arc (-140:-40:0.3);
+    \node[red] at ($(A)+(0,-0.5)$) {$\alpha$};
 
-    % At B
-    \draw[red] ($(B)+(0.3,0.2)$) arc (30:80:0.3);
-    \node[red] at ($(B)+(0.3,0.4)$) {$\beta$};
+    % At B (Left) - Angle between C1 and C2
+    \draw[red] ($(B)+(0.4,0.15)$) arc (10:80:0.4);
+    \node[red] at ($(B)+(0.5,0.4)$) {$\beta$};
 
-    % At C
-    \draw[red] ($(C)+(-0.3,0.2)$) arc (150:100:0.3);
-    \node[red] at ($(C)+(-0.3,0.4)$) {$\gamma$};
+    % At C (Right) - Angle between C1 and C3
+    \draw[red] ($(C)+(-0.4,0.15)$) arc (170:100:0.4);
+    \node[red] at ($(C)+(-0.5,0.4)$) {$\gamma$};
 
     % Region T (Approximate center)
     \node at (0, 0.4) {$T$};
