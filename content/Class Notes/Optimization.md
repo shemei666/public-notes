@@ -526,19 +526,6 @@ $$
 $$
 
 **Lemma:** Let $S$ be a sphere containing $K$ (non-empty closed convex set) in its interior then $P_{K}(S) = \partial K$ ($K$ is compact)
-**Corollary:** Let $K$ be a non-empty closed convex proper subset of $\mathbb{R}^{n}$. Then $P_{K}(\mathbb{R}^{n}\setminus K) = \partial K$
-
-**Proof of Corollary:**
-
-1. **$P_K(\mathbb{R}^n \setminus K) \subseteq \partial K$**:
-   For any $\vec{x} \notin K$, the projection $P_K(\vec{x})$ must lie on the boundary $\partial K$. If $P_K(\vec{x})$ were in the interior of $K$, we could move slightly from $P_K(\vec{x})$ towards $\vec{x}$ and still be inside $K$ (since it's open), which would contradict the fact that $P_K(\vec{x})$ is the unique closest point.
-2. **$\partial K \subseteq P_K(\mathbb{R}^n \setminus K)$**:
-   Take any $\vec{y} \in \partial K$. We need to find an $\vec{x} \notin K$ such that $P_K(\vec{x}) = \vec{y}$.
-   - If $K$ is bounded (compact), we can enclose it in a large sphere $S$. The Lemma states $P_K(S) = \partial K$, so there exists $\vec{x} \in S$ (and $S \cap K = \emptyset$ if radius is large enough, or just $S \setminus K$) mapping to $\vec{y}$.
-   - If $K$ is unbounded, we can consider a sequence of bounded approximations $K_n = K \cap \overline{B(0, n)}$. For large enough $n$, $\vec{y} \in \partial K_n$. Using the lemma on compact $K_n$ and a sphere $S_n$ enclosing it, we can find points projecting to $\vec{y}$.
-   - Alternatively, using the supporting hyperplane theorem: At any boundary point $\vec{y} \in \partial K$, there exists a supporting hyperplane $H$ with normal vector $\vec{u}$. Any point $\vec{x} = \vec{y} + \lambda \vec{u}$ ($\lambda > 0$) on the normal ray lies outside $K$, and its projection onto $K$ is $\vec{y}$.
-
-**Exercise:** Prove that $\phi(t) = \lVert  \vec{x} - ((1-t)P_{K}(\vec{x})+t\vec{z}) \rVert$, $z \in K$, is a strictly increasing function on $[0,1]$
 
 ```tikz
 \begin{document}
@@ -593,6 +580,29 @@ $\vec{y_{n}}$ has a convergent subsequence. Let $\vec{y}$ be a limit point
 $$
 \lVert  \vec{v} - P(\vec{y}) \rVert = 0 \implies P(\vec{y} ) = \vec{v}
 $$
+
+**Corollary:** Let $K$ be a non-empty closed convex proper subset of $\mathbb{R}^{n}$. Then $P_{K}(\mathbb{R}^{n}\setminus K) = \partial K$
+
+**Proof of Corollary:**
+
+1. **$P_K(\mathbb{R}^n \setminus K) \subseteq \partial K$**:
+   For any $\vec{x} \notin K$, $P_K(\vec{x})$ must be on the boundary. If it were interior, we could approach $\vec{x}$ closer within $K$.
+2. **$\partial K \subseteq P_K(\mathbb{R}^n \setminus K)$**:
+   Let $\vec{y} \in \partial K$. Since $\vec{y}$ is on the boundary, there exists a sequence $\vec{z}_k \notin K$ such that $\vec{z}_k \to \vec{y}$.
+   Let $\vec{p}_k = P_K(\vec{z}_k)$. By the projection property: $\lVert \vec{z}_k - \vec{p}_k \rVert = d(\vec{z}_k, K) \leq \lVert \vec{z}_k - \vec{y} \rVert$.
+   As $\vec{z}_k \to \vec{y}$, the RHS goes to 0, so $\vec{p}_k \to \vec{y}$.
+   Define unit vectors $\vec{u}_k = \frac{\vec{z}_k - \vec{p}_k}{\lVert \vec{z}_k - \vec{p}_k \rVert}$. Since the unit sphere is compact, there exists a subsequence converging to some unit vector $\vec{u}$.
+   By the variational inequality for $\vec{p}_k$:
+   $$ \langle \vec{w} - \vec{p}\_k, \vec{z}\_k - \vec{p}\_k \rangle \leq 0 \quad \forall \vec{w} \in K $$
+   Dividing by the norm and taking the limit:
+   $$ \langle \vec{w} - \vec{y}, \vec{u} \rangle \leq 0 \quad \forall \vec{w} \in K $$
+   This shows $\vec{u}$ is an exterior normal vector at $\vec{y}$.
+   Now consider $\vec{x} = \vec{y} + \vec{u}$. Since $\vec{u} \neq 0$ and points outwards, $\vec{x} \notin K$.
+   Checking the projection condition for $\vec{y}$ from $\vec{x}$:
+   $$ \langle \vec{w} - \vec{y}, \vec{x} - \vec{y} \rangle = \langle \vec{w} - \vec{y}, \vec{u} \rangle \leq 0 $$
+   Thus $P_K(\vec{x}) = \vec{y}$. So $\vec{y}$ is in the image.
+
+**Exercise:** Prove that $\phi(t) = \lVert  \vec{x} - ((1-t)P_{K}(\vec{x})+t\vec{z}) \rVert$, $z \in K$, is a strictly increasing function on $[0,1]$
 
 ## Support properties of convex sets
 
