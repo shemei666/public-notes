@@ -428,10 +428,10 @@ $$
 $P_{K}|_{\mathbb{R}^{n}\setminus K}$, what is the image? $\partial K$?
 
 $$
-R(K,\vec{x}) := \langle P_{K}(\vec{x}) + \lambda u(K,\vec{x}) \rangle \quad \lambda \geq 0
+R(K, \vec{x}) := \{ P_{K}(\vec{x}) + \lambda u(K, \vec{x}) \mid \lambda \geq 0 \}
 $$
 
-ray through $\vec{x}$ with endpoint $P_{K}(\vec{x})$
+The ray through $\vec{x}$ with endpoint $P_{K}(\vec{x})$.
 
 **Theorem:** $P_{K}$ is a contractive mapping, $P_{K}:\mathbb{R}^{n}\to K$
 
