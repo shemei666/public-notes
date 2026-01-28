@@ -465,9 +465,46 @@ $$
 \end{document}
 ```
 
-
 **Def(Time Zone):** Part of the sphere limited by two great circles.
 
 **Theorem:** Let $T$ be a spherical triangle of angle $\alpha,\beta$ and $\gamma$, then $area(T) = \alpha + \beta + \gamma - \pi \implies \alpha + \beta + \gamma = area(T) + \pi$
+
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\begin{document}
+\begin{tikzpicture}[scale=1.5]
+    \def\R{2}
+    \shade[ball color=white, opacity=0.5] (0,0) circle (\R);
+    \draw (0,0) circle (\R);
+
+    % Vertices
+    \coordinate (A) at (0, 1.9);
+    \coordinate (B) at (-1.2, -0.6);
+    \coordinate (C) at (1.5, -0.2);
+
+    % Edges (Great circle arcs - simulated with bend)
+    \draw[thick, blue] (A) to[bend right=15] (B);
+    \draw[thick, blue] (B) to[bend right=15] (C);
+    \draw[thick, blue] (C) to[bend right=15] (A);
+
+    % Angles (small arcs at vertices)
+    % At A
+    \draw[red] ($(A)+(0,-0.4)$) arc (-90:-130:0.4);
+    \node[red] at ($(A)+(-0.15,-0.5)$) {$\alpha$};
+
+    % At B
+    \draw[red] ($(B)+(0.3,0.3)$) arc (30:80:0.4);
+    \node[red] at ($(B)+(0.4,0.15)$) {$\beta$};
+
+    % At C
+    \draw[red] ($(C)+(-0.3,0.3)$) arc (150:100:0.4);
+    \node[red] at ($(C)+(-0.4,0.1)$) {$\gamma$};
+
+    % Region T
+    \node at (0.2, 0.5) {$T$};
+\end{tikzpicture}
+\end{document}
+```
 
 **Proof:** Let $D$ be the half-sphere containing $T$ determined by the great circle opposite to the angle $\alpha$.
