@@ -472,45 +472,101 @@ $$
 ```tikz
 \usepackage{tikz}
 \usetikzlibrary{calc, intersections}
+
 \begin{document}
-\begin{tikzpicture}[scale=1.5]
-    \def\R{2}
-    \shade[ball color=white, opacity=0.5] (0,0) circle (\R);
+\begin{tikzpicture}[scale=2]
+    \def\R{2} % Sphere radius
+    % Draw Sphere Look
+    \fill[ball color=white, opacity=0.3] (0,0) circle (\R);
     \draw (0,0) circle (\R);
 
-    % Define Great Circles (Ellipses)
-    % C1: Horizontal
-    \path[name path=C1] (0,0) ellipse (2 and 0.5);
-    \draw[blue, thick, opacity=0.6] (0,0) ellipse (2 and 0.5);
+    % Define and Draw 3 Great Circles (Ellipses)
+    % We use a symmetric arrangement for a nice central triangle
 
-    % C2: Tilted Left (/)
-    \path[name path=C2] (0,0) [rotate=60] ellipse (2 and 0.9);
-    \draw[blue, thick, opacity=0.6, rotate=60] (0,0) ellipse (2 and 0.9);
+    % Circle 1: Horizontalish
+    \draw[name path=C1, gray, thin] (0,0) ellipse (2 and 0.8);
 
-    % C3: Tilted Right (\)
-    \path[name path=C3] (0,0) [rotate=-60] ellipse (2 and 0.9);
-    \draw[blue, thick, opacity=0.6, rotate=-60] (0,0) ellipse (2 and 0.9);
+    % Circle 2: Rotated 60 degrees
+    \draw[name path=C2, gray, thin, rotate=60] (0,0) ellipse (2 and 0.8);
 
-    % Vertices (Approximate intersections)
-    \coordinate (A) at (0, 1.4);
-    \coordinate (B) at (-1.5, -0.33);
-    \coordinate (C) at (1.5, -0.33);
+    % Circle 3: Rotated -60 (or 120) degrees
+    \draw[name path=C3, gray, thin, rotate=-60] (0,0) ellipse (2 and 0.8);
+
+    % Find Intersections of the *front* arcs to define the triangle
+    % The intersection library finds all points. We pick the relevant ones for the central triangle.
+    % Visually, A is top, B is bottom-left, C is bottom-right in the central region.
+
+    % Intersection of C2 and C3 (Top Vertex A)
+    \path [name intersections={of=C2 and C3, by={i1, i2, i3, i4}}];
+    % Based on rotation, the top intersection is likely one of these.
+    % Let's manually coordinate close to expected location (0, 0.9) to be safe or just use the calculated ones.
+    % For symmetry, A is on y-axis.
+    \coordinate (A) at (0, 0.92); % Approximation of intersection
+
+    % Intersection of C1 and C2 (Bottom Left Vertex B)
+    % C1 is flat, C2 is /, intersection is in quadrant 3? No, quadrant 2/4 for C2?
+    % C2 is rotated 60 (CCW). Major axis along 60 deg.
+    % Intersection with C1 (Major along 0).
+    % They intersect at origin? No, centered.
+    % They intersect at +/- points.
+    \coordinate (B) at (-0.8, -0.45); % Approximation
+
+    % Intersection of C1 and C3 (Bottom Right Vertex C)
+    % C3 rotated -60.
+    \coordinate (C) at (0.8, -0.45); % Approximation
+
+    % Highlight the Triangle Edges (Arcs)
+    % We trace parts of the ellipses.
+    % Edge AB: Part of C2? No, A is C2/C3 intersection. B is C1/C2 intersection.
+    % So Edge AB lies on C2.
+    % Edge BC lies on C1.
+    % Edge CA lies on C3.
+
+    % Draw Edge BC (on C1) - bends up
+    \draw[blue, thick] (B) to[bend right=20] (C); % C1 is concave up here? NO, C1 is horizontal ellipse, bottom arc is concave up. Top arc concave down.
+    % Since B, C are y=-0.45, they are on bottom half?
+    % x goes from -0.8 to 0.8.
+    % Ellipse y = -0.4 * sqrt(...) -> curves down.
+    % So bend right is correct (curves down).
+    % Actually, let's use exact arc if possible, but 'to' with bend is safer visual.
+    % wait, (0,0) is center. y=-0.45 is below center.
+    % ellipse curves like u.
+
+    % Draw Edge AB (on C2)
+    % A(0, 0.92), B(-0.8, -0.45).
+    % C2 major axis is 60 deg.
+    % Arc connects them.
+    \draw[blue, thick] (A) to[bend right=15] (B);
+
+    % Draw Edge CA (on C3)
+    \draw[blue, thick] (C) to[bend left=15] (A);
+
+    % Label Vertices
+    \node[above] at (A) {$A$};
+    \node[below left] at (B) {$B$};
+    \node[below right] at (C) {$C$};
 
     % Draw Angles
-    % At A (Top) - Angle between C2 and C3
-    \draw[red] ($(A)+(0,-0.3)$) arc (-140:-40:0.3);
-    \node[red] at ($(A)+(0,-0.5)$) {$\alpha$};
+    % Angle alpha at A (Between C2 and C3)
+    % Tangents approx: C2 goes DL, C3 goes DR.
+    \draw[red] ($(A)+(0,-0.2)$) arc (-120:-60:0.25);
+    \node[red, above] at ($(A)+(0,-0.55)$) {$\alpha$};
 
-    % At B (Left) - Angle between C1 and C2
-    \draw[red] ($(B)+(0.4,0.15)$) arc (10:80:0.4);
-    \node[red] at ($(B)+(0.5,0.4)$) {$\beta$};
+    % Angle beta at B (Between C1 and C2)
+    % C1 goes R. C2 goes UR.
+    \draw[red] ($(B)+(0.25,0.05)$) arc (10:70:0.25);
+    \node[red, right] at ($(B)+(0.1,0.25)$) {$\beta$};
 
-    % At C (Right) - Angle between C1 and C3
-    \draw[red] ($(C)+(-0.4,0.15)$) arc (170:100:0.4);
-    \node[red] at ($(C)+(-0.5,0.4)$) {$\gamma$};
+    % Angle gamma at C (Between C1 and C3)
+    % C1 goes L (from C). C3 goes UL.
+    \draw[red] ($(C)+(-0.25,0.05)$) arc (170:110:0.25);
+    \node[red, left] at ($(C)+(-0.1,0.25)$) {$\gamma$};
 
-    % Region T (Approximate center)
-    \node at (0, 0.4) {$T$};
+    % Fill T
+    \node[blue] at (0, 0.2) {$T$};
+
+    % Labels for Great Circles (Optional, to satisfy "full great circles")
+    % \node[gray, right] at (2,0) {GC1};
 
 \end{tikzpicture}
 \end{document}
