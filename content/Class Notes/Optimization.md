@@ -387,6 +387,7 @@ and each nonempty line free closed convex set $C \subseteq \mathbb{R}^{n}$ is th
 
 **Exercise:** Prove that $C \subseteq  \mathbb{R}^{n}$ _closed_ set with the properties whenever $\vec{x},\vec{y} \in C$ $\vec{x}+ \vec{y} /2 \in C$, is a convex set.
 
+
 **Corollary:(Minkowski's Theorem)** Each nonempty compact convex set $K\subseteq \mathbb{R}^{n}$ is the convex hull of its extreme points.
 
 **Lemma:** $K$ nonempty closed convex set, for each $\vec{x} \in \mathbb{R}^{n}$, there is a unique point $P_{K}(\vec{x})$ ($P_{K}:\mathbb{R}^{n}\to K$) satisfying
