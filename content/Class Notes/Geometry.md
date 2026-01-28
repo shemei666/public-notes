@@ -468,6 +468,6 @@ $$
 
 **Def(Time Zone):** Part of the sphere limited by two great circles.
 
-**Theorem:** Let $T$ be a spherical triangle of angle $\alpha,\beta$ and $\gamma$, then $area(T) = \alpha + \beta + \gamma - \pi \implies \alpha + \beta + \gamma$
+**Theorem:** Let $T$ be a spherical triangle of angle $\alpha,\beta$ and $\gamma$, then $area(T) = \alpha + \beta + \gamma - \pi \implies \alpha + \beta + \gamma = area(T) + \pi$
 
-**Proof:**
+**Proof:** Let $D$ be the half-sphere containing $T$ determined by the great circle opposite to the angle $\alpha$.
