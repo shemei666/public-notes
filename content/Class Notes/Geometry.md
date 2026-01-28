@@ -471,38 +471,47 @@ $$
 
 ```tikz
 \usepackage{tikz}
-\usetikzlibrary{calc}
+\usetikzlibrary{calc, intersections}
 \begin{document}
 \begin{tikzpicture}[scale=1.5]
     \def\R{2}
     \shade[ball color=white, opacity=0.5] (0,0) circle (\R);
     \draw (0,0) circle (\R);
 
-    % Vertices
-    \coordinate (A) at (0, 1.9);
-    \coordinate (B) at (-1.2, -0.6);
-    \coordinate (C) at (1.5, -0.2);
+    % Define Great Circles (Ellipses)
+    % C1: Horizontal
+    \path[name path=C1] (0,0) ellipse (2 and 0.5);
+    \draw[blue, thick, opacity=0.6] (0,0) ellipse (2 and 0.5);
 
-    % Edges (Great circle arcs - simulated with bend)
-    \draw[thick, blue] (A) to[bend right=15] (B);
-    \draw[thick, blue] (B) to[bend right=15] (C);
-    \draw[thick, blue] (C) to[bend right=15] (A);
+    % C2: Tilted Left (/)
+    \path[name path=C2] (0,0) [rotate=60] ellipse (2 and 0.9);
+    \draw[blue, thick, opacity=0.6, rotate=60] (0,0) ellipse (2 and 0.9);
 
-    % Angles (small arcs at vertices)
+    % C3: Tilted Right (\)
+    \path[name path=C3] (0,0) [rotate=-60] ellipse (2 and 0.9);
+    \draw[blue, thick, opacity=0.6, rotate=-60] (0,0) ellipse (2 and 0.9);
+
+    % Vertices (Approximate intersections)
+    \coordinate (A) at (0, 1.4);
+    \coordinate (B) at (-1.5, -0.33);
+    \coordinate (C) at (1.5, -0.33);
+
+    % Draw Angles
     % At A
-    \draw[red] ($(A)+(0,-0.4)$) arc (-90:-130:0.4);
-    \node[red] at ($(A)+(-0.15,-0.5)$) {$\alpha$};
+    \draw[red] ($(A)+(0,-0.3)$) arc (-90:-130:0.3);
+    \node[red] at ($(A)+(-0.2,-0.4)$) {$\alpha$};
 
     % At B
-    \draw[red] ($(B)+(0.3,0.3)$) arc (30:80:0.4);
-    \node[red] at ($(B)+(0.4,0.15)$) {$\beta$};
+    \draw[red] ($(B)+(0.3,0.2)$) arc (30:80:0.3);
+    \node[red] at ($(B)+(0.3,0.4)$) {$\beta$};
 
     % At C
-    \draw[red] ($(C)+(-0.3,0.3)$) arc (150:100:0.4);
-    \node[red] at ($(C)+(-0.4,0.1)$) {$\gamma$};
+    \draw[red] ($(C)+(-0.3,0.2)$) arc (150:100:0.3);
+    \node[red] at ($(C)+(-0.3,0.4)$) {$\gamma$};
 
-    % Region T
-    \node at (0.2, 0.5) {$T$};
+    % Region T (Approximate center)
+    \node at (0, 0.4) {$T$};
+
 \end{tikzpicture}
 \end{document}
 ```
