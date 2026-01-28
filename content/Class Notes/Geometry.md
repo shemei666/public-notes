@@ -466,3 +466,8 @@ $$
 ```
 
 
+**Def(Time Zone):** Part of the sphere limited by two great circles.
+
+**Theorem:** Let $T$ be a spherical triangle of angle $\alpha,\beta$ and $\gamma$, then $area(T) = \alpha + \beta + \gamma - \pi \implies \alpha + \beta + \gamma$
+
+**Proof:**
