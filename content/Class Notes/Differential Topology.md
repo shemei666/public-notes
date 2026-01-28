@@ -314,3 +314,4 @@ $$
 We also write $F(x,t)$ as $f_{t}(x)$. Then $f_{0}(x)=f,f_{1}(x)=g$ and $f_{t}(x)$ denote intermediate functions. Thus as $t$ goes from $0$ to $1$, $f$ deforms to $g$.
 
 Fix $X,Y$. We write $f \sim g$ if such and $F$ exists. (refer **[[Algebraic Topology|AlgTop]]**)
+[add image on homotopy composition]
