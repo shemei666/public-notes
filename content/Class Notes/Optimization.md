@@ -489,7 +489,7 @@ $$
 **Proof:**
 
 $$
-\phi(t) = \lVert  \vec{x} - (1-t)P_{K}(\vec{x})+ tP_{K}(\vec{y}) \rVert ^{2}
+\phi(t) = \lVert  \vec{x} - (1-t)P_{K}(\vec{x})- tP_{K}(\vec{y}) \rVert ^{2}
 $$
 
 $$
