@@ -278,4 +278,31 @@ $$
 is not transversal since $dg_{0}=\mathbb{R}e_{1}$
 
 ---
+[add image here]
+
+
+
+
+We say that two submanifolds $X,Z \subseteq Z$ intersect transversally if $i :X \hookrightarrow Y$ is transversal to $Z$, or simply $\forall p \in X \cap Z$ we have $T_{p}X + T_{p}Z = T_{p}Y$ (or $X \cap Z = \varnothing$). We say $X \pitchfork_{Y} Z$.
+**Theorem:** If $X \pitchfork_{Y} Z$ and $X \cap Z \neq \varnothing$, then $X \cap Z$ is a submanifold of $Y$ of codimension $\text{codim}_{Y}(X) + \text{codim}_{Y}(Z)$
+
+**Proof:** Follows from previous theorem we have
+$$
+\text{codim}_{Y}(Z) = \text{codim}_{X}(Z \cap X) = \text{codim}_{Y}(Z \cap X) - \text{codim}_{Y}(X) \quad \blacksquare
+$$
+
+---
+Thus if $X,Z$ intersect transversally in $Y$ and $X,Z$ are localy given by vanishing of $m,n$ functions respectively, then $X \cap  Z$ is locally given by vanishing of $m+n$ functions,
+
+**Example:** Any 2 lines intersect transversally unless they are the same, Any 2 lines in $\mathbb{R}^{3}$ intersect transversally iff the intersection is empty ,any 2 planes in $\mathbb{R}^{3}$ intersect transversally unless they are the same.
+
+**Def:** We say that a property $P$ of smooth maps is local on the base/codomain if for any smooth map $f:X\to Y$ the following are equivalent:
+1. $f$ satisfies $P$
+2. $\forall$ open $Y_{1} \subseteq Y, f:X_{1}= f^{-1}Y_{1}\to Y_{1}$ satisfies $P$
+3. $\exists$ an open cover $\{ Y_{i} \}$ of $Y$ such that $f^{-1}Y_{i} \to Y_{i}$ satisfies $P$.
+---
+Similarly we define a property $P$ to be local on the source/domain
+1. $f$ satisfies $P$
+2. .
+3. .
 
