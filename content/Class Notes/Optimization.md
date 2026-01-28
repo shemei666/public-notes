@@ -508,8 +508,8 @@ A symmetric argument gives,
 
 $$
 \begin{gather}
-\langle  \vec{y} - P_{K}(\vec{y}),P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle \leq 0 \\
-\langle P_{k}(\vec{y}) - \vec{y}, P_{K}(\vec{y}) - P_{K}(\vec{x}) \rangle \leq 0
+\langle  \vec{y} - P_{K}(\vec{x}),P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle \leq 0 \\
+\langle P_{k}(\vec{x}) - \vec{y}, P_{K}(\vec{y}) - P_{K}(\vec{x}) \rangle \leq 0
 \end{gather}
 $$
 
