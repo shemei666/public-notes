@@ -360,4 +360,7 @@ $$
 \rho(x) = \frac{\alpha(x-1/4)}{\alpha(x-1/4) + \alpha(3/4-x)}
 $$
 
+Given $F(x,t)$ we can also use $\widetilde{F}(x,t) = F(x,\rho(t))$ to compose 2 homotopies.
 
+
+![[Pasted image 20260129144015.png]]
