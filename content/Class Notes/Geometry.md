@@ -27,6 +27,19 @@ Let $V$ be a vector space. Take $\mathscr{A} := V$, $\theta: V \times V \to V$, 
 **Vectorization of an affine space**
 $B, C \in \mathscr{A}$, define $B+C=P$ if $\overrightarrow{AB} + \overrightarrow{AC} = \overrightarrow{AP}$
 
+**Properties:** Chasles' relation gives directly $\overrightarrow{AA} = 0$ and $\overrightarrow{AB} = -\overrightarrow{BA}$.
+
+**The parallelogram rule:** This says that the two equalities $\overrightarrow{AB} = \overrightarrow{A'B'}$ and $\overrightarrow{AA'} = \overrightarrow{BB'}$ are equivalent. It is proved using Chasles' relation:
+$$ \overrightarrow{AB} = \overrightarrow{AA'} + \overrightarrow{A'B'} + \overrightarrow{B'B}, $$
+which is also written
+$$ \overrightarrow{AB} - \overrightarrow{A'B'} = \overrightarrow{AA'} - \overrightarrow{BB'}. $$
+
+**Remark:** If $A$ is a point of the affine space $\mathcal{E}$ and if $u$ is a vector of the vector space $E$ underlying it, the unique point $B$ of $\mathcal{E}$ such that $\overrightarrow{AB} = u$ is sometimes denoted
+$$ B = A + u. $$
+This notation is consistent since we have
+$$ (A + u) + v = A + (u + v) $$
+(this is a translation of Chasles' relation).
+
 **Affine subspace**: Let $(\mathscr{A}, V, \theta)$ be an Affine space. Let $\mathscr{F} \subseteq \mathscr{A}$. $\mathscr{F}$ is called an _affine subspace_ if either $\mathscr{F} = \emptyset$ or $\exists A \in \mathscr{F}$ s.t $\theta_A(\mathscr{F})$ is a vector subspace. Note: $\theta_A = \theta(A, \cdot)$
 
 **Prop**: Let $(\mathscr{A}, V, \theta)$ be an affine space structure. Let $W$ be a vector subspace of $V$. Fix $A \in \mathscr{A}$. $\exists !$ Affine subspace $\mathscr{F} \subseteq \mathscr{A}$ passing through $A$.
