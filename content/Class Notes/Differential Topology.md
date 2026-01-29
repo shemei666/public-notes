@@ -425,3 +425,4 @@ The following classes of smooth maps from a **compact manifold** $X$ to a manifo
 (e) embeddings
 (f) diffeomorphisms
 
+![[IMG_20260129_150616.jpg]]
