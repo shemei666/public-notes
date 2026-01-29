@@ -3,7 +3,7 @@ publish: true
 ---
 # Affine Geometry
 
-**Def**: Affine Space $(\mathscr{A}, V, \theta)$
+**Def**: Affine Space $(\mathscr{A}, V, \theta)$ 
 $\theta: \mathscr{A} \times \mathscr{A} \to V$, $\theta: (P, Q) \mapsto \overrightarrow{PQ}$
 (i) For any point $P \in \mathscr{A}$, $\theta_P = \theta(P, \cdot): \mathscr{A} \to V$ is a bijection.
 (ii) $\forall P, Q, R \in \mathscr{A}, \overrightarrow{PR} = \overrightarrow{PQ} + \overrightarrow{QR}$
