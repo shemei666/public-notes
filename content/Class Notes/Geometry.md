@@ -38,8 +38,9 @@ $$ (A + u) + v = A + (u + v) $$
 
 Let $V$ be a vector space. Take $\mathscr{A} := V$, $\theta: V \times V \to V$, $(v, w) \mapsto w - v$
 
-**Vectorization of an affine space**
+### Vectorization of an affine space
 $B, C \in \mathscr{A}$, define $B+C=P$ if $\overrightarrow{AB} + \overrightarrow{AC} = \overrightarrow{AP}$
+
 
 
 
