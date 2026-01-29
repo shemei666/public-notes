@@ -355,5 +355,9 @@ $$
 1 & x\geq \frac{3}{4}
 \end{cases}
 $$
+by 
+$$
+\rho(x) = \frac{\alpha(x-1/4)}{\alpha(x-1/4) + \alpha(3/4-x)}
+$$
 
 
