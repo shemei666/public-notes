@@ -48,7 +48,8 @@ Clearly $\mathscr{F}$ is an affine space with $W$ as the vector space and passin
 **Proposition**: The image of an affine subspace by an affine mapping is an affine subspace.
 **Proof**: $T(\theta_A(\mathscr{F})) \leftarrow$ vector subspace of $V' \implies \theta'_{\varphi(A)}(\varphi(\mathscr{F}))$ is also vector subspace $\implies \varphi(\mathscr{F})$ is an affine subspace.
 
-**Corr**: Affine mappings sends straight line to straight line.
+**Corollary:** Affine mappings sends straight line to straight line.
+**Proof:**
 
 **Prop**: The only affine mapping of $n$ dim aff. space that fixes $n+1$ points is the Id map.
 **pf**: Let $A_1, M_1, \dots, M_n \in \mathscr{A}$ be independent. Let $\varphi: \mathscr{A} \to \mathscr{A}$ be an affine map. $\varphi(A_1) = A_1, \varphi(M_1) = M_1, \dots$ but $T: V \to V$ be the ALM. $\overrightarrow{A_1 M_1}, \overrightarrow{A_2 M_2}, \dots, \overrightarrow{A_1 M_n} \in V$.
