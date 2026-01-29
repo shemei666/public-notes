@@ -425,4 +425,18 @@ The following classes of smooth maps from a **compact manifold** $X$ to a manifo
 (e) embeddings
 (f) diffeomorphisms
 
-![[IMG_20260129_150616.jpg]]
+**Proof:** Let $k = \dim(X)$, $l = \dim(Y)$. Then (a) follows from (b) & (c) with $k=l$.
+
+**Proof of (b), (c):** Suppose $f$ satisfies (b) or (c). It suffices to prove the claim:
+$$
+\begin{cases}
+\text{For any smooth family } F: X \times I \to Y \text{ with } f_0 = f, \\
+\text{and for any } p \in X, \exists \text{ open nbd } U \subseteq X \text{ of } p \text{ and } \epsilon > 0 \\
+\text{such that } f_t|_U \text{ satisfies (b) or (c) } \forall t < \epsilon.
+\end{cases}
+$$
+Indeed, if the claim holds, then by varying $p$ over $X$ we get an open cover of $X$ by the $U$'s and hence by compactness, we get finitely many $U_i$ and $\epsilon_i$. Set $\epsilon = \min\{\epsilon_i\}$. Then $f_t$ satisfies (b) or (c) on all of $X$ $\forall t < \epsilon$.
+
+**Proof of claim:** $\left[ f_0 \text{ satisfies (b) or (c) at } p \implies F \text{ satisfies at } (p,0) \implies F \text{ satisfies in an open box} \right]$
+
+Since the claim is local in nature and properties (b), (c) are local on domain, codomain, we may work with coordinate neighborhood $V$ of $f(p)$ in $Y$ and a neighborhood $U_1 \times [0, \epsilon_1)$ of $(p,0)$ in $X \times I$.
