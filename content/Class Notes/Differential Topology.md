@@ -407,27 +407,3 @@ Homotopy between two circles one inside the other
 ```
 
 ![[Pasted image 20260129144705.png]]
-
-```tikz
-\usepackage{tikz}
-\begin{document}
-\begin{tikzpicture}
-    % Grid like sphere/surface scaling
-    \begin{scope}
-        \draw (0,0) ellipse (1.5 and 0.8);
-        \draw[domain=0:360, samples=50] plot ({1.5*cos(\x)}, {0.8*sin(\x)});
-        
-        % Longitudinal lines
-        \draw (0,0) ellipse (0.5 and 0.8);
-        
-        % Latitudinal lines (arcs)
-        \draw (-1.2,0.4) arc (160:20:1.3 and 0.4);
-        \draw (-1.4,-0.2) arc (190:-10:1.4 and 0.5);
-        
-        % Inner smaller shapes illustrating contraction/dilation
-        \draw (0,-0.2) ellipse (0.3 and 0.15);
-        \node at (0, -1.5) {Parametrized Surface / Deforming Grid};
-    \end{scope}
-\end{tikzpicture}
-\end{document}
-```
