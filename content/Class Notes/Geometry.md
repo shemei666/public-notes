@@ -56,6 +56,8 @@ $$ \varphi: \mathcal{E} \to \mathcal{E} $$
 such that $\overrightarrow{\varphi(A)\varphi(B)} = \overrightarrow{AB}$ for all $A$ and $B$ in $\mathcal{E}$. The parallelogram rule then gives $\overrightarrow{A\varphi(A)} = \overrightarrow{B\varphi(B)}$ for all $A$ and $B$. In other words, the vector $\overrightarrow{M\varphi(M)}$ is a constant vector $u$. It is said that $\varphi$ is the *translation* of vector $u$. It is denoted by $t_u$.
 
 ```tikz
+\usepackage{tikz}
+\usetikzlibrary{calc}
 \begin{document}
 \begin{tikzpicture}[>=stealth, scale=1]
     % Translation
