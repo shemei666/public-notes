@@ -1,6 +1,7 @@
 ---
 publish: true
 ---
+# Affine Geometry
 
 **Def**: Affine Space $(\mathscr{A}, V, \theta)$
 $\theta: \mathscr{A} \times \mathscr{A} \to V$, $\theta: (P, Q) \mapsto \overrightarrow{PQ}$
