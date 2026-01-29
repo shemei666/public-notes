@@ -411,10 +411,12 @@ A property $P$ of maps (of manifolds) is said to be stable (under homotopy) if f
 Quick Observation: Thus $f$ satisfies $P \implies$ 'small' deformation of $f$ satisfies $P$.
 Given $F(x,t) = f_t(x)$ on $U \subseteq \mathbb{R}^k$ open $(df_t)$.
 
-**Homotopy & Stability Theorem**: The following classes of smooth maps from a **compact manifold** $X$ to a manifold $Y$ are stable:
-(a) local diffeos
+### Homotopy & Stability Theorem
+The following classes of smooth maps from a **compact manifold** $X$ to a manifold $Y$ are stable:
+(a) local diffeomorphism
 (b) immersions
 (c) submersions
 (d) maps transversal to a fixed **closed submanifold** $Z \subseteq Y$
 (e) embeddings
 (f) diffeomorphisms
+
