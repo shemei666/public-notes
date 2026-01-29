@@ -348,5 +348,12 @@ $\alpha$ is continuous and
 $$
 \lim_{ t \to 0 } \frac{e^{-1/t^{2}}}{ t^{n}} = 0 \quad \forall n \in \mathbb{N}
 $$
-We have $\alpha^{(n)}(0) =0$ makes $\alpha$ smooth,
+We have $\alpha^{(n)}(0) =0$ makes $\alpha$ smooth, from this we can produce $\rho(x)$ smooth
+$$
+\rho(x) = \begin{cases}
+0  & x \leq \frac{1}{4} \\
+1 & x\geq \frac{3}{4}
+\end{cases}
+$$
+
 
