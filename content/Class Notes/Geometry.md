@@ -37,7 +37,9 @@ $M+N=Q \iff \overrightarrow{AM} + \overrightarrow{AN} = \overrightarrow{AQ}$, an
 **Affine subspace**: Let $(\mathscr{A}, V, \theta)$ be an Affine space. Let $\mathscr{F} \subseteq \mathscr{A}$. $\mathscr{F}$ is called an _affine subspace_ if either $\mathscr{F} = \emptyset$ or $\exists A \in \mathscr{F}$ s.t $\theta_A(\mathscr{F})$ is a vector subspace. Note: $\theta_A = \theta(A, \cdot)$
 
 **Prop**: Let $(\mathscr{A}, V, \theta)$ be an affine space structure. Let $W$ be a vector subspace of $V$. Fix $A \in \mathscr{A}$. $\exists !$ Affine subspace $\mathscr{F} \subseteq \mathscr{A}$ passing through $A$.
-**Proof**: $\mathscr{F} := \{ M \in \mathscr{A} : \overrightarrow{AM} \in W \}$
+**Proof**: Let  $\mathscr{F} := \{ M \in \mathscr{A} : \overrightarrow{AM} \in W \}$
+Clearly $\mathscr{F}$ is 
+
 
 **Ex**: An affine space of dimension 0 contains a unique point.
 
