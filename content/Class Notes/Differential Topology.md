@@ -1,3 +1,8 @@
+---
+publish: true
+---
+
+
 ## Embeddings
 **Theorem:(Embedding Theorem)** For an injective immersion $f:X\to Y$, TFAE
 
