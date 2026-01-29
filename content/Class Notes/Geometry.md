@@ -36,17 +36,16 @@ $M+N=Q \iff \overrightarrow{AM} + \overrightarrow{AN} = \overrightarrow{AQ}$, an
 
 **Affine subspace**: Let $(\mathscr{A}, V, \theta)$ be an Affine space. Let $\mathscr{F} \subseteq \mathscr{A}$. $\mathscr{F}$ is called an _affine subspace_ if either $\mathscr{F} = \emptyset$ or $\exists A \in \mathscr{F}$ s.t $\theta_A(\mathscr{F})$ is a vector subspace. Note: $\theta_A = \theta(A, \cdot)$
 
-**Prop**: Let $(\mathscr{A}, V, \theta)$ be an affine space structure. Let $W$ be a vector subspace of $V$. Fix $A \in \mathscr{A}$. $\exists !$ Affine subspace directed by $W$, $\mathscr{F} \subseteq \mathscr{A}$ passing through $A$.
+**Proposition**: Let $(\mathscr{A}, V, \theta)$ be an affine space structure. Let $W$ be a vector subspace of $V$. Fix $A \in \mathscr{A}$. $\exists !$ Affine subspace directed by $W$, $\mathscr{F} \subseteq \mathscr{A}$ passing through $A$.
 **Proof**: Let  $\mathscr{F} := \{ M \in \mathscr{A} : \overrightarrow{AM} \in W \}$
-Clearly $\mathscr{F}$ is 
-
+Clearly $\mathscr{F}$ is an affine space with $W$ as the vector space and passing through $A$.
 
 **Ex**: An affine space of dimension 0 contains a unique point.
 
-**Thm**: Any intersection of affine subspaces is an affine subspace.
+**Theorem**: Any intersection of affine subspaces is an affine subspace.
 **Proof**: Let $(\mathscr{A}, V, \theta)$ be an affine space. $\{A_i\}_{i \in I}$ be affine. $\mathscr{F} = \bigcap A_i$, $\mathscr{F} \neq \emptyset$. Fix $A \in \mathscr{F}$. $\theta_A(A_i)$ is a vector subspace of $V$. Then $\theta_A(\mathscr{F})$ is also a vector subspace.
 
-**Prop**: The image of an affine subspace by an affine mapping is an affine subspace.
+**Proposition**: The image of an affine subspace by an affine mapping is an affine subspace.
 **Proof**: $T(\theta_A(\mathscr{F})) \leftarrow$ vector subspace of $V' \implies \theta'_{\varphi(A)}(\varphi(\mathscr{F}))$ is also vector subspace $\implies \varphi(\mathscr{F})$ is an affine subspace.
 
 **Corr**: Affine mappings sends straight line to straight line.
