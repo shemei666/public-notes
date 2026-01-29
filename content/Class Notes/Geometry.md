@@ -13,6 +13,13 @@ $\theta: \mathscr{A} \times \mathscr{A} \to V$, $\theta: (P, Q) \mapsto \overrig
 (ii) elements of $\mathscr{A}$ are called _points_ of $\mathscr{A}$.
 (iii) $\dim(\mathscr{A}) = \dim(V)$
 
+**Examples:**
+(2) Any vector space has the natural structure of an affine space: the mapping $\Theta: E \times E \to E$ is simply the mapping that associates with the ordered pair $(u, v)$ the vector $v - u$.
+(3) If $\mathcal{E}_1$ and $\mathcal{E}_2$ are two affine spaces directed respectively by $E_1$ and $E_2$, the Cartesian product $\mathcal{E}_1 \times \mathcal{E}_2$ is an affine space directed by $E_1 \times E_2$: the mapping
+$$ \Theta: (\mathcal{E}_1 \times \mathcal{E}_2) \times (\mathcal{E}_1 \times \mathcal{E}_2) \to E_1 \times E_2 $$
+is the one that associates, with the ordered pair $((A_1, A_2), (B_1, B_2))$, the ordered pair of vectors $(\overrightarrow{A_1 B_1}, \overrightarrow{A_2 B_2})$.
+
+
 ---
 
 Let $V$ be a vector space. Take $\mathscr{A} := V$, $\theta: V \times V \to V$, $(v, w) \mapsto w - v$
