@@ -20,12 +20,6 @@ $$ \Theta: (\mathcal{E}_1 \times \mathcal{E}_2) \times (\mathcal{E}_1 \times \ma
 is the one that associates, with the ordered pair $((A_1, A_2), (B_1, B_2))$, the ordered pair of vectors $(\overrightarrow{A_1 B_1}, \overrightarrow{A_2 B_2})$.
 
 
----
-
-Let $V$ be a vector space. Take $\mathscr{A} := V$, $\theta: V \times V \to V$, $(v, w) \mapsto w - v$
-
-**Vectorization of an affine space**
-$B, C \in \mathscr{A}$, define $B+C=P$ if $\overrightarrow{AB} + \overrightarrow{AC} = \overrightarrow{AP}$
 
 **Properties:** Chasles' relation gives directly $\overrightarrow{AA} = 0$ and $\overrightarrow{AB} = -\overrightarrow{BA}$.
 
@@ -39,6 +33,15 @@ $$ B = A + u. $$
 This notation is consistent since we have
 $$ (A + u) + v = A + (u + v) $$
 (this is a translation of Chasles' relation).
+
+---
+
+Let $V$ be a vector space. Take $\mathscr{A} := V$, $\theta: V \times V \to V$, $(v, w) \mapsto w - v$
+
+**Vectorization of an affine space**
+$B, C \in \mathscr{A}$, define $B+C=P$ if $\overrightarrow{AB} + \overrightarrow{AC} = \overrightarrow{AP}$
+
+
 
 **Affine subspace**: Let $(\mathscr{A}, V, \theta)$ be an Affine space. Let $\mathscr{F} \subseteq \mathscr{A}$. $\mathscr{F}$ is called an _affine subspace_ if either $\mathscr{F} = \emptyset$ or $\exists A \in \mathscr{F}$ s.t $\theta_A(\mathscr{F})$ is a vector subspace. Note: $\theta_A = \theta(A, \cdot)$
 
