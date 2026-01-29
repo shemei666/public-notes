@@ -48,6 +48,8 @@ Clearly $\mathscr{F}$ is an affine space with $W$ as the vector space and passin
 ![[Pasted image 20260129210918.png]]
 
 ## Affine Mappings
+![[Pasted image 20260129211436.png]]
+
 
 **Proposition**: The image of an affine subspace by an affine mapping is an affine subspace.
 **Proof**: $T(\theta_A(\mathscr{F})) \leftarrow$ vector subspace of $V' \implies \theta'_{\varphi(A)}(\varphi(\mathscr{F}))$ is also vector subspace $\implies \varphi(\mathscr{F})$ is an affine subspace.
