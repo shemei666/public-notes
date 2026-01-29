@@ -363,4 +363,43 @@ $$
 Given $F(x,t)$ we can also use $\widetilde{F}(x,t) = F(x,\rho(t))$ to compose 2 homotopies.
 
 
-![[Pasted image 20260129144015.png]]
+Some examples of homotopy (in $\mathbb{R}^n$):
+
+*   $X \xrightarrow{f} \mathbb{R}^n$, $f_t(x) = f(x) + t\vec{v}$, with $\vec{v} \in \mathbb{R}^n$.
+    This is a homotopy from $f_0 = f$ to $f_1 = f+\vec{v}$ (translation).
+*   $f_t(x) = tf(x)$. This is a homotopy from $f_0=0$ to $f_1=f$ (dilation/scaling).
+    (Note: The blackboard says $f_0=f$ to $f_1=0$ if it was $(1-t)f$, but $tf(x)$ goes from 0 to f. The blackboard text says "Straight line homotopy between f & g... $F(x,t) = (1-t)f + tg$". Let's stick to the straight line one for general case).
+*   Straight line homotopy between $f$ and $g$:
+    $$
+    F(x,t) = (1-t)f + tg
+    $$
+
+$X=S^1 \hookrightarrow \mathbb{R}^2$.
+Two circles corresponding to two embeddings of $S^1$ in $\mathbb{R}^2$.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+    % Translation
+    \begin{scope}[xshift=0cm]
+        \draw (0,2) ellipse (0.5 and 0.2);
+        \draw (0,0) ellipse (0.5 and 0.2);
+        \draw (-0.5,2) -- (-0.5,0);
+        \draw (0.5,2) -- (0.5,0);
+        \node at (0, -0.5) {Translation};
+        \draw[->, dotted] (0.7, 0.5) -- (0.7, 1.5);
+    \end{scope}
+
+    % Dilation
+    \begin{scope}[xshift=4cm, yshift=1cm]
+        \draw (0,0) circle (1);
+        \draw (0,0) circle (0.7);
+        \draw (0,0) circle (0.4);
+        \draw (0,0) circle (0.1);
+        \node at (0, -1.5) {Dilation};
+    \end{scope}
+
+\end{tikzpicture}
+\end{document}
+```
