@@ -112,7 +112,7 @@ such that $\overrightarrow{\varphi(A)\varphi(B)} = \overrightarrow{AB}$ for all 
 
 
 **Proposition**: The image of an affine subspace by an affine mapping is an affine subspace.
-**Proof**: $T(\theta_A(\mathscr{F})) \leftarrow$ vector subspace of $V' \implies \theta'_{\varphi(A)}(\varphi(\mathscr{F}))$ is also vector subspace $\implies \varphi(\mathscr{F})$ is an affine subspace.
+**Proof**: Let $\varphi : \mathcal{E} \to \mathcal{E}'$ be an affine mapping. Let $\mathcal{F} \subset \mathcal{E}$ be an affine subspace of direction $F$. If $\mathcal{F}$ is empty, its image by $\varphi$ is empty and, in particular, this is an affine subspace. Otherwise, let $A$ be a point of $\mathcal{F}$. It is clear that $\varphi(\mathcal{F})$ is the affine subspace of $\mathcal{E}'$ directed by $\vec{\varphi}(F)$ and passing through $\varphi(A)$. 
 
 **Corollary:** Affine mappings sends straight line to straight line.
 
