@@ -32,7 +32,7 @@ $$ \overrightarrow{AB} - \overrightarrow{A'B'} = \overrightarrow{AA'} - \overrig
 $$ B = A + u. $$
 ## Vectorization of an affine space
 Fix $A \in \mathcal{E}$. $\mathcal{E}$ becomes a vector space $\mathcal{E}_A$ via the bijection $M \mapsto \overrightarrow{AM}$.
-Addition is defined by $\overrightarrow{AM} + \overrightarrow{AN} = \overrightarrow{A(M+N)}$. Zero vector is $A$.
+$M+N=Q \iff \overrightarrow{AM} + \overrightarrow{AN} = \overrightarrow{AQ}$. Zero vector is $A$.
 
 
 
