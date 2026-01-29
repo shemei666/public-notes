@@ -45,12 +45,68 @@ Clearly $\mathscr{F}$ is an affine space with $W$ as the vector space and passin
 **Theorem**: Any intersection of affine subspaces is an affine subspace.
 **Proof**: Let $(\mathscr{A}, V, \theta)$ be an affine space. $\{A_i\}_{i \in I}$ be affine.  $\mathscr{F} = \bigcap A_i$, If $\mathscr{F}= \varnothing$,then we are done, Otherwise if $\mathscr{F} \neq \emptyset$, fix $A \in \mathscr{F}$. $\theta_A(A_i)$ is a vector subspace of $V$. Then $\theta_A(\mathscr{F})$ is also a vector subspace.
 
-![[Pasted image 20260129210918.png]]
+**Definition 1.11.** The $k+1$ points $A_0, \dots, A_k$ are *affinely independent* if the dimension of the space $\langle A_0, \dots, A_k \rangle$ they span is $k$. If $k = \dim \mathcal{E}$, it is said that $(A_0, \dots, A_k)$ is an *affine frame* of $\mathcal{E}$.
 
 ## Affine Mappings
-![[Pasted image 20260129211436.png]]
+**Definition 2.1.** Let $\mathcal{E}$ and $\mathcal{F}$ be two affine spaces directed respectively by $E$ and $F$. A mapping $\varphi: \mathcal{E} \to \mathcal{F}$ is said to be *affine* if there exists a point $O$ in $\mathcal{E}$ and a linear mapping $f: E \to F$ such that
+$$ \forall M \in \mathcal{E}, \quad f(\overrightarrow{OM}) = \overrightarrow{\varphi(O)\varphi(M)}. $$
 
-![[Pasted image 20260129213630.png]]
+(4) Assume that $\mathcal{E} = \mathcal{F}$. The affine mappings whose associated linear mapping is $\operatorname{Id}_E$ are the mappings
+$$ \varphi: \mathcal{E} \to \mathcal{E} $$
+such that $\overrightarrow{\varphi(A)\varphi(B)} = \overrightarrow{AB}$ for all $A$ and $B$ in $\mathcal{E}$. The parallelogram rule then gives $\overrightarrow{A\varphi(A)} = \overrightarrow{B\varphi(B)}$ for all $A$ and $B$. In other words, the vector $\overrightarrow{M\varphi(M)}$ is a constant vector $u$. It is said that $\varphi$ is the *translation* of vector $u$. It is denoted by $t_u$.
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
+    % Translation
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (1.5,1);
+    \coordinate (u) at (3,1); % Vector u = (3,1)
+
+    \coordinate (Ap) at ($(A)+(u)$);
+    \coordinate (Bp) at ($(B)+(u)$);
+
+    \draw (A) -- (B);
+    \draw (Ap) -- (Bp);
+    \draw[->] (A) -- (Ap) node[midway, below] {$u$};
+    \draw[->] (B) -- (Bp);
+
+    \filldraw (A) circle (1pt) node[below left] {$A$};
+    \filldraw (B) circle (1pt) node[above left] {$B$};
+    \filldraw (Ap) circle (1pt) node[right] {$\varphi(A)$};
+    \filldraw (Bp) circle (1pt) node[right] {$\varphi(B)$};
+\end{tikzpicture}
+\end{document}
+```
+
+(5) Let $O$ be a point, $\lambda$ be a scalar and $\varphi$ be the mapping defined by $\overrightarrow{O\varphi(M)} = \lambda \overrightarrow{OM}$. This is an affine mapping. The associated linear mapping is the (linear) dilatation of ratio $\lambda$. The point $O$ is fixed, $\varphi$ is called the (central) *dilatation* of center $O$ and ratio $\lambda$ and it is denoted by $h(O, \lambda)$.
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
+    % Dilatation
+    \coordinate (O) at (0,0);
+    \filldraw (O) circle (1pt) node[below] {$O$};
+
+    \coordinate (A) at (2,0.5);
+    \coordinate (B) at (1.5,2);
+
+    \coordinate (Ap) at (4,1); % lambda = 2
+    \coordinate (Bp) at (3,4);
+
+    \draw (O) -- (Ap);
+    \draw (O) -- (Bp);
+    
+    \draw[dashed] (A) -- (B);
+    \draw (Ap) -- (Bp);
+
+    \filldraw (A) circle (1pt) node[below right] {$A$};
+    \filldraw (B) circle (1pt) node[left] {$B$};
+    \filldraw (Ap) circle (1pt) node[below right] {$\varphi(A)$};
+    \filldraw (Bp) circle (1pt) node[left] {$\varphi(B)$};
+\end{tikzpicture}
+\end{document}
+```
 
 
 **Proposition**: The image of an affine subspace by an affine mapping is an affine subspace.
