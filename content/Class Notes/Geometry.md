@@ -31,7 +31,10 @@ $$ \overrightarrow{AB} - \overrightarrow{A'B'} = \overrightarrow{AA'} - \overrig
 **Remark:** If $A$ is a point of the affine space $\mathcal{E}$ and if $u$ is a vector of the vector space $E$ underlying it, the unique point $B$ of $\mathcal{E}$ such that $\overrightarrow{AB} = u$ is sometimes denoted
 $$ B = A + u. $$
 ## Vectorization of an affine space
-$B, C \in \mathscr{A}$, define $B+C=P$ if $\overrightarrow{AB} + \overrightarrow{AC} = \overrightarrow{AP}$
+Once a point $A$ has been chosen in an affine space $\mathcal{E}$, it is possible to give $\mathcal{E}$ the structure of a vector space, denoted $\mathcal{E}_A$. The mapping $\Theta_A : M \mapsto \overrightarrow{AM}$ is a bijection carrying the vector structure of $E$ to $\mathcal{E}$.
+
+$M, N \in \mathcal{E}$, define $M+N=Q$ if $\overrightarrow{AM} + \overrightarrow{AN} = \overrightarrow{AQ}$.
+The point $A$ becomes the zero vector of $\mathcal{E}_A$ (since $\overrightarrow{AA} = 0$).
 
 
 
