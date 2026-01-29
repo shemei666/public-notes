@@ -406,5 +406,15 @@ Homotopy between two circles one inside the other
 \end{document}
 ```
 
-![[Pasted image 20260129144705.png]]
-![[Pasted image 20260129145241.png]]
+A property $P$ of maps (of manifolds) is said to be stable (under homotopy) if for any smooth map $f:X\to Y$ satisfying $P$, whenever $f_t:X\to Y$ is a smooth homotopy with $f_0=f$, there exists an $\varepsilon > 0$ such that $f_t$ satisfies $P$ $\forall t < \varepsilon$.
+
+Quick Observation: Thus $f$ satisfies $P \implies$ 'small' deformation of $f$ satisfies $P$.
+Given $F(x,t) = f_t(x)$ on $U \subseteq \mathbb{R}^k$ open $(df_t)$.
+
+**Homotopy & Stability Theorem**: The following classes of smooth maps from a **compact manifold** $X$ to a manifold $Y$ are stable:
+(a) local diffeos
+(b) immersions
+(c) submersions
+(d) maps transversal to a fixed **closed submanifold** $Z \subseteq Y$
+(e) embeddings
+(f) diffeomorphisms
