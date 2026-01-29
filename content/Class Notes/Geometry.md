@@ -32,10 +32,7 @@ $$ \overrightarrow{AB} - \overrightarrow{A'B'} = \overrightarrow{AA'} - \overrig
 $$ B = A + u. $$
 ## Vectorization of an affine space
 Fix $A \in \mathcal{E}$. $\mathcal{E}$ becomes a vector space $\mathcal{E}_A$ via the bijection $M \mapsto \overrightarrow{AM}$.
-$M+N=Q \iff \overrightarrow{AM} + \overrightarrow{AN} = \overrightarrow{AQ}$. Zero vector is $A$.
-
-
-
+$M+N=Q \iff \overrightarrow{AM} + \overrightarrow{AN} = \overrightarrow{AQ}$, and hence $\overrightarrow{AA}$ becomes $0$
 
 **Affine subspace**: Let $(\mathscr{A}, V, \theta)$ be an Affine space. Let $\mathscr{F} \subseteq \mathscr{A}$. $\mathscr{F}$ is called an _affine subspace_ if either $\mathscr{F} = \emptyset$ or $\exists A \in \mathscr{F}$ s.t $\theta_A(\mathscr{F})$ is a vector subspace. Note: $\theta_A = \theta(A, \cdot)$
 
