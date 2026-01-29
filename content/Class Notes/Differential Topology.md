@@ -381,26 +381,29 @@ Two circles corresponding to two embeddings of $S^1$ in $\mathbb{R}^2$.
 \usepackage{tikz}
 \begin{document}
 \begin{tikzpicture}
-    % Translation
-    \begin{scope}[xshift=0cm]
-        \draw (0,2) ellipse (0.5 and 0.2);
-        \draw (0,0) ellipse (0.5 and 0.2);
-        \draw (-0.5,2) -- (-0.5,0);
-        \draw (0.5,2) -- (0.5,0);
-        \node at (0, -0.5) {Translation};
-        \draw[->, dotted] (0.7, 0.5) -- (0.7, 1.5);
-    \end{scope}
-
-    % Dilation
-    \begin{scope}[xshift=4cm, yshift=1cm]
-        \draw (0,0) circle (1);
-        \draw (0,0) circle (0.7);
-        \draw (0,0) circle (0.4);
-        \draw (0,0) circle (0.1);
-        \node at (0, -1.5) {Dilation};
-    \end{scope}
-
+    \draw (0,2) ellipse (0.5 and 0.2);
+    \draw (0,0) ellipse (0.5 and 0.2);
+    \draw (-0.5,2) -- (-0.5,0);
+    \draw (0.5,2) -- (0.5,0);
+    \node at (0, -0.5) {Translation};
+    \draw[->, dotted] (0.7, 0.5) -- (0.7, 1.5);
 \end{tikzpicture}
 \end{document}
 ```
 
+Homotopy between two circles one inside the other
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+    \draw (0,0) circle (1);
+    \draw (0,0) circle (0.7);
+    \draw (0,0) circle (0.4);
+    \draw (0,0) circle (0.1);
+    \node at (0, -1.5) {Dilation};
+\end{tikzpicture}
+\end{document}
+```
+
+![[Pasted image 20260129144705.png]]
