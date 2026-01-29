@@ -407,3 +407,4 @@ Homotopy between two circles one inside the other
 ```
 
 ![[Pasted image 20260129144705.png]]
+![[Pasted image 20260129145241.png]]
