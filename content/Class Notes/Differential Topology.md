@@ -218,7 +218,7 @@ Thus $f^{-1}(D)$ is either empty or a manifold of $n^{2} - \frac{n(n+1)}{2} = \f
 
 Pick $D=I$ identity matrix. Then $f^{-1}I = O(n)$ the set of all orthogonal matrices.
 
-For any $P \in O(n)$, we get $T_{P}(O(n)) = \ker(df_{P})$.
+For any $P \in O(n)$, we get $T_{P}(O(n)) = \ker(df_{P})$
 In particular, if $P = O(n)$, we get $T_{I}(O(n)) = \ker(B \mapsto B + B^{t}) = Sk(n)$
 
 **Exercise:**
@@ -245,7 +245,7 @@ $$
 T_{x}X \xrightarrow{df_{x}}  T_{y}Y \xtwoheadrightarrow{dg_{y}} T_{0} \mathbb{R}^{l} = \mathbb{R}^{l}
 $$
 
-It follows that $f^{-1} (Z \cap Y_{1} = Z_{1})  =f^{-1} g^{-1}(0) = (gf)^{-1} (0)$. Thus a sufficient criterion for $f^{-1} Z$ to be a manifold is $0$ being a regular value for $gf$, $d(gf)_{x}$ is onto forall $x \in f^{-1} Z_{1}$
+It follows that $f^{-1} (Z \cap Y_{1} = Z_{1})  =f^{-1} g^{-1}(0) = (gf)^{-1} (0)$. Thus a sufficient criterion for $f^{-1} Z$ to be a manifold is $0$ being a regular value for $gf$, $d(gf)_{x}$ is onto for all $x \in f^{-1} Z_{1}$
 
 **Linear algebra fact:** $U \xrightarrow{\alpha} V \xtwoheadrightarrow{\beta} W$ linear map then $\beta \circ \alpha$ is onto $\iff im(\alpha) + \ker(\beta) = V$
 
@@ -329,9 +329,24 @@ F|_{X\times \{ 0 \}} = f \quad F|_{X\times \{ 1 \}} = g
 $$
 We also write $F(x,t)$ as $f_{t}(x)$. Then $f_{0}(x)=f,f_{1}(x)=g$ and $f_{t}(x)$ denote intermediate functions. Thus as $t$ goes from $0$ to $1$, $f$ deforms to $g$.
 
-Fix $X,Y$. We write $f \sim g$ if such an $F$ exists. (refer **[[Algebraic Topology|AlgTop]]**)
-(We also write $f \overset{F}{\sim} g$ sometimes).
+Fix $X,Y$. We write $f \sim g$ if such an $F$ exists. (refer **[[Algebraic Topology|Algebraic Topology]]**)
+(We also write $f \overset{F}{\sim} g$)
 
+We given the following properties:
 1. $f \sim f$: Use $f_{t} \equiv f, \forall t$. ($X \times I \to Y, (x,t) \mapsto f(x)$)
 2. $f \sim g \implies g \sim f$: Use $G(x,t) = F(x, 1-t)$ for going from $g$ to $f$.
-3. $f \sim g \text{ \& } g \sim h \implies f \sim h$: 
+3. $f \sim g \text{ \& } g \sim h \implies f \sim h$
+
+### Bump functions
+$$
+\alpha(t) = \begin{cases}
+e ^{- 1/t^{2}}  & t\geq 0  \\
+0  & t \leq{0}
+\end{cases}
+$$
+$\alpha$ is continuous and 
+$$
+\lim_{ t \to 0 } \frac{e^{-1/t^{2}}}{ t^{n}} = 0 \quad \forall n \in \mathbb{N}
+$$
+We have $\alpha^{(n)}(0) =0$ makes $\alpha$ smooth,
+
