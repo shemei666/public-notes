@@ -304,6 +304,6 @@ Since $h$ is analytic, $f = u + iv$ is analytic.
 \end{tikzpicture}
 \end{document}
 ```
-
+**Def:** We define integration on a path $C \subseteq \Omega$ parametrized by 
 
 
