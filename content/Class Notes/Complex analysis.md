@@ -211,3 +211,5 @@ $$
 
 ## Harmonic Functions
 
+
+![[Pasted image 20260130144802.png]]
