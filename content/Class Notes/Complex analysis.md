@@ -211,5 +211,5 @@ $$
 
 ## Harmonic Functions
 
-
+![[IMG_20260130_144714.jpg]]
 ![[Pasted image 20260130144802.png]]
