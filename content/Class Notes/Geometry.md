@@ -603,6 +603,12 @@ Consider 3-dimensional Euclidean affine space.
 **Def:**  The convex hull of finitely many non-coplanar points is called a convex polyhedron.
 
 ## Topology on affine space
-![[IMG_20260130_163959.jpg]]
+Let $(\mathcal{A}, V, \theta)$ be an affine space. Fix $O \in \mathcal{A}$.
+The map $\Theta_O: \mathcal{A} \to V$ defined by $P \mapsto \overrightarrow{OP}$ is a bijection.
+**Def:** $U \subseteq \mathcal{A}$ is open iff $\Theta_O(U) = \{ \overrightarrow{OA} \mid A \in U \}$ is open in $V$.
+
+**Exercise:** Any convex polyhedron is the intersection of a finite number of closed half-spaces.
+*Sketch of proof:* For any $x \notin C$, $\exists$ a linear functional $l_x: \mathbb{R}^n \to \mathbb{R}$ such that
+$l_x(y) \leq 0$ for all $y \in C$ and $l_x(x) > 0$.
 
 
