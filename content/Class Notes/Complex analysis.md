@@ -124,15 +124,15 @@ $\sum_{n\geq 1}^{} \frac{z^{n}}{n!}$ $R = \infty$
    2.  **Term-by-Term Differentiation**:
        We want to show $f'(z) = g(z)$. Fix $z \in D_R(z_0)$ and let $h$ be small enough so $z+h \in D_R(z_0)$.
        Consider the difference quotient:
-       $$ \Delta = \left| \frac{f(z+h) - f(z)}{h} - g(z) \right| = \left| \sum_{n=0}^\infty a_n \left( \frac{(z-z_0+h)^n - (z-z_0)^n}{h} - n(z-z_0)^{n-1} \right) \right| $$
+%%        $$ \Delta = \left| \frac{f(z+h) - f(z)}{h} - g(z) \right| = \left| \sum_{n=0}^\infty a_n \left( \frac{(z-z_0+h)^n - (z-z_0)^n}{h} - n(z-z_0)^{n-1} \right) \right| $$
        Using the inequality $\left| \frac{(a+b)^n - a^n}{b} - n a^{n-1} \right| \le \frac{n(n-1)}{2} (|a|+|b|)^{n-2} |b|$, we set $a=z-z_0, b=h$.
        For $|z-z_0| \le r < R$ and small $|h|$, we can bound the terms by a convergent series (related to $f''$).
        As $h \to 0$, the tail sums vanish, proving $\lim_{h \to 0} \Delta = 0$. Thus $f'(z) = g(z)$.
 
 **Theorem (Infinite Differentiability)**:
-A power series $f(z) = \sum a_n (z-z_0)^n$ is infinitely complex differentiable inside its radius of convergence $R$.
+A power series $f(z) = \sum a_n (z-z_0)^n$ is infinitely complex differentiable inside its radius of convergence $R$. %%
 
-**Proof**:
+%% **Proof**:
 From the theorem above, $f'(z)$ exists and is given by a power series with the same radius $R$.
 Since $f'(z)$ is itself a power series with radius $R$, it is also holomorphic on $D_R(z_0)$.
 
@@ -141,7 +141,7 @@ Applying the result recursively:
 2.  $f'$ is holomorphic $\implies f'' = (f')'$ exists and is a power series with radius $R$.
 3.  By induction, $f^{(k)}$ exists for all $k \in \mathbb{N}$ and is a power series with radius of convergence $R$.
 Thus, $f$ is infinitely differentiable.
-
+ %%
 
 **Proposition:** Let $P(z)= \sum_{n\geq_{0}}^{} a_{n}(z-z_0)^{n}$ be a power series in $\mathbb{C}$ with radius of convergence  $R>0$. Let $w_{0} \in D(z_{0},R)$.
 
@@ -185,3 +185,9 @@ $$
 where $z \in D_{w_{0}}(R')$, $R' = R - \lvert z_{0} - w_{0} \rvert$
 
 **Proof:**
+
+---
+LOG + CR
+
+---
+
