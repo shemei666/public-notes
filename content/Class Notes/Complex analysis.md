@@ -232,4 +232,26 @@ Similarly $\frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2}
 **Harmonic Functions**
 Let $u: \Omega \to \mathbb{R}$ and let partial derivatives of $u$ up to 2nd order exist, then $u$ is *harmonic* if $\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0$ on $\Omega$.
 
-![[IMG_20260130_151235.jpg]]![[IMG_20260130_151241.jpg]]
+Let $\Omega = \mathbb{D} = \{ z \in \mathbb{C} : |z| < 1 \}$.
+$u: \mathbb{D} \to \mathbb{R}$ is harmonic $\implies \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0$ on $\Omega$.
+
+Let assume $\exists v: \Omega \to \mathbb{R}$ s.t. $f = u + iv$ is analytic.
+$$ g = f' = u_x + i v_x = u_x - i u_y \quad (\text{using CR}) $$
+
+$$
+\begin{align*}
+U &= \text{Re } g = u_x \\
+V &= \text{Im } g = -u_y
+\end{align*}
+$$
+$$
+\begin{align*}
+U_x &= u_{xx} \\
+V_y &= -u_{yy}
+\end{align*}
+$$
+We have $U_x = V_y$ because $u_{xx} + u_{yy} = 0$.
+
+Define
+$$ h(z) = \int_{[0,z]} g(w) dw $$
+One can prove $h$ is analytic and $h'(z) = g(z)$.
