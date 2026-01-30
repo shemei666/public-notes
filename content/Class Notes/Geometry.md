@@ -603,3 +603,6 @@ Consider 3-dimensional Euclidean affine space.
 **Def:**  The convex hull of finitely many non-coplanar points is called a convex polyhedron.
 
 ## Topology on affine space
+![[IMG_20260130_163959.jpg]]
+
+
