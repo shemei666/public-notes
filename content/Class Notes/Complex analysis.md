@@ -211,5 +211,23 @@ $$
 
 ## Harmonic Functions
 
-![[IMG_20260130_144714.jpg]]
-![[Pasted image 20260130144802.png]]
+$$
+f: \Omega \to \mathbb{C} \text{ analytic}
+$$
+$$
+f = u + iv
+$$
+$$
+\frac{\partial u}{\partial x} = \frac{\partial v}{\partial y} \implies \frac{\partial^2 u}{\partial x^2} = \frac{\partial^2 v}{\partial x \partial y}
+$$
+$$
+\frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x} \implies \frac{\partial^2 u}{\partial y^2} = -\frac{\partial^2 v}{\partial y \partial x}
+$$
+Thus,
+$$
+\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0 \quad \text{if } \frac{\partial^2 v}{\partial x \partial y} \text{ and } \frac{\partial^2 v}{\partial y \partial x} \text{ are continuous.}
+$$
+Similarly $\frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2} = 0$.
+
+**Harmonic Functions**
+Let $u: \Omega \to \mathbb{R}$ and let partial derivatives of $u$ up to 2nd order exist, then $u$ is *harmonic* if $\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0$ on $\Omega$.
