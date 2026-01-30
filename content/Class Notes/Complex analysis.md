@@ -193,5 +193,5 @@ LOG + CR
 
 We define 2 differential operators
 $$
-\frac{\partial}{\partial z} = \frac{1}{2} \left( \frac{\partial}{\partial x}- i \frac{\partial}{\partial z} \right)
+\frac{\partial}{\partial z} = \frac{1}{2} \left( \frac{\partial}{\partial x} - i \frac{\partial}{\partial y} \right) \quad \text{and} \quad \frac{\partial}{\partial \bar{z}} = \frac{1}{2} \left( \frac{\partial}{\partial x} + i \frac{\partial}{\partial y} \right)
 $$
