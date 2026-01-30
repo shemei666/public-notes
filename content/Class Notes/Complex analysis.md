@@ -272,11 +272,12 @@ Since $h$ is analytic, $f = u + iv$ is analytic.
 **Exercise:** Show that $\log \lvert z \rvert$ is harmonic in $\mathbb{C}\setminus \{ 0 \}$ and conclude that $\log \lvert z \rvert$ can't have any harmonic conjugate in $\mathbb{C} \setminus \{ 0 \}$ 
 
 ## Complex Integration
+
 ```tikz
 \usepackage{tikz}
-\usetikzlibrary{arrows.meta}
+\usepackage{amssymb}
 \begin{document}
-\begin{tikzpicture}[>=Stealth, scale=1]
+\begin{tikzpicture}[>=stealth, scale=0.8]
     % Interval [a,b]
     \draw[-] (0,0) -- (3,0);
     \draw[thick] (0.5, 0.1) -- (0.5, -0.1) node[below] {$a$};
@@ -299,8 +300,10 @@ Since $h$ is analytic, $f = u + iv$ is analytic.
     \draw[->, cyan, thick] (1.5, 0.5) to[bend left=30] node[midway, above, black] {$f$} (5.5, 1.5);
 
     % Text
-    \node[below, align=center] at (5, -1) {$f$ be diff / piecewise diff, $\dots, f'(t) \neq 0 \forall t$};
 
 \end{tikzpicture}
 \end{document}
 ```
+
+
+
