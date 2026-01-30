@@ -191,3 +191,7 @@ LOG + CR
 
 ---
 
+We define 2 differential operators
+$$
+\frac{\partial}{\partial z} = \frac{1}{2} \left( \frac{\partial}{\partial x}- i \frac{\partial}{\partial z} \right)
+$$
