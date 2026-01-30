@@ -255,3 +255,4 @@ We have $U_x = V_y$ because $u_{xx} + u_{yy} = 0$.
 Define
 $$ h(z) = \int_{[0,z]} g(w) dw $$
 One can prove $h$ is analytic and $h'(z) = g(z)$.
+![[IMG_20260130_151908.jpg]]
