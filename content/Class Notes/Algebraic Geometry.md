@@ -1,5 +1,5 @@
 ---
-publish: true
+publish: false
 ---
 
 **(2.5) Lemma.** Suppose that $k$ is an infinite field, and let $F \in S_d$.
