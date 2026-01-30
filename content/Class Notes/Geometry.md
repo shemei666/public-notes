@@ -595,3 +595,10 @@ $$
 ```
 
 **Proof:** Let $D$ be the half-sphere containing $T$ determined by the great circle opposite to the angle $\alpha$.
+
+
+## Three dimensional Euclidean affine space
+
+Consider 3-dimensional Euclidean affine space.
+**Def:**  The convex hull of finitely many non-coplanar points is called a convex polyhedron.
+
