@@ -611,8 +611,7 @@ The map $\Theta_O: \mathcal{A} \to V$ defined by $P \mapsto \overrightarrow{OP}$
 *Sketch of proof:* For any $x \notin C$, $\exists$ a linear functional $l_x: \mathbb{R}^n \to \mathbb{R}$ such that
 $l_x(y) \leq 0$ for all $y \in C$ and $l_x(x) > 0$.
 
-
-
 **Euler's Formula:** For any convex polyhedron, the numbers $F$ of faces, $E$ of edges, and $V$ of vertices satisfy the relation $F-E+V = 2$.
 
 [FACT: Any convex polyhedron is homeomorphic to sphere]
+
