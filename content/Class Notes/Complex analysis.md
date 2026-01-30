@@ -195,3 +195,19 @@ We define 2 differential operators
 $$
 \frac{\partial}{\partial z} = \frac{1}{2} \left( \frac{\partial}{\partial x} - i \frac{\partial}{\partial y} \right) \quad \text{and} \quad \frac{\partial}{\partial \bar{z}} = \frac{1}{2} \left( \frac{\partial}{\partial x} + i \frac{\partial}{\partial y} \right)
 $$
+If $f = u + iv$ is analytic, it satisfies the Cauchy-Riemann equations $u_x = v_y$ and $u_y = -v_x$.
+
+$$
+\begin{align*}
+\frac{\partial f}{\partial \bar{z}} &= \frac{1}{2} \left( (u_x + i v_x) + i (u_y + i v_y) \right) \\
+&= \frac{1}{2} \left( (u_x - v_y) + i (v_x + u_y) \right) \\
+&= 0 \\
+\frac{\partial f}{\partial z} &= \frac{1}{2} \left( (u_x + i v_x) - i (u_y + i v_y) \right) \\
+&= \frac{1}{2} \left( (u_x + v_y) + i (v_x - u_y) \right) \\
+&= u_x + i v_x \\
+&= f'(z)
+\end{align*}
+$$
+
+## Harmonic Functions
+
