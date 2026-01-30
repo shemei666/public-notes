@@ -291,13 +291,13 @@ Since $h$ is analytic, $f = u + iv$ is analytic.
         
         % Curve
         \draw[thick] (-0.5, -0.5) .. controls (0.5, 0.5) and (1.5, -0.5) .. (2.5, 0.5);
-        \filldraw (-0.5, -0.5) circle (1pt) node[left] {$f(a)$};
-        \filldraw (2.5, 0.5) circle (1pt) node[right] {$f(b)$};
-        \node at (1.2, 0.2) {$f(I)$};
+        \filldraw (-0.5, -0.5) circle (1pt) node[left] {$\gamma(a)$};
+        \filldraw (2.5, 0.5) circle (1pt) node[right] {$\gamma(b)$};
+        \node at (1.2, 0.2) {$\gamma(I)$};
     \end{scope}
 
     % Mapping arrow
-    \draw[->, cyan, thick] (1.5, 0.5) to[bend left=30] node[midway, above, black] {$f$} (5.5, 1.5);
+    \draw[->, cyan, thick] (1.5, 0.5) to[bend left=30] node[midway, above, black] {$\gamma$} (5.5, 1.5);
 
     % Text
 
@@ -306,7 +306,8 @@ Since $h$ is analytic, $f = u + iv$ is analytic.
 ```
 **Def:** We define integration on a path $\mathscr{C} \subseteq \Omega$ parametrized by a piecewise smooth $\gamma$ and $f'(t) \neq 0$,
 $$
-\int_{\mathscr{C}} f(z)
+\int_{\mathscr{C}} f(z) = \int_{a}^{b} f(t) \gamma'(t) dt
 $$
+
 
 
