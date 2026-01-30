@@ -231,3 +231,4 @@ Similarly $\frac{\partial^2 v}{\partial x^2} + \frac{\partial^2 v}{\partial y^2}
 
 **Harmonic Functions**
 Let $u: \Omega \to \mathbb{R}$ and let partial derivatives of $u$ up to 2nd order exist, then $u$ is *harmonic* if $\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0$ on $\Omega$.
+
