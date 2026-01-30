@@ -272,4 +272,35 @@ Since $h$ is analytic, $f = u + iv$ is analytic.
 **Exercise:** Show that $\log \lvert z \rvert$ is harmonic in $\mathbb{C}\setminus \{ 0 \}$ and conclude that $\log \lvert z \rvert$ can't have any harmonic conjugate in $\mathbb{C} \setminus \{ 0 \}$ 
 
 ## Complex Integration
-![[IMG_20260130_153257.jpg]]
+```tikz
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+\begin{tikzpicture}[>=Stealth, scale=1]
+    % Interval [a,b]
+    \draw[-] (0,0) -- (3,0);
+    \draw[thick] (0.5, 0.1) -- (0.5, -0.1) node[below] {$a$};
+    \draw[thick] (2.5, 0.1) -- (2.5, -0.1) node[below] {$b$};
+    \draw[thick] (0.5,0) -- (2.5,0);
+    
+    % Domain Omega
+    \begin{scope}[shift={(6,1)}]
+        \draw[smooth cycle, tension=0.7] plot coordinates {(-1,-1) (2,-1.5) (3,1) (1,2.5) (-1.5, 1.5)};
+        \node at (2, 2) {$\Omega \subseteq \mathbb{C}$};
+        
+        % Curve
+        \draw[thick] (-0.5, -0.5) .. controls (0.5, 0.5) and (1.5, -0.5) .. (2.5, 0.5);
+        \filldraw (-0.5, -0.5) circle (1pt) node[left] {$f(a)$};
+        \filldraw (2.5, 0.5) circle (1pt) node[right] {$f(b)$};
+        \node at (1.2, 0.2) {$f(I)$};
+    \end{scope}
+
+    % Mapping arrow
+    \draw[->, cyan, thick] (1.5, 0.5) to[bend left=30] node[midway, above, black] {$f$} (5.5, 1.5);
+
+    % Text
+    \node[below, align=center] at (5, -1) {$f$ be diff / piecewise diff, $\dots, f'(t) \neq 0 \forall t$};
+
+\end{tikzpicture}
+\end{document}
+```
