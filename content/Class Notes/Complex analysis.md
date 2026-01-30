@@ -255,4 +255,13 @@ We have $U_x = V_y$ because $u_{xx} + u_{yy} = 0$.
 Define
 $$ h(z) = \int_{[0,z]} g(w) dw $$
 One can prove $h$ is analytic and $h'(z) = g(z)$.
-![[IMG_20260130_151908.jpg]]
+$$ h = \text{Re } h + i \text{Im } h $$
+$$ h' = g = u_x - i u_y $$
+Also since $h$ is analytic, $h' = (\text{Re } h)_x - i (\text{Re } h)_y$.
+Comparing the terms, we get:
+$$ (\text{Re } h)_x = u_x \quad \text{and} \quad (\text{Re } h)_y = u_y $$
+$$ \implies \text{Re } h - u = C \quad (\text{constant}) $$
+$$ \implies u = \text{Re } h - C $$
+Set $v = \text{Im } h$. Then
+$$ u + i v = (\text{Re } h - C) + i \text{Im } h = h - C $$
+Since $h$ is analytic, $f = u + iv$ is analytic.
