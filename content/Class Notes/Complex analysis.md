@@ -311,5 +311,47 @@ $$
 
 
 
-![[IMG_20260130_155343.jpg]]
+**Proposition:**
+Let $f, g: \Omega \to \mathbb{C}$ be continuous and $a, b \in \mathbb{C}$.
+
+1. **Linearity**:
+   $$
+   \int_{\mathscr{C}} (af + bg)(z) dz = a \int_{\mathscr{C}} f(z) dz + b \int_{\mathscr{C}} g(z) dz
+   $$
+
+2. **Additivity over paths**:
+   Let $\mathscr{C} = \sum_{i=1}^n \mathscr{C}_i$ be a contour formed by joining smooth curves $\mathscr{C}_1, \dots, \mathscr{C}_n$ end-to-end. Then we define:
+   $$
+   \int_{\mathscr{C}} f(z) dz = \sum_{i=1}^n \int_{\mathscr{C}_i} f(z) dz
+   $$
+
+   ```tikz
+   \begin{document}
+   \begin{tikzpicture}[>=stealth]
+       % Define points for the path
+       \coordinate (P0) at (0,0);
+       \coordinate (P1) at (1.5, 1);
+       \coordinate (P2) at (3.5, 1);
+       \coordinate (P3) at (5, 0);
+       \coordinate (P4) at (4, -1);
+       
+       % Draw the segments
+       \draw[->, thick, blue] (P0) -- (P1) node[midway, above left] {$\mathscr{C}_1$};
+       \draw[->, thick, blue] (P1) -- (P2) node[midway, above] {$\mathscr{C}_2$};
+       \draw[->, thick, blue] (P2) -- (P3) node[midway, above right] {$\mathscr{C}_3$};
+       \draw[->, thick, blue] (P3) -- (P4) node[midway, below right] {$\mathscr{C}_4$};
+       
+       % Draw points
+       \filldraw (P0) circle (1.5pt);
+       \filldraw (P1) circle (1.5pt);
+       \filldraw (P2) circle (1.5pt);
+       \filldraw (P3) circle (1.5pt);
+       \filldraw (P4) circle (1.5pt);
+       
+       % Label the whole curve
+       \node[blue] at (2.5, 1.5) {$\mathscr{C}$};
+   \end{tikzpicture}
+   \end{document}
+   ```
+
 
