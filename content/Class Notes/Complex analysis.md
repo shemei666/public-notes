@@ -357,7 +357,22 @@ Let $f, g: \Omega \to \mathbb{C}$ be continuous and $a, b \in \mathbb{C}$.
 
 ## Winding numbers
 
-**Exercise:** $\frac{1}{2\pi i} \int_{\gamma} \frac{1}{z-p} = 1$ $p \in $
+$$
+
+$$
+
+
+**Exercise:** 
+$$
+\frac{1}{2\pi i} \int_{\gamma} \frac{1}{z-p} = 1 \quad p \in D_{R} \quad \gamma(t) = R e^{ 2\pi it }
+$$
+
+
+## Fundamental theorem of Complex integration
+**Theorem:** Let $\gamma$ be any curve and let $f$ be a continuous function on $\gamma$ and exists $F$ such that $F' = f$, then $\int_{\gamma}f = F(\beta)-F(\alpha )$, where $\gamma(1)=\beta,\gamma(0)=\alpha$
+
+**Proof:** 
+
 
 
 
