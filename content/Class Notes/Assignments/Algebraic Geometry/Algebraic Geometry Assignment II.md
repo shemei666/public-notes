@@ -12,6 +12,17 @@ Hence $t^3 P(t^2) + T(t^2) \equiv 0$
 Comparing odd and even degrees we get $P \equiv 0$, $T \equiv 0$.
 $\implies Y^2 - X^3 | f$
 
+**Solution (Part 2):**
+Considering $Y^2 - X^3 - X^2$ as a polynomial in $Y$, we can write
+$$g(X,Y) = (Y^2 - X^3 - X^2)Q(X,Y) + YP(X) + T(X)$$
+Now, substitute $X = t^2 - 1$ and $Y = t^3 - t$. Note that $Y^2 - X^3 - X^2 = (t^3-t)^2 - (t^2-1)^3 - (t^2-1)^2 = 0$.
+$$0 = g(t^2-1, t^3-t) = (t^3-t) P(t^2-1) + T(t^2-1)$$
+$$0 = t(t^2-1) P(t^2-1) + T(t^2-1)$$
+The term $t(t^2-1) P(t^2-1)$ contains only odd powers of $t$ (since $P(t^2-1)$ is a polynomial in $t^2$).
+The term $T(t^2-1)$ contains only even powers of $t$.
+Comparing odd and even degrees, we get $P \equiv 0$, $T \equiv 0$.
+$\implies Y^2 - X^3 - X^2 | g$.
+
 
 
 
