@@ -32,6 +32,21 @@ $\implies Y^2 - X^3 - X^2 | g$.
 
 **2.7)** Let $C : (y^2 = x^3 + ax + b) \subset k^2$; if $A = (x_1, y_1)$ and $B = (x_2, y_2)$, show how to give the coordinates of $A + B$ as rational functions of $x_1, y_1, x_2, y_2$.
 
+**Solution:**
+The line passing through $A$ and $B$ has equation $y = m(x-x_1) + y_1$, where $m = \frac{y_2-y_1}{x_2-x_1}$ (if $x_1 \neq x_2$).
+Substituting into the curve equation $y^2 = x^3 + ax + b$:
+$$(m(x-x_1) + y_1)^2 = x^3 + ax + b$$
+$$m^2(x-x_1)^2 + y_1^2 + 2m(x-x_1)y_1 = x^3 + ax + b$$
+This is a cubic equation in $x$: $x^3 - m^2x^2 + \dots = 0$.
+The sum of the roots is $x_1 + x_2 + x_3 = m^2$.
+$$x_3 = m^2 - (x_1 + x_2)$$
+To find the y-coordinate of the intersection point $(x_3, y_3)$:
+$$y_3 = m(x_3 - x_1) + y_1$$
+$$y_3 = m(m^2 - (x_1 + x_2) - x_1) + y_1$$
+$$y_3 = m(m^2 - 2x_1 - x_2) + y_1$$
+$$y_3 = m^3 - 2m x_1 - m x_2 + y_1$$
+The sum $A+B$ is the point $(x_3, -y_3)$.
+So, $A+B = (m^2 - x_1 - x_2, -(m^3 - 2m x_1 - m x_2 + y_1))$.
 
 
 
