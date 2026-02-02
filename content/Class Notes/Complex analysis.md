@@ -406,6 +406,8 @@ $$
 \end{align*}
 $$
 
+To prove this, we construct a homotopy. Notice that the expression in the brackets corresponds to the value at $t=1$ of the function $\phi(s,t)$ defined below.
+
 Let
 $$
 \phi(s,t) = \frac{f(z + t(e^{is}-z)) e^{is}}{e^{is}-z} - f(z)
