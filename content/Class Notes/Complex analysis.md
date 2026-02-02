@@ -327,6 +327,7 @@ Let $f, g: \Omega \to \mathbb{C}$ be continuous and $a, b \in \mathbb{C}$.
 
 ```tikz
 \usepackage{tikz}
+\usepackage{mathrsfs}
 \begin{document}
 \begin{tikzpicture}[>=stealth]
     % Define points for the path
@@ -337,10 +338,10 @@ Let $f, g: \Omega \to \mathbb{C}$ be continuous and $a, b \in \mathbb{C}$.
     \coordinate (P4) at (4, -1);
     
     % Draw the segments
-    \draw[->, thick] (P0) -- (P1) node[midway, above left] {$\mathcal{C}_1$};
-    \draw[->, thick] (P1) -- (P2) node[midway, above] {$\mathcal{C}_2$};
-    \draw[->, thick] (P2) -- (P3) node[midway, above right] {$\mathcal{C}_3$};
-    \draw[->, thick] (P3) -- (P4) node[midway, below right] {$\mathcal{C}_4$};
+    \draw[->, thick] (P0) -- (P1) node[midway, above left] {$\mathscr{C}_1$};
+    \draw[->, thick] (P1) -- (P2) node[midway, above] {$\mathscr{C}_2$};
+    \draw[->, thick] (P2) -- (P3) node[midway, above right] {$\mathscr{C}_3$};
+    \draw[->, thick] (P3) -- (P4) node[midway, below right] {$\mathscr{C}_4$};
     
     % Draw points
     \filldraw (P0) circle (1.5pt);
@@ -350,12 +351,9 @@ Let $f, g: \Omega \to \mathbb{C}$ be continuous and $a, b \in \mathbb{C}$.
     \filldraw (P4) circle (1.5pt);
     
     % Label the whole curve
-    \node[blue] at (2.5, 2) {$\mathcal{C}$};
+    \node[blue] at (2.5, 2) {$\mathscr{C}$};
 \end{tikzpicture}
 \end{document}
 ```
-
-
-
 
 
