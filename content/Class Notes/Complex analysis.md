@@ -405,4 +405,16 @@ $$
 &\impliedby \frac{1}{2\pi} \int_{0}^{2\pi} \left[ \frac{f(e^{is})e^{is}}{e^{is}-z} - f(z) \right] ds = 0
 \end{align*}
 $$
-![[IMG_20260202_110405.jpg]]
+
+Let
+$$
+\phi(s,t) = \frac{f(z + t(e^{is}-z)) e^{is}}{e^{is}-z} - f(z)
+$$
+Then
+$$
+\phi(s,0) = \frac{f(z)}{e^{is}-z} e^{is} - f(z)
+$$
+$$
+\int_0^{2\pi} \phi(s,0) ds = \int_0^{2\pi} \left[ \frac{e^{is} f(z)}{e^{is}-z} - f(z) \right] ds = 0
+$$
+Define $g(t) = \int_0^{2\pi} \phi(s,t) ds$. We want to show $g'(t) \equiv 0$.
