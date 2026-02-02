@@ -389,5 +389,22 @@ In particular, if $\gamma$ is closed then $\int_{\gamma} f = 0$.
 
 **Theorem:**$f:\gamma \to \mathbb{C}$ analytic, let $a \in \Omega$, $\overline{D(a,R)} \subseteq \Omega$, where $\gamma$ is $a + R e^{2\pi it}$.
 
-**Proof:** ![[IMG_20260202_105535.jpg]]
-![[IMG_20260202_105540.jpg]]
+
+**Proof:**
+WLOG we take $a=0$ and $\gamma(t) = e^{2\pi i t}$.
+$$
+f(z) = \frac{1}{2\pi i} \int_{\gamma} \frac{f(w)}{w-z} dw \quad z \in D(a,R)
+$$
+(Cauchy's Integral Formula)
+
+We want to show:
+$$
+\frac{1}{2\pi i} \int_{\gamma} \frac{f(w)}{w-z} dw - f(z) = 0
+$$
+Let $w = e^{is}$.
+$$
+\begin{align*}
+&\impliedby \frac{1}{2\pi i} \int_{0}^{2\pi} \frac{f(e^{is})}{e^{is}-z} i e^{is} ds - \frac{1}{2\pi} \int_{0}^{2\pi} f(z) ds \\
+&\impliedby \frac{1}{2\pi} \int_{0}^{2\pi} \left[ \frac{f(e^{is})e^{is}}{e^{is}-z} - f(z) \right] ds = 0
+\end{align*}
+$$
