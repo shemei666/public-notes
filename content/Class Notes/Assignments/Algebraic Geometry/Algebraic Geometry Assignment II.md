@@ -2,6 +2,16 @@
 
 Do the same for $t \mapsto (t^2 - 1, t^3 - t)$.
 
+**Solution:**
+Considering $Y^2 - X^3$ as a polynomial in $Y$, we can write
+$$f(X,Y) = (Y^2 - X^3)Q(X,Y) + YP(X) + T(X)$$
+Now, $0 = f(t^2, t^3) = t^3 P(t^2) + T(t^2)$ for all $t \in \mathbb{R}$.
+$$0 = t^3 P(t^2) + T(t^2)$$
+RHS is a polynomial in $t \implies$ It can only have finitely many roots, but $\mathbb{R}$ is an infinite field and $t$ is a root for all $t \in \mathbb{R}$.
+Hence $t^3 P(t^2) + T(t^2) \equiv 0$
+Comparing odd and even degrees we get $P \equiv 0$, $T \equiv 0$.
+$\implies Y^2 - X^3 | f$
+
 
 
 
