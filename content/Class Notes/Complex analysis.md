@@ -355,11 +355,12 @@ Let $f, g: \Omega \to \mathbb{C}$ be continuous and $a, b \in \mathbb{C}$.
 \end{document}
 ```
 
-### Winding numbers
 
-$$
-n(\gamma, 0) = \frac{1}{2\pi i} \int_{\gamma} \frac{dz}{z}
-$$
+> [!Winding numbers:]-
+>$$
+>n(\gamma, 0) = \frac{1}{2\pi i} \int_{\gamma} \frac{dz}{z}
+>$$
+>is the winding number of $\gamma$ around the origin
 
 
 **Exercise:** 
