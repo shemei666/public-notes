@@ -355,7 +355,7 @@ Let $f, g: \Omega \to \mathbb{C}$ be continuous and $a, b \in \mathbb{C}$.
 \end{document}
 ```
 
-## Winding numbers
+### Winding numbers
 
 $$
 
@@ -374,6 +374,18 @@ $$
 **Proof:** 
 
 
+$$
+\begin{align*}
+\int_{\gamma} f &= \int_{\gamma} F' \\
+&= \int_{0}^{1} F'(\gamma(t)) \gamma'(t) dt \\
+&= \int_{0}^{1} (F \circ \gamma)'(t) dt \\
+&= F(\gamma(1)) - F(\gamma(0)) \\
+&= F(\beta) - F(\alpha)
+\end{align*}
+$$
+In particular, if $\gamma$ is closed then $\int_{\gamma} f = 0$.
+
+**Corollary:** Let $\Omega \subseteq \mathbb{C}$ be a domain and let $f: \Omega \to \mathbb{C}$ be analytic with $f' \equiv 0$ on $\Omega$. Then $f \equiv \text{const}$ on $\Omega$.
 
 
 
