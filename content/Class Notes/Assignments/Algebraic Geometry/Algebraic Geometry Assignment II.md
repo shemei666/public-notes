@@ -37,8 +37,7 @@ The line passing through $A$ and $B$ has equation $y = m(x-x_1) + y_1$, where $m
 Substituting into the curve equation $y^2 = x^3 + ax + b$:
 $$(m(x-x_1) + y_1)^2 = x^3 + ax + b$$
 $$m^2(x-x_1)^2 + y_1^2 + 2m(x-x_1)y_1 = x^3 + ax + b$$
-This is a cubic equation in $x$: $x^3 - m^2x^2 + \dots = 0$.
-The sum of the roots is $x_1 + x_2 + x_3 = m^2$.
+This is a cubic equation in $x$. The sum of the roots is $x_1 + x_2 + x_3 = m^2$.
 $$x_3 = m^2 - (x_1 + x_2)$$
 To find the y-coordinate of the intersection point $(x_3, y_3)$:
 $$y_3 = m(x_3 - x_1) + y_1$$
@@ -47,7 +46,6 @@ $$y_3 = m(m^2 - 2x_1 - x_2) + y_1$$
 $$y_3 = m^3 - 2m x_1 - m x_2 + y_1$$
 The sum $A+B$ is the point $(x_3, -y_3)$.
 So, $A+B = (m^2 - x_1 - x_2, -(m^3 - 2m x_1 - m x_2 + y_1))$.
-
 
 
 **2.10)** Let $C \subset \mathbb{P}^2_k$ be a plane cubic, and suppose that $P \in C$ is an inflexion point; prove that a change of coordinates in $\mathbb{P}^2_k$ can be used to bring $C$ into the normal form
