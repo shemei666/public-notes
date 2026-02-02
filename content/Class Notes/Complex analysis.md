@@ -405,3 +405,4 @@ $$
 &\impliedby \frac{1}{2\pi} \int_{0}^{2\pi} \left[ \frac{f(e^{is})e^{is}}{e^{is}-z} - f(z) \right] ds = 0
 \end{align*}
 $$
+![[IMG_20260202_110405.jpg]]
