@@ -50,3 +50,12 @@ So, $A+B = (m^2 - x_1 - x_2, -(m^3 - 2m x_1 - m x_2 + y_1))$.
 
 **2.10)** Let $C \subset \mathbb{P}^2_k$ be a plane cubic, and suppose that $P \in C$ is an inflexion point; prove that a change of coordinates in $\mathbb{P}^2_k$ can be used to bring $C$ into the normal form
 $$Y^2Z = X^3 + aX^2Z + bXZ^2 + cZ^3.$$
+
+**Solution:**
+A general cubic form in $\mathbb{P}^2_k$ is given by a homogeneous polynomial of degree 3:
+$$
+\begin{aligned}
+F(X, Y, Z) = \ &a_{1}X^3 + a_{2}X^2Y + a_{3}X^2Z + a_{4}XY^2 + a_{5}XYZ \\
+&+ a_{6}XZ^2 + a_{7}Y^3 + a_{8}Y^2Z + a_{9}YZ^2 + a_{10}Z^3 = 0
+\end{aligned}
+$$
