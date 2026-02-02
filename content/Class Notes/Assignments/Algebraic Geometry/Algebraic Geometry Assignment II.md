@@ -12,6 +12,8 @@ Hence $t^3 P(t^2) + T(t^2) \equiv 0$
 Comparing odd and even degrees we get $P \equiv 0$, $T \equiv 0$.
 $\implies Y^2 - X^3 | f$
 
+To ensure the result holds for a general field $k$, we used the fact that if a polynomial vanishes for all $t \in k$, it must be the zero polynomial. This property holds if $k$ is an **infinite field**.
+
 **Solution (Part 2):**
 Considering $Y^2 - X^3 - X^2$ as a polynomial in $Y$, we can write
 $$g(X,Y) = (Y^2 - X^3 - X^2)Q(X,Y) + YP(X) + T(X)$$
