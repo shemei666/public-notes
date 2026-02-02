@@ -358,7 +358,7 @@ Let $f, g: \Omega \to \mathbb{C}$ be continuous and $a, b \in \mathbb{C}$.
 ### Winding numbers
 
 $$
-
+n(\gamma, 0) = \frac{1}{2\pi i} \int_{\gamma} \frac{dz}{z}
 $$
 
 
@@ -389,4 +389,5 @@ In particular, if $\gamma$ is closed then $\int_{\gamma} f = 0$.
 
 **Theorem:**$f:\gamma \to \mathbb{C}$ analytic, let $a \in \Omega$, $\overline{D(a,R)} \subseteq \Omega$, where $\gamma$ is $a + R e^{2\pi it}$.
 
-**Proof:** 
+**Proof:** ![[IMG_20260202_105535.jpg]]
+![[IMG_20260202_105540.jpg]]
