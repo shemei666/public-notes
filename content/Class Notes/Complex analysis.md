@@ -387,4 +387,6 @@ In particular, if $\gamma$ is closed then $\int_{\gamma} f = 0$.
 
 **Corollary:** Let $\Omega \subseteq \mathbb{C}$ be a domain and let $f: \Omega \to \mathbb{C}$ be analytic with $f' \equiv 0$ on $\Omega$. Then $f \equiv \text{const}$ on $\Omega$.
 
-$f:\gamma \to \mathbb{C}$ analytic, let $a \in \Omega $, $\overline{D(a,R)} \subseteq \Omega$,
+**Theorem:**$f:\gamma \to \mathbb{C}$ analytic, let $a \in \Omega$, $\overline{D(a,R)} \subseteq \Omega$, where $\gamma$ is $a + R e^{2\pi it}$.
+
+**Proof:** 
