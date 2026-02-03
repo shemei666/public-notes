@@ -441,7 +441,7 @@ $$
 
 ## Convex set
 
-**Def:** $A \subseteq \mathscr{E}$, affine space, is a convex set if the segment $AB \subseteq  \mathscr{A}$, $\forall AB \in \mathscr{A}$.
+**Def:** $A,B \subseteq \mathscr{E}$, affine space, is a convex set if the segment $AB \subseteq  \mathscr{A}$, $\forall AB \in \mathscr{A}$.
 
 **Proposition:** Any intersection of convex sets in convex.
 **Note:** It is not true for union
