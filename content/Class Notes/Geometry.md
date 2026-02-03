@@ -114,7 +114,7 @@ such that $\overrightarrow{\varphi(A)\varphi(B)} = \overrightarrow{AB}$ for all 
 **Proposition**: The image of an affine subspace by an affine mapping is an affine subspace.
 **Proof**: Let $\varphi : \mathcal{E} \to \mathcal{E}'$ be an affine mapping. Let $\mathcal{F} \subset \mathcal{E}$ be an affine subspace of direction $F$. If $\mathcal{F}$ is empty, its image by $\varphi$ is empty and, in particular, this is an affine subspace. Otherwise, let $A$ be a point of $\mathcal{F}$. It is clear that $\varphi(\mathcal{F})$ is the affine subspace of $\mathcal{E}'$ directed by $\vec{\varphi}(F)$ and passing through $\varphi(A)$. 
 
-**Corollary:** Affine mappings sends straight line to straight line.
+**Corollary:** Affine mappings send straight lines to straight lines.
 
 **Proposition:** The inverse image of an affine subspace by an affine mapping is an affine subspace.
 **Proof:** Let $\varphi: \mathcal{A} \to \mathcal{B}$ be an affine map with linear part $T: V \to W$. Let $\mathcal{F}$ be an affine subspace of $\mathcal{B}$ directed by $U \subseteq W$. If $\varphi^{-1}(\mathcal{F})$ is empty, it is an affine subspace. Suppose $A \in \varphi^{-1}(\mathcal{F})$. Then for any $v \in V$,
@@ -122,26 +122,25 @@ $$ A + v \in \varphi^{-1}(\mathcal{F}) \iff \varphi(A + v) \in \mathcal{F} \iff 
 Since $\varphi(A) \in \mathcal{F}$, this is equivalent to $T(v) \in U$ (where $U$ is the direction of $\mathcal{F}$). Thus $v \in T^{-1}(U)$.
 So $\varphi^{-1}(\mathcal{F}) = A + T^{-1}(U)$, which is an affine subspace directed by $T^{-1}(U)$.
 
-**Prop**: The only affine mapping of $n$ dim aff. space that fixes $n+1$ points is the Id map.
-**pf**: Let $A_1, M_1, \dots, M_n \in \mathscr{A}$ be independent. Let $\varphi: \mathscr{A} \to \mathscr{A}$ be an affine map. $\varphi(A_1) = A_1, \varphi(M_1) = M_1, \dots$ but $T: V \to V$ be the ALM. $\overrightarrow{A_1 M_1}, \overrightarrow{A_2 M_2}, \dots, \overrightarrow{A_1 M_n} \in V$.
+**Proposition:** The only affine mapping of an $n$-dimensional affine space that fixes $n+1$ affinely independent points is the identity map.
+**Proof:** Let $A_0, \dots, A_n \in \mathscr{A}$ be affinely independent points. Let $\varphi: \mathscr{A} \to \mathscr{A}$ be an affine map such that $\varphi(A_i) = A_i$ for all $i$. Let $T: V \to V$ be the associated linear map (ALM).
+Since $\varphi(A_i) = A_i$, we have $T(\overrightarrow{A_0 A_i}) = \overrightarrow{\varphi(A_0)\varphi(A_i)} = \overrightarrow{A_0 A_i}$. The vectors $\overrightarrow{A_0 A_1}, \dots, \overrightarrow{A_0 A_n}$ form a basis for $V$. Since $T$ fixes a basis, $T = \operatorname{Id}_V$. Thus $\varphi$ is a translation. Since it has a fixed point ($\varphi(A_0)=A_0$), the translation vector is zero, implying $\varphi = \operatorname{Id}$.
 
-$T(\overrightarrow{A_1 M_i}) = \overrightarrow{A_1 M_i} \quad \forall i \implies T = Id \implies \varphi$ is translation. $\overrightarrow{M_i \varphi(M_i)} = const.$ but $\overrightarrow{M_i \varphi(M_i)} = \vec{0} \implies \varphi = Id$.
-
-**Prop**: Composition of 2 aff maps is affine.
-**Prop**: $\varphi$ is bijective iff the ALM, $T$ is bijective.
+**Proposition:** The composition of two affine maps is affine.
+**Proposition:** An affine map $\varphi$ is bijective iff its ALM, $T$, is bijective.
 
 **Definition**: An **affine transformation** is a bijective affine mapping $\varphi: \mathscr{A} \to \mathscr{A}$.
 
-**Corr**: Affine transformations makes a group under composition. (denoted as $GL(\mathscr{A})$)
-**Prop**: $GL(\mathscr{A}) \xrightarrow{\mathcal{L}} GL(V)$, $\varphi \mapsto T$ is surj. $\operatorname{Ker}(\mathcal{L}) =$ set of all translation.
+**Corollary:** Affine transformations form a group under composition (denoted as $GA(\mathscr{A})$).
+**Proposition:** The map $\mathcal{L}: GA(\mathscr{A}) \to GL(V)$, given by $\varphi \mapsto T$, is surjective. The kernel $\operatorname{Ker}(\mathcal{L})$ is the set of all translations.
 
-$$ \overrightarrow{\phi(M)} = \vec{M} + u \quad \forall M \in \mathscr{A} \implies \overrightarrow{\phi(M)} - \vec{M} = u \implies \overrightarrow{M \phi(M)} = u \quad (\text{constant}) \quad \text{--- (2)} $$
+$$ \overrightarrow{M \varphi(M)} = u \quad (\text{constant vector}) $$
 
-**Translation**: $\phi: \mathscr{A} \to \mathscr{A}$ is called translation if the associated linear mapping (ALM), $T: V \to V$ is $Id_V$. Also, it is $\overrightarrow{M \phi(M)}$ is constant vector in $V, \forall M \in \mathscr{A}$.
+**Translation**: $\varphi: \mathscr{A} \to \mathscr{A}$ is called a **translation** if the associated linear mapping (ALM), $T: V \to V$, is $\operatorname{Id}_V$. In this case, $\overrightarrow{M \varphi(M)}$ is a constant vector in $V$ for all $M \in \mathscr{A}$.
 
-**Scaling**: $\phi: \mathscr{A} \to \mathscr{A}$ is called a scaling if the ALM, $T$ is $\lambda Id_V$.
+**Scaling**: $\varphi: \mathscr{A} \to \mathscr{A}$ is called a **scaling** (or homothety) if the associated linear mapping, $T$, is $\lambda \operatorname{Id}_V$ for some scalar $\lambda$.
 
-**Prop**: Fix $O \in \mathscr{A}$. Any affine mapping $\varphi: \mathscr{A} \to \mathscr{A}$ can be written in a unique way in the form $\varphi = \tau_v \circ \psi$, where $v \in V$ and $\psi(O) = O$.
+**Proposition**: Fix $O \in \mathscr{A}$. Any affine mapping $\varphi: \mathscr{A} \to \mathscr{A}$ can be written in a unique way in the form $\varphi = t_v \circ \psi$, where $v \in V$ and $\psi(O) = O$.
 
 
 **Proposition:** The conjugated mapping $\varphi \circ t_v \circ \varphi^{-1}$ of a translation by an element $\varphi$ of the affine group $GA(\mathcal{E})$ is the translation of vector $\vec{\varphi}(v)$.
