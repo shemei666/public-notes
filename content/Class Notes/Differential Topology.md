@@ -463,27 +463,4 @@ Thus the claim is proved. Q.E.D for (a), (b)
 (d) If $f_0^{-1}(Z) = \varnothing$, then the complement of $F^{-1}(Z)$ is an open neighborhood of $X \times \{0\}$. By compactness of $X$, this neighborhood contains a box $X \times [0, \epsilon)$.
 Clearly $f_t \pitchfork Z, \forall t < \epsilon$ as $f_t^{-1}(Z) = \varnothing$.
 
-**Example:** $X=S^1, Y=\mathbb{R}^2$.
-$Z \subseteq \mathbb{R}^2$ not closed (e.g., positive x-axis).
 
-```tikz
-\usepackage{tikz}
-\usepackage{amssymb}
-\begin{document}
-\begin{tikzpicture}
-    % Draw X = S^1
-    \draw (0,0) circle (0.8cm) node[above=0.9cm] {$X=S^1$};
-    % Draw Y = R^2 plane (implied)
-    \node at (3,2) {$Y=\mathbb{R}^2$};
-    
-    % Draw Z not closed (e.g. ray starting from 2,0 but not including 2,0)
-    \draw[->] (2.1,0) -- (4,0);
-    \draw (2.1,0) circle (1.5pt); % Open circle to imply open ray? Or just dashed.
-                                 % The board sketch shows a line. Let's use dashed start or open circle.
-    \node at (3.5, 0.3) {$Z$ (not closed)};
-    
-    % Draw separation logic? The text says f_t avoids Z. 
-    % The board has a sketch of circle and line separation.
-\end{tikzpicture}
-\end{document}
-```
