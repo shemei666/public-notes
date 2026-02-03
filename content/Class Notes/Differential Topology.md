@@ -462,5 +462,5 @@ Thus the claim is proved. Q.E.D for (a), (b)
 
 (d) If $f_0^{-1}(Z) = \varnothing$, then the complement of $F^{-1}(Z)$ is an open neighborhood of $X \times \{0\}$. By compactness of $X$, this neighborhood contains a box $X \times [0, \epsilon)$.
 Clearly $f_t \pitchfork Z, \forall t < \epsilon$ as $f_t^{-1}(Z) = \varnothing$.
-
+![[IMG_20260203_145609.jpg]]
 
