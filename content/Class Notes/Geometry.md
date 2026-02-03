@@ -461,7 +461,8 @@ $$
 A' = \phi(A)  \\
 B' = \phi(B) \\
 A',B' \in C \implies A'B' \in C \\
-A,B \in \phi ^{-1}(A'B') \implies AB \subseteq \phi ^{-1}(A'B') \implies AB \text{is convex}
+A,B \in \phi ^{-1}(A'B') \implies AB \subseteq \phi ^{-1}(A'B') \implies AB \text{is convex} \\
+
 \end{align}
 $$
 
