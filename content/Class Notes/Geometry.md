@@ -116,6 +116,12 @@ such that $\overrightarrow{\varphi(A)\varphi(B)} = \overrightarrow{AB}$ for all 
 
 **Corollary:** Affine mappings sends straight line to straight line.
 
+**Proposition 2.7.** The inverse image of an affine subspace by an affine mapping is an affine subspace.
+**Proof:** Let $\varphi: \mathcal{A} \to \mathcal{B}$ be an affine map with linear part $T: V \to W$. Let $\mathcal{F}$ be an affine subspace of $\mathcal{B}$ directed by $U \subseteq W$. If $\varphi^{-1}(\mathcal{F})$ is empty, it is an affine subspace. Suppose $A \in \varphi^{-1}(\mathcal{F})$. Then for any $v \in V$,
+$$ A + v \in \varphi^{-1}(\mathcal{F}) \iff \varphi(A + v) \in \mathcal{F} \iff \varphi(A) + T(v) \in \mathcal{F}. $$
+Since $\varphi(A) \in \mathcal{F}$, this is equivalent to $T(v) \in U$ (where $U$ is the direction of $\mathcal{F}$). Thus $v \in T^{-1}(U)$.
+So $\varphi^{-1}(\mathcal{F}) = A + T^{-1}(U)$, which is an affine subspace directed by $T^{-1}(U)$.
+
 **Prop**: The only affine mapping of $n$ dim aff. space that fixes $n+1$ points is the Id map.
 **pf**: Let $A_1, M_1, \dots, M_n \in \mathscr{A}$ be independent. Let $\varphi: \mathscr{A} \to \mathscr{A}$ be an affine map. $\varphi(A_1) = A_1, \varphi(M_1) = M_1, \dots$ but $T: V \to V$ be the ALM. $\overrightarrow{A_1 M_1}, \overrightarrow{A_2 M_2}, \dots, \overrightarrow{A_1 M_n} \in V$.
 
