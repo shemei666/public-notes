@@ -141,6 +141,12 @@ $$ \overrightarrow{\phi(M)} = \vec{M} + u \quad \forall M \in \mathscr{A} \impli
 **Prop**: Fix $O \in \mathscr{A}$. Any affine mapping $\varphi: \mathscr{A} \to \mathscr{A}$ can be written in a unique way in the form $\varphi = \tau_v \circ \psi$, where $v \in V$ and $\psi(O) = O$.
 
 
+**Proposition:** The conjugated mapping $\varphi \circ t_v \circ \varphi^{-1}$ of a translation by an element $\varphi$ of the affine group $GA(\mathcal{E})$ is the translation of vector $\vec{\varphi}(v)$.
+
+**Proof:** Let $M$ be a point of $\mathcal{E}$ and let $M' = t_v(M)$ be its image by the translation. We have
+$$ \overrightarrow{\varphi(M)\varphi(M')} = \vec{\varphi}(\overrightarrow{MM'}) = \vec{\varphi}(v) $$
+so that $\varphi(M') = t_{\vec{\varphi}(v)}(\varphi(M))$. This implies that $\varphi \circ t_v = t_{\vec{\varphi}(v)} \circ \varphi$, which is equivalent to
+$$ \varphi \circ t_v \circ \varphi^{-1} = t_{\vec{\varphi}(v)}. \quad \blacksquare $$
 
 
 **Definition**: An **affine transformation** is a bijective affine mapping $\varphi: \mathscr{A} \to \mathscr{A}$.
