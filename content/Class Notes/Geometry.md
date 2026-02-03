@@ -291,10 +291,10 @@ then the line $L_2$ is parallel to $L_1$ and $L_3$.
 **Proof:**
 Let $\pi$ be the affine projection of $D*{1}$ onto $D_2$ parallel to $L_i$ , and let $P$ be the associated linear map.
 The vectors $\overrightarrow{A_1 A_3}$ and $\overrightarrow{A_1 A_2}$ are projected as:
-$$ P(\overrightarrow{A*1 A_3}) = \overrightarrow{\pi(A_3) \pi(A_1)} = \overrightarrow{A_1' A_3'} $$
+$$ P(\overrightarrow{A_{1} A_3}) = \overrightarrow{\pi(A_3) \pi(A_1)} = \overrightarrow{A_1' A_3'} $$
 $$ P(\overrightarrow{A_1 A_2}) = \overrightarrow{\pi(A_2)\pi(A_1)} = \overrightarrow{A_1' A_2'} $$
 Since $\overrightarrow{A_1 A_3} = \lambda \overrightarrow{A_1 A_2}$, linearity implies $P(\overrightarrow{A_1 A_3}) = \lambda P(\overrightarrow{A_1 A_2})$, hence $\overrightarrow{A_1' A_3'} = \lambda \overrightarrow{A_1' A_2'}$.
-Conversely, we can construct parallel lines to $L*{1}$ and see that they have the same ratio, and hence must coincide.
+Conversely, we can construct parallel lines to $L_{1}$ and see that they have the same ratio, and hence must coincide.
 
 ```tikz
 \begin{document}
