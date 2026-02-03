@@ -440,22 +440,9 @@ Also $(\psi \circ \varphi)(A) = \psi(B) = C$. and $\varphi \circ \psi(C') = A'$,
 \end{document}
 ```
 
-**Proof:**
-Let $AA'$ and $BB'$ intersect at $O$, let $\varphi$ be the dilation that maps $A \mapsto A', B \mapsto B'$, Let $\lambda$ be the corresponding scaling. Let $\varphi(C) = C''$
+**Proof:** If $AA'$ and $BB'$ intersect at $O$, the dilatation $\varphi$ of center $O$ that maps $A$ to $A'$ also maps $B$ to $B'$ (Thales again). Let $\lambda$ be its ratio and let $C'' = \varphi(C)$. Thus $\overrightarrow{OC''} = \lambda \overrightarrow{OC}$. But $\overrightarrow{OA'} = \lambda \overrightarrow{OA}$ and thus implies vector $\overrightarrow{A'C''}$ and $\overrightarrow{AC}$ are parallel. Then $C''$ lies on the parallel to $AC$ through $A'$, namely $A'C'$, but it also lies on the parallel to $BC$ through $B'$, namely $B'C'$. Hence $C'' = C'$. But of course, $O, C$ and $C''$ are collinear, so that $CC'$ passes through $O$.
 
-From Thales,
-
-$$
-\frac{\overrightarrow{OA'}}{\overrightarrow{OA}} = \frac{\overrightarrow{OB'}}{\overrightarrow{OB}} = \frac{\overrightarrow{A'B'}}{\overrightarrow{AB}}  = \lambda
-$$
-
-$$
-\frac{\overrightarrow{OC''}}{\overrightarrow{OC}  } = \frac{\overrightarrow{OA'}}{\overrightarrow{OA}} =  \frac{\overrightarrow{AC''}}{\overrightarrow{AC}} = \lambda
-$$
-
-$$
-\frac{\overrightarrow{OC''}}{\overrightarrow{OC}} = \frac{\overrightarrow{OB'}}{\overrightarrow{OB}} = \frac{\overrightarrow{B'C''}}{\overrightarrow{BC}} = \lambda
-$$
+If $AA'$ and $BB'$ are parallel, we argue the same way using translations. $\blacksquare$
 
 ## Convex set
 
