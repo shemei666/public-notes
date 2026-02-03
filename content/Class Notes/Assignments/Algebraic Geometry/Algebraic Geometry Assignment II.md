@@ -61,5 +61,5 @@ F(X, Y, Z) = \ &a_{1}X^3 + a_{2}X^2Y + a_{3}X^2Z + a_{4}XY^2 + a_{5}XYZ \\
 $$
 Since $Z=0$ is the tangent to the inflexion point, we see that $a_{1}X^3 + a_{2}X^2Y +  a_{4}XY^2 +   a_{7}Y^3$ needs to have a triple root at $(0,1)$ hence we have $a_2 = a_4 = a_7 = 0$.
 $$
-F(X,Y,Z) = a_1X^3 + a_3X^2Z + a_6XZ^2 + a_8Y^2Z + a_9YZ^2 + a_{10}Z^3
+F(X, Y, Z) = a_{1}X^3 + a_{3}X^2Z + a_{5}XYZ + a_{6}XZ^2 + a_{8}Y^2Z + a_{9}YZ^2 + a_{10}Z^3 = 0
 $$
