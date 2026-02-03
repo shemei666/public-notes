@@ -465,15 +465,17 @@ If $Z$ is not closed, we might lose stability.
 Example: $X=S^1, Y=\mathbb{R}^2, Z \subseteq \mathbb{R}^2$ not closed.
 ```tikz
 \usepackage{tikz}
+\usepackage{amssymb}
 \begin{document}
 \begin{tikzpicture}
     % Draw X = S^1
-    \draw (0,0) circle (1cm) node[above] {$X=S^1$};
+    \draw (0,0) circle (1cm) node[above=1.1cm] {$X=S^1$};
     % Draw Y = R^2 plane (implied)
-    \node at (2,2) {$Y=\mathbb{R}^2$};
-    % Draw Z not closed
+    \node at (2.5,2) {$Y=\mathbb{R}^2$};
+    % Draw Z not closed (dashed line excluding endpoints or just dashed to imply openness/lack of boundary or structure)
+    % A generic dashed curve
     \draw[dashed] (2,0) -- (4,0);
-    \node at (3, -0.3) {$Z$ (not closed)};
+    \node at (3, -0.3) {$Z \subseteq \mathbb{R}^2$ (not closed)};
 \end{tikzpicture}
 \end{document}
 ```
