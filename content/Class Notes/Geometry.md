@@ -129,6 +129,9 @@ $T(\overrightarrow{A_1 M_i}) = \overrightarrow{A_1 M_i} \quad \forall i \implies
 
 **Prop**: Composition of 2 aff maps is affine.
 **Prop**: $\varphi$ is bijective iff the ALM, $T$ is bijective.
+
+**Definition**: An **affine transformation** is a bijective affine mapping $\varphi: \mathscr{A} \to \mathscr{A}$.
+
 **Corr**: Affine transformations makes a group under composition. (denoted as $GL(\mathscr{A})$)
 **Prop**: $GL(\mathscr{A}) \xrightarrow{\mathcal{L}} GL(V)$, $\varphi \mapsto T$ is surj. $\operatorname{Ker}(\mathcal{L}) =$ set of all translation.
 
@@ -149,7 +152,6 @@ so that $\varphi(M') = t_{\vec{\varphi}(v)}(\varphi(M))$. This implies that $\va
 $$ \varphi \circ t_v \circ \varphi^{-1} = t_{\vec{\varphi}(v)}. \quad \blacksquare $$
 
 
-**Definition**: An **affine transformation** is a bijective affine mapping $\varphi: \mathscr{A} \to \mathscr{A}$.
 
 **Theorem:** Affine transformations map straight lines to straight lines.
 
