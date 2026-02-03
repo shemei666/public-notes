@@ -439,5 +439,41 @@ Indeed, if the claim holds, then by varying $p$ over $X$ we get an open cover of
 
 Since the claim is local in nature and properties (b), (c) are local on domain, codomain, we may work with coordinate neighborhood $V$ of $f(p)$ in $Y$ and a neighborhood $U_1 \times [0, \epsilon_1)$ of $(p,0)$ in $X \times I$. -->
 
-![[IMG_20260203_143616.jpg]]
-![[IMG_20260203_143630.jpg]]
+**Proof of claim:**
+Now $f=f_0=F(-,0)$. By choosing local coordinates around $p$, we may assume that $X, Y$ are open in $\mathbb{R}^k, \mathbb{R}^l$ and $F$ is defined over some subinterval of $I$.
+(Pick an open nbd $V$ around $f_0(p) \in Y$ and use a box $U \times [0, \epsilon)$ around $(p,0)$ in $F^{-1}(V)$).
+
+Now we see that the matrix of $(df_t)_x$ is a submatrix of $(dF)_{(x,t)}$.
+i.e., if $F = (\varphi_1(x,t), \dots, \varphi_l(x,t))$, then
+$$
+(dF)_{(x,t)} = \begin{bmatrix}
+\frac{\partial \varphi_1}{\partial x_1} & \dots & \frac{\partial \varphi_1}{\partial x_k} & \frac{\partial \varphi_1}{\partial t} \\
+\vdots & \ddots & \vdots & \vdots \\
+\frac{\partial \varphi_l}{\partial x_1} & \dots & \frac{\partial \varphi_l}{\partial x_k} & \frac{\partial \varphi_l}{\partial t}
+\end{bmatrix}
+$$
+The matrix for $(df_t)_x$ consists of the first $k$ columns of $(dF)_{(x,t)}$.
+
+Now, if $f_0$ satisfies (a) at $p$, then $(df_0)_p$ is injective, i.e., $k \le l$ and $\text{rk}(df_0)_p = k$.
+Hence $\exists$ a $k \times k$ minor with non-zero determinant. Hence the same minor in $(dF)_{(p,0)}$ is invertible. By continuity the same holds at all $(x,t)$ in a nbd of $(p,0)$. Hence, the same minor is invertible for all $(df_x)_t$ in that nbd, i.e., (a) holds over that nbd.
+
+The proof for (b) is the same with $k \ge l$ and rank = $l$ everywhere.
+Thus the claim is proved. Q.E.D for (a), (b)
+
+(d) Consideration for closed Z:
+If $Z$ is not closed, we might lose stability.
+Example: $X=S^1, Y=\mathbb{R}^2, Z \subseteq \mathbb{R}^2$ not closed.
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+    % Draw X = S^1
+    \draw (0,0) circle (1cm) node[above] {$X=S^1$};
+    % Draw Y = R^2 plane (implied)
+    \node at (2,2) {$Y=\mathbb{R}^2$};
+    % Draw Z not closed
+    \draw[dashed] (2,0) -- (4,0);
+    \node at (3, -0.3) {$Z$ (not closed)};
+\end{tikzpicture}
+\end{document}
+```
