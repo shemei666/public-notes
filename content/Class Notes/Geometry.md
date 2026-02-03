@@ -465,9 +465,9 @@ A,B \in \phi ^{-1}(A'B') \implies AB \subseteq \phi ^{-1}(A'B') \implies AB \tex
 \end{align}
 $$
 
+**Def:** (Convex hull) Intersection of all the convex sets containing $S$ is the convex hull of $S$
 ## Euclidean Vector space
 
-**Def:** (Convex hull) Intersection of all the convex sets containing $S$ is the convex hull of $S$
 **Def:** A vector space with an inner product $\langle\cdot ,\cdot \rangle$ is called a Euclidean vector space.
 
 **Def:** (Euclidean Affine space) $\mathscr{E}$ is an Euclidean affine space if its associated v.s is an Euclidean v.s
