@@ -52,7 +52,7 @@ So, $A+B = (m^2 - x_1 - x_2, -(m^3 - 2m x_1 - m x_2 + y_1))$.
 $$Y^2Z = X^3 + aX^2Z + bXZ^2 + cZ^3.$$
 
 **Solution:**
-We can choose a coordinate system $[X:Y:Z]$ for $\mathbb{P}^2_k$ such that the point $P$ has coordinates $[0:1:0]$ and the tangent line $L$ at $P$ is given by $Z=0$. This is possible because for any point $P$ and any line $L$ passing through it, there exists a projective transformation mapping them to $[0:1:0]$ and $Z=0$ respectively (transitivity of $\text{PGL}(3,k)$).
+We can choose a coordinate system $[X:Y:Z]$ for $\mathbb{P}^2_k$ such that the point $P$ has coordinates $[0:1:0]$ and the tangent line $L$ at $P$ is given by $Z=0$. 
 
 A general cubic form in $\mathbb{P}^2_k$ is given by a homogeneous polynomial of degree 3:
 $$
