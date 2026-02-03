@@ -1,0 +1,33 @@
+{
+	"nodes": [
+		{"id": "title", "type": "text", "text": "# Optimization\n\nGeometry of decision spaces, Convex Sets, and Projections.", "x": 0, "y": 0, "width": 400, "height": 100, "color": "1"},
+		{"id": "file_ref", "type": "file", "file": "Class Notes/Optimization.md", "x": -500, "y": 0, "width": 400, "height": 600},
+
+		{"id": "g_problem", "type": "group", "label": "Problem Setup", "x": 500, "y": -400, "width": 450, "height": 250, "color": "2"},
+		{"id": "def_opt", "type": "text", "text": "**Optimization Problem**\nMinimize $f_0(x)$ subject to constraints.\n$x^*$ = optimal solution.", "x": 520, "y": -380, "width": 400, "height": 80, "color": "3"},
+		{"id": "ex_lpp", "type": "text", "text": "**Linear Programming (LPP)**\nLinear objective + linear constraints.\nPolyhedral constraints.", "x": 520, "y": -280, "width": 400, "height": 80, "color": "5"},
+
+		{"id": "g_convex_sets", "type": "group", "label": "Convex Geometry", "x": 500, "y": -100, "width": 450, "height": 400, "color": "2"},
+		{"id": "def_affine_set", "type": "text", "text": "**Affine Set**\nLine through any 2 points lies in set.\n$aff(S)$ = smallest affine set containing S.", "x": 520, "y": -80, "width": 400, "height": 80, "color": "3"},
+		{"id": "def_convex_set", "type": "text", "text": "**Convex Set**\nSegment joining any 2 points lies in set.\n$\\theta x + (1-\\theta)y \\in C$.", "x": 520, "y": 20, "width": 400, "height": 80, "color": "3"},
+        {"id": "def_hull", "type": "text", "text": "**Convex Hull**\nSmallest convex set containing S.\nSet of all convex combinations.", "x": 520, "y": 120, "width": 400, "height": 60, "color": "3"},
+        {"id": "def_cones", "type": "text", "text": "**Cones**\nClosed under positive scaling.\nConvex Cone: Convex + Cone.", "x": 520, "y": 200, "width": 400, "height": 60, "color": "3"},
+
+		{"id": "g_hyperplanes", "type": "group", "label": "Hyperplanes & Polyhedra", "x": 1000, "y": -200, "width": 450, "height": 300, "color": "2"},
+		{"id": "def_hyperplane", "type": "text", "text": "**Hyperplane**\n$\\{x | a^T x = b\\}$. $(n-1)$-dim subspace.\nSeparates space into half-spaces.", "x": 1020, "y": -180, "width": 400, "height": 80, "color": "3"},
+		{"id": "def_polyhedron", "type": "text", "text": "**Polyhedron**\nIntersection of finite half-spaces.\nBounded polyhedron = Polytope.", "x": 1020, "y": -80, "width": 400, "height": 80, "color": "3"},
+        {"id": "thm_support", "type": "text", "text": "**Supporting Hyperplane**\nHyperplane touching boundary, containing set on one side.", "x": 1020, "y": 20, "width": 400, "height": 60, "color": "4"},
+
+		{"id": "g_projection", "type": "group", "label": "Metric Projection", "x": 1000, "y": 150, "width": 450, "height": 350, "color": "2"},
+		{"id": "thm_projection", "type": "text", "text": "**Metric Projection $P_K(x)$**\nUnique closest point in closed convex set K.\n$P_K$ is contractive: $|P(x) - P(y)| \\le |x-y|$.", "x": 1020, "y": 170, "width": 400, "height": 100, "color": "4"},
+        {"id": "thm_minkowski", "type": "text", "text": "**Minkowski's Theorem**\nCompact convex set = Convex hull of extreme points.", "x": 1020, "y": 290, "width": 400, "height": 80, "color": "4"},
+        {"id": "lemma_projection", "type": "text", "text": "**Projection Lemma**\nStart from outside, move towards K -> distance decreases.", "x": 1020, "y": 390, "width": 400, "height": 80, "color": "5"}
+	],
+	"edges": [
+		{"id": "e_title", "fromNode": "file_ref", "fromSide": "right", "toNode": "title", "toSide": "left"},
+		{"id": "e_prob", "fromNode": "title", "fromSide": "right", "toNode": "g_problem", "toSide": "left"},
+		{"id": "e_conv", "fromNode": "title", "fromSide": "right", "toNode": "g_convex_sets", "toSide": "left"},
+		{"id": "e_hyp", "fromNode": "g_convex_sets", "fromSide": "right", "toNode": "g_hyperplanes", "toSide": "left"},
+        {"id": "e_proj", "fromNode": "g_convex_sets", "fromSide": "right", "toNode": "g_projection", "toSide": "left"}
+	]
+}

@@ -1,0 +1,24 @@
+{
+	"nodes":[
+		{"id":"g_holo","type":"group","x":500,"y":-200,"width":450,"height":400,"color":"2","label":"Holomorphic & Analytic"},
+		{"id":"g_integration","type":"group","x":1000,"y":0,"width":450,"height":400,"color":"2","label":"Complex Integration"},
+		{"id":"g_harmonic","type":"group","x":440,"y":480,"width":450,"height":200,"color":"2","label":"Harmonic Functions"},
+		{"id":"title","type":"text","text":"# Complex Analysis\n\nStudy of holomorphic functions, power series, and integration.","x":0,"y":0,"width":400,"height":140,"color":"1"},
+		{"id":"file_ref","type":"file","file":"Class Notes/Complex analysis.md","x":-500,"y":0,"width":400,"height":600},
+		{"id":"def_holo","type":"text","text":"**Holomorphic Function**\nDifferentiable at $z_0$ in a neighborhood.\nDifferentiable on open set -> Holomorphic.","x":520,"y":-180,"width":400,"height":100,"color":"3"},
+		{"id":"def_analytic","type":"text","text":"**Analytic Function**\nRepresentable by convergent power series.\nHolomorphic <-> Analytic.","x":520,"y":-60,"width":400,"height":80,"color":"3"},
+		{"id":"thm_cauchy_hadamard","type":"text","text":"**Cauchy-Hadamard**\nRadius of convergence $R = 1/\\alpha$, where $\\alpha = \\limsup |a_n|^{1/n}$.","x":520,"y":40,"width":400,"height":80,"color":"4"},
+		{"id":"thm_diff_ps","type":"text","text":"**Differentiation of Power Series**\n$f'$ has same radius of convergence $R$.\nInfinitely differentiable inside $D_R$.","x":520,"y":140,"width":400,"height":80,"color":"4"},
+		{"id":"def_integral","type":"text","text":"**Complex Integral**\n$\\int_\\gamma f(z) dz = \\int_a^b f(\\gamma(t))\\gamma'(t) dt$","x":1020,"y":20,"width":400,"height":60,"color":"3"},
+		{"id":"thm_fundamental","type":"text","text":"**Fundamental Theorem**\nIf $F' = f$, then $\\int_\\gamma f = F(\\beta) - F(\\alpha)$.\nClosed loop -> 0.","x":1020,"y":100,"width":400,"height":80,"color":"4"},
+		{"id":"thm_cif","type":"text","text":"**Cauchy's Integral Formula**\n$$f(z) = \\frac{1}{2\\pi i} \\int_\\gamma \\frac{f(w)}{w-z} dw$$\nValues determined by boundary.","x":1020,"y":200,"width":400,"height":100,"color":"4"},
+		{"id":"def_harmonic","type":"text","text":"**Harmonic Function**\n$u$ is harmonic if $\\Delta u = u_{xx} + u_{yy} = 0$.\nReal/Imag parts of analytic functions are harmonic.","x":460,"y":500,"width":400,"height":100,"color":"3"},
+		{"id":"def_conjugate","type":"text","text":"**Harmonic Conjugate**\n$v$ is conjugate to $u$ if $u+iv$ is analytic.","x":460,"y":620,"width":400,"height":60,"color":"5"}
+	],
+	"edges":[
+		{"id":"e_title","fromNode":"file_ref","fromSide":"right","toNode":"title","toSide":"left"},
+		{"id":"e_holo","fromNode":"title","fromSide":"right","toNode":"g_holo","toSide":"left"},
+		{"id":"e_harm","fromNode":"g_holo","fromSide":"bottom","toNode":"g_harmonic","toSide":"top","label":"Relation via CR eqs"},
+		{"id":"e_int","fromNode":"g_holo","fromSide":"right","toNode":"g_integration","toSide":"left"}
+	]
+}
