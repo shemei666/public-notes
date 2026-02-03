@@ -454,17 +454,12 @@ If $AA'$ and $BB'$ are parallel, we argue the same way using translations. $\bla
 **Proof:** seen before
 
 **Proposition:** Inverse image of an convex set under an affine mapping is convex
-**Proof:** $\phi:\mathscr{E}\to \mathscr{F}$, Let $C \subseteq \mathscr{F}$ is a convex set, $A,B \in \phi ^{-1}(C)$ we have to show $AB \subseteq \phi ^{-1}(C)$.
-
-$$
-\begin{align}
-A' = \phi(A)  \\
-B' = \phi(B) \\
-A',B' \in C \implies A'B' \in C \\
-A,B \in \phi ^{-1}(A'B') \implies AB \subseteq \phi ^{-1}(A'B') \implies AB \text{is convex} \\
-
-\end{align}
-$$
+**Proof:** Let $\phi: \mathcal{E} \to \mathcal{F}$ be an affine map and $C \subseteq \mathcal{F}$ be a convex set. Let $K = \phi^{-1}(C)$. We want to show that $K$ is convex.
+Let $M, N \in K$ and let $P$ be a point on the segment $MN$, so $P = (1-t)M + tN$ for some $t \in [0,1]$.
+Since $\phi$ is affine,
+$$ \phi(P) = \phi((1-t)M + tN) = (1-t)\phi(M) + t\phi(N). $$
+By definition of $K$, $\phi(M) \in C$ and $\phi(N) \in C$. Since $C$ is convex, the segment connecting $\phi(M)$ and $\phi(N)$ lies entirely in $C$. Thus $\phi(P) \in C$, which implies $P \in K$.
+Therefore, $K = \phi^{-1}(C)$ is convex. $\blacksquare$
 
 **Def:** (Convex hull) Intersection of all the convex sets containing $S$ is the convex hull of $S$
 ## Euclidean Vector space
