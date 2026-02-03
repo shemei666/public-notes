@@ -462,5 +462,42 @@ Thus the claim is proved. Q.E.D for (a), (b)
 
 (d) If $f_0^{-1}(Z) = \varnothing$, then the complement of $F^{-1}(Z)$ is an open neighborhood of $X \times \{0\}$. By compactness of $X$, this neighborhood contains a box $X \times [0, \epsilon)$.
 Clearly $f_t \pitchfork Z, \forall t < \epsilon$ as $f_t^{-1}(Z) = \varnothing$.
-![[IMG_20260203_145609.jpg]]
+
+Now assume $f_0^{-1}Z \ne \varnothing$. Let $W$ be any open nbd of $f_0^{-1}Z \times \{0\}$ in $X \times I$.
+Then we see that $\exists \epsilon > 0$ such that
+$f_t^{-1}Z \subseteq W, \forall t < \epsilon$.
+
+> [!Proof of claim]-
+> If not, then $\exists (x_i, t_i) \notin W, t_i \to 0$ such that $f_{t_i}(x_i) \in Z$.
+> By compactness of $W^c$ we may assume that $\lim(x_i, t_i)$ exists, say $(x,0) \notin W$. Then $f(x)=F(x,0)=\lim F(x_i, t_i) \in Z$ as $Z$ is closed. Contradiction.
+
+Now we may localize the problem. Let $x \in f_0^{-1}Z, y=f(x)$.
+Let us localize around $x \in X, y \in Y$.
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}
+    % Domain X x I
+    \draw (0,0) rectangle (2,2);
+    \node at (-0.2, 1) {$I$};
+    \node at (1, -0.2) {$X$};
+    
+    % Neighborhood W
+    \draw[dashed] (0.5, 0) arc (180:0:0.5cm and 0.3cm);
+    \node at (1, 0.5) {$W$};
+    
+    % Mapping F
+    \draw[->] (2.5, 1) -- (4, 1) node[midway, above] {$F$};
+    
+    % Codomain Y
+    \draw (4.5, 0) rectangle (6.5, 2);
+    \node at (6.3, 0.2) {$Y$};
+    
+    % Submanifold Z
+    \draw (5, 1) -- (6, 1.5) node[right] {$Z$};
+\end{tikzpicture}
+\end{document}
+```
+
 
