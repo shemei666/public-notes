@@ -63,3 +63,12 @@ Since $Z=0$ is the tangent to the inflexion point, we see that $a_{1}X^3 + a_{2}
 $$
 F(X, Y, Z) = a_{1}X^3 + a_{3}X^2Z + a_{5}XYZ + a_{6}XZ^2 + a_{8}Y^2Z + a_{9}YZ^2 + a_{10}Z^3 = 0
 $$
+Grouping the terms involving $Y$:
+$$ Z(a_8 Y^2 + Y(a_5 X + a_9 Z)) + a_1 X^3 + a_3 X^2 Z + a_6 X Z^2 + a_{10} Z^3 = 0 $$
+Completing the square for $Y$ (assuming $a_8 \neq 0$):
+$$ Z a_8 \left( Y + \frac{a_5 X + a_9 Z}{2a_8} \right)^2 - Z a_8 \left( \frac{a_5 X + a_9 Z}{2a_8} \right)^2 + a_1 X^3 + \dots + a_{10} Z^3 = 0 $$
+Let $Y_1 = Y + \frac{a_5 X + a_9 Z}{2a_8}$. Then the equation becomes:
+$$ a_8 Z Y_1^2 = \frac{Z(a_5 X + a_9 Z)^2}{4a_8} - (a_1 X^3 + a_3 X^2 Z + a_6 X Z^2 + a_{10} Z^3) $$
+Multiplying by $4a_8$:
+$$ 4a_8^2 Z Y_1^2 = Z(a_5 X + a_9 Z)^2 - 4a_8(a_1 X^3 + \dots) $$
+This is of the form $Y_1^2 Z = \text{cubic in } X, Z$.
