@@ -140,6 +140,9 @@ $$ \overrightarrow{\phi(M)} = \vec{M} + u \quad \forall M \in \mathscr{A} \impli
 
 **Prop**: Fix $O \in \mathscr{A}$. Any affine mapping $\varphi: \mathscr{A} \to \mathscr{A}$ can be written in a unique way in the form $\varphi = \tau_v \circ \psi$, where $v \in V$ and $\psi(O) = O$.
 
+
+
+
 **Definition**: An **affine transformation** is a bijective affine mapping $\varphi: \mathscr{A} \to \mathscr{A}$.
 
 **Theorem:** Affine transformations map straight lines to straight lines.
