@@ -460,22 +460,30 @@ Hence $\exists$ a $k \times k$ minor with non-zero determinant. Hence the same m
 The proof for (b) is the same with $k \ge l$ and rank = $l$ everywhere.
 Thus the claim is proved. Q.E.D for (a), (b)
 
-(d) Consideration for closed Z:
-If $Z$ is not closed, we might lose stability.
-Example: $X=S^1, Y=\mathbb{R}^2, Z \subseteq \mathbb{R}^2$ not closed.
+(d) If $f_0^{-1}(Z) = \varnothing$, then the complement of $F^{-1}(Z)$ is an open neighborhood of $X \times \{0\}$. By compactness of $X$, this neighborhood contains a box $X \times [0, \epsilon)$.
+Clearly $f_t \pitchfork Z, \forall t < \epsilon$ as $f_t^{-1}(Z) = \varnothing$.
+
+**Example:** $X=S^1, Y=\mathbb{R}^2$.
+$Z \subseteq \mathbb{R}^2$ not closed (e.g., positive x-axis).
+
 ```tikz
 \usepackage{tikz}
 \usepackage{amssymb}
 \begin{document}
 \begin{tikzpicture}
     % Draw X = S^1
-    \draw (0,0) circle (1cm) node[above=1.1cm] {$X=S^1$};
+    \draw (0,0) circle (0.8cm) node[above=0.9cm] {$X=S^1$};
     % Draw Y = R^2 plane (implied)
-    \node at (2.5,2) {$Y=\mathbb{R}^2$};
-    % Draw Z not closed (dashed line excluding endpoints or just dashed to imply openness/lack of boundary or structure)
-    % A generic dashed curve
-    \draw[dashed] (2,0) -- (4,0);
-    \node at (3, -0.3) {$Z \subseteq \mathbb{R}^2$ (not closed)};
+    \node at (3,2) {$Y=\mathbb{R}^2$};
+    
+    % Draw Z not closed (e.g. ray starting from 2,0 but not including 2,0)
+    \draw[->] (2.1,0) -- (4,0);
+    \draw (2.1,0) circle (1.5pt); % Open circle to imply open ray? Or just dashed.
+                                 % The board sketch shows a line. Let's use dashed start or open circle.
+    \node at (3.5, 0.3) {$Z$ (not closed)};
+    
+    % Draw separation logic? The text says f_t avoids Z. 
+    % The board has a sketch of circle and line separation.
 \end{tikzpicture}
 \end{document}
 ```
