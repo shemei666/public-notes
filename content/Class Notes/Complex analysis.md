@@ -496,7 +496,7 @@ $$
 &= \frac{n! M}{R^n}
 \end{align*}
 $$
-Thus, **Cauchy's Estimate**:
+Thus, 
 $$
 |f^{(n)}(a)| \le \frac{n! M}{R^n}
 $$
