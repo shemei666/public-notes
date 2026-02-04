@@ -154,3 +154,13 @@ $$ \int_X |f|^p \ge \int_S |f|^p \ge \delta (\|f\|_\infty - \epsilon)^p $$
 $$ \|f\|_p \ge \delta^{1/p} (\|f\|_\infty - \epsilon) $$
 Taking $\liminf_{p \to \infty}$ gives $\liminf \|f\|_p \ge \|f\|_\infty - \epsilon$.
 Since $\epsilon$ is arbitrary, result follows.
+
+## Banach Spaces
+
+**Normed Vector Space**: A vector space $V$ over scalars ($\mathbb{R}$ or $\mathbb{C}$) with a **norm** $\|\cdot\|: V \to \mathbb{R}^+$ satisfying:
+*   $\|v\| = 0 \iff v = 0$.
+*   $\|\alpha v\| = |\alpha| \|v\|$ for scalar $\alpha, v \in V$.
+*   $\|v+w\| \le \|v\| + \|w\|$ (Triangle inequality) for $v, w \in V$.
+
+**Definition**: A complete normed vector space is called a **Banach space**.
+
