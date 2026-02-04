@@ -42,7 +42,7 @@ $f_0: \mathbb{R}^n \to \mathbb{R}, \quad f_i: \mathbb{R}^n \to \mathbb{R}$
    - **Decision Space**: Space of smooth curves connecting points A and B.
    - **Objective**: Minimize the time taken for descent.
 
-![[IMG_20260112_142612.jpg]]
+
 
 $\min f_0(x_1, \dots, x_n)$
 $c_1 x_1 + \dots + c_n x_n \quad (c_1, \dots, c_n \to \text{cost associated with the variable})$
@@ -58,7 +58,7 @@ $C_n, \quad \{a_{ij}\}_{\substack{1 \le i \le m \\ 1 \le j \le n}}, \quad b_1, \
 **GOAL**: Understand the geometry of the decision space.
 Affine set, convex sets, convex cones $\subseteq \mathbb{R}^n$
 **Affine set**: A set $C \subseteq \mathbb{R}^n$ is said to be _affine_ if the unique line through two distinct points in $C$ lies in $C$.
-![[IMG_20260112_152624.jpg]]
+
 
 $\vec{x} + \epsilon \vec{y} \quad \vec{x}$ is in the interior
 $\vec{y} \in S^{n-1} \quad \vec{y} = \frac{\vec{c}}{\|\vec{c}\|}$
@@ -80,10 +80,10 @@ $a_{11} x_1 + \dots + a_{1n} x_n \leq b_1, \quad a_{11} y_1 + \dots + a_{1n} y_n
 $a_{1\cdot}(\theta x_1 + (1-\theta) y_1) + \dots + a_{1n} (\theta x_n + (1-\theta) y_n)$
 $\theta \vec{x} + (1-\theta) \vec{y} \le \theta b_1 + (1-\theta) b_1 = b_1 \quad (\text{since } \theta \ge 0)$
 
-"Question about the converse:
+**Question about the converse**:
 Is every convex subset of $\mathbb{R}^n$ given by a collection of linear inequalities?
 Yes, as long as you allow collection being infinite."
-![[IMG_20260112_155516.jpg]]
+
 
 every convex function is a supremum of linear function
 Qh: Is the closure of a convex set also convex?
@@ -94,7 +94,7 @@ $conv(S) = \{ \theta_1 \vec{x}_1 + \dots + \theta_k \vec{x}_k : \vec{x}_1, \dots
 (set of all convex combinations of vectors in $S$)
 
 $\vec{x}_1, \vec{x}_2 \in C_1 \cap C_2 \implies [\theta \vec{x}_1 + (1-\theta) \vec{x}_2] \in C_1 \cap C_2$
-![[IMG_20260112_160506.jpg]]
+
 
 **Cones in $\mathbb{R}^n$**
 A set $C \subseteq \mathbb{R}^n$ is said to be a _cone_ if for every $\vec{x} \in C$, and $\theta \ge 0$, we have $\theta \vec{x} \in C$.
