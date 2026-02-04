@@ -443,5 +443,32 @@ $$
 Since the function is periodic in $s$ with period $2\pi$.
 Thus $g(t)$ is constant, so $g(1) = g(0) = 0$, which concludes the proof.
 
-![[IMG_20260204_095410.jpg]]
-![[IMG_20260204_095416.jpg]]
+## Power Series Expansion
+
+Let $f$ be analytic in $D(a, R)$. Let $z \in D(a, R)$. Choose $r$ such that $|z-a| < r < R$. Let $\gamma(t) = a + r e^{it}$.
+By Cauchy's Integral Formula:
+$$
+f(z) = \frac{1}{2\pi i} \int_{\gamma} \frac{f(w)}{w-z} dw
+$$
+We can rewrite the integrand as:
+$$
+\frac{1}{w-z} = \frac{1}{(w-a) - (z-a)} = \frac{1}{w-a} \cdot \frac{1}{1 - \frac{z-a}{w-a}}
+$$
+Since $w \in \gamma$, $|w-a| = r$ and $|z-a| < r$, so $\left| \frac{z-a}{w-a} \right| < 1$.
+Thus we can expand it as a geometric series:
+$$
+\frac{1}{w-z} = \frac{1}{w-a} \sum_{n=0}^\infty \left( \frac{z-a}{w-a} \right)^n = \sum_{n=0}^\infty \frac{(z-a)^n}{(w-a)^{n+1}}
+$$
+Substituting this back into the integral:
+$$
+f(z) = \frac{1}{2\pi i} \int_{\gamma} f(w) \left[ \sum_{n=0}^\infty \frac{(z-a)^n}{(w-a)^{n+1}} \right] dw
+$$
+Since the series converges uniformly on $\gamma$ (compact set), we can swap the sum and the integral:
+$$
+f(z) = \sum_{n=0}^\infty \left[ \frac{1}{2\pi i} \int_{\gamma} \frac{f(w)}{(w-a)^{n+1}} dw \right] (z-a)^n
+$$
+Defining $c_n = \frac{1}{2\pi i} \int_{\gamma} \frac{f(w)}{(w-a)^{n+1}} dw$, we get the power series expansion:
+$$
+f(z) = \sum_{n=0}^\infty c_n (z-a)^n
+$$
+This proves that analytic functions are analytic in the sense of power series.
