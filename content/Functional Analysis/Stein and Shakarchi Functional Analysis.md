@@ -120,3 +120,16 @@ $$ \sum |f(n)|^{p_1} = \sum |f(n)|^{p_0} |f(n)|^{p_1-p_0} $$
 $$ \le (\sup_n |f(n)|)^{p_1-p_0} \sum |f(n)|^{p_0} $$
 $$ \le \|f\|_{p_0}^{p_1-p_0} \|f\|_{p_0}^{p_0} = \|f\|_{p_0}^{p_1} $$
 Taking $p_1$-th root: $\|f\|_{p_1} \le \|f\|_{p_0}$.
+
+## The Case $p = \infty$
+
+$L^\infty(X, \mathcal{F}, \mu)$ consists of essentially bounded measurable functions.
+
+**Essential Supremum**:
+There exists $0 < M < \infty$ with $|f(x)| \le M$ a.e.
+$$ \|f\|_\infty = \inf \{M : |f(x)| \le M \text{ a.e.} \} $$
+
+**Note**: $|f(x)| \le \|f\|_\infty$ a.e.
+*Proof*: Let $E = \{x : |f(x)| > \|f\|_\infty\}$.
+$E = \bigcup E_n$ where $E_n = \{x : |f(x)| > \|f\|_\infty + 1/n\}$.
+By definition of infimum, $\mu(E_n) = 0$, so $\mu(E) = 0$.
