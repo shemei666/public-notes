@@ -137,3 +137,20 @@ By definition of infimum, $\mu(E_n) = 0$, so $\mu(E) = 0$.
 > [!IMPORTANT]
 > **Theorem 2.1**
 > The vector space $L^\infty$ equipped with $\|\cdot\|_{L^\infty}$ is a complete vector space.
+
+> [!IMPORTANT]
+> **Proposition 2.2**
+> Suppose $f \in L^\infty$ is supported on a set of finite measure $E$ ($\mu(E) < \infty$). Then $f \in L^p$ for all $p < \infty$, and
+> $$ \|f\|_p \to \|f\|_\infty \quad \text{as } p \to \infty $$
+
+### Proof
+
+If $\mu(E) = 0$, trivial. Otherwise:
+$$ \|f\|_p = \left( \int_E |f|^p \right)^{1/p} \le \left( \int_E \|f\|_\infty^p \right)^{1/p} = \|f\|_\infty \mu(E)^{1/p} $$
+As $p \to \infty$, $\mu(E)^{1/p} \to 1$, so $\limsup_{p \to \infty} \|f\|_p \le \|f\|_\infty$.
+
+Given $\epsilon > 0$, let $S = \{x : |f(x)| \ge \|f\|_\infty - \epsilon\}$. By definition of essential supremum, $\mu(S) = \delta > 0$.
+$$ \int_X |f|^p \ge \int_S |f|^p \ge \delta (\|f\|_\infty - \epsilon)^p $$
+$$ \|f\|_p \ge \delta^{1/p} (\|f\|_\infty - \epsilon) $$
+Taking $\liminf_{p \to \infty}$ gives $\liminf \|f\|_p \ge \|f\|_\infty - \epsilon$.
+Since $\epsilon$ is arbitrary, result follows.
