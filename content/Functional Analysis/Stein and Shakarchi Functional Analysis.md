@@ -87,3 +87,8 @@ $$ |f(x) - S_K(f)(x)|^p \le (2 \max(|f|, |S_K(f)|))^p \le 2^{p+1} |g(x)|^p $$
 By Dominated Convergence Theorem, $\|f - f_{n_k}\|_p \to 0$.
 
 Since $\{f_n\}$ is Cauchy and a subsequence converges to $f$, the full sequence converges to $f$.
+
+> [!IMPORTANT]
+> **Proposition 1.4**
+> If $\mu(X) < \infty$ and $1 \le p_0 \le p_1 \le \infty$, then $L^{p_1}(X) \subset L^{p_0}(X)$ and
+> $$ \frac{1}{\mu(X)^{1/p_0}} \|f\|_{p_0} \le \frac{1}{\mu(X)^{1/p_1}} \|f\|_{p_1} $$
