@@ -664,10 +664,10 @@ $$
     % C (Left Region)
     \node at (-1.5, 0.2) {$C$};
 
-    % Angles
-    \node at (-0.6, 0.8) {$\alpha$};
-    \node at (-0.2, -0.6) {$\beta$};
-    \node at (1.2, 0) {$\gamma$};
+    % Angles - Adjusted positions to be inside the triangle vertices
+    \node at (-0.3, 0.5) {$\alpha$};
+    \node at (-0.8, -0.2) {$\beta$};
+    \node at (0.8, -0.2) {$\gamma$};
 
 \end{tikzpicture}
 \end{document}
