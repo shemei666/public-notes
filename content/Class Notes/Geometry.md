@@ -492,9 +492,65 @@ $$
 Assume true for $\dim \le n-1$. Let $\dim E = n$ and $f$ be an isometry. Pick $x_0 \neq 0$.
 **Case 1:** $f(x_0) = x_0$.
 Consider $S = x_0^\perp$. Since $f$ preserves scalar products and fixes $x_0$, it preserves $S$. $f|_S$ is an isometry of $S$. By induction, $f|_S = s_{H'_1} \circ \dots \circ s_{H'_q}$ ($q \le n-1$). Let $H_i = \operatorname{span}(H'_i, x_0)$. Then $f = s_{H_1} \circ \dots \circ s_{H_q}$ on $E$.
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1.2]
+    % Plane S (Horizontal)
+    \draw[fill=gray!10] (-2, -1) -- (1, -1) -- (3, 1) -- (0, 1) -- cycle;
+    \node at (2.5, 0.7) {$S$};
+    
+    % Origin O
+    \coordinate (O) at (0.5, 0);
+    \filldraw (O) circle (1pt);
+    
+    % Vector x0 (Vertical)
+    \draw[->, thick] (O) -- ++(0, 1.5) node[above] {$x_0$};
+    
+    % Subspace H' in S (Line)
+    \draw[thick, dashed] (-1, 0.5) -- (2, -0.5);
+    \node[below right] at (1.8, -0.4) {$H'$};
+    
+    % Hyperplane H (Vertical Plane spanning H' and x0)
+    \draw[fill=blue!10, opacity=0.5] (-1, 0.5) -- (-1, 2) -- (2, 1) -- (2, -0.5);
+    \draw[thin] (-1, 0.5) -- (-1, 2) -- (2, 1) -- (2, -0.5);
+    \node[blue] at (1.8, 0.8) {$H_i$};
+    
+\end{tikzpicture}
+\end{document}
+```
 **Case 2:** $f(x_0) \neq x_0$.
 Let $H$ be the perpendicular bisector(plane with equal distance from $x_0$ and $f(x_0)$) of $[x_0, f(x_0)]$. Note $0 \in H$ since $\|f(x_0)\| = \|x_0\|$.
 Then $s_H(f(x_0)) = x_0$.
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1.2]
+    % Plane H (Horizontal-ish)
+    \draw[fill=gray!10] (-2, 0) -- (1, 0) -- (3, 1.5) -- (0, 1.5) -- cycle;
+    \node at (-1.5, 0.2) {$H$};
+    
+    % Origin 0
+    \coordinate (O) at (0.5, 0.75);
+    \filldraw (O) circle (1pt) node[left] {$0$};
+    
+    % Vectors x0 and f(x0) symmetric wrt H
+    \coordinate (x0) at (2, 2.5);
+    \coordinate (fx0) at (2, -1);
+    
+    \draw[->] (O) -- (x0) node[above] {$x_0$};
+    \draw[->] (O) -- (fx0) node[below] {$f(x_0)$};
+    
+    % Reflection line
+    \draw[dashed] (x0) -- (fx0);
+    
+    % Intersection marks
+    \coordinate (M) at (2, 0.75); % Projected point on plane (approx)
+    \draw[dashed] (O) -- (M);
+    
+\end{tikzpicture}
+\end{document}
+```
 Consider $g = s_H \circ f$. Then $g(x_0) = x_0$. By Case 1, $g = s_{H_1} \circ \dots \circ s_{H_q}$ ($q \le n-1$).
 Thus $f = s_H \circ s_{H_1} \circ \dots \circ s_{H_q}$, a composition of $q+1 \le n$ reflections. $\blacksquare$
 
