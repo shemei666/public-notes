@@ -518,6 +518,7 @@ We may also assume that $g f_0$ is a submersion at $x$ since $f_0 \pitchfork Z$ 
 
 Since $d(g f_0)_x$ is, as before, a part of $d(g F)_{(x,t)}$...
 
+#todo 
 
 ---
 
