@@ -126,7 +126,6 @@ If $\vec{x} \leq_{K} \vec{y}$
 **Example**:
 (1) $K = [0, \infty)$ is a proper cone in $\mathbb{R}$ ($\le_K$ is same as $\le$)
 (2) $K = [0, \infty)^n$ is a proper cone in $\mathbb{R}^n$
-$\vec{x} \le_K \vec{y}$ if $x_i \le y_i \forall 1 \le i \le n$
 
 **Relevance to LP**
 The problem can be extended to $A \vec{x} \le_{K} \vec{b}$ "generalized inequalities"
@@ -154,7 +153,7 @@ A hyperplane in $\mathbb{R}^{n}$ is a set of the form, $H_{\vec{a},b}= \{ \vec{x
 > $$f(\vec{x}) = \sum_{i=1}^n x_i a_i = \langle \vec{a}, \vec{x} \rangle$$
 
 $$
-\text{non-zero lienar functionals } \longleftrightarrow  \text{$(n-1)$-dimensional subspace of $\mathbb{R}^{n}$}
+\text{non-zero linear functionals } \longleftrightarrow  \text{$(n-1)$-dimensional subspace of $\mathbb{R}^{n}$}
 $$
 
 $$ \rho \longleftrightarrow \ker \rho$$
@@ -229,7 +228,6 @@ $$
 - A polyhedron is the intersection of a finite number of half-spaces and hyperplanes.
 - Affine sets, rays, line segments, half-spaces, hyperplanes are all polyhedra.
 
-![[Assets/IMG_20260115_124838.jpg]]
 **Why are points and lines polyhedra?**
 
 1. **Point**: A single point $\{P\}$ in $\mathbb{R}^n$ is a polyhedron.
@@ -246,8 +244,6 @@ $$
    $$ \langle \vec{x}, \vec{v}\_i \rangle = c_i, \quad i=1,\dots,n-1 $$
 
 **Polytope**: A bounded polyhedron is said to be a polytope. (Polytope is always compact)
-
-![[IMG_20260115_130759.jpg]]
 
 **Relevance to LP**
 If the decision space is a polytope, existence of a (max) minimum of the objective function is guaranteed.
