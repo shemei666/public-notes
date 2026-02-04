@@ -571,7 +571,7 @@ $$
 
 $\implies Isom^{+}(\mathscr{E})$ is a normal subgroup.
 
-**Proposition:** Let $\phi$ be an affine isometry of the affine Euclidean space $\mathscr{E}$, $\exists$ a isometry $\psi$ is a translation $t_{v}$ of $\mathscr{E}$ such that $\phi = t_{v} \circ \psi$ such that $\psi$ has fixed points.
+**Proposition:** Let $\phi$ be an affine isometry of the affine Euclidean space $\mathscr{E}$, $\exists$ a isometry $\psi$ and a translation $t_{v}$ of $\mathscr{E}$ such that $\phi = t_{v} \circ \psi$ such that $\psi$ has fixed points.
 
 **Proof:**
 
