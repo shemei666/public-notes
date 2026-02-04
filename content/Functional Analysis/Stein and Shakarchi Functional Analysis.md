@@ -96,8 +96,8 @@ Since $\{f_n\}$ is Cauchy and a subsequence converges to $f$, the full sequence 
 ### Proof
 
 Without loss of generality, assume $p_1 > p_0$ (if equal, statement is trivial).
-Let $f \in L^{p_1}$. Apply Hölder's inequality (Theorem 1.1) to $|f|^{p_0}$ and $1$.
-Exponents: $p = p_1/p_0 > 1$ and its conjugate $q$ (where $1/p + 1/q = 1$, so $1/q = 1 - p_0/p_1$).
+Let $f \in L^{p_1}$. Apply Hölder's inequality (Theorem 1.1) to $|f|^{p_0}$ and $1$ with
+exponents: $p = p_1/p_0 > 1$ and its conjugate $q$ (where $1/p + 1/q = 1$, so $1/q = 1 - p_0/p_1$).
 $$ \int |f|^{p_0} \cdot 1 \le \left( \int (|f|^{p_0})^p \right)^{1/p} \left( \int 1^q \right)^{1/q} $$
 Substitute $p = p_1/p_0$:
 $$ \|f\|_{p_0}^{p_0} \le \left( \int |f|^{p_1} \right)^{p_0/p_1} (\mu(X))^{1 - p_0/p_1} $$
@@ -105,3 +105,18 @@ $$ \|f\|_{p_0}^{p_0} \le \|f\|_{p_1}^{p_0} \mu(X)^{1 - p_0/p_1} $$
 Take the $p_0$-th root:
 $$ \|f\|_{p_0} \le \|f\|_{p_1} \mu(X)^{1/p_0 - 1/p_1} $$
 Rearranging gives the desired inequality. Thus $f \in L^{p_0}$ and the inclusion holds.
+
+> [!IMPORTANT]
+> **Proposition 1.5**
+> If $X = \mathbb{Z}$ (counting measure), then the reverse inclusion holds: $L^{p_0}(\mathbb{Z}) \subset L^{p_1}(\mathbb{Z})$ if $p_0 \le p_1$. Also,
+> $$ \|f\|_{p_1} \le \|f\|_{p_0} $$
+
+### Proof
+
+Let $f = \{f(n)\}_{n \in \mathbb{Z}}$. $\sum |f(n)|^{p_0} = \|f\|_{p_0}^{p_0}$.
+Note that $\sup_n |f(n)| \le \|f\|_{p_0}$ (since sum includes each term).
+If $p_1 \ge p_0$:
+$$ \sum |f(n)|^{p_1} = \sum |f(n)|^{p_0} |f(n)|^{p_1-p_0} $$
+$$ \le (\sup_n |f(n)|)^{p_1-p_0} \sum |f(n)|^{p_0} $$
+$$ \le \|f\|_{p_0}^{p_1-p_0} \|f\|_{p_0}^{p_0} = \|f\|_{p_0}^{p_1} $$
+Taking $p_1$-th root: $\|f\|_{p_1} \le \|f\|_{p_0}$.
