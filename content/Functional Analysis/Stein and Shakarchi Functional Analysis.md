@@ -216,3 +216,26 @@ The set of all continuous linear functionals on $\mathcal{B}$ forms a vector spa
 $$ \|\ell\| = \sup_{\|f\| \le 1} |\ell(f)| = \sup_{\|f\|=1} |\ell(f)| = \sup_{f \neq 0} \frac{|\ell(f)|}{\|f\|} $$
 
 **Definition**: The vector space of all continuous linear functionals on $\mathcal{B}$ equipped with $\|\cdot\|$ is called the **dual space** of $\mathcal{B}$, denoted by $\mathcal{B}^*$.
+
+> [!IMPORTANT]
+> **Theorem 3.2**
+> The vector space $\mathcal{B}^*$ is a Banach space.
+
+### Proof
+
+We verify that $\mathcal{B}^*$ is complete with respect to $\|\cdot\|$.
+Let $\{\ell_n\}$ be a Cauchy sequence in $\mathcal{B}^*$.
+For each $f \in \mathcal{B}$, $|\ell_n(f) - \ell_m(f)| \le \|\ell_n - \ell_m\| \|f\|$.
+Thus $\{\ell_n(f)\}$ is a Cauchy sequence in $\mathbb{R}$ (which is complete), so it converges to a limit $\ell(f)$.
+The mapping $f \mapsto \ell(f)$ is linear.
+Since Cauchy sequences are bounded, there exists $M$ such that $\|\ell_n\| \le M$ for all $n$.
+$$ |\ell(f)| \le |(\ell - \ell_n)(f)| + |\ell_n(f)| \le |(\ell - \ell_n)(f)| + M\|f\| $$
+In the limit $n \to \infty$, $|\ell(f)| \le M\|f\|$, so $\ell$ is bounded.
+
+To show $\ell_n \to \ell$ in $\mathcal{B}^*$:
+Given $\epsilon > 0$, choose $N$ such that $\|\ell_n - \ell_m\| < \epsilon/2$ for $n, m > N$.
+For $n > N$ and any $f$:
+$$ |(\ell - \ell_n)(f)| \le |(\ell - \ell_m)(f)| + |(\ell_m - \ell_n)(f)| \le |(\ell - \ell_m)(f)| + \frac{\epsilon}{2} \|f\| $$
+For fixed $f$, choose $m$ large enough so $|(\ell - \ell_m)(f)| \le (\epsilon/2) \|f\|$.
+Then $|(\ell - \ell_n)(f)| \le \epsilon \|f\|$ for all $f$.
+Thus $\|\ell - \ell_n\| \le \epsilon$ for $n > N$, so $\ell_n \to \ell$ in norm.
