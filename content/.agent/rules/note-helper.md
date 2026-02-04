@@ -7,6 +7,6 @@ Structure it for readability and easy revision.
 
 Do not write it exactly as it is in the images, instead only the information compactly.
 
-Use sections and formatting as needed.
+Use sections and formatting as needed, but don't use it unnecessarily by bolding too much in proofs. Also don't use indedation uncessarily.
 
 Use tikz diagrams as needed.
