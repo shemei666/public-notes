@@ -663,9 +663,9 @@ $$
 
     % Angles inside the central triangle
     % These specific positions should match the visual logic of the vertices
-    \node at (-0.5, 0.8) {$\alpha$};
-    \node at (-0.3, -0.5) {$\beta$};
-    \node at (1.2, 0.1) {$\gamma$};
+    \node at (-0.5, -0.5) {$\alpha$};
+    \node at (0, -1) {$\beta$};
+    \node at (0.3, -0.65) {$\gamma$};
 
 \end{tikzpicture}
 \end{document}
