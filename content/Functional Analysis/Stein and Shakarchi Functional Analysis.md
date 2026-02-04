@@ -38,3 +38,25 @@ $$ |f(x)g(x)| \le \frac{1}{p}|f(x)|^p + \frac{1}{q}|g(x)|^q $$
 Integrate both sides:
 $$ \|fg\|_1 \le \frac{1}{p}\|f\|_p^p + \frac{1}{q}\|g\|_q^q = \frac{1}{p} + \frac{1}{q} = 1 $$
 Thus $\|fg\|_1 \le 1 = \|f\|_p \|g\|_q$.
+
+> [!IMPORTANT]
+> **Theorem 1.2 (Minkowski's Inequality)**
+> If $1 \le p < \infty$ and $f,g \in L^p$, then $f+g \in L^p$ and
+> $$ \|f+g\|_p \le \|f\|_p + \|g\|_p $$
+
+### Proof
+
+Case $p=1$: Follows quickly from $|f+g| \le |f| + |g|$.
+
+Case $p>1$:
+First show $f+g \in L^p$.
+$$ |f(x) + g(x)|^p \le 2^p (|f(x)|^p + |g(x)|^p) $$
+ Since $|f+g| \le |f| + |g| \le 2 \max(|f|, |g|)$, we have $|f+g|^p \le 2^p \max(|f|^p, |g|^p) \le 2^p(|f|^p + |g|^p)$.
+
+Now use the inequality:
+$$ |f+g|^p \le |f| |f+g|^{p-1} + |g| |f+g|^{p-1} $$
+Since $(p-1)q = p$ and $f+g \in L^p$, we have $(f+g)^{p-1} \in L^q$. Apply Hölder ($p, q$):
+$$ \|f+g\|_p^p \le (\|f\|_p + \|g\|_p) \|(f+g)^{p-1}\|_q $$
+Note that $\|(f+g)^{p-1}\|_q = \|f+g\|_p^{p/q}$. Since $p - p/q = 1$:
+$$ \|f+g\|_p^p \le (\|f\|_p + \|g\|_p) \|f+g\|_p^{p-1} $$
+Divide by $\|f+g\|_p^{p-1}$ (if $>0$) to conclude.
