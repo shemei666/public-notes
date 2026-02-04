@@ -78,6 +78,11 @@ Monotone Convergence Theorem implies $\int g^p < \infty$, so $g \in L^p$ and the
 Thus, $f_{n_k}(x) \to f(x)$ a.e. for some $f$. Since $|f| \le g \in L^p$, $f \in L^p$.
 
 To show convergence in norm ($f_{n_k} \to f$ in $L^p$):
+
+> [!NOTE]
+> **Theorem (Dominated Convergence)**
+> Let $\{g_n\}$ be a sequence of measurable functions such that $g_n \to g$ a.e. If there exists $G \in L^1$ such that $|g_n| \le G$ a.e. for all $n$, then $g_n \to g$ in $L^1$ (and $\int g_n \to \int g$).
+
 $$ |f(x) - S_K(f)(x)|^p \le (2 \max(|f|, |S_K(f)|))^p \le 2^{p+1} |g(x)|^p $$
 By Dominated Convergence Theorem, $\|f - f_{n_k}\|_p \to 0$.
 
