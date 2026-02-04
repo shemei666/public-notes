@@ -208,3 +208,11 @@ Thus $|\ell(h)| \le (1/\delta) \|h\|$, so $\ell$ is bounded with $M = 1/\delta$.
 
 ($\Leftarrow$) If $\ell$ is bounded, it is clearly continuous at the origin ($f \to 0 \implies \ell(f) \to 0$), hence continuous everywhere by linearity.
 
+### Dual Space
+
+The set of all continuous linear functionals on $\mathcal{B}$ forms a vector space.
+
+**Norm**: The norm $\|\ell\|$ of a continuous linear functional is the infimum of all $M$ such that $|\ell(f)| \le M \|f\|$.
+$$ \|\ell\| = \sup_{\|f\| \le 1} |\ell(f)| = \sup_{\|f\|=1} |\ell(f)| = \sup_{f \neq 0} \frac{|\ell(f)|}{\|f\|} $$
+
+**Definition**: The vector space of all continuous linear functionals on $\mathcal{B}$ equipped with $\|\cdot\|$ is called the **dual space** of $\mathcal{B}$, denoted by $\mathcal{B}^*$.
