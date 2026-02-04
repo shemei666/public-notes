@@ -239,3 +239,19 @@ $$ |(\ell - \ell_n)(f)| \le |(\ell - \ell_m)(f)| + |(\ell_m - \ell_n)(f)| \le |(
 For fixed $f$, choose $m$ large enough so $|(\ell - \ell_m)(f)| \le (\epsilon/2) \|f\|$.
 Then $|(\ell - \ell_n)(f)| \le \epsilon \|f\|$ for all $f$.
 Thus $\|\ell - \ell_n\| \le \epsilon$ for $n > N$, so $\ell_n \to \ell$ in norm.
+
+## The Dual Space of $L^p$ ($1 \le p < \infty$)
+
+Let $1 \le p \le \infty$ and $q$ be the conjugate exponent ($1/p + 1/q = 1$).
+
+Every function $g \in L^q$ defines a bounded linear functional $\ell$ on $L^p$ by:
+$$ \ell(f) = \int_X f(x)g(x) \, d\mu(x) $$
+By Hölder's inequality, $|\ell(f)| \le \|f\|_p \|g\|_q$. Thus $\|\ell\| \le \|g\|_q$.
+Associating $g$ to $\ell$ gives the inclusion $L^q \subset (L^p)^*$ for $1 \le p \le \infty$.
+
+**Main Result**:
+For $1 \le p < \infty$, every linear functional on $L^p$ is of this form for some $g \in L^q$.
+Thus, $(L^p)^* = L^q$ when $1 \le p < \infty$.
+
+**Note**:
+This result does **not** hold for $p = \infty$. The dual of $L^\infty$ contains $L^1$ but is strictly larger.
