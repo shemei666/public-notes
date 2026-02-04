@@ -2,7 +2,6 @@
 publish: true
 ---
 
-![[IMG_20260115_223542.jpg]]
 
 (1) decision space $X$
 (2) Objective function ($f$) on $X$
@@ -31,8 +30,6 @@ $f_0: \mathbb{R}^n \to \mathbb{R}, \quad f_i: \mathbb{R}^n \to \mathbb{R}$
    Optimizing a linear objective function subject to linear equality and inequality constraints.
    $$ \min\_{\vec{x}} c^T \vec{x} $$
    Subject to: $\vec{a}_i^T \vec{x} \leq b_i$ for $i=1,\dots,k$ (polyhedral constraints).
-
-   ![[IMG_20260115_223557.jpg]]
 
 3. **Optimal Transport**:
    Finding the most efficient way to transport mass from one distribution to another.
@@ -112,10 +109,6 @@ For any $\vec{x}_1, \vec{x}_2 \in C$ and $\theta_1, \theta_2 \ge 0 \implies \the
 
 $C$ is closed under non-negative linear combinations (conic combination).
 _Conic hull_ of $S \subseteq \mathbb{R}^n$: smallest convex cone containing $S$.
-
-![[IMG_20260112_161514 1.jpg]]
-
-![[IMG_20260112_161522.jpg]]
 
 **Def:** Proper cone $K \subseteq \mathbb{R}^{n}$ is a cone such that,
 
