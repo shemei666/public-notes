@@ -183,3 +183,28 @@ We write $\partial_x^\alpha f = g_\alpha$.
 
 The space $L^p_k(\mathbb{R}^d)$ (Sobolev Space) of all such functions is a Banach space with norm:
 $$ \|f\|_{L^p_k} = \sum_{|\alpha| \le k} \|\partial_x^\alpha f\|_{L^p} $$
+
+## Linear Functionals
+
+Let $\mathcal{B}$ be a Banach space over $\mathbb{R}$.
+A **linear functional** is a linear mapping $\ell: \mathcal{B} \to \mathbb{R}$, satisfying:
+$$ \ell(\alpha f + \beta g) = \alpha \ell(f) + \beta \ell(g) $$
+
+**Definitions**:
+*   **Continuous**: Given $\epsilon > 0$, there exists $\delta > 0$ such that $|\ell(f) - \ell(g)| \le \epsilon$ whenever $\|f - g\| \le \delta$.
+*   **Bounded**: There exists $M > 0$ such that $|\ell(f)| \le M \|f\|$ for all $f \in \mathcal{B}$.
+
+> [!IMPORTANT]
+> **Proposition 3.1**
+> A linear functional on a Banach space is continuous if and only if it is bounded.
+
+### Proof
+
+Note that $\ell$ is continuous iff $\ell$ is continuous at the origin.
+
+($\Rightarrow$) If $\ell$ is continuous, choose $\epsilon=1, g=0$. Then $|\ell(f)| \le 1$ whenever $\|f\| \le \delta$ for some $\delta > 0$.
+For any non-zero $h \in \mathcal{B}$, the vector $\delta h / \|h\|$ has norm $\delta$, so $|\ell(\delta h / \|h\|)| \le 1$.
+Thus $|\ell(h)| \le (1/\delta) \|h\|$, so $\ell$ is bounded with $M = 1/\delta$.
+
+($\Leftarrow$) If $\ell$ is bounded, it is clearly continuous at the origin ($f \to 0 \implies \ell(f) \to 0$), hence continuous everywhere by linearity.
+
