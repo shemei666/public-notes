@@ -628,47 +628,41 @@ $$
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \begin{document}
-\begin{tikzpicture}[scale=1.5]
-    % Sphere Outline
+\begin{tikzpicture}[scale=2]
+    % Sphere outline
     \draw (0,0) circle (2cm);
 
-    % Radius definition
-    \def\R{2}
+    % Great Circles
+    \draw[gray, thin] (0,0) ellipse (2cm and 0.6cm);
+    \draw[gray, thin, rotate=60] (0,0) ellipse (2cm and 0.6cm);
+    \draw[gray, thin, rotate=-60] (0,0) ellipse (2cm and 0.6cm);
 
-    % Great Circle 1 (Horizontal-ish)
-    \begin{scope}[rotate=-10]
-        \draw (-\R,0) arc (180:360:\R cm and 0.7cm);
-        \draw[dashed] (\R,0) arc (0:180:\R cm and 0.7cm);
-    \end{scope}
+    % Vertices (approximate based on intersections)
+    \coordinate (A) at (0, 0.75);
+    \coordinate (B) at (-0.95, -0.4);
+    \coordinate (C) at (0.95, -0.4);
 
-    % Great Circle 2 (Vertical-ish)
-    \begin{scope}[rotate=70]
-        \draw (-\R,0) arc (180:360:\R cm and 0.7cm);
-        \draw[dashed] (\R,0) arc (0:180:\R cm and 0.7cm);
-    \end{scope}
+    % Triangle Edges
+    \draw[blue, thick] (A) to[bend right=20] (B);
+    \draw[blue, thick] (B) to[bend right=20] (C);
+    \draw[blue, thick] (C) to[bend right=20] (A);
 
-    % Great Circle 3 (Diagonal)
-    \begin{scope}[rotate=-50]
-        \draw (-\R,0) arc (180:360:\R cm and 0.6cm);
-        \draw[dashed] (\R,0) arc (0:180:\R cm and 0.6cm);
-    \end{scope}
+    % Labels
+    \node[above] at (A) {$A$};
+    \node[below left] at (B) {$B$};
+    \node[below right] at (C) {$C$};
 
-    % Region Labels
-    % A (Top Left Lune)
-    \node at (-1.3, 1.5) {$A$};
-    \draw[->, >=stealth] (-1.2, 1.4) -- (-0.9, 1.2);
+    % Angles
+    \draw[red] ($(A)+(0,-0.2)$) arc (-110:-70:0.4);
+    \node[red, below] at ($(A)+(0,-0.25)$) {$\alpha$};
 
-    % B (Top Right Region)
-    \node at (0.8, 1.5) {$B$};
+    \draw[red] ($(B)+(0.2,0.1)$) arc (10:70:0.3);
+    \node[red, right] at ($(B)+(0.1,0.25)$) {$\beta$};
 
-    % C (Left Region)
-    \node at (-1.5, 0.2) {$C$};
+    \draw[red] ($(C)+(-0.2,0.1)$) arc (170:110:0.3);
+    \node[red, left] at ($(C)+(-0.1,0.25)$) {$\gamma$};
 
-    % Angles - Adjusted positions to be inside the triangle vertices
-    \node at (-0.3, 0.5) {$\alpha$};
-    \node at (-0.8, -0.2) {$\beta$};
-    \node at (0.8, -0.2) {$\gamma$};
-
+    \node[blue] at (0, 0) {$T$};
 \end{tikzpicture}
 \end{document}
 ```
