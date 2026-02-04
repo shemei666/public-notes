@@ -443,4 +443,5 @@ $$
 Since the function is periodic in $s$ with period $2\pi$.
 Thus $g(t)$ is constant, so $g(1) = g(0) = 0$, which concludes the proof.
 
-
+![[IMG_20260204_095410.jpg]]
+![[IMG_20260204_095416.jpg]]
