@@ -422,3 +422,23 @@ $$
 $$
 Define $g(t) = \int_0^{2\pi} \phi(s,t) ds$. We want to show $g'(t) \equiv 0$.
 
+$$
+\frac{\partial \phi}{\partial t} = f'(z + t(e^{is}-z)) e^{is}
+$$
+On the other hand,
+$$
+\frac{\partial}{\partial s} \left( f(z + t(e^{is}-z)) \right) = f'(z + t(e^{is}-z)) \cdot t(ie^{is})
+$$
+Thus
+$$
+\frac{\partial \phi}{\partial t} = \frac{1}{it} \frac{\partial}{\partial s} \left( f(z + t(e^{is}-z)) \right)
+$$
+Therefore
+$$
+g'(t) = \int_0^{2\pi} \frac{\partial \phi}{\partial t} ds = \frac{1}{it} \int_0^{2\pi} \frac{\partial}{\partial s} \left( f(z + t(e^{is}-z)) \right) ds
+$$
+$$
+= \frac{1}{it} \left[ f(z + t(e^{is}-z)) \right]_{s=0}^{2\pi} = 0
+$$
+Since the function is periodic in $s$ with period $2\pi$.
+Thus $g(t)$ is constant, so $g(1) = g(0) = 0$, which concludes the proof.
