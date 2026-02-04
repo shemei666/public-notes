@@ -496,7 +496,8 @@ $$
 &= \frac{n! M}{R^n}
 \end{align*}
 $$
-Thus, 
+**Corollary:**
 $$
 |f^{(n)}(a)| \le \frac{n! M}{R^n}
 $$
+
