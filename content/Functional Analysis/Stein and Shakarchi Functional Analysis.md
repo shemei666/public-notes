@@ -134,3 +134,6 @@ $$ \|f\|_\infty = \inf \{M : |f(x)| \le M \text{ a.e.} \} $$
 $E = \bigcup E_n$ where $E_n = \{x : |f(x)| > \|f\|_\infty + 1/n\}$.
 By definition of infimum, $\mu(E_n) = 0$, so $\mu(E) = 0$.
 
+> [!IMPORTANT]
+> **Theorem 2.1**
+> The vector space $L^\infty$ equipped with $\|\cdot\|_{L^\infty}$ is a complete vector space.
