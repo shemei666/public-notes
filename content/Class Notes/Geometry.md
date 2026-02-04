@@ -486,9 +486,9 @@ $$
 **Note:** Euclidean v.s are assumed finite dimensional unless mentioned.
 **Reflections** It is orthogonal symmetries about hyperplanes, Let $H$ be a hyperplane in an Euclidean vector space $V$, Let $x_{0} \in H^{\perp}$. The reflection $S_{H}(x)= x - \frac{2\langle x,x_{0} \rangle}{\lVert x_{0} \rVert^{2}}x_{0}$
 
-**Theorem:** Let V be a Euclidean v.s of dim n. Any affine linear isometry of V can be written as the composition of p reflections, where $p\leq n$.
+**Theorem:** Let V be a Euclidean v.s of dim n. Any linear isometry of V can be written as the composition of p reflections, where $p\leq n$.
 
-**Proof:** #todo
+**Proof:** 
 
 **Theorem:** Let $\mathscr{E}$ be an affine space of dimension $n$, every affine isometry of $\mathscr{E}$ can be written as composition of $p$ reflections, where $p\leq n$
 **Proof:**
