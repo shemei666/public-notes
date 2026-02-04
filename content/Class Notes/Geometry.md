@@ -557,6 +557,11 @@ Thus $f = s_H \circ s_{H_1} \circ \dots \circ s_{H_q}$, a composition of $q+1 \l
 
 **Theorem:** Let $\mathscr{E}$ be an affine space of dimension $n$, every affine isometry of $\mathscr{E}$ can be written as composition of $p$ reflections, where $p\leq n+1$
 **Proof:**
+**Case 1:** If $\varphi$ has a fixed point $A$, we vectorize $\mathscr{E}$ at $A$. Then $\varphi$ becomes a linear isometry of the underlying vector space. By the previous theorem, $\varphi = s_{H_1} \circ \dots \circ s_{H_p}$ where $H_i$ are hyperplanes through $A$ and $p \le n$.
+**Case 2:** If $\varphi$ has no fixed points, let $A$ be any point and $A' = \varphi(A) \neq A$. Let $H$ be the perpendicular bisector of $AA'$. Then $s_H \circ \varphi$ fixes $A$ (since $s_H(\varphi(A)) = s_H(A') = A$).
+By Case 1, $s_H \circ \varphi = s_{H_1} \circ \dots \circ s_{H_p}$ with $p \le n$.
+Thus $\varphi = s_H \circ s_{H_1} \circ \dots \circ s_{H_p}$, a composition of $p+1 \le n+1$ reflections. $\blacksquare$
+
 
 **Def:** An affine isometry is called a rigid motion if the determinant of the ALM is +1. Class of rigid motion is denoted by $Isom^{+}(\mathscr{E})$,
 
