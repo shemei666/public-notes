@@ -26,10 +26,6 @@ Comparing odd and even degrees, we get $P \equiv 0$, $T \equiv 0$.
 $\implies Y^2 - X^3 - X^2 | g$.
 
 
-
-
-
-
 **2.7)** Let $C : (y^2 = x^3 + ax + b) \subset k^2$; if $A = (x_1, y_1)$ and $B = (x_2, y_2)$, show how to give the coordinates of $A + B$ as rational functions of $x_1, y_1, x_2, y_2$.
 
 **Solution:**

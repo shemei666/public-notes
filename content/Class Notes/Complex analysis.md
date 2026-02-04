@@ -516,11 +516,6 @@ P(z) = A\prod_{j=1}^{n} (z-a_{j})^{m_{j}}  \quad A \in \mathbb{C}
 $$
 
 
-**Definition:** Let $f$ be analytic in a domain $\Omega$. A point $a \in \Omega$ is called a **zero of multiplicity $m$** (or order $m$) for $f$ if there exists an analytic function $g: \Omega \to \mathbb{C}$ such that $g(a) \neq 0$ and
-$$
-f(z) = (z-a)^m g(z)
-$$
-for all $z \in \Omega$. This is equivalent to saying that $f(a) = f'(a) = \dots = f^{(m-1)}(a) = 0$ and $f^{(m)}(a) \neq 0$.
 
 
 
