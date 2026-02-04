@@ -522,6 +522,18 @@ Since $d(g f_0)_x$ is, as before, a part of $d(g F)_{(x,t)}$...
 
 ---
 
-![[IMG_20260204_141827.jpg]]
+**Proof ($P=\text{embedding}$)**
+Since $X$ is compact it suffices to check for $P=$ one-one immersion and hence $P=$ one-one.
 
-![[IMG_20260204_142823.jpg]]
+It will be more convenient to work with $G: X \times I \to Y \times I$ where $G(x, t) = (f_t(x), t)$. Now we see that around any $(p, 0) \in X \times I$, $G$ is one-one in a nbhd.
+Indeed, $dG_{(p,t)}$ in local coordinates is a matrix that contains $(df_t)_p$.
+$$
+\begin{bmatrix}
+\frac{\partial \varphi_1}{\partial x_1} & \dots & \frac{\partial \varphi_1}{\partial x_k} & \frac{\partial \varphi_1}{\partial t} \\
+\vdots & & \vdots & \vdots \\
+\frac{\partial \varphi_l}{\partial x_1} & \dots & \frac{\partial \varphi_l}{\partial x_k} & \frac{\partial \varphi_l}{\partial t} \\
+0 & \dots & 0 & 1
+\end{bmatrix}
+$$
+Since $(df_0)_p$ is one-one, we have $k \le l$ and $(df_0)_p$ has rank $k$. Hence $dG_{(p,0)}$ has rank $k+1$, i.e., $G$ is an immersion near $(p, 0)$ and hence is one-one near $(p, 0)$.
+
