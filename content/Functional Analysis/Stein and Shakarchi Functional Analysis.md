@@ -51,7 +51,7 @@ Case $p=1$: Follows quickly from $|f+g| \le |f| + |g|$.
 Case $p>1$:
 First show $f+g \in L^p$.
 $$ |f(x) + g(x)|^p \le 2^p (|f(x)|^p + |g(x)|^p) $$
- Since $|f+g| \le |f| + |g| \le 2 \max(|f|, |g|)$, we have $|f+g|^p \le 2^p \max(|f|^p, |g|^p) \le 2^p(|f|^p + |g|^p)$.
+Since $|f+g| \le |f| + |g| \le 2 \max(|f|, |g|)$, we have $|f+g|^p \le 2^p \max(|f|^p, |g|^p) \le 2^p(|f|^p + |g|^p)$.
 
 Now use the inequality:
 $$ |f+g|^p \le |f| |f+g|^{p-1} + |g| |f+g|^{p-1} $$
@@ -60,3 +60,25 @@ $$ \|f+g\|_p^p \le (\|f\|_p + \|g\|_p) \|(f+g)^{p-1}\|_q $$
 Note that $\|(f+g)^{p-1}\|_q = \|f+g\|_p^{p/q}$. Since $p - p/q = 1$:
 $$ \|f+g\|_p^p \le (\|f\|_p + \|g\|_p) \|f+g\|_p^{p-1} $$
 Divide by $\|f+g\|_p^{p-1}$ (if $>0$) to conclude.
+
+## Completeness
+
+> [!IMPORTANT]
+> **Theorem 1.3**
+> The space $L^p(X, \mathcal{F}, \mu)$ is complete in the norm $\|\cdot\|_p$.
+
+### Proof
+
+Let $\{f_n\}$ be a Cauchy sequence in $L^p$.
+Choose a subsequence $\{f_{n_k}\}$ such that $\|f_{n_{k+1}} - f_{n_k}\|_p \le 2^{-k}$.
+Define
+$$ g(x) = |f_{n_1}(x)| + \sum_{k=1}^\infty |f_{n_{k+1}}(x) - f_{n_k}(x)| $$
+By Minkowski's inequality, partial sums satisfy $\|S_K(g)\|_p \le \|f_{n_1}\|_p + \sum 2^{-k} \le C$.
+Monotone Convergence Theorem implies $\int g^p < \infty$, so $g \in L^p$ and the series converges a.e.
+Thus, $f_{n_k}(x) \to f(x)$ a.e. for some $f$. Since $|f| \le g \in L^p$, $f \in L^p$.
+
+To show convergence in norm ($f_{n_k} \to f$ in $L^p$):
+$$ |f(x) - S_K(f)(x)|^p \le (2 \max(|f|, |S_K(f)|))^p \le 2^p |g(x)|^p $$
+By Dominated Convergence Theorem, $\|f - f_{n_k}\|_p \to 0$.
+
+Since $\{f_n\}$ is Cauchy and a subsequence converges to $f$, the full sequence converges to $f$.
