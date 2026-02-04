@@ -92,3 +92,16 @@ Since $\{f_n\}$ is Cauchy and a subsequence converges to $f$, the full sequence 
 > **Proposition 1.4**
 > If $\mu(X) < \infty$ and $1 \le p_0 \le p_1 \le \infty$, then $L^{p_1}(X) \subset L^{p_0}(X)$ and
 > $$ \frac{1}{\mu(X)^{1/p_0}} \|f\|_{p_0} \le \frac{1}{\mu(X)^{1/p_1}} \|f\|_{p_1} $$
+
+### Proof
+
+Without loss of generality, assume $p_1 > p_0$ (if equal, statement is trivial).
+Let $f \in L^{p_1}$. Apply Hölder's inequality (Theorem 1.1) to $|f|^{p_0}$ and $1$.
+Exponents: $p = p_1/p_0 > 1$ and its conjugate $q$ (where $1/p + 1/q = 1$, so $1/q = 1 - p_0/p_1$).
+$$ \int |f|^{p_0} \cdot 1 \le \left( \int (|f|^{p_0})^p \right)^{1/p} \left( \int 1^q \right)^{1/q} $$
+Substitute $p = p_1/p_0$:
+$$ \|f\|_{p_0}^{p_0} \le \left( \int |f|^{p_1} \right)^{p_0/p_1} (\mu(X))^{1 - p_0/p_1} $$
+$$ \|f\|_{p_0}^{p_0} \le \|f\|_{p_1}^{p_0} \mu(X)^{1 - p_0/p_1} $$
+Take the $p_0$-th root:
+$$ \|f\|_{p_0} \le \|f\|_{p_1} \mu(X)^{1/p_0 - 1/p_1} $$
+Rearranging gives the desired inequality. Thus $f \in L^{p_0}$ and the inclusion holds.
