@@ -537,3 +537,5 @@ $$
 $$
 Since $(df_0)_p$ is one-one, we have $k \le l$ and $(df_0)_p$ has rank $k$. Hence $dG_{(p,0)}$ has rank $k+1$, i.e., $G$ is an immersion near $(p, 0)$ and hence is one-one near $(p, 0)$.
 
+---
+Recommended exercises: $4.7$
