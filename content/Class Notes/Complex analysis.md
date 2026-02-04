@@ -510,5 +510,10 @@ implies the power series is a constant term.$\quad \blacksquare$
 
 **Corollary (Exercise):** Let $\gamma$ be a closed smooth curve in $\Omega$ and let $f: \Omega \to \mathbb{C}$ be analytic. Then $\int_{\gamma} f = 0$.
 
-**Exercise:** For any $P$ non-const polynomial $\exists a_{1},\dots,a_{n} \in \mathbb{C}$ and $m_{1},\dots,m_{n} \in \mathbb{Z}_{+}$ 
+**Exercise:** For any $P$ non-const polynomial $\exists a_{1},\dots,a_{n} \in \mathbb{C}$ and $m_{1},\dots,m_{n} \in \mathbb{Z}_{+}$ such that 
+$$
+P(z) = A\prod_{j=1}^{n} (z-a_{j})^{m_{j}}  \quad A \in \mathbb{C}
+$$
+
+
 
