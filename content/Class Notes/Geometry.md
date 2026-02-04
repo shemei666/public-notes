@@ -555,7 +555,7 @@ Consider $g = s_H \circ f$. Then $g(x_0) = x_0$. By Case 1, $g = s_{H_1} \circ \
 Thus $f = s_H \circ s_{H_1} \circ \dots \circ s_{H_q}$, a composition of $q+1 \le n$ reflections. $\blacksquare$
 
 
-**Theorem:** Let $\mathscr{E}$ be an affine space of dimension $n$, every affine isometry of $\mathscr{E}$ can be written as composition of $p$ reflections, where $p\leq n$
+**Theorem:** Let $\mathscr{E}$ be an affine space of dimension $n$, every affine isometry of $\mathscr{E}$ can be written as composition of $p$ reflections, where $p\leq n+1$
 **Proof:**
 
 **Def:** An affine isometry is called a rigid motion if the determinant of the ALM is +1. Class of rigid motion is denoted by $Isom^{+}(\mathscr{E})$,
