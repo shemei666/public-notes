@@ -446,7 +446,7 @@ If $AA'$ and $BB'$ are parallel, we argue the same way using translations. $\bla
 
 ## Convex set
 
-**Def:** $A,B \subseteq \mathscr{E}$, affine space, is a convex set if the segment $AB \subseteq  \mathscr{A}$, $\forall A,B \in \mathscr{A}$.
+**Def:** A subset $C \subseteq \mathscr{E}$ is a **convex set** if the segment $AB \subseteq C$ for all $A, B \in C$.
 
 **Proposition:** Any intersection of convex sets in convex.
 **Note:** It is not true for union

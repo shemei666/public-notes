@@ -503,14 +503,21 @@ Let us localize around $x \in X, y \in Y$.
 
 Now we may localize the problem. Let $x \in f_0^{-1}Z, y=f(x)$.
 Let us localize around $x \in X, y \in Y$, so that
-$$
+```tikz
+\usepackage{tikz-cd}
+\usepackage{amssymb}
+\begin{document}
 \begin{tikzcd}
 X' \arrow[r, "f_0"] & Y' \arrow[r, "g"] & \mathbb{R}^d \\
 x & y & \vec{0}
 \end{tikzcd}
-$$
+\end{document}
+```
 is a map with $g$ submersion at $y$.
 We may also assume that $g f_0$ is a submersion at $x$ since $f_0 \pitchfork Z$ at $x$ ($Z = g^{-1}(0)$ locally).
 
 Since $d(g f_0)_x$ is, as before, a part of $d(g F)_{(x,t)}$...
+
+
+---
 
