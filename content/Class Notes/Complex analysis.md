@@ -519,14 +519,15 @@ $$
 
 ## Zeros of Analytic Functions
 
-**Definition:** Let $f$ be analytic in a domain $\Omega$. A point $a \in \Omega$ is called a **zero of multiplicity $m$** (or order $m$) for $f$ if there exists an analytic function $g: \Omega \to \mathbb{C}$ such that $g(a) \neq 0$ and
+**Definition:** Let $f$ be analytic in a domain $\Omega$. A point $a \in \Omega$ is called a **zero of multiplicity $m$** (or order $m$) for $f$ if there exists an analytic function $g$ in a neighborhood of $a$ such that $g(a) \neq 0$ and
 $$
 f(z) = (z-a)^m g(z)
 $$
-for all $z \in \Omega$. This is equivalent to saying that $f(a) = f'(a) = \dots = f^{(m-1)}(a) = 0$ and $f^{(m)}(a) \neq 0$.
+for all $z$ in that neighborhood. This is equivalent to saying that $f(a) = f'(a) = \dots = f^{(m-1)}(a) = 0$ and $f^{(m)}(a) \neq 0$.
 
 
-**Theorem:** Let $$
+**Theorem:** Let $\Omega \subseteq \mathbb{C}$ be a domain and $f:\Omega \to \mathbb{C}$ analytic TFAE:
+1. $f \equiv 0$ on $\Omega$
 
 **Proof:**
 
