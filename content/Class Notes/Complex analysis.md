@@ -266,6 +266,8 @@ Set $v = \text{Im } h$. Then
 $$ u + i v = (\text{Re } h - C) + i \text{Im } h = h - C $$
 Since $h$ is analytic, $f = u + iv$ is analytic.
 
+
+
 **Def:** Let $u:\Omega\to  \mathbb{R}$  harmonic, then $f$ $\exists v:\Omega \to \mathbb{R}$ such that $u + iv$ is analytic on $\Omega$ then $v$ is called a harmonic conjugate.
 
 **Exercise:**  If $v_{1}, v_{2}$ are two harmonic conjugate of $u:\Omega\to \mathbb{R}$, then $v_{1}-v_{2}=\text{const}$.
@@ -514,6 +516,14 @@ implies the power series is a constant term.$\quad \blacksquare$
 $$
 P(z) = A\prod_{j=1}^{n} (z-a_{j})^{m_{j}}  \quad A \in \mathbb{C}
 $$
+
+## Zeros of Analytic Functions
+
+**Definition:** Let $f$ be analytic in a domain $\Omega$. A point $a \in \Omega$ is called a **zero of multiplicity $m$** (or order $m$) for $f$ if there exists an analytic function $g: \Omega \to \mathbb{C}$ such that $g(a) \neq 0$ and
+$$
+f(z) = (z-a)^m g(z)
+$$
+for all $z \in \Omega$. This is equivalent to saying that $f(a) = f'(a) = \dots = f^{(m-1)}(a) = 0$ and $f^{(m)}(a) \neq 0$.
 
 
 
