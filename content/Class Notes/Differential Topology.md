@@ -522,3 +522,6 @@ Since $d(g f_0)_x$ is, as before, a part of $d(g F)_{(x,t)}$...
 
 ---
 
+![[IMG_20260204_141827.jpg]]
+
+![[IMG_20260204_142823.jpg]]
