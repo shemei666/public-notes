@@ -528,9 +528,12 @@ for all $z$ in that neighborhood. This is equivalent to saying that $f(a) = f'(a
 
 **Theorem:** Let $\Omega \subseteq \mathbb{C}$ be a domain and $f:\Omega \to \mathbb{C}$ analytic TFAE:
 1. $f \equiv 0$ on $\Omega$
-2. $\exists$
+2. $\exists$ a point $a \in \Omega$ such that $f^{(n)} (a) = 0, \forall n\geq 0$ 
+3. $\{ z \in \Omega : f(z)=0 \}$ has a limit point in $\Omega $
 
-**Proof:**
+**Proof:** 
+$(1)\implies (2)$ Trivial
+
 
 
 
