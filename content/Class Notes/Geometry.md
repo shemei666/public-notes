@@ -629,40 +629,44 @@ $$
 \usetikzlibrary{calc}
 \begin{document}
 \begin{tikzpicture}[scale=2]
-    % Sphere outline
+    % Sphere Outline
     \draw (0,0) circle (2cm);
 
-    % Great Circles
-    \draw[gray, thin] (0,0) ellipse (2cm and 0.6cm);
-    \draw[gray, thin, rotate=60] (0,0) ellipse (2cm and 0.6cm);
-    \draw[gray, thin, rotate=-60] (0,0) ellipse (2cm and 0.6cm);
+    % Radius definition
+    \def\R{2}
 
-    % Vertices (approximate based on intersections)
-    \coordinate (A) at (0, 0.75);
-    \coordinate (B) at (-0.95, -0.4);
-    \coordinate (C) at (0.95, -0.4);
+    % Great Circle 1: The horizontal one crossing the middle
+    % This forms the lower boundary of lune B
+    \draw[rotate=-10] (-\R,0) arc (180:360:\R cm and 0.5cm);
+    \draw[dashed, rotate=-10] (\R,0) arc (0:180:\R cm and 0.5cm);
 
-    % Triangle Edges
-    \draw[blue, thick] (A) to[bend right=20] (B);
-    \draw[blue, thick] (B) to[bend right=20] (C);
-    \draw[blue, thick] (C) to[bend right=20] (A);
+    % Great Circle 2: The one going from top-left to bottom-right
+    % This creates the left boundary of the central triangle
+    \draw[rotate=70] (-\R,0) arc (180:360:\R cm and 0.6cm);
+    \draw[dashed, rotate=70] (\R,0) arc (0:180:\R cm and 0.6cm);
 
-    % Labels
-    \node[above] at (A) {$A$};
-    \node[below left] at (B) {$B$};
-    \node[below right] at (C) {$C$};
+    % Great Circle 3: The one going from bottom-left to top-right
+    % This creates the right boundary of the central triangle
+    \draw[rotate=-50] (-\R,0) arc (180:360:\R cm and 0.8cm);
+    \draw[dashed, rotate=-50] (\R,0) arc (0:180:\R cm and 0.8cm);
 
-    % Angles
-    \draw[red] ($(A)+(0,-0.2)$) arc (-110:-70:0.4);
-    \node[red, below] at ($(A)+(0,-0.25)$) {$\alpha$};
+    % Lune Labels
+    % A points to the top-left lune between GC2 and GC3
+    \node at (-1.3, 1.4) {$A$};
+    \draw[->, >=stealth] (-1.2, 1.3) -- (-0.9, 1.1);
 
-    \draw[red] ($(B)+(0.2,0.1)$) arc (10:70:0.3);
-    \node[red, right] at ($(B)+(0.1,0.25)$) {$\beta$};
+    % B is the top lune bounded by GC1 and GC3
+    \node at (0.7, 1.3) {$B$};
 
-    \draw[red] ($(C)+(-0.2,0.1)$) arc (170:110:0.3);
-    \node[red, left] at ($(C)+(-0.1,0.25)$) {$\gamma$};
+    % C is the left lune bounded by GC1 and GC2
+    \node at (-1.5, 0.2) {$C$};
 
-    \node[blue] at (0, 0) {$T$};
+    % Angles inside the central triangle
+    % These specific positions should match the visual logic of the vertices
+    \node at (-0.5, 0.8) {$\alpha$};
+    \node at (-0.3, -0.5) {$\beta$};
+    \node at (1.2, 0.1) {$\gamma$};
+
 \end{tikzpicture}
 \end{document}
 ```
