@@ -493,7 +493,7 @@ Assume true for $\dim \le n-1$. Let $\dim E = n$ and $f$ be an isometry. Pick $x
 **Case 1:** $f(x_0) = x_0$.
 Consider $S = x_0^\perp$. Since $f$ preserves scalar products and fixes $x_0$, it preserves $S$. $f|_S$ is an isometry of $S$. By induction, $f|_S = s_{H'_1} \circ \dots \circ s_{H'_q}$ ($q \le n-1$). Let $H_i = \operatorname{span}(H'_i, x_0)$. Then $f = s_{H_1} \circ \dots \circ s_{H_q}$ on $E$.
 **Case 2:** $f(x_0) \neq x_0$.
-Let $H$ be the perpendicular bisector of $[x_0, f(x_0)]$. Note $0 \in H$ since $\|f(x_0)\| = \|x_0\|$.
+Let $H$ be the perpendicular bisector(plane with equal distance from $x_0$ and $f(x_0)$) of $[x_0, f(x_0)]$. Note $0 \in H$ since $\|f(x_0)\| = \|x_0\|$.
 Then $s_H(f(x_0)) = x_0$.
 Consider $g = s_H \circ f$. Then $g(x_0) = x_0$. By Case 1, $g = s_{H_1} \circ \dots \circ s_{H_q}$ ($q \le n-1$).
 Thus $f = s_H \circ s_{H_1} \circ \dots \circ s_{H_q}$, a composition of $q+1 \le n$ reflections. $\blacksquare$
