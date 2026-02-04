@@ -472,3 +472,31 @@ $$
 f(z) = \sum_{n=0}^\infty c_n (z-a)^n
 $$
 This proves that analytic functions are analytic in the sense of power series.
+
+## Cauchy's Integral Formula for Derivatives
+
+**Theorem**: If $f$ is analytic in a domain $\Omega$ containing the closed disk $\overline{D(a,R)}$, and $\gamma$ is the circle $|z-a|=R$ traversed counter-clockwise, then for any $z \in D(a,R)$:
+$$
+f^{(n)}(z) = \frac{n!}{2\pi i} \int_{\gamma} \frac{f(w)}{(w-z)^{n+1}} dw
+$$
+In particular, for $z=a$:
+$$
+f^{(n)}(a) = \frac{n!}{2\pi i} \int_{\gamma} \frac{f(w)}{(w-a)^{n+1}} dw
+$$
+
+## Cauchy's Estimates
+
+From the formula for $f^{(n)}(a)$, we can derive an estimate for the magnitude of the derivatives.
+Let $M = \sup_{w \in \gamma} |f(w)|$. Then:
+$$
+\begin{align*}
+|f^{(n)}(a)| &= \left| \frac{n!}{2\pi i} \int_{\gamma} \frac{f(w)}{(w-a)^{n+1}} dw \right| \\
+&\le \frac{n!}{2\pi} \int_{\gamma} \frac{|f(w)|}{|w-a|^{n+1}} |dw| \\
+&\le \frac{n!}{2\pi} \frac{M}{R^{n+1}} \cdot 2\pi R \\
+&= \frac{n! M}{R^n}
+\end{align*}
+$$
+Thus, **Cauchy's Estimate**:
+$$
+|f^{(n)}(a)| \le \frac{n! M}{R^n}
+$$
