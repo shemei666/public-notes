@@ -672,7 +672,7 @@ $$
 ```
 
 **Proof:** Let $D$ be the half-sphere containing $T$ determined by the great circle opposite to the angle $\alpha$.
-
+EASY to prove
 
 ## Three dimensional Euclidean affine space
 
