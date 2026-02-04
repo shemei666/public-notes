@@ -652,8 +652,8 @@ $$
 
     % Lune Labels
     % A points to the top-left lune between GC2 and GC3
-    \node at (-1.3, 1.4) {$A$};
-    \draw[->, >=stealth] (-1.2, 1.3) -- (-0.9, 1.1);
+    \node at (-1.5, 1) {$A$};
+    % \draw[->, >=stealth] (-1.2, 1.3) -- (-0.9, 1.1);
 
     % B is the top lune bounded by GC1 and GC3
     \node at (0.7, 1.3) {$B$};
