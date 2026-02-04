@@ -421,3 +421,4 @@ $$
 \int_0^{2\pi} \phi(s,0) ds = \int_0^{2\pi} \left[ \frac{e^{is} f(z)}{e^{is}-z} - f(z) \right] ds = 0
 $$
 Define $g(t) = \int_0^{2\pi} \phi(s,t) ds$. We want to show $g'(t) \equiv 0$.
+
