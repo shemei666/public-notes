@@ -501,3 +501,11 @@ $$
 |f^{(n)}(a)| \le \frac{n! M}{R^n}
 $$
 
+**Theorem(Liouville's Theorem):** Any bounded entire function is constant.
+**Proof:** 
+$$
+\lvert f^{(n)} \rvert (z) \leq \frac{n!M}{R^{n}}  \to 0 \text{ as } R \to \infty  
+$$
+implies the power series is a constant term.$\quad \blacksquare$
+
+![[IMG_20260204_103034.jpg]]
