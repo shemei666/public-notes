@@ -164,3 +164,22 @@ Since $\epsilon$ is arbitrary, result follows.
 
 **Definition**: A complete normed vector space is called a **Banach space**.
 
+### Examples
+
+**Example 3: Hölder (Lipschitz) Space $\Lambda^\alpha(\mathbb{R})$**
+For $0 < \alpha \le 1$, the space of bounded functions on $\mathbb{R}$ satisfying:
+$$ \sup_{t_1 \neq t_2} \frac{|f(t_1) - f(t_2)|}{|t_1 - t_2|^\alpha} < \infty $$
+For $\alpha > 1$, functions are constant.
+On $\mathbb{R}^d$, the norm is
+$$ \|f\|_{\Lambda^\alpha(\mathbb{R}^d)} = \sup_{x} |f(x)| + \sup_{x \neq y} \frac{|f(x) - f(y)|}{|x - y|^\alpha} $$
+$\Lambda^\alpha(\mathbb{R}^d)$ is a Banach space.
+
+**Example 4: Sobolev Space $L^p_k(\mathbb{R}^d)$**
+$f \in L^p(\mathbb{R}^d)$ has **weak derivatives** up to order $k$ if for every multi-index $\alpha$ with $|\alpha| \le k$, there exists $g_\alpha \in L^p$ such that:
+$$ \int_{\mathbb{R}^d} g_\alpha(x) \phi(x) \, dx = (-1)^{|\alpha|} \int_{\mathbb{R}^d} f(x) \partial_x^\alpha \phi(x) \, dx $$
+for all smooth $\phi$ with compact support.
+Here $\partial_x^\alpha = (\partial/\partial x_1)^{\alpha_1} \dots (\partial/\partial x_d)^{\alpha_d}$.
+We write $\partial_x^\alpha f = g_\alpha$.
+
+The space $L^p_k(\mathbb{R}^d)$ (Sobolev Space) of all such functions is a Banach space with norm:
+$$ \|f\|_{L^p_k} = \sum_{|\alpha| \le k} \|\partial_x^\alpha f\|_{L^p} $$
