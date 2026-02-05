@@ -558,4 +558,8 @@ Recommended exercises: $4.7$
 > Each $f(C_{i})$ lies in some $C_{i}'$ so that $\sum_{}^{}Vol(C_{i}') <M\varepsilon$. Since $\varepsilon>0$ was arbitrary, we get that $f(A)$ has measure 0.
 
 
+> [!TIP] Corollary: (Mini-Sard Theorem)
+>Let $U \subseteq  \mathbb{R}^{n}$ be open. Then for any smooth map $f:U \to \mathbb{R}^{n+k}$ with $k\geq 1$, $f(U)$ has measure $0$.
 
+> [!NOTE]- Proof
+> Define $F:U \times \mathbb{R}^{k}\to \mathbb{R}^{n+k}$ by $(p,v)\mapsto f(p)$. Then $F$ is smooth and $f$ factors as $U \hookrightarrow U \times \mathbb{R}^{k} \to \mathbb{R}^{n+k}$
