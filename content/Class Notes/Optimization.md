@@ -566,4 +566,4 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
  > [!c] Exercise
  > Show that the indexing set can be chosen to be countable.
 
-![[IMG_20260205_120617.jpg]]
+![[IMG_20260205_120617.jpg]]![[IMG_20260205_121030.jpg]]
