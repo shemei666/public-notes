@@ -492,7 +492,7 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[>=stealth, scale=1.3]
+\begin{tikzpicture}[>=stealth, scale=1]
     % Sphere S
     \draw[thick, blue] (0,0) circle (3cm);
     \node[blue] at (2.5, 2.5) {$S$};
@@ -574,4 +574,4 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
  > [!NOTE]- Proof Sketch
  > There is a linear functional $\rho$ such that $\rho(\vec{x}) \le b$ for all $\vec{x} \in A-B$.
  > $0 = \rho(\vec{0}) \ge b$
- > 
+ 
