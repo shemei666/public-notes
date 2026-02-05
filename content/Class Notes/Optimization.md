@@ -440,14 +440,44 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 ```
 
 > [!NOTE]- Proof
-> Define $\phi(t) = \lVert \vec{x} - ((1-t)P_{K}(\vec{x}) + tP_{K}(\vec{y})) \rVert^2$.
-> By analyzing the derivative $\phi'(0)$, we derive the variational inequality:
-> $$ \langle \vec{x} - P_{K}(\vec{x}), P_{K}(\vec{y}) - P_{K}(\vec{x}) \rangle \leq 0 $$
-> Similarly for $\vec{y}$:
-> $$ \langle \vec{y} - P_{K}(\vec{y}), P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle \leq 0 $$
-> Summing these inequalities leads to:
-> $$ \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert^2 \leq \langle \vec{x} - \vec{y}, P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle $$
-> By Cauchy-Schwarz, this implies contraction.
+> Define:
+> $$ \phi(t) = \lVert \vec{x} - ((1-t)P_{K}(\vec{x}) + tP_{K}(\vec{y})) \rVert^2 $$
+> Maps $\phi: [0,1] \to \mathbb{R}_{\ge 0}$.
+> Expanding:
+> $$
+> \begin{align*}
+> \phi(t) &= \lVert \vec{x} - P_{K}(\vec{x}) + t(P_{K}(\vec{x}) - P_{K}(\vec{y})) \rVert^2 \\
+> &= \lVert \vec{x} - P_{K}(\vec{x}) \rVert^2 + 2t \langle \vec{x} - P_{K}(\vec{x}), P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle + t^2 \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert^2
+> \end{align*}
+> $$
+> Differentiating:
+> $$ \phi'(t) = 2 \langle \vec{x} - P_{K}(\vec{x}), P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle + 2t \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert^2 $$
+> Since $P_K(\vec{x})$ minimizes distance, $\phi(t)$ is minimized at $t=0$, so $\phi'(0) \ge 0$:
+> $$
+> \begin{gather}
+> 2 \langle \vec{x} - P_{K}(\vec{x}), P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle \ge 0 \\
+> \implies \langle \vec{x} - P_{K}(\vec{x}), P_{K}(\vec{y}) - P_{K}(\vec{x}) \rangle \le 0
+> \end{gather}
+> $$
+> A symmetric argument for $\vec{y}$ gives:
+> $$
+> \begin{gather}
+> \langle \vec{y} - P_{K}(\vec{y}), P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle \le 0 \\
+> \langle P_{K}(\vec{x}) - P_{K}(\vec{y}), P_{K}(\vec{y}) - \vec{y} \rangle \ge 0 \implies \langle P_{K}(\vec{y}) - \vec{y}, P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle \ge 0 \\
+> \text{(User's version equivalent: } \langle P_{K}(\vec{x}) - \vec{y}, P_{K}(\vec{y}) - P_{K}(\vec{x}) \rangle \le 0 \text{)}
+> \end{gather}
+> $$
+> Adding the two inequalities:
+> $$
+> \begin{gather}
+> \langle \vec{x} - \vec{y}, P_{K}(\vec{y}) - P_{K}(\vec{x}) \rangle \le \langle P_{K}(\vec{x}) - P_{K}(\vec{y}), P_{K}(\vec{y}) - P_{K}(\vec{x}) \rangle \\
+> \langle \vec{x} - \vec{y}, P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle \ge \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert^2
+> \end{gather}
+> $$
+> By Cauchy-Schwarz:
+> $$ \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert^2 \le \lVert \vec{x} - \vec{y} \rVert \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert $$
+> If $P_{K}(\vec{x}) \neq P_{K}(\vec{y})$, dividing gives:
+> $$ \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert \le \lVert \vec{x} - \vec{y} \rVert $$
 
 ### Projection of Sphere
 
@@ -499,3 +529,4 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > [!TODO] Proof
 > Prove the surjectivity of the normal map for bounded convex sets.
 
+![[IMG_20260205_112922.jpg]]![[IMG_20260205_112932_1.jpg]]![[IMG_20260205_113731.jpg]]![[IMG_20260205_114023.jpg]]
