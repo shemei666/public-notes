@@ -1,2 +1,2 @@
-> [!INFO] Definition
+> [!INFO] Definition: 
 > 

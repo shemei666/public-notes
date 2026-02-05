@@ -1,2 +1,2 @@
 > [!QUESTION] Exercise
->
+> 

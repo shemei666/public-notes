@@ -1,2 +1,2 @@
 > [!TIP] Corollary
->
+> 

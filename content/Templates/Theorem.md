@@ -1,3 +1,2 @@
-**Theorem:**
-
-**Proof:**
+> [!TIP] Theorem: 
+> 

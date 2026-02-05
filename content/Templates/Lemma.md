@@ -1,3 +1,2 @@
-**Lemma:**
-
-**Proof:**
+> [!TIP] Lemma
+> 

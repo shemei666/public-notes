@@ -1,3 +1,2 @@
-**Proposition:**
-
-**Proof:**
+> [!TIP] Proposition
+> 

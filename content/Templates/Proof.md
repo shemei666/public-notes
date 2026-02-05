@@ -1,1 +1,2 @@
-> [!Proof:]-
+> [!NOTE]- Proof
+> 

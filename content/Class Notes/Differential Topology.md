@@ -549,4 +549,9 @@ Recommended exercises: $4.7$
 
 ## Sard's Theorem
 
+> [!TIP] Theorem: 
+> $U\subseteq \mathbb{R}^{n}$ open, $f:U\to \mathbb{R}^{n}$ smooth. If $A\subseteq U$ has measure $0$, then so does $f(A)$
+
+> [!NOTE]- Proof
+> We see that $f$ is Lipshitz on $\overline{B}$. Now we apply the lemma
 
