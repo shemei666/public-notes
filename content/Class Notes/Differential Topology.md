@@ -554,5 +554,8 @@ Recommended exercises: $4.7$
 
 > [!NOTE]- Proof
 > We see that $f$ is Lipshitz on $\overline{B}$. Now we apply the lemma to see that if $\{ C_{i} \}$ are open cubes where $A\subseteq \cup C_{i}$ with $\sum_{}^{} Vol(C_{i})< \varepsilon$ then $f(A) \subseteq \cup f(C_{i})$
-> Each $f(C_{i})$ lies in some $C_{i}$
+> 
+> Each $f(C_{i})$ lies in some $C_{i}'$ so that $\sum_{}^{}Vol(C_{i}') <M\varepsilon$. Since $\varepsilon>0$ was arbitrary, we get that $f(A)$ has measure 0
+
+
 
