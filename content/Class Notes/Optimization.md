@@ -561,7 +561,8 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > This leads to a **Contradiction**! (see previous theorem: Separating Hyperplane Theorem).
 > Thus, $K = \bigcap \{ H_{\vec{a},b}^- \mid H_{\vec{a},b} \text{ supports } K \}$.
 >
-> $$ K = \{ \vec{x} \in \mathbb{R}^n \mid \langle \vec{a}, \vec{x} \rangle \leq b, \quad \forall \vec{a} \in \mathbb{R}^n, b \in \mathbb{R} \text{ defining support} \} $$
+%% > $$ K = \{ \vec{x} \in \mathbb{R}^n \mid \langle \vec{a}, \vec{x} \rangle \leq b, \quad \forall \vec{a} \in \mathbb{R}^n, b \in \mathbb{R} \text{ defining support} \} $$ %%
 
  > [!c] Exercise
  > Show that the indexing set can be chosen to be countable.
+
