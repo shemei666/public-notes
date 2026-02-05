@@ -590,4 +590,4 @@ $$
 #todo 
 
 ---
-
+## Separation properties of convex sets
