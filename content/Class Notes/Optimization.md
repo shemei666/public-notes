@@ -529,4 +529,32 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > [!TODO] Proof
 > Prove the surjectivity of the normal map for bounded convex sets.
 
-![[IMG_20260205_112922.jpg]]![[IMG_20260205_112932_1.jpg]]![[IMG_20260205_113731.jpg]]![[IMG_20260205_114023.jpg]]
+## Separation Properties of Convex Sets
+
+> [!INFO] Definition: Separation
+> Let $A, B \subseteq \mathbb{R}^n$ and $H_{\vec{a},b} \subseteq \mathbb{R}^n$ be a hyperplane. We say $H_{\vec{a},b}$ **separates** $A$ and $B$ if:
+> $$ A \subseteq H_{\vec{a},b}^- \quad \text{and} \quad B \subseteq H_{\vec{a},b}^+ \quad (\text{or vice versa}) $$
+>
+> 1. The separation is said to be **proper** if $A, B$ both do not lie in $H_{\vec{a},b}$.
+> 2. $A, B$ are **strictly separated** if:
+>    $$ A \subseteq \text{int}(H_{\vec{a},b}^-) \quad \text{and} \quad B \subseteq \text{int}(H_{\vec{a},b}^+) \quad (\text{or vice versa}) $$
+> 3. $A, B$ are **strongly separated** by $H_{\vec{a},b}$ if there is an $\epsilon > 0$ such that $H_{\vec{a},b-\epsilon}$ and $H_{\vec{a},b+\epsilon}$ both separate $A$ and $B$.
+
+> [!TIP] Theorem: Separation of Point and Convex Set
+> Let $K \subseteq \mathbb{R}^n$ be a nonempty closed convex proper subset of $\mathbb{R}^n$ and let $\vec{x} \notin K$. Then $K$ and $\{\vec{x}\}$ can be strictly separated.
+
+> [!NOTE]- Proof
+> 1. The hyperplane through $P_K(\vec{x})$ ($\in K$) and orthogonal to $u(K, \vec{x}) = \frac{\vec{x}-P_K(\vec{x})}{\|\vec{x}-P_K(\vec{x})\|}$ supports $K$.
+> 2. The parallel hyperplane through $\frac{\vec{x}+P_K(\vec{x})}{2}$ **strongly separates** $K$ and $\vec{x}$.
+
+---
+
+## Representation Theorem 1
+
+> [!TIP] Theorem
+> Each nonempty closed convex set in $\mathbb{R}^n$ is the intersection of its supporting halfspaces.
+
+> [!NOTE]- Proof
+> Let $\mathcal{K}$ be the collection of supporting halfspaces for $K$.
+> Clearly $K \subseteq \bigcap_{A \in \mathcal{K}} A$.
+> (Proof continues via separation arguments...)
