@@ -1,1 +1,2 @@
-**Def:** 
+> [!INFO] Definition
+> 
