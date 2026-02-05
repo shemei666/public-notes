@@ -463,7 +463,7 @@ Clearly $f_t \pitchfork Z, \forall t < \epsilon$ as $f_t^{-1}(Z) = \varnothing$.
 
 Now assume $f_0^{-1}Z \ne \varnothing$. Let $W$ be any open nbd of $f_0^{-1}Z \times \{0\}$ in $X \times I$.
 Then we see that $\exists \epsilon > 0$ such that
-$f_t^{-1}Z \subseteq W, \forall t < \epsilon$.
+$f_t^{-1}Z \subseteq W \times \{ t \}, \forall t < \epsilon$.
 
 > [!Proof of claim]-
 > If not, then $\exists (x_i, t_i) \notin W, t_i \to 0$ such that $f_{t_i}(x_i) \in Z$.
@@ -516,7 +516,7 @@ We may also assume that $g f_0$ is a submersion at $x$ since $f_0 \pitchfork Z$ 
 
 Since $d(g f_0)_x$ is, as before, a part of $d(g F)_{(x,t)}$...
 
-#todo 
+![[IMG_20260203_151200.jpg]]
 
 ---
 
