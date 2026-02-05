@@ -1,8 +1,6 @@
-
 ---
 publish: true
 ---
-
 # Optimization
 
 ## Basic Concepts
