@@ -130,7 +130,7 @@ Back to $g=(g_{1},\dots,g_{l}):X\to \mathbb{R}^{l}$, we say that $g_{1},\dots,g_
 2. Any submanifold $Z \subseteq X$ is locally the common zero set of $\text{codim}_{X}(Z)$ independent functions.
 
 **Proof:**
-![[1769503249938.jpg]]
+
 
 1. We already saw this when proving [[#Regular Values and Pre-Image Theorem|Pre-Image Thm]]. Since the condition is local, it suffices to check in local coordinates (by [[#Local Submersion Theorem|Submersion Thm]]), where $f$ looks like a projection. Thus locally $f^{-1}(y)$ is given by the vanishing of some coordinate functions, which are independent.
 2. This follows immediately from the corollary to the key lemma (slice chart). Recall that locally $Z \subseteq X$ is given, in standard coordinates, as the vanishing of coordinate functions. And coordinate functions are always independent.
@@ -562,4 +562,6 @@ Recommended exercises: $4.7$
 >Let $U \subseteq  \mathbb{R}^{n}$ be open. Then for any smooth map $f:U \to \mathbb{R}^{n+k}$ with $k\geq 1$, $f(U)$ has measure $0$.
 
 > [!NOTE]- Proof
-> Define $F:U \times \mathbb{R}^{k}\to \mathbb{R}^{n+k}$ by $(p,v)\mapsto f(p)$. Then $F$ is smooth and $f$ factors as $U \hookrightarrow U \times \mathbb{R}^{k} \to \mathbb{R}^{n+k}$
+> Define $F:U \times \mathbb{R}^{k}\to \mathbb{R}^{n+k}$ by $(p,v)\mapsto f(p)$. Then $F$ is smooth and $f$ factors as $U \hookrightarrow U \times \mathbb{R}^{k} \to \mathbb{R}^{n+k}$. Now $i(U)$ has measure $0$. Therefore $f(U) = F (i(U))$ has measure $0$ by above theorem.
+
+Let $\mathbb{R}^{n} = \mathbb{R}^{k}\times \mathbb{R}^{n-k}$.For any $c \in \mathbb{R}^{k}$  Define the vertical slice of $\mathbb{R}^{n}$ at $c$ to be $V_{c}:= c \times \mathbb{R}^{n-k}$. Here $V_{c}$ is in natural bijection with $\mathbb{R}^{n-k}$ and so we say that $A\subseteq V_{c}$ has measure $0$ if the corresponding set in $\mathbb{R}^{n-k}$ has measure $0$.
