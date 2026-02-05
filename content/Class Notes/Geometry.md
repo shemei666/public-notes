@@ -286,7 +286,7 @@ $$ \frac{\overrightarrow{A_1 A_2}}{\overrightarrow{A_1 A_3}} = \frac{\overrighta
 **Converse of Thales Theorem:**
 Let $L_1, L_2, L_3$ be three distinct lines intersecting two transversals $D_1, D_2$ at $A_1, A_2, A_3$ and $A_1', A_2', A_3'$ respectively.
 If $L_1 \parallel L_3$ and the ratios of the intercepts are equal, i.e.,
-$$ \frac{\overrightarrow{A*1 A_2}}{\overrightarrow{A_1 A_3}} = \frac{\overrightarrow{A_1' A_2'}}{\overrightarrow{A_1' A_3'}} $$
+$$ \frac{\overrightarrow{A_1 A_2}}{\overrightarrow{A_1 A_3}} = \frac{\overrightarrow{A_1' A_2'}}{\overrightarrow{A_1' A_3'}} $$
 then the line $L_2$ is parallel to $L_1$ and $L_3$.
 **Proof:**
 Let $\pi$ be the affine projection of $D*{1}$ onto $D_2$ parallel to $L_i$ , and let $P$ be the associated linear map.
