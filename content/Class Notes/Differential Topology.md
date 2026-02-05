@@ -514,9 +514,13 @@ x & y & \vec{0}
 is a map with $g$ submersion at $y$.
 We may also assume that $g f_0$ is a submersion at $x$ since $f_0 \pitchfork Z$ at $x$ ($Z = g^{-1}(0)$ locally).
 
-Since $d(g f_0)_x$ is, as before, a part of $d(g F)_{(x,t)}$...
+Since $d(g f_0)_x$ is, as before, a part of $d(g F)_{(x,t)}$
 
-![[IMG_20260203_151200.jpg]]
+We see by the same continuity argument as before, that $d(gf_t)$ is onto for all points in a nbd $W_x$ of $(x,0)$ in $X \times I$.
+
+Now set $W := \bigcup_{x \in f_0^{-1}Z} W_x$. By the observation proved before, $\exists \varepsilon > 0$ such that $f_t^{-1}Z \subseteq W, \forall t < \varepsilon$.
+Then this $\varepsilon$ works for proving (d), i.e., $f_t \pitchfork Z, \forall t < \varepsilon$.
+Q.E.D.
 
 ---
 
@@ -541,5 +545,8 @@ Recommended exercises: $4.7$
 
 ---
 
+## Some Measure Theory
+
+## Sard's Theorem
 
 
