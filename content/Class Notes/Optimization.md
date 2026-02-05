@@ -464,7 +464,7 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > \begin{gather}
 > \langle \vec{y} - P_{K}(\vec{y}), P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle \le 0 \\
 > \langle P_{K}(\vec{x}) - P_{K}(\vec{y}), P_{K}(\vec{y}) - \vec{y} \rangle \ge 0 \implies \langle P_{K}(\vec{y}) - \vec{y}, P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle \ge 0 \\
-> \text{(User's version equivalent: } \langle P_{K}(\vec{x}) - \vec{y}, P_{K}(\vec{y}) - P_{K}(\vec{x}) \rangle \le 0 \text{)}
+>  \langle P_{K}(\vec{x}) - \vec{y}, P_{K}(\vec{y}) - P_{K}(\vec{x}) \rangle \le 0 \text{)}
 > \end{gather}
 > $$
 > Adding the two inequalities:
