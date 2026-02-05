@@ -541,7 +541,7 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > 3. $A, B$ are **strongly separated** by $H_{\vec{a},b}$ if there is an $\epsilon > 0$ such that $H_{\vec{a},b-\epsilon}$ and $H_{\vec{a},b+\epsilon}$ both separate $A$ and $B$.
 
 > [!TIP] Theorem: Separation of Point and Convex Set
-> Let $K \subseteq \mathbb{R}^n$ be a nonempty closed convex proper subset of $\mathbb{R}^n$ and let $\vec{x} \notin K$. Then $K$ and $\{\vec{x}\}$ can be strictly separated.
+> Let $K \subseteq \mathbb{R}^n$ be a nonempty closed convex proper subset of $\mathbb{R}^n$ and let $\vec{x} \notin K$. Then $K$ and $\{\vec{x}\}$ can be strongly separated.
 
 > [!NOTE]- Proof
 > 1. The hyperplane through $P_K(\vec{x})$ ($\in K$) and orthogonal to $u(K, \vec{x}) = \frac{\vec{x}-P_K(\vec{x})}{\|\vec{x}-P_K(\vec{x})\|}$ supports $K$.
@@ -552,9 +552,8 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 ## Representation Theorem 1
 
 > [!TIP] Theorem
-> Each nonempty closed convex set in $\mathbb{R}^n$ is the intersection of its supporting halfspaces.
+> Each nonempty proper closed convex set in $\mathbb{R}^n$ is the intersection of its supporting halfspaces.
 
 > [!NOTE]- Proof
 > Let $\mathcal{K}$ be the collection of supporting halfspaces for $K$.
 > Clearly $K \subseteq \bigcap_{A \in \mathcal{K}} A$.
-> (Proof continues via separation arguments...)
