@@ -139,7 +139,6 @@ Back to $g=(g_{1},\dots,g_{l}):X\to \mathbb{R}^{l}$, we say that $g_{1},\dots,g_
 **Proposition:** $f: X \to Y$ smooth, $y \in Y$ regular value of $f$, then for any $x \in Z:= f^{-1}(y)$, $T_{x}Z =$ kernel $df_{x}:T_{x}X \to T_{y}Y$
 
 **Proof:**
-![[IMG_20260127_142539.jpg]]
 The composite $f \circ i$ is a constant map:
 
 ```tikz
@@ -171,7 +170,6 @@ $$
 $\therefore T_x Z = \ker(df_x)$.
 Q.E.D.
 
-![[IMG_20260127_143309.jpg]]
 
 **Example:** The tangent space of a hypersurface or level surface $f(x_{1},\dots,x_{n})-c=0$ (if $c$ is a regular value of $f$) is $(\nabla f)^{\perp}$ at any point.
 
@@ -216,7 +214,7 @@ This is clearly not onto for some choices of $A$ (e.g $A=0$), for $A$ invertible
 Thus $f$ is a submersion over the dense open subset $GL(n)$ ( the set of all invertible matrices) in $M(n)$. ==It follows that the image $f$ contains an open subset of $S(n)$==.
 
 For any $D \in S(n)$, if $D$ is invertible, then $D$ is a regular value of $f$, either $f^{-1}D$ is empty or if $A \in f^{-1}(D)$, then $\det(A) \neq 0$.
-![[IMG_20260127_145606.jpg]]
+
 Thus $f^{-1}(D)$ is either empty or a manifold of $n^{2} - \frac{n(n+1)}{2} = \frac{n(n-1)}{2}$.
 
 Pick $D=I$ identity matrix. Then $f^{-1}I = O(n)$ the set of all orthogonal matrices.
