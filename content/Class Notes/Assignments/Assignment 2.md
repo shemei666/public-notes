@@ -13,6 +13,23 @@ for all $z \in \mathbb{C}$. Prove that $f \equiv \text{constant}$.
 $\frac{\partial^2}{\partial z^2} F = 0$
 for all $z \in \mathbb{C}$. Prove that $F(z, \bar{z}) = z \cdot G(\bar{z}) + H(\bar{z})$ for some polynomials $G, H$ in $\bar{z}$ (i.e., they depend only on $\bar{z}$).
 
+> [!NOTE]- Solution
+> Since $F$ is a polynomial in $z$ and $\bar{z}$, we can write it as:
+> $$F(z, \bar{z}) = \sum_{j=0}^n \sum_{k=0}^m c_{jk} z^j \bar{z}^k$$
+> Calculating the first partial derivative with respect to $z$:
+> $$\frac{\partial F}{\partial z} = \sum_{j=1}^n \sum_{k=0}^m j c_{jk} z^{j-1} \bar{z}^k$$
+> Calculating the second partial derivative with respect to $z$:
+> $$\frac{\partial^2 F}{\partial z^2} = \sum_{j=2}^n \sum_{k=0}^m j(j-1) c_{jk} z^{j-2} \bar{z}^k$$
+> We are given that $\frac{\partial^2 F}{\partial z^2} = 0$ for all $z \in \mathbb{C}$. This implies that all coefficients in the polynomial expansion of the second derivative must be zero.
+> Therefore, $j(j-1) c_{jk} = 0$ for all $j \ge 2$ and all $k$.
+> This implies $c_{jk} = 0$ for all $j \ge 2$.
+> Thus, the only non-zero terms in the expansion of $F$ are those where $j=0$ or $j=1$. We can rewrite $F$ as:
+> $$F(z, \bar{z}) = \sum_{k=0}^m c_{0k} \bar{z}^k + \sum_{k=0}^m c_{1k} z \bar{z}^k$$
+> Factoring out $z$ from the second term:
+> $$F(z, \bar{z}) = \left( \sum_{k=0}^m c_{0k} \bar{z}^k \right) + z \left( \sum_{k=0}^m c_{1k} \bar{z}^k \right)$$
+> Let $H(\bar{z}) = \sum_{k=0}^m c_{0k} \bar{z}^k$ and $G(\bar{z}) = \sum_{k=0}^m c_{1k} \bar{z}^k$. Since these are sums of powers of $\bar{z}$, $G$ and $H$ are polynomials in $\bar{z}$.
+> Hence, $F(z, \bar{z}) = z \cdot G(\bar{z}) + H(\bar{z})$.
+
 **32. Suppose that $F : \mathbb{C} \to \mathbb{C}$ is a polynomial. Suppose further that**
 $\frac{\partial}{\partial \bar{z}} F^2 = 0$. What can you say about $F$?
 
