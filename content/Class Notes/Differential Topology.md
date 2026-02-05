@@ -578,5 +578,5 @@ Recommended exercises: $4.7$
 
 > [!NOTE]- Sketch proof
 > Fix $\delta > 0$. Among all $S_i = [c_i, d_i]$ containing $a$, pick $i$ having largest $d_i$. Call it $S_1$. Chop off $S_1$ on the left so that $S_1' = (c_1', d_1)$ has $c_1' \in (a-\delta, a)$. Now we have covered $[a, d_1]$.
-> Proceed in a similar way rightward for $[d_1, b] \dots$.
+> Proceed in a similar way rightward for $[d_1, b]$.
 > In the end, choose $\delta$ such that excess length is within $b-a$.
