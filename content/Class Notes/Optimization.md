@@ -403,7 +403,7 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 
 ### Contractive Property
 
-> [!TIP] Theorem: Non-expansiveness
+> [!TIP] Theorem:
 > $P_{K}$ is a contractive type mapping:
 > $$ \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert \leq \lVert \vec{x} - \vec{y} \rVert \quad \forall \vec{x}, \vec{y} \in \mathbb{R}^{n} $$
 
@@ -492,9 +492,10 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 
 ### Support Density
 
-> [!TIP] Theorem (Exterior Normal Density)
+> [!TIP] Theorem
 > Let $K \subseteq \mathbb{R}^{n}$ be a nonempty closed convex set. If $K$ is bounded, then to each vector $\vec{u} \in \mathbb{R}^{n} \setminus \{0\}$ there corresponds a support plane to $K$ with exterior normal vector $\vec{u}$.
 > That is, the map $U_{K}: \mathbb{R}^{n} \setminus \{0\} \to S^{n-1}$ is surjective.
 
 > [!TODO] Proof
 > Prove the surjectivity of the normal map for bounded convex sets.
+
