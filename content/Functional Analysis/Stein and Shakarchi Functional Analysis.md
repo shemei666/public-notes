@@ -1,3 +1,7 @@
+---
+publish: true
+---
+
 # Stein and Shakarchi Functional Analysis
 
 ## $L^p$ Spaces
