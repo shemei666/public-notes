@@ -570,6 +570,7 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > Let $A, B \subseteq \mathbb{R}^n$ be nonempty subsets. $A, B$ can be separated (strictly separated, resp.) if and only if $A-B$ and $\{0\}$ can be separated (strictly separated, resp.).
 > $$ A-B := \{ \vec{x} - \vec{y} \mid \vec{x} \in A, \vec{y} \in B \} $$
 >
-> > [!NOTE]- Proof Sketch
-> > There is a linear functional $P$ such that $P(\vec{x}) \le b$ for all $\vec{x} \in A-B$.
-> > $0 = P(\vec{0}) \ge b$ ...
+
+ > [!NOTE]- Proof Sketch
+ > There is a linear functional $\rho$ such that $\rho(\vec{x}) \le b$ for all $\vec{x} \in A-B$.
+ > $0 = \rho(\vec{0}) \ge b$ 
