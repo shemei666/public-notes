@@ -587,3 +587,7 @@ $$
 **Theorem:** Let $K \subseteq \mathbb{R}^{n}$ be a nonempty closed convex set. If $K$ is bounded then to each vector $u \in \mathbb{R}^{n}\setminus 0$ there is a support plane to $K$ with exterior normal vector $\vec{u}$ , $U_{K}: \mathbb{R}^{n} \setminus 0 \to S^{n-1}$, $U_{K}$ is surjective.
 
 **Proof:** 
+#todo 
+
+---
+
