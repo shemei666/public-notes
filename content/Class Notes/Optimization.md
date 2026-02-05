@@ -557,5 +557,11 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > [!NOTE]- Proof
 > Let $\mathcal{K}$ be the collection of supporting halfspaces for $K$.
 > Clearly $K \subseteq \bigcap_{A \in \mathcal{K}} A$.
+   If possible let $\vec{x} \in \left(\bigcap_{A \in \mathcal{K}} A\right) \setminus K$.
+> This leads to a **Contradiction**! (see previous theorem: Separating Hyperplane Theorem).
+> Thus, $K = \bigcap \{ H_{\vec{a},b}^- \mid H_{\vec{a},b} \text{ supports } K \}$.
+>
+> $$ K = \{ \vec{x} \in \mathbb{R}^n \mid \langle \vec{a}, \vec{x} \rangle \leq b, \quad \forall \vec{a} \in \mathbb{R}^n, b \in \mathbb{R} \text{ defining support} \} $$
 
-![[IMG_20260205_115411.jpg]]
+ > [!c] Exercise
+ > Show that the indexing set can be chosen to be countable.
