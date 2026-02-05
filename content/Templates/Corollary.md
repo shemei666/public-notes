@@ -1,2 +1,2 @@
-**Corollary:**
-**Proof:**
+> [!TIP] Corollary
+>

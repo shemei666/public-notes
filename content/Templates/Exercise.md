@@ -1,3 +1,2 @@
-**Exercise:** 
-
-**Solution:**
+> [!QUESTION] Exercise
+>
