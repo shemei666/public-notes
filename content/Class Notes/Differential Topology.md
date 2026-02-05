@@ -564,4 +564,5 @@ Recommended exercises: $4.7$
 > [!NOTE]- Proof
 > Define $F:U \times \mathbb{R}^{k}\to \mathbb{R}^{n+k}$ by $(p,v)\mapsto f(p)$. Then $F$ is smooth and $f$ factors as $U \hookrightarrow U \times \mathbb{R}^{k} \to \mathbb{R}^{n+k}$. Now $i(U)$ has measure $0$. Therefore $f(U) = F (i(U))$ has measure $0$ by above theorem.
 
-Let $\mathbb{R}^{n} = \mathbb{R}^{k}\times \mathbb{R}^{n-k}$.For any $c \in \mathbb{R}^{k}$  Define the vertical slice of $\mathbb{R}^{n}$ at $c$ to be $V_{c}:= c \times \mathbb{R}^{n-k}$. Here $V_{c}$ is in natural bijection with $\mathbb{R}^{n-k}$ and so we say that $A\subseteq V_{c}$ has measure $0$ if the corresponding set in $\mathbb{R}^{n-k}$ has measure $0$.
+> [!INFO] Notation
+> Let $\mathbb{R}^{n} = \mathbb{R}^{k}\times \mathbb{R}^{n-k}$. For any $c \in \mathbb{R}^{k}$ Define the vertical slice of $\mathbb{R}^{n}$ at $c$ to be $V_{c}:= c \times \mathbb{R}^{n-k}$. Here $V_{c}$ is in natural bijection with $\mathbb{R}^{n-k}$ and so we say that $A\subseteq V_{c}$ has measure $0$ if the corresponding set in $\mathbb{R}^{n-k}$ has measure $0$.
