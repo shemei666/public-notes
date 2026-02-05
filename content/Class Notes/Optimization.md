@@ -557,3 +557,5 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > [!NOTE]- Proof
 > Let $\mathcal{K}$ be the collection of supporting halfspaces for $K$.
 > Clearly $K \subseteq \bigcap_{A \in \mathcal{K}} A$.
+
+![[IMG_20260205_115411.jpg]]
