@@ -485,7 +485,8 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > Let $S$ be a sphere containing $K$ in its interior. Then $P_{K}(S) = \partial K$.
 
 > [!NOTE]- Proof of Lemma
-> $P(S) \subseteq \partial K$, Let $\vec{v} \in \partial K$, for $n \in \mathbb{N}$, choose $x_{n} \in Int(S)\setminus K$ such that $\lVert  \vec{x_{n}} - \vec{v} \rVert < \frac{1}{n}$, $\lVert  \vec{v} - P(x_{n}) \rVert \leq \lVert  \vec{v} - \vec{x_{n}} \rVert \leq \frac{1}{n}$ , $R_{K}(\vec{x_{n}})$ intersects $S$ at a point $\vec{y_{n}}$.
+> $P(S) \subseteq \partial K$, Let $\vec{v} \in \partial K$, for $n \in \mathbb{N}$, choose $x_{n} \in Int(S)\setminus K$ such that $\lVert  \vec{x_{n}} - \vec{v} \rVert < \frac{1}{n}$, $\lVert  \vec{v} - P(x_{n}) \rVert \leq \lVert  \vec{v} - \vec{x_{n}} \rVert \leq \frac{1}{n}$ , $R_{K}(\vec{x_{n}})$ intersects $S$ at a point $\vec{y_{n}}$
+> 
 
 > [!TIP] Corollary
 > Let $K$ be a nonempty closed convex proper subset of $\mathbb{R}^{n}$. Then $P_{K}(\mathbb{R}^{n} \setminus K) = \partial K$.
