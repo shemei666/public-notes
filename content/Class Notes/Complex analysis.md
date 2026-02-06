@@ -268,7 +268,7 @@ Since $h$ is analytic, $f = u + iv$ is analytic.
 
 
 
-**Def:** Let $u:\Omega\to  \mathbb{R}$  harmonic, then $f$ $\exists v:\Omega \to \mathbb{R}$ such that $u + iv$ is analytic on $\Omega$ then $v$ is called a harmonic conjugate.
+**Def:** Let $u,v:\Omega\to  \mathbb{R}$  harmonic, then $f$ $\exists v:\Omega \to \mathbb{R}$ such that $u + iv$ is analytic on $\Omega$ then $v$ is called a harmonic conjugate.
 
 **Exercise:**  If $v_{1}, v_{2}$ are two harmonic conjugate of $u:\Omega\to \mathbb{R}$, then $v_{1}-v_{2}=\text{const}$.
 **Exercise:** Show that $\log \lvert z \rvert$ is harmonic in $\mathbb{C}\setminus \{ 0 \}$ and conclude that $\log \lvert z \rvert$ can't have any harmonic conjugate in $\mathbb{C} \setminus \{ 0 \}$ 
