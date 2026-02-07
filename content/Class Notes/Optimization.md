@@ -493,7 +493,7 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 >
 > **Claim**: The projection of the entire ray $R_{K}(\vec{x}_{n})$ onto $K$ is the singleton $\{P_{K}(\vec{x}_{n})\}$.
 > *Proof*: Let $\vec{r}$ be any point on the ray $R_K(\vec{x}_n)$. If $P_K(\vec{r}) \neq P_K(\vec{x}_n)$, then we form a triangle with vertices $P_K(\vec{x}_n)$, $P_K(\vec{r})$ and $\vec{r}$ having two obtuse angles, which is impossible.
-> Mathematically:
+>  We have,
 > 1. $\langle \vec{x}_n - P_K(\vec{x}_n), P_K(\vec{r}) - P_K(\vec{x}_n) \rangle \le 0$
 > 2. $\langle \vec{r} - P_K(\vec{r}), P_K(\vec{x}_n) - P_K(\vec{r}) \rangle \le 0$
 >
