@@ -10,3 +10,5 @@ private/
 replit.nix
 .pdf2svg/
 *.pdf
+*.zip
+content/.agent
