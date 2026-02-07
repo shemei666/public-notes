@@ -492,9 +492,17 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > Consider the ray $R_{K}(\vec{x}_{n})$ emanating from $P_{K}(\vec{x}_{n})$ through $\vec{x}_{n}$. Since $S$ encloses $K$, this ray intersects $S$ at a unique point $\vec{y}_{n}$.
 >
 > **Claim**: The projection of the entire ray $R_{K}(\vec{x}_{n})$ onto $K$ is the singleton $\{P_{K}(\vec{x}_{n})\}$.
-> *Proof*: The projection is characterized by $\langle \vec{x}_n - P_K(\vec{x}_n), \vec{z} - P_K(\vec{x}_n) \rangle \le 0$ for all $\vec{z} \in K$. Any point $\vec{w}$ on the ray satisfies $\vec{w} - P_K(\vec{x}_n) = \alpha (\vec{x}_n - P_K(\vec{x}_n))$ for $\alpha \ge 0$. Substituting this:
-> $$ \langle \vec{w} - P_K(\vec{x}_n), \vec{z} - P_K(\vec{x}_n) \rangle = \alpha \langle \vec{x}_n - P_K(\vec{x}_n), \vec{z} - P_K(\vec{x}_n) \rangle \le 0 $$
-> Since this holds for all $\vec{z} \in K$, uniqueness of the projection implies $P_K(\vec{w}) = P_K(\vec{x}_n)$. In particular, $P_K(\vec{y}_n) = P_K(\vec{x}_n)$.
+> *Proof*: Let $\vec{r}$ be any point on the ray $R_K(\vec{x}_n)$. If $P_K(\vec{r}) \neq P_K(\vec{x}_n)$, then we form a triangle with vertices $P_K(\vec{x}_n)$, $P_K(\vec{r})$ and $\vec{r}$ having two obtuse angles, which is impossible.
+> Mathematically:
+> 1. $\langle \vec{x}_n - P_K(\vec{x}_n), P_K(\vec{r}) - P_K(\vec{x}_n) \rangle \le 0$
+> 2. $\langle \vec{r} - P_K(\vec{r}), P_K(\vec{x}_n) - P_K(\vec{r}) \rangle \le 0$
+>
+> Since $\vec{r}$ lies on the ray from $P_K(\vec{x}_n)$ through $\vec{x}_n$, we have $\vec{r} - P_K(\vec{r}) = P_K(\vec{x}_n) - P_K(\vec{r}) + \lambda(\vec{x}_n - P_K(\vec{x}_n))$ for some $\lambda > 0$. Substituting into (2):
+> $$ \langle P_K(\vec{x}_n) - P_K(\vec{r}) + \lambda(\vec{x}_n - P_K(\vec{x}_n)), P_K(\vec{x}_n) - P_K(\vec{r}) \rangle \le 0 $$
+> $$ \| P_K(\vec{x}_n) - P_K(\vec{r}) \|^2 + \lambda \langle \vec{x}_n - P_K(\vec{x}_n), P_K(\vec{x}_n) - P_K(\vec{r}) \rangle \le 0 $$
+> $$ \| P_K(\vec{x}_n) - P_K(\vec{r}) \|^2 - \lambda \langle \vec{x}_n - P_K(\vec{x}_n), P_K(\vec{r}) - P_K(\vec{x}_n) \rangle \le 0 $$
+> From (1), the term in the angle brackets is $\le 0$, so the second term is $\ge 0$. Since the first term (squared norm) is also $\ge 0$, their sum can only be $\le 0$ if both are zero.
+> Thus $\| P_K(\vec{x}_n) - P_K(\vec{r}) \|^2 = 0$, implying $P_K(\vec{r}) = P_K(\vec{x}_n)$. In particular $P_K(\vec{y}_n) = P_K(\vec{x}_n)$.
 >
 > Since $S$ is compact, $(\vec{y}_n)$ has a convergent subsequence $\vec{y}_{n_k} \to \vec{y} \in S$. By continuity of $P_K$:
 > $$ P_K(\vec{y}) = \lim_{k \to \infty} P_K(\vec{y}_{n_k}) = \lim_{k \to \infty} P_K(\vec{x}_{n_k}) $$
