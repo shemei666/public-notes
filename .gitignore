@@ -11,4 +11,5 @@ replit.nix
 .pdf2svg/
 *.pdf
 *.zip
-content/.agent
+content/.agent/
+content/Assets/milesreid/
