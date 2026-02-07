@@ -1,9 +1,0 @@
-Part III. Applications
-
-Projective varieties and birational equivalence Motivation: there are varieties strictly bigger than any affine variety; homogeneous V –I correspondences; projective versus affine. Exam- ples: quadric surfaces; Veronese surface. Birational equivalence, rational varieties; every variety is birational to a hypersurface; products.
-
-Tangent space and nonsingularity, dimension Motivation: implicit function theorem, varieties and manifolds. Definition of affine tangent space; nonsingular points are dense. Tan- gent space and m/m2, tangent space is intrinsic; dimension of X = tr degk k(X). Resolution of singularities by blowups.
-
-The 27 lines on a cubic surface Lines on a nonsingular cubic surface S. Proof of the existence of a line by elimination; polar form. The 5 pairs of lines meeting a given line. S is rational. The classical configuration of 27 lines. The Hessian. A case when all the lines are rational.
-
-Final comments History and sociology. Choice of topics, highbrow remarks and technical notes. Substitute for preface; acknowledgements and name dropping.

@@ -1,5 +1,0 @@
-Part II. The category of affine varieties
-
-Affine varieties and the Nullstellensatz Noetherian rings, the Hilbert Basis Theorem; correspondences V and I, irreducible algebraic sets, Zariski topology, statement of Nullstellen- satz; irreducible hypersurface. Noether normalisation and proof of Nullstellensatz; reduction to a hypersurface.
-
-Functions on varieties Coordinate ring and polynomial maps; morphisms and isomorphisms; affine varieties. Rational function field and rational maps; dominant rational maps, and composing rational maps; standard open sets; addition law on elliptic curve is a morphism.

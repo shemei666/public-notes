@@ -1,6 +1,6 @@
 ---
 title: Chapter 3 - Affine Varieties and the Nullstellensatz
-tags: [Algebraic Geometry, Affine Varieties, Nullstellensatz, Noether Normalisation]
+tags:
 ---
 
 # Chapter 3: Affine Varieties and the Nullstellensatz
