@@ -270,14 +270,79 @@ Associativity holds for a dense open set of configurations, hence it holds every
 
 
 
+### 2.11 Pascal's Theorem (the mystic hexagon)
+
+The diagram consists of a hexagon $ABCDEF$ in $\mathbb{P}^2_k$.
+Pairs of opposite sides are extended until they meet in points $P, Q, R$.
+**Theorem**: $ABCDEF$ are conconic $\iff P, Q, R$ are collinear.
+
+### 2.12 Inflexion, normal form
+
+Every cubic in $\mathbb{P}^2_{\mathbb{R}}$ or $\mathbb{P}^2_{\mathbb{C}}$ can be put in the **normal form**:
+$$ C: Y^2Z = X^3 + aXZ^2 + bZ^3 $$
+Or in affine form $y^2 = x^3 + ax + b$.
+
+An **inflexion point** $P$ is a point where the tangent line $L$ has a zero of multiplicity $\ge 3$.
+For the normal form, $O=(0,1,0)$ is an inflexion point with tangent $Z=0$.
+
+### 2.13 Simplified group law
+
+Taking the inflexion point $O=(0,1,0)$ as the neutral element.
+The group law becomes:
+$$ P + Q + R = 0 \iff P, Q, R \text{ are collinear} $$
+The inverse $P \mapsto -P$ corresponds to the symmetry $(x,y) \mapsto (x, -y)$.
+
+### Exercises to Chapter 2
+
+1.  Parametrise $y^2 = x^3 + x^2$ using lines through $(0,0)$.
+2.  Show that polynomials vanishing on $t \mapsto (t^2, t^3)$ are divisible by $Y^2 - X^3$.
+3.  Tangent line calculation.
+4.  Point of order 4 on $y^2 = x^3 + 4x$.
+5.  Points of order 2 and 3.
+6.  Computer plotting.
+7.  Group law explicit formulas.
+8.  Formula for $2A$.
+9.  Local conditions for node/cusp/inflexion.
+10. Change of coordinates to normal form.
+11. Group law on cuspidal cubic.
+12. (Fibonacci/Fermat) $u^2+v^2, u^2-v^2$ squares $\implies v=0$.
+
+## Appendix to Part I: Curves and their genus
+
+### 2.14 Topology of a nonsingular cubic
+
+Topologically, a nonsingular cubic $C \subset \mathbb{P}^2_{\mathbb{C}}$ is a **torus** (genus 1).
+It is homeomorphic to $S^1 \times S^1$.
+$y^2 = x(x-1)(x-\lambda)$ can be viewed as a double cover of $\mathbb{P}^1$ ramified at 4 points ($0, 1, \lambda, \infty$).
+
+### 2.16 Commercial Break (Genus comparison)
+
+| $g=0$ | $g=1$ | $g \ge 2$ |
+| :--- | :--- | :--- |
+| **Topology** | Sphere ($S^2$) | Torus ($T^2$) | Surface of genus $g$ |
+| **Fundamental group** | Trivial | $\mathbb{Z} \oplus \mathbb{Z}$ | Free group on $2g$ generators |
+| **Complex Geometry** | $\mathbb{P}^1_{\mathbb{C}}$ | Elliptic Curve $E \cong \mathbb{C}/\Lambda$ | No simple description |
+| **Automorphisms** | $PGL(2, \mathbb{C})$ (3-dim) | $E \rtimes \text{finite}$ (1-dim) | Finite group (Hurwitz bound $84(g-1)$) |
+| **Moduli** | None | 1 modulus ($j$-invariant) | $3g-3$ moduli |
+| **Diff Geometry** | Positive curvature | Flat (zero curvature) | Constant negative curvature |
+| **Arithmetic ($k=\mathbb{Q}$)** | $C \cong \emptyset$ or $\mathbb{P}^1$ | Finitely generated group (Mordell-Weil) | Finite set (Faltings) |
+
+## Part II: The Category of Affine Varieties
+
 ## Chapter 3: Affine Varieties and the Nullstellensatz
 
-### 3.1 Noetherian Rings
+### 3.1 Definition of Noetherian ring
 
-> [!INFO] Definition: Noetherian Ring
-> A ring $A$ is **Noetherian** if it satisfies the Ascending Chain Condition (ACC) on ideals:
-> $I_1 \subseteq I_2 \subseteq \dots$ stabilizes.
-> Equivalently, every ideal $I \subseteq A$ is finitely generated.
+> [!TIP] Proposition-Definition
+> The following conditions on a ring $A$ are equivalent:
+> 1.  Every ideal $I \subset A$ is finitely generated.
+> 2.  The **Ascending Chain Condition (ACC)** on ideals holds: every chain $I_1 \subset I_2 \subset \dots$ terminates.
+> 3.  Every nonempty set of ideals has a maximal element.
+>
+> If these hold, $A$ is a **Noetherian ring**.
+
+**Proof**: Standard (uses Axiom of Choice for (ii) $\Rightarrow$ (iii)).
+**Exercise**: Prove $\mathbb{Z}$ and $k[X]$ are Noetherian.
 
 ### 3.3 Hilbert Basis Theorem
 
