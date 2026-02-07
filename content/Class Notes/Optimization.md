@@ -485,14 +485,14 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > Let $S$ be a sphere containing $K$ in its interior. Then $P_{K}(S) = \partial K$.
 
 > [!NOTE]- Proof of Lemma
-> **Direction ($P(S) \subseteq \partial K$)**: Immediate from the definition of the metric projection onto $K$.
+> ($P(S) \subseteq \partial K$): Immediate from the definition of the metric projection onto $K$.
 >
-> **Direction ($\partial K \subseteq P(S)$)**: Let $\vec{v} \in \partial K$. For each $n \in \mathbb{N}$, choose $\vec{x}_{n} \in \text{int}(S) \setminus K$ such that $\lVert \vec{x}_{n} - \vec{v} \rVert < \frac{1}{n}$.
+> ($\partial K \subseteq P(S)$): Let $\vec{v} \in \partial K$. For each $n \in \mathbb{N}$, choose $\vec{x}_{n} \in \text{int}(S) \setminus K$ such that $\lVert \vec{x}_{n} - \vec{v} \rVert < \frac{1}{n}$.
 >
 > Consider the ray $R_{K}(\vec{x}_{n})$ emanating from $P_{K}(\vec{x}_{n})$ through $\vec{x}_{n}$. Since $S$ encloses $K$, this ray intersects $S$ at a unique point $\vec{y}_{n}$.
 >
 > **Claim**: The projection of the entire ray $R_{K}(\vec{x}_{n})$ onto $K$ is the singleton $\{P_{K}(\vec{x}_{n})\}$.
-> *Reason*: The projection is characterized by $\langle \vec{x}_n - P_K(\vec{x}_n), \vec{z} - P_K(\vec{x}_n) \rangle \le 0$ for all $\vec{z} \in K$. Any point $\vec{w}$ on the ray satisfies $\vec{w} - P_K(\vec{x}_n) = \alpha (\vec{x}_n - P_K(\vec{x}_n))$ for $\alpha \ge 0$. Substituting this:
+> *Proof*: The projection is characterized by $\langle \vec{x}_n - P_K(\vec{x}_n), \vec{z} - P_K(\vec{x}_n) \rangle \le 0$ for all $\vec{z} \in K$. Any point $\vec{w}$ on the ray satisfies $\vec{w} - P_K(\vec{x}_n) = \alpha (\vec{x}_n - P_K(\vec{x}_n))$ for $\alpha \ge 0$. Substituting this:
 > $$ \langle \vec{w} - P_K(\vec{x}_n), \vec{z} - P_K(\vec{x}_n) \rangle = \alpha \langle \vec{x}_n - P_K(\vec{x}_n), \vec{z} - P_K(\vec{x}_n) \rangle \le 0 $$
 > Since this holds for all $\vec{z} \in K$, uniqueness of the projection implies $P_K(\vec{w}) = P_K(\vec{x}_n)$. In particular, $P_K(\vec{y}_n) = P_K(\vec{x}_n)$.
 >
