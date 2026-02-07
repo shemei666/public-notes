@@ -1,0 +1,519 @@
+Chapter 1
+
+Plane conics
+
+I start by studying the geometry of conics as motivation for the projective plane P2. Projective geometry is usually mentioned in 2nd year undergraduate geometry courses, and I recall some of the salient features, with some emphasis on homogeneous coordinates, although I completely ignore the geometry of linear subspaces and the ‘cross-ratio’. The most important aim for the student should be to grasp the way in which geometric ideas (for example, the idea that ‘points at infinity’ correspond to asymptotic directions of curves) are expressed in terms of coordinates. The interplay between the intuitive geometric picture (which tells you what you should be expecting), and the precise formulation in terms of coordinates (which allows you to cash in on your intuition) is a fascinating aspect of algebraic geometry.
+
+Example of a parametrised curve
+
+Pythagoras’ Theorem says that, in the diagram
+
+X2 + Y 2 = Z2,
+
+ccso (3, 4, 5) and (5, 12, 13), as every ancient Egyptian knew. How do you find all integer solutions? The equation is homogeneous, so that x = X/Z, y = Y/Z gives the circle C : (x2 + y2 = 1) R2, which can easily be seen to be parametrised as
+
+2λλ2 — 1x
+
+x = λ2 + 1 ,y = λ2 + 1 ,where  λ = 1 — y ;
+
+so this gives all solutions:
+
+X = 2lm,Y = l2 — m2,Z = l2 + m2with l, m ∈ Z coprime 19
+
+(or each divided by 2 if l, m are both odd). Note that the equation is homogeneous, so that if
+
+(X, Y, Z) is a solution, then so is (λX, λY, λZ).
+
+Maybe the parametrisation was already familiar from school geometry, and in any case, it’s easy to verify that it works. However, if I didn’t know it already, I could have obtained it by an easy geometric argument, namely linear projection from a given point: P = (0, 1) ∈ C, and if λ ∈ Q
+
+Figure 1.1: Linear projection of a conic to a line
+
+——is any value, then the line Lλ through P with slope λ meets C in a further point Qλ. This construction of a map by means of linear projection will appear many times in what follows.
+
+Similar example
+
+C : (2X2 + Y 2 = 5Z2). The same method leads to the parametrisation R → C given by
+
+2√5λ2λ2 — 1
+
+x = 1 + 2λ2 ,y = 1 + 2λ2 .
+
+This allows us to understand all about points of C with coefficients in R, and there’s no real difference from the previous example; what about Q?
+
+Proposition If (a, b, c) ∈ Q satisfies 2a2 + b2 = 5c2 then (a, b, c) = (0, 0, 0).
+
+||Proof Multiplying through by a common denominator and taking out a common factor if nec- essary, I can assume that a, b, c are integers, not all of which are divisible by 5; also if 5  a and
+
+||||||5 b then 25 5c2, so that 5 c, which contradicts what I’ve just said. It is now easy to get a contradiction by considering the possible values of a and b mod 5: since any square is 0, 1 or 4 mod 5, clearly 2a2 + b2 is one of 0 + 1, 0 + 4, 2 + 0, 2 + 1, 2 + 4, 8 + 0, 8 + 1 or 8 + 4 mod 5, none of which can be of the form 5c2. Q.E.D.
+
+Note that this is a thoroughly arithmetic argument.
+
+CONICS IN R221
+
+Conics in R2
+
+A conic in R2 is a plane curve given by a quadratic equation
+
+q(x, y) = ax2 + bxy + cy2 + dx + ey + ƒ = 0.
+
+Everyone has seen the classification of nondegenerate conics:
+
+Figure 1.2: The nondegenerate conics: (a) ellipse; (b) parabola; (c) hyperbola.
+
+in addition, there are a number of peculiar cases:
+
+(d) single point given by x2 + y2 = 0;
+
+————(e, f, g) empty set given by any of the 3 equations: (e) x2 + y2 =  1, (f) x2 =  1 or (g) 0 = 1. These three equations are different, although they define the same locus of zeros in R2; consider for example their complex solutions.
+
+line x = 0;
+
+line pair xy = 0;
+
+——parallel lines x(x1) = 0;
+
+‘double line’ x2 = 0; you can choose for yourself whether you’ll allow the final case:
+
+whole plane given by 0 = 0.
+
+Projective plane
+
+The definition ‘out of the blue’:
+
+RRP2 = lines of R3 through origin}
+
+= ratios X : Y : Z}
+
+= R3 \ {0} /∼,where (X, Y, Z)∼(λX, λY, λZ) if λ ∈ R \ {0}.
+
+//~~(The sophisticated reader will have no difficulty in generalising from R3 to an arbitrary vector space over a field, and in replacing work in a chosen coordinate system with intrinsic arguments.) To represent a ratio X : Y : Z for which Z = 0, I can set x = X/Z, y = Y/Z; this simplifies things, since the ratio corresponds to just two real numbers. In other words, the equivalence class of (X, Y, Z) underhas a unique representative (x, y, 1) with 3rd coordinate = 1. Unfortunately, sometimes Z might be = 0, so that this way of choosing a representative of the equivalence class is
+
+RRthen no good. This discussion means that P2 contains a copy of R2. A picture:
+
+RRFigure 1.3: R2 ‹→ R3 \ {0} → P2 by (x, y) '→ (x, y, 1)
+
+RRRRThe general line in R3 through 0 is not contained in the plane (Z = 0), so that it meets (Z = 1) in exactly one point, which is a representative for that equivalence class. The lines in (Z = 0) never meet (Z = 1), so they correspond not to points of R2, but to asymptotic directions, or to pencils of parallel lines of R2; so you can think of P2 as consisting of R2 together with one ‘point at infinity’ for every pencil of parallel lines. From this point of view, you calculate in R2, try to guess what’s going on at infinity by some kind of ‘asymptotic’ argument, then (if necessary), prove it in terms of homogeneous coordinates. The definition in terms of lines in R3 makes this respectable, since it treats all points of P2 on an equal footing.
+
+××∈∈Groups of transformations are of central importance throughout geometry; properties of a geo- metric figure must be invariant under the appropriate kind of transformations before they are sig- nificant. An affine change of coordinates in R2 is of the form T (x) = Ax+B, where x = (x, y)  R2, and A is a 2 2 invertible matrix, B a translation vector; if A is orthogonal then the transforma- tion T is Euclidean. As everyone knows, every nondegenerate conic can be reduced to one of the standard forms (a–c) above by a Euclidean transformation. It is an exercise to the reader to show that every conic can be reduced to one of the forms (a–l) by an affine transformation.
+
+RRRRA projectivity, or projective transformation of P2 is a map of the form T (X) = M X, where M is an invertible 3 × 3 matrix. It’s easy to understand the effect of this transformation on the affine piece R2 c P2 : as a partially defined map R2 −−· R2, it is the fractional-linear transformation
+
+ABc deABc deyyyy x  '→  A  x  + B  ,(cx + dy + e),where M = .
+
+T is of course not defined when cx + dy + e = 0. Perhaps this looks rather unintuitive, but it really occurs in nature: two different photographs of the same (plane) object are obviously related by a projectivity; see for example [Berger, 4.7.4] for pictures. So a math graduate getting a job interpreting satellite photography (whether for the peaceful purposes of the Forestry Commission, or as part of the vast career prospects opened up by President Reagan’s defence policy) will spend a good part of his or her time computing projectivities.
+
+Projective transformations are used implicitly throughout these notes, usually in the form ‘by a suitable choice of coordinates, I can assume . . . ’.
+
+1.5.  EQUATION OF A CONIC23
+
+Equation of a conic
+
+The inhomogeneous quadratic polynomial
+
+q(x, y) = ax2 + bxy + cy2 + dx + ey + ƒ
+
+corresponds to the homogeneous quadratic
+
+Q(X, Y, Z) = aX2 + bXY + cY 2 + dXZ + eY Z + ƒ Z2;
+
+↔↔the correspondence is easy to understand as a recipe, or you can think of it as the bijection qQ
+
+given by
+
+and inversely,
+
+q(x, y) = Q(X/Z, Y/Z, 1)  with  x = X/Z, y = Y/Z
+
+Q = Z2q(X/Z, Y/Z).
+
+cc∈∈A conic C P2 is the curve given by C : (Q(X, Y, Z) = 0), where Q is a homogeneous quadratic expression; note that the condition Q(X, Y, Z) = 0 is well defined on the equivalence class, since Q(λX) = λ2Q(X) for any λ R. As an exercise, check that the projective curve C meets the affine piece R2 in the affine conic given by (q = 0).
+
+‘Line at infinity’ and asymptotic directions
+
+RRRRPoints of P2 with Z = 0 correspond to ratios (X : Y : 0). These points form the line at infinity, a copy of P1 = R ∪ {∞} (since (X : Y ) '→ X/Y defines a bijection P1 → R ∪ {∞}).
+
+A line in P2 is by definition given by L : (aX + bY + cZ = 0), and
+
+L passes through (X, Y, 0) ⇐⇒ aX + bY = 0.
+
+In affine coordinates the same line is given by ax + by + c = 0, so that all lines with the same ratio
+
+a : b pass through the same point at infinity. This is called ‘parallel lines meet at infinity’.
+
+a2a2b2b2RRa2a2b2b2Example(a) The hyperbola ( x2 — y2 = 1) in R2 corresponds in P2 to C : ( X2 — Y 2 = Z2);
+
+RRclearly this meets (Z = 0) in the two points (a, ±b, 0) ∈ P2 , corresponding in the obvious way
+
+to the asymptotic lines of the hyperbola.
+
+RRNote that in the affine piece (X /= 0) of P2 , the affine coordinates are u = Y/X, v = Z/X, so that C becomes the ellipse ( u2 + v2 =  1 ). See Ex. 1.7 for an artistic interpretation.
+
+b2a2
+
+RR(b) The parabola (y = mx2) in R2 corresponds to C : (Y Z = mX2) in P2 ; this now meets (Z = 0) at the single point (0, 1, 0). So in P2, the ‘two branches of the parabola meet at infinity’; note that this is a statement with intuitive content (maybe you feel it’s pretty implausible?), but is not a result you could arrive at just by contemplating within R2 – maybe it’s not even meaningful.
+
+Classification of conics in P2
+
+Let k be any field of characteristic /= 2; recall two results from the linear algebra of quadratic forms:
+
+Proposition (A) There are natural bijections
+
+  homogeneous quadratic polys.
+
+given in formulas by
+
+quad. forms
+
+  =   = k3 → k
+
+bij
+
+←———→
+
+symmetric bilinear forms on k3
+
+    abd
+
+de ƒde ƒaX2 + 2bXY + cY 2 + 2dXZ + 2eY Z + ƒ Z2 ←→ bce
+
+A quadratic form is nondegenerate if the corresponding bilinear form is nondegenerate, that is, its matrix is nonsingular.
+
+→→Theorem (B) Let V be a vector space over k and Q : Vk a quadratic form; then there exists a basis of V such that
+
+1122nnQ = ε1x2 + ε2x2 + · · · + εnx2 , with εi ∈ k.
+
+(This is proved by Gram-Schmidt orthogonalisation, if that rings a bell.) Obviously, for λ ∈
+
+k \ {0} the substitution xi '→ λxi takes εi into λ−2εi.
+
+RRCorollary  In a suitable system of coordinates, any conic in P2 is one of the following:
+
+(α) nondegenerate conic, C : (X2 + Y 2 — Z2 = 0); (β) empty set, given by (X2 + Y 2 + Z2 = 0);
+
+(γ) line pair, given by (X2 — Y 2 = 0);
+
+(δ) one point (0, 0, 1), given by (X2 + Y 2 = 0); (ε) double line, given by (X2 = 0).
+
+RR(Optionally you have the whole of P2 given by (0 = 0).)
+
+Proof Any real number ε is either 0, or ± a square, so that I only have to consider Q as in the theorem with εi = 0 or ±1. In addition, since I’m only interested in the locus (Q = 0), I’m allowed to multiply Q through by —1. This leads at once to the given list.  Q.E.D.
+
+There are two points to make about this corollary: firstly, the list is quite a lot shorter than that in (1.3); for example, the 3 nondegenerate cases (ellipse, parabola, hyperbola) of (1.3) all correspond to case (α), and the 2 cases of intersecting and parallel line pairs are not distinguished in the projective case. Secondly, the derivation of the list from general algebraic principles is much simpler.
+
+1.7.  PARAMETRISATION OF A CONIC25
+
+Parametrisation of a conic
+
+RR——Let C be a nondegenerate, nonempty conic of P2 . Then by Corollary 1.6, taking new coordinates (X+Z, Y, Z X), C is projectively equivalent to the curve (XZ = Y 2); this is the curve parametrised by
+
+RRRRΦ: P1 —→ C c P2 ,
+
+(U : V ) '→ (U 2 : UV : V 2).
+
+RRRemarks 1  The inverse map Ψ: C → P1 is given by
+
+(X : Y : Z) '→ (X : Y ) = (Y : Z);
+
+////here the left-hand ratio is defined if X = 0, and the right-hand ratio if Z = 0. In terminology to be introduced later, Φ and Ψ are inverse isomorphisms of varieties.
+
+—/—/2 Throughout §§1–2, nonempty nondegenerate conics are tacitly assumed to be projectively equiv- alent to (XZ Y 2); over a field of characteristic = 2, this is justified in Ex. 1.5. (The reader interested in characteristic 2 should take this as the definition of a nondegenerate conic.)
+
+Homogeneous form in 2 variables
+
+Let F (U, V ) be a nonzero homogeneous polynomial of degree d in U, V , with coefficients in a fixed field k; (I will follow tradition, and use the word form for ‘homogeneous polynomial’):
+
+F (U, V ) = adUd + ad−1Ud−1V + · · · + aiUiV d−i + · · · + a0V d.
+
+F has an associated inhomogeneous polynomial in 1 variable,
+
+ƒ (u) = adud + ad−1ud−1 + · · · + aiui + · · · + a0.
+
+Clearly for α ∈ k,
+
+ƒ (α) = 0 ⇐⇒ (u — α) | ƒ (u)
+
+⇐⇒ (U — αV ) | F (U, V ) ⇐⇒ F (α, 1) = 0;
+
+∞∞so zeros of ƒ correspond to zeros of F on P1 away from the point (1, 0), the ‘point α =  .’ What does it mean for F to have a zero at infinity?
+
+F (1, 0) = 0 ⇐⇒ ad = 0 ⇐⇒ deg ƒ < d.
+
+Now define the multiplicity of a zero of F on P1 to be
+
+the multiplicity of ƒ at the corresponding α ∈ k; or
+
+d — deg ƒ if (1, 0) is the zero.
+
+——So the multiplicity of zero of F at a point (α, 1) is the greatest power of (UαV ) dividing F , and at (1, 0) it is the greatest power of V dividing F .
+
+Proposition Let F (U, V ) be a nonzero form of degree d in U, V . Then F has at most d zeros on P1; furthermore, if k is algebraically closed, then F has exactly d zeros on P1 provided these are counted with multiplicities as defined above.
+
+——QQProof Let m∞ be the multiplicity of the zero of F at (1, 0); then by definition, d  m∞ is the degree of the inhomogeneous polynomial ƒ , and the proposition reduces to the well known fact that a polynomial in one variable has at most deg ƒ roots. Q.E.D.
+
+iiNote that over an algebraically closed field, F will factorise as a product F = λmi of linear forms λi = (aiU + biV ), and treated in this way, the point (1, 0) corresponds to the form λ∞ = V , and is on the same footing as all other points.
+
+Easy cases of Bézout’s Theorem
+
+Bézout’s theorem says that if C and D are plane curves of degrees deg C = m, deg D = n, then the number of points of intersection of C and D is mn, provided that (i) the field is algebraically closed; (ii) points of intersection are counted with the right multiplicities; (iii) we work in P2 to take right account of intersections ‘at infinity’. See for example [Fulton, p. 112] for a self-contained proof. In this section I am going to treat the case when one of the curves is a line or conic.
+
+kkkkkkTheorem Let L c P2 be a line (respectively C c P2 a nondegenerate conic), and let D c P2 be
+
+a curve defined by D : (Gd(X, Y, Z) = 0), where G is a form of degree d in X, Y, Z. Assume that
+
+L /c D (respectively, C /c D); then
+
+#{L ∩ D} ≤ d(respectively #{C ∩ D} ≤ 2d).
+
+In fact there is a natural definition of multiplicity of intersection such that the inequality still holds for ‘number of points counted with multiplicities’, and if k is algebraically closed then equality holds.
+
+kkccProof A line LP2 is given by an equation λ = 0, with λ a linear form; for my purpose, it is convenient to give it parametrically as
+
+X = a(U, V ),Y = b(U, V ),Z = c(U, V ),
+
+//where a, b, c are linear forms in U, V . So for example, if λ = αX + βY + γZ, and γ = 0, then L can be given as
+
+αβ
+
+X = U,Y = V,Z = — γ U — γ V.
+
+Similarly, as explained in (1.7), a nondegenerate conic can be given parametrically as
+
+X = a(U, V ),Y = b(U, V ),Z = c(U, V ),
+
+where a, b, c are quadratic forms in U, V . This is because C is a projective transformation of
+
+(XZ = Y 2), which is parametrically (X, Y, Z) = (U 2, UV, V 2), so C is given by
+
+X U 2 
+
+Y  = M UV 
+
+ZV 2
+
+where M is a nonsingular 3 × 3 matrix.
+
+1.9.  EASY CASES OF BÉZOUT’S THEOREM27
+
+Figure 1.4: (a) Parametrised line; (b) parametrised conic
+
+Then the intersection of L (respectively C) with D is given by finding the values of the ratios
+
+(U : V ) such that
+
+F (U, V ) = Gd(a(U, V ), b(U, V ), c(U, V )) = 0.
+
+But F is a form of degree d (respectively 2d) in U, V , so the result follows by (1.8).Q.E.D.
+
+RRCorollary 1.10 If P1, . . . , P5 ∈ P2 are distinct points and no 4 are collinear, there exists at most
+
+one conic through P1, . . . , P5.
+
+Proof Suppose by contradiction that C1 and C2 are conics with C1 /= C2 such that
+
+C1 ∩ C2 m {P1, . . . , P5}.
+
+  }}C1 is nonempty, so that if it’s nondegenerate, then by (1.7), it’s projectively equivalent to the parametrised curve
+
+C1 =  (U 2, UV, V 2)  (U, V ) ∈ P1 ;
+
+//∈—∈—c≡c≡by (1.9), C1  C2. Now if Q2 is the equation of C2, it follows that Q2(U 2, UV, V 2)  0 for all (U, V ) P1, and an easy calculation (see Ex. 1.6) shows that Q2 is a multiple of (XZ Y 2); this contradicts C1 = C2.
+
+Now suppose C1 is degenerate; by (1.6) again, it’s either a line pair or a line, and one sees easily that
+
+C1 = L0 ∪ L1,C2 = L0 ∪ L2,
+
+with L1, L2 distinct lines. Then C1 ∩ C2 = L0 ∪ (L1 ∩ L2):
+
+Figure 1.5: Lines meeting
+
+thus 4 points out of P1, . . . , P5 lie on L0, a contradiction.Q.E.D.
+
+Space of all conics
+
+Let
+
+S2 = {quadratic forms on R3} = {3 × 3 symmetric matrixes} ∼= R6.
+
+RRIf Q ∈ S2, write Q = aX2 + 2bXY + · · · + ƒ Z2; for P0 = (X0, Y0, Z0) ∈ P2 , consider the relation
+
+P0 ∈ C : (Q = 0). This is of the form
+
+Q(X0, Y0, Z0) = aX2 + 2bX0Y0 + · · · + ƒ Z2 = 0,
+
+00
+
+and for fixed P0, this is a linear equation in (a, b, . . . , ƒ ). So
+
+S2(P0) = Q ∈ S2 Q(P0) = 0} ∼= R5 c S2 = R6
+
+RRis a 5-dimensional hyperplane. For P1, . . . , Pn ∈ P2 , define similarly
+
+  S2(P1, . . . , Pn) = Q ∈ S2  Q(Pi) = 0 for i = 1, . . . , n};
+
+then there are n linear equations in the 6 coefficients (a, b, . . . , ƒ ) of Q. This gives the result:
+
+Proposition  dim S2(P1, . . . , Pn) ≥ 6 — n.
+
+We can also expect that ‘equality holds if P1, . . . , Pn are general enough’. More precisely:
+
+Corollary If n ≤ 5 and no 4 of P1, . . . , Pn are collinear, then
+
+dim S2(P1, . . . , Pn) = 6 — n.
+
+1.12.  INTERSECTION OF TWO CONICS29
+
+≤≤≤≤Proof  Corollary 1.10 implies that if n = 5, dim S2(P1, . . . , P5)  1, which gives the corollary in this case. If n 4, then I can add in points Pn+1, . . . , P5 while preserving the condition that no 4 points are collinear, and since each point imposes at most one linear condition, this gives
+
+1 = dim S2(P1, . . . , P5) ≥ dim S2(P1, . . . , Pn) — (5 — n).  Q.E.D.
+
+RRNote that if 6 points P1, . . . , P6 ∈ P2 are given, they may or may not lie on a conic.
+
+Intersection of two conics
+
+∈∈∩{}∩{}As we have seen above, it often happens that two conics meet in 4 points:
+
+Conversely according to Corollary 1.11, given 4 points P1, . . . , P4  P2, under suitable conditions S2(P1, . . . , P4) is a 2-dimensional vector space, so choosing a basis Q1, Q2 for S2(P1, . . . , P4) gives 2 conics C1, C2 such that C1 C2 = P1, . . . , P4 . There are lots of possibilities for multiple intersections of nonsingular conics:
+
+Figure 1.6: (a) 2P1 + P2 + P3; (b) 2P + 2Q; (c) 3P + Q; (d) 4P
+
+see Ex. 1.9 for suitable equations.
+
+Degenerate conics in a pencil
+
+Definition A pencil of conics is a family of the form
+
+C(λ,µ) : (λQ1 + µQ2 = 0);
+
+each element is a plane curve, depending in a linear way on the parameters (λ, µ); think of the ratio
+
+(λ : µ) as a point of P1.
+
+××Looking at the examples, one expects that for special values of (λ : µ) the conic C(λ,µ) is degenerate. In fact, writing det(Q) for the determinant of the symmetric 3 3 matrix corresponding to the quadratic form Q, it is clear that
+
+C(λ,µ) is degenerate ⇐⇒ det(λQ1 + µQ2) = 0.
+
+Writing out Q1 and Q2 as symmetric matrixes expresses this condition as
+
+F (λ, µ) = det λ bce + µ b′c′e′  = 0.F (λ, µ) = det λ bce + µ b′c′e′  = 0.abda′b′d′ 
+
+de  ƒ
+
+d′e′ƒ ′
+
+Now notice that F (λ, µ) is a homogeneous cubic form in λ, µ. In turn I can apply (1.8) to F to deduce:
+
+kkProposition Suppose C(λ,µ) is a pencil of conics of P2, with at least one nondegenerate conic (so that F (λ, µ) is not identically zero). Then the pencil has at most 3 degenerate conics. If k = R then the pencil has at least one degenerate conic.
+
+Proof  A cubic form has ≤ 3 zeros. Also over R, it must have at least one zero.
+
+Worked example
+
+RRLet P1, . . . , P4 be 4 points of P2 such that no 3 are collinear; then the pencil of conics C(λ,µ) through P1, . . . , P4 has 3 degenerate elements, namely the line pairs L12 + L34, L13 + L24, L14 + L23, where Lij is the line through Pi, Pj:
+
+Next, suppose that I start from the pencil of conics generated by Q1 = Y 2 + rY + sX + t and
+
+Q2 = Y — X2, and try to find the points P1, . . . , P4 of intersection.
+
+1.14. WORKED EXAMPLE31
+
+This can be done as follows: (1) find the 3 ratios (λ : µ) for which C(λ,µ) are degenerate conics.
+
+Using what has been said above, this just means that I have to find the 3 roots of the cubic
+
+ 00s/2—100  
+
+s/2  r/2ts/2  r/2t01/2001/20F (λ, µ) = det λ  01r/2 + µ  001/2 
+
+= — 1 (s2λ3 + (4t — r2)λ2µ — 2rλµ2 — µ3).
+
+44(2) Separate out 2 of the degenerate conics into pairs of lines (this involves solving 2 quadratic equations). (3) The 4 points Pi are the points of intersection of the lines.
+
+∈∈iiThis procedure gives a geometric interpretation of the reduction of the general quartic in Galois theory (see for example [van der Waerden, Algebra, Ch. 8, §64]): let k be a field, and ƒ (X) = X4 + rX2 + sX + t  k[X] a quartic polynomial. Then the two parabolas C1 and C2 meet in the 4 points Pi = (ai, a2) for i = 1, . . . , 4, where the ai are the 4 roots of ƒ .
+
+Then the line Lij = PiPj is given by
+
+Lij : (Y = (ai + aj)X — aiaj),
+
+and the reducible conic L12 + L34 is given by
+
+Y 2 + (a1a2 + a3a4)Y + (a1 + a2)(a3 + a4)X2 + sX + t = 0,
+
+——that is, by Q1(a1 + a2)(a3 + a4)Q2 = 0. Hence the 3 values of µ/λ for which the conic λQ1 + µQ2
+
+breaks up as a line pair are
+
+—(a1 + a2)(a3 + a4),—(a1 + a3)(a2 + a4),—(a1 + a4)(a2 + a3).
+
+The cubic equation whose roots are these 3 quantities is called the auxiliary cubic associated with the quartic; it can be calculated using the theory of elementary symmetric functions; this is a fairly
+
+××laborious procedure. On the other hand, the geometric method sketched above gives an elegant derivation of the auxiliary cubic which only involves evaluating a 33 determinant.
+
+The above treatment is taken from [M.Berger, 16.4.10 and 16.4.11.1].
+
+Exercises to Chapter 1
+
+Parametrise the conic C : (x2 + y2 = 5) by considering a variable line through (2, 1) and hence find all rational solutions of x2 + y2 = 5.
+
+Let p be a prime; by experimenting with various p, guess a necessary and sufficient condition for x2 + y2 = p to have rational solutions; prove your guess (a hint is given after Ex. 1.9 below – bet you can’t do it for yourself!).
+
+±±±±±±'→'→Prove the statement in (1.3), that an affine transformation can be used to put any conic of R2 into one of the standard forms (a–l). [Hint: use a linear transformation x  Ax to take the leading term ax2 + bxy + cy2 into one of  x2  y2 or  x2 or 0; then complete the square in x and y to get rid of as much of the linear part as possible.]
+
+Make a detailed comparison of the affine conics in (1.3) with the projective conics in (1.6).
+
+/→/→Let k be any field of characteristic = 2, and V a 3-dimensional k-vector space; let Q : Vk
+
+/∈/∈be a nondegenerate quadratic form on V . Show that if 0 = e1V satisfies Q(e1) = 0 then
+
+22V has a basis e1, e2, e3 such that Q(x1e1 + x2e2 + x3e3) = x1x3 + ax2. [Hint: work with the symmetric bilinear form ϕ associated to Q; since ϕ is nondegenerate, there is a vector e3 such that ϕ(e1, e3) = 1. Now find a suitable e2.]
+
+kkDeduce that a nonempty, nondegenerate conic C c P2 is projectively equivalent to (XZ =
+
+Y 2).
+
+kk——ccLet k be a field with at least 4 elements, and C : (XZ = Y 2)  P2; prove that if Q(X, Y, Z) is a quadratic form which vanishes on C then Q = λ(XZ Y 2). [Hint: if you really can’t do this for yourself, compare with the argument in the proof of Lemma 2.5.]
+
+'→'→In R3, consider the two planes A : (Z = 1) and B : (X = 1); a line through 0 meeting A in (x, y, 1) meets B in (1, y/x, 1/x). Consider the map ϕ : A −−· B defined by (x, y)  (y′ = y/x, z′ = 1/x); what is the image under ϕ of
+
+the line ax = y + b; the pencil of parallel lines ax = y + b (fixed a and variable b);
+
+circles (x — 1)2 + y2 = c for variable c (distinguish the 3 cases c > 1, c = 1 and c < 1).
+
+∈∈Try to imagine the above as a perspective drawing by an artist sitting at 0  R3, on a plane (X = 1), of figures from the plane (Z = 1). Explain what happens to the points of the two planes where ϕ and ϕ−1 are undefined.
+
+Let P1, . . . , P4 be distinct points of P2 with no 3 collinear. Prove that there is a unique coordinate system in which the 4 points are (1, 0, 0), (0, 1, 0), (0, 0, 1) and (1, 1, 1). Find all conics passing through P1, . . . , P5, where P5 = (a, b, c) is some other point, and use this to give another proof of Corollary 1.10 and Proposition 1.11.
+
+Exercises to Chapter 133
+
+In (1.12) there is a list of possible ways in which two conics can intersect. Write down equations showing that each possibility really occurs. Find all the singular conics in the corresponding pencils. [Hint: you will save yourself a lot of trouble by using symmetry and a well chosen coordinate system.]
+
+Hint for 1.2: it is known from elementary number theory that —1 is a quadratic residue modulo p if and only if p = 2 or p ≡ 1 mod 4.
+
+(Sylvester’s determinant). Let k be an algebraically closed field, and suppose given a quadratic and cubic form in U, V as in (1.8):
+
+q(U, V ) = a0U 2 + a1UV + a2V 2,
+
+c(U, V ) = b0U 3 + b1U 2V + b2UV 2 + b3V 3.
+
+Prove that q and c have a common zero (η : τ ) ∈ P1 if and only if
+
+a0a1a2a0a1a2
+
+a0a1a2a0a1a2
+
+  det
+
+a0a1a2 = 0
+
+b0b1
+
+b2b3
+
+b0b1b2b3 
+
+[Hint: Show that if q and c have a common root then the 5 elements
+
+U 2q,UV q,V 2q,Uc  and  V c
+
+do not span the 5-dimensional vector space of forms of degree 4, and are therefore linearly de- pendent. Conversely, use unique factorisation in the polynomial ring k[U, V ] to say something about relations of the form Aq = Bc with A and B forms in U, V , deg A = 2, deg B = 1.]
+
+Generalise the result of Ex. 1.10 to two forms in U, V of any degrees n and m.

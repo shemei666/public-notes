@@ -1,0 +1,515 @@
+Chapter 7
+
+The 27 lines on a cubic surface
+
+ccIn this section SP3 will be a nonsingular cubic surface, given by a homogeneous cubic ƒ =
+
+ƒ (X, Y, Z, T ). Consider the lines l of P3 lying on S.
+
+Consequences of nonsingularity
+
+∈∈Proposition(a) There exists at most 3 lines of S through any point PS; if there are 2 or 3, they must be coplanar. The picture is:
+
+Figure 7.1: 3 concurrent lines or triangle
+
+Every plane Π c P3 intersects S in one of the following:
+
+an irreducible cubic; or
+
+a conic plus a line; or
+
+3 distinct lines.
+
+ccccProof (a) If lS then l = TP lTP S, so that all lines of S through P are contained in the plane TP S; there are at most 3 of them by (b).
+
+I have to prove that a multiple line is impossible: if Π : (T = 0) and l : (Z = 0) c Π, then to say that l is a multiple line of S ∩ Π means that ƒ is of the form
+
+ƒ = Z2 · A(X, Y, Z, T ) + T · B(X, Y, Z, T ),
+
+109
+
+with A a linear form, B a quadratic form. Then S : (ƒ = 0) is singular at a point where Z = T =
+
+B = 0; this is a nonempty set, since it is the set of roots of B on the line l : (Z = T = 0).
+
+Proposition 7.2 There exists at least one line l on S.
+
+≥≥There are several approaches to proving this. A standard argument is by a dimension count: lines of P3 are parametrised by a 4-dimensional variety, and for a line l to lie on S imposes 4 conditions on l (because the restriction of ƒ to l is a cubic form, the 4 coefficients of which must vanish). A little work is needed to turn this into a rigorous proof, since a priori it shows only that the set of lines has dimension  0, and not that it is nonempty (see the highbrow notes (8.15) for a discussion of the traditional proof and the difficulties involved in it).
+
+It is also perfectly logical to assume the proposition (restrict attention only to cubic surfaces containing lines). I now explain how (7.2) can be proved by direct coordinate geometry and elim- ination. The proof occupies the next 3 pages, and divides up into 4 steps; you can skip it if you prefer (GOTO 7.3).
+
+∩∩∈∈Step 1 (Preliminary construction) For any point P S, the intersection of S with the tangent plane TP S is a plane cubic C = S TP S, which by Ex. 6.7 is singular at P . I assume that C is irreducible, since otherwise P is on a line of S, and I’m home; then C is a nodal or cuspidal cubic, and the coordinates (X, Y, Z, T ) of P3 can be chosen such that TP S : (T = 0), P = (0, 0, 1, 0), and
+
+C : (XY Z = X3 + Y 3) or (X2Z = Y 3).
+
+∈∈Whether C is nodal or cuspidal for given PS depends on the matrix of second derivatives (or
+
+Hessian matrix) of ƒ at P ; this is discussed in more detail in Ex. 7.3, which proves (in characteristic
+
+/∈/∈= 2) that the cuspidal case must occur for some point P S. For simplicity, I prove (7.2) in the cuspidal case; in principle, the proof goes through in exactly the same way in the nodal case, but the elimination calculation gets much nastier (see Ex. 7.10). Thus assume that
+
+ƒ = X2Z — Y 3 + gT,
+
+//where g = g2(X, Y, Z, T ) is a quadratic form; g(0, 0, 1, 0) = 0 by nonsingularity of S at P , so I can assume that g(0, 0, 1, 0) = 1.
+
+ccStep 2 (Statement of main claim) Consider the variable point Pα = (1, α, α3, 0) of C  S. Any line of P3 through Pα meets the complementary plane Π : (X = 0) in a point Q = (0, Y, Z, T ). I write out the equations for the line PαQ to be contained in S in terms of α and Q; expanding ƒ (λPα + µQ) in powers of λ and µ gives
+
+PαQ c S ⇐⇒ A(Y, Z, T ) = B(Y, Z, T ) = C(Y, Z, T ) = 0,
+
+where A, B and C are forms of degree 1, 2 and 3 in (Y, Z, T ), whose coefficients involve α.
+
+Main Claim There exists a ‘resultant’ polynomial R27(α), which is monic of degree 27 in α, such that
+
+R(α) = 0 ⇐⇒ A = B = C = 0 have a common zero (η : ζ : τ ) in P2.
+
+This statement proves (7.2), since it implies that for every root α of R, there exists a point Q = (0 : η : ζ : τ ) in Π for which the line PαQ is contained in S. The idea here is a standard elimination calculation based on Ex. 1.10; the rest of the proof is concerned with writing out A, B and C explicitly to prove the claim.
+
+Step 3 (Polar form) Define the polar of ƒ to be the form in two sets of variables (X, Y, Z, T )
+
+′′and (X′, Y ′, Z′, T ′) given by
+
+11∂X∂Xƒ (X, Y, Z, T ; X′, Y ′, Z′, T ′) =  ∂ƒ
+
+′∂ƒ
+
+∂Y∂Y· X +
+
+′∂ƒ
+
+∂Z∂Z· Y +
+
+′∂ƒ
+
+∂T∂T· Z +
+
+· T .
+
+It’s clear from the definition of tangent space (see (6.4) and (6.10)) that for P = (X, Y, Z, T ) ∈ S
+
+and P /= Q = (X′, Y ′, Z′, T ′) ∈ P3,
+
+ƒ1(P ; Q) = 0 ⇐⇒ the line PQ is tangent to S at P .
+
+Clearly
+
+ƒ (λP + µQ) = λ3ƒ (P ) + λ2µƒ1(P ; Q) + λµ2ƒ1(Q; P ) + µ3ƒ (Q),
+
+so that for P /= Q ∈ P3, the 4 conditions
+
+ƒ (P ) = ƒ1(P ; Q) = ƒ1(Q; P ) = ƒ (Q)
+
+are the equations for the line l = PQ to be contained in S : (ƒ = 0). More geometrically, these say that l is tangent to S at both P and Q, so that ƒ |l has double roots at both points, and then l c S follows from Proposition 1.8.
+
+The polar of ƒ = X2Z — Y 3 + gT is
+
+ƒ1 = 2XZ · X′ — 3Y 2 · Y ′ + X2 · Z′ + g(X, Y, Z, T ) · T ′ + Tg1.
+
+Here g1 = g1(X, Y, Z, T ; X′, Y ′, Z′, T ′) is the polar form of g defined in the same way as above; since g is quadratic, g1 is a symmetric bilinear form such that g1(P, P ) = 2g(P ).
+
+ccSubstituting Pα = (1, α, α3, 0) and Q = (0, Y, Z, T ) gives the equations for PαQS as A =
+
+B = C = 0, where
+
+A = Z — 3α2Y + g(1, α, α3, 0)T,
+
+B = —3αY 2 + g1(1, α, α3, 0; 0, Y, Z, T )T,
+
+C = —Y 3 + g(0, Y, Z, T )T.
+
+Step 4 (Elimination calculation)I now eliminate Y, Z, T from the above 3 equations, paying attention to the highest powers of α occurring. Note that since g(0, 0, 1, 0) = 1, it follows that
+
+g(1, α, α3, 0) = α6 + · · · = a(6),
+
+where . . . denotes terms of lower degree in α; thus a(6) is monic of degree 6. Then A = 0 gives Z
+
+as a linear form in Y and T ,
+
+Z = 3α2Y — a(6)T.
+
+Substituting in B, and using the bilinearity of g1 gives
+
+B = —3αY 2 + g1(1, α, α3, 0; 0, Y, 3α2Y — a(6)T, T )T
+
+= b0Y 2 + b1Y T + b2T 2,
+
+where
+
+b0 = —3α,b1 = g1(1, α, α3, 0; 0, 1, 3α2, 0) = 6α5 + · · · , b2 = g1(1, α, α3, 0; 0, 0, —a(6), 1) = —2α9 + · · · .
+
+Similarly, substituting for Z in C, and expanding the quadratic form g gives
+
+C = —Y 3 + g(0, Y, 3α2Y — a(6)T, T )T = c0Y 3 + c1Y 2T + c2Y T 2 + c3T 3,
+
+where
+
+24
+
+c0 = —1,c1 = g(0, 1, 3α , 0) = 9α + · · · ,
+
+c2 = g1(0, 1, 3α2, 0; 0, 0, —a(6), 1) = —6α8 + · · · ,
+
+12
+
+c3 = g(0, 0, —a(6), 1) = α+ · · · .
+
+Now by the result of Ex. 1.10, B′ and C′ have a common zero (η : τ ) if and only if
+
+det
+
+—3α6α5—2α9 = 0.
+
+   —3α6α5—2α9 —3α6α5—2α9—3α6α5—2α9—3α6α5—2α9 —19α4—6α8α12 —19α4—6α8α12—19α4—6α8α12
+
+The determinant is a polynomial in α, and it’s not hard to see that its leading term comes from taking the leading term in each entry of the determinant:
+
+ —3α 6α5 —2α9 —362
+
+—3α  6α5  —2α9—362
+
+  det
+
+—3α6α5  —2α9 = α27 · det—362 
+
+ —1  9α4 —6α8  α12 —19—61
+
+—19α4  —6α8  α12
+
+= α27.
+
+—19—6  1 
+
+This completes the proof of the main claim.Q.E.D.
+
+iiProposition 7.3 Given a line l c S, there exist exactly 5 pairs (li, l′ ) of lines of S meeting l, in
+
+such a way that
+
+iifor i = 1, . . . , 5, l ∪ li ∪ l′ is coplanar, and
+
+iijjfor i /= j, (li ∪ l′ ) ∩ (lj ∪ l′ ) = ∅.
+
+Proof(taken from [Beauville, p. 51]) If Π is a plane of P3 containing l then Π ∩ S = l + conic (since ƒ |Π is divisible by the equation of l). This conic can either be singular or nonsingular:
+
+Figure 7.2: Line plus conic
+
+mmI have to prove that there are exactly 5 distinct planes Πi  l for which the singular case occurs. The fact stated as property (ii) that lines in different planes are disjoint will then follow from (7.1, a).
+
+Suppose that l : (Z = T = 0); then I can expand ƒ out as
+
+ƒ = AX2 + BXY + CY 2 + DX + EY + F,(∗)
+
+∈∈where A, B, C, D, E, F  k[Z, T ], with A, B and C linear forms, D and E quadratic forms, and F
+
+a cubic form. If I consider this equation as a variable conic in X and Y , it is singular if and only if
+
+    ABD
+
+    ——————∆(Z, T ) = det BCE  = 4ACF + BDEAE2B2FCD2 = 0.
+
+DEF
+
+//(Here ∆ is 4 times the usual determinant if char = 2; in characteristic 2 the statement is an easy exercise.)
+
+|·|·//To be more precise, any plane through l is given by Π : (µZ = λT ); if µ = 0, I can assume µ = 1, so that Z = λT . Then in terms of the homogeneous coordinates (X, Y, T ) on Π, ƒ Π = T Q(X, Y, T ), where
+
+Q = A(λ, 1)X2 + B(λ, 1)XY + C(λ, 1)Y 2
+
++ D(λ, 1)TX + E(λ, 1)TY + F (λ, 1)T 2.
+
+Now ∆(Z, T ) is a homogeneous quintic, so by (1.8), it has 5 roots counted with multiplicities. To prove the proposition, I have to show that it doesn’t have multiple roots; this also is a consequence of the nonsingularity of S.
+
+Claim ∆(Z, T ) has only simple roots.
+
+∩∩Suppose Z = 0 is a root of ∆, and let Π : (Z = 0) be the corresponding plane; I have to prove that ∆ is not divisible by Z2. By the above picture, Π S is a set of 3 lines, and according to whether they are concurrent, I can arrange the coordinates so that
+
+11either (i) l : (T = 0), l1 : (X = 0), l′ : (Y = 0),
+
+11or (ii) l : (T = 0), l1 : (X = 0), l′ : (X = T ).
+
+Hence, in case (i), ƒ = XY T + Zg, with g quadratic, and in terms of the expression (∗), this means that B = T + aZ, and Z | A, C, D, E, F . Therefore, modulo terms divisible by Z2,
+
+∆ ≡ —T 2Fmod Z2.
+
+∈∈In addition, the point P = (0, 0, 0, 1) S, and nonsingularity at P means that F must contain the term ZT 2 with nonzero coefficient. In particular, Z2 does not divide F . Therefore (Z = 0) is a simple root of ∆.
+
+Case (ii) is a similar calculation (see Ex. 7.1).
+
+Corollary 7.4   1. There exist two disjoint lines l, m c S.
+
+2. S is rational (that is, birational to P2, see (5.9)).
+
+Proof (a) By (7.3, ii), just take l1 and l2.
+
+(b) Consider two disjoint lines l, m c S, and define rational maps
+
+ϕ : S −−· l × m and  ψ : l × m −−· S
+
+m:m:as follows. If P ∈ P3 \ (l ∪ m) then there exists a unique line n through P which meets both l and
+
+P ∈ n,and l ∩ n /= ∅, m ∩ n /= ∅.
+
+Set Φ(P ) = (l ∩ n, m ∩ n) ∈ l × m. This defines a morphism
+
+Φ: P3 \ (l ∪ m) → l × m,
+
+∈ ××∈ ××whose fibre above (Q, R)lm is the line QR of P3. Define ϕ : S −−· lm as the restriction to
+
+S of Φ.
+
+∈×∈×'→'→{}×{}×Conversely, for (Q, R)  l  m, let n be the line n = QR in P3. By (7.3), there are only finitely many lines of S meeting l, so that for almost all values of (Q, R), n intersects S in 3 points P, Q, R , of which Q and R are the given points on l and m. Thus define ψ : l  m −−· S by (Q, R)  P ; then ψ is a rational map, since the ratios of coordinates of P are rational functions of those of Q, R.
+
+Obviously ϕ and ψ are mutual inverses.  Q.E.D.
+
+Finding all the lines of S
+
+iiiiI want to find all the lines of S in terms of the configuration given by Proposition 7.3 of a line l and 5 disjoint pairs (li, l′ ). Any other line n c S must meet exactly one of li and l′ for i = 1, . . . , 5:
+
+iiiiii∩∪∪∩∪∪this is because in P3, n meets the plane Πi, and Πi S = l li l′ ; also, n cannot meet both li and l′ , since this would contradict (7.1, a). The key to sorting out the remaining lines is the following lemma, which tells us that n is uniquely determined by which of the li and l′ it meets. Let me say
+
+that a line n is a transversal of a line l if l ∩ n /= ∅.
+
+ccLemma If l1, . . . , l4P3 are disjoint lines then
+
+cccceither all 4 lines li lie on a smooth quadric l1, . . . , l4QP3; and then they have an infinite number of common transversals;
+
+/c/cor the 4 lines li do not lie on any quadric l1, . . . , l4Q; and then they have either 1 or 2
+
+common transversals.
+
+7.6. THE 27 LINES115
+
+mmProof There exists a smooth quadric Q  l1, . . . , l3: several proofs of this are possible (see Ex. 7.2).
+
+Figure 7.3: Quadric surface through 3 lines
+
+∩{}∩{}/c/c——Then in some choice of coordinates, Q : (XT Y Z), and Q has two families of lines, or generators: any transversal of l1, . . . , l3 must lie in Q, since it has 3 points in Q. Now if l4  Q, then l4 Q = 1 or 2 points , and the generators of the other family through these points are all the common transversals of l1, . . . , l4.  Q.E.D.
+
+The 27 lines
+
+iiLet l and m be two disjoint lines of S; as already observed, m meets exactly one out of each of the 5 pairs (li, l′ ) of lines meeting l. By renumbering the pairs, I assume that m meets li for i = 1, . . . , 5. Introduce the following notation for the lines meeting l or m:
+
+Figure 7.4: Configuration of lines on S3 c P3
+
+iithus the 5 pairs of lines meeting m are (li, l′′) for i = 1, . . . , 5. By (7.3, ii) applied to m, for
+
+i /= j, the line l′′ does not meet lj. On the other hand, every line of S must meet one of l, lj or l′ ,
+
+i
+
+iijjhence l′′ meets l′
+
+j
+
+for i /= j.
+
+ccClaim(I) If nS is any line other than these 17, then n meets exactly 3 out of the 5 lines
+
+l1, . . . , l5.
+
+(II) Conversely, given any choice {i, j, k} of 3 elements of the set {1, 2, 3, 4, 5}, there is a unique line lijk c S meeting li, lj, lk.
+
+Proof (I) Given four disjoint lines of S, it is clear that they do not all lie on a quadric Q, since otherwise Q c S, contradicting the irreducibility of S.
+
+If n meets ≥ 4 of the li then by Lemma 7.5, n = l or m, which is a contradiction. If n meets
+
+ii22334455334455≤ 2 of the li then it meets ≥ 3 of the l′ , and so meets say either l′ , l′ , l′ , l′ or l1, l′ , l′ , l′ ; but
+
+by what was said above, l and l′′ are two common transversals of the 5 disjoint lines l′ , l′ , l′ , l′
+
+12  3  4  5
+
+11and l1, so that by Lemma 7.5 again, if n meets ≥ 4 of these then n = l or l′′. This is the same
+
+contradiction.
+
+(II) There are 10 lines meeting l1 by (7.3), of which so far only 4 have been accounted for
+
+(namely, l, l′ , m and l′′). The six other lines must meet exactly 2 out of the 4 remaining lines
+
+11 4 
+
+l2, . . . , l5, and there are exactly 6 = 2 possible choices; so they must all occur.Q.E.D.
+
+This gives the lines of S as being
+
+′  ′′
+
+and the number of them is
+
+{l, m, li, li, li , lijk},
+
+1 + 1 + 5 + 5 + 5 + 10 = 27.
+
+The configuration of lines
+
+An alternative statement is that the lines of S are l, l1, . . . , l5, l′ , . . . , l′ , and 16 other lines which
+
+meet an odd number of l1, . . . , l5:
+
+15
+
+iil′′ meets li only
+
+lijk meets li, lj, lk only
+
+m meets all of l1, . . . , l5.
+
+In the notation I have introduced, it is easy to see that the incidence relation between the 27 lines of S is as follows:
+
+l meets l1, . . . , l5, l′ , . . . , l′ ;
+
+15
+
+1111l1 meets l, m, l′ , l′′, and l1jk for 6 choices of {j, k} c {2, 3, 4, 5};
+
+lljj11′ meets l, l1, l′′ (for 4 choices of j /= 1), and lijk (for 4 choices of {i, j, k} c {2, 3, 4, 5});
+
+lljj11′′ meets m, l1, l′ (for 4 choices of j /= 1), and lijk (for 4 choices of {i, j, k} c {2, 3, 4, 5});
+
+l123 meets l1, l2, l3, l145, l245, l345, l′ , l′ , l′′, l′′.
+
+4  5  4  5
+
+This combinatorial configuration has many different representations, some of them much more symmetric than that given here; see for example [Semple and Roth, pp. 122–128 and 151–152].
+
+Exercises to Chapter 7
+
+Prove case (ii) of the claim in Proposition 7.3. [Hint: as in the given proof of case (i), ƒ = X(X — T )T + Zg, so that A = T + aZ, D = —T 2 + Z · l, where l is linear, so that Z | B, C, E, F , and Z does not divide D; also, the nonsingularity of S at (0, 1, 0, 0) implies that C = cZ, with c /= 0. Now calculate ∆(Z, T ) modulo Z2.]
+
+Prove that given 3 disjoint lines l1, . . . , l3 c P3, there exists a nonsingular quadric Q m
+
+iiiil1, . . . , l3. [Hint: on each line li, take 3 points Pi, P ′, P ′′ ∈ li, and show as in (1.11) or (2.4)
+
+ccthat there is at least one quadric Q through them; it follows that each liQ. Now show that Q can’t be singular: for example, what happens if Q is a pair of planes?]
+
+The Hessian. Let ƒ = ƒd(x0, . . . , xn) be a form of degree d in x0, . . . , xn, defining a hypersur- face V : (ƒ = 0) c Pn; suppose for simplicity that the characteristic /= 2 and does not divide
+
+(d — 1). Write ƒxi = ∂ƒ/∂xi and ƒxixj = ∂2ƒ/∂xi∂xj for the first and second derivatives of
+
+ƒ . The Taylor expansion of ƒ about a point P ∈ Pn is
+
+ƒ = ƒ (P ) + ƒ (1)(x) + ƒ (2)(x) + · · · ,
+
+where ƒ (1) and ƒ (2) are linear and quadratic forms:
+
+ii jii jƒ (1) = Σ ƒx (P ) · xiand ƒ (2) = (1/2) Σ ƒx x (P ) · xixj.
+
+∈∈∈∈ΣΣ{}{}∩∩If P  V is singular then ƒ (P ) and ƒ (1) vanish at P , and the nature of V or of ƒ near P is determined to second order by the quadratic form ƒ (2). Similarly if P V is nonsingular then the nature of ƒ restricted to the hyperplane TP V (or of the singular hyperplane section V TP V ) is determined by ƒ (2). Define the Hessian matrix of ƒ (w.r.t. coordinates x0, . . . , xn) by H(ƒ ) = H(ƒ, x) =  ƒxixj i,j , and the Hessian h(ƒ ) = h(ƒ, x) to be the determinant h(ƒ ) = det H(ƒ ).
+
+iiLet x′ =aijxj be a projective coordinate change with A = (aij) a nonsingular (n + 1) × (n + 1) matrix. If g(x′) = ƒ (Ax), prove that the Hessian matrix transforms as
+
+H(g, x′) = (tA)H(ƒ, x)A
+
+where tA is the transpose matrix; deduce that h(g, x′) = (det A)2h(ƒ, x).
+
+(i)(i)Consider an affine piece V(i) c Fn  of V : (ƒ = 0) as in (5.5). Let P ∈ V(i) be a
+
+nonsingular point, and Π = TP V(i) the affine tangent plane; write ϕ for the restriction to Π of the defining equation ƒ/xid of V(i). Prove that the Taylor expansion of ϕ at P starts with a nondegenerate quadratic form ϕ(2) (in n — 1 variables) if and only if
+
+h(ƒ )(P ) /= 0.
+
+(n — 1) × (n — 1)H(ƒ )ƒxi (P ) = 0(n — 1) × (n — 1)H(ƒ )ƒxi (P ) = 0/Σ·—/Σ·—[Hint: Reduce to P = (1, 0, . . . , 0) and TP V : (x1 = 0) using (i). Then ϕ(2) is the bottom rightblock of the projective Hessian matrix. Usefor i = 1 and Euler’s formula  j ƒxixj  xj = (d  1)ƒxi to show that the matrix H(ƒ ) has
+
+exactly one nonzero entry in the zeroth row and column. Compare [Fulton, p. 116].]
+
+c∈c∈Let C : (ƒ = 0)  P2 be a nonsingular plane cubic curve; deduce from (ii) that P  C is an inflexion point if and only if H(ƒ )(P ) = 0. Bézout’s theorem implies that (ƒ = H(ƒ ) = 0) c P2 is nonempty (see (1.9) and [Fulton, p. 112]).
+
+∩∩c∈c∈Let S : (ƒ = 0)  P3 be a nonsingular cubic surface; for P  S prove that if P is not on a line of S then the intersection S TP S is a cuspidal cubic if and only if H(ƒ )(P ) = 0. Deduce that cuspidal cubic sections exist, as required in Step 1 of the proof of (7.2).
+
+(i) Prove that if P ∈ S is a singular point of a cubic surface then there is at least one line
+
+l c S through P (and ‘in general’ 6).
+
+ccc∈c∈(ii) If X  P4 is a nonsingular cubic hypersurface (a cubic 3-fold) and P X then there is at least one line l X through P (and ‘in general’ 6). [Hint: write down the equation of X in coordinates with P = (1, 0, . . . , 0).]
+
+××Prove that the rational map ϕ : S −−· lm of Corollary 7.4, (b) is in fact a morphism; prove that it contracts 5 lines of S to points.
+
+Find all 27 lines of the diagonal (or ‘Fermat’) cubic surface
+
+S : (X3 + Y 3 + Z3 + T 3 = 0) c P3
+
+in terms of planes such as (X = ρY ), where ρ3 = 1.
+
+Let S c P3 be the cubic surface given by S : (ƒ = 0), where
+
+ƒ (X, Y, Z, T ) = ZX2 + TY 2 + (Z — d2T )(Z — e2T )(Z — ƒ 2T ),
+
+ccwith d, e, ƒ distinct nonzero elements of k, and l S the line given by Z = T = 0. By considering as in (7.3) the variable plane through l, write down the equations of the 10 lines of S meeting l.
+
+suggested by R. Casdagli. Consider the cubic surface S(0) c R3 given in affine coordinates by
+
+x2 + y2 + z2 — 2xyz = 1 + λ2,(∗) where λ ∈ R, λ > 0 is a constant. (i) By rewriting (∗) as
+
+(x — yz)2 = (y2 — 1)(z2 — 1) + λ2,
+
+show that S(0) has 4 tubes going off to infinity.  On the other hand, the corresponding
+
+RRprojective surface S c P3 meets infinity in 3 lines XY Z = 0. Use this to describe the
+
+topology of S.
+
+∗∗(ii) By considering ( ) as the equation of a variable conic in the (x, y)-plane with parameter
+
+z, show that the four pairs of lines of S(0) which meet (Z = 0) asymptotically are given by
+
+z = µ,x = (µ ± λ)y;
+
+z = —µ,x = (—µ ± λ)y; z = 1,x — y = ±λ;
+
+and  z = —1,x + y = ±λ,
+
+where µ2 = 1 + λ2.
+
+Represent the surface S(0) in R3 and its 24 lines by computer graphics, or by making a plaster model.
+
+//A case when all the lines are rational. Suppose char k = 2 and let S : (ƒ = 0) be a nonsingular cubic surface, with
+
+ƒ = A(X, Y ) · T — B(X, Y ) · Z + (terms of degree ≥ 2 in Z and T ).
+
+Then S : (ƒ = 0) contains l : (Z = T = 0), and the tangent plane at P = (1, λ, 0, 0) is
+
+TP S : A(1, λ)T = B(1, λ)Z.
+
+Use linear coordinate changes in (X, Y ) and (Z, T ) to reduce A, B to A = X2 + ∆Y 2,
+
+B = XY (with ∆ ∈ k), and if ∆ is a perfect square to A = X2, B = Y 2.
+
+Suppose that S also contains the line m : (X = Y = 0), and for ease of notation that A = X2, B = Y 2. Let li for i = 1, . . . , 5 be the 5 common transversals of l and n, and write Pi = (1, λi, 0, 0) = li ∩ l for the points of intersection of l and li. Prove that
+
+iili : (Y = λiX, T = λ2Z)  for i = 1, . . . , 5,
+
+and that
+
+ƒ = X2T — Y 2Z + X(σ5Z2 + σ3ZT + σ1T 2)
+
+22— Y (σ4Z
+
++ σ2ZT + T 2)
+
+where σ1, . . . , σ5 are the elementary symmetric functions in λ1, . . . , λ5.
+
+iiiiFind the remaining lines on S. [Hint: l′ and l′′ are contained in planes you already
+
+∈∈know. Arguing as in (7.6), it’s not hard to show that every line meeting all 3 of l1, l2, l3 is given by (τ2Z + T ) : X = (τ3Z + τ1T ) : Y = α : β for some α : β  P1, where τ1, . . . , τ3 are the elementary symmetric functions in λ1, . . . , λ3.]
+
+This exercise is for the reader who likes big calculations, or has access to a computer algebra system. If a nonsingular cubic surface S has a nodal cubic curve C as a section, its equation can be written as
+
+ƒ = XY Z — X3 — Y 3 + Tg.
+
+/∞/∞Let Pα = (α, α2, 1 + α3, 0) with α = 0,  be a variable point of C, and Q = (0, Y, Z, T ). Then expanding out ƒ (λPα + µQ) in terms of the polar of ƒ as in (7.2), Step 3, show that the line PαQ c S if and only if A = B = C = 0, where
+
+A = (—2α4 + α)Y + α3Z + g(α, α2, 1 + α3, 0)T ;
+
+B = αY Z — 3α2Y 2 + g1(α, α2, 1 + α3, 0; 0, Y, Z, T )T ;
+
+C = —Y 3 + g(0, Y, Z, T )T.
+
+Prove that there is a ‘resultant’ polynomial R27(α), which is monic in α of degree 27 and with constant term 1, such that for α /= 0,
+
+R(α) = 0 ⇐⇒ A = B = C = 0 have a
+
+common zero (η : ζ : τ ) ∈ P2.
+
+∞∞[Hint: solve A = 0 for Z (this introduces a term α3 in the denominator), substitute for Z in B and C to get a binary quadratic and cubic in Y, T , then use the Sylvester determinant to eliminate Y and T . What makes this case hard is that the determinant formed by the leading term in each entry vanishes. The reason for this is that A, B, C do have the trivial common solution Q = Pα = (0, 0, 1, 0) when α = 0 or  . A priori, the determinant has terms
+
+in α18, . . . , α−15, and you have to calculate the first and last 4 coefficients to prove that in fact it is —1 · α15 + · · · — 1 · α−12.]

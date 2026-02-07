@@ -1,0 +1,345 @@
+Chapter 6
+
+Tangent space and nonsingularity, dimension
+
+Nonsingular points of a hypersurface
+
+Suppose ƒ ∈ k[X1, . . . , Xn] is irreducible, ƒ ∈/ k, and set V = V (ƒ ) c Fn; let P = (a1, . . . , an) ∈ V , and l be a line through P . Since P ∈ V , obviously P is a root of ƒ |l.
+
+Question: When is P a multiple root of ƒ |l?
+
+Answer: If and only if l is contained in the affine linear subspace
+
+ Σ ΣT V : ∂ƒ
+
+iiP∂Xi
+
+(P ) · (Xi
+
+— ai) = 0 c Fn,
+
+called the tangent space to V at P .
+
+Figure 6.1: Tangent space
+
+To prove this, parametrise l as
+
+l : Xi = ai + biT,
+
+101
+
+||where P = (a1, . . . , an) and (b1, . . . , bn) is the slope or direction vector of l. Then ƒ l = ƒ (, . . . , ai +
+
+biT, . . . , ) = g(T ) is a polynomial in T , and we know that (T = 0) is one root of g. Hence
+
+⇐⇒⇐⇒0 is a multiple root of g∂g (0) = 0,
+
+∂T
+
+that is,
+
+⇐⇒ Σ b⇐⇒ Σ b ∂ƒ
+
+i ∂Xi
+
+(P ) = 0 ⇐⇒ l c TP V.
+
+i
+
+∈c/∈c/Definition PVFn is a nonsingular point of V if ∂ƒ/∂Xi(P ) = 0 for some i; otherwise P is a singular point, or a singularity of V .
+
+Obviously TP V is an (n—1)-dimensional affine subspace of Fn if P is nonsingular, and TP V = Fn
+
+if P ∈ V is singular.
+
+Remarks
+
+The derivatives ∂ƒ/∂Xi(P ) appearing above are formal algebraic operations (that is, ∂/∂Xi
+
+takes Xn into nXn−1); no calculus is involved.
+
+ii
+
+||→'→→'→//∈}∈}∈c|→c∈c|→cSuppose k = R or C, and that ∂ƒ/∂Xi(P ) = 0; for clarity let me take i = 1. Then the map p : Fn  Fn defined by (X1, . . . , Xn)  (ƒ, X2, . . . , Xn) has nonvanishing Jacobian determinant at P , so that by the inverse function theorem, there exists a neighbourhood P  U  Fn such that p U : U  p(U )  Fn is a diffeomorphism of the neighbourhood U with an open set p(U ) of Fn (in the usual topology of Rn or Cn); that is, p U is bijective, and both p and p−1 are differentiable functions of real or complex variables. In other words, (ƒ, X2, . . . , Xn) form a new differentiable coordinate system on Fn near P ; this implies that a neighbourhood of P in V : (ƒ = 0) is diffeomorphic to an open set in Fn−1 with coordinates (X2, . . . , Xn). Thus near a nonsingular point P , V is a manifold with (X2, . . . , Xn) as local parameters.
+
+Proposition 6.3 V nonsing = PVP is nonsingular is a dense open set of V for the Zariski topology.
+
+Proof  The complement of V nonsing is the set V sing of singular points, which is defined by ∂ƒ/∂Xi(P ) = 0 for all i, that is
+
+singsing∂X1∂X1∂Xn∂XnV= V ƒ,  ∂ƒ , . . . ,  ∂ƒ   c Fn,
+
+∈∈which is closed by definition of the Zariski topology. Since V is irreducible (by (3.11, a), to show that the open V nonsing is dense, I only have to show it’s nonempty (by Proposition 4.2); arguing by contradiction, suppose that it’s empty, that is, suppose V = V (ƒ ) = V sing. Then each of the polynomials ∂ƒ/∂Xi must vanish on V , therefore (by (3.11) once more) they must be divisible by ƒ in k[X1, . . . , Xn]; but viewed as a polynomial in Xi, ∂ƒ/∂Xi has degree strictly smaller than ƒ , so that ƒ divides ∂ƒ/∂Xi implies that in fact ∂ƒ/∂Xi = 0 as a polynomial. Over C, this is obviously only possible if Xi does not appear in ƒ , and if this happens for all i then ƒ = const. C, which is excluded. Over a general field k, ∂ƒ/∂Xi = 0 is only possible if ƒ is an inseparable polynomial in
+
+6.4.  TANGENT SPACE103
+
+iiXi, that is, char k = p, and Xi only appears in ƒ as the pth power Xp. If this happens for each i, then by the argument given in (3.16), ƒ is a pth power in k[X1, . . . , Xn]; this contradicts the fact that ƒ is irreducible.  Q.E.D.
+
+Tangent space
+
+cs∈cs∈Definition Let V  Fn be a subvariety, with V  P = (a1, . . . , an). For any ƒ  k[X1, . . . , Xn], write
+
+PPii∂Xi∂Xiiiiiƒ (1) = Σ  ∂ƒ (P ) · (X — a ).
+
+This is an affine linear polynomial (that is, linear plus constant), the ‘first order part’ of ƒ at P . Now define the tangent space to V at P by
+
+PPTP V = \ ƒ (1) = 0 c Fn,
+
+where the intersection takes place over all ƒ ∈ I(V ).
+
+→'→→'→Proposition 6.5 The function VN defined by Pdim TP V is an upper semicontinuous function (in the Zariski topology of V ). In other words, for any integer r, the subset
+
+S(r) = P ∈ V  dim TP V ≥ r} c V
+
+is closed.
+
+PPProof Let (ƒ1, . . . , ƒm) be a set of generators of I(V ); it is easy to see that for any g ∈ I(V ), the linear part g(1) of g is a linear combination of those of the ƒi, so that the definition of TP V
+
+simplifies to
+
+TP V =
+
+m
+
+\ \ i=1
+
+ƒ (1) = 0 
+
+nnc F .
+
+i,Pi,PThen by elementary linear algebra,
+
+∂Xi∂XiP ∈ S(r) ⇐⇒ the matrix   ∂ƒ
+
+(P ) 
+
+i=1,...,m
+
+j=1,...,n
+
+has rank ≤ n — r
+
+⇐⇒ every (n — r + 1) × (n — r + 1) minor vanishes.
+
+ccccNow each entry ∂ƒi/∂Xj(P ) of the matrix is a polynomial function of P ; thus each minor is a determinant of a matrix of polynomials, and so is itself a polynomial. Hence S(r) V Fn is an algebraic subset.  Q.E.D.
+
+Corollary-Definition 6.6 There exists an integer r and a dense open subset V0 c V such that
+
+dim TP V = r for P ∈ V0, and dim TP V ≥ r for all P ∈ V.
+
+∈∈Define r to be the dimension of V , and write dim V = r; and say that P  V is nonsingular if dim TP V = r, and singular if dim TP V > r. A variety V is nonsingular if it is nonsingular at each point P ∈ V .
+
+Proof Let r = min dim TP V }, taken over all points P ∈ V . Then clearly
+
+S(r — 1) = ∅,S(r) = V,andS(r + 1) Ç V ;
+
+therefore S(r) \ S(r + 1) = P ∈ V  dim TP V = r} is open and nonempty.Q.E.D.
+
+6.7dim V = tr deg k(V ) – the hypersurface case
+
+——ccIt follows from Proposition 6.3 that if V = V (ƒ )  Fn is a hypersurface defined by some nonconstant polynomial ƒ , then dim V = n 1. On the other hand, for a hypersurface, k[V ] = k[X1, . . . , Xn]/(ƒ ), so that, assuming that ƒ involves X1 in a nontrivial way, the function field of V is of the form
+
+k(V ) = k(X2, . . . , Xn)[X1]/(ƒ ),
+
+——that is, it is built up from k by adjoining n 1 algebraically independent elements, then making a primitive algebraic extension.
+
+ccDefinition If k K is a field extension, the transcendence degree of K over k is the maximum number of elements of K algebraically independent over k. It is denoted tr degk K.
+
+∈∈The elementary theory of transcendence degree of a field extension K/k is formally quite similar to that of the dimension of a vector space: given α1, . . . , αm  K, we know what it means for them to be algebraically independent over k (see (3.13)); they span the transcendental part of the extension if K/k(α1, . . . , αm) is algebraic; and they form a transcendence basis if they are algebraically independent and span. Then it is an easy theorem that a transcendence basis is a maximal algebraically independent set, and a minimal spanning set, and that any two transcendence bases of K/k have the same number of elements (see Ex. 6.1).
+
+∈∈c—c—Thus for a hypersurface V  Fn, dim V = n 1 = tr degk k(V ). The rest of this section is concerned with proving that the equality dim V = tr degk k(V ) holds for all varieties, by reducing to the case of a hypersurface. The first thing to show is that for a point P V of a variety, the tangent space TP V , which so far has been discussed in terms of a particular coordinate system in
+
+the ambient space Fn, is in fact an intrinsic property of a neighbourhood of P ∈ V .
+
+6.8Intrinsic nature of TP V
+
+iiFrom now on, given P = (a1, . . . , an) ∈ V c Fn, I take new coordinates X′ = Xi — ai to bring P
+
+to the origin, and thus assume that P = (0, . . . , 0). Then TP V c Fn is a vector subspace of kn.
+
+Notation Write mP = ideal of P in k[V ], and
+
+MP = the ideal (X1, . . . , Xn) c k[X1, . . . , Xn].
+
+Then of course mP = MP /I(V ) c k[V ].
+
+Theorem In the above notation,
+
+6.8.  INTRINSIC NATURE OF TP V105
+
+there is a natural isomorphism of vector spaces
+
+PP(TP V )∗ = mP /m2 ,
+
+where ( )∗ denotes the dual of a vector space.
+
+∈/c∈/cIf ƒk[V ] is such that ƒ (P ) = 0, and VfV is the standard affine open as in (4.13), then the natural map
+
+is an isomorphism.
+
+TP (Vf ) → TP V
+
+PPPPProof of (a) Write (kn)∗ for the vector space of linear forms on kn; this is the vector space with basis X1, . . . , Xn. Since P = (0, . . . , 0), for any ƒ ∈ k[X1, . . . , Xn], the linear part ƒ (1) is naturally an element of (kn)∗; define a map d : MP → (kn)∗ by taking ƒ ∈ MP into dƒ = ƒ (1).
+
+PPNow d is surjective, since the Xi ∈ MP go into the natural basis of (kn)∗; also ker d = M 2 , since
+
+PPƒ (1) = 0 ⇐⇒ ƒ starts with quadratic terms in X1, . . . , Xn
+
+22⇐⇒ ƒ ∈ MP .
+
+PPHence MP /M 2 ∼= (kn)∗. This is statement (a) for the special case V = Fn. In the general case,
+
+c→c→dual to the inclusion TP Vkn, there is a restriction map (kn)∗(TP V )∗, taking a linear form λ
+
+on kn into its restriction to TP V ; composing then defines a map
+
+D : MP → (kn)∗ → (TP V )∗.
+
+PPThe composite D is surjective since each factor is. I claim that the kernel of D is just M 2 + I(V ),
+
+PPso that
+
+PPmP /m2
+
+= MP /(M 2 + I(V )) ∼= (TP V )∗,
+
+as required. To prove the claim,
+
+PPƒ ∈ ker D ⇐⇒ ƒ (1)|TP V = 0
+
+PPiii,Pi,P⇐⇒ ƒ (1) = Σ aig(1) for some gi ∈ I(V )
+
+PP(since TP V c kn is the vector subspace defined by (g(1) = 0) for g ∈ I(V ))
+
+iiPPPP⇐⇒ ƒ — Σ aigi ∈ M 2 for some gi ∈ I(V ) ⇐⇒ ƒ ∈ M 2 + I(V ).
+
+The proof of (b) of Theorem 6.8 is left to the reader (see Ex. 6.2).Q.E.D.
+
+→→∈c∈c→∈c∈c→∈∈Corollary 6.9 TP V only depends on a neighbourhood of P  V up to isomorphism. More precisely, if P  V0  V and Q  W0  W are open subsets of affine varieties, and ϕ : V0  W0 an isomorphism taking P into Q, there is a natural isomorphism TP V0  TQW0; hence dim TP V0 = dim TQW0.
+
+In particular, if V and W are birationally equivalent varieties then dim V = dim W.
+
+Proof By passing to a smaller neighbourhood of P in V , I can assume V0 is isomorphic to an affine variety (Proposition 4.13). Then so is W0, and ϕ induces an isomorphism k[V0] ∼= k[W0] taking mP
+
+into mQ. The final sentence holds because by (5.8), V and W contain dense open subsets which are isomorphic.
+
+Theorem 6.10 For any variety V , dim V = tr deg k(V ).
+
+Proof This is known if V is a hypersurface. On the other hand, every variety is birational to a hypersurface (by (5.10)), and both sides of the required relation are the same for birationally equivalent varieties. Q.E.D.
+
+Nonsingularity and projective varieties
+
+cccc∈∈Although the above results were discussed in terms of affine varieties, the idea of nonsingularity and of dimension applies directly to any variety V : a point P V is nonsingular if it is a nonsingular point of an affine open V0  V containing it; by Corollary 6.9, this notion does not depend on the choice of V0. On the other hand, for a projective variety V  Pn, it is sometimes useful to consider the tangent space to V at P as a projective subspace of Pn. I give the definition for a hypersurface only: if V = V (ƒ ) is a hypersurface defined by a form (= homogeneous polynomial)
+
+ƒ ∈ k[X0, . . . , Xn] of degree d, and V s P = (a0, . . . , an), then Σ ∂ƒ/∂Xi(P ) · Xi = 0 is the
+
+(0)(0)equation of a hyperplane in Pn which plays the role of the tangent plane to V at P . If P ∈ Fn ,
+
+then this projective hyperplane is the projective closure of the affine tangent hyperplane to V(0) at
+
+P , as can be checked easily using Euler’s formula:
+
+Σ Xi
+
+ ∂ƒ
+
+· ∂Xi
+
+= dƒfor ƒ ∈ k[X0, . . . , Xn
+
+] homogeneous of degree d.
+
+∈∈Because of this formula, to find out whether a point PPn is a singular point of V , we only have to check (n + 1) out of the (n + 2) conditions
+
+∂ƒ
+
+ƒ (P ) = 0,(P ) = 0 for i = 0, . . . , n,
+
+∂Xi
+
+so that for example, if the degree of ƒ is not divisible by char k,
+
+∂Xfor⇒∂Xfor⇒∂ƒ
+
+(P ) = 0i = 0, . . . , n =ƒ (P ) = 0,
+
+i
+
+and P ∈ V is a singularity.
+
+Worked example: blowup
+
+cc→'→→'→Let B = F2 with coordinates (u, v), and σ : B   F2 the map (u, v)   (x = u, y = uv); clearly, σ is a birational morphism: it contracts the v-axis l : (u = 0) to the origin 0 and is an isomorphism outside this exceptional set. Let’s find out what happens under σ to a curve C : (ƒ = 0) F2; the question will only be of interest if C passes through 0.
+
+Exercises to Chapter 6107
+
+||c◦∈c◦∈Clearly σ−1(C)  B is the algebraic subset defined by (ƒ  σ)(u, v) = ƒ (u, uv) = 0; since 0  C by assumption, it follows that l : (u = 0) is contained in σ−1(C), or equivalently, that u ƒ (u, uv). It’s easy to see that the highest power um of u dividing ƒ (u, uv) is equal to the smallest degree m = a + b of the monomials xayb occurring in ƒ , that is, the multiplicity of ƒ at 0; so σ−1(C) decomposes as the union of the exceptional curve σ−1(0) = l (with multiplicity m), together with a new curve C1 defined by ƒ1(u, v) = ƒ (u, uv)/um. Consider the examples
+
+ƒ = αx — y + · · · ;
+
+ƒ = y2 — x2 + · · · ;
+
+ƒ = y2 — x3,
+
+—· · ·±—· · ·±∈∈· · ·· · ·—· · ·—· · ·where . . . denotes terms of higher degree. Clearly in (a) ƒ has multiplicity 1, and ƒ1 = αv + (whereconsists of terms divisible by u), so C1 is again nonsingular, and meets l transversally at (0, α); thus σ replaces 0F2 with the line l whose points correspond to tangent directions at 0 (excluding (x = 0)). In (b) ƒ1 = v21 +, so C1 has two nonsingular points (0, 1) above
+
+∈—∈—0C; thus the blowup σ ‘separates the two branches’ of the singular curve C. In (c) ƒ1 = v2u, so that C1 is nonsingular, but above 0 it is tangent to the contracted curve l.
+
+In either case (b) or (c), σ replaces a singular curve C by a nonsingular one C1 birational to C (by introducing ‘new coordinates’ u = x, v = y/x). This is what is meant by a resolution of singularities. In the case of plane curves, a resolution can always be obtained by a chain of blowups (see Ex. 6.6 for examples, and [Fulton, pp. 162–171] for more details), and the process of resolution gives detailed information about the singularities. A famous theorem of H. Hironaka guarantees the possibility of resolving singularities by blowups (in any dimension, over a field of characteristic zero). This is a crucial theoretical result that reduces the birational study of varieties to nonsingular ones; however, the actual process of resolution by blowups is in general extremely complicated, and does not necessarily contribute very much to the understanding of the singularities or varieties concerned.
+
+Exercises to Chapter 6
+
+ccccLet k K be a field extension, and (u1, . . . , ur), (v1, . . . , vs) two sets of elements of K; suppose that (u1, . . . , ur) are algebraically independent, and that (v1, . . . , vs) span the extension k
+
+≤≤K algebraically. Prove that r  s. [Hint: the inductive step consists of assuming that (u1, . . . , ui, vi+1, . . . , vs) span K/k algebraically, and considering ui+1.] Deduce that any two transcendence bases of K/k have the same number of elements.
+
+Prove Theorem 6.8, (b). [Hint:
+
+I(Vf ) = (I(V ), Y ƒ — 1) c k[X1, . . . , Xn, Y ],
+
+so that if Q = (a1, . . . , an, b) ∈ Vf , then TQVf c Fn+1 is defined by the equations for
+
+TP V c Fn, together with one equation involving Y .]
+
+Determine all the singular points of the following curves in F2.
+
+y2 = x3 — x;
+
+y2 = x3 — 6x2 + 9x;
+
+x2y2 + x2 + y2 + 2xy(x + y + 1) = 0;
+
+x2 = x4 + y4;
+
+xy = x6 + y6;
+
+x3 = y2 + x4 + y4;
+
+x2y + xy2 = x4 + y4.
+
+Find all the singular points of the surfaces in F3 given by
+
+xy2 = z2;
+
+x2 + y2 = z2;
+
+xy + x3 + y3 = 0.
+
+(You will find it useful to sketch the real parts of the surfaces, to the limits of your ability; algebraic geometers usually can’t draw.)
+
+Show that the hypersurface Vd c Pn defined by
+
+0011nnXd + Xd + · · · + Xd = 0
+
+is nonsingular (if char k does not divide d).
+
+c—→c—→(a) Let Cn  F2 be the curve given by ƒn : y2  x2n+1 and σ : B  F2 be as in (6.12), with l = σ−1(0); show that σ−1(Cn) decomposes as the union of l together with a curve isomorphic to Cn−1. Deduce that Cn can be resolved by a chain of n blowups.
+
+Show how to resolve the following curve singularities by making one or more blowups:
+
+y3 = x4;
+
+y3 = x5;
+
+(y2 — x2)(y2 — x5) = x8.
+
+ccProve that the intersection of a hypersurface VFn (not a hyperplane) with the tangent hyperplane TP V is singular at P .

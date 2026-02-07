@@ -1,0 +1,9 @@
+Part I. Playing with plane curves
+
+∩∩c∩c∩Plane conics General familiarity with P2 and homogeneous coordinates, relation of F2 to P2; parametrisation, every smooth conic CP2 is ∼= P1. Easy cases of Bézout’s theorem: line curve of degree d = d points, coniccurve of degree d = 2d points; linear system of conics through
+
+P1, . . . , Pn.
+
+————Cubics and the group law The curve (y2 = x(x 1)(x λ)) has no rational parametrisation. Linear systems Sd(P1, . . . , Pn); pencil of cubics through 8 points ‘in general position’; group law on cubic; Pascal’s mystic hexagon. Appendix to Part I. Curves and their genus
+
+Topology of nonsingular plane cubics over C; informal discussion of the genus of a curve; topol- ogy, differential geometry, moduli, number theory, Mordell–Weil–Faltings.
