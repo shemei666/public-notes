@@ -485,11 +485,21 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > Let $S$ be a sphere containing $K$ in its interior. Then $P_{K}(S) = \partial K$.
 
 > [!NOTE]- Proof of Lemma
-> $P(S) \subseteq \partial K$, Let $\vec{v} \in \partial K$, for $n \in \mathbb{N}$, choose $x_{n} \in Int(S)\setminus K$ such that $\lVert  \vec{x_{n}} - \vec{v} \rVert < \frac{1}{n}$, $\lVert  \vec{v} - P(x_{n}) \rVert \leq \lVert  \vec{v} - \vec{x_{n}} \rVert \leq \frac{1}{n}$ , $R_{K}(\vec{x_{n}})$ intersects $S$ at a point $\vec{y_{n}}$
-> 
-> Also since $S$ is a compact set we have that $\vec{y_{n}}$ has a convergent subsequence, 
-> Let $y_{n_{k}}\to y$ be the convergent subsequence. Also see that the projection of any point in the ray $R_{K}(x_{n})$ will have the same image under the projection.
-> Hence $P_{K}(y_{n_{k}})=x_{n_{k}}\to \vec{v}$ 
+> **Direction ($P(S) \subseteq \partial K$)**: Immediate from the definition of the metric projection onto $K$.
+>
+> **Direction ($\partial K \subseteq P(S)$)**: Let $\vec{v} \in \partial K$. For each $n \in \mathbb{N}$, choose $\vec{x}_{n} \in \text{int}(S) \setminus K$ such that $\lVert \vec{x}_{n} - \vec{v} \rVert < \frac{1}{n}$.
+>
+> Consider the ray $R_{K}(\vec{x}_{n})$ emanating from $P_{K}(\vec{x}_{n})$ through $\vec{x}_{n}$. Since $S$ encloses $K$, this ray intersects $S$ at a unique point $\vec{y}_{n}$.
+>
+> **Claim**: The projection of the entire ray $R_{K}(\vec{x}_{n})$ onto $K$ is the singleton $\{P_{K}(\vec{x}_{n})\}$.
+> *Reason*: The projection is characterized by $\langle \vec{x}_n - P_K(\vec{x}_n), \vec{z} - P_K(\vec{x}_n) \rangle \le 0$ for all $\vec{z} \in K$. Any point $\vec{w}$ on the ray satisfies $\vec{w} - P_K(\vec{x}_n) = \alpha (\vec{x}_n - P_K(\vec{x}_n))$ for $\alpha \ge 0$. Substituting this:
+> $$ \langle \vec{w} - P_K(\vec{x}_n), \vec{z} - P_K(\vec{x}_n) \rangle = \alpha \langle \vec{x}_n - P_K(\vec{x}_n), \vec{z} - P_K(\vec{x}_n) \rangle \le 0 $$
+> Since this holds for all $\vec{z} \in K$, uniqueness of the projection implies $P_K(\vec{w}) = P_K(\vec{x}_n)$. In particular, $P_K(\vec{y}_n) = P_K(\vec{x}_n)$.
+>
+> Since $S$ is compact, $(\vec{y}_n)$ has a convergent subsequence $\vec{y}_{n_k} \to \vec{y} \in S$. By continuity of $P_K$:
+> $$ P_K(\vec{y}) = \lim_{k \to \infty} P_K(\vec{y}_{n_k}) = \lim_{k \to \infty} P_K(\vec{x}_{n_k}) $$
+> Since $\vec{x}_{n} \to \vec{v}$ and $\vec{v} \in \partial K \subseteq K$, we have $P_K(\vec{x}_{n}) \to \vec{v}$.
+> Thus $P_K(\vec{y}) = \vec{v}$, implying $\vec{v} \in P_K(S)$. 
 
 
 > [!TIP] Corollary
