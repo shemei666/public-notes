@@ -501,13 +501,13 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > $$ \langle P_K(\vec{x}_n) - P_K(\vec{r}) + \lambda(\vec{x}_n - P_K(\vec{x}_n)), P_K(\vec{x}_n) - P_K(\vec{r}) \rangle \le 0 $$
 > $$ \| P_K(\vec{x}_n) - P_K(\vec{r}) \|^2 + \lambda \langle \vec{x}_n - P_K(\vec{x}_n), P_K(\vec{x}_n) - P_K(\vec{r}) \rangle \le 0 $$
 > $$ \| P_K(\vec{x}_n) - P_K(\vec{r}) \|^2 - \lambda \langle \vec{x}_n - P_K(\vec{x}_n), P_K(\vec{r}) - P_K(\vec{x}_n) \rangle \le 0 $$
-> From (1), the term in the angle brackets is $\le 0$, so the second term is $\ge 0$. Since the first term (squared norm) is also $\ge 0$, their sum can only be $\le 0$ if both are zero.
-> Thus $\| P_K(\vec{x}_n) - P_K(\vec{r}) \|^2 = 0$, implying $P_K(\vec{r}) = P_K(\vec{x}_n)$. In particular $P_K(\vec{y}_n) = P_K(\vec{x}_n)$.
+> From (1), we have that both terms are non-negative, their sum can only be $\le 0$ if both are zero.
+> Thus $\| P_K(\vec{x}_n) - P_K(\vec{r}) \|^2 = 0$, implying $P_K(\vec{r}) = P_K(\vec{x}_n)$. In particular $P_K(\vec{y}_n) = P_K(\vec{x}_n)\quad \blacksquare$
 >
 > Since $S$ is compact, $(\vec{y}_n)$ has a convergent subsequence $\vec{y}_{n_k} \to \vec{y} \in S$. By continuity of $P_K$:
 > $$ P_K(\vec{y}) = \lim_{k \to \infty} P_K(\vec{y}_{n_k}) = \lim_{k \to \infty} P_K(\vec{x}_{n_k}) $$
 > Since $\vec{x}_{n} \to \vec{v}$ and $\vec{v} \in \partial K \subseteq K$, we have $P_K(\vec{x}_{n}) \to \vec{v}$.
-> Thus $P_K(\vec{y}) = \vec{v}$, implying $\vec{v} \in P_K(S)$. 
+> Thus $P_K(\vec{y}) = \vec{v}$, implying $\vec{v} \in P_K(S)\quad \blacksquare$
 
 
 > [!TIP] Corollary
