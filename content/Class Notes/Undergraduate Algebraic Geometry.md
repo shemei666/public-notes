@@ -1,6 +1,9 @@
 ---
-publish: true
-tags: [math, algebraic-geometry, notes]
+publish: false
+tags:
+  - math
+  - algebraic-geometry
+  - notes
 ---
 # Undergraduate Algebraic Geometry
 
