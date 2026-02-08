@@ -17,6 +17,8 @@ export const sharedPageComponents: SharedLayout = {
         category: 'General',
         // from data-category-id
         categoryId: 'DIC_kwDOPeBj_c4C2Cx5',
+        lightTheme: 'light',
+        darkTheme: 'dark',
         // from data-lang
         lang: 'en'
       }
