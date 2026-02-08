@@ -390,7 +390,7 @@ In particular, if $\gamma$ is closed then $\int_{\gamma} f = 0$.
 
 **Corollary:** Let $\Omega \subseteq \mathbb{C}$ be a domain and let $f: \Omega \to \mathbb{C}$ be analytic with $f' \equiv 0$ on $\Omega$. Then $f \equiv \text{const}$ on $\Omega$.
 
-**Theorem:(Cauchy's Integral Formula)**$f:\gamma \to \mathbb{C}$ analytic, let $a \in \Omega$, $\overline{D(a,R)} \subseteq \Omega$, where $\gamma$ is $a + R e^{2\pi it}$.
+**Theorem:(Cauchy's Integral Formula)**$f:\Omega  \to \mathbb{C}$ analytic, let $a \in \Omega$, $\overline{D(a,R)} \subseteq \Omega$, where $\gamma$ is $a + R e^{3\pi it}$.
 $$
 f(z) = \frac{1}{2\pi i} \int_{\gamma} \frac{f(w)}{w-z} dw \quad z \in D(a,R)
 $$
