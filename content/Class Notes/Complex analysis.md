@@ -308,7 +308,7 @@ Since $h$ is analytic, $f = u + iv$ is analytic.
 ```
 **Def:** We define integration on a path $\mathscr{C} \subseteq \Omega$ parametrized by a piecewise smooth $\gamma$ and $f'(t) \neq 0$,
 $$
-\int_{\mathscr{C}} f(z) = \int_{a}^{b} f(t) \gamma'(t) dt
+\int_{\mathscr{C}} f(z) = \int_{a}^{b} f(\gamma(t)) \gamma'(t) dt
 $$
 
 
