@@ -14,9 +14,9 @@ export const sharedPageComponents: SharedLayout = {
         // from data-repo-id
         repoId: 'R_kgDOPeBj_Q',
         // from data-category
-        category: 'Q&A',
+        category: 'General',
         // from data-category-id
-        categoryId: 'DIC_kwDOPeBj_c4C2Cx6',
+        categoryId: 'DIC_kwDOPeBj_c4C2Cx5',
         // from data-lang
         lang: 'en'
       }
