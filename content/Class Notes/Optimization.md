@@ -627,4 +627,4 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > 
 
 > [!TIP] Lemma
-> Each closed convex set $K \subseteq \mathbb{R}^{n}$ can be represented in the form $K = \overline{K} \oplus V$, where $V$ is a linear subspace of $R$
+> Each closed convex set $K \subseteq \mathbb{R}^{n}$ can be represented in the form $K = \overline{K} \oplus V$, where $V$ is a linear subspace of $\mathbb{R}^{n}$ and $K$ is a line-free closed convex set in a complementary subspace to $V$
