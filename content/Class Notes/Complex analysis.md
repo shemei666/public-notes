@@ -533,7 +533,9 @@ for all $z$ in that neighborhood. This is equivalent to saying that $f(a) = f'(a
 
 **Proof:** 
 $(1)\implies (2)$ Trivial
-$(2) \implies (1)$ Consider $a \in \{ z \mid f(z)^{(n)} = 0, \forall n\geq 0 \}$, then we get the set is closed and open since at every point there is a 
+$(2) \implies (1)$ Consider $a \in \{ z \mid f(z)^{(n)} = 0, \forall n\geq 0 \}$, then we get the set is closed and open since at every point there is a power series converging.
+$(2) \implies (3)$ Trivial
+$(3) \implies (2)$ 
 
 
 
