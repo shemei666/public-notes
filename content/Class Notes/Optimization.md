@@ -622,4 +622,9 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > > 2. **Ray**: Let $R_{\vec{x}} = \{ \vec{x} + \lambda \vec{u} \mid \lambda \ge 0 \}$ be a ray starting at $\vec{x}$ in direction $\vec{u}$.
 > >    Then $\text{rec}(R_{\vec{x}}) = \{ \lambda \vec{u} \mid \lambda \ge 0 \}$ (The ray starting at the origin in direction $\vec{u}$). 
 
+> [!QUESTION] Exercise
+> The recession cone of a closed convex set is a convex cone
+> 
 
+> [!TIP] Lemma
+> Each closed convex set $K \subseteq \mathbb{R}^{n}$ can be represented in the form $K = \overline{K} \oplus V$, where $V$ is a linear subspace of $R$
