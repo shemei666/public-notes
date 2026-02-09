@@ -535,7 +535,13 @@ for all $z$ in that neighborhood. This is equivalent to saying that $f(a) = f'(a
 $(1)\implies (2)$ Trivial
 $(2) \implies (1)$ Consider $a \in \{ z \mid f(z)^{(n)} = 0, \forall n\geq 0 \}$, then we get the set is closed and open since at every point there is a power series converging.
 $(2) \implies (3)$ Trivial
-$(3) \implies (2)$ 
+$(3) \implies (2)$ Let $Z = \{ z \in \Omega : f(z)=0 \}$. Let $a$ be a limit point of $Z$ in $\Omega$. Since $f$ is continuous, $f(a)=0$.
+Suppose $(2)$ is false at $a$, i.e., not all derivatives vanish. Let $m$ be the smallest integer such that $f^{(m)}(a) \neq 0$. Since $f(a)=0$, we have $m \ge 1$.
+Then we can write $f(z) = (z-a)^m g(z)$ where $g$ is analytic in a neighborhood of $a$ and $g(a) \neq 0$.
+By continuity of $g$, there exists $\epsilon > 0$ such that $g(z) \neq 0$ for all $z \in D(a, \epsilon)$.
+Thus for $z \in D(a, \epsilon) \setminus \{a\}$, we have $f(z) = (z-a)^m g(z) \neq 0$.
+This implies $a$ is an isolated zero of $f$, which contradicts the assumption that $a$ is a limit point of $Z$.
+Therefore, we must have $f^{(n)}(a) = 0$ for all $n \ge 0$. $\quad \blacksquare$ 
 
 
 
