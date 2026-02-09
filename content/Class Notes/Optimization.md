@@ -618,3 +618,6 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > Let $K\subseteq \mathbb{R}^{n}$  be a closed convex set $rec(K) = \{  u \in \mathbb{R}^{n}\mid K + u \subseteq K \}$ 
 
 
+
+---
+
