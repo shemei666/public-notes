@@ -607,4 +607,4 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 
 > [!NOTE]- Proof
 > WLOG Assume $aff(K) = \mathbb{R}^{n}$
-> $K = int(K) \cup \partial K \subseteq int(K)$
+> $K = int(K) \cup \partial K \subseteq int(K) \cup \overline{conv(\partial K)} su$
