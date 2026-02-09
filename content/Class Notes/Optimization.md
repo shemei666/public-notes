@@ -600,3 +600,5 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
  > There is a linear functional $\rho$ such that $\rho(\vec{x}) \le b$ for  all$\vec{x} \in A-B$.
  > $0 = \rho(\vec{0}) \ge b$
 
+
+---
