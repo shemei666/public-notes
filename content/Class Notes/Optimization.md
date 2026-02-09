@@ -610,3 +610,9 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > WLOG Assume $aff(K) = \mathbb{R}^{n}$
 > $K = int(K) \cup \partial K \subseteq int(K) \cup \overline{conv(\partial K)} \subseteq K$
 
+
+> [!INFO] Definition: 
+> A set $A \subseteq  \mathbb{R}^{n}$ is said to be line-free if A contains no affine lines, In particular it does not contain a non-trivial affine set. 
+
+> [!INFO] Definition: Recession Cone 
+> Let $K\subseteq \mathbb{R}^{n}$  be a closed convex set $rec(K) = \{  u \in \mathbb{R}^{n}\mid K + u \subseteq K \}$ 
