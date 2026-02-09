@@ -633,3 +633,6 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > [!NOTE]- Proof
 > $V := rec(K) \cap (- rec(K))$,  linear subspace of $\mathbb{R}^{n}$ containing all vector that are parallel to some line in $K$. Let $U$ be a complementary subspace of $V$ (passing through $K$)
 
+
+
+
