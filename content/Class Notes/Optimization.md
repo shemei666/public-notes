@@ -616,8 +616,10 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 
 > [!INFO] Definition: Recession Cone 
 > Let $K\subseteq \mathbb{R}^{n}$  be a closed convex set $rec(K) = \{  u \in \mathbb{R}^{n}\mid K + u \subseteq K \}$ 
+>
+> > [!EXAMPLE] Examples
+> > 1. **Bounded Set**: Let $D$ be a disk (or any compact set). Then $\text{rec}(D) = \{\vec{0}\}$.
+> > 2. **Ray**: Let $R_{\vec{x}} = \{ \vec{x} + \lambda \vec{u} \mid \lambda \ge 0 \}$ be a ray starting at $\vec{x}$ in direction $\vec{u}$.
+> >    Then $\text{rec}(R_{\vec{x}}) = \{ \lambda \vec{u} \mid \lambda \ge 0 \}$ (The ray starting at the origin in direction $\vec{u}$). 
 
-
-
----
 
