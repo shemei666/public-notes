@@ -630,4 +630,5 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > Each closed convex set $K \subseteq \mathbb{R}^{n}$ can be represented in the form $K = \overline{K} \oplus V$, where $V$ is a linear subspace of $\mathbb{R}^{n}$ and $K$ is a line-free closed convex set in a complementary subspace to $V$
 
 > [!NOTE]- Proof
-> $V := rec(K) \cap (- rec(K))$,  linear subspace of $\mathbb{R}^{n}$ containing all vector that are parallel to some line in $K$.
+> $V := rec(K) \cap (- rec(K))$,  linear subspace of $\mathbb{R}^{n}$ containing all vector that are parallel to some line in $K$. 
+
