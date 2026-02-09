@@ -604,7 +604,7 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 
 ---
 > [!TIP] Lemma
-> If $K sub- \mathbb{R}^{n}$ is closed  convex set with $K\neq conv(relbd K)$ then $K$ is either an affine set or half space in an affine space.
+> If $K \subseteq \mathbb{R}^{n}$ is closed  convex set with $K\neq conv(relbd K)$ then $K$ is either an affine set or half space in an affine space.
 
 > [!NOTE]- Proof
 > WLOG Assume $aff(K) = \mathbb{R}^{n}$
