@@ -583,3 +583,6 @@ Recommended exercises: $4.7$
 
 > [!TIP] Lemma
 > $A \subseteq \mathbb{R}^{n}$ compact. Pick $c \in \mathbb{R}$ $\mathbb{R}^{n}=\mathbb{R} \times \mathbb{R}^{n-1}$. If $U \subseteq \mathbb{R}^{n-1}$ is an open set containing the slice $A \cap V_{c}$ for some fixed $c \in \mathbb{R}$, then $\exists$ an open nbd $I$ of $c \in \mathbb{R}$ such that $I \times U$ contains $A \cap V_{I}$. (nearby translates of $U$ contain nearby slices)
+
+> [!NOTE]- Proof
+> 
