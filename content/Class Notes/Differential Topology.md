@@ -580,3 +580,6 @@ Recommended exercises: $4.7$
 > Fix $\delta > 0$. Among all $S_i = [c_i, d_i]$ containing $a$, pick $i$ having largest $d_i$. Call it $S_1$. Chop off $S_1$ on the left so that $S_1' = (c_1', d_1)$ has $c_1' \in (a-\delta, a)$. Now we have covered $[a, d_1]$.
 > Proceed in a similar way rightward for $[d_1, b]$.
 > In the end, choose $\delta$ such that excess length is within $b-a$.
+
+> [!TIP] Lemma
+> $A \subseteq \mathbb{R}^{n}$ compact. Pick $c \in \mathbb{R}^{k}$ $\mathbb{R}^{n}=\mathbb{R} \times \mathbb{R}^{n-1}$. If $U \subseteq \mathbb{R}^{n-1}$ is an open set containing the slice $A \cap V_{c}$ for some fixed $c \in \mathbb{R}$, then $\exists$ an open nbd $I$ of $c \in \mathbb{R}$ 
