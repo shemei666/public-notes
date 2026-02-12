@@ -666,7 +666,32 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 >
 > **Induction Step**: Assume true for $\dim(K) < n$.
 > Let $\dim(K) = n$.
-> ... (Proceed by induction)
+> We want to show $K \subseteq \text{conv}(\text{ext}(K) \cup \text{extr}(K))$.
+> [WLOG $K$ has non-empty interior]
+>
+> Let $\vec{v} \in K$.
+> If $\vec{v} \in \text{int}(K)$, take any line through $\vec{v}$. It intersects $\partial K$ at two points (since $K$ is line-free).
+> Thus $\vec{v}$ is a convex combination of points in $\partial K$.
+> So it suffices to show $\partial K \subseteq \text{conv}(\text{ext}(K) \cup \text{extr}(K))$.
+>
+> Let $\vec{x} \in \partial K$. By the Supporting Hyperplane Theorem, there exists a supporting hyperplane $H$ of $K$ containing $\vec{x}$.
+> Consider $K \cap H$.
+> $H$ is a supporting hyperplane of $K$.
+> $K \cap H$ is a face of $K$ (and a line-free closed convex set).
+> $\dim(K \cap H) < n$.
+>
+> By induction hypothesis:
+> $$ K \cap H = \text{conv}(\text{ext}(K \cap H) \cup \text{extr}(K \cap H)) $$
+> By the Lemma, $\text{ext}(K \cap H) \subseteq \text{ext}(K)$ and $\text{extr}(K \cap H) \subseteq \text{extr}(K)$.
+> Thus:
+> $$ K \cap H \subseteq \text{conv}(\text{ext}(K) \cup \text{extr}(K)) $$
+> Since this holds for any $\vec{x} \in \partial K$ and any supporting hyperplane $H$ at $\vec{x}$, we have:
+> $$ \partial K \subseteq \text{conv}(\text{ext}(K) \cup \text{extr}(K)) $$
+>
+> Now, since $K = \text{conv}(\partial K)$ (for line-free closed convex sets), we have:
+> $$ K \subseteq \text{conv}(\text{ext}(K) \cup \text{extr}(K)) $$
+> The reverse inclusion is trivial. $\blacksquare$
+
 
 
 
