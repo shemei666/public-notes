@@ -585,4 +585,17 @@ Recommended exercises: $4.7$
 > $A \subseteq \mathbb{R}^{n}$ compact. Pick $c \in \mathbb{R}$ $\mathbb{R}^{n}=\mathbb{R} \times \mathbb{R}^{n-1}$. If $U \subseteq \mathbb{R}^{n-1}$ is an open set containing the slice $A \cap V_{c}$ for some fixed $c \in \mathbb{R}$, then $\exists$ an open nbd $I$ of $c \in \mathbb{R}$ such that $I \times U$ contains $A \cap V_{I}$. (nearby translates of $U$ contain nearby slices)
 
 > [!NOTE]- Proof
+
+
+---
+#todo 
+
+---
+
+> [!TIP] Lemma
+> $f(C_{k}\setminus C_{k+1})$ has measure $0$ for $k\geq{1}$
+
+> [!NOTE]- Proof
+> Pick $q \in C_{k}\setminus C_{k+1}$. Then $\exists$ a partial $\rho$ of order $k$ such that one its partials, say $\frac{\partial \rho }{\partial x_{i}}$ does not vanish at $q$. Here $\rho$ vanishes on all of $C_{k}$. Now we define $h:U \to \mathbb{R}^{n}$ by $h(x_{1},\dots,x_{n}) = (\rho,x_{2},\dots,x_{n})$. Then as in lemma 1, $h$ is a local diffeomorphism near q, i.e $\exists V \subseteq U$ open nbd of q such that $V \cong V'=h(V)$
 > 
+
