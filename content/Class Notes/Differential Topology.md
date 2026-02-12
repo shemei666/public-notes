@@ -597,5 +597,19 @@ Recommended exercises: $4.7$
 
 > [!NOTE]- Proof
 > Pick $q \in C_{k}\setminus C_{k+1}$. Then $\exists$ a partial $\rho$ of order $k$ such that one its partials, say $\frac{\partial \rho }{\partial x_{i}}$ does not vanish at $q$. Here $\rho$ vanishes on all of $C_{k}$. Now we define $h:U \to \mathbb{R}^{n}$ by $h(x_{1},\dots,x_{n}) = (\rho,x_{2},\dots,x_{n})$. Then as in lemma 1, $h$ is a local diffeomorphism near q, i.e $\exists V \subseteq U$ open nbd of q such that $V \cong V'=h(V)$
-> 
+>
+>```tikz
+\usepackage{tikz-cd}
+\usepackage{amsmath,amssymb}
+\begin{document}
+\begin{tikzcd}
+V \arrow[rr, "f"] \arrow[dr, "h", swap] & & \mathbb{R}^p \\
+& V' \arrow[ur, "g", dashed, swap]
+\end{tikzcd}
+\end{document}
+>```
+>
+> We'll see later that $h$ sends $C^k(f|_V)$ to $C^k(g)$.
+> Also $h$ maps $C^k(f|_V)$ inside $V' \cap (\{0\} \times \mathbb{R}^{n-1})$ in $\mathbb{R}^n$.
+> Now consider the function $\bar{g} = g(0, \cdot, \dots, \cdot)$ (i.e., put the first coordinate as 0)
 
