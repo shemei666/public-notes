@@ -653,6 +653,31 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > Each line-free closed convex set $K \subseteq \mathbb{R}^n$ is the convex hull of its extreme points and extreme rays.
 
 
+### Lemma: Face of Intersection
+
+> [!TIP] Lemma
+> Let $H$ be a supporting hyperplane of $K$.
+> Every face of $H \cap K$ is a face of $K$.
+
+> [!NOTE]- Proof
+> Let $F$ be a face of $H \cap K$. We want to show $F$ is a face of $K$.
+> Let $\vec{x}, \vec{y} \in K$ and assume $(\vec{x}, \vec{y}) \cap F \neq \emptyset$.
+> Let $\vec{z} \in (\vec{x}, \vec{y}) \cap F$.
+> Since $F \subseteq H \cap K \subseteq H$, we have $\vec{z} \in H$.
+>
+> Let $H = \{ \vec{v} \mid \rho(\vec{v}) = c \}$ such that $K \subseteq \{ \vec{v} \mid \rho(\vec{v}) \le c \}$.
+> Since $\vec{x}, \vec{y} \in K$, we have $\rho(\vec{x}) \le c$ and $\rho(\vec{y}) \le c$.
+> Also $\vec{z} \in (\vec{x}, \vec{y})$, so $\vec{z} = \lambda \vec{x} + (1-\lambda) \vec{y}$ for some $\lambda \in (0,1)$.
+> Thus:
+> $$ \rho(\vec{z}) = \lambda \rho(\vec{x}) + (1-\lambda) \rho(\vec{y}) = c $$
+> Since $\rho(\vec{x}) \le c$, $\rho(\vec{y}) \le c$, and their strictly convex combination equals $c$, it must be that $\rho(\vec{x}) = c$ and $\rho(\vec{y}) = c$.
+>
+> Therefore, $\vec{x}, \vec{y} \in H$.
+> Since $\vec{x}, \vec{y} \in K$, we have $\vec{x}, \vec{y} \in H \cap K$.
+> Now, since $F$ is a face of $H \cap K$ and $\vec{z} \in (\vec{x}, \vec{y}) \cap F$:
+> By definition of a face, $\vec{x}, \vec{y} \in F$.
+> Thus $F$ is a face of $K$. $\blacksquare$
+
 
 
 
