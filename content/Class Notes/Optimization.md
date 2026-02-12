@@ -652,7 +652,22 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > [!TIP] Theorem: Representation of Line-Free Sets
 > Each line-free closed convex set $K \subseteq \mathbb{R}^n$ is the convex hull of its extreme points and extreme rays.
 
+> [!TIP] Lemma
+> Let $H$ be a supporting hyperplane of $K$.
+> Every face of $H \cap K$ is a face of $K$.
+
 > [!NOTE]- Proof
+> $F$ - face of $H \cap K$. To Prove: $F$ is a face of $K$.
+> $\vec{x}, \vec{y} \in K$ and $(\vec{x}, \vec{y}) \cap F \neq \emptyset$.
+> $(\implies \text{To show } \vec{x}, \vec{y} \in F)$
+>
+> $(\vec{x}, \vec{y}) \cap H \neq \emptyset$
+> [ $\rho(\vec{z}) = c$ ]
+> $\implies \vec{x} \in H, \vec{y} \in H \implies \vec{x} \in H \cap K, \vec{y} \in H \cap K$
+> $\implies \vec{x}, \vec{y} \in F$. (Since $F$ is a face of $H \cap K$)
+> $\blacksquare$
+
+> [!NOTE]- Proof of Representation Theorem
 > **Case 1**: $\dim(K) = 1$.
 > Since $K$ is line-free, $K$ cannot be a line.
 > Thus $K$ is either a **line segment** (bounded) or a **ray** (unbounded).
@@ -691,25 +706,6 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > Now, since $K = \text{conv}(\partial K)$ (for line-free closed convex sets), we have:
 > $$ K \subseteq \text{conv}(\text{ext}(K) \cup \text{extr}(K)) $$
 > The reverse inclusion is trivial. $\blacksquare$
-
-
-
-
-### Lemma: Face of Intersection
-
-> [!TIP] Lemma
-> Let $H$ be a supporting hyperplane of $K$.
-> Every face of $H \cap K$ is a face of $K$.
-
-> [!NOTE]- Proof
-> $F$ - face of $H \cap K$. To Prove: $F$ is a face of $K$.
-> $\vec{x}, \vec{y} \in K$ and $(\vec{x}, \vec{y}) \cap F \neq \emptyset$.
-> $(\implies \text{To show } \vec{x}, \vec{y} \in F)$
->
-> $(\vec{x}, \vec{y}) \cap H \neq \emptyset$
-> [ $\rho(\vec{z}) = c$ ]
-> $\implies \vec{x} \in H, \vec{y} \in H \implies \vec{x} \in H \cap K, \vec{y} \in H \cap K$
-> $\implies \vec{x}, \vec{y} \in F$. (Since $F$ is a face of $H \cap K$)
 
 
 > [!QUESTION] Exercise
