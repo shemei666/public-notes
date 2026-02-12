@@ -652,6 +652,23 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > [!TIP] Theorem: Representation of Line-Free Sets
 > Each line-free closed convex set $K \subseteq \mathbb{R}^n$ is the convex hull of its extreme points and extreme rays.
 
+> [!NOTE]- Proof
+> **Case 1**: $\dim(K) = 1$.
+> Since $K$ is line-free, $K$ cannot be a line.
+> Thus $K$ is either a **line segment** (bounded) or a **ray** (unbounded).
+>
+> | $\inf K$ | $\sup K$ | Type | Representation |
+> | :--- | :--- | :--- | :--- |
+> | $> -\infty$ | $< \infty$ | Line Segment $[a,b]$ | $\text{conv}(\{a,b\})$ |
+> | $> -\infty$ | $= \infty$ | Ray $[a, \infty)$ | $\text{conv}(\{a\} \cup \vec{r})$ |
+> | $= -\infty$ | $< \infty$ | Ray $(-\infty, b]$ | $\text{conv}(\{b\} \cup \vec{r})$ |
+> | $= -\infty$ | $= \infty$ | Line $(-\infty, \infty)$ | (Not line-free) |
+>
+> **Induction Step**: Assume true for $\dim(K) < n$.
+> Let $\dim(K) = n$.
+> ... (Proceed by induction)
+
+
 
 ### Lemma: Face of Intersection
 
@@ -670,6 +687,8 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > $\implies \vec{x}, \vec{y} \in F$. (Since $F$ is a face of $H \cap K$)
 
 
+> [!QUESTION] Exercise
+> Prove or disprove $K\subseteq \mathbb{R}^{n}$ is a closed convex set with non-empty interior (unless affine or affine halfspace) $K= conv(\partial K)$
 
 
 
