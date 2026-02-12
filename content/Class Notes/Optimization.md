@@ -633,15 +633,13 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > [!NOTE]- Proof
 > $V := rec(K) \cap (- rec(K))$,  linear subspace of $\mathbb{R}^{n}$ containing all vector that are parallel to some line in $K$. Let $U$ be a complementary subspace of $V$ (passing through $K$)
 
-## Faces
+## Extreme Points and Rays
 
 > [!INFO] Definition: Face
 > Let $K \subseteq \mathbb{R}^n$ be a convex set.
 > A **face** of $K$ is a convex subset $F \subseteq K$ such that each line segment $[\vec{x}, \vec{y}] \subseteq K$ with $(\vec{x}, \vec{y}) \cap F \neq \emptyset$ must be contained in $F$.
 >
 > Equivalently, for $\vec{x}, \vec{y} \in K$, if $\frac{\vec{x}+\vec{y}}{2} \in F$, then $\vec{x}, \vec{y} \in F$.
-
-## Extreme Points and Rays
 
 > [!INFO] Definition: Extreme Point
 > If $\{\vec{z}\}$ is a face of $K$, then $\vec{z}$ is called an **extreme point**.
