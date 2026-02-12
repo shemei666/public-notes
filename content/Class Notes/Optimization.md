@@ -641,6 +641,20 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 >
 > Equivalently, for $\vec{x}, \vec{y} \in K$, if $\frac{\vec{x}+\vec{y}}{2} \in F$, then $\vec{x}, \vec{y} \in F$.
 
+## Extreme Points and Rays
+
+> [!INFO] Definition: Extreme Point
+> If $\{\vec{z}\}$ is a face of $K$, then $\vec{z}$ is called an **extreme point**.
+> The set of all extreme points of $K$ is denoted by $\text{ext}(K)$.
+
+> [!INFO] Definition: Extreme Ray
+> An **extreme ray** of $K$ is a ray in $K$ that is a face of $K$.
+> $\text{extr}(K)$ denotes the set of all extreme rays of $K$.
+
+> [!TIP] Theorem: Representation of Line-Free Sets
+> Each line-free closed convex set $K \subseteq \mathbb{R}^n$ is the convex hull of its extreme points and extreme rays.
+
+
 
 
 
