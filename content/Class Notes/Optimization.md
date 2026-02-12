@@ -707,6 +707,9 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > $$ K \subseteq \text{conv}(\text{ext}(K) \cup \text{extr}(K)) $$
 > The reverse inclusion is trivial. $\blacksquare$
 
+> [!TIP] Corollary: Minkowski's Theorem
+> Each nonempty compact convex set $K \subseteq \mathbb{R}^n$ is the convex hull of its extreme points.
+
 
 > [!QUESTION] Exercise
 > Prove or disprove $K\subseteq \mathbb{R}^{n}$ is a closed convex set with non-empty interior (unless affine or affine halfspace) $K= conv(\partial K)$
