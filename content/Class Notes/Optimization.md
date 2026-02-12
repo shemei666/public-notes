@@ -641,9 +641,6 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 >
 > Equivalently, for $\vec{x}, \vec{y} \in K$, if $\frac{\vec{x}+\vec{y}}{2} \in F$, then $\vec{x}, \vec{y} \in F$.
 
-> [!EXAMPLE] Geometric Intuition
-> Faces are precisely those convex subsets removing which leaves the remainder convex.
-
 
 
 
