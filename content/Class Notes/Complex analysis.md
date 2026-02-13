@@ -15,8 +15,6 @@ exists.
 A function is **holomorphic on an open set $U$** if it is differentiable at every point in $U$. Functions that are holomorphic on the entire complex plane $\mathbb{C}$ are called **entire functions**.
 
 
-
-
 > [!TIP] Proposition
 > If $f$ and $g$ are holomorphic in $\Omega$, then:
 > 1. $f + g$ is holomorphic in $\Omega$ and $(f + g)' = f' + g'$.
