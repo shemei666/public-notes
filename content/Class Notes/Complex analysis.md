@@ -167,7 +167,7 @@ P(z) = \sum_{n\geq{1}}^{} \frac{P^{n}(w_{0})}{n!}(z-w_{0})^{n}
 $$
 where $z \in D_{w_{0}}(R')$, $R' = R - \lvert z_{0} - w_{0} \rvert$
 
-**Proof:**
+**Proof:** 
 
 ---
 LOG + CR
