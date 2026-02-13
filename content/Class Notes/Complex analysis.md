@@ -246,7 +246,9 @@ $$
 $$
 ![[Pasted image 20260214020106.png]]
 
-
+## Branches of Logarithm
+![[IMG_20260214_020405.jpg]]
+![[IMG_20260214_020521.jpg]]
 
 ## Harmonic Functions
 
