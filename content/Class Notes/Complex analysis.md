@@ -615,4 +615,6 @@ Max mod principle
 > Let $\Omega$ be simply connected and let $f: \Omega \to \mathbb{C}$ be analytic.
 > Then $f$ has a primitive in $\Omega$, i.e., there exists $F$ analytic in $\Omega$ such that $F' = f$ in $\Omega$.
 
+> [!NOTE]- Proof
+> **Exercise**
 
