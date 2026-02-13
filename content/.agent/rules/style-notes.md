@@ -1,77 +1,104 @@
 ---
 trigger: manual
+description: Style guide for creating notes, based on Optimization.md and Templates.
 ---
 
 # Style Guide for Notes
 
-This document outlines the style conventions for markdown notes to ensuring consistency and professional formatting.
+This guide outlines the formatting and structural conventions for creating notes, based on existing class notes (e.g., `Optimization.md`) and templates.
 
-## Callouts (Obsidian Style)
+## 1. Frontmatter
 
-Use callouts to highlight definitions, theorems, and examples.
+All notes should begin with the following YAML frontmatter:
+
+```yaml
+---
+publish: true
+---
+```
+
+## 2. Headings & Structure
+
+*   **Title**: Use a single H1 (`#`) for the document title.
+*   **Sections**: Use H2 (`##`) for major sections.
+*   **Subsections**: Use H3 (`###`) and H4 (`####`) for nested content.
+*   **Lists**: Use numbered lists for sequential items and bullet points for unordered lists.
+
+## 3. Callouts (Obsidian/GitHub Style)
+
+Use specific callout types for mathematical definitions, theorems, and proofs.
 
 ### Definitions
-Use the `INFO` callout type.
+Use the `INFO` callout.
 ```markdown
-> [!INFO] Definition: Term
-> Definition text here.
+> [!INFO] Definition: Term Name
+> Definition text goes here...
 ```
 
-### Theorems and Lemmas
-Use the `TIP` callout type.
+### Theorems, Lemmas, Corollaries
+Use the `TIP` callout.
 ```markdown
-> [!TIP] Theorem: Name (Optional)
-> Statement of the theorem.
+> [!TIP] Theorem: Theorem Name
+> Theorem statement...
 ```
+*(Also applies to Lemmas and Corollaries)*
 
 ### Proofs
-Use the `NOTE` callout type. If distinct from the theorem, consider making it collapsible (`-`).
+Use the `NOTE` callout, commonly collapsed (`-`).
 ```markdown
 > [!NOTE]- Proof
-> Step-by-step derivation.
+> Proof steps go here...
+> $\blacksquare$
 ```
 
 ### Examples
-Use the `EXAMPLE` callout type.
+Use the `EXAMPLE` callout.
 ```markdown
-> [!EXAMPLE] Title
-> Example details.
+> [!EXAMPLE] Example Title
+> Example details...
 ```
 
-### Questions/Exercises
-Use `QUESTION` or specific custom callouts if available (`c` for custom color if configured).
+### Exercises / Questions
+Use the `QUESTION` callout (or `c` if specifically requested, but `QUESTION` is the template standard).
 ```markdown
-> [!QUESTION]
-> Question text?
+> [!QUESTION] Exercise
+> Exercise text...
 ```
 
-## Structure
+## 4. Mathematics (LaTeX)
 
-- **Title**: The file should start with frontmatter followed by an H1 title.
-- **Headers**:
-  - H2 (`##`) for main sections.
-  - H3 (`###`) for subsections.
-  - Avoid using H4 unless absolutely necessary deep nesting is required.
+*   **Inline Math**: Use single dollar signs, e.g., `$f(x) = x^2$`.
+*   **Block Math**: Use double dollar signs, e.g., `$$ f(x) = \int x dx $$`.
+*   **Environments**:
+    *   Use `pmatrix` for matrices.
+    *   Use `align*` or `gather` for multi-line equations inside `$$` blocks.
+*   **Notation**:
+    *   Vectors: `\vec{x}`
+    *   Inner Products: `\langle \vec{x}, \vec{y} \rangle`
+    *   Sets: `\mathbb{R}^n`, `\mathcal{P}`
+*   **Package Check**: **ALWAYS** check if symbols require `amsmath`, `amssymb`, or other packages. Ensure these are assumed or included if the environment requires (though Obsidian usually handles standard LaTeX).
 
-## Mathematical Notation (LaTeX)
+## 5. Figures (TikZ)
 
-- **Vectors**: Use `\vec{v}` (e.g., $\vec{v}$) rather than `\mathbf{v}` or `\boldsymbol{v}`.
-- **Norms**: Use `\lVert \vec{x} \rVert` for norms.
-- **Inner Products**: Use `\langle \vec{x}, \vec{y} \rangle`.
-- **Number Sets**: Use `\mathbb{R}`, `\mathbb{N}`, etc.
-- **Text in Math**: Use `\text{...}` for non-math text within equations.
-- **Display Math**: Use `$$ ... $$` on new lines.
+When generating TikZ figures, strictly follow these rules:
 
-## Diagrams
+1.  **Wrapper**:
+    ```latex
+    \begin{document}
+    \begin{tikzpicture}[>=stealth, scale=1]
+      % TikZ code
+    \end{tikzpicture}
+    \end{document}
+    ```
+2.  **Scale**: **ALWAYS** keep `scale` at **1.0 or below**. Never use a scale > 1.0.
+3.  **Colors**:
+    *   Do **NOT** use similar colors for filling shapes and for the text overlaying them. Ensure high contrast.
+    *   Standard fill: `blue!10`, `green!20`, `gray!10`.
+    *   Standard draw/text: `blue!80!black`, `red!70!black`, `black`.
 
-- Use **TikZ** within markdown code blocks for diagrams.
-- Format:
-  ```markdown
-  ```tikz
-  \begin{document}
-  \begin{tikzpicture}
-      ...
-  \end{tikzpicture}
-  \end{document}
-  ```
-  ```
+## 6. General Formatting
+
+*   **Bold**: Use `**text**` for emphasis on defined terms or key concepts.
+*   **Italics**: Use `*text*` sparingly for emphasis.
+*   **Links**: Use `[[wikilinks]]` for internal references.
+*   **Images**: Use `![[image.png]]` for embeddings.

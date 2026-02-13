@@ -14,6 +14,8 @@ exists.
 
 A function is **holomorphic on an open set $U$** if it is differentiable at every point in $U$. Functions that are holomorphic on the entire complex plane $\mathbb{C}$ are called **entire functions**.
 
+
+
 ### Examples of Holomorphic Functions
 
 1.  **Polynomials**: 
@@ -92,9 +94,11 @@ $\infty \geq R \geq 0$ is said to be radius of convergence of $P$ if $\sum_{n\ge
 
 1. $\sum_{n\geq 0 }^{} a_{n}$ converges if $\sum_{n\geq}^{} \lvert a_{n} \rvert$ converges.
 2. $f_{n}: \Omega \subseteq \mathbb{C} \to \mathbb{C}$ for $n\geq{1}$ then $S_{N}= \sum_{n=1}^{N} f_{n}$  Let $\lvert f_{n}(z) \rvert \leq M_{n} \forall z \in \Omega$ and $\sum_{n\geq}^{M_{n}}$ converges then $S_{N}$ converges absolutely and uniformly.
-3. $$
+3. 
+$$
 \frac{1}{R} = \lim \sup \lvert a_{n} \rvert ^{1/n}
-$$ where $R$ is the radius of convergence
+$$
+where $R$ is the radius of convergence
 **Cauchy-Hadamard Theorem**:
    For the power series $\sum a_n (z-z_0)^n$, let $\alpha = \limsup_{n \to \infty} |a_n|^{1/n}$. Then the radius of convergence is $R = 1/\alpha$ (with conventions $1/0 = \infty, 1/\infty = 0$).
    Since $\limsup \lvert a_{n} \rvert ^{1/n} = \frac{1}{R}$ then $\limsup \lvert a_{n}(z-z_{0})^{n} \rvert ^{1/n} =  \frac{\lvert z-z_{0} \rvert}{R}$
@@ -108,7 +112,7 @@ $$ where $R$ is the radius of convergence
 $\sum_{n\geq 0}^{} z^{n} = \frac{1}{1-z}$ $R=1$
 $\sum_{n\geq{1}}^{} \frac{z^{n}}{n}$  $R=1$ 
 $\sum_{n\geq 1}^{} \frac{z^{n}}{n!}$ $R = \infty$
-4. **Abel's Test**:
+1. **Abel's Test**:
    If the series $\sum_{n=0}^\infty a_n$ converges and $\{b_n\}$ is a bounded, monotonic sequence of real numbers, then the series $\sum_{n=0}^\infty a_n b_n$ converges.
 
 ## Differentiation of Power Series
