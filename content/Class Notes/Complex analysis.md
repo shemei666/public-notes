@@ -626,7 +626,7 @@ $$
 \frac{F(z) - F(z_{0})}{z - z_{0}} = 
 $$
 
-#todo 
+
 
 ## Winding Number / Index of a curve
 
