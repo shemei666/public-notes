@@ -543,6 +543,12 @@ Thus for $z \in D(a, \epsilon) \setminus \{a\}$, we have $f(z) = (z-a)^m g(z) \n
 This implies $a$ is an isolated zero of $f$, which contradicts the assumption that $a$ is a limit point of $Z$.
 Therefore, we must have $f^{(n)}(a) = 0$ for all $n \ge 0$. $\quad \blacksquare$ 
 
+---
+Max mod principle
+
+---
+## Homotopic versions of Cauchy's theorem
+
 
 
 
