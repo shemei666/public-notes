@@ -656,7 +656,7 @@ Max mod principle
 > Then $f$ has a primitive in $\Omega$, i.e., there exists $F$ analytic in $\Omega$ such that $F' = f$ in $\Omega$.
 
 > [!NOTE]- Proof
-> **Exercise**
+> 
 
 > [!TIP] Theorem: (Morera's Theorem)
 > Let $\Omega \subseteq \mathbb{C}$ be a domain and $f: \Omega\to \mathbb{C}$ continuous. Assume $\int_{T}f=0$ for all triangle $T$ in $\Omega$, then $f$ is analytic.
