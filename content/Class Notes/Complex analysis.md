@@ -169,9 +169,8 @@ where $z \in D_{w_{0}}(R')$, $R' = R - \lvert z_{0} - w_{0} \rvert$
 
 > [!NOTE]- Proof
 > We write $z - z_0 = (z - w_0) + (w_0 - z_0)$.
-> The radius $R' = R - |z_0 - w_0|$ represents the radius of the largest open disk centered at $w_0$ that is essentially contained within $D(z_0, R)$.
-> Since $z \in D(w_0, R')$, we have $|z - w_0| < R - |w_0 - z_0|$, which implies $|z - w_0| + |w_0 - z_0| < R$.
-> Thus, $z$ remains within the original radius of convergence where the series converges absolutely, allowing us to rearrange terms.
+> Since $z \in D(w_0, R')$, we have $|z - w_0| < R - |w_0 - z_0|$, so $|z - w_0| + |w_0 - z_0| < R$.
+> Thus, the series converges absolutely, and we can rearrange terms.
 > $$
 > \begin{align*}
 > P(z) &= \sum_{n=0}^\infty a_n (z - z_0)^n \\
