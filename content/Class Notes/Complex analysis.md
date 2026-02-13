@@ -605,4 +605,6 @@ Max mod principle
 > $$ \int_{\gamma} f(z) dz = 0 $$
 
 > [!TIP] Corollary
-> Let $\Omega \subseteq \mathbb{C}$ be a domain and let $\gamma$ be a closed curve in $\Omega$ such that $\gamma \sim 0$. Then $\int_{\gamma} f(z) dz = 0$.
+> Let $\Omega \subseteq \mathbb{C}$ be a simply connected domain and let $\gamma$ be a closed curve in $\Omega$. Then $\int_{\gamma} f(z) dz = 0$.
+
+### Simply connected domain
