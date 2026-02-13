@@ -547,9 +547,43 @@ Therefore, we must have $f^{(n)}(a) = 0$ for all $n \ge 0$. $\quad \blacksquare$
 Max mod principle
 
 ---
-## Homotopic versions of Cauchy's theorem
+## Homotopic versions of Cauchy's Theorem
 
+> [!INFO] Definition: Homotopy
+> Let $\gamma_1, \gamma_2 : [0,1] \to \Omega$ be two closed curves in a domain $\Omega \subseteq \mathbb{C}$. $\gamma_1$ is said to be **homotopic** to $\gamma_2$ in $\Omega$, denoted by $\gamma_1 \sim \gamma_2$, if there exists a continuous function $F: [0,1] \times [0,1] \to \Omega$ such that:
+> 1.  $F(s, 0) = \gamma_1(s)$ for all $s \in [0,1]$ (Initial curve)
+> 2.  $F(s, 1) = \gamma_2(s)$ for all $s \in [0,1]$ (Final curve)
+> 3.  $F(0, t) = F(1, t)$ for all $t \in [0,1]$ (Closed curves assumption)
+>
+> Intuitively, $F$ represents a continuous "deformation" of the curve $\gamma_1$ into $\gamma_2$ without leaving the domain $\Omega$. For each time $t \in [0,1]$, the curve defined by $\gamma_t(s) = F(s,t)$ is an intermediate curve in the deformation.
 
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
+    % Draw Domain Omega
+    \draw[thick, black] plot [smooth cycle, tension=0.7] coordinates {(-3,-2) (3,-2.5) (3.5,2) (-2.5,2.5) (-4,0)};
+    \node at (2.5, 1.5) {$\Omega$};
 
+    % Draw Gamma 1 (Outer curve)
+    \draw[thick, blue] plot [smooth cycle, tension=0.7] coordinates {(-1.5,-1) (1.5,-1.2) (2,1) (-1,1.5)};
+    \node[blue, left] at (-1.5, -0.5) {$\gamma_1$};
 
+    % Draw Gamma 2 (Inner curve)
+    \draw[thick, red] plot [smooth cycle, tension=0.7] coordinates {(-0.5,-0.3) (0.5,-0.4) (0.6,0.5) (-0.4,0.6)};
+    \node[red, right] at (0.6, 0.5) {$\gamma_2$};
+
+    % Draw intermediate curves (deformation)
+    \draw[dashed, gray!70] plot [smooth cycle, tension=0.7] coordinates {(-1.2,-0.8) (1.2,-0.9) (1.6,0.8) (-0.8,1.2)};
+    \draw[dashed, gray!70] plot [smooth cycle, tension=0.7] coordinates {(-0.9,-0.6) (0.9,-0.7) (1.2,0.7) (-0.6,0.9)};
+
+    % Arrow indicating deformation
+    \draw[->, black, thick] (-1.6, 1.0) -- (-0.5, 0.7);
+    \node at (-1.1, 1.1) {$F(s,t)$};
+
+    % Label for F(s,t) mapping
+    %\node[align=left] at (4,0) {deformation map:\\$F: [0,1] \times [0,1] \to \Omega$};
+
+\end{tikzpicture}
+\end{document}
+```
 
