@@ -197,9 +197,7 @@ where $z \in D_{w_{0}}(R')$, $R' = R - \lvert z_{0} - w_{0} \rvert$
 > Since this rearrangement is valid for all $z \in D(w_0, R')$, the radius of convergence of the new series is at least $R'$.
 > $\blacksquare$
 >
-> > [!NOTE] Remark on Radius of Convergence
-> > The radius of convergence of the new series is guaranteed to be at least $R - |z_0 - w_0|$.
-> > However, it is possible for the new series to have a larger radius of convergence if the function $f$ can be analytically continued beyond the original disk $D(z_0, R)$. The radius would be exactly the distance from $w_0$ to the nearest singularity of $f$.
+
 
 
 ## Complex Differential Operators
