@@ -196,7 +196,6 @@ where $z \in D_{w_{0}}(R')$, $R' = R - \lvert z_{0} - w_{0} \rvert$
 > Thus, $P(z) = \sum_{k=0}^\infty \frac{P^{(k)}(w_0)}{k!} (z - w_0)^k$.
 > Since this rearrangement is valid for all $z \in D(w_0, R')$, the radius of convergence of the new series is at least $R'$.
 > $\blacksquare$
->
 
 
 
