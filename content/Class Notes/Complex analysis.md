@@ -611,4 +611,8 @@ Max mod principle
 > [!INFO] Definition: Simply Connected Domain
 > A domain $\Omega \subseteq \mathbb{C}$ is said to be **simply connected** if any closed curve $\gamma$ in $\Omega$ is null-homotopic ($\gamma \sim 0$) in $\Omega$.
 
+> [!TIP] Theorem: Existence of Primitives
+> Let $\Omega$ be simply connected and let $f: \Omega \to \mathbb{C}$ be analytic.
+> Then $f$ has a primitive in $\Omega$, i.e., there exists $F$ analytic in $\Omega$ such that $F' = f$ in $\Omega$.
+
 
