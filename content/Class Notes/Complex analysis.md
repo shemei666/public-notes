@@ -194,6 +194,7 @@ where $z \in D_{w_{0}}(R')$, $R' = R - \lvert z_{0} - w_{0} \rvert$
 > Notice that $\binom{n}{k} = \frac{n!}{k!(n-k)!}$, so:
 > $$ c_k = \frac{1}{k!} \sum_{n=k}^\infty a_n \frac{n!}{(n-k)!} (w_0 - z_0)^{n-k} = \frac{P^{(k)}(w_0)}{k!} $$
 > Thus, $P(z) = \sum_{k=0}^\infty \frac{P^{(k)}(w_0)}{k!} (z - w_0)^k$.
+> Since this rearrangement is valid for all $z \in D(w_0, R')$, the radius of convergence of the new series is at least $R'$.
 > $\blacksquare$
 
 
@@ -274,7 +275,6 @@ $$ \implies u = \text{Re } h - C $$
 Set $v = \text{Im } h$. Then
 $$ u + i v = (\text{Re } h - C) + i \text{Im } h = h - C $$
 Since $h$ is analytic, $f = u + iv$ is analytic.
-
 
 
 **Def:** Let $u,v:\Omega\to  \mathbb{R}$  harmonic, then $f$ $\exists v:\Omega \to \mathbb{R}$ such that $u + iv$ is analytic on $\Omega$ then $v$ is called a harmonic conjugate.
