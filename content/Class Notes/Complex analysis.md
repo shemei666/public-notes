@@ -167,12 +167,35 @@ P(z) = \sum_{n\geq{1}}^{} \frac{P^{(n)}(w_{0})}{n!}(z-w_{0})^{n}
 $$
 where $z \in D_{w_{0}}(R')$, $R' = R - \lvert z_{0} - w_{0} \rvert$
 
-**Proof:** 
+> [!NOTE]- Proof
+> We write $z - z_0 = (z - w_0) + (w_0 - z_0)$.
+> Since $z \in D(w_0, R')$, we have $|z - w_0| < R - |w_0 - z_0|$, so $|z - w_0| + |w_0 - z_0| < R$.
+> Thus, the series converges absolutely, and we can rearrange terms.
+> $$
+> \begin{align*}
+> P(z) &= \sum_{n=0}^\infty a_n (z - z_0)^n \\
+> &= \sum_{n=0}^\infty a_n ((z - w_0) + (w_0 - z_0))^n \\
+> &= \sum_{n=0}^\infty a_n \sum_{k=0}^n \binom{n}{k} (z - w_0)^k (w_0 - z_0)^{n-k}
+> \end{align*}
+> $$
+> By absolute convergence, we can swap the order of summation:
+> $$
+> \begin{align*}
+> P(z) &= \sum_{k=0}^\infty (z - w_0)^k \sum_{n=k}^\infty a_n \binom{n}{k} (w_0 - z_0)^{n-k} \\
+> &= \sum_{k=0}^\infty c_k (z - w_0)^k
+> \end{align*}
+> $$
+> where $c_k = \sum_{n=k}^\infty a_n \binom{n}{k} (w_0 - z_0)^{n-k}$.
+>
+> Now consider the derivatives of $P(z) = \sum_{n=0}^\infty a_n (z-z_0)^n$.
+> $$ P^{(k)}(z) = \sum_{n=k}^\infty a_n n(n-1)\dots(n-k+1) (z-z_0)^{n-k} $$
+> At $z = w_0$:
+> $$ P^{(k)}(w_0) = \sum_{n=k}^\infty a_n \frac{n!}{(n-k)!} (w_0 - z_0)^{n-k} $$
+> Notice that $\binom{n}{k} = \frac{n!}{k!(n-k)!}$, so:
+> $$ c_k = \frac{1}{k!} \sum_{n=k}^\infty a_n \frac{n!}{(n-k)!} (w_0 - z_0)^{n-k} = \frac{P^{(k)}(w_0)}{k!} $$
+> Thus, $P(z) = \sum_{k=0}^\infty \frac{P^{(k)}(w_0)}{k!} (z - w_0)^k$.
+> $\blacksquare$
 
----
-LOG + CR
-
----
 
 We define 2 differential operators
 $$
