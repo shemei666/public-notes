@@ -555,7 +555,7 @@ Max mod principle
 > 2.  $F(s, 1) = \gamma_2(s)$ for all $s \in [0,1]$ (Final curve)
 > 3.  $F(0, t) = F(1, t)$ for all $t \in [0,1]$ (Closed curves assumption)
 >
-> Intuitively, $F$ represents a continuous "deformation" of the curve $\gamma_1$ into $\gamma_2$ without leaving the domain $\Omega$. For each time $t \in [0,1]$, the curve defined by $\gamma_t(s) = F(s,t)$ is an intermediate curve in the deformation.
+
 
 ```tikz
 \begin{document}
