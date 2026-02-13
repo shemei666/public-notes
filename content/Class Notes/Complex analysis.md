@@ -137,7 +137,7 @@ $\sum_{n\geq 1}^{} \frac{z^{n}}{n!}$ $R = \infty$
     \def\R{3}
     
     % Draw Disk D(z0, R)
-    \draw[dashed, fill=blue!5] (Z0) circle (\R);
+    \draw[dashed] (Z0) circle (\R);
     \node[blue] at (-2, 2) {$D(z_0, R)$};
     
     % Draw Center z0 (Blue)
