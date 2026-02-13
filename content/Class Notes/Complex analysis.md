@@ -108,20 +108,15 @@ $$
 \frac{1}{R} = \lim \sup \lvert a_{n} \rvert ^{1/n}
 $$
 where $R$ is the radius of convergence
-**Cauchy-Hadamard Theorem**:
-   For the power series $\sum a_n (z-z_0)^n$, let $\alpha = \limsup_{n \to \infty} |a_n|^{1/n}$. Then the radius of convergence is $R = 1/\alpha$ (with conventions $1/0 = \infty, 1/\infty = 0$).
-   Since $\limsup \lvert a_{n} \rvert ^{1/n} = \frac{1}{R}$ then $\limsup \lvert a_{n}(z-z_{0})^{n} \rvert ^{1/n} =  \frac{\lvert z-z_{0} \rvert}{R}$
-   
-   **Proof**:
-   Apply Root Test to $\sum |a_n (z-z_0)^n|$. Let $L = \limsup |a_n (z-z_0)^n|^{1/n} = |z-z_0|/R$.
-   *   If $|z-z_0| < R \implies L < 1$, series converges absolutely.
-   *   If $|z-z_0| > R \implies L > 1$, then $|a_n (z-z_0)^n| > 1$ for infinitely many $n$, so terms don't vanish. Series diverges.
+![[Pasted image 20260213193233.png]]
+![[Pasted image 20260213193245.png]]
+
 **Exercise:**  $R  = \lim_{ n \to \infty } \left\lvert  \frac{a_{n}}{a_{n+1}}  \right\rvert$ whenever it exists
 **Examples:**
 $\sum_{n\geq 0}^{} z^{n} = \frac{1}{1-z}$ $R=1$
 $\sum_{n\geq{1}}^{} \frac{z^{n}}{n}$  $R=1$ 
 $\sum_{n\geq 1}^{} \frac{z^{n}}{n!}$ $R = \infty$
-1. **Abel's Test**:
+4. **Abel's Test**:
    If the series $\sum_{n=0}^\infty a_n$ converges and $\{b_n\}$ is a bounded, monotonic sequence of real numbers, then the series $\sum_{n=0}^\infty a_n b_n$ converges.
 
 ## Differentiation of Power Series
