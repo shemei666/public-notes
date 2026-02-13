@@ -247,6 +247,7 @@ $$
 ![[Pasted image 20260214020106.png]]
 
 
+
 ## Harmonic Functions
 
 $$
