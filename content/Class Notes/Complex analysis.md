@@ -108,8 +108,24 @@ $$
 \frac{1}{R} = \lim \sup \lvert a_{n} \rvert ^{1/n}
 $$
 where $R$ is the radius of convergence
-![[Pasted image 20260213193233.png]]
-![[Pasted image 20260213193245.png]]
+
+> [!TIP] Theorem 2.5 (Cauchy-Hadamard)
+> Given a power series $\sum_{n=0}^\infty a_n z^n$, there exists $0 \le R \le \infty$ such that:
+> 1. If $|z| < R$, the series converges absolutely.
+> 2. If $|z| > R$, the series diverges.
+>
+> Moreover, using the convention $1/0 = \infty$ and $1/\infty = 0$, $R$ is given by:
+> $$ 1/R = \limsup_{n \to \infty} |a_n|^{1/n} $$
+
+> [!NOTE]- Proof
+> Let $L = 1/R$. Suppose $L \neq 0, \infty$.
+> If $|z| < R$, choose $\epsilon > 0$ so small that $(L+\epsilon)|z| = r < 1$.
+> By definition of $L$, $|a_n|^{1/n} \le L+\epsilon$ for all large $n$.
+> Therefore $|a_n||z|^n \le \{(L+\epsilon)|z|\}^n = r^n$.
+> Comparison with geometric series $\sum r^n$ shows $\sum a_n z^n$ converges absolutely.
+>
+> If $|z| > R$, then a similar argument proves that there exists a sequence of terms where absolute value goes to infinity, hence the series diverges.
+
 
 **Exercise:**  $R  = \lim_{ n \to \infty } \left\lvert  \frac{a_{n}}{a_{n+1}}  \right\rvert$ whenever it exists
 **Examples:**
@@ -121,9 +137,35 @@ $\sum_{n\geq 1}^{} \frac{z^{n}}{n!}$ $R = \infty$
 
 ## Differentiation of Power Series
 
-![[Pasted image 20260214003111.png]]
-![[Pasted image 20260214003129.png]]
-![[Pasted image 20260214003200.png]]
+
+> [!TIP] Theorem 2.6
+> The power series $f(z) = \sum_{n=0}^\infty a_n z^n$ defines a holomorphic function in its disc of convergence.
+> The derivative of $f$ is also a power series obtained by differentiating term by term the series for $f$, that is,
+> $$ f'(z) = \sum_{n=0}^\infty n a_n z^{n-1} $$
+> Moreover, $f'$ has the same radius of convergence as $f$.
+
+> [!NOTE]- Proof
+> The assertion about the radius of convergence of $f'$ follows from Hadamard's formula. Indeed, $\lim_{n \to \infty} n^{1/n} = 1$, and therefore
+> $$ \limsup |a_n|^{1/n} = \limsup |n a_n|^{1/n} $$
+> so that $\sum a_n z^n$ and $\sum n a_n z^n$ have the same radius of convergence, and hence so do $\sum a_n z^n$ and $\sum n a_n z^{n-1}$.
+>
+> To prove the first assertion, we must show that the series $g(z) = \sum_{n=0}^\infty n a_n z^{n-1}$ gives the derivative of $f$.
+> Let $R$ denote the radius of convergence of $f$, and suppose $|z_0| < r < R$. Write
+> $$ f(z) = S_N(z) + E_N(z), \quad \text{where } S_N(z) = \sum_{n=0}^N a_n z^n \text{ and } E_N(z) = \sum_{n=N+1}^\infty a_n z^n $$
+>
+> Then, if $h$ is chosen so that $|z_0+h| < r$, we have
+> $$ \frac{f(z_0+h)-f(z_0)}{h} - g(z_0) = \left( \frac{S_N(z_0+h)-S_N(z_0)}{h} - S_N'(z_0) \right) + (S_N'(z_0) - g(z_0)) + \left( \frac{E_N(z_0+h)-E_N(z_0)}{h} \right) $$
+>
+> Using $a^n - b^n = (a-b)(a^{n-1} + \dots + b^{n-1})$, we bound the error terms.
+> $$ \left| \frac{E_N(z_0+h)-E_N(z_0)}{h} \right| \le \sum_{n=N+1}^\infty |a_n| n r^{n-1} $$
+> This is the tail of a convergent series. Given $\epsilon > 0$, we can find $N_1$ such that this is $< \epsilon$.
+> Also, since $S_N'(z_0) \to g(z_0)$, we can find $N_2$ such that $|S_N'(z_0) - g(z_0)| < \epsilon$.
+> Fixing $N$, we can find $\delta$ such that for $|h| < \delta$, the first term is $< \epsilon$.
+> Combining these gives the result.
+
+> [!TIP] Corollary 2.7
+> A power series is infinitely complex differentiable in its disc of convergence, and the higher derivatives are also power series obtained by termwise differentiation.
+
 
 
 **Proposition:** Let $P(z)= \sum_{n\geq_{0}}^{} a_{n}(z-z_0)^{n}$ be a power series in $\mathbb{C}$ with radius of convergence  $R>0$. Let $w_{0} \in D(z_{0},R)$.
@@ -244,7 +286,20 @@ $$
 &= f'(z)
 \end{align*}
 $$
-![[Pasted image 20260214020106.png]]
+
+> [!TIP] Theorem 2.4 (Converse of Cauchy-Riemann)
+> Suppose $f = u + iv$ is a complex-valued function defined on an open set $\Omega$. If $u$ and $v$ are continuously differentiable and satisfy the Cauchy-Riemann equations on $\Omega$, then $f$ is holomorphic on $\Omega$ and $f'(z) = \partial f / \partial z$.
+
+> [!NOTE]- Proof
+> Write
+> $$ u(x+h_1, y+h_2) - u(x,y) = \frac{\partial u}{\partial x} h_1 + \frac{\partial u}{\partial y} h_2 + |h|\psi_1(h) $$
+> and
+> $$ v(x+h_1, y+h_2) - v(x,y) = \frac{\partial v}{\partial x} h_1 + \frac{\partial v}{\partial y} h_2 + |h|\psi_2(h) $$
+> where $\psi_j(h) \to 0$ (for $j=1,2$) as $|h| \to 0$, and $h = h_1 + i h_2$. Using the Cauchy-Riemann equations we find that
+> $$ f(z+h) - f(z) = \left( \frac{\partial u}{\partial x} - i \frac{\partial u}{\partial y} \right) (h_1 + i h_2) + |h|\psi(h) $$
+> where $\psi(h) = \psi_1(h) + \psi_2(h) \to 0$, as $|h| \to 0$. Therefore $f$ is holomorphic and
+> $$ f'(z) = 2 \frac{\partial u}{\partial z} = \frac{\partial f}{\partial z}. $$
+
 
 ## Branches of Logarithm
 ![[IMG_20260214_020405.jpg]]
