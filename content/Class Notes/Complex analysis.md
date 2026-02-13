@@ -302,8 +302,53 @@ $$
 
 
 ## Branches of Logarithm
-![[IMG_20260214_020405.jpg]]
-![[IMG_20260214_020521.jpg]]
+
+Let $\Omega \subseteq \mathbb{C}$ be a domain. Let $f: \Omega \to \mathbb{C}$ be continuous such that
+$$ \exp(f(z)) = z \quad \forall z \in \Omega $$
+Then $f$ is a **branch of logarithm**.
+If $f$ and $g$ are 2 branches of logarithm, then $e^{f(z)} = e^{g(z)} = z$ for all $z \in \Omega$.
+$$ \implies e^{f(z)-g(z)} = 1 \implies e^{i(\text{Im}(f) - \text{Im}(g))} = 1 $$
+This implies $f(z) - g(z) = 2\pi i k$ for some $k \in \mathbb{Z}$.
+By continuity of the functions, $k$ has to be independent of $z$ since $\Omega$ is connected.
+
+Thus:
+$$ \text{Re } f(z) = \text{Re } g(z) $$
+$$ \text{Im } f(z) = \text{Im } g(z) + 2\pi k $$
+
+> [!EXAMPLE] Principal Branch
+> Let $\Omega = \mathbb{C} \setminus \{ z=x+iy \mid x \le 0, y=0 \}$.
+> Define the principal branch:
+> $$ f(z) = \log|z| + i \text{Arg } z, \quad -\pi < \text{Arg } z < \pi $$
+>
+> ```tikz
+> \begin{document}
+> \begin{tikzpicture}[>=stealth]
+>     % Axes
+>     \draw[->] (-3,0) -- (3,0) node[right] {Re};
+>     \draw[->] (0,-3) -- (0,3) node[above] {Im};
+>     
+>     % Branch Cut
+>     \draw[ultra thick, red] (0,0) -- (-3,0);
+>     \node[red, above] at (-1.5, 0) {Cut};
+>
+>     % Domain Omega
+>     \node at (2,2) {$\Omega$};
+> \end{tikzpicture}
+> \end{document}
+> ```
+
+> [!QUESTION] Question
+> Is there a log branch with $\Omega = \mathbb{C} \setminus \{0\}$?
+
+### Branch of Complex Differentiable Function
+
+Let $\Omega \subseteq \mathbb{C}$ be a domain, and let $g: \Omega \to \mathbb{C}$ be complex differentiable.
+Let $f: \Omega \to \mathbb{C}$ be a continuous function such that $e^{f(z)} = g(z)$ for all $z \in \Omega$.
+
+> [!TIP] Theorem
+> Let $\Omega \subseteq \mathbb{C}$ be simply connected and $g: \Omega \to \mathbb{C}$ be a non-vanishing complex differentiable function.
+> Then there exists $f: \Omega \to \mathbb{C}$ such that $e^{f(z)} = g(z)$ for all $z \in \Omega$.
+
 
 ## Harmonic Functions
 
