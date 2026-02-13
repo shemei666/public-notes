@@ -645,5 +645,33 @@ $$
 
 \end{align}
 $$
-Define $g(t)= \int_{0}^{t} \frac{\gamma'(s)ds}{\gamma(s)-a}$, hence $g(0)=0, g(1)=\eta(\gamma,a)$
+Define $g(t)= \int_{0}^{t} \frac{\gamma'(s)ds}{\gamma(s)-a}$. Note that $g(0)=0$ and $g(1)= 2\pi i \eta(\gamma,a)$.
+
+Consider the function $G(t) = e^{-g(t)}(\gamma(t)-a)$.
+Differentiating with respect to $t$:
+$$
+\begin{align*}
+G'(t) &= e^{-g(t)}\gamma'(t) + (\gamma(t)-a) e^{-g(t)}(-g'(t)) \\
+&= e^{-g(t)}\gamma'(t) - (\gamma(t)-a) e^{-g(t)} \frac{\gamma'(t)}{\gamma(t)-a} \\
+&= e^{-g(t)}\gamma'(t) - e^{-g(t)}\gamma'(t) \\
+&= 0
+\end{align*}
+$$
+Thus, $G(t)$ is constant.
+Equating the values at $t=0$ and $t=1$:
+$$
+\begin{align*}
+G(0) &= e^{-g(0)}(\gamma(0)-a) = 1 \cdot (\gamma(0)-a) = \gamma(0)-a \\
+G(1) &= e^{-g(1)}(\gamma(1)-a)
+\end{align*}
+$$
+Since $\gamma$ is a closed curve, $\gamma(0) = \gamma(1)$. Also $\gamma(t) \neq a$ for all $t$.
+$$
+\gamma(0)-a = e^{-g(1)}(\gamma(0)-a) \implies e^{-g(1)} = 1
+$$
+This implies that $g(1)$ must be an integer multiple of $2\pi i$.
+$$
+g(1) = 2\pi i k \quad \text{for some } k \in \mathbb{Z}
+$$
+Since $\eta(\gamma, a) = \frac{1}{2\pi i} g(1)$, we have $\eta(\gamma, a) = k \in \mathbb{Z}$.
 
