@@ -549,41 +549,48 @@ Max mod principle
 ---
 ## Homotopic versions of Cauchy's Theorem
 
-> [!INFO] Definition: Homotopy
-> Let $\gamma_1, \gamma_2 : [0,1] \to \Omega$ be two closed curves in a domain $\Omega \subseteq \mathbb{C}$. $\gamma_1$ is said to be **homotopic** to $\gamma_2$ in $\Omega$, denoted by $\gamma_1 \sim \gamma_2$, if there exists a continuous function $F: [0,1] \times [0,1] \to \Omega$ such that:
+> [!INFO] Definition: Homotopy (Fixed Endpoints)
+> Let $\gamma_1, \gamma_2 : [0,1] \to \Omega$ be two paths in a domain $\Omega \subseteq \mathbb{C}$ such that they share the same initial point $\alpha = \gamma_1(0) = \gamma_2(0)$ and final point $\beta = \gamma_1(1) = \gamma_2(1)$. 
+> $\gamma_1$ is said to be **homotopic** to $\gamma_2$ in $\Omega$ (with fixed endpoints), denoted by $\gamma_1 \sim \gamma_2$, if there exists a continuous function $F: [0,1] \times [0,1] \to \Omega$ such that:
 > 1.  $F(s, 0) = \gamma_1(s)$ for all $s \in [0,1]$ (Initial curve)
 > 2.  $F(s, 1) = \gamma_2(s)$ for all $s \in [0,1]$ (Final curve)
-> 3.  $F(0, t) = F(1, t)$ for all $t \in [0,1]$ (Closed curves assumption)
+> 3.  $F(0, t) = \alpha$ for all $t \in [0,1]$ (Fixed start point)
+> 4.  $F(1, t) = \beta$ for all $t \in [0,1]$ (Fixed end point)
 >
-
+> Intuitively, $F$ represents a continuous "deformation" of the curve $\gamma_1$ into $\gamma_2$ while keeping the endpoints fixed.
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[>=stealth, scale=1]
+\begin{tikzpicture}[>=stealth, scale=1.2]
     % Draw Domain Omega
     \draw[thick, black] plot [smooth cycle, tension=0.7] coordinates {(-3,-2) (3,-2.5) (3.5,2) (-2.5,2.5) (-4,0)};
     \node at (2.5, 1.5) {$\Omega$};
 
-    % Draw Gamma 1 (Outer curve)
-    \draw[thick, blue] plot [smooth cycle, tension=0.7] coordinates {(-1.5,-1) (1.5,-1.2) (2,1) (-1,1.5)};
-    \node[blue, left] at (-1.5, -0.5) {$\gamma_1$};
+    % Fixed endpoints
+    \coordinate (Alpha) at (-2, 0);
+    \coordinate (Beta) at (2, 0);
 
-    % Draw Gamma 2 (Inner curve)
-    \draw[thick, red] plot [smooth cycle, tension=0.7] coordinates {(-0.5,-0.3) (0.5,-0.4) (0.6,0.5) (-0.4,0.6)};
-    \node[red, right] at (0.6, 0.5) {$\gamma_2$};
+    % Draw Gamma 1 (Upper curve)
+    \draw[thick, blue] (Alpha) .. controls (-1, 1.5) and (1, 1.5) .. (Beta);
+    \node[blue, above] at (0, 1.2) {$\gamma_1$};
+
+    % Draw Gamma 2 (Lower curve)
+    \draw[thick, red] (Alpha) .. controls (-1, -1.5) and (1, -1.5) .. (Beta);
+    \node[red, below] at (0, -1.2) {$\gamma_2$};
 
     % Draw intermediate curves (deformation)
-    \draw[dashed, gray!70] plot [smooth cycle, tension=0.7] coordinates {(-1.2,-0.8) (1.2,-0.9) (1.6,0.8) (-0.8,1.2)};
-    \draw[dashed, gray!70] plot [smooth cycle, tension=0.7] coordinates {(-0.9,-0.6) (0.9,-0.7) (1.2,0.7) (-0.6,0.9)};
+    \draw[dashed, gray!70] (Alpha) .. controls (-1, 0.8) and (1, 0.8) .. (Beta);
+    \draw[dashed, gray!70] (Alpha) .. controls (-1, -0.8) and (1, -0.8) .. (Beta);
+    \draw[dashed, gray!70] (Alpha) -- (Beta);
+
+    % Points
+    \filldraw[black] (Alpha) circle (2pt) node[left] {$\alpha$};
+    \filldraw[black] (Beta) circle (2pt) node[right] {$\beta$};
 
     % Arrow indicating deformation
-    \draw[->, black, thick] (-1.6, 1.0) -- (-0.5, 0.7);
-    \node at (-1.1, 1.1) {$F(s,t)$};
-
-    % Label for F(s,t) mapping
-    %\node[align=left] at (4,0) {deformation map:\\$F: [0,1] \times [0,1] \to \Omega$};
+    \draw[->, black, thick] (0, 1.0) -- (0, 0.2);
+    \node[right] at (0, 0.6) {$F(s,t)$};
 
 \end{tikzpicture}
 \end{document}
 ```
-
