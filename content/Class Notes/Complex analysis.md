@@ -561,7 +561,7 @@ Max mod principle
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[>=stealth, scale=1.2]
+\begin{tikzpicture}[>=stealth, scale=1]
     % Draw Domain Omega
     \draw[thick, black] plot [smooth cycle, tension=0.7] coordinates {(-3,-2) (3,-2.5) (3.5,2) (-2.5,2.5) (-4,0)};
     \node at (2.5, 1.5) {$\Omega$};
