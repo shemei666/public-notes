@@ -625,3 +625,25 @@ Max mod principle
 $$
 \frac{F(z) - F(z_{0})}{z - z_{0}} = 
 $$
+
+#todo 
+
+## Winding Number / Index of a curve
+
+Let $\gamma$ be a closed curve $\gamma \subseteq \Omega$. Then we define winding number of $\gamma$ around $a$ as.
+$$
+\eta (\gamma, a) = \frac{1}{2\pi i} \int_{\gamma} \frac{dz}{z-a} \quad a \not\in  \gamma 
+$$
+
+1. $\eta(\gamma,a) \in \mathbb{Z}$
+2. $\eta(\boldsymbol{\gamma},\cdot) : \mathbb{C} \setminus \{ \gamma \} \to \mathbb{Z}$ is a continuous function.
+
+$$
+\begin{align}
+\eta(\gamma,a)  & = \frac{1}{2\pi i} \int_{\gamma} \frac{dz}{z-a} \\
+ & = \frac{1}{2\pi i} \int_{0}^{1} \frac{\gamma'(s)ds}{\gamma(s)-a} \\
+
+\end{align}
+$$
+Define $g(t)= \int_{0}^{t} \frac{\gamma'(s)ds}{\gamma(s)-a}$, hence $g(0)=0, g(1)=\eta(\gamma,a)$
+
