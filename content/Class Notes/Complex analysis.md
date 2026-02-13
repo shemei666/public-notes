@@ -199,26 +199,37 @@ where $z \in D_{w_{0}}(R')$, $R' = R - \lvert z_{0} - w_{0} \rvert$
 
 
 
+## Cauchy-Riemann Equations
+
+If $f(z) = u + iv$ is differentiable, then $u, v$ satisfy:
+$$ u_x = v_y, \quad u_y = -v_x $$
+
+**Derivation:**
+To find these relations, consider the limit $f'(z_0)$ when $h$ is first real, say $h = h_1 + i0$. Then, if we write $z = x+iy$, $z_0 = x_0+iy_0$, and $f(z) = f(x,y)$, we find that
+$$
+\begin{align*}
+f'(z_0) &= \lim_{h_1 \to 0} \frac{f(x_0+h_1, y_0) - f(x_0, y_0)}{h_1} \\
+&= \frac{\partial f}{\partial x}(z_0)
+\end{align*}
+$$
+where $\partial/\partial x$ denotes the usual partial derivative in the $x$ variable. Now taking $h$ purely imaginary, say $h = ih_2$, a similar argument yields
+$$
+\begin{align*}
+f'(z_0) &= \lim_{h_2 \to 0} \frac{f(x_0, y_0+h_2) - f(x_0, y_0)}{ih_2} \\
+&= \frac{1}{i} \frac{\partial f}{\partial y}(z_0)
+\end{align*}
+$$
+where $\partial/\partial y$ is partial differentiation in the $y$ variable. Therefore, if $f$ is holomorphic we have shown that
+$$ \frac{\partial f}{\partial x} = \frac{1}{i} \frac{\partial f}{\partial y} $$
+Writing $f = u + iv$ and using $1/i = -i$, we find after separating real and imaginary parts that
+$$ \frac{\partial u}{\partial x} = \frac{\partial v}{\partial y} \quad \text{and} \quad \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x} $$
+
 ## Complex Differential Operators
 
 We define 2 differential operators
 $$
 \frac{\partial}{\partial z} = \frac{1}{2} \left( \frac{\partial}{\partial x} - i \frac{\partial}{\partial y} \right) \quad \text{and} \quad \frac{\partial}{\partial \bar{z}} = \frac{1}{2} \left( \frac{\partial}{\partial x} + i \frac{\partial}{\partial y} \right)
 $$
-
-> [!INFO] Cauchy-Riemann Equations
-> If $f(z) = u(x,y) + i v(x,y)$ is differentiable at $z_0 = x_0 + i y_0$, then the partial derivatives of $u$ and $v$ exist and satisfy:
-> $$ \frac{\partial u}{\partial x} = \frac{\partial v}{\partial y} \quad \text{and} \quad \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x} $$
->
-> **Derivation**:
-> Compute the limit $f'(z_0) = \lim_{h \to 0} \frac{f(z_0+h)-f(z_0)}{h}$ along two paths:
-> 1.  **Real axis** ($h = h_1 \in \mathbb{R}$):
->     $$ f'(z_0) = \lim_{h_1 \to 0} \frac{f(x_0+h_1, y_0) - f(x_0, y_0)}{h_1} = f_x(z_0) = u_x + i v_x $$
-> 2.  **Imaginary axis** ($h = i h_2, h_2 \in \mathbb{R}$):
->     $$ f'(z_0) = \lim_{h_2 \to 0} \frac{f(x_0, y_0+h_2) - f(x_0, y_0)}{i h_2} = \frac{1}{i} f_y(z_0) = -i(u_y + i v_y) = v_y - i u_y $$
->
-> Equating real and imaginary parts gives the CR equations.
-
 If $f = u + iv$ is analytic, it satisfies the Cauchy-Riemann equations $u_x = v_y$ and $u_y = -v_x$. Hence we get,
 
 
