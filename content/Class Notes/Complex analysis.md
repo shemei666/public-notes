@@ -206,6 +206,7 @@ $$
 $$
 If $f = u + iv$ is analytic, it satisfies the Cauchy-Riemann equations $u_x = v_y$ and $u_y = -v_x$. Hence we get,
 
+
 $$
 \begin{align*}
 \frac{\partial f}{\partial \bar{z}} &= \frac{1}{2} \left( (u_x + i v_x) + i (u_y + i v_y) \right) \\
