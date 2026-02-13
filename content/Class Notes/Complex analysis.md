@@ -607,5 +607,8 @@ Max mod principle
 > [!TIP] Corollary
 > Let $\Omega \subseteq \mathbb{C}$ be a simply connected domain and let $\gamma$ be a closed curve in $\Omega$. Then $\int_{\gamma} f(z) dz = 0$.
 
-### Simply connected domain
-$\Omega$ is said to be simply connected if any closed curve $\gamma \sim 0$.
+
+> [!INFO] Definition: Simply Connected Domain
+> A domain $\Omega \subseteq \mathbb{C}$ is said to be **simply connected** if any closed curve $\gamma$ in $\Omega$ is null-homotopic ($\gamma \sim 0$) in $\Omega$.
+
+
