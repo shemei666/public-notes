@@ -224,7 +224,7 @@ $$ \frac{\partial f}{\partial x} = \frac{1}{i} \frac{\partial f}{\partial y} $$
 Writing $f = u + iv$ and using $1/i = -i$, we find after separating real and imaginary parts that
 $$ \frac{\partial u}{\partial x} = \frac{\partial v}{\partial y} \quad \text{and} \quad \frac{\partial u}{\partial y} = -\frac{\partial v}{\partial x} $$
 
-## Complex Differential Operators
+### Complex Differential Operators
 
 We define 2 differential operators
 $$
@@ -244,6 +244,8 @@ $$
 &= f'(z)
 \end{align*}
 $$
+![[Pasted image 20260214020106.png]]
+
 
 ## Harmonic Functions
 
