@@ -16,6 +16,17 @@ A function is **holomorphic on an open set $U$** if it is differentiable at ever
 
 
 
+
+> [!TIP] Proposition
+> If $f$ and $g$ are holomorphic in $\Omega$, then:
+> 1. $f + g$ is holomorphic in $\Omega$ and $(f + g)' = f' + g'$.
+> 2. $fg$ is holomorphic in $\Omega$ and $(fg)' = f'g + fg'$.
+> 3. If $g(z_0) \neq 0$, then $f/g$ is holomorphic at $z_0$ and
+>    $$ (f/g)' = \frac{f'g - fg'}{g^2} $$
+>
+> Moreover, if $f : \Omega \to U$ and $g : U \to \mathbb{C}$ are holomorphic, the chain rule holds
+> $$ (g \circ f)'(z) = g'(f(z))f'(z) \quad \text{for all } z \in \Omega. $$
+
 ### Examples of Holomorphic Functions
 
 1.  **Polynomials**: 
