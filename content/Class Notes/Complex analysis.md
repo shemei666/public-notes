@@ -756,7 +756,10 @@ Max mod principle #todo
 > Then $f$ has a primitive in $\Omega$, i.e., there exists $F$ analytic in $\Omega$ such that $F' = f$ in $\Omega$.
 
 > [!NOTE]- Proof (Sketch)
-> Define $F = \int_{\gamma} f dz$ 
+> Let $z_{0} \in \Omega$, Define $F(w) = \int_{\gamma} f dz$, where $\gamma$ is a smooth curve from $z_{0}$ to  $w$, since $\Omega$ is simply connected we have that $\int_{\gamma} f dz = \int_{\gamma'}f dz$ if $\gamma'$ is another path from $z_{0}$ to $w$. Hence $F$ is a well defined function.
+> $$
+> F(z+h) - f(z)
+> $$ 
 > 
 
 
