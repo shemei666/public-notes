@@ -756,7 +756,7 @@ Max mod principle #todo
 > Then $f$ has a primitive in $\Omega$, i.e., there exists $F$ analytic in $\Omega$ such that $F' = f$ in $\Omega$.
 
 > [!NOTE]- Proof (Sketch)
-> Since $\Omega$ is simply connected we have 
+> Define $F = \int_{\gamma} f dz$ 
 > 
 
 
