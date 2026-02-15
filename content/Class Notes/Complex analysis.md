@@ -781,14 +781,9 @@ Max mod principle #todo
 > $$ \implies F(z) + \int_{[z,z+h]} f(\zeta) \, d\zeta - F(z+h) = 0 $$
 > $$ \implies F(z+h) - F(z) = \int_{[z,z+h]} f(\zeta) \, d\zeta $$
 > Now consider the difference quotient:
-> $$ \frac{F(z+h) - F(z)}{h} - f(z) = \frac{1}{h} \int_{[z,z+h]} (f(\zeta) - f(z)) \, d\zeta $$
-> Since $f$ is continuous at $z$, for every $\epsilon > 0$, there exists $\delta > 0$ such that $|\zeta - z| < \delta \implies |f(\zeta) - f(z)| < \epsilon$.
-> For $|h| < \delta$, we have $|\zeta - z| \le |h| < \delta$ for all $\zeta \in [z, z+h]$. Thus:
-> $$ \left| \frac{F(z+h) - F(z)}{h} - f(z) \right| \le \frac{1}{|h|} \cdot |h| \cdot \max_{\zeta \in [z,z+h]} |f(\zeta) - f(z)| < \epsilon $$
-> Thus $F'(z) = f(z)$ for all $z \in D(a,r)$.
-> Since $F$ is holomorphic, $f = F'$ is also holomorphic.
+> $$ \frac{F(z+h) - F(z)}{h} = \frac{1}{h} \int_{[z,z+h]} f(\zeta) d\zeta =\int_{0}^{1} f(z+th) dt$$
+> Taking the limit we see that $F$ is holomorphic and $F' = f$, since holomorphic functions are infinitely differentiable.
 > $\blacksquare$
-
 
 ## Winding Number / Index of a curve
 
