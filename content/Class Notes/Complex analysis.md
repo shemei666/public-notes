@@ -773,7 +773,6 @@ Max mod principle #todo
 > Let $\Omega \subseteq \mathbb{C}$ be a domain and $f: \Omega\to \mathbb{C}$ continuous. Assume $\int_{T}f=0$ for all triangle $T$ in $\Omega$, then $f$ is analytic.
 
 > [!NOTE]- Proof
-> Since analyticity is a local property, it suffices to show that $f$ is analytic in every open disk $D \subseteq \Omega$.
 > Let $D(a,r) \subseteq \Omega$. For any $z \in D(a,r)$, define
 > $$ F(z) = \int_{[a,z]} f(\zeta) \, d\zeta $$
 > where $[a,z]$ denotes the straight line segment from $a$ to $z$.
