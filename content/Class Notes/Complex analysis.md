@@ -772,8 +772,23 @@ Max mod principle #todo
 > [!TIP] Theorem: (Morera's Theorem)
 > Let $\Omega \subseteq \mathbb{C}$ be a domain and $f: \Omega\to \mathbb{C}$ continuous. Assume $\int_{T}f=0$ for all triangle $T$ in $\Omega$, then $f$ is analytic.
 
-**Proof:** 
-
+> [!NOTE]- Proof
+> Since analyticity is a local property, it suffices to show that $f$ is analytic in every open disk $D \subseteq \Omega$.
+> Let $D(a,r) \subseteq \Omega$. For any $z \in D(a,r)$, define
+> $$ F(z) = \int_{[a,z]} f(\zeta) \, d\zeta $$
+> where $[a,z]$ denotes the straight line segment from $a$ to $z$.
+> Let $z \in D(a,r)$ and $h \in \mathbb{C}$ such that $z+h \in D(a,r)$. By the hypothesis, the integral over the triangle with vertices $a, z, z+h$ is zero:
+> $$ \int_{[a,z]} f(\zeta) \, d\zeta + \int_{[z,z+h]} f(\zeta) \, d\zeta + \int_{[z+h,a]} f(\zeta) \, d\zeta = 0 $$
+> $$ \implies F(z) + \int_{[z,z+h]} f(\zeta) \, d\zeta - F(z+h) = 0 $$
+> $$ \implies F(z+h) - F(z) = \int_{[z,z+h]} f(\zeta) \, d\zeta $$
+> Now consider the difference quotient:
+> $$ \frac{F(z+h) - F(z)}{h} - f(z) = \frac{1}{h} \int_{[z,z+h]} (f(\zeta) - f(z)) \, d\zeta $$
+> Since $f$ is continuous at $z$, for every $\epsilon > 0$, there exists $\delta > 0$ such that $|\zeta - z| < \delta \implies |f(\zeta) - f(z)| < \epsilon$.
+> For $|h| < \delta$, we have $|\zeta - z| \le |h| < \delta$ for all $\zeta \in [z, z+h]$. Thus:
+> $$ \left| \frac{F(z+h) - F(z)}{h} - f(z) \right| \le \frac{1}{|h|} \cdot |h| \cdot \max_{\zeta \in [z,z+h]} |f(\zeta) - f(z)| < \epsilon $$
+> Thus $F'(z) = f(z)$ for all $z \in D(a,r)$.
+> Since $F$ is holomorphic, $f = F'$ is also holomorphic.
+> $\blacksquare$
 
 
 ## Winding Number / Index of a curve
