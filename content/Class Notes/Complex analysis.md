@@ -756,10 +756,11 @@ Max mod principle #todo
 > Then $f$ has a primitive in $\Omega$, i.e., there exists $F$ analytic in $\Omega$ such that $F' = f$ in $\Omega$.
 
 > [!NOTE]- Proof (Sketch)
-> Let $z_{0} \in \Omega$, Define $F(w) = \int_{\gamma} f dz$, where $\gamma$ is a smooth curve from $z_{0}$ to  $w$, since $\Omega$ is simply connected we have that $\int_{\gamma} f dz = \int_{\gamma'}f dz$ if $\gamma'$ is another path from $z_{0}$ to $w$. Hence $F$ is a well defined function.
+> Let $z_{0} \in \Omega$, Define $F(w) = \int_{\gamma} f dz$, where $\gamma$ is a smooth curve from $z_{0}$ to  $w$, since $\Omega$ is simply connected we have that $\int_{\gamma} f dz = \int_{\gamma'}f dz$ if $\gamma'$ is another path from $z_{0}$ to $w$. Hence $F$ is a well defined function. Now take $r$ small enough such that $z+h \in \Omega,\forall \lvert h \rvert<r$
 > $$
->\frac{  F(z+h) - F(z) }{h} = 
+>\frac{  F(z+h) - F(z) }{h} = \frac{ \int_{[z,z+h]} f dz}{h} = \frac{ \int_{0}^{1} f(z+th) dt}{h} = 
 > $$ 
+> where $[z,z+h]$ is the straight line path.
 > 
 
 
