@@ -684,7 +684,7 @@ This implies $a$ is an isolated zero of $f$, which contradicts the assumption th
 Therefore, we must have $f^{(n)}(a) = 0$ for all $n \ge 0$. $\quad \blacksquare$ 
 
 ---
-Max mod principle
+Max mod principle #todo
 
 ---
 ## Homotopic versions of Cauchy's Theorem
@@ -755,15 +755,17 @@ Max mod principle
 > Let $\Omega$ be simply connected and let $f: \Omega \to \mathbb{C}$ be analytic.
 > Then $f$ has a primitive in $\Omega$, i.e., there exists $F$ analytic in $\Omega$ such that $F' = f$ in $\Omega$.
 
-> [!NOTE]- Proof
+> [!NOTE]- Proof (Sketch)
+> Since $\Omega$ is simply connected we have 
 > 
+
 
 > [!TIP] Theorem: (Morera's Theorem)
 > Let $\Omega \subseteq \mathbb{C}$ be a domain and $f: \Omega\to \mathbb{C}$ continuous. Assume $\int_{T}f=0$ for all triangle $T$ in $\Omega$, then $f$ is analytic.
 
 **Proof:** Fix $z_{0} \in B(a,r)$,
 $$
-\frac{F(z) - F(z_{0})}{z - z_{0}} = 
+\frac{F(z) - F(z_{0})}{z - z_{0}}
 $$
 
 
