@@ -758,9 +758,14 @@ Max mod principle #todo
 > [!NOTE]- Proof (Sketch)
 > Let $z_{0} \in \Omega$, Define $F(w) = \int_{\gamma} f dz$, where $\gamma$ is a smooth curve from $z_{0}$ to  $w$, since $\Omega$ is simply connected we have that $\int_{\gamma} f dz = \int_{\gamma'}f dz$ if $\gamma'$ is another path from $z_{0}$ to $w$. Hence $F$ is a well defined function. Now take $r$ small enough such that $z+h \in \Omega,\forall \lvert h \rvert<r$
 > $$
->\frac{  F(z+h) - F(z) }{h} = \frac{ \int_{[z,z+h]} f dz}{h} = \frac{ \int_{0}^{1} f(z+th) dt}{h} = 
-> $$ 
+> \frac{F(z+h) - F(z)}{h} = \frac{1}{h} \int_{[z,z+h]} f(\zeta) \, d\zeta = \frac{1}{h} \int_{0}^{1} f(z+th) h \, dt = \int_{0}^{1} f(z+th) \, dt
+> $$
 > where $[z,z+h]$ is the straight line path.
+> Since $f$ is continuous, $f(z+th) \to f(z)$ as $h \to 0$. Thus,
+> $$
+> \lim_{h \to 0} \frac{F(z+h) - F(z)}{h} = \int_{0}^{1} f(z) \, dt = f(z)
+> $$
+> Hence, $F$ is holomorphic and $F'(z) = f(z)$. $\blacksquare$
 > 
 
 
