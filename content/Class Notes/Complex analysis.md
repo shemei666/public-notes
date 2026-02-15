@@ -740,6 +740,9 @@ Max mod principle #todo
 > Let $f: \Omega \to \mathbb{C}$ be analytic. Let $\gamma_1, \gamma_2$ be paths in $\Omega$ from $\alpha$ to $\beta$ such that $\gamma_1 \sim \gamma_2$ (homotopic with fixed endpoints). Then:
 > $$ \int_{\gamma_1} f(z) dz = \int_{\gamma_2} f(z) dz $$
 
+> [!NOTE]- Proof
+> **Will be proved in class later**
+
 > [!TIP] Theorem: Homotopy Version 2 (Closed Curves)
 > Let $f: \Omega \to \mathbb{C}$ be analytic. Let $\gamma$ be a closed curve in $\Omega$ such that $\gamma \sim 0$ (null-homotopic) in $\Omega$. Then:
 > $$ \int_{\gamma} f(z) dz = 0 $$
