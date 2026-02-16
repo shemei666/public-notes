@@ -763,5 +763,15 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > Thus, $\vec{v} \pm \epsilon \vec{w} \in P$.
 > But $\vec{v} = \frac{(\vec{v} + \epsilon \vec{w}) + (\vec{v} - \epsilon \vec{w})}{2}$.
 > Since $\vec{w} \neq \vec{0}$, these points are distinct. This contradicts that $\vec{v}$ is an extreme point.
-> Thus, $\text{rank}(B) = n$, meaning there are $n$ linearly independent tight constraints. 
+> Thus, $\text{rank}(B) = n$, meaning there are $n$ linearly independent tight constraints.
+>
+> $(\impliedby)$ Let $B\vec{x} \le \vec{b}'$ be tight at $\vec{v}$ and $\text{rank}(B) = n$.
+> Suppose $\vec{v} = \frac{\vec{v}_1 + \vec{v}_2}{2}$ where $\vec{v}_1, \vec{v}_2 \in P$.
+> Then:
+> $\vec{b}' = B\vec{v} = \frac{1}{2} B\vec{v}_1 + \frac{1}{2} B\vec{v}_2 \le \frac{1}{2} \vec{b}' + \frac{1}{2} \vec{b}' = \vec{b}'$
+> Since $B\vec{v}_1 \le \vec{b}'$ and $B\vec{v}_2 \le \vec{b}'$ (as $\vec{v}_1, \vec{v}_2 \in P$), the only way the average is $\vec{b}'$ is if both are equal to $\vec{b}'$.
+> $$ B\vec{v} = B\vec{v}_1 = B\vec{v}_2 = \vec{b}' $$
+> Since $\text{rank}(B) = n$, the columns of $B$ are linearly independent, so the system $B\vec{x} = \vec{b}'$ has a unique solution.
+> $\implies \vec{v} = \vec{v}_1 = \vec{v}_2$.
+> $\implies \vec{v}$ is an extreme point of $P$. $\blacksquare$ 
 
