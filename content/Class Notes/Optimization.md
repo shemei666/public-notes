@@ -731,5 +731,21 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > If two different bases $(J_{1},J_{2})$ correspond to a single b.f.s $v$, then it is degenerate
 
 > [!NOTE]- Proof
-> $x_{J_{1}}$
+> Let $J_1, J_2$ be two distinct bases.
+> We know $\vec{x}_{J_1^c} = \vec{0}_{n-m}$ and $\#(J_1) = m$.
+> Similarly $\vec{x}_{J_2^c} = \vec{0}_{n-m}$ and $\#(J_2) = m$.
+> The set of indices where $\vec{v}$ is zero includes $J_1^c \cup J_2^c$.
+> Since $J_1 \neq J_2$, we have $J_1^c \neq J_2^c$.
+> Two distinct sets of size $n-m$ must have a union of size strictly greater than $n-m$.
+> $$ \#(J_1^c \cup J_2^c) \ge n-m+1 $$
+> (Alternatively, $\#(J_1 \cap J_2) \le m-1$).
+> Thus, the number of zero components in $\vec{v}$ is at least $n-m+1$.
+> Therefore, $\vec{v}$ is degenerate. $\blacksquare$
+
+> [!QUESTION] Exercise
+> If $\vec{v}$ is degenerate, is it necessarily true that there are two different bases corresponding to $\vec{v}$? (Prove or provide counterexample)
+
+
+> [!TIP] Lemma
+> Suppose $P = \{ \vec{x} \in \mathbb{R}^n \mid A\vec{x} \le \vec{b} \}$ is a polyhedron. Then $\vec{v}$ is an extreme point of $P$ iff there are $n$ linearly independent active constraints among $A\vec{x} \le \vec{b}$ at $\vec{v}$.
 
