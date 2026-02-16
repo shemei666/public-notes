@@ -713,6 +713,23 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > [!QUESTION] Exercise
 > Prove or disprove $K\subseteq \mathbb{R}^{n}$ is a closed convex set with non-empty interior (unless affine or affine halfspace) $K= conv(\partial K)$
 
+---
+> [!TIP] Theorem: 
+> In LPS, let $w \in \mathbb{R}^{n}$. Then $w$ is an extreme point of feasible set $F$ iff $w$ is a bfs (w.r.t some $J$)
 
+> [!TIP] Corollary
+> The feasible set in LPS has finitely many extreme points
 
+> [!NOTE]- Proof
+> Each extreme point is a bfs, hence determined by some n-element subset of the columns of $A$.
+> No. of extreme points $\leq {n \choose m}$
+
+> [!INFO] Definition: 
+> A basic feasible solution is degenerate if it has strictly more than $n-m$ zeroes
+
+> [!TIP] Proposition
+> If two different bases $(J_{1},J_{2})$ correspond to a single b.f.s $v$, then it is degenerate
+
+> [!NOTE]- Proof
+> $x_{J_{1}}$
 
