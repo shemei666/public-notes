@@ -856,14 +856,18 @@ $$
 ### Lifting of Curves
 
 > [!INFO] Definition: Lift of a Curve
-> Let $p: E \to X$ be a covering map. Let $\gamma: [0,1] \to X$ be a curve in $X$. A curve $\tilde{\gamma}: [0,1] \to E$ is called a **lift** of $\gamma$ if $p \circ \tilde{\gamma} = \gamma$.
+> Let $p: \mathbb{C} \to \mathbb{C} \setminus \{a\}$ be the covering map $z \mapsto e^z + a$. Let $\gamma: [0,1] \to \mathbb{C} \setminus \{a\}$ be a curve. A curve $\tilde{\gamma}: [0,1] \to \mathbb{C}$ is called a **lift** of $\gamma$ if $p \circ \tilde{\gamma} = \gamma$.
 
 ```tikz
 \usepackage{tikz-cd}
+\usepackage{amssymb}
 \begin{document}
 \begin{tikzcd}
-    & E \arrow[d, "p"] \\
-    {[0,1]} \arrow[ur, "\tilde{\gamma}", dashed] \arrow[r, "\gamma"'] & X
+    & \mathbb{C} \arrow[d, "e^z"] \\
+    {[0,1]} \arrow[ur, "\tilde{\gamma}", dashed] \arrow[r, "\gamma"] & \mathbb{C} \setminus \{a\}
 \end{tikzcd}
 \end{document}
 ```
+$$
+\eta(\gamma,0) = \eta(\gamma_{2},0) \quad 0 \not\in \gamma_{1} \cup \gamma_{2}
+$$
