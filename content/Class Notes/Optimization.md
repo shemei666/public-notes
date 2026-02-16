@@ -747,5 +747,9 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 
 
 > [!TIP] Lemma
-> Suppose $P = \{ \vec{x} \in \mathbb{R}^n \mid A\vec{x} \le \vec{b} \}$ is a polyhedron. Then $\vec{v}$ is an extreme point of $P$ iff there are $n$ linearly independent active constraints among $A\vec{x} \le \vec{b}$ at $\vec{v}$.
+> Suppose $P = \{ \vec{x} \in \mathbb{R}^n \mid A\vec{x} \le \vec{b} \}$ is a polyhedron. Then $\vec{v}$ is an extreme point of $P$ iff there are $n$ linearly independent active constraints among $A\vec{x} \le \vec{b}$ that are **tight** at $\vec{v}$, that is, satisfy equality at $\vec{v}$.
+>
+> **Note**: In LPs, $m$ of the constraints are always tight. Hence $\vec{v}$ is extreme iff $n-m$ of the constraints $\vec{x} \ge \vec{0}$ are tight ($A\vec{x}=\vec{b}, \vec{x} \ge \vec{0}$).
 
+> [!NOTE]- Proof
+> $(\implies)$ Let $v$ be an extreme point. Let $B\vec{x} \leq \vec{b}$ be 
