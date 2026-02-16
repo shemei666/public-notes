@@ -873,5 +873,11 @@ $$
 $$
 Implies $\gamma_{1} \sim \gamma_{2}$ in $\mathbb{C}\setminus \{ a \}$.
 $$
-\eta(\gamma_j,a) = \frac{1}{2\pi i} \int_{\gamma_j} \frac{dz}{z-a} = \frac{1}{2\pi i} \int_{0}^{1} \frac{ e^{\tilde{\gamma}_j(t)} \tilde{\gamma}_j'(t)}{e^{\tilde{\gamma}_j(t)}} dt = \frac{1}{2\pi i} \int_{0}^{1} \tilde{\gamma}_j'(t) dt = \frac{\tilde{\gamma}_j(1) - \tilde{\gamma}_j(0)}{2\pi i}
+\begin{align*}
+\eta(\gamma_j,a) &= \frac{1}{2\pi i} \int_{\gamma_j} \frac{dz}{z-a} \\
+&= \frac{1}{2\pi i} \int_{0}^{1} \frac{1}{(e^{\tilde{\gamma}_j(t)} + a) - a} \cdot \frac{d}{dt}(e^{\tilde{\gamma}_j(t)} + a) \, dt \\
+&= \frac{1}{2\pi i} \int_{0}^{1} \frac{ e^{\tilde{\gamma}_j(t)} \tilde{\gamma}_j'(t)}{e^{\tilde{\gamma}_j(t)}} dt \\
+&= \frac{1}{2\pi i} \int_{0}^{1} \tilde{\gamma}_j'(t) dt \\
+&= \frac{\tilde{\gamma}_j(1) - \tilde{\gamma}_j(0)}{2\pi i}
+\end{align*}
 $$
