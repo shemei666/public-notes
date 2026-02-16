@@ -773,5 +773,5 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > $$ B\vec{v} = B\vec{v}_1 = B\vec{v}_2 = \vec{b}' $$
 > Since $\text{rank}(B) = n$, the columns of $B$ are linearly independent, so the system $B\vec{x} = \vec{b}'$ has a unique solution.
 > $\implies \vec{v} = \vec{v}_1 = \vec{v}_2$.
-> $\implies \vec{v}$ is an extreme point of $P$. $\blacksquare$ 
+> $\implies \vec{v}$ is an extreme point of $P$. $\blacksquare$
 
