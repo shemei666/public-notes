@@ -843,3 +843,7 @@ Since $\eta(\gamma, a) = \frac{1}{2\pi i} g(1)$, we have $\eta(\gamma, a) = k \i
 > $$ p^{-1}(U) = \bigsqcup_{\alpha \in A} V_\alpha $$
 > where for each $\alpha \in A$, the restriction $p|_{V_\alpha}: V_\alpha \to U$ is a homeomorphism. The neighborhood $U$ is said to be **evenly covered**. refer [[Algebraic Topology#Covering Spaces|Covering Spaces]]
 
+$\gamma_{1},\gamma_{2}$  are two curves $\gamma_{1}\sim \gamma_{2}$ in $\mathbb{C}\setminus \{ a \}$
+$$
+\eta(\gamma;a) = \frac{1}{2\pi i} \int_{\gamma} \frac{dz}{}
+$$
