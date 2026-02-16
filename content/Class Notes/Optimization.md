@@ -752,4 +752,15 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > **Note**: In LPs, $m$ of the constraints are always tight. Hence $\vec{v}$ is extreme iff $n-m$ of the constraints $\vec{x} \ge \vec{0}$ are tight ($A\vec{x}=\vec{b}, \vec{x} \ge \vec{0}$).
 
 > [!NOTE]- Proof
-> $(\implies)$ Let $v$ be an extreme point. Let $B\vec{x} \leq \vec{b}$ be 
+> $(\implies)$ Let $\vec{v}$ be an extreme point. Let $B\vec{x} \le \vec{b}'$ be those constraints among $A\vec{x} \le \vec{b}$ that are tight at $\vec{v}$ (i.e., $B\vec{v} = \vec{b}'$).
+>
+> To show: $\text{rank}(B) \ge n$.
+> On the contrary, assume $\text{rank}(B) \le n-1$.
+> Choose $\vec{w} \in \text{nullspace}(B) \setminus \{\vec{0}\}$.
+> Consider $\vec{v}' = \vec{v} + \epsilon \vec{w}$.
+> Then $B\vec{v}' = B\vec{v} + \epsilon B\vec{w} = \vec{b}'$ (since $B\vec{w} = \vec{0}$).
+> For a sufficiently small $\epsilon > 0$, both $\vec{v} + \epsilon \vec{w}$ and $\vec{v} - \epsilon \vec{w}$ satisfy the remaining strict inequalities (since strict inequality is an open condition).
+> Thus, $\vec{v} \pm \epsilon \vec{w} \in P$.
+> But $\vec{v} = \frac{(\vec{v} + \epsilon \vec{w}) + (\vec{v} - \epsilon \vec{w})}{2}$.
+> Since $\vec{w} \neq \vec{0}$, these points are distinct. This contradicts that $\vec{v}$ is an extreme point.
+> Thus, $\text{rank}(B) = n$, meaning there are $n$ linearly independent tight constraints. 
