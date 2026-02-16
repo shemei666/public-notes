@@ -774,3 +774,23 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > $\implies \vec{v} = \vec{v}_1 = \vec{v}_2$.
 > $\implies \vec{v}$ is an extreme point of $P$. $\blacksquare$
 
+### Geometry of Constraints
+
+> [!NOTE] Remark
+> Let $\vec{a}_1, \dots, \vec{a}_n$ be linearly independent vectors in $\mathbb{R}^n$ and $b_1, \dots, b_n \in \mathbb{R}$.
+> Then the intersection of the hyperplanes is a single point:
+> $$ \bigcap_{i=1}^n H_{\vec{a}_i, b_i} = \{\vec{v}\} $$
+> This is equivalent to solving the system:
+> $$ \begin{bmatrix} \vec{a}_1^T \\ \vdots \\ \vec{a}_n^T \end{bmatrix} \vec{x} = \begin{bmatrix} b_1 \\ \vdots \\ b_n \end{bmatrix} $$
+> Since the matrix is invertible, there exists a unique solution $\vec{v}$.
+
+## Unboundedness and Fundamental Theorem
+
+> [!INFO] Definition: Unbounded Problem
+> We say that a minimization problem is **unbounded** if for each real $B$, there is a feasible point of cost strictly less than $B$.
+
+> [!TIP] Theorem
+> In LPS, suppose that $\vec{p} \in F$ (feasible set). Then either the LPS instance is **unbounded** or there is a **vertex** $\vec{v}$ of $F$ satisfying:
+> $$ \langle \vec{c}, \vec{v} \rangle \le \langle \vec{c}, \vec{p} \rangle $$
+> (i.e., either there is no optimal solution or there is an optimal vertex).
+
