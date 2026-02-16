@@ -794,3 +794,5 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > $$ \langle \vec{c}, \vec{v} \rangle \le \langle \vec{c}, \vec{p} \rangle $$
 > (i.e., either there is no optimal solution or there is an optimal extreme point).
 
+
+
