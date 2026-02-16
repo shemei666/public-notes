@@ -873,5 +873,5 @@ $$
 $$
 Implies $\gamma_{1} \sim \gamma_{2}$ in $\mathbb{C}\setminus \{ a \}$.
 $$
-\eta(\gamma_j,a) = \frac{1}{2\pi i} \int_{\gamma_j} \frac{dz}{z-a} = \frac{1}{2\pi i} \int_{0}^{1} \frac{ e^{\tilde{\gamma}_j(t)} \tilde{\gamma}_j'(t)}{e^{\tilde{\gamma}_j(t)}} dt = \frac{\tilde{\gamma}_j(1) - \tilde{\gamma}_j(0)}{2\pi i}
+\eta(\gamma_j,a) = \frac{1}{2\pi i} \int_{\gamma_j} \frac{dz}{z-a} = \frac{1}{2\pi i} \int_{0}^{1} \frac{ e^{\tilde{\gamma}_j(t)} \tilde{\gamma}_j'(t)}{e^{\tilde{\gamma}_j(t)}} dt = \frac{1}{2\pi i} \int_{0}^{1} \tilde{\gamma}_j'(t) dt = \frac{\tilde{\gamma}_j(1) - \tilde{\gamma}_j(0)}{2\pi i}
 $$
