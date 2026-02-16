@@ -852,3 +852,18 @@ $$
 > Is the converse true?
 > Does $\eta(\gamma_1; a) = \eta(\gamma_2; a)$ imply $\gamma_1 \sim \gamma_2$ in $\mathbb{C} \setminus \{a\}$?
 
+
+### Lifting of Curves
+
+> [!INFO] Definition: Lift of a Curve
+> Let $p: E \to X$ be a covering map. Let $\gamma: [0,1] \to X$ be a curve in $X$. A curve $\tilde{\gamma}: [0,1] \to E$ is called a **lift** of $\gamma$ if $p \circ \tilde{\gamma} = \gamma$.
+
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+    & E \arrow[d, "p"] \\
+    {[0,1]} \arrow[ur, "\tilde{\gamma}", dashed] \arrow[r, "\gamma"'] & X
+\end{tikzcd}
+\end{document}
+```
