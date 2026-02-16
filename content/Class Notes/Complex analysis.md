@@ -702,7 +702,7 @@ Therefore, we must have $f^{(n)}(a) = 0$ for all $n \ge 0$. $\quad \blacksquare$
 
 ```tikz
 \begin{document}
-\begin{tikzpicture}[>=stealth, scale=1]
+\begin{tikzpicture}[>=stealth, scale=0.8]
     % Draw Domain Omega
     \draw[thick, black] plot [smooth cycle, tension=0.7] coordinates {(-3,-2) (3,-2.5) (3.5,2) (-2.5,2.5) (-4,0)};
     \node at (2.5, 1.5) {$\Omega$};
