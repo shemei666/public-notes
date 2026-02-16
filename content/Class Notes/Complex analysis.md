@@ -869,9 +869,9 @@ $$
 \end{document}
 ```
 $$
-\eta(\gamma,0) = \eta(\gamma_{2},0) \quad 0 \not\in \gamma_{1} \cup \gamma_{2}
+\eta(\gamma_1,a) = \eta(\gamma_{2},a) \quad a \not\in \gamma_{1} \cup \gamma_{2}
 $$
-Then $\gamma_{1} \sim \gamma_{2}$ in $\mathbb{C}\setminus \{ 0 \}$, $\eta(\gamma,0) = \frac{1}{2\pi i} \int_{\gamma} \frac{dz}{z}$ 
+Implies $\gamma_{1} \sim \gamma_{2}$ in $\mathbb{C}\setminus \{ a \}$.
 $$
-\eta(\gamma,0) = \frac{1}{2\pi i} \int_{\gamma } \frac{dz}{z-a} = \int_{0}^{1} \frac{ e^{\tilde{\gamma}(t)} \tilde{\gamma}'(t)}{e^{\tilde{\gamma}(t)}-a}
+\eta(\gamma_j,a) = \frac{1}{2\pi i} \int_{\gamma_j} \frac{dz}{z-a} = \frac{1}{2\pi i} \int_{0}^{1} \frac{ e^{\tilde{\gamma}_j(t)} \tilde{\gamma}_j'(t)}{e^{\tilde{\gamma}_j(t)}} dt = \frac{\tilde{\gamma}_j(1) - \tilde{\gamma}_j(0)}{2\pi i}
 $$
