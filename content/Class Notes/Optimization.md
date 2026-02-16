@@ -790,7 +790,7 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > We say that a minimization problem is **unbounded** if for each real $B$, there is a feasible point of cost strictly less than $B$.
 
 > [!TIP] Theorem
-> In LPS, suppose that $\vec{p} \in F$ (feasible set). Then either the LPS instance is **unbounded** or there is a **vertex** $\vec{v}$ of $F$ satisfying:
+> In LPS, suppose that $\vec{p} \in F$ (feasible set). Then either the LPS instance is **unbounded** or there is a **extreme point** $\vec{v}$ of $F$ satisfying:
 > $$ \langle \vec{c}, \vec{v} \rangle \le \langle \vec{c}, \vec{p} \rangle $$
-> (i.e., either there is no optimal solution or there is an optimal vertex).
+> (i.e., either there is no optimal solution or there is an optimal extreme point).
 
