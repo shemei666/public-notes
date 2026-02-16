@@ -847,3 +847,7 @@ $\gamma_{1},\gamma_{2}$  are two curves $\gamma_{1}\sim \gamma_{2}$ in $\mathbb{
 $$
 \eta(\gamma_{1};a) = \frac{1}{2\pi i} \int_{\gamma_{1}} \frac{dz}{z-a} = \frac{1}{2\pi i} \int_{\gamma_{2}} \frac{dz}{z-a} = \eta(\gamma_{2};a)
 $$
+
+> [!QUESTION] Question
+> Is the converse true?
+> Does $\eta(\gamma_1; a) = \eta(\gamma_2; a)$ imply $\gamma_1 \sim \gamma_2$ in $\mathbb{C} \setminus \{a\}$?
