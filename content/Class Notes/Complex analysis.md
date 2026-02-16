@@ -836,6 +836,21 @@ g(1) = 2\pi i k \quad \text{for some } k \in \mathbb{Z}
 $$
 Since $\eta(\gamma, a) = \frac{1}{2\pi i} g(1)$, we have $\eta(\gamma, a) = k \in \mathbb{Z}$.
 
+**Proof of (2): Continuity of $\eta(\gamma, \cdot)$**
+Let $a \in \mathbb{C} \setminus \gamma$. Since $\gamma$ is a closed set (image of compact set), there exists $\delta > 0$ such that $D(a, \delta) \cap \gamma = \emptyset$.
+Let $b \in D(a, \delta/2)$. Then for any $z \in \gamma$, $|z-a| \ge \delta$ and $|z-b| \ge \delta/2$.
+Consider the difference:
+$$
+\begin{align*}
+|\eta(\gamma, a) - \eta(\gamma, b)| &= \left| \frac{1}{2\pi i} \int_\gamma \left( \frac{1}{z-a} - \frac{1}{z-b} \right) dz \right| \\
+&= \frac{1}{2\pi} \left| \int_\gamma \frac{a-b}{(z-a)(z-b)} dz \right| \\
+&\le \frac{1}{2\pi} \int_\gamma \frac{|a-b|}{|z-a||z-b|} |dz| \\
+&\le \frac{|a-b|}{2\pi} \frac{1}{\delta \cdot (\delta/2)} \text{length}(\gamma)
+\end{align*}
+$$
+As $b \to a$, the right hand side goes to 0. Thus $\eta(\gamma, \cdot)$ is continuous at $a$.
+Since $\eta$ is continuous and integer-valued, it must be constant on each connected component of $\mathbb{C} \setminus \gamma$. $\blacksquare$
+
 ### Covering spaces
 
 > [!INFO] Definition: Covering Map
