@@ -881,3 +881,13 @@ $$
 &= \frac{\tilde{\gamma}_j(1) - \tilde{\gamma}_j(0)}{2\pi i}
 \end{align*}
 $$
+Then we have that $\gamma_{2}(1) = \gamma_{2}(1)$, hence $\tilde{\gamma}_{1},\tilde{\gamma}_{2}$ have the fixed endpoints, since $\mathbb{C}$ is simply connected, $\tilde{\gamma_{1}},\tilde{\gamma_{2}}$ are homotopic, hence its images are also homotopic. $\quad \blacksquare$
+
+> [!NOTE] Note
+> We are using the following results from [[Algebraic Topology#Lifting theorems|Algebraic Topology]]:
+> 1. **Lifting Theorem**: For a covering map $p: E \to X$, paths can be lifted uniquely given a starting point such that $p(\tilde{\gamma}(0)) = \gamma(0)$.
+> 2. The projection of a homotopy in the covering space gives a homotopy in the base space.
+
+
+
+
