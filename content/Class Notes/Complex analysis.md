@@ -873,5 +873,5 @@ $$
 $$
 Then $\gamma_{1} \sim \gamma_{2}$ in $\mathbb{C}\setminus \{ 0 \}$, $\eta(\gamma,0) = \frac{1}{2\pi i} \int_{\gamma} \frac{dz}{z}$ 
 $$
-\eta(\gamma,0) = \frac{1}{2\pi i} \int_{\gamma } \frac{dz}{z-a} = \int
+\eta(\gamma,0) = \frac{1}{2\pi i} \int_{\gamma } \frac{dz}{z-a} = \int_{0}^{1} \frac{ e^{\tilde{\gamma}(t)} \tilde{\gamma}'(t)}{e^{\tilde{\gamma}(t)}-a}
 $$
