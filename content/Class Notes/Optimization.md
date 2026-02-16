@@ -745,7 +745,6 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > [!QUESTION] Exercise
 > If $\vec{v}$ is degenerate, is it necessarily true that there are two different bases corresponding to $\vec{v}$? (Prove or provide counterexample)
 
-
 > [!TIP] Lemma
 > Suppose $P = \{ \vec{x} \in \mathbb{R}^n \mid A\vec{x} \le \vec{b} \}$ is a polyhedron. Then $\vec{v}$ is an extreme point of $P$ iff there are $n$ linearly independent active constraints among $A\vec{x} \le \vec{b}$ that are **tight** at $\vec{v}$, that is, satisfy equality at $\vec{v}$.
 >
