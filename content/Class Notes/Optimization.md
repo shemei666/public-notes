@@ -764,3 +764,4 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > But $\vec{v} = \frac{(\vec{v} + \epsilon \vec{w}) + (\vec{v} - \epsilon \vec{w})}{2}$.
 > Since $\vec{w} \neq \vec{0}$, these points are distinct. This contradicts that $\vec{v}$ is an extreme point.
 > Thus, $\text{rank}(B) = n$, meaning there are $n$ linearly independent tight constraints. 
+
