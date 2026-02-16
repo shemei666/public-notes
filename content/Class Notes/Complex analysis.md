@@ -871,3 +871,4 @@ $$
 $$
 \eta(\gamma,0) = \eta(\gamma_{2},0) \quad 0 \not\in \gamma_{1} \cup \gamma_{2}
 $$
+Then $\gamma_{1} \sim \gamma_{2}$ in $\mathbb{C}\setminus \{ 0 \}$
