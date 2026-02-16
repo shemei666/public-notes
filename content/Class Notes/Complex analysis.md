@@ -836,3 +836,4 @@ g(1) = 2\pi i k \quad \text{for some } k \in \mathbb{Z}
 $$
 Since $\eta(\gamma, a) = \frac{1}{2\pi i} g(1)$, we have $\eta(\gamma, a) = k \in \mathbb{Z}$.
 
+### Covering spaces
