@@ -845,5 +845,5 @@ Since $\eta(\gamma, a) = \frac{1}{2\pi i} g(1)$, we have $\eta(\gamma, a) = k \i
 
 $\gamma_{1},\gamma_{2}$  are two curves $\gamma_{1}\sim \gamma_{2}$ in $\mathbb{C}\setminus \{ a \}$
 $$
-\eta(\gamma;a) = \frac{1}{2\pi i} \int_{\gamma} \frac{dz}{}
+\eta(\gamma_{1};a) = \frac{1}{2\pi i} \int_{\gamma_{1}} \frac{dz}{z-a} = \frac{1}{2\pi i} \int_{\gamma_{2}} \frac{dz}{z-a} = \eta(\gamma_{2};a)
 $$
