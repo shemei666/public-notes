@@ -837,3 +837,11 @@ $$
 Since $\eta(\gamma, a) = \frac{1}{2\pi i} g(1)$, we have $\eta(\gamma, a) = k \in \mathbb{Z}$.
 
 ### Covering spaces
+> [!INFO] Definition: Covering Map
+> Let $E$ and $X$ be topological spaces. A continuous surjective map $p: E \to X$ is called a **covering map** if for every $x \in X$, there exists an open neighborhood $U \subseteq X$ such that $p^{-1}(U)$ is a disjoint union of open sets $V_\alpha \subseteq E$:
+> $$ p^{-1}(U) = \bigsqcup_{\alpha \in A} V_\alpha $$
+> where for each $\alpha \in A$, the restriction $p|_{V_\alpha}: V_\alpha \to U$ is a homeomorphism. The neighborhood $U$ is said to be **evenly covered**. refer [[Algebraic Topology#Covering Spaces|Covering Spaces]]
+
+
+
+
