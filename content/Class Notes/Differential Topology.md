@@ -673,4 +673,10 @@ The formula in (iii) follows immediately by applying $\frac{\partial}{\partial t
 > For $f, \tilde{f}$ on $U, \widetilde{U}$ as before, if $\underline{x}: \widetilde{U} \to U$ is a diffeomorphism, then at any critical point $p$ of $f$ corresponding to $\tilde{p}$ of $\tilde{f}$ we have $Hess(\widetilde{f})_{\widetilde{p}} = (dx)_{\widetilde{p}}^{t} \widetilde{Hess(f)_{p}} dx_{\widetilde{p}}$
 
 
+## Towards Applications of Sard's Theorem
+$f: X \to Y$ If $p \in X$ is a regular point, then $f$ remains regular near $p$ (in an open nbd of $p$) and also $f$ is an open map near $p$.
 
+$f: X \to \mathbb{R}$
+$S^2 \xrightarrow{f} \mathbb{R}^2$
+
+Near a regular point, $f$ looks like projection to some coordinates (local submersion theorem).
