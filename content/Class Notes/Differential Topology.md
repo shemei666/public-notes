@@ -637,3 +637,8 @@ V \arrow[rr, "f"] \arrow[dr, "h", swap] & & \mathbb{R}^p \\
  Now start with a smooth function $f(x)$ on $U$. We want to compare the partials of $f(x)$ with those of $\tilde{f}(t)$ .
 
 ---
+
+> [!TIP] Corollary 1
+> Let $C_i(f), C_i(\tilde{f})$ denote the locus where all the partials of order $\le i$ vanish (in $U, \widetilde{U}$ respectively).
+> Then the image of $C_i(\tilde{f})$ under $\underline{x}$ contains $C_i(f)$.
+
