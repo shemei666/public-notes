@@ -621,12 +621,17 @@ V \arrow[rr, "f"] \arrow[dr, "h", swap] & & \mathbb{R}^p \\
 > Let $S \subseteq U$ be a cube of side-length $\delta$ such that $\overline{S} \subseteq U$.
 > For any $x \in S$ and $x+h \in S$, there exists a constant $a(S, \delta)$ such that
 > $$ \|f(x+h)-f(x)\| < a\|h\|^{k+1} $$
-> Now write $S$ as a union of $r^n$ cubes of side-length $\delta/r$.
-> Consider a subcube $S_1$ of side length $\delta/r$. For any $x, x+h \in S_1$, we have
-> $$ \|h\| < \frac{\delta}{r}\sqrt{n} \quad (\text{by Pythagoras}) $$
-> Thus $f(S_1)$ is contained in a cube of side length $< 2a \left(\frac{\delta}{r}\sqrt{n}\right)^{k+1}$.
+> Now write $S$ as a union of $r^n$ cubes of side-length $\delta_1/r$.
+> Consider a subcube $S_1$ of side length $\delta_1/r$. For any $x, x+h \in S_1$, we have
+> $$ \|h\| < \frac{\delta_1}{r}\sqrt{n} \quad (\text{by Pythagoras}) $$
+> Thus $f(S_1)$ is contained in a cube of side length $< 2a \left(\frac{\delta_1}{r}\sqrt{n}\right)^{k+1}$.
 > The total volume is bounded by:
-> $$ \sum \text{Vol}(f(S_1)) \le r^n \left[ 2a \left( \frac{\delta}{r}\sqrt{n} \right)^{k+1} \right]^p = C r^{n-p(k+1)} $$
+> $$ \sum \text{Vol}(f(S_1)) \le r^n \left[ 2a \left( \frac{\delta_1}{r}\sqrt{n} \right)^{k+1} \right]^p = C r^{n-p(k+1)} $$
 > Since $k > \frac{n}{p} - 1 \implies p(k+1) > n$, the exponent is negative.
 > Thus as $r \to \infty$, the volume goes to 0.
 
+> [!TIP] Theorem: Global Sard's Theorem
+> $f:X\to Y$  smooth , critical values have measure $0$ in $Y$. Same holds for $\{ f_{i} \}:X_{i}\to Y$
+
+> [!NOTE]- Proof
+> Let $\widetilde{U},U$ be open sets in some Euclidean space. Let $x(t):\widetilde{U}\to U$ be a smooth function. For any function
