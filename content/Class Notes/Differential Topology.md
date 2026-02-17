@@ -642,6 +642,9 @@ V \arrow[rr, "f"] \arrow[dr, "h", swap] & & \mathbb{R}^p \\
 > Let $C_i(f), C_i(\tilde{f})$ denote the locus where all the partials of order $\le i$ vanish (in $U, \widetilde{U}$ respectively).
 > Then the image of $C_i(\tilde{f})$ under $\underline{x}$ contains $C_i(f)$.
 
-> [!TIP] Corollary
-> If $x$ is a diffeomorphism, then $C_{i}(\widetilde{f})$ maps to $C_{i}(f)$. More generally this holds for $F: U\to \mathbb{R}^{p}$, $\widetilde{F} = F\circ x$ in place of $f$.
+> [!INFO] Definition: Hessian
+> Suppose $U, \widetilde{U}$ are open sets in $\mathbb{R}^n$. For any function $g: U \to \mathbb{R}$, we define its Hessian, $\text{Hess}(g)$ to be the $n \times n$ matrix $(\frac{\partial^2 g}{\partial x_i \partial x_j})$.
+
+> [!TIP] Corollary 3
+> For $f, \tilde{f}$ on $U, \widetilde{U}$ as before, if $\underline{x}: \widetilde{U} \to U$ is a diffeomorphism, then at any critical point $p$ of $f$ corresponding to $\tilde{p}$ of $\tilde{f}$ ...
 
