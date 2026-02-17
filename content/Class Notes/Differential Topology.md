@@ -649,5 +649,7 @@ V \arrow[rr, "f"] \arrow[dr, "h", swap] & & \mathbb{R}^p \\
 > Suppose $U, \widetilde{U}$ are open sets in $\mathbb{R}^n$. For any function $g: U \to \mathbb{R}$, we define its Hessian, $\text{Hess}(g)$ to be the $n \times n$ matrix $(\frac{\partial^2 g}{\partial x_i \partial x_j})$.
 
 > [!TIP] Corollary 3
-> For $f, \tilde{f}$ on $U, \widetilde{U}$ as before, if $\underline{x}: \widetilde{U} \to U$ is a diffeomorphism, then at any critical point $p$ of $f$ corresponding to $\tilde{p}$ of $\tilde{f}$ we have $Hess(\widetilde{f})_{\widetilde{p}} = (dx)_{\widetilde{p}}^{t} \widetilde{}$
+> For $f, \tilde{f}$ on $U, \widetilde{U}$ as before, if $\underline{x}: \widetilde{U} \to U$ is a diffeomorphism, then at any critical point $p$ of $f$ corresponding to $\tilde{p}$ of $\tilde{f}$ we have $Hess(\widetilde{f})_{\widetilde{p}} = (dx)_{\widetilde{p}}^{t} \widetilde{Hess(f)_{p}} dx_{\widetilde{p}}$
+
+
 
