@@ -634,4 +634,6 @@ V \arrow[rr, "f"] \arrow[dr, "h", swap] & & \mathbb{R}^p \\
 > $f:X\to Y$  smooth , critical values have measure $0$ in $Y$. Same holds for $\{ f_{i} \}:X_{i}\to Y$
 
 > [!NOTE]- Proof
-> Let $\widetilde{U},U$ be open sets in some Euclidean space. Let $x(t):\widetilde{U}\to U$ be a smooth function. For any function
+> Let $\widetilde{U},U$ be open sets in some Euclidean space. Let $x(t):\widetilde{U}\to U$ be a smooth function. For any function $g(x): U \to \mathbb{R}$ we use $\tilde{g}(t)$ to denote $g \circ x: \widetilde{U} \to \mathbb{R}$.
+> Now start with a smooth function $f(x)$ on $U$. We want to compare the partials of $f(x)$ with those of $\tilde{f}(t)$ .
+
