@@ -617,3 +617,5 @@ V \arrow[rr, "f"] \arrow[dr, "h", swap] & & \mathbb{R}^p \\
 > [!TIP] Lemma
 > $\forall k>\frac{n}{p} -1$, $f(C_k)$ has measure 0.
 
+> [!NOTE]- Proof
+> 
