@@ -636,7 +636,28 @@ V \arrow[rr, "f"] \arrow[dr, "h", swap] & & \mathbb{R}^p \\
  Let $\widetilde{U},U$ be open sets in some Euclidean space. Let $x(t):\widetilde{U}\to U$ be a smooth function. For any function $g(x): U \to \mathbb{R}$ we use $\tilde{g}(t)$ to denote $g \circ x: \widetilde{U} \to \mathbb{R}$.
  Now start with a smooth function $f(x)$ on $U$. We want to compare the partials of $f(x)$ with those of $\tilde{f}(t)$ .
 
----
+(i) $1^{st}$ partials:
+$$
+\frac{\partial \tilde{f}}{\partial t_i} = \sum_j \left(\widetilde{\frac{\partial f}{\partial x_j}}\right) \frac{\partial x_j}{\partial t_i} \quad \text{by chain rule.}
+$$
+
+(ii) $2^{nd}$ partials: We replace $i, j$ in (i) by $i_1, j_1$ for notational convenience.
+Apply $\frac{\partial}{\partial t_{i_2}}$ to the formula in (i) to get
+$$
+\begin{align}
+\frac{\partial}{\partial t_{i_2}}\left(\frac{\partial \tilde{f}}{\partial t_{i_1}}\right) = \frac{\partial^2 \tilde{f}}{\partial t_{i_2} \partial t_{i_1}} &= \sum_{j_1} \left[ \frac{\partial}{\partial t_{i_2}} \left(\widetilde{\frac{\partial f}{\partial x_{j_1}}}\right) \frac{\partial x_{j_1}}{\partial t_{i_1}} + \left(\widetilde{\frac{\partial f}{\partial x_{j_1}}}\right) \cdot \frac{\partial^2 x_{j_1}}{\partial t_{i_2} \partial t_{i_1}} \right] \quad \text{by product rule} \\
+&= \sum_{j_1} \left( \sum_{j_2} \left(\widetilde{\frac{\partial^2 f}{\partial x_{j_2} \partial x_{j_1}}}\right) \frac{\partial x_{j_2}}{\partial t_{i_2}} \right) \cdot \frac{\partial x_{j_1}}{\partial t_{i_1}} + \sum_{j_1} \left(\widetilde{\frac{\partial f}{\partial x_{j_1}}}\right) \frac{\partial^2 x_{j_1}}{\partial t_{i_2} \partial t_{i_1}}
+\end{align}
+$$
+(using (i) for $(\frac{\partial f}{\partial x_{j_1}})^{\sim}$ instead of $\tilde{f}$)
+
+(iii) By induction we see that for $k \ge 1$ we have
+$$
+\frac{\partial^k \tilde{f}}{\partial t_{i_k} \dots \partial t_{i_1}} = \sum_{j_1, \dots, j_k} \left(\widetilde{\frac{\partial^k f}{\partial x_{j_k} \dots \partial x_{j_1}}}\right) \frac{\partial x_{j_k}}{\partial t_{i_k}} \dots \frac{\partial x_{j_1}}{\partial t_{i_1}} + \left( \substack{\text{finite sums of} \\ \text{lower order partials} \\ \text{of } f \\ (0 < m < k) } \right) \cdot \text{partials of } \bar{x}
+$$
+
+The formula in (iii) follows immediately by applying $\frac{\partial}{\partial t_{i_{k+1}}}$ to both sides and using (i) and the product rule.
+
 
 > [!TIP] Corollary 1
 > Let $C_i(f), C_i(\tilde{f})$ denote the locus where all the partials of order $\le i$ vanish (in $U, \widetilde{U}$ respectively).
