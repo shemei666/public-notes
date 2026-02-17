@@ -642,3 +642,6 @@ V \arrow[rr, "f"] \arrow[dr, "h", swap] & & \mathbb{R}^p \\
 > Let $C_i(f), C_i(\tilde{f})$ denote the locus where all the partials of order $\le i$ vanish (in $U, \widetilde{U}$ respectively).
 > Then the image of $C_i(\tilde{f})$ under $\underline{x}$ contains $C_i(f)$.
 
+> [!TIP] Corollary
+> If $x$ is a diffeomorphism, then $C_{i}(\widetilde{f})$ maps to $C_{i}(f)$. More generally this holds for $F: U\to \mathbb{R}^{p}$, $\widetilde{F} = F\circ x$ in place of $f$.
+
