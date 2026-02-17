@@ -614,3 +614,6 @@ V \arrow[rr, "f"] \arrow[dr, "h", swap] & & \mathbb{R}^p \\
 > Now consider the function $\bar{g} = g(0, \cdot, \dots, \cdot)$ (i.e., put the first coordinate as 0)
 > Now $\overline{g}$ is a function from open subset of $\mathbb{R}^{n-1}$ to $\mathbb{R}^{p}$. Since $C_{K}(g)\subseteq \{ 0 \}\times C_{k}(\overline{g})$ and by induction critical values of $\overline{g}$ have measure $0$, we see that $g(C_{k}(g))$ has measure $0$, i.e. critical values of g have measure 0. Thus the same holds for $f(C_{k}|_{V})$. By countability this holds for $f(C_{k}\setminus C_{k+1})$. $\quad \blacksquare$
 
+> [!TIP] Lemma
+> $\forall k>\frac{n}{p} -1$, $f(C_k)$ has measure 0.
+
