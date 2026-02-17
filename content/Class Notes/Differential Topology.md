@@ -618,4 +618,15 @@ V \arrow[rr, "f"] \arrow[dr, "h", swap] & & \mathbb{R}^p \\
 > $\forall k>\frac{n}{p} -1$, $f(C_k)$ has measure 0.
 
 > [!NOTE]- Proof
-> 
+> Let $S \subseteq U$ be a cube of side-length $\delta$ such that $\overline{S} \subseteq U$.
+> For any $x \in S$ and $x+h \in S$, there exists a constant $a(S, \delta)$ such that
+> $$ \|f(x+h)-f(x)\| < a\|h\|^{k+1} $$
+> Now write $S$ as a union of $r^n$ cubes of side-length $\delta/r$.
+> Consider a subcube $S_1$ of side length $\delta/r$. For any $x, x+h \in S_1$, we have
+> $$ \|h\| < \frac{\delta}{r}\sqrt{n} \quad (\text{by Pythagoras}) $$
+> Thus $f(S_1)$ is contained in a cube of side length $< 2a \left(\frac{\delta}{r}\sqrt{n}\right)^{k+1}$.
+> The total volume is bounded by:
+> $$ \sum \text{Vol}(f(S_1)) \le r^n \left[ 2a \left( \frac{\delta}{r}\sqrt{n} \right)^{k+1} \right]^p = C r^{n-p(k+1)} $$
+> Since $k > \frac{n}{p} - 1 \implies p(k+1) > n$, the exponent is negative.
+> Thus as $r \to \infty$, the volume goes to 0.
+
