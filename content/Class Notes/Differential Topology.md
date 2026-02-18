@@ -681,6 +681,17 @@ $S^2 \xrightarrow{f} \mathbb{R}^2$
 
 Near a regular point, $f$ looks like projection to some coordinates (local submersion theorem).
 
+$p$ critical $\iff$ all first partials vanish.
+Now we use $\text{Hess}(f)_{p} = \left( \frac{\partial^{2} f}{\partial x_{i}\partial x_{j}} \right)_{(p)}$
+
+$p \in U$ critical for $f$, we call $p$ a **non-degenerate critical point**, if $\text{Hess}(f)_{p}$ is invertible, else we call it degenerate.
+
+Observe that $p$ is a non-degenerate critical point iff for the function
+$g=df: U \to \mathbb{R}^{k} \quad df = \left[ \frac{\partial f}{\partial x_{1}}, \dots, \frac{\partial f}{\partial x_{k}} \right]$
+satisfies $g(p)=0$, $dg_{p} = \text{Hess}(f)_{p}$ is an isomorphism.
+
+We immediately get the following:
+
 > [!TIP] Proposition
 > Non-degenerate critical points of $f$ in $U$ are isolated.
 
