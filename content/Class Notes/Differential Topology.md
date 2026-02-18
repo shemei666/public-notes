@@ -680,3 +680,10 @@ $f: X \to \mathbb{R}$
 $S^2 \xrightarrow{f} \mathbb{R}^2$
 
 Near a regular point, $f$ looks like projection to some coordinates (local submersion theorem).
+
+> [!TIP] Proposition
+> Non-degenerate critical points of $f$ in $U$ are isolated.
+
+> [!NOTE]- Proof
+> By above condition on $g$, $p$ is a non-degenerate critical point. $\implies$ g is local diffeo, hence one-one locally and hence $g(x)=0$ only for one point in a nbd of $p$. i.e. at p itself.
+
