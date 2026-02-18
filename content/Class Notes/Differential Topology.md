@@ -692,5 +692,6 @@ Near a regular point, $f$ looks like projection to some coordinates (local subme
 > [!TIP] Lemma: Morse Lemma
 > If $p \in U$ is a non-deg critical point, then $\exists$ a local coordinate system $y_{1},\dots,y_{k}$ around $p$ such that in the new coordinates
 > $$
-> f(y)  = f(p) + \sum_{h_{}}^{}
+> f(y)  = f(p) + \sum_{}^{} h_{ij} y_{i}y_{j} 
 >$$
+>where $h_{j}$ are the constant $\frac{\partial^{2}}{\partial x_{i}\partial x_{j}}f(p)$
