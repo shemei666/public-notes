@@ -756,5 +756,5 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
 > $$
 > f_{(b,c)}\circ \pi ^{-1} = f \circ \pi ^{-1} + \underbrace{ \sum_{i=1}^{k} b_{i}(x_{i} \circ \pi ^{-1}) }_{ \text{linear function on }U } + \sum_{j=1}^{N-k} c_{i}(x_{i+k}\circ\pi ^{-1})
 > $$
-> Fix $c \in \mathbb{R}^{N-k}$. Then using the non-linear part, $f(0,c) \circ \pi ^{-1}$, by l
+> Fix $c \in \mathbb{R}^{N-k}$. Then using the non-linear part, $f(0,c) \circ \pi ^{-1}$, by Lemma 2 the set $\{ b \in \mathbb{R}^{k}\mid f_{(0,c)}\circ \pi ^{-1}  \text{is not Morse}\}$ has measure 0.
 
