@@ -690,4 +690,7 @@ Near a regular point, $f$ looks like projection to some coordinates (local subme
 **Fact:** Near a non-degenerate critical point $f$ is better behaved as compared to degenerate ones.
 
 > [!TIP] Lemma: Morse Lemma
-> If $p \in U$ is a non-deg critical point, then $\exists$ a local coordinates 
+> If $p \in U$ is a non-deg critical point, then $\exists$ a local coordinate system $y_{1},\dots,y_{k}$ around $p$ such that in the new coordinates
+> $$
+> f(y)  = f(p) + \sum_{h_{}}^{}
+>$$
