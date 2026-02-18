@@ -714,6 +714,9 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > Prove or disprove $K\subseteq \mathbb{R}^{n}$ is a closed convex set with non-empty interior (unless affine or affine halfspace) $K= conv(\partial K)$
 
 ---
+#todo  Fridays class LPS starting.
+
+---
 > [!TIP] Theorem: 
 > In LPS, let $w \in \mathbb{R}^{n}$. Then $w$ is an extreme point of feasible set $F$ iff $w$ is a bfs (w.r.t some $J$)
 

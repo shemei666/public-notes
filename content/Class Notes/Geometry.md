@@ -475,35 +475,6 @@ d(A,B) = \lvert \overrightarrow{AB} \rvert
 $$
 
 **Exercise:** Check $d$ is a metric.
-
-**Def:** Angle between lines
-Let $\mathscr{E}$ be an Euclidean affine space.
-Let $d$ be the induced distance on $\mathscr{E}$.
-Let $D_1$ & $D_2$ be two lines intersecting at $P$.
-$$ D_1 = \{P + \lambda v_1 \mid \lambda \in \mathbb{R}\} $$
-$$ D_2 = \{P + \lambda v_2 \mid \lambda \in \mathbb{R}\} $$
-Let $v_1$ & $v_2$ be two directions of $D_1$ & $D_2$ resp.
-Let $\theta$ be the angle between $v_1$ & $v_2$, then $\cos \theta = \frac{\langle v_1, v_2 \rangle}{\|v_1\| \|v_2\|}$, $\theta \in [0, \pi]$.
-Angle between $D_1$ & $D_2$ := angle between directions of $D_1$ & $D_2$.
-
-```tikz
-\begin{document}
-\begin{tikzpicture}[>=stealth, scale=1]
-  \coordinate (P) at (0,0);
-  \draw[thick] (-2, -1) -- (2, 1) node[right] {$D_1$};
-  \draw[thick] (-2, 1) -- (2, -1) node[right] {$D_2$};
-  \filldraw (P) circle (1.5pt) node[below] {$P$};
-  
-  \coordinate (v1) at (1, 0.5);
-  \coordinate (v2) at (1, -0.5);
-  \draw[->, red, thick] (P) -- (v1) node[midway, above] {$v_1$};
-  \draw[->, blue, thick] (P) -- (v2) node[midway, below] {$v_2$};
-  
-  \draw (0.5, 0.25) arc (26.5:-26.5:0.55);
-  \node at (0.7, 0) {$\theta$};
-\end{tikzpicture}
-\end{document}
-```
 **Def:** $T:V\to W$ a linear map is called a **linear isometry** if $\lvert T(u) \rvert = \lvert u \rvert, \forall u \in V$.
 **Def:** $\phi:\mathscr{E}\to \mathscr{F}$ is an **affine isometry** if $d(\phi(A),\phi(B)) = d(A,B),\forall A,B \in \mathscr{E}$.
 
@@ -724,5 +695,44 @@ $l_x(y) \leq 0$ for all $y \in C$ and $l_x(x) > 0$.
 #todo 
 
 ---
+
+**Def:** Angle between lines
+Let $\mathscr{E}$ be an Euclidean affine space.
+Let $d$ be the induced distance on $\mathscr{E}$.
+Let $D_1$ & $D_2$ be two lines intersecting at $P$.
+$$ D_1 = \{P + \lambda v_1 \mid \lambda \in \mathbb{R}\} $$
+$$ D_2 = \{P + \lambda v_2 \mid \lambda \in \mathbb{R}\} $$
+Let $v_1$ & $v_2$ be two directions of $D_1$ & $D_2$ resp.
+Let $\theta$ be the angle between $v_1$ & $v_2$, then $\cos \theta = \frac{\langle v_1, v_2 \rangle}{\|v_1\| \|v_2\|}$, $\theta \in [0, \pi]$.
+Angle between $D_1$ & $D_2$ := angle between directions of $D_1$ & $D_2$.
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
+  \coordinate (P) at (0,0);
+  \draw[thick] (-2, -1) -- (2, 1) node[right] {$D_1$};
+  \draw[thick] (-2, 1) -- (2, -1) node[right] {$D_2$};
+  \filldraw (P) circle (1.5pt) node[below] {$P$};
+  
+  \coordinate (v1) at (1, 0.5);
+  \coordinate (v2) at (1, -0.5);
+  \draw[->, red, thick] (P) -- (v1) node[midway, above] {$v_1$};
+  \draw[->, blue, thick] (P) -- (v2) node[midway, below] {$v_2$};
+  
+  \draw (0.5, 0.25) arc (26.5:-26.5:0.55);
+  \node at (0.7, 0) {$\theta$};
+\end{tikzpicture}
+\end{document}
+```
+
+**Exercise:** Affine isometries preserve angles.
+Let $D_1, D_2$ be two lines intersecting at $P$.
+$\phi(D_1), \phi(D_2)$ are lines intersecting at $\phi(P)$.
+Let $v_1, v_2$ be directions of $D_1, D_2$.
+Let $T$ be the ALM $\implies T$ is an isometry.
+$T(v_1), T(v_2)$ will be directions of $\phi(D_1), \phi(D_2)$.
+Let $\theta$ be the angle between $v_1, v_2$.
+Let $\theta'$ be the angle between $T(v_1), T(v_2)$.
+Rest is Ex.
 
 
