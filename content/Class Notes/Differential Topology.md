@@ -737,5 +737,5 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
 > [!NOTE]- Proof of Theorem
 > We will use Fubini's theorem and ue above lemma. To apply Fubini, we observe that the set $A \subseteq \mathbb{R}^{N}$ given by $A = \{  a \in  \mathbb{R}^{N}\mid  f_{a} \text{ is not Morse}\}$ is countable union of closed sets. 
 > This can be seen as $A$ is the continuous image of a closed set, namely $A$ is the image of $\Gamma \subseteq X \times \mathbb{R}^{N}$ under second projection where $\Gamma = \{ (x,a)\mid (df_{a})_{x} = 0, Hess(f_{a})_{x}  \text{ is singular}\}$. 
-> It suffices 
+> It suffices to show that for each $p \in X, \exists$ an open nbd $V \subseteq X$ of $p$ such that $f_{a}|_{V}$ is Morse is Morse for almost all 
  
