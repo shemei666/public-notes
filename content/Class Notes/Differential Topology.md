@@ -696,3 +696,13 @@ Near a regular point, $f$ looks like projection to some coordinates (local subme
 >$$
 >where $h_{j}$ are the constant $\frac{\partial^{2}}{\partial x_{i}\partial x_{j}}f(p)$
 
+> [!TIP] Lemma
+> If $p \in U$,open $\subseteq \mathbb{R}^{k}$ is non-deg crititcal for $f:U\to \mathbb{R}$, then for any diffeo $\widetilde{U}\xrightarrow{\phi} U$, $\widetilde{p}= \phi ^{-1} (p)$ is a non-deg critical point of $\widetilde{f} = f \circ \phi$.
+
+> [!NOTE]- Proof
+> By chain rule, $\widetilde{p}$ is critical for $\widetilde{f}$, By above formula for Hessian we see that $Hess(\widetilde{f})_{\widetilde{p}}$ is invertible $\iff$ $Hess_{p}(f)$ invertible as $d\phi_{\widetilde{p}}$ is invertible. $\quad \blacksquare$
+
+Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont for a smooth function $f:X\to \mathbb{R}$, if it is so in one ( and hence in every) coordinate system around $p$.
+
+A smooth function $f:X\to \mathbb{R}$ is called a Morse function if all its critical points are non-degenerate.
+
