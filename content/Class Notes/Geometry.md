@@ -735,4 +735,14 @@ Let $\theta$ be the angle between $v_1, v_2$.
 Let $\theta'$ be the angle between $T(v_1), T(v_2)$.
 Rest is Ex.
 
+> [!TIP] Theorem:
+> Any convex polyhedron is the intersection of a finite number of closed half-spaces. Conversely, any compact intersection of a finite number of half-spaces is a convex polyhedron.
+
+> [!NOTE]- Proof
+> First part was done.
+> Let $C = \bigcap_{i=1}^m H_i$, where $H_i = \{ x \in \mathbb{R}^n \mid l_i(x) \le b_i \}$ and $l_i(x) = \langle x, a_i \rangle$.
+
+> [!INFO] Definition: Regular Polyhedra
+> A convex polygon is said to be regular if all its sides have the same length and angles have the same measure.
+
 
