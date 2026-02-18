@@ -717,3 +717,9 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
 
 A smooth function $f:X\to \mathbb{R}$ is called a Morse function if all its critical points are non-degenerate.
 
+
+> [!TIP] Theorem: 
+> Let $X \subseteq \mathbb{R}^{N}$ be a k-manifold, Let $f:X\to \mathbb{R}$ be a smooth function. For any $a \in \mathbb{R}^{N}$, we set $f_{a}:= f + \sum_{i=1}^{N}a_{i}x_{i}$. Then $f_{a}$ is a Morse function for almost all $a \in \mathbb{R}^{N}$.
+
+> [!NOTE]- Proof
+> 
