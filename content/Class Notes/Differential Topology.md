@@ -728,6 +728,11 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
 > [!NOTE]- Proof
 >  We are $g_{a}:= df_{a}= df+a = g+a$. Hence $Hess(f_{a}) = df_{a}=dg = Hess(f)$. Therefore $p$ is non-deg critical point of $f_{a} \iff g_{a}(p)=0$ and $(dg_{a})_{p}$ is an isomorphism.
 >  $f_{a}$ is Morse iff
->  $$ g_{a}(p) =0 \implies (dg_{a})_{p} \quad \text{is an isomorphis$}
+>  $$ 
+>  g_{a}(p) =0 \implies (dg_{a})_{p} \quad \text{is an isomorphism}
 > $$
-> i.e. $g(p)+a = 0 \implies (dg)_{p}$ is an isomorphism
+> i.e. $g(p)+a = 0 \implies (dg)_{p}$ is an isomorphism, Thus $f_{a}$ is Morse iff every point $p$ in the fiber $g^{-1}(-a)$ is regular, i.e. $-a$ is a regular value of $g$.
+> By Sard's theorem, almost all elements in $\mathbb{R}^{k}$ are regular for $g$. $\quad \blacksquare$
+
+
+ 
