@@ -739,6 +739,8 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
 > This can be seen as $A$ is the continuous image of a closed set, namely $A$ is the image of $\Gamma \subseteq X \times \mathbb{R}^{N}$ under second projection where $\Gamma = \{ (x,a)\mid (df_{a})_{x} = 0, Hess(f_{a})_{x}  \text{ is singular}\}$. 
 > It suffices to show that for each $p \in X, \exists$ an open nbd $V \subseteq X$ of $p$ such that $f_{a}|_{V}$ is Morse is Morse for almost all $a \in \mathbb{R}^{N}$.
 > (Countable union of measure $0$ is measure 0 and $X$ is covered by countably many such $V$s)
-> > [!TIP] Lemma: For any $p \in X$, $\exists$ an open nbd $V \subseteq X$ such that the projection of $V$ ot suitably chosen $k$-coordinates (in $\mathbb{R}^{N}$) gives a diffeomorphism $V \xrightarrow{\pi}U\subseteq \mathbb{R}^{k}$
+> > [!TIP] Lemma: For any $p \in X$, $\exists$ an open nbd $V \subseteq X$ such that the projection of $V$ ot suitably chosen $k$-coordinates (in $\mathbb{R}^{N}$) gives a diffeomorphism $V \xrightarrow{\pi}U\subseteq \mathbb{R}^{k}(\subseteq \mathbb{R}^{k}\oplus \mathbb{R}^{N-k})$
+> > > [!NOTE]- Proof
+> 
 > 
  
