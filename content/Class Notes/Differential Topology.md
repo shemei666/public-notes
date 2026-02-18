@@ -754,7 +754,7 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
 > 
 > From now we assume $\pi$ is the projection to first $k$ coordinates. Write $a \in \mathbb{R}^{n}$ as $a = (b,c) \in \mathbb{R}^{k}\times \mathbb{R}^{N-k}$. Then, pulling back $f_{(b,c)}|_{V}$ to $U$ gives 
 > $$
-> f_{(b,c)}\circ \pi ^{-1} = f \circ \pi ^{-1} + \sum_{i=1}^{k} b_{i}(x_{i} \circ \pi ^{-1}) + \sum_{j=1}^{N-k} c_{i}(x_{i+k}\circ\pi ^{-1})
+> f_{(b,c)}\circ \pi ^{-1} = f \circ \pi ^{-1} + \underbrace{ \sum_{i=1}^{k} b_{i}(x_{i} \circ \pi ^{-1}) }_{ \text{linear function on }U } + \sum_{j=1}^{N-k} c_{i}(x_{i+k}\circ\pi ^{-1})
 > $$
-> 
+> Fix $c \in \mathbb{R}^{N-k}$. Then using the non-linear part, $f(0,c) \circ \pi ^{-1}$, by l
 
