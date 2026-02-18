@@ -687,3 +687,7 @@ Near a regular point, $f$ looks like projection to some coordinates (local subme
 > [!NOTE]- Proof
 > By above condition on $g$, $p$ is a non-degenerate critical point. $\implies$ g is local diffeo, hence one-one locally and hence $g(x)=0$ only for one point in a nbd of $p$. i.e. at p itself.
 
+**Fact:** Near a non-degenerate critical point $f$ is better behaved as compared to degenerate ones.
+
+> [!TIP] Lemma: Morse Lemma
+> If $p \in U$ is a non-deg critical point, then $\exists$ a local coordinates 
