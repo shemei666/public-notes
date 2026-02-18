@@ -740,10 +740,21 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
 > It suffices to show that for each $p \in X, \exists$ an open nbd $V \subseteq X$ of $p$ such that $f_{a}|_{V}$ is Morse is Morse for almost all $a \in \mathbb{R}^{N}$.
 > (Countable union of measure $0$ is measure 0 and $X$ is covered by countably many such $V$s)
 > > [!TIP] Lemma: 
-> > For any $p \in X$, $\exists$ an open nbd $V \subseteq X$ such that the projection of $V$ ot suitably chosen $k$-coordinates (in $\mathbb{R}^{N}$) gives a diffeomorphism $V \xrightarrow{\pi}U\subseteq \mathbb{R}^{k}(\subseteq \mathbb{R}^{k}\oplus \mathbb{R}^{N-k})$
+> > For any $p \in X$, $\exists$ an open nbd $V \subseteq X$ such that the projection of $V$ to suitably chosen $k$-coordinates (in $\mathbb{R}^{N}$) gives a diffeomorphism $V \xrightarrow{\pi}U\subseteq \mathbb{R}^{k}(\subseteq \mathbb{R}^{k}\oplus \mathbb{R}^{N-k})$
 > > > [!NOTE]- Proof
-> > > Look at $T_{p}X \subseteq T_{p}\mathbb{R}^{N} = \mathbb{R}^{N}$
-> > > Columns a basis o
+> > > Let $T_{p}X \subseteq \mathbb{R}^{N}$ be the tangent space at $p$. Since $\dim(T_p X) = k$, we can choose $k$ coordinate vectors $e_{i_1}, \dots, e_{i_k}$ in $\mathbb{R}^N$ such that the orthogonal projection $\pi: \mathbb{R}^N \to \mathbb{R}^k$ onto the subspace spanned by these vectors, when restricted to $T_p X$, is an isomorphism.
+> > > 
+> > > Let $\phi: \Omega \to V' \subseteq X$ be a local parametrization of $X$ around $p$, with $\phi(0) = p$, where $\Omega \subseteq \mathbb{R}^k$ is open.
+> > > Consider the map $F = \pi \circ \phi: \Omega \to \mathbb{R}^k$. By the chain rule,
+> > > $$ dF_0 = d\pi_p \circ d\phi_0 $$
+> > > Since $d\phi_0: \mathbb{R}^k \to T_p X$ is an isomorphism and $d\pi_p|_{T_p X}$ is an isomorphism, their composition $dF_0$ is an isomorphism.
+> > > By the **Inverse Function Theorem**, $F$ is a local diffeomorphism near $0$.
+> > > Thus, there exists an open neighborhood $V \subseteq V'$ of $p$ such that $\pi|_V = F \circ \phi^{-1}$ is a diffeomorphism onto its image. $\quad \blacksquare$
 > 
 > 
- 
+> From now we assume $\pi$ is the projection to first $k$ coordinates. Write $a \in \mathbb{R}^{n}$ as $a = (b,c) \in \mathbb{R}^{k}\times \mathbb{R}^{N-k}$. Then, pulling back $f_{(b,c)}|_{V}$ to $U$ gives 
+> $$
+> f_{(b,c)}\circ \pi ^{-1} = f \circ \pi ^{-1} + \sum_{i=1}^{k} b_{i}(x_{i} \circ \pi ^{-1}) + \sum_{j=1}^{N-k} c_{i}(x_{i+k}\circ\pi ^{-1})
+> $$
+> 
+
