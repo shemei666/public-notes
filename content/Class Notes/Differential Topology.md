@@ -726,4 +726,8 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
 > Let $U \subseteq \mathbb{R}^{k}$ be open and $f:U\to \mathbb{R}$ a smooth map. Then, for almost all $a \in \mathbb{R}^{k}$, $f_{a} = f + \sum_{i=1}^{k}a_{i}x_{i}$ is a Morse function.
 
 > [!NOTE]- Proof
->  We are $g_{a}:= df_{a}= df+a = g+a$.
+>  We are $g_{a}:= df_{a}= df+a = g+a$. Hence $Hess(f_{a}) = df_{a}=dg = Hess(f)$. Therefore $p$ is non-deg critical point of $f_{a} \iff g_{a}(p)=0$ and $(dg_{a})_{p}$ is an isomorphism.
+>  $f_{a}$ is Morse iff
+>  $$ g_{a}(p) =0 \implies (dg_{a})_{p} \quad \text{is an isomorphis$}
+> $$
+> i.e. $g(p)+a = 0 \implies (dg)_{p}$ is an isomorphism
