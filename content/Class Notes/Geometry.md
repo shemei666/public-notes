@@ -692,6 +692,8 @@ $l_x(y) \leq 0$ for all $y \in C$ and $l_x(x) > 0$.
 
 [FACT: Any convex polyhedron is homeomorphic to sphere under radial projection]
 
+#todo 
 
+---
 
 
