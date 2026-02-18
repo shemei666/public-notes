@@ -742,7 +742,8 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
 > > [!TIP] Lemma: 
 > > For any $p \in X$, $\exists$ an open nbd $V \subseteq X$ such that the projection of $V$ ot suitably chosen $k$-coordinates (in $\mathbb{R}^{N}$) gives a diffeomorphism $V \xrightarrow{\pi}U\subseteq \mathbb{R}^{k}(\subseteq \mathbb{R}^{k}\oplus \mathbb{R}^{N-k})$
 > > > [!NOTE]- Proof
-> > > Look at $T_{p}X \subseteq T_{p}\mathbb{R}^{n} = \mathbb{R}^{n}$
+> > > Look at $T_{p}X \subseteq T_{p}\mathbb{R}^{N} = \mathbb{R}^{N}$
+> > > Columns a basis o
 > 
 > 
  
