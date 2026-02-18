@@ -695,3 +695,4 @@ Near a regular point, $f$ looks like projection to some coordinates (local subme
 > f(y)  = f(p) + \sum_{}^{} h_{ij} y_{i}y_{j} 
 >$$
 >where $h_{j}$ are the constant $\frac{\partial^{2}}{\partial x_{i}\partial x_{j}}f(p)$
+
