@@ -867,6 +867,12 @@ U_{12} \subseteq U_1 \arrow[ru, "\varphi_1|_{\dots} \cong"] \arrow[rr, "\varphi_
 > For an open subset $V \subseteq X$, we see that
 > $$ T(V) = (V \times \mathbb{R}^N) \cap T(X) $$
 > i.e., an open subset of $T(X)$ in $T(\mathbb{R}^N) = \mathbb{R}^{2N}$.
+>
+> Thus, if $X$ is a $k$-manifold, then for any parametrization $\phi: U \xrightarrow{\sim} V \subseteq X$ (where $U \subseteq \mathbb{R}^k$ open, $V$ open in $X$), we see that
+> $$ T(U) = U \times \mathbb{R}^k \xrightarrow{d\phi} T(V) \subseteq T(X) $$
+> is a diffeomorphism.
+> i.e., $T(X)$ is covered by open sets diffeomorphic to some $U \times \mathbb{R}^k$,
+> $\therefore T(X)$ is a $2k$-dimensional manifold.
 
 > [!INFO] Definition: Differential Map
 > Let $X \xrightarrow{f} Y$ be a smooth map of manifolds in appropriate Euclidean spaces ($X \subseteq \mathbb{R}^N, Y \subseteq \mathbb{R}^M$).
@@ -876,6 +882,23 @@ U_{12} \subseteq U_1 \arrow[ru, "\varphi_1|_{\dots} \cong"] \arrow[rr, "\varphi_
 
 > [!TIP] Claim
 > $df$ is a smooth map.
+
+> [!NOTE]- Proof
+> Indeed, if $W \subseteq \mathbb{R}^N$ is an open set such that $f$ restricted to $X \cap W$ extends to a smooth map $F: W \to \mathbb{R}^N$, that we know that $df$ is the restriction of $dF$ over points of $W \cap X$, $W$ respectively.
+> So to check smoothness of $df$ it suffices to check that of
+> $$
+> \begin{aligned}
+> dF: T(W) &\to T(\mathbb{R}^M) \\
+> (p,v) &\mapsto (F(p), dF_p(v))
+> \end{aligned}
+> $$
+> Since $dF_p$ is given by the partials of $F$, this is clearly smooth. Thus proving the claim. $\quad \blacksquare$
+> 
+
+**Obvious properties of $df$:**
+*   $X \xrightarrow{f} Y \xrightarrow{g} Z$ smooth $\implies d(g \circ f) = dg \circ df$ (as maps $T(X) \xrightarrow{df} T(Y) \xrightarrow{dg} T(Z)$).
+*   follows immediately from Chain rule.
+*   $X \xrightarrow{f} Y$ diffeomorphism $\implies T(X) \xrightarrow{df} T(Y)$ diffeomorphism.
 
 
 
