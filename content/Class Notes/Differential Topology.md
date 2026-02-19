@@ -853,6 +853,30 @@ U_{12} \subseteq U_1 \arrow[ru, "\varphi_1|_{\dots} \cong"] \arrow[rr, "\varphi_
 \end{document}
 ```
 
+## Tangent Bundle
+
+> [!INFO] Definition: Tangent Bundle
+> For a $k$-manifold $X \subseteq \mathbb{R}^N$, we define its **tangent bundle** $T(X)$ to be
+> $$ T(X) = \{ (p,v) \mid p \in X, v \in T_p(X) \} $$
+> Thus $T(X)$ is a subset of $T(\mathbb{R}^N) = \mathbb{R}^{2N}$.
+>
+> We should think of $T(X)$ as the collection of all possible tangent vectors drawn at all points of $X$.
+> As a set,
+> $$ T(X) = \bigsqcup_{p \in X} T_p(X) \quad (\text{disjoint union}) $$
+>
+> For an open subset $V \subseteq X$, we see that
+> $$ T(V) = (V \times \mathbb{R}^N) \cap T(X) $$
+> i.e., an open subset of $T(X)$ in $T(\mathbb{R}^N) = \mathbb{R}^{2N}$.
+
+> [!INFO] Definition: Differential Map
+> Let $X \xrightarrow{f} Y$ be a smooth map of manifolds in appropriate Euclidean spaces ($X \subseteq \mathbb{R}^N, Y \subseteq \mathbb{R}^M$).
+>
+> Then we define a function $df: T(X) \subseteq \mathbb{R}^{2N} \to T(Y) \subseteq \mathbb{R}^{2M}$ by
+> $$ (p, v \in T_p X) \mapsto (f(p), df_p(v)) $$
+
+> [!TIP] Claim
+> $df$ is a smooth map.
+
 
 
 
