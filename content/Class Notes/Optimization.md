@@ -464,7 +464,7 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > \begin{gather}
 > \langle \vec{y} - P_{K}(\vec{y}), P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle \le 0 \\
 > \langle P_{K}(\vec{x}) - P_{K}(\vec{y}), P_{K}(\vec{y}) - \vec{y} \rangle \ge 0 \implies \langle P_{K}(\vec{y}) - \vec{y}, P_{K}(\vec{x}) - P_{K}(\vec{y}) \rangle \ge 0 \\
->  \langle P_{K}(\vec{x}) - \vec{y}, P_{K}(\vec{y}) - P_{K}(\vec{x}) \rangle \le 0 \text{)}
+>  \langle P_{K}(\vec{y}) - \vec{y}, P_{K}(\vec{y}) - P_{K}(\vec{x}) \rangle \le 0 \text{)}
 > \end{gather}
 > $$
 > Adding the two inequalities:
@@ -475,9 +475,13 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > \end{gather}
 > $$
 > By Cauchy-Schwarz:
-> $$ \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert^2 \le \lVert \vec{x} - \vec{y} \rVert \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert $$
+> $$ 
+> \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert^2 \le \lVert \vec{x} - \vec{y} \rVert \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert 
+> $$
 > If $P_{K}(\vec{x}) \neq P_{K}(\vec{y})$, dividing gives:
-> $$ \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert \le \lVert \vec{x} - \vec{y} \rVert $$
+> $$ 
+> \lVert P_{K}(\vec{x}) - P_{K}(\vec{y}) \rVert \le \lVert \vec{x} - \vec{y} \rVert 
+> $$
 
 ### Projection of Sphere
 
