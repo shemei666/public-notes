@@ -757,7 +757,102 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
 > f_{(b,c)}\circ \pi ^{-1} = f \circ \pi ^{-1} + \underbrace{ \sum_{i=1}^{k} b_{i}(x_{i} \circ \pi ^{-1}) }_{ \text{linear function on }U } + \sum_{j=1}^{N-k} c_{i}(x_{i+k}\circ\pi ^{-1})
 > $$
 > Fix $c \in \mathbb{R}^{N-k}$. Then using the non-linear part, $f(0,c) \circ \pi ^{-1}$, by Lemma 2 the set $\{ b \in \mathbb{R}^{k}\mid f_{(b,c)}\circ \pi ^{-1}  \text{is not Morse}\}$ has measure 0.
-> Thus the set $A = \{  (b,c) \in \mathbb{R}^{k} \times \mathbb{R}^{N-k} \mid f_{(b,c)}\circ \pi ^{-1} \text{ is  not Morse}\}$ has measure for every slice in $c \in \mathbb{R}^{N-k}$. By Fubini, $A$ has measure 0. $\quad \blacksquare$
+> Thus the set $A = \{  (b,c) \in \mathbb{R}^{k} \times \mathbb{R}^{N-k} \mid f_{(b,c)}\circ \pi ^{-1} \text{ is  not Morse}\}$ has measure 0 for every slice in $c \in \mathbb{R}^{N-k}$. By Fubini, $A$ has measure 0. $\quad \blacksquare$
+
+## Towards Whitney Embedding Theorem
+
+> [!NOTE] Remark
+> Abstract manifolds (not *a priori* embedded in $\mathbb{R}^N$) will not be needed in this course.
+
+> [!INFO] Definition: Topological Manifold
+> A **topological $k$-manifold** is a Hausdorff, second countable topological space $X$ which is locally Euclidean:
+> $$
+> \forall p \in X, \exists V \subseteq X \text{ open such that } V \xrightarrow{\sim} U \subseteq \mathbb{R}^k \text{ open}
+> $$
+> via a homeomorphism.
+> $V \subseteq X$ is called a **chart**, with associated homeomorphism $\phi: U \xrightarrow{\sim} V$.
+
+> [!INFO] Definition: Differentiable Manifold
+> A **differentiable $k$-manifold** is a topological $k$-manifold $X$ where all charts are smoothly compatible.
+
+```latex
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
+  % Manifold X (Visual Representation)
+  \draw[thick, fill=gray!5] plot [smooth cycle] coordinates {(0,3) (2,3.5) (4,3) (4.5,1.5) (2,1) (-0.5,1.5)};
+  \node at (0, 3.2) {$X$};
+
+  % Open sets V1 and V2 on X
+  \begin{scope}
+    \clip plot [smooth cycle] coordinates {(0,3) (2,3.5) (4,3) (4.5,1.5) (2,1) (-0.5,1.5)};
+    % V1
+    \draw[blue!80!black, thick, fill=blue!10, fill opacity=0.5] (1.5,2.2) ellipse (1.6 and 0.9);
+    \node[blue!80!black] at (0.5, 2.5) {$V_1$};
+    % V2
+    \draw[red!70!black, thick, fill=red!10, fill opacity=0.5] (2.8,2.2) ellipse (1.6 and 0.9);
+    \node[red!70!black] at (3.8, 2.5) {$V_2$};
+    
+    % Intersection shading
+    \begin{scope}
+      \clip (1.5,2.2) ellipse (1.6 and 0.9);
+      \fill[green!20, opacity=0.8] (2.8,2.2) ellipse (1.6 and 0.9);
+    \end{scope}
+    \node at (2.15, 2.2) {\scriptsize $V_1 \cap V_2$};
+  \end{scope}
+
+  % Charts U1 and U2 in R^k
+  \begin{scope}[yshift=-2cm]
+    % U1
+    \draw[blue!80!black, thick] (0.5,0) ellipse (1.2 and 0.7);
+    \node[blue!80!black] at (-0.5, -0.5) {$U_1$};
+    % Shaded region in U1 (preimage of intersection)
+    \fill[green!20] (1,0) circle (0.4);
+    \draw[dashed] (1,0) circle (0.4);
+    %\node[scale=0.7] at (1,0) {$U_{12}$};
+
+    % U2
+    \draw[red!70!black, thick] (4,0) ellipse (1.2 and 0.7);
+    \node[red!70!black] at (5, -0.5) {$U_2$};
+    % Shaded region in U2
+    \fill[green!20] (3.5,0) circle (0.4);
+    \draw[dashed] (3.5,0) circle (0.4);
+    %\node[scale=0.7] at (3.5,0) {$U_{21}$};
+    
+    % Transition arrow
+    \draw[->, dashed, thick] (1.5, 0) -- (3, 0) node[midway, below, align=center] {$\varphi_{12}$ defined\\only on shaded region};
+  \end{scope}
+
+  % Chart Maps phi1, phi2
+  \draw[->, thick, blue!80!black] (0.5, 0.8) -- (1.2, 1.8) node[midway, left] {$\varphi_1$};
+  \draw[->, thick, red!70!black] (4, 0.8) -- (3.2, 1.8) node[midway, right] {$\varphi_2$};
+
+\end{tikzpicture}
+\end{document}
+```
+
+```latex
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
+  % Nodes
+  \node (Inter) at (2, 2) {$V_1 \cap V_2$};
+  
+  \node (U1) at (0, 0) {$U_{12} \subseteq U_1$};
+  \node (U2) at (4, 0) {$U_{21} \subseteq U_2$};
+  
+  % Arrows
+  \draw[->, thick] (U1) -- (Inter) node[midway, left] {$\varphi_1|_{\dots} \cong$};
+  \draw[->, thick] (U2) -- (Inter) node[midway, right] {$\cong \varphi_2|_{\dots}$};
+  
+  \draw[->, thick] (U1) -- (U2) node[midway, below] {$\varphi_{12} = \varphi_2^{-1} \circ \varphi_1$};
+  
+  % Note
+  \node[align=center] at (2, -1) {$\varphi_{12}$ should be a diffeomorphism};
+
+\end{tikzpicture}
+\end{document}
+```
+
+
 
 
 
