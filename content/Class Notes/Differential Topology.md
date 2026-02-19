@@ -775,7 +775,7 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
 > [!INFO] Definition: Differentiable Manifold
 > A **differentiable $k$-manifold** is a topological $k$-manifold $X$ where all charts are smoothly compatible.
 
-```latex
+```tikz
 \begin{document}
 \begin{tikzpicture}[>=stealth, scale=1]
   % Manifold X (Visual Representation)
@@ -830,7 +830,7 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
 \end{document}
 ```
 
-```latex
+```tikz
 \begin{document}
 \begin{tikzpicture}[>=stealth, scale=1]
   % Nodes
