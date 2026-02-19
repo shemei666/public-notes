@@ -778,75 +778,78 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
 ```tikz
 \begin{document}
 \begin{tikzpicture}[>=stealth, scale=1]
-  % Manifold X (Visual Representation)
+
+  % --- Left Diagram: Visualization on Manifold ---
+  
+  % Manifold X (Background)
   \draw[thick, fill=gray!5] plot [smooth cycle] coordinates {(0,3) (2,3.5) (4,3) (4.5,1.5) (2,1) (-0.5,1.5)};
   \node at (0, 3.2) {$X$};
 
-  % Open sets V1 and V2 on X
+  % Open sets V1 and V2 on X (Organic Shapes)
   \begin{scope}
     \clip plot [smooth cycle] coordinates {(0,3) (2,3.5) (4,3) (4.5,1.5) (2,1) (-0.5,1.5)};
-    % V1
-    \draw[blue!80!black, thick, fill=blue!10, fill opacity=0.5] (1.5,2.2) ellipse (1.6 and 0.9);
-    \node[blue!80!black] at (0.5, 2.5) {$V_1$};
-    % V2
-    \draw[red!70!black, thick, fill=red!10, fill opacity=0.5] (2.8,2.2) ellipse (1.6 and 0.9);
+    
+    % V1 - Organic shape
+    \draw[blue!80!black, thick, fill=blue!10, fill opacity=0.5] plot [smooth cycle] coordinates {(0.5, 2) (1.5, 2.8) (2.5, 2.2) (1.8, 1.5) (0.8, 1.5)};
+    \node[blue!80!black] at (0.8, 2.6) {$V_1$};
+
+    % V2 - Organic shape overlapping V1
+    \draw[red!70!black, thick, fill=red!10, fill opacity=0.5] plot [smooth cycle] coordinates {(2, 2.2) (3, 2.8) (4, 2) (3.5, 1.2) (2.5, 1.5)};
     \node[red!70!black] at (3.8, 2.5) {$V_2$};
     
-    % Intersection shading
+    % Intersection V1 \cap V2 (Visual approximation)
+    \node at (2.2, 2.1) {\scriptsize $V_1 \cap V_2$};
+    % Optional: pattern fill for intersection if needed, but opacity handles it well.
     \begin{scope}
-      \clip (1.5,2.2) ellipse (1.6 and 0.9);
-      \fill[green!20, opacity=0.8] (2.8,2.2) ellipse (1.6 and 0.9);
+       \clip plot [smooth cycle] coordinates {(0.5, 2) (1.5, 2.8) (2.5, 2.2) (1.8, 1.5) (0.8, 1.5)};
+       \fill[pattern=north east lines, pattern color=black!40] plot [smooth cycle] coordinates {(2, 2.2) (3, 2.8) (4, 2) (3.5, 1.2) (2.5, 1.5)};
     \end{scope}
-    \node at (2.15, 2.2) {\scriptsize $V_1 \cap V_2$};
+
   \end{scope}
 
-  % Charts U1 and U2 in R^k
-  \begin{scope}[yshift=-2cm]
+  % Charts U1 and U2 in R^k (below)
+  \begin{scope}[yshift=-2.5cm]
     % U1
     \draw[blue!80!black, thick] (0.5,0) ellipse (1.2 and 0.7);
-    \node[blue!80!black] at (-0.5, -0.5) {$U_1$};
+    \node[blue!80!black] at (-0.8, 0) {$U_1$};
     % Shaded region in U1 (preimage of intersection)
-    \fill[green!20] (1,0) circle (0.4);
+    \fill[pattern=north east lines, pattern color=blue!80!black] (1,0) circle (0.4);
     \draw[dashed] (1,0) circle (0.4);
-    %\node[scale=0.7] at (1,0) {$U_{12}$};
-
+    
     % U2
     \draw[red!70!black, thick] (4,0) ellipse (1.2 and 0.7);
-    \node[red!70!black] at (5, -0.5) {$U_2$};
+    \node[red!70!black] at (5.3, 0) {$U_2$};
     % Shaded region in U2
-    \fill[green!20] (3.5,0) circle (0.4);
+    \fill[pattern=north east lines, pattern color=red!70!black] (3.5,0) circle (0.4);
     \draw[dashed] (3.5,0) circle (0.4);
-    %\node[scale=0.7] at (3.5,0) {$U_{21}$};
     
-    % Transition arrow
-    \draw[->, dashed, thick] (1.5, 0) -- (3, 0) node[midway, below, align=center] {$\varphi_{12}$ defined\\only on shaded region};
+    % Transition arrow phi_12
+    \draw[->, dashed, thick] (1.5, 0) -- (3, 0) node[midway, below, align=center, scale=0.8] {$\varphi_{12}$ defined\\only on shaded\\region};
+    
+    % Chart maps phi1, phi2 indicating they are from U_i -> V_i
+    \draw[->, thick, blue!80!black] (0.5, 0.8) -- (1.0, 4.0) node[midway, left] {$\varphi_1$};
+    \draw[->, thick, red!70!black] (4, 0.8) -- (3.5, 3.8) node[midway, right] {$\varphi_2$};
   \end{scope}
 
-  % Chart Maps phi1, phi2
-  \draw[->, thick, blue!80!black] (0.5, 0.8) -- (1.2, 1.8) node[midway, left] {$\varphi_1$};
-  \draw[->, thick, red!70!black] (4, 0.8) -- (3.2, 1.8) node[midway, right] {$\varphi_2$};
-
-\end{tikzpicture}
-\end{document}
-```
-
-```tikz
-\begin{document}
-\begin{tikzpicture}[>=stealth, scale=1]
-  % Nodes
-  \node (Inter) at (2, 2) {$V_1 \cap V_2$};
+  % --- Right Diagram: Commutative Triangle ---
   
-  \node (U1) at (0, 0) {$U_{12} \subseteq U_1$};
-  \node (U2) at (4, 0) {$U_{21} \subseteq U_2$};
-  
-  % Arrows
-  \draw[->, thick] (U1) -- (Inter) node[midway, left] {$\varphi_1|_{\dots} \cong$};
-  \draw[->, thick] (U2) -- (Inter) node[midway, right] {$\cong \varphi_2|_{\dots}$};
-  
-  \draw[->, thick] (U1) -- (U2) node[midway, below] {$\varphi_{12} = \varphi_2^{-1} \circ \varphi_1$};
-  
-  % Note
-  \node[align=center] at (2, -1) {$\varphi_{12}$ should be a diffeomorphism};
+  \begin{scope}[xshift=8cm, yshift=0cm]
+     % Nodes
+     \node (Inter) at (2, 2.5) {$V_1 \cap V_2 \subseteq V_2$};
+     \node[above=0.2cm of Inter] {$V_1 \supseteq V_1 \cap V_2$};
+     
+     \node (U12) at (0, 0) {$U_{12} \subseteq U_1$};
+     \node (U21) at (4, 0) {$U_{21} \subseteq U_2$};
+     
+     % Arrows
+     \draw[->, thick] (U12) -- (Inter) node[midway, left] {$\varphi_1|_{\dots} \cong$};
+     \draw[->, thick] (U21) -- (Inter) node[midway, right] {$\cong \varphi_2|_{\dots}$};
+     
+     \draw[->, thick] (U12) -- (U21) node[midway, below] {$\varphi_{12} \dots \dots$};
+     
+     % Note
+     \node[align=center] at (2, -1.5) {$\varphi_{12}$ should be a diffeomorphism};
+  \end{scope}
 
 \end{tikzpicture}
 \end{document}
