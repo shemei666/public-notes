@@ -775,13 +775,14 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
 > [!INFO] Definition: Differentiable Manifold
 > A **differentiable $k$-manifold** is a topological $k$-manifold $X$ where all charts are smoothly compatible.
 
+**Figure 1: Charts on a Manifold**
+
 ```tikz
 \usepackage{tikz}
-\usetikzlibrary{patterns}
 \begin{document}
 \begin{tikzpicture}[>=stealth, scale=1]
 
-  % --- Left Diagram: Visualization on Manifold ---
+  % --- Manifold Visualization ---
   
   % Manifold X (Background)
   \draw[thick, fill=gray!5] plot [smooth cycle] coordinates {(0,3) (2,3.5) (4,3) (4.5,1.5) (2,1) (-0.5,1.5)};
@@ -801,7 +802,7 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
     
     % Intersection V1 \cap V2 (Visual approximation)
     \node at (2.2, 2.1) {\scriptsize $V_1 \cap V_2$};
-    % Use solid fill instead of pattern to fix rendering
+    % Use solid fill
     \begin{scope}
        \clip plot [smooth cycle] coordinates {(0.5, 2) (1.5, 2.8) (2.5, 2.2) (1.8, 1.5) (0.8, 1.5)};
        \fill[black!20, opacity=0.5] plot [smooth cycle] coordinates {(2, 2.2) (3, 2.8) (4, 2) (3.5, 1.2) (2.5, 1.5)};
@@ -814,14 +815,14 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
     % U1
     \draw[blue!80!black, thick] (0.5,0) ellipse (1.2 and 0.7);
     \node[blue!80!black] at (-0.8, 0) {$U_1$};
-    % Shaded region in U1 (preimage of intersection) -- solid fill for robustness
+    % Shaded region in U1 (preimage of intersection) -- solid fill
     \fill[blue!20] (1,0) circle (0.4);
     \draw[dashed] (1,0) circle (0.4);
     
     % U2
     \draw[red!70!black, thick] (4,0) ellipse (1.2 and 0.7);
     \node[red!70!black] at (5.3, 0) {$U_2$};
-    % Shaded region in U2 -- solid fill for robustness
+    % Shaded region in U2 -- solid fill
     \fill[red!20] (3.5,0) circle (0.4);
     \draw[dashed] (3.5,0) circle (0.4);
     
@@ -833,25 +834,34 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
     \draw[->, thick, red!70!black] (4, 0.8) -- (3.5, 3.8) node[midway, right] {$\varphi_2$};
   \end{scope}
 
-  % --- Right Diagram: Commutative Triangle ---
+\end{tikzpicture}
+\end{document}
+```
+
+**Figure 2: Transition Map Commutative Diagram**
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
+
+  % --- Commutative Triangle ---
   
-  \begin{scope}[xshift=8cm, yshift=0cm]
-     % Nodes
-     \node (Inter) at (2, 2.5) {$V_1 \cap V_2 \subseteq V_2$};
-     \node[above=0.2cm of Inter] {$V_1 \supseteq V_1 \cap V_2$};
-     
-     \node (U12) at (0, 0) {$U_{12} \subseteq U_1$};
-     \node (U21) at (4, 0) {$U_{21} \subseteq U_2$};
-     
-     % Arrows
-     \draw[->, thick] (U12) -- (Inter) node[midway, left] {$\varphi_1|_{\dots} \cong$};
-     \draw[->, thick] (U21) -- (Inter) node[midway, right] {$\cong \varphi_2|_{\dots}$};
-     
-     \draw[->, thick] (U12) -- (U21) node[midway, below] {$\varphi_{12} = \varphi_2^{-1} \circ \varphi_1$};
-     
-     % Note
-     \node[align=center] at (2, -1.5) {$\varphi_{12}$ should be a diffeomorphism};
-  \end{scope}
+  % Nodes
+  \node (Inter) at (2, 2.5) {$V_1 \cap V_2 \subseteq V_2$};
+  \node[above=0.2cm of Inter] {$V_1 \supseteq V_1 \cap V_2$};
+  
+  \node (U12) at (0, 0) {$U_{12} \subseteq U_1$};
+  \node (U21) at (4, 0) {$U_{21} \subseteq U_2$};
+  
+  % Arrows
+  \draw[->, thick] (U12) -- (Inter) node[midway, left] {$\varphi_1|_{\dots} \cong$};
+  \draw[->, thick] (U21) -- (Inter) node[midway, right] {$\cong \varphi_2|_{\dots}$};
+  
+  \draw[->, thick] (U12) -- (U21) node[midway, below] {$\varphi_{12} = \varphi_2^{-1} \circ \varphi_1$};
+  
+  % Note
+  \node[align=center] at (2, -1.5) {$\varphi_{12}$ should be a diffeomorphism};
 
 \end{tikzpicture}
 \end{document}
