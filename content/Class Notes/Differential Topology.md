@@ -841,29 +841,15 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
 **Figure 2: Transition Map Commutative Diagram**
 
 ```tikz
-\usepackage{tikz}
+\usepackage{tikz-cd}
 \begin{document}
-\begin{tikzpicture}[>=stealth, scale=1]
+\begin{tikzcd}[row sep=huge, column sep=huge]
+& V_1 \cap V_2 \subseteq V_2 \\
+U_{12} \subseteq U_1 \arrow[ru, "\varphi_1|_{\dots} \cong"] \arrow[rr, "\varphi_{12} = \varphi_2^{-1} \circ \varphi_1"'] & & U_{21} \subseteq U_2 \arrow[lu, "\cong \varphi_2|_{\dots}"']
+\end{tikzcd}
 
-  % --- Commutative Triangle ---
-  
-  % Nodes
-  \node (Inter) at (2, 2.5) {$V_1 \cap V_2 \subseteq V_2$};
-  \node[above=0.2cm of Inter] {$V_1 \supseteq V_1 \cap V_2$};
-  
-  \node (U12) at (0, 0) {$U_{12} \subseteq U_1$};
-  \node (U21) at (4, 0) {$U_{21} \subseteq U_2$};
-  
-  % Arrows
-  \draw[->, thick] (U12) -- (Inter) node[midway, left] {$\varphi_1|_{\dots} \cong$};
-  \draw[->, thick] (U21) -- (Inter) node[midway, right] {$\cong \varphi_2|_{\dots}$};
-  
-  \draw[->, thick] (U12) -- (U21) node[midway, below] {$\varphi_{12} = \varphi_2^{-1} \circ \varphi_1$};
-  
-  % Note
-  \node[align=center] at (2, -1.5) {$\varphi_{12}$ should be a diffeomorphism};
-
-\end{tikzpicture}
+\vspace{0.5cm}
+\noindent $\varphi_{12}$ should be a diffeomorphism
 \end{document}
 ```
 
