@@ -776,6 +776,8 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
 > A **differentiable $k$-manifold** is a topological $k$-manifold $X$ where all charts are smoothly compatible.
 
 ```tikz
+\usepackage{tikz}
+\usetikzlibrary{patterns}
 \begin{document}
 \begin{tikzpicture}[>=stealth, scale=1]
 
@@ -799,10 +801,10 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
     
     % Intersection V1 \cap V2 (Visual approximation)
     \node at (2.2, 2.1) {\scriptsize $V_1 \cap V_2$};
-    % Optional: pattern fill for intersection if needed, but opacity handles it well.
+    % Use solid fill instead of pattern to fix rendering
     \begin{scope}
        \clip plot [smooth cycle] coordinates {(0.5, 2) (1.5, 2.8) (2.5, 2.2) (1.8, 1.5) (0.8, 1.5)};
-       \fill[pattern=north east lines, pattern color=black!40] plot [smooth cycle] coordinates {(2, 2.2) (3, 2.8) (4, 2) (3.5, 1.2) (2.5, 1.5)};
+       \fill[black!20, opacity=0.5] plot [smooth cycle] coordinates {(2, 2.2) (3, 2.8) (4, 2) (3.5, 1.2) (2.5, 1.5)};
     \end{scope}
 
   \end{scope}
@@ -812,15 +814,15 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
     % U1
     \draw[blue!80!black, thick] (0.5,0) ellipse (1.2 and 0.7);
     \node[blue!80!black] at (-0.8, 0) {$U_1$};
-    % Shaded region in U1 (preimage of intersection)
-    \fill[pattern=north east lines, pattern color=blue!80!black] (1,0) circle (0.4);
+    % Shaded region in U1 (preimage of intersection) -- solid fill for robustness
+    \fill[blue!20] (1,0) circle (0.4);
     \draw[dashed] (1,0) circle (0.4);
     
     % U2
     \draw[red!70!black, thick] (4,0) ellipse (1.2 and 0.7);
     \node[red!70!black] at (5.3, 0) {$U_2$};
-    % Shaded region in U2
-    \fill[pattern=north east lines, pattern color=red!70!black] (3.5,0) circle (0.4);
+    % Shaded region in U2 -- solid fill for robustness
+    \fill[red!20] (3.5,0) circle (0.4);
     \draw[dashed] (3.5,0) circle (0.4);
     
     % Transition arrow phi_12
@@ -845,7 +847,7 @@ Thus we may define $p \in X$(a k-manifold) to be non-degenerate  critical pont f
      \draw[->, thick] (U12) -- (Inter) node[midway, left] {$\varphi_1|_{\dots} \cong$};
      \draw[->, thick] (U21) -- (Inter) node[midway, right] {$\cong \varphi_2|_{\dots}$};
      
-     \draw[->, thick] (U12) -- (U21) node[midway, below] {$\varphi_{12} \dots \dots$};
+     \draw[->, thick] (U12) -- (U21) node[midway, below] {$\varphi_{12} = \varphi_2^{-1} \circ \varphi_1$};
      
      % Note
      \node[align=center] at (2, -1.5) {$\varphi_{12}$ should be a diffeomorphism};
