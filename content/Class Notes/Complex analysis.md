@@ -57,7 +57,9 @@ A function is **holomorphic on an open set $U$** if it is differentiable at ever
 
 ## Analytic Functions
 
-**Definition**: A function $f$ is said to be **analytic** at a point $z_0$ if it can be represented by a convergent power series in a neighborhood of $z_0$. 
+> [!INFO] Definition: 
+> A function $f$ is said to be analytic at neighbourhood of $z_{0}$ if $f'$ exists and is continuous.
+
 
 ## Power series
 
@@ -939,5 +941,9 @@ $f(a) = \alpha$, $\exists$ a small nbd around a, lets say $B_{a}(\varepsilon )$ 
 > [!TIP] Corollary 
 > $f:\Omega\to \mathbb{C}$ analytic if it is $1-1$ then $f^{-1}$ exists on $f(\Omega)$ and $f^{-1}$ is analytic on $f(\Omega )$ .
 
+> [!TIP] Theorem: Goursat's theorem
+> Any complex differentiable function is complex analytic
 
+> [!NOTE]- Proof
+> 
 
