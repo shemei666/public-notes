@@ -458,19 +458,18 @@ Hence $\exists$ a $k \times k$ minor with non-zero determinant. Hence the same m
 The proof for (b) is the same with $k \ge l$ and rank = $l$ everywhere.
 Thus the claim is proved. Q.E.D for (a), (b)
 
-(d) If $f_0^{-1}(Z) = \varnothing$, then the complement of $F^{-1}(Z)$ is an open neighborhood of $X \times \{0\}$. By compactness of $X$, this neighborhood contains a box $X \times [0, \epsilon)$.
+**(d)** If $f_0^{-1}(Z) = \varnothing$, then the complement of $F^{-1}(Z)$ is an open neighborhood of $X \times \{0\}$. By compactness of $X$, this neighborhood contains a box $X \times [0, \epsilon)$.
 Clearly $f_t \pitchfork Z, \forall t < \epsilon$ as $f_t^{-1}(Z) = \varnothing$.
 
 Now assume $f_0^{-1}Z \ne \varnothing$. Let $W$ be any open nbd of $f_0^{-1}Z \times \{0\}$ in $X \times I$.
 Then we see that $\exists \epsilon > 0$ such that
-$f_t^{-1}Z \subseteq W \times \{ t \}, \forall t < \epsilon$.
+$f_t^{-1}Z \times \{ t \} \subseteq W , \forall t < \epsilon$.
 
 > [!Proof of claim]-
 > If not, then $\exists (x_i, t_i) \notin W, t_i \to 0$ such that $f_{t_i}(x_i) \in Z$.
 > By compactness of $W^c$ we may assume that $\lim(x_i, t_i)$ exists, say $(x,0) \notin W$. Then $f(x)=F(x,0)=\lim F(x_i, t_i) \in Z$ as $Z$ is closed. Contradiction.
 
 Now we may localize the problem. Let $x \in f_0^{-1}Z, y=f(x)$.
-Let us localize around $x \in X, y \in Y$.
 
 ```tikz
 \usepackage{tikz}
