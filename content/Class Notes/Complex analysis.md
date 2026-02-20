@@ -936,5 +936,8 @@ $f(a) = \alpha$, $\exists$ a small nbd around a, lets say $B_{a}(\varepsilon )$ 
 > [!TIP] Theorem: Open mapping theorem
 > Let $\Omega \subseteq \mathbb{C}$ be a domain and let $f:\Omega \to \mathbb{C}$ non-constant analytic function then $f(\Omega)$ is an open set of $\mathbb{C}$ 
 
+> [!TIP] Corollary 
+> $f:\Omega\to \mathbb{C}$ analytic if it is $1-1$ then $f^{-1}$ exists on $f(\Omega)$ and $f^{-1}$ is analytic on $f(\Omega )$ .
+
 
 
