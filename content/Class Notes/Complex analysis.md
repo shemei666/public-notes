@@ -903,6 +903,7 @@ Then we have that $\gamma_{2}(1) = \gamma_{2}(1)$, hence $\tilde{\gamma}_{1},\ti
 > 1. **Lifting Theorem**: For a covering map $p: E \to X$, paths can be lifted uniquely given a starting point such that $p(\tilde{\gamma}(0)) = \gamma(0)$.
 > 2. The projection of a homotopy in the covering space gives a homotopy in the base space.
 
+## Open mapping theorem
 
 
 
