@@ -915,9 +915,18 @@ $$
 $$
 \begin{align}
 
-\frac{1}{2\pi i} \int_{\gamma } \frac{f'(z)}{f(z)} = \frac{1}{2\pi i} \left[  \int_{\gamma} \frac{1}{z-a_{1}}  + \dots + \int_{\gamma} \frac{1}{z-a_{n}}\right] + \frac{1}{2\pi i}\int_{\gamma } \frac{g'(z)}{g(z)} \\
-= h()
+ \frac{1}{2\pi i} \int_{\gamma } \frac{f'(z)}{f(z)}  & = \frac{1}{2\pi i} \left[  \int_{\gamma} \frac{1}{z-a_{1}}  + \dots + \int_{\gamma} \frac{1}{z-a_{n}}\right] + \frac{1}{2\pi i}\int_{\gamma } \frac{g'(z)}{g(z)} \\
+ & = \eta ( \gamma; a_{1}) + \dots + \eta(\gamma; a_{n}) + 0 \\
 \end{align}
 $$
+$$
+\frac{1}{2\pi i} \int_{\gamma } \frac{f'(z)}{f(z)-a} = \sum_{k=1}^{n} \eta(\gamma;\xi_{k}(\alpha ))
+$$
+where $\xi_{k}(\alpha)$ are the zeroes of $f(z)=\alpha$ enclosed by the curve $\gamma$.
+
+> [!TIP] Theorem: 
+> Let $\Omega \subseteq \mathbb{C}$ be a domain let $f:\Omega\to \mathbb{C}$ analytic and let $\gamma$ be a smooth curve in $\Omega$ such that $\gamma  \sim 0$. Let $a_{1},\dots,a_{n}$ are the zeroes of $f$ in $\Omega$ enclosed by the curve $\gamma$ then,
+> 
+
 
 
