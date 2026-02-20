@@ -905,5 +905,19 @@ Then we have that $\gamma_{2}(1) = \gamma_{2}(1)$, hence $\tilde{\gamma}_{1},\ti
 
 ## Open mapping theorem
 
+$$
+f(z) = (z-a_{1})\dots(z - a_{n})g(z)\quad z \in \Omega 
+$$
+For some non-vanishing $g$ on $\Omega$. 
+$$
+\frac{f'(z)}{f(z)} = \frac{1}{z-a_{1}} + \dots + \frac{1}{z- a_{n}} + \frac{g'(z)}{g(z)}
+$$
+$$
+\begin{align}
+
+\frac{1}{2\pi i} \int_{\gamma } \frac{f'(z)}{f(z)} = \frac{1}{2\pi i} \left[  \int_{\gamma} \frac{1}{z-a_{1}}  + \dots + \int_{\gamma} \frac{1}{z-a_{n}}\right] + \frac{1}{2\pi i}\int_{\gamma } \frac{g'(z)}{g(z)} \\
+= h()
+\end{align}
+$$
 
 
