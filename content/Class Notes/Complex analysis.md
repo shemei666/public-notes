@@ -878,7 +878,7 @@ $$
 \usepackage{amssymb}
 \begin{document}
 \begin{tikzcd}
-    & \mathbb{C} \arrow[d, "e^z"] \\
+    & \mathbb{C} \arrow[d, "e^z + a"] \\
     {[0,1]} \arrow[ur, "\tilde{\gamma}", dashed] \arrow[r, "\gamma"] & \mathbb{C} \setminus \{a\}
 \end{tikzcd}
 \end{document}
