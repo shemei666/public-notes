@@ -555,8 +555,7 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > Let $K \subseteq \mathbb{R}^{n}$ be a nonempty closed convex set. If $K$ is bounded, then to each vector $\vec{u} \in \mathbb{R}^{n} \setminus \{0\}$ there corresponds a support plane to $K$ with exterior normal vector $\vec{u}$.
 > That is, the map $U_{K}: \mathbb{R}^{n} \setminus \{0\} \to S^{n-1}$ is surjective.
 
-> [!TODO] Proof
-> Prove the surjectivity of the normal map for bounded convex sets.
+
 
 ## Separation Properties of Convex Sets
 
