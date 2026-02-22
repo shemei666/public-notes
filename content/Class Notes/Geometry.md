@@ -671,7 +671,23 @@ $$
 \end{document}
 ```
 
-**Proof:** Let $D$ be the half-sphere containing $T$ determined by the great circle opposite to the angle $\alpha$.
+
+> [!NOTE]- Proof
+> Let $D$ be the half-sphere containing $T$, determined by the great circle opposite to the angle $\alpha$. We can write $D$ as the union of $T$ and three other subsets:
+> - $A$: the subset of $D$ opposite to the angle $\alpha$.
+> - $B$: the complement of $T$ in the time zone of angle $\beta$.
+> - $C$: the complement of $T$ in the time zone of angle $\gamma$.
+> 
+> The area of the half-sphere $D$ is $2\pi$, which is also given by:
+> $$Area(D) = Area(T) + Area(A) + Area(B) + Area(C)$$
+> 
+> By definition, $Area(B) = 2\beta - Area(T)$ and $Area(C) = 2\gamma - Area(T)$. Furthermore, the time zone of angle $\alpha$ opposite to the triangle is the union of $A$ and the triangle symmetric to $T$ with respect to the center of the sphere, so $Area(A) = 2\alpha - Area(T)$.
+> Substituting these into the equation for $Area(D)$:
+> $$2\pi = Area(T) + (2\alpha - Area(T)) + (2\beta - Area(T)) + (2\gamma - Area(T))$$
+> $$2\pi = 2\alpha + 2\beta + 2\gamma - 2Area(T)$$
+> $$\implies Area(T) = \alpha + \beta + \gamma - \pi$$
+> $\blacksquare$
+
 
 
 ## Three dimensional Euclidean affine space
