@@ -289,7 +289,7 @@ If $L_1 \parallel L_3$ and the ratios of the intercepts are equal, i.e.,
 $$ \frac{\overrightarrow{A_1 A_2}}{\overrightarrow{A_1 A_3}} = \frac{\overrightarrow{A_1' A_2'}}{\overrightarrow{A_1' A_3'}} $$
 then the line $L_2$ is parallel to $L_1$ and $L_3$.
 **Proof:**
-Let $\pi$ be the affine projection of $D*{1}$ onto $D_2$ parallel to $L_i$ , and let $P$ be the associated linear map.
+Let $\pi$ be the affine projection of $D_{1}$ onto $D_2$ parallel to $L_i$ , and let $P$ be the associated linear map.
 The vectors $\overrightarrow{A_1 A_3}$ and $\overrightarrow{A_1 A_2}$ are projected as:
 $$ P(\overrightarrow{A_{1} A_3}) = \overrightarrow{\pi(A_3) \pi(A_1)} = \overrightarrow{A_1' A_3'} $$
 $$ P(\overrightarrow{A_1 A_2}) = \overrightarrow{\pi(A_2)\pi(A_1)} = \overrightarrow{A_1' A_2'} $$
