@@ -628,7 +628,7 @@ $$
 \usepackage{tikz}
 \usetikzlibrary{calc}
 \begin{document}
-\begin{tikzpicture}[scale=2]
+\begin{tikzpicture}[scale=1.5]
     % Sphere Outline
     \draw (0,0) circle (2cm);
 
@@ -652,14 +652,14 @@ $$
 
     % Lune Labels
     % A points to the top-left lune between GC2 and GC3
-    \node at (-1.5, 1) {$A$};
+    \node at (1, -0.8) {$A$};
     % \draw[->, >=stealth] (-1.2, 1.3) -- (-0.9, 1.1);
 
     % B is the top lune bounded by GC1 and GC3
-    \node at (0.7, 1.3) {$B$};
+    \node at (0.7, -1.7) {$B$};
 
     % C is the left lune bounded by GC1 and GC2
-    \node at (-1.5, 0.2) {$C$};
+    \node at (-1.5, -0.5) {$C$};
 
     % Angles inside the central triangle
     % These specific positions should match the visual logic of the vertices
