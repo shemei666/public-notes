@@ -948,9 +948,21 @@ $$
 >where $\xi_{k}(\alpha)$ are the zeroes of $f(z)=\alpha$ enclosed by the curve $\gamma$.
 > 
 
-$\exists$ a small disc around $\alpha$, say $B(\alpha;\delta )$ and a small disc around $a$, say $B(a;\varepsilon )$ such that any point $\zeta \in B(\alpha,\delta)$ has exactly m solutions in the preimage 
+**Proof of Open Mapping Theorem:**
 
-$f(a) = \alpha$, $\exists$ a small nbd around a, lets say $B_{a}(\varepsilon )$ such that $f(z)=\alpha$. has exactly no other zero apart from $a$ in
+Let $\alpha = f(a)$ for some $a \in \Omega$. Let $m$ be the order of the zero of $f(z) - \alpha$ at $z = a$, so $(f(z) - \alpha) = (z-a)^m g(z)$ with $g(a) \neq 0$.
+
+Since $a$ is the **only** zero of $f(z) - \alpha$ in some $B(a; \varepsilon)$ (isolatedness of zeros), choose $\varepsilon > 0$ small enough so that $f(z) \neq \alpha$ for all $z \in \partial B(a;\varepsilon)$.
+
+Since $\partial B(a;\varepsilon)$ is compact and $f$ is continuous, $f(\partial B(a;\varepsilon))$ is compact and does not contain $\alpha$. Hence we can find $\delta > 0$ such that $B(\alpha;\delta) \cap f(\partial B(a;\varepsilon)) = \emptyset$.
+
+Now for any $\zeta \in B(\alpha;\delta)$, the function $z \mapsto f(z) - \zeta$ has no zeros on $\partial B(a;\varepsilon)$, and by the counting theorem:
+$$
+\frac{1}{2\pi i}\int_{\partial B(a;\varepsilon)} \frac{f'(z)}{f(z)-\zeta}\,dz = \#\{\text{zeros of } f(z)-\zeta \text{ in } B(a;\varepsilon)\}
+$$
+The left-hand side is a **continuous integer-valued function** of $\zeta$ on $B(\alpha;\delta)$, hence constant. At $\zeta = \alpha$ it equals $m \ge 1$. Therefore $f(z) = \zeta$ has at least one solution in $B(a;\varepsilon)$ for **every** $\zeta \in B(\alpha;\delta)$.
+
+Thus $B(\alpha;\delta) \subseteq f(B(a;\varepsilon)) \subseteq f(\Omega)$. Since $\alpha \in f(\Omega)$ was arbitrary, $f(\Omega)$ is open. $\blacksquare$
 
 > [!TIP] Theorem: Open mapping theorem
 > Let $\Omega \subseteq \mathbb{C}$ be a domain and let $f:\Omega \to \mathbb{C}$ non-constant analytic function then $f(\Omega)$ is an open set of $\mathbb{C}$ 
