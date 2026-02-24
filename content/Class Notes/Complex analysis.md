@@ -687,7 +687,24 @@ Therefore, we must have $f^{(n)}(a) = 0$ for all $n \ge 0$. $\quad \blacksquare$
 
 ## Maximum Modulus principle
 
+> [!TIP] Theorem 3.11: Maximum Modulus Theorem
+> If $G$ is a region and $f: G \to \mathbb{C}$ is an analytic function such that there is a point $a$ in $G$ with $|f(a)| \ge |f(z)|$ for all $z$ in $G$, then $f$ is constant.
 
+> [!NOTE]- Proof
+> Let $\bar{B}(a; r) \subset G$, $\gamma(t) = a + re^{it}$ for $0 \le t \le 2\pi$
+> $$
+> f(a) = \frac{1}{2\pi i} \int_\gamma \frac{f(w)}{w - a} \, dw = \frac{1}{2\pi} \int_0^{2\pi} f(a + re^{it}) \, dt
+> $$
+> Hence
+> $$
+> |f(a)| \le \frac{1}{2\pi} \int_0^{2\pi} |f(a + re^{it})| \, dt \le |f(a)|
+> $$
+> since $|f(a + re^{it})| \le |f(a)|$ for all $t$. This gives that
+> $$
+> 0 = \int_0^{2\pi} \left[ |f(a)| - |f(a + re^{it})| \right] dt;
+> $$
+> but since the integrand is non-negative it follows that $|f(a)| = |f(a + re^{it})|$ for all $t$. Moreover, since $r$ was arbitrary, we have that $f$ maps any disk $B(a; R) \subset G$ into the circle $|z| = |\alpha|$ where $\alpha = f(a)$. But this implies that $f$ is constant on $B(a; R)$. In particular $f(z) = \alpha$ for $|z - a| < R$. $f \equiv \alpha$.
+> $\blacksquare$
 
 
 ## Homotopic versions of Cauchy's Theorem
