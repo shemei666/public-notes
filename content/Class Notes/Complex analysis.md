@@ -950,7 +950,7 @@ $$
 
 $\exists$ a small disc around $\alpha$, say $B(\alpha;\delta )$ and a small disc around $a$, say $B(a;\varepsilon )$ such that any point $\zeta \in B(\alpha,\delta)$ has exactly m solutions in the preimage 
 
-$f(a) = \alpha$, $\exists$ a small nbd around a, lets say $B_{a}(\varepsilon )$ such that $f(z)=\alpha$. has exactly no other zero apart from $a$ in 
+$f(a) = \alpha$, $\exists$ a small nbd around a, lets say $B_{a}(\varepsilon )$ such that $f(z)=\alpha$. has exactly no other zero apart from $a$ in
 
 > [!TIP] Theorem: Open mapping theorem
 > Let $\Omega \subseteq \mathbb{C}$ be a domain and let $f:\Omega \to \mathbb{C}$ non-constant analytic function then $f(\Omega)$ is an open set of $\mathbb{C}$ 
