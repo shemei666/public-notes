@@ -264,7 +264,7 @@ $$
 im(df_{x}) + T_{y}Z = T_{y}Y
 $$
 
-**Def:** Let $f:X\to Y$ be a smooth map and $Z \subseteq Y$ a submanifold, We say that $f$ is **transversal** to $Z$ if $f^{-1}Z$ is empty or $\forall x \in f^{-1}Z$, the condition $im(df_{x})+T_{y}Y$ holds.
+**Def:** Let $f:X\to Y$ be a smooth map and $Z \subseteq Y$ a submanifold, We say that $f$ is **transversal** to $Z$ if $f^{-1}Z$ is empty or $\forall x \in f^{-1}Z$, the condition $im(df_{x})+T_{y}Z = T_{y}(Y)$ holds.
 
 **Theorem:** If $f:X\to Y$ is transversal to a submanifold $Z \subseteq Y$ then $f^{-1}Z$ is empty or a submanifold in $X$ of $\text{codim}_{Y}(Z)$.
 
