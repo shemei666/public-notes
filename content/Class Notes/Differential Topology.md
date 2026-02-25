@@ -1,6 +1,12 @@
 ---
 publish: true
 ---
+
+
+
+> [!INFO] Definition: Smooth Map on Arbitrary Sets
+> A map $f: X \to \mathbb{R}^m$ defined on an arbitrary subset $X \subseteq \mathbb{R}^n$ is called **smooth** if it may be locally extended to a smooth map on open sets; that is, if around each point $x \in X$ there is an open set $U \subseteq \mathbb{R}^n$ and a smooth map $F: U \to \mathbb{R}^m$ such that $F$ equals $f$ on $U \cap X$.
+
 ## Embeddings
 **Theorem:(Embedding Theorem)** For an injective immersion $f:X\to Y$, TFAE
 
