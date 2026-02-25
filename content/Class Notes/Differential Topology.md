@@ -429,7 +429,7 @@ The following classes of smooth maps from a **compact manifold** $X$ to a manifo
 (e) embeddings
 (f) diffeomorphisms
 
-**Proof:** Let $k = \dim(X)$, $l = \dim(Y)$. Then (a) follows from (b) & (c) with $k=l$.
+**Proof:** Let $k = \dim(X)$, $l = \dim(Y)$. Then (c) follows from (a) & (b) with $k=l$.
 
 **Proof of (a), (b):** Suppose $f$ satisfies (a) or (b). It suffices to prove the claim:
 $$
