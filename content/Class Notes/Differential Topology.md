@@ -217,7 +217,7 @@ df_{A}(B) = \lim_{ s \to 0} \frac{1}{s} [f(A + sB) - f(A)] \\
 \end{align}
 $$
 
-This is clearly not onto for some choices of $A$ (e.g $A=0$), for $A$ invertible this is onto: for any $C \in S(n)$, we use $AB^{t} = \frac{c}{2} = BA^{t}$. Then we get $B = \frac{1}{2} C(At)^{-1}$. Thus we can solve for $B$,
+This is clearly not onto for some choices of $A$ (e.g $A=0$), for $A$ invertible this is onto: for any $C \in S(n)$, we use $AB^{T} = \frac{C}{2} = BA^{T}$. Then we get $B = \frac{1}{2} C(A^T)^{-1}$. Thus we can solve for $B$,
 
 Thus $f$ is a submersion over the dense open subset $GL(n)$ ( the set of all invertible matrices) in $M(n)$. ==It follows that the image $f$ contains an open subset of $S(n)$==.
 
