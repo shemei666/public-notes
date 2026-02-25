@@ -50,6 +50,8 @@ If $X$ is a submanifold of $Y$, then $X \hookrightarrow Y$ is an embedding. If $
 _suggested exercises:_ 3.9,3.10
 
 ## Local Submersion Theorem
+#todo add definition of submersion, cannonical submersion.
+
 **Theorem:** Let $f:X\to Y$ be a submersion at $x \in X$ Then, in local coordinates around $x$, $y=f(x)$, $f$ is a canonical submersion.
 
 **Proof:** Pick local coordinates around $x,y$ in $X,Y$
