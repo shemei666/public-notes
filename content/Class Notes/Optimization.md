@@ -800,5 +800,11 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > $$ \langle \vec{c}, \vec{v} \rangle \le \langle \vec{c}, \vec{p} \rangle $$
 > (i.e., either there is no optimal solution or there is an optimal extreme point).
 
+> [!INFO] Definition: reduced cost
+> $\bar{c_{j}} = c_{j}-\vec{c_{B}}^{T}B^{-1}A_{j}$  
 
+>[!TIP] Theorem: 
+> If $\vec{x}$ is a bfs w.r.t $B$ and $\vec{C}$ is the vector of reduced costs.
+> 1.  $c_{1} \geq 0 ,\dots, c_{n} \geq 0$  $\implies \overline{x}$ is optimal
+> 2. $\vec{x}$ is optimal and non-degenerate $\implies c_{1}$
 
