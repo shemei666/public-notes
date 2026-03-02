@@ -808,3 +808,4 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > 1.  $c_{1} \geq 0 ,\dots, c_{n} \geq 0$  $\implies \overline{x}$ is optimal
 > 2. $\vec{x}$ is optimal and non-degenerate $\implies c_{1}$
 
+
