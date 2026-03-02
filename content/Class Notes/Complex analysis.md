@@ -979,4 +979,13 @@ $f(a) = \alpha$, $\exists$ a small nbd around a, lets say $B_{a}(\varepsilon )$ 
 
 **Example:** $\frac{\sin z} {z}$ on $D(0,1)$
 $\sin z = z - \frac{z^{3}}{3!}+ \dots$
+**Observations:** 
+1. $zf(z) = \sin z$
+2. $sinz/z$ is bounded near 0
 
+> [!TIP] Theorem: 
+> Let $f:D(p,R)\setminus \{ p \}\to \mathbb{C}$ be an analytic. Then $f$ has removable singularity at $p$ $\iff$ $\lim_{ z \to p } (z-p)f(z)=0$
+
+> [!NOTE]- Proof
+> $\implies$ Trivial
+> $\impliedby$ Define $g(z) = (z-p)f(z)$ $z\neq p$. $g(p)=0$. Then $g$ is continuous.
