@@ -978,4 +978,5 @@ $f(a) = \alpha$, $\exists$ a small nbd around a, lets say $B_{a}(\varepsilon )$ 
 > Let $f:D(p,R) \setminus \{ a \}\to \mathbb{C}$ be analytic. Then $p$ is called a removable singularity of $f$ if $\exists$ an analytic function $g:D(p,R)\to \mathbb{C}$ such that $g \equiv f$ on $D(p,R)\setminus \{ p \}$
 
 **Example:** $\frac{\sin z} {z}$ on $D(0,1)$
-$\sin z = z - \frac{z^{3}}{3!}$
+$\sin z = z - \frac{z^{3}}{3!}+ \dots$
+
