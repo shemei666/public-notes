@@ -857,8 +857,19 @@ This $\theta^*$ is used to move from the current b.f.s. $\vec{x}$ to a new b.f.s
 
 ### Step II: Update and Pivoting
 
-Once $\theta^*$ is chosen and fixed:
-1. Let **$l$** be the minimizing index (the index that attains the minimum in the formula for $\theta^*$).
-2. The variable $x_{B(l)}$ leaves the basis (the **leaving variable**), while $x_j$ enters the basis.
+Assume $\theta^*$ is chosen and finite (recall that if $\vec{d}_B \ge \vec{0}$, $\theta^* = \infty$). Let $l$ be the minimizing index such that:
+$$ \theta^* = -\frac{x_{B(l)}}{d_{B(l)}} $$
+
+For any $i$ where $d_{B(i)} < 0$, we know $\theta^* \le -\frac{x_{B(i)}}{d_{B(i)}}$, which implies:
+$$ x_{B(i)} + \theta^* d_{B(i)} \ge 0 $$
+
+For the minimizing index $l$, this inequality is tight:
+$$ x_{B(l)} + \theta^* d_{B(l)} = 0 $$
+
+Thus, as we move to the new point $\vec{y} = \vec{x} + \theta^* \vec{d}$, the variable $x_{B(l)}$ becomes zero ($x_{B(l)} \to 0$). The variable $x_{B(l)}$ leaves the basis (the **leaving variable**), while $x_j$ enters the basis.
+
+> [!TIP] Theorem
+> (a) The columns $A_{B(i)}$ ($i \neq l$) and $A_j$ are linearly independent (the new matrix $\overline{B}$ is a basis matrix).
+> (b) $\vec{y} = \vec{x} + \theta^* \vec{d}$ (where $\vec{d}_B = -B^{-1}A_j$) is a basic feasible solution associated with $\overline{B}$.
 
 
