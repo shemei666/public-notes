@@ -803,9 +803,16 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > [!INFO] Definition: reduced cost
 > $\bar{c_{j}} = c_{j}-\vec{c_{B}}^{T}B^{-1}A_{j}$  
 
->[!TIP] Theorem: 
-> If $\vec{x}$ is a bfs w.r.t $B$ and $\vec{C}$ is the vector of reduced costs.
-> 1.  $c_{1} \geq 0 ,\dots, c_{n} \geq 0$  $\implies \overline{x}$ is optimal
-> 2. $\vec{x}$ is optimal and non-degenerate $\implies c_{1}$
+> [!TIP] Theorem:
+> If $\overline{x}$ is a b.f.s. w.r.t $B$ and $\overline{c}$ is the vector of reduced costs.
+> 1. $\overline{c}_{1} \geq 0, \dots, \overline{c}_{n} \geq 0 \implies \overline{x}$ is optimal
+> 2. $\overline{x}$ is optimal and non-degenerate $\implies \overline{c}_{1} \geq 0, \dots, \overline{c}_{n} \geq 0$ ($\overline{c} \ge \vec{0}$)
+
+### Building a Feasible Direction
+
+For a fixed non-basic variable index $j$, we build a feasible direction $\vec{d}$ such that it makes $x_{j}$ into a basic variable:
+
+$$ \vec{d}_{B} = -B^{-1}A_{j} $$
+$$ d_{j} = 1, \quad d_{i} = 0 \text{ for } i \in N \setminus \{j\} $$
 
 
