@@ -886,3 +886,25 @@ Thus, as we move to the new point $\vec{y} = \vec{x} + \theta^* \vec{d}$, the va
 > $$ 0 + \lambda_l (-d_{B(l)}) = 0 \implies \lambda_l = 0 $$
 > Since $\lambda_l = 0$, the remaining sum is $\sum_{i \neq l} \lambda_i \vec{e}_i = \vec{0}$, which immediately implies $\lambda_i = 0$ for all $i \neq l$.
 > Therefore, the columns of $\overline{B}$ are linearly independent, and $\overline{B}$ is a valid basis matrix. $\blacksquare$
+
+> [!NOTE]- Proof of Theorem (b)
+> To show $\vec{y} = \vec{x} + \theta^* \vec{d}$ is a basic feasible solution (b.f.s.) associated with $\overline{B}$, we must show:
+> 1. $\vec{y}$ is feasible ($A\vec{y} = \vec{b}$ and $\vec{y} \ge \vec{0}$).
+> 2. The non-basic variables associated with $\overline{B}$ are zero.
+>
+> First, feasibility:
+> Since $\vec{d}$ is a feasible direction, $A\vec{d} = \vec{0}$. Thus:
+> $$ A\vec{y} = A(\vec{x} + \theta^* \vec{d}) = A\vec{x} + \theta^* A\vec{d} = \vec{b} + \vec{0} = \vec{b} $$
+> By the choice of $\theta^*$, we ensured that $x_i + \theta^* d_i \ge 0$ for all $i$. Thus:
+> $$ \vec{y} = \vec{x} + \theta^* \vec{d} \ge \vec{0} $$
+> So $\vec{y}$ is feasible.
+>
+> Second, basic variables constraint:
+> By our choice of minimizing index $l$, the leaving basic variable becomes exactly 0:
+> $$ y_{B(l)} = x_{B(l)} + \theta^* d_{B(l)} = 0 $$
+> Also, for non-basic indices $i \in N \setminus \{j\}$:
+> $$ y_i = x_i + \theta^* d_i = 0 + \theta^*(0) = 0 $$
+> Thus, all variables not in the new basis $\overline{B}$ (which is exactly $N \setminus \{j\} \cup \{B(l)\}$) are zero.
+> (Note: $y_{\overline{B}(i)}$ is not necessarily 0 for $i \neq l$, as $y_{B(i)} = x_{B(i)} > 0$ if non-degenerate).
+>
+> Since $\overline{B}$ is a valid basis matrix (by part a) and $\vec{y} \ge 0, A\vec{y}=\vec{b}$ with non-basis components 0, $\vec{y}$ is a b.f.s. associated with $\overline{B}$. $\blacksquare$
