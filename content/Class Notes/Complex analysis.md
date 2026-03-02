@@ -964,3 +964,18 @@ $f(a) = \alpha$, $\exists$ a small nbd around a, lets say $B_{a}(\varepsilon )$ 
 > [!NOTE]- Proof
 > 
 
+## Singularities
+> [!INFO] Definition: 
+> $\Omega \subseteq \mathbb{C}$ domain, $f:\Omega \setminus \{ p \}\to \mathbb{C}$ analytic. Then $p$ is called a singularity of $f$.
+
+## Types of singularities
+
+1. Removable singularity
+2. Poles
+3. Essential singularity
+
+> [!INFO] Definition: Removable Singularity
+> Let $f:D(p,R) \setminus \{ a \}\to \mathbb{C}$ be analytic. Then $p$ is called a removable singularity of $f$ if $\exists$ an analytic function $g:D(p,R)\to \mathbb{C}$ such that $g \equiv f$ on $D(p,R)\setminus \{ p \}$
+
+**Example:** $\frac{\sin z} {z}$ on $D(0,1)$
+$\sin z = z - \frac{z^{3}}{3!}$
