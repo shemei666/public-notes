@@ -831,3 +831,24 @@ $$ \vec{c}^T \vec{d} = \vec{c}_B^T (-B^{-1}A_j) + c_j = c_j - \vec{c}_B^T B^{-1}
 
 This is exactly the **reduced cost** $\overline{c}_j$:
 $$ \overline{c}_j = c_j - \vec{c}_B^T B^{-1}A_j $$
+
+### Determining the Step Length
+
+We want to find the maximum possible step length $\theta^*$ such that we stay within the feasible set $P$:
+$$ \theta^* = \max \{ \theta \ge 0 \mid \vec{x} + \theta \vec{d} \in P \} $$
+
+The resulting change in cost when moving from $\vec{x}$ to $\vec{x} + \theta^* \vec{d}$ is $\theta^* \vec{c}^T \vec{d}$.
+
+#### Case I: $\vec{d} \ge \vec{0}$
+If all components of the direction vector $\vec{d}$ are non-negative, then:
+$$ \vec{x} + \theta \vec{d} \ge \vec{0} \quad \forall \theta \ge 0 $$
+Since $\vec{d}$ is a feasible direction, $A\vec{d} = \vec{0}$. Thus, $A(\vec{x} + \theta \vec{d}) = A\vec{x} + \theta A\vec{d} = \vec{b}$, so the constraints are always satisfied.
+In this case, the feasible set is unbounded in direction $\vec{d}$ and:
+$$ \theta^* = \infty $$
+
+#### Case II: $d_i < 0$ for some $i$
+To maintain feasibility ($x_i + \theta d_i \ge 0$), we must have:
+$$ \theta \le -\frac{x_i}{d_i} $$
+This must hold for all indices where $d_i$ is negative. Thus, the maximum step length is:
+$$ \theta^* = \min_{i: d_i < 0} \left( -\frac{x_i}{d_i} \right) $$
+
