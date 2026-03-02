@@ -872,4 +872,17 @@ Thus, as we move to the new point $\vec{y} = \vec{x} + \theta^* \vec{d}$, the va
 > (a) The columns $A_{B(i)}$ ($i \neq l$) and $A_j$ are linearly independent (the new matrix $\overline{B}$ is a basis matrix).
 > (b) $\vec{y} = \vec{x} + \theta^* \vec{d}$ (where $\vec{d}_B = -B^{-1}A_j$) is a basic feasible solution associated with $\overline{B}$.
 
-
+> [!NOTE]- Proof of Theorem (a)
+> Let $\overline{B}$ be the new matrix formed by replacing $A_{B(l)}$ with $A_j$. Let $\lambda_i$ be scalars such that:
+> $$ \sum_{i=1}^m \lambda_i A_{\overline{B}(i)} = \vec{0} $$
+> Since $A_{\overline{B}(l)} = A_j$ and $A_{\overline{B}(i)} = A_{B(i)}$ for $i \neq l$, we have:
+> $$ \sum_{i \neq l} \lambda_i A_{B(i)} + \lambda_l A_j = \vec{0} $$
+> Multiplying on the left by $B^{-1}$:
+> $$ \sum_{i \neq l} \lambda_i (B^{-1} A_{B(i)}) + \lambda_l B^{-1} A_j = \vec{0} $$
+> Since $B^{-1} A_{B(i)} = \vec{e}_i$ (the $i$-th standard basis vector) and $B^{-1} A_j = -\vec{d}_B$, we get:
+> $$ \left[ \begin{smallmatrix} \lambda_1 \\ \vdots \\ \lambda_{l-1} \\ 0 \\ \vdots \\ \lambda_m \end{smallmatrix} \right] + \lambda_l (B^{-1}A_j) = \vec{0} $$
+> Looking at the $l$-th component of this vector equation, the first vector has a $0$. Since $\vec{d}_B = -B^{-1}A_j$, the $l$-th component of $B^{-1}A_j$ is $-d_{B(l)}$. From the pivoting step, we know $d_{B(l)} < 0$, so $-d_{B(l)} > 0$. 
+> Thus, the $l$-th equation is:
+> $$ 0 + \lambda_l (-d_{B(l)}) = 0 \implies \lambda_l = 0 $$
+> Since $\lambda_l = 0$, the remaining sum is $\sum_{i \neq l} \lambda_i \vec{e}_i = \vec{0}$, which immediately implies $\lambda_i = 0$ for all $i \neq l$.
+> Therefore, the columns of $\overline{B}$ are linearly independent, and $\overline{B}$ is a valid basis matrix. $\blacksquare$
