@@ -815,4 +815,19 @@ For a fixed non-basic variable index $j$, we build a feasible direction $\vec{d}
 $$ \vec{d}_{B} = -B^{-1}A_{j} $$
 $$ d_{j} = 1, \quad d_{i} = 0 \text{ for } i \in N \setminus \{j\} $$
 
+### Cost Analysis and Reduced Cost
 
+Let $\vec{c}^T \vec{x}$ be the cost at the current b.f.s. $\vec{x}$. If we move along a feasible direction $\vec{d}$ with step length $\theta \ge 0$, the new cost is:
+$$ \vec{c}^T (\vec{x} + \theta \vec{d}) $$
+
+The **rate of change** in the cost as we move along $\vec{d}$ starting at $\vec{x}$ is given by:
+$$ \vec{c}^T \vec{d} = \vec{c}_B^T \vec{d}_B + \vec{c}_N^T \vec{d}_N $$
+
+Since we chose $\vec{d}$ such that $d_j = 1$ and $d_i = 0$ for all other non-basic indices $i \in N \setminus \{j\}$, we have:
+$$ \vec{c}_N^T \vec{d}_N = c_j $$
+
+Substituting $\vec{d}_B = -B^{-1}A_j$:
+$$ \vec{c}^T \vec{d} = \vec{c}_B^T (-B^{-1}A_j) + c_j = c_j - \vec{c}_B^T B^{-1}A_j $$
+
+This is exactly the **reduced cost** $\overline{c}_j$:
+$$ \overline{c}_j = c_j - \vec{c}_B^T B^{-1}A_j $$
