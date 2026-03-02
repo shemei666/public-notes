@@ -847,8 +847,18 @@ In this case, the feasible set is unbounded in direction $\vec{d}$ and:
 $$ \theta^* = \infty $$
 
 #### Case II: $d_i < 0$ for some $i$
-To maintain feasibility ($x_i + \theta d_i \ge 0$), we must have:
-$$ \theta \le -\frac{x_i}{d_i} $$
-This must hold for all indices where $d_i$ is negative. Thus, the maximum step length is:
-$$ \theta^* = \min_{i: d_i < 0} \left( -\frac{x_i}{d_i} \right) $$
+To maintain feasibility ($x_i + \theta d_i \ge 0$), we must have $\theta \le -\frac{x_i}{d_i}$ for all $i$ such that $d_i < 0$. 
+
+If $x_j$ is a non-basic variable ($j \in N$), it is either chosen as the **entering variable** ($d_j = 1$), or it is not the entering variable (in which case $d_j = 0$). Since $\vec{d}_B$ depends on the choice of $j$, the maximum step length is determined by the basic variables:
+
+$$ \theta^* = \min_{1 \le i \le m, d_{B(i)} < 0} \left( -\frac{x_{B(i)}}{d_{B(i)}} \right) $$
+
+This $\theta^*$ is used to move from the current b.f.s. $\vec{x}$ to a new b.f.s. where $x_j > 0$.
+
+### Step II: Update and Pivoting
+
+Once $\theta^*$ is chosen and fixed:
+1. Let **$l$** be the minimizing index (the index that attains the minimum in the formula for $\theta^*$).
+2. The variable $x_{B(l)}$ leaves the basis (the **leaving variable**), while $x_j$ enters the basis.
+
 
