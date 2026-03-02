@@ -989,3 +989,5 @@ $\sin z = z - \frac{z^{3}}{3!}+ \dots$
 > [!NOTE]- Proof
 > $\implies$ Trivial
 > $\impliedby$ Define $g(z) = (z-p)f(z)$ $z\neq p$. $g(p)=0$. Then $g$ is continuous.
+> **Claim:** $g$ is also analytic
+> We use Morera's thm to show that $g$ is analytic.
