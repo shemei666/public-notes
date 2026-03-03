@@ -960,5 +960,8 @@ It turns out that $T(X)$ need not be diffeomorphic to $X \times \mathbb{R}^k$ gl
 \end{document}
 ```
 > [!TIP] Theorem: Whitney immersion theorem
-> Any manifold $X$ of dimension
-> 
+> Any manifold $X$ of dimension $k$ admits a one-one immersion in $\mathbb{R}^{2k+1}$.
+
+> [!NOTE]- Proof
+> First we note that $\exists N\gg 0$ we have $X \subseteq \mathbb{R}^{N}$ embedding.
+> We show if $M>2k+1$ and if $\exists$ a one-one immersion $f:X\to \mathbb{R}^{M}$, then there exists an orthogonal projection
