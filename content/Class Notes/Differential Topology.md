@@ -964,4 +964,4 @@ It turns out that $T(X)$ need not be diffeomorphic to $X \times \mathbb{R}^k$ gl
 
 > [!NOTE]- Proof
 > First we note that $\exists N\gg 0$ we have $X \subseteq \mathbb{R}^{N}$ embedding.
-> We show if $M>2k+1$ and if $\exists$ a one-one immersion $f:X\to \mathbb{R}^{M}$, then there exists an orthogonal projection
+> We show if $M>2k+1$ and if $\exists$ a one-one immersion $f:X\to \mathbb{R}^{M}$, then there exists an orthogonal projection $\mathbb{R}^{M} \xtwoheadrightarrow{p} \mathbb{R}^{M-1}$ i.e. $\exists$ vector $a \in \mathbb{R}^{M}\setminus \{ 0 \}$ with $\mathbb{R}^{M-1}= a^{\perp}$ and $p$ the orthogonal projecton.) such that the compostite $X\xrightarrow{f}\mathbb{R}^{M}\xrightarrow{p} \mathbb{R}^{M-1}$ is also a one-one immersion. By descending indcution, the theorem follows. We now avoid all tangent and secant directions.
