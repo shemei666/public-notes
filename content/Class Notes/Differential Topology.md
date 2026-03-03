@@ -908,7 +908,54 @@ U_{12} \subseteq U_1 \arrow[ru, "\varphi_1|_{\dots} \cong"] \arrow[rr, "\varphi_
 *   follows immediately from Chain rule.
 *   $X \xrightarrow{f} Y$ diffeomorphism $\implies T(X) \xrightarrow{df} T(Y)$ diffeomorphism.
 
+We have seen that $T(V) = (V \times \mathbb{R}^N) \cap T(X)$ is an open subset of $T(X)$ and $T(V) \cong T(U) = U \times \mathbb{R}^k$. Thus, locally, $T(X)$ is diffeomorphic to $U \times \mathbb{R}^k$.
 
+It turns out that $T(X)$ need not be diffeomorphic to $X \times \mathbb{R}^k$ globally. If it is, i.e., $T(X) \cong X \times \mathbb{R}^k$, we say that the tangent bundle is **trivial**.
 
+> [!EXAMPLE] Trivial vs. Non-Trivial Tangent Bundles
+> 1. For $X = \mathbb{R}^1$, the tangent bundle $T(\mathbb{R}^1) \cong \mathbb{R}^1 \times \mathbb{R}^1 = \mathbb{R}^2$. This is a trivial bundle, visualized as a plane.
+> 2. For $X = S^1$, the tangent bundle $T(S^1) \cong S^1 \times \mathbb{R}^1$. This is also a trivial bundle, and can be visualized as a cylinder.
+> 3. However, for $X = S^2$, the tangent bundle $T(S^2)$ is not trivial (i.e., $T(S^2) \not\cong S^2 \times \mathbb{R}^2$), but this is not easy to prove (it is the Hairy Ball Theorem).
 
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
 
+    % R^1 Tangent Bundle
+    \node at (-2, 2.5) {\Large $\mathbb{R}^1$};
+    % Axis for R^1 and its tangent space
+    \draw[<->, thick] (-4, 0) -- (0, 0);
+    \draw[<->, thick] (-2, -1.5) -- (-2, 1.5);
+    \node[right] at (0,0) {$\mathbb{R}^1$};
+    \node[above] at (-2, 1.5) {$T(\mathbb{R}^1) \cong \mathbb{R}^2$};
+    \draw[dashed, gray] (-3, -1) -- (-3, 1);
+    \draw[dashed, gray] (-1, -1) -- (-1, 1);
+
+    % S^1 Tangent Bundle
+    \node at (2.5, 2.5) {\Large $S^1$};
+    \draw[thick] (2.5, 0) circle (1);
+    
+    % Tangent vectors on S^1
+    \draw[->, thick, red!70!black] (3.5, 0) -- (3.5, 1);
+    \draw[->, thick, red!70!black] (2.5, 1) -- (1.5, 1);
+    \draw[->, thick, red!70!black] (1.5, 0) -- (1.5, -1);
+    \draw[->, thick, red!70!black] (2.5, -1) -- (3.5, -1);
+    \draw[->, thick, red!70!black] (3.207, 0.707) -- (2.5, 1.414);
+    
+    % Cylinder representations
+    \node at (5, 0) {$\simeq$};
+    
+    % Cylinder
+    \begin{scope}[xshift=7cm, yshift=0cm]
+        \draw[thick] (0, 1.5) ellipse (1 and 0.4);
+        \draw[thick] (-1, -1.5) arc (180:360:1 and 0.4);
+        \draw[thick, dashed] (1, -1.5) arc (0:180:1 and 0.4);
+        \draw[thick] (-1, -1.5) -- (-1, 1.5);
+        \draw[thick] (1, -1.5) -- (1, 1.5);
+        \node[above] at (0, 2) {$T(S^1) \cong S^1 \times \mathbb{R}^1$};
+    \end{scope}
+
+\end{tikzpicture}
+\end{document}
+```
