@@ -923,7 +923,7 @@ It turns out that $T(X)$ need not be diffeomorphic to $X \times \mathbb{R}^k$ gl
 \begin{tikzpicture}[>=stealth, scale=1]
 
     % R^1 Tangent Bundle
-    \node[scale=1.2] at (-2, 2.5) {$\mathbb{R}^1$};
+    \node at (-2, 2.5) {$\mathbf{R}^1$};
     % Axis for R^1 and its tangent space
     \draw[<->, thick] (-4, 0) -- (0, 0);
     \draw[<->, thick] (-2, -1.5) -- (-2, 1.5);
@@ -933,7 +933,7 @@ It turns out that $T(X)$ need not be diffeomorphic to $X \times \mathbb{R}^k$ gl
     \draw[dashed, gray] (-1, -1) -- (-1, 1);
 
     % S^1 Tangent Bundle
-    \node[scale=1.2] at (2.5, 2.5) {$S^1$};
+    \node at (2.5, 2.5) {$\mathbf{S}^1$};
     \draw[thick] (2.5, 0) circle (1);
     
     % Tangent vectors on S^1
