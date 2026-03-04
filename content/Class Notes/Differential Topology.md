@@ -1048,4 +1048,10 @@ $$
 
 Use $\rho(x) = g(\|x\|)$ which is smooth because $g$ is smooth and near $x=\vec{0}$, $\rho$ is constant.
 
-More generally,
+More generally, given 2 concentric balls $B \subsetneq B'$ in $\mathbb{R}^n$, we can again construct a smooth function $\rho$ on $\mathbb{R}^n$ such that
+
+$$
+\rho|_B \equiv 0, \quad \rho|_{\mathbb{R}^n \setminus B'} \equiv 1, \quad 0 \le \rho \le 1.
+$$
+
+As a consequence, given a manifold $X$ and a point $p \in X$, $\exists$ a smooth function $X \to \mathbb{R}$ which is $1$ in a nbd $V$ of $p$, and $0$ outside a nbd $V'$ where $V \subsetneq \overline{V} \subsetneq V'$.
