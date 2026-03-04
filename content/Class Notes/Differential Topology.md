@@ -1090,5 +1090,5 @@ As a consequence, given a manifold $X$ and a point $p \in X$, $\exists$ a smooth
 > (iii) $\forall x$, $\quad 0 \le \theta_i(x) \le 1$.
 > (iv) $\sum_{i \in \mathbb{N}} \theta_i \equiv 1$, i.e., $\forall x \in X$, $\sum_{i \in \mathbb{N}} \theta_i(x) = 1$ (finite sum for a given $x$).
 
-We say that $\[\theta_i \}$ are a partition of unity subordinate to $\[U_\alpha \}$.
+We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha \}$.
 
