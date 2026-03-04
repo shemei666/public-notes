@@ -1092,3 +1092,12 @@ As a consequence, given a manifold $X$ and a point $p \in X$, $\exists$ a smooth
 
 We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha \}$.
 
+> [!NOTE]- Proof
+> For each $\alpha$, $\exists$ open $W_\alpha \subseteq \mathbb{R}^N$ such that $U_\alpha = X \cap W_\alpha$. Set
+> $$
+> W := \bigcup_\alpha W_\alpha
+> $$
+> an open set in $\mathbb{R}^N$.
+> It suffices to prove a partition of unity $\{ \theta_i \}$ on $\mathbb{R}^N$ subordinate to $\{ W_\alpha \}$ because then the restriction of $\theta_i$ to $X$ proves the theorem.
+> 
+> Now we write $W = \bigcup_{j \ge 1} K_j$ where $K_j$ is compact and $K_j \subseteq \text{Int}(K_{j+1})$, $K_0 = \varnothing$.
