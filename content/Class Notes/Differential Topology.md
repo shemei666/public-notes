@@ -1075,6 +1075,13 @@ As a consequence, given a manifold $X$ and a point $p \in X$, $\exists$ a smooth
 > Here $V = \varphi(B_1)$ and $V' = \varphi(B_3)$.
 
 
+> [!INFO] Definition: Support
+> Let $f: X \to \mathbb{R}$ be a continuous function. Then we define its support to be
+> $$
+> \overline{\{ x \in X \mid f(x) \neq 0 \}} = \text{Supp}(f)
+> $$
+> Thus $p \notin \text{Supp}(f)$ iff $f$ vanishes identically in an open neighborhood of $p$.
+
 > [!TIP] Theorem: Existence of partitions of unity
 > Let $X \subseteq \mathbb{R}^n$ be any subset, $\{ U_\alpha \}$ an open covering of $X$. Then there exist countably many smooth functions $\{\theta_i\}_{i \in \mathbb{N}}$ on $X$, such that the following hold:
 > 
@@ -1083,10 +1090,5 @@ As a consequence, given a manifold $X$ and a point $p \in X$, $\exists$ a smooth
 > (iii) $\forall x$, $\quad 0 \le \theta_i(x) \le 1$.
 > (iv) $\sum_{i \in \mathbb{N}} \theta_i \equiv 1$, i.e., $\forall x \in X$, $\sum_{i \in \mathbb{N}} \theta_i(x) = 1$ (finite sum for a given $x$).
 
+We say that $\[\theta_i \}$ are a partition of unity subordinate to $\[U_\alpha \}$.
 
-> [!INFO] Definition: Support
-> Let $f: X \to \mathbb{R}$ be a continuous function. Then we define its support to be
-> $$
-> \overline{\{ x \in X \mid f(x) \neq 0 \}} = \text{Supp}(f)
-> $$
-> Thus $p \notin \text{Supp}(f)$ iff $f$ vanishes identically in an open neighborhood of $p$.
