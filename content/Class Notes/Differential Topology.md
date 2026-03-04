@@ -981,3 +981,6 @@ It turns out that $T(X)$ need not be diffeomorphic to $X \times \mathbb{R}^k$ gl
 > [!TIP] Corollary
 > If $X$ is compact, then $X$ admits an embedding in $\mathbb{R}^{2n+1}$
 
+> [!QUESTION] Question
+> What about non-compact manifolds?
+
