@@ -1000,3 +1000,52 @@ As a consequence, $X \to Y_1 \times Y_2$ is one-one / immersion / proper if any 
 
 We'll prove that there always exists a proper map $X \to \mathbb{R}$.
 To prove this, we'll use the notion of partitions of unity.
+
+> [!NOTE]- Proof
+> One-one is obvious from set theory. Immersion follows by looking at tangent spaces and using one-one ness.
+> Proper: Let $K \subseteq Y$ compact. Then $K \subseteq g^{-1}g(K)$ a closed set as $g(K)$ is closed (compact) in $Z$.
+> $\therefore f^{-1}(K)$ is a closed subset of $f^{-1}g^{-1}g(K)$.
+> Since $g(K)$ is compact and $gf$ is proper, $f^{-1}g^{-1}g(K)$ is compact, hence so is $f^{-1}(K)$.
+> $\blacksquare$
+
+As a consequence, $X \to Y_1 \times Y_2$ is one-one / immersion / proper if any of the maps $X \to Y_i$ is.
+
+We'll prove that there always exists a proper map $X \to \mathbb{R}$.
+To prove this, we'll use the notion of partitions of unity.
+
+Given $0 < a < b$ in $\mathbb{R}$, we define a smooth function $\rho(x): \mathbb{R}^n \to \mathbb{R}$ by
+
+$$
+x \mapsto \begin{cases}
+1 & \text{if } \|x\| \le a \\
+0 & \text{if } \|x\| \ge b \\
+0 \le \rho(x) \le 1
+\end{cases}
+$$
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
+  % Axes
+  \draw[->] (0,0) -- (4,0) node[right] {};
+  \draw[->] (0,0) -- (0,2.5) node[above] {};
+  
+  % Ticks
+  \draw (1, 0.1) -- (1, -0.1) node[below] {$a$};
+  \draw (2.5, 0.1) -- (2.5, -0.1) node[below] {$b$};
+  
+  % Function curve
+  \draw[thick, blue!80!black] (0, 1.5) -- (1, 1.5) to[out=0, in=180] (2.5, 0) -- (3.5, 0);
+  
+  % Labels
+  \node[left] at (0, 1.5) {$g(x)=1$};
+  \node[left] at (0, 0) {$0$};
+  \node[left] at (0, 0.75) {$0 \le g \le 1$};
+\end{tikzpicture}
+\end{document}
+```
+
+Use $\rho(x) = g(\|x\|)$ which is smooth because $g$ is smooth and near $x=\vec{0}$, $\rho$ is constant.
+
+More generally,
