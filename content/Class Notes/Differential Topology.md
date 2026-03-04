@@ -1125,4 +1125,7 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 > Now set $\eta_{ij} := \text{smooth function } \mathbb{R}^n \to \mathbb{R}$
 > such that $0 \le \eta_{ij} \le 1$ at all points and 
 > $\eta_{ij} \equiv 1$ on $\overline{B}_{ij}$ and $\eta_{ij} \equiv 0$ outside $B'_{ij}$.
+> 
+> This countable collection $\{\eta_{ij}\}$ is locally finite on $W$ because any $x \in W$ lies in $K_{i_0}$ for some $i_0$ and hence $\eta_{ij}(x) = 0$ for $i \ge i_0 + 2$.
+> (as $K_{i_0} \subseteq B'_{ij}$ for $i \ge i_0 + 2$)
 > $\blacksquare$
