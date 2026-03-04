@@ -990,7 +990,7 @@ We won't use the lemma below.
 > Let $X \xrightarrow{f} Y \xrightarrow{g} Z$ be smooth maps of manifolds such that $g \circ f$ is one-one / immersion / proper. Then the same holds for $f$.
 
 > [!NOTE]- Proof
-> One-one is obvious from set theory. Immersion follows by looking at ... $g^{-1}(K)$ ... proper, ... is $f^{-1}(K)$. $\blacksquare$
+> One-one is obvious from set theory. Immersion follows by looking at $d(g \circ f)$. For properness, if $K \subseteq Z$ is compact, then $g^{-1}(K)$ is closed. Since $Z$ is Hausdorff, $K$ is closed, so $g^{-1}(K)$ is closed. Since $g \circ f$ is proper, $(g \circ f)^{-1}(K)$ is compact. But $(g \circ f)^{-1}(K) = f^{-1}(g^{-1}(K)) = f^{-1}(K)$. Therefore $f$ is proper. $\blacksquare$
 
 As a consequence, $X \to Y_1 \times Y_2$ is one-one / immersion / proper if any of the maps $X \to Y_i$ is.
 
