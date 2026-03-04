@@ -996,17 +996,7 @@ We won't use the lemma below.
 > Since $g(K)$ is compact and $gf$ is proper, $f^{-1}g^{-1}g(K)$ is compact, hence so is $f^{-1}(K)$.
 > $\blacksquare$
 
-As a consequence, $X \to Y_1 \times Y_2$ is one-one / immersion / proper if any of the maps $X \to Y_i$ is.
 
-We'll prove that there always exists a proper map $X \to \mathbb{R}$.
-To prove this, we'll use the notion of partitions of unity.
-
-> [!NOTE]- Proof
-> One-one is obvious from set theory. Immersion follows by looking at tangent spaces and using one-one ness.
-> Proper: Let $K \subseteq Y$ compact. Then $K \subseteq g^{-1}g(K)$ a closed set as $g(K)$ is closed (compact) in $Z$.
-> $\therefore f^{-1}(K)$ is a closed subset of $f^{-1}g^{-1}g(K)$.
-> Since $g(K)$ is compact and $gf$ is proper, $f^{-1}g^{-1}g(K)$ is compact, hence so is $f^{-1}(K)$.
-> $\blacksquare$
 
 As a consequence, $X \to Y_1 \times Y_2$ is one-one / immersion / proper if any of the maps $X \to Y_i$ is.
 
@@ -1083,3 +1073,20 @@ As a consequence, given a manifold $X$ and a point $p \in X$, $\exists$ a smooth
 > These functions agree on the overlaps and hence we get a global smooth function on $X$.
 > 
 > Here $V = \varphi(B_1)$ and $V' = \varphi(B_3)$.
+
+
+> [!TIP] Theorem: Existence of partitions of unity
+> Let $X \subseteq \mathbb{R}^n$ be any subset, $\{ U_\alpha \}$ an open covering of $X$. Then there exist countably many smooth functions $\{\theta_i\}_{i \in \mathbb{N}}$ on $X$, such that the following hold:
+> 
+> (i) For every $p \in X$, $\exists$ an open nbd on which only finitely many $\theta_i$'s are not identically $0$.
+> (ii) For every $i \in \mathbb{N}$, $\exists \, \alpha$ s.t. $\text{Supp}(\theta_i) \subseteq U_\alpha$.
+> (iii) $\forall x$, $\quad 0 \le \theta_i(x) \le 1$.
+> (iv) $\sum_{i \in \mathbb{N}} \theta_i \equiv 1$, i.e., $\forall x \in X$, $\sum_{i \in \mathbb{N}} \theta_i(x) = 1$ (finite sum for a given $x$).
+
+
+> [!INFO] Definition: Support
+> Let $f: X \to \mathbb{R}$ be a continuous function. Then we define its support to be
+> $$
+> \overline{\{ x \in X \mid f(x) \neq 0 \}} = \text{Supp}(f)
+> $$
+> Thus $p \notin \text{Supp}(f)$ iff $f$ vanishes identically in an open neighborhood of $p$.
