@@ -1055,3 +1055,31 @@ $$
 $$
 
 As a consequence, given a manifold $X$ and a point $p \in X$, $\exists$ a smooth function $X \to \mathbb{R}$ which is $1$ in a nbd $V$ of $p$, and $0$ outside a nbd $V'$ where $V \subsetneq \overline{V} \subsetneq V'$.
+
+> [!NOTE]- Proof Sketch
+> Pick a chart $(V_1, \varphi)$ around $p \in X$ such that $\varphi(p) = \vec{0} \in \mathbb{R}^n$.
+> 
+> ```tikz
+> \usepackage{tikz,amssymb,amsmath}
+> \begin{document}
+> \begin{tikzpicture}[>=stealth, scale=1]
+>   % Concentric circles
+>   \draw[blue!80!black, thick] (0,0) circle (0.5) node[below left=0.4cm] {$B_1$};
+>   \draw[blue!80!black, thick] (0,0) circle (1.0) node[below left=0.8cm] {$B_2$};
+>   \draw[blue!80!black, thick] (0,0) circle (1.5) node[below left=1.2cm] {$B_3$};
+>   \fill[black] (0,0) circle (1.5pt) node[above] {$\vec{0}$};
+>   
+>   \node at (1.5, -1.5) {in $\mathbb{R}^n$};
+> \end{tikzpicture}
+> \end{document}
+> ```
+> 
+> Note that $\varphi(\overline{B_2})$ is a compact set in $X$ (as the image of a compact set under a homeomorphism).
+> 
+> Consider the open cover $\{ X \setminus \varphi(\overline{B_2}), \varphi(B_3) \}$.
+> *   On $X \setminus \varphi(\overline{B_2})$, set the function $f \equiv 0$.
+> *   On $\varphi(B_3)$, use the above bump function for $B_1 \subseteq B_2$ (i.e., pull back $\rho: \mathbb{R}^n \to \mathbb{R}$ via $\varphi$).
+> 
+> These functions agree on the overlaps and hence we get a global smooth function on $X$.
+> 
+> Here $V = \varphi(B_1)$ and $V' = \varphi(B_3)$.
