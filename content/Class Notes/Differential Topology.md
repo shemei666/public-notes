@@ -990,5 +990,9 @@ We won't use the lemma below.
 > Let $X \xrightarrow{f} Y \xrightarrow{g} Z$ be smooth maps of manifolds such that $g \circ f$ is one-one / immersion / proper. Then the same holds for $f$.
 
 > [!NOTE]- Proof
-> One-one is obvious from set theory. Immersion follows by looking at
+> One-one is obvious from set theory. Immersion follows by looking at ... $g^{-1}(K)$ ... proper, ... is $f^{-1}(K)$. $\blacksquare$
 
+As a consequence, $X \to Y_1 \times Y_2$ is one-one / immersion / proper if any of the maps $X \to Y_i$ is.
+
+We'll prove that there always exists a proper map $X \to \mathbb{R}$.
+To prove this, we'll use the notion of partitions of unity.
