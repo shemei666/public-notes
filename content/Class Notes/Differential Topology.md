@@ -984,3 +984,11 @@ It turns out that $T(X)$ need not be diffeomorphic to $X \times \mathbb{R}^k$ gl
 > [!QUESTION] Question
 > What about non-compact manifolds?
 
+We won't use the lemma below.
+
+> [!TIP] Lemma
+> Let $X \xrightarrow{f} Y \xrightarrow{g} Z$ be smooth maps of manifolds such that $g \circ f$ is one-one / immersion / proper. Then the same holds for $f$.
+
+> [!NOTE]- Proof
+> One-one is obvious from set theory. Immersion follows by looking at
+
