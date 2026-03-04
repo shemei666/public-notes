@@ -1101,3 +1101,14 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 > It suffices to prove a partition of unity $\{ \theta_i \}$ on $\mathbb{R}^N$ subordinate to $\{ W_\alpha \}$ because then the restriction of $\theta_i$ to $X$ proves the theorem.
 > 
 > Now we write $W = \bigcup_{j \ge 1} K_j$ where $K_j$ is compact and $K_j \subseteq \text{Int}(K_{j+1})$, $K_0 = \varnothing$.
+> This can be arranged, for example, by using
+> $$
+> K_j = \left\{ z \in W \;\middle|\; |z| \le j, \ d(z, \mathbb{R}^n \setminus W) \ge \frac{1}{j} \right\}
+> $$
+> 
+> Clearly $K_j$ is closed and bounded and hence compact, and $K_j \subseteq \text{Int}(K_{j+1})$ as the open set 
+> $$
+> \left\{ z \;\middle|\; |z| < j + \frac{1}{2}, \ d(z, \mathbb{R}^n \setminus W) > \frac{1}{j + \frac{1}{2}} \right\}
+> $$
+> contains $K_j$ and lies in $K_{j+1}$.
+> $\blacksquare$
