@@ -979,7 +979,7 @@ It turns out that $T(X)$ need not be diffeomorphic to $X \times \mathbb{R}^k$ gl
 > Consider the orthogonal projection $p:\mathbb{R}^{M}\to a^{\perp}=\mathbb{R}^{M-1}$.
 
 > [!TIP] Corollary
-> If $X$ is compact, then $X$ admits an embedding in $\mathbb{R}^{2n+1}$
+> If $X$ (with $\dim=k$) is compact, then $X$ admits an embedding in $\mathbb{R}^{2k+1}$.
 
 > [!QUESTION] Question
 > What about non-compact manifolds?
