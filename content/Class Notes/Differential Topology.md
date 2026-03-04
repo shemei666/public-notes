@@ -1111,4 +1111,4 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 > \left\{ z \;\middle|\; |z| < j + \frac{1}{2}, \ d(z, \mathbb{R}^n \setminus W) > \frac{1}{j + \frac{1}{2}} \right\}
 > $$
 > contains $K_j$ and lies in $K_{j+1}$.
-> $\blacksquare$
+
