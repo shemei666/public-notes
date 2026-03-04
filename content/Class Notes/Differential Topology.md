@@ -1111,4 +1111,18 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 > \left\{ z \;\middle|\; |z| < j + \frac{1}{2}, \ d(z, \mathbb{R}^n \setminus W) > \frac{1}{j + \frac{1}{2}} \right\}
 > $$
 > contains $K_j$ and lies in $K_{j+1}$.
-
+> 
+> Consider $L_1 := K_1$, and $L_i := K_i \setminus \text{Int}(K_{i-1})$ for $i \ge 1$.
+> Each $L_i$ is compact and $L_i \subseteq W \setminus K_{i-2}$.
+> 
+> For each $i$, choose a finite set of pairs of concentric open balls
+> $B_{ij} \subsetneq \overline{B}_{ij} \subsetneq B'_{ij}$ such that $B_{ij}$ cover $L_i$ and $B'_{ij} \subseteq W \setminus K_{i-2}$
+> and $B'_{ij} \subseteq W_\alpha$ for some $\alpha$.
+> 
+> > [!NOTE]- Construction of such balls
+> > For every $x \in L_i$, first find an open ball $B'$ centered at $x$ such that $B' \subseteq W \setminus K_{i-2}$ and $B' \subseteq W_\alpha$ for some $\alpha$. Now pick a smaller ball $B$ in $B'$ centered at $x$. Finally use compactness of $L_i$.
+> 
+> Now set $\eta_{ij} := \text{smooth function } \mathbb{R}^n \to \mathbb{R}$
+> such that $0 \le \eta_{ij} \le 1$ at all points and 
+> $\eta_{ij} \equiv 1$ on $\overline{B}_{ij}$ and $\eta_{ij} \equiv 0$ outside $B'_{ij}$.
+> $\blacksquare$
