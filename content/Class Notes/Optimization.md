@@ -939,5 +939,12 @@ $$ y_{B(i)} = x_{B(i)} - \theta^* u_i $$
 >
 > **Anti-cycling rules**: The algorithm (so far) does not specify what $j$ to pick in Step II, and what $l$ to pick in Step V.
 
----
----
+> [!NOTE] Pivoting Rules: Smallest Subscript Rule
+> Choose the smallest subscript $j$ for which $\overline{c}_j < 0$, and the smallest index $l$ for which $x_{B(l)} = \theta^*$. By following this rule, cycling can be avoided.
+
+### Computational Complexity of Each Iteration
+
+**Step II**: Computing reduced costs $\overline{c}_j = c_j - \vec{c}_B^T B^{-1} A_j$ ($j \in N$):
+- Finding $B^{-1}$: $O(m^3)$ (Gaussian elimination, solving $AB = I$)
+- Computing each reduced cost: $O(m)$ per $j$, so $O(mn)$ total for all $j \in N$
+
