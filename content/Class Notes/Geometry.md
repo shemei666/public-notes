@@ -762,3 +762,10 @@ Rest is Ex.
 > A convex polygon is said to be regular if all its sides have the same length and angles have the same measure.
 
 
+Todo:
+1. Definition of projectile space, dimension, topology
+2. Prop: real/complex proj space are compact path connected
+3. Prop: E is finite dimensional vs over (R or C)
+4. Ex: real and comp projective space are Haussdorff
+5. Projective subspace: $V \subseteq P(E)$ is projective subspace if exists F subset of E s.t P(F)=V
+6. Thm: if V,W are projective subspaces dim V + dim W >= dim P(E)

@@ -518,7 +518,7 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > Let $K$ be a nonempty closed convex proper subset of $\mathbb{R}^{n}$. Then $P_{K}(\mathbb{R}^{n} \setminus K) = \partial K$.
 
 > [!c] Exercise
-> Prove that $\phi(t) = \lVert \vec{x} - ((1-t)P_{K}(\vec{x}) + t\vec{z}) \rVert$ for $\vec{z} \not\in K$ is a strictly increasing function on $[0,1]$.
+> Prove that $\phi(t) = \lVert \vec{x} - ((1-t)P_{K}(\vec{x}) + t\vec{z}) \rVert$ for $\vec{z} \in K$ is a strictly increasing function on $[0,1]$.
 
 ```tikz
 \begin{document}
