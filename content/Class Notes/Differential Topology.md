@@ -1136,3 +1136,12 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 > Then $\{\theta_i\}$ satisfy (i) - (iv).
 > $\blacksquare$
 
+Pick partition of unity $\{ \theta_i \}$ subordinate to some cover.
+$\rho = \sum i \theta_i$ is proper on $X$.
+
+> [!TIP] Theorem: Whitney Embedding Theorem
+> Any manifold $X$ of dimension $k$ (in some $\mathbb{R}^N$) admits an embedding into $\mathbb{R}^{2k+1}$.
+
+> [!NOTE]- Proof
+> Let $X \xrightarrow{f} \mathbb{R}^{2k+1}$ be a one-one immersion. We may, w.l.o.g. assume that $f$ is bounded (compose it with a diffeomorphism of $\mathbb{R}^{2k+1}$ to the sphere in $\mathbb{R}^{2k+1}$).
+> $\blacksquare$
