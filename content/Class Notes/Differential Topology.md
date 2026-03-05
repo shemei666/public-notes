@@ -1148,4 +1148,4 @@ $\rho = \sum i \theta_i$ is proper on $X$.
 > In fact it suffices to check that $\pi \circ F$ is proper.
 > 
 > To check $\pi \circ F$ is proper it suffices to show that for any closed ball $\bar{B}_c$ (of radius $c$) in $\mathbb{R}^{2k+2}$, $(\pi \circ F)^{-1}(\bar{B}_c)$ is compact. We'll in fact show that this inverse image lies in $\rho^{-1}([-d, d])$ for some $d>0$ in $\mathbb{R}$.
-> $\blacksquare$
+
