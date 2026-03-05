@@ -1153,5 +1153,14 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 > while on the other, $\| \rho(x_i) \| \to \infty$.
 > 
 > Now $(\pi \circ F)(x_i) - F(x_i)$ is parallel to $a$ by definition of $\pi$.
-
-
+> 
+> Now $\lim_{i \to \infty} \left\| \frac{\pi \circ F(x_i)}{\rho(x_i)} \right\| = 0$ as $\lim_{i \to \infty} \frac{C}{\rho(x_i)} = 0$.
+> 
+> $\therefore \lim_{i \to \infty} \frac{\pi \circ F(x_i)}{\rho(x_i)} = \vec{0} \in \mathbb{R}^{2k+2}$.
+> 
+> $\lim_{i \to \infty} \frac{F(x_i)}{\rho(x_i)} = \lim_{i \to \infty} \frac{(f(x_i), \rho(x_i))}{\rho(x_i)} = (0, \dots, 0, 1)$ because $\|f(x_i)\| < 1$.
+> 
+> Thus $\lim_{i \to \infty} \frac{\pi \circ F(x_i) - F(x_i)}{\rho(x_i)} = (0, \dots, 0, -1)$.
+> 
+> This contradicts that $(\pi \circ F)(x_i) - F(x_i)$ is parallel to $a$, and $a$ is not parallel to $(0, \dots, 0, \pm 1)$.
+> $\blacksquare$
