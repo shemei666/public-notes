@@ -1148,4 +1148,11 @@ $\rho = \sum i \theta_i$ is proper on $X$.
 > In fact it suffices to check that $\pi \circ F$ is proper.
 > 
 > To check $\pi \circ F$ is proper it suffices to show that for any closed ball $\bar{B}_c$ (of radius $c$) in $\mathbb{R}^{2k+2}$, $(\pi \circ F)^{-1}(\bar{B}_c)$ is compact. We'll in fact show that this inverse image lies in $\rho^{-1}([-d, d])$ for some $d>0$ in $\mathbb{R}$.
-
+> 
+> Suppose we cannot find such a $d > 0$ (for a given $\bar{B}_c$).
+> Then there exists a sequence of points $x_i \in X$
+> such that on one hand $\| \pi \circ F(x_i) \| \le c$
+> while on the other, $\| \rho(x_i) \| \to \infty$.
+> 
+> Now $(\pi \circ F)(x_i) - F(x_i)$ is parallel to $a$
+> by definition of $\pi$.
