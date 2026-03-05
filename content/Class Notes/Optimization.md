@@ -918,4 +918,10 @@ Thus, as we move to the new point $\vec{y} = \vec{x} + \theta^* \vec{d}$, the va
 
 **Step III.** Compute $\vec{u} = B^{-1} A_j$. If no component of $\vec{u}$ is (strictly) positive, we have $\theta^* = \infty$, and the optimal cost is $-\infty$ (unbounded LP instance). Terminate the algorithm.
 
+**Step IV.** If some component of $\vec{u}$ is (strictly) positive, set:
+$$ \theta^* = \min_{1 \le i \le m,\, u_i > 0} \frac{x_{B(i)}}{u_i} $$
+
+**Step V.** Let $l$ be such that $\frac{x_{B(l)}}{u_l} = \theta^*$. Form a new basis by replacing $A_{B(l)}$ with $A_j$. The new solution is $\vec{y} = \vec{x} - \theta^* \vec{u}$, and the values of the new basic variables are:
+$$ y_{B(i)} = x_{B(i)} - \theta^* u_i $$
+
 ---
