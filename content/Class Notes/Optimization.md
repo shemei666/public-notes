@@ -924,4 +924,9 @@ $$ \theta^* = \min_{1 \le i \le m,\, u_i > 0} \frac{x_{B(i)}}{u_i} $$
 **Step V.** Let $l$ be such that $\frac{x_{B(l)}}{u_l} = \theta^*$. Form a new basis by replacing $A_{B(l)}$ with $A_j$. The new solution is $\vec{y} = \vec{x} - \theta^* \vec{u}$, and the values of the new basic variables are:
 $$ y_{B(i)} = x_{B(i)} - \theta^* u_i $$
 
+> [!NOTE] Remark
+> Two different basis matrices can correspond to the same b.f.s.
+> If $\vec{x}$ is non-degenerate, then it corresponds to a unique basis matrix, since:
+> $$ x_{B(i)} > 0 \quad \forall i \in B \implies \vec{x}_B = B^{-1}\vec{b} $$
+
 ---
