@@ -1144,4 +1144,8 @@ $\rho = \sum i \theta_i$ is proper on $X$.
 
 > [!NOTE]- Proof
 > Let $X \xrightarrow{f} \mathbb{R}^{2k+1}$ be a one-one immersion. We may, w.l.o.g. assume that $f$ is bounded (compose it with a diffeomorphism of $\mathbb{R}^{2k+1}$ to the sphere in $\mathbb{R}^{2k+1}$).
+> Now consider $X \xrightarrow{(f, \rho)} \mathbb{R}^{2k+1} \times \mathbb{R} = \mathbb{R}^{2k+2}$ where $\rho$ is a proper map on $X$. As before, choose any $a \in \mathbb{R}^{2k+2} \setminus \{\vec{0}\}$ such that $a$ avoids secant & tangent directions and also $a$ is not parallel to $(0,0,\dots,0, \pm 1)$. To finish the proof we verify that for $X \xrightarrow{F=(f,\rho)} \mathbb{R}^{2k+2} \xrightarrow{\pi} a^\perp (\cong \mathbb{R}^{2k+1})$, $\pi \circ F$ is a proper one-one immersion.
+> In fact it suffices to check that $\pi \circ F$ is proper.
 > 
+> To check $\pi \circ F$ is proper it suffices to show that for any closed ball $\bar{B}_c$ (of radius $c$) in $\mathbb{R}^{2k+2}$, $(\pi \circ F)^{-1}(\bar{B}_c)$ is compact. We'll in fact show that this inverse image lies in $\rho^{-1}([-d, d])$ for some $d>0$ in $\mathbb{R}$.
+> $\blacksquare$
