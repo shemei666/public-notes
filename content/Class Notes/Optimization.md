@@ -800,5 +800,151 @@ If $H_{\vec{a},b}$ supports $S$ and $S \subseteq H_{\vec{a},b}^{-}$, then $\vec{
 > $$ \langle \vec{c}, \vec{v} \rangle \le \langle \vec{c}, \vec{p} \rangle $$
 > (i.e., either there is no optimal solution or there is an optimal extreme point).
 
+> [!INFO] Definition: reduced cost
+> $\bar{c_{j}} = c_{j}-\vec{c_{B}}^{T}B^{-1}A_{j}$  
 
+> [!TIP] Theorem:
+> If $\overline{x}$ is a b.f.s. w.r.t $B$ and $\overline{c}$ is the vector of reduced costs.
+> 1. $\overline{c}_{1} \geq 0, \dots, \overline{c}_{n} \geq 0 \implies \overline{x}$ is optimal
+> 2. $\overline{x}$ is optimal and non-degenerate $\implies \overline{c}_{1} \geq 0, \dots, \overline{c}_{n} \geq 0$ ($\overline{c} \ge \vec{0}$)
+
+### Building a Feasible Direction
+
+For a fixed non-basic variable index $j$, we build a feasible direction $\vec{d}$ such that it makes $x_{j}$ into a basic variable:
+
+$$ \vec{d}_{B} = -B^{-1}A_{j} $$
+$$ d_{j} = 1, \quad d_{i} = 0 \text{ for } i \in N \setminus \{j\} $$
+
+### Cost Analysis and Reduced Cost
+
+Let $\vec{c}^T \vec{x}$ be the cost at the current b.f.s. $\vec{x}$. If we move along a feasible direction $\vec{d}$ with step length $\theta \ge 0$, the new cost is:
+$$ \vec{c}^T (\vec{x} + \theta \vec{d}) $$
+
+The **rate of change** in the cost as we move along $\vec{d}$ starting at $\vec{x}$ is given by:
+$$ \vec{c}^T \vec{d} = \vec{c}_B^T \vec{d}_B + \vec{c}_N^T \vec{d}_N $$
+
+Since we chose $\vec{d}$ such that $d_j = 1$ and $d_i = 0$ for all other non-basic indices $i \in N \setminus \{j\}$, we have:
+$$ \vec{c}_N^T \vec{d}_N = c_j $$
+
+Substituting $\vec{d}_B = -B^{-1}A_j$:
+$$ \vec{c}^T \vec{d} = \vec{c}_B^T (-B^{-1}A_j) + c_j = c_j - \vec{c}_B^T B^{-1}A_j $$
+
+This is exactly the **reduced cost** $\overline{c}_j$:
+$$ \overline{c}_j = c_j - \vec{c}_B^T B^{-1}A_j $$
+
+### Determining the Step Length
+
+We want to find the maximum possible step length $\theta^*$ such that we stay within the feasible set $P$:
+$$ \theta^* = \max \{ \theta \ge 0 \mid \vec{x} + \theta \vec{d} \in P \} $$
+
+The resulting change in cost when moving from $\vec{x}$ to $\vec{x} + \theta^* \vec{d}$ is $\theta^* \vec{c}^T \vec{d}$.
+
+#### Case I: $\vec{d} \ge \vec{0}$
+If all components of the direction vector $\vec{d}$ are non-negative, then:
+$$ \vec{x} + \theta \vec{d} \ge \vec{0} \quad \forall \theta \ge 0 $$
+Since $\vec{d}$ is a feasible direction, $A\vec{d} = \vec{0}$. Thus, $A(\vec{x} + \theta \vec{d}) = A\vec{x} + \theta A\vec{d} = \vec{b}$, so the constraints are always satisfied.
+In this case, the feasible set is unbounded in direction $\vec{d}$ and:
+$$ \theta^* = \infty $$
+
+#### Case II: $d_i < 0$ for some $i$
+To maintain feasibility ($x_i + \theta d_i \ge 0$), we must have $\theta \le -\frac{x_i}{d_i}$ for all $i$ such that $d_i < 0$. 
+
+If $x_j$ is a non-basic variable ($j \in N$), it is either chosen as the **entering variable** ($d_j = 1$), or it is not the entering variable (in which case $d_j = 0$). Since $\vec{d}_B$ depends on the choice of $j$, the maximum step length is determined by the basic variables:
+
+$$ \theta^* = \min_{1 \le i \le m, d_{B(i)} < 0} \left( -\frac{x_{B(i)}}{d_{B(i)}} \right) $$
+
+This $\theta^*$ is used to move from the current b.f.s. $\vec{x}$ to a new b.f.s. where $x_j > 0$.
+
+### Step II: Update and Pivoting
+
+Assume $\theta^*$ is chosen and finite (recall that if $\vec{d}_B \ge \vec{0}$, $\theta^* = \infty$). Let $l$ be the minimizing index such that:
+$$ \theta^* = -\frac{x_{B(l)}}{d_{B(l)}} $$
+
+For any $i$ where $d_{B(i)} < 0$, we know $\theta^* \le -\frac{x_{B(i)}}{d_{B(i)}}$, which implies:
+$$ x_{B(i)} + \theta^* d_{B(i)} \ge 0 $$
+
+For the minimizing index $l$, this inequality is tight:
+$$ x_{B(l)} + \theta^* d_{B(l)} = 0 $$
+
+Thus, as we move to the new point $\vec{y} = \vec{x} + \theta^* \vec{d}$, the variable $x_{B(l)}$ becomes zero ($x_{B(l)} \to 0$). The variable $x_{B(l)}$ leaves the basis (the **leaving variable**), while $x_j$ enters the basis.
+
+> [!TIP] Theorem
+> (a) The columns $A_{B(i)}$ ($i \neq l$) and $A_j$ are linearly independent (the new matrix $\overline{B}$ is a basis matrix).
+> (b) $\vec{y} = \vec{x} + \theta^* \vec{d}$ (where $\vec{d}_B = -B^{-1}A_j$) is a basic feasible solution associated with $\overline{B}$.
+
+> [!NOTE]- Proof of Theorem (a)
+> Let $\overline{B}$ be the new matrix formed by replacing $A_{B(l)}$ with $A_j$. Let $\lambda_i$ be scalars such that:
+> $$ \sum_{i=1}^m \lambda_i A_{\overline{B}(i)} = \vec{0} $$
+> Since $A_{\overline{B}(l)} = A_j$ and $A_{\overline{B}(i)} = A_{B(i)}$ for $i \neq l$, we have:
+> $$ \sum_{i \neq l} \lambda_i A_{B(i)} + \lambda_l A_j = \vec{0} $$
+> Multiplying on the left by $B^{-1}$:
+> $$ \sum_{i \neq l} \lambda_i (B^{-1} A_{B(i)}) + \lambda_l B^{-1} A_j = \vec{0} $$
+> Since $B^{-1} A_{B(i)} = \vec{e}_i$ (the $i$-th standard basis vector) and $B^{-1} A_j = -\vec{d}_B$, we get:
+> $$ \left[ \begin{smallmatrix} \lambda_1 \\ \vdots \\ \lambda_{l-1} \\ 0 \\ \vdots \\ \lambda_m \end{smallmatrix} \right] + \lambda_l (B^{-1}A_j) = \vec{0} $$
+> Looking at the $l$-th component of this vector equation, the first vector has a $0$. Since $\vec{d}_B = -B^{-1}A_j$, the $l$-th component of $B^{-1}A_j$ is $-d_{B(l)}$. From the pivoting step, we know $d_{B(l)} < 0$, so $-d_{B(l)} > 0$. 
+> Thus, the $l$-th equation is:
+> $$ 0 + \lambda_l (-d_{B(l)}) = 0 \implies \lambda_l = 0 $$
+> Since $\lambda_l = 0$, the remaining sum is $\sum_{i \neq l} \lambda_i \vec{e}_i = \vec{0}$, which immediately implies $\lambda_i = 0$ for all $i \neq l$.
+> Therefore, the columns of $\overline{B}$ are linearly independent, and $\overline{B}$ is a valid basis matrix. $\blacksquare$
+
+> [!NOTE]- Proof of Theorem (b)
+> To show $\vec{y} = \vec{x} + \theta^* \vec{d}$ is a basic feasible solution (b.f.s.) associated with $\overline{B}$, we must show:
+> 1. $\vec{y}$ is feasible ($A\vec{y} = \vec{b}$ and $\vec{y} \ge \vec{0}$).
+> 2. The non-basic variables associated with $\overline{B}$ are zero.
+>
+> First, feasibility:
+> Since $\vec{d}$ is a feasible direction, $A\vec{d} = \vec{0}$. Thus:
+> $$ A\vec{y} = A(\vec{x} + \theta^* \vec{d}) = A\vec{x} + \theta^* A\vec{d} = \vec{b} + \vec{0} = \vec{b} $$
+> By the choice of $\theta^*$, we ensured that $x_i + \theta^* d_i \ge 0$ for all $i$. Thus:
+> $$ \vec{y} = \vec{x} + \theta^* \vec{d} \ge \vec{0} $$
+> So $\vec{y}$ is feasible.
+>
+> Second, basic variables constraint:
+> By our choice of minimizing index $l$, the leaving basic variable becomes exactly 0:
+> $$ y_{B(l)} = x_{B(l)} + \theta^* d_{B(l)} = 0 $$
+> Also, for non-basic indices $i \in N \setminus \{j\}$:
+> $$ y_i = x_i + \theta^* d_i = 0 + \theta^*(0) = 0 $$
+> Thus, all variables not in the new basis $\overline{B}$ (which is exactly $N \setminus \{j\} \cup \{B(l)\}$) are zero.
+> (Note: $y_{\overline{B}(i)}$ is not necessarily 0 for $i \neq l$, as $y_{B(i)} = x_{B(i)} > 0$ if non-degenerate).
+>
+> Since $\overline{B}$ is a valid basis matrix (by part a) and $\vec{y} \ge 0, A\vec{y}=\vec{b}$ with non-basis components 0, $\vec{y}$ is a b.f.s. associated with $\overline{B}$. $\blacksquare$
+
+---
+### Algorithm Pseudocode:
+
+**Step I.** $\vec{x}$ - b.f.s. w.r.t. basis matrix $B = [A_{B(1)} \mid \dots \mid A_{B(m)}]$.
+
+**Step II.** Compute reduced costs $\overline{c}_j = c_j - \vec{c}_B^T B^{-1} A_j$ ($j \in N$). If they are all non-negative the current b.f.s. ($\vec{x}$) is optimal, and the algorithm terminates. Else, choose some $j$ for which $\overline{c}_j < 0$.
+
+**Step III.** Compute $\vec{u} = B^{-1} A_j$. If no component of $\vec{u}$ is (strictly) positive, we have $\theta^* = \infty$, and the optimal cost is $-\infty$ (unbounded LP instance). Terminate the algorithm.
+
+**Step IV.** If some component of $\vec{u}$ is (strictly) positive, set:
+$$ \theta^* = \min_{1 \le i \le m,\, u_i > 0} \frac{x_{B(i)}}{u_i} $$
+
+**Step V.** Let $l$ be such that $\frac{x_{B(l)}}{u_l} = \theta^*$. Form a new basis by replacing $A_{B(l)}$ with $A_j$. The new solution is $\vec{y} = \vec{x} - \theta^* \vec{u}$, and the values of the new basic variables are:
+$$ y_{B(i)} = x_{B(i)} - \theta^* u_i $$
+
+> [!NOTE] Remark
+> Two different basis matrices can correspond to the same b.f.s.
+> If $\vec{x}$ is non-degenerate, then it corresponds to a unique basis matrix, since:
+> $$ x_{B(i)} > 0 \quad \forall i \in B \implies \vec{x}_B = B^{-1}\vec{b} $$
+
+> [!TIP] Theorem: Termination of Simplex Algorithm
+> Assume that the feasible set is non-empty and that every b.f.s. is non-degenerate. Then the simplex algorithm (just described) terminates after finitely many iterations. At termination, either:
+> - **(a)** We have an optimal basis $B$ and an associated b.f.s. $\vec{x}$ (termination in Step II of the final iteration).
+> - **(b)** The LP is unbounded (termination in Step III of the final iteration).
+
+> [!NOTE] Remark: Cycling
+> If the feasible set has degenerate b.f.s., one may return to the same basis — a phenomenon known as **"cycling"**.
+>
+> **Anti-cycling rules**: The algorithm (so far) does not specify what $j$ to pick in Step II, and what $l$ to pick in Step V.
+
+> [!NOTE] Pivoting Rules: Smallest Subscript Rule
+> Choose the smallest subscript $j$ for which $\overline{c}_j < 0$, and the smallest index $l$ for which $\frac{x_{B(l)}}{u_{l}} = \theta^*$. By following this rule, cycling can be avoided.
+
+### Computational Complexity of Each Iteration
+
+**Step II**: Computing reduced costs $\overline{c}_j = c_j - \vec{c}_B^T B^{-1} A_j$ ($j \in N$):
+- Finding $B^{-1}$: $O(m^3)$ (Gaussian elimination, solving $AB = I$)
+- Computing each reduced cost: $O(m)$ per $j$, so $O(mn)$ total for all $j \in N$
 

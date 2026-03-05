@@ -1,6 +1,12 @@
 ---
 publish: true
 ---
+
+
+
+> [!INFO] Definition: Smooth Map on Arbitrary Sets
+> A map $f: X \to \mathbb{R}^m$ defined on an arbitrary subset $X \subseteq \mathbb{R}^n$ is called **smooth** if it may be locally extended to a smooth map on open sets; that is, if around each point $x \in X$ there is an open set $U \subseteq \mathbb{R}^n$ and a smooth map $F: U \to \mathbb{R}^m$ such that $F$ equals $f$ on $U \cap X$.
+
 ## Embeddings
 **Theorem:(Embedding Theorem)** For an injective immersion $f:X\to Y$, TFAE
 
@@ -44,6 +50,8 @@ If $X$ is a submanifold of $Y$, then $X \hookrightarrow Y$ is an embedding. If $
 _suggested exercises:_ 3.9,3.10
 
 ## Local Submersion Theorem
+#todo add definition of submersion, cannonical submersion.
+
 **Theorem:** Let $f:X\to Y$ be a submersion at $x \in X$ Then, in local coordinates around $x$, $y=f(x)$, $f$ is a canonical submersion.
 
 **Proof:** Pick local coordinates around $x,y$ in $X,Y$
@@ -209,7 +217,7 @@ df_{A}(B) = \lim_{ s \to 0} \frac{1}{s} [f(A + sB) - f(A)] \\
 \end{align}
 $$
 
-This is clearly not onto for some choices of $A$ (e.g $A=0$), for $A$ invertible this is onto: for any $C \in S(n)$, we use $AB^{t} = \frac{c}{2} = BA^{t}$. Then we get $B = \frac{1}{2} C(At)^{-1}$. Thus we can solve for $B$,
+This is clearly not onto for some choices of $A$ (e.g $A=0$), for $A$ invertible this is onto: for any $C \in S(n)$, we use $AB^{T} = \frac{C}{2} = BA^{T}$. Then we get $B = \frac{1}{2} C(A^T)^{-1}$. Thus we can solve for $B$,
 
 Thus $f$ is a submersion over the dense open subset $GL(n)$ ( the set of all invertible matrices) in $M(n)$. ==It follows that the image $f$ contains an open subset of $S(n)$==.
 
@@ -256,9 +264,9 @@ $$
 im(df_{x}) + T_{y}Z = T_{y}Y
 $$
 
-**Def:** Let $f:X\to Y$ be a smooth map and $Z \subseteq Y$ a submanifold, We say that $f$ is **transversal** to $Z$ if $f^{-1}Z$ is empty or $\forall x \in f^{-1}Z$, the condition $im(df_{x})+T_{y}Y$ holds.
+**Def:** Let $f:X\to Y$ be a smooth map and $Z \subseteq Y$ a submanifold, We say that $f$ is **transversal** to $Z$ if $f^{-1}Z$ is empty or $\forall x \in f^{-1}Z$, the condition $im(df_{x})+T_{y}Z = T_{y}(Y)$ holds.
 
-**Theorem:** If $f:X\to Y$ is transversal to a submanifold $Z \subseteq Y$ then $f^{-1}Z$ is empty or a submanifold in $X$ of $\text{codim}_{Y}(Z)$.
+**Theorem:** If $f:X\to Y$ is transversal to a submanifold $Z \subseteq Y$ then $f^{-1}Z$ is empty or a submanifold in $X$ of codimension $\text{codim}_{Y}(Z)$.
 
 **Proof:** Proved above.
 **Notation**: $f \pitchfork Z$, when $Z$ is a point $\{ y \}$ then we have $f \pitchfork \{ y \}$, iff $y$ is regular value.
@@ -421,7 +429,8 @@ The following classes of smooth maps from a **compact manifold** $X$ to a manifo
 (e) embeddings
 (f) diffeomorphisms
 
-**Proof:** Let $k = \dim(X)$, $l = \dim(Y)$. Then (a) follows from (b) & (c) with $k=l$.
+**Proof:** Let $k = \dim(X)$, $l = \dim(Y)$. Then (c) follows from (a) & (b
+) with $k=l$.
 
 **Proof of (a), (b):** Suppose $f$ satisfies (a) or (b). It suffices to prove the claim:
 $$
@@ -899,7 +908,259 @@ U_{12} \subseteq U_1 \arrow[ru, "\varphi_1|_{\dots} \cong"] \arrow[rr, "\varphi_
 *   follows immediately from Chain rule.
 *   $X \xrightarrow{f} Y$ diffeomorphism $\implies T(X) \xrightarrow{df} T(Y)$ diffeomorphism.
 
+We have seen that $T(V) = (V \times \mathbb{R}^N) \cap T(X)$ is an open subset of $T(X)$ and $T(V) \cong T(U) = U \times \mathbb{R}^k$. Thus, locally, $T(X)$ is diffeomorphic to $U \times \mathbb{R}^k$.
+
+It turns out that $T(X)$ need not be diffeomorphic to $X \times \mathbb{R}^k$ globally. If it is, i.e., $T(X) \cong X \times \mathbb{R}^k$, we say that the tangent bundle is **trivial**.
+
+> [!EXAMPLE] Trivial vs. Non-Trivial Tangent Bundles
+> 1. For $X = \mathbb{R}^1$, the tangent bundle $T(\mathbb{R}^1) \cong \mathbb{R}^1 \times \mathbb{R}^1 = \mathbb{R}^2$. This is a trivial bundle, visualized as a plane.
+> 2. For $X = S^1$, the tangent bundle $T(S^1) \cong S^1 \times \mathbb{R}^1$. This is also a trivial bundle, and can be visualized as a cylinder.
+> 3. However, for $X = S^2$, the tangent bundle $T(S^2)$ is not trivial (i.e., $T(S^2) \not\cong S^2 \times \mathbb{R}^2$), but this is not easy to prove (it is the Hairy Ball Theorem).
+
+```tikz
+\usepackage{amsmath,amssymb}
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
+
+    % R^1 Tangent Bundle
+    \node at (-2, 2.5) {$\mathbf{R}^1$};
+    % Axis for R^1 and its tangent space
+    \draw[<->, thick] (-4, 0) -- (0, 0);
+    \draw[<->, thick] (-2, -1.5) -- (-2, 1.5);
+    \node[right] at (0,0) {$\mathbb{R}^1$};
+    \node[above] at (-2, 1.5) {$T(\mathbb{R}^1) \cong \mathbb{R}^2$};
+    \draw[dashed, gray] (-3, -1) -- (-3, 1);
+    \draw[dashed, gray] (-1, -1) -- (-1, 1);
+
+    % S^1 Tangent Bundle
+    \node at (2.5, 2.5) {$\mathbf{S}^1$};
+    \draw[thick] (2.5, 0) circle (1);
+    
+    % Tangent vectors on S^1
+    \draw[->, thick, red!70!black] (3.5, 0) -- (3.5, 1);
+    \draw[->, thick, red!70!black] (2.5, 1) -- (1.5, 1);
+    \draw[->, thick, red!70!black] (1.5, 0) -- (1.5, -1);
+    \draw[->, thick, red!70!black] (2.5, -1) -- (3.5, -1);
+    \draw[->, thick, red!70!black] (3.207, 0.707) -- (2.5, 1.414);
+    
+    % Cylinder representations
+    \node at (5, 0) {$\cong$};
+    
+    % Cylinder
+    \begin{scope}[xshift=7cm, yshift=0cm]
+        \draw[thick] (0, 1.5) ellipse (1 and 0.4);
+        \draw[thick] (-1, -1.5) arc (180:360:1 and 0.4);
+        \draw[thick, dashed] (1, -1.5) arc (0:180:1 and 0.4);
+        \draw[thick] (-1, -1.5) -- (-1, 1.5);
+        \draw[thick] (1, -1.5) -- (1, 1.5);
+        \node[above] at (0, 2) {$T(S^1) \cong S^1 \times \mathbb{R}^1$};
+    \end{scope}
+
+\end{tikzpicture}
+\end{document}
+```
+> [!TIP] Theorem: Whitney immersion theorem
+> Any manifold $X$ of dimension $k$ admits a one-one immersion in $\mathbb{R}^{2k+1}$.
+
+> [!NOTE]- Proof
+> First we note that $\exists N\gg 0$ we have $X \subseteq \mathbb{R}^{N}$ embedding.
+> We show if $M>2k+1$ and if $\exists$ a one-one immersion $f:X\to \mathbb{R}^{M}$, then there exists an orthogonal projection $\mathbb{R}^{M} \xtwoheadrightarrow{p} \mathbb{R}^{M-1}$ (i.e., $\exists$ vector $a \in \mathbb{R}^{M}\setminus \{ 0 \}$ with $\mathbb{R}^{M-1}= a^{\perp}$ and $p$ the orthogonal projection) such that the composite $X\xrightarrow{f}\mathbb{R}^{M}\xrightarrow{p} \mathbb{R}^{M-1}$ is also a one-one immersion. By descending induction, the theorem follows. We now avoid all tangent and secant directions.
+> Consider $X\times X \times \mathbb{R} \xrightarrow{h}\mathbb{R}^{M}$
+> $$
+> (x,y,t) \mapsto t[f(x)-f(y)]
+>$$
+>$$
+> \begin{gather}
+> T(X) \xrightarrow{g}  \mathbb{R}^{M} \\
+> (x,v) \to df_{x}(v)
+>\end{gather}
+>$$
+> Here image of $h$ captures the secant directions while the image of $g$ captures the tangential ones. Since $\dim(X\times X\times \mathbb{R})=2k+1$, $\dim(T(X))=2k$ if $M>2k+1$, by Sard's theorem $\exists a \in \mathbb{R}^{M}\setminus \{ 0 \}$ such that $a$ does not lie in the image of $h,g$ and the same holds for all non-zero multiples of $a$.
+> Consider the orthogonal projection $p:\mathbb{R}^{M}\to a^{\perp}=\mathbb{R}^{M-1}$. #todo%%  : rest of the proof from images or mayukh  %%
+
+> [!TIP] Corollary
+> If $X$ (with $\dim=k$) is compact, then $X$ admits an embedding in $\mathbb{R}^{2k+1}$.
+
+> [!QUESTION] Question
+> What about non-compact manifolds?
+
+We won't use the lemma below.
+
+> [!TIP] Lemma
+> Let $X \xrightarrow{f} Y \xrightarrow{g} Z$ be smooth maps of manifolds such that $g \circ f$ is one-one / immersion / proper. Then the same holds for $f$.
+
+> [!NOTE]- Proof
+> One-one is obvious from set theory. Immersion follows by looking at tangent spaces and using one-one ness.
+> Proper: Let $K \subseteq Y$ compact. Then $K \subseteq g^{-1}g(K)$ a closed set as $g(K)$ is closed (compact) in $Z$.
+> $\therefore f^{-1}(K)$ is a closed subset of $f^{-1}g^{-1}g(K)$.
+> Since $g(K)$ is compact and $gf$ is proper, $f^{-1}g^{-1}g(K)$ is compact, hence so is $f^{-1}(K)$.
+> $\blacksquare$
 
 
 
+As a consequence, $X \to Y_1 \times Y_2$ is one-one / immersion / proper if any of the maps $X \to Y_i$ is.
 
+We'll prove that there always exists a proper map $X \to \mathbb{R}$.
+To prove this, we'll use the notion of partitions of unity.
+
+Given $0 < a < b$ in $\mathbb{R}$, we define a smooth function $\rho(x): \mathbb{R}^n \to \mathbb{R}$ by
+
+$$
+x \mapsto \begin{cases}
+1 & \text{if } \|x\| \le a \\
+0 & \text{if } \|x\| \ge b \\
+0 \le \rho(x) \le 1
+\end{cases}
+$$
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
+  % Axes
+  \draw[->] (0,0) -- (4,0) node[right] {};
+  \draw[->] (0,0) -- (0,2.5) node[above] {};
+  
+  % Ticks
+  \draw (1, 0.1) -- (1, -0.1) node[below] {$a$};
+  \draw (2.5, 0.1) -- (2.5, -0.1) node[below] {$b$};
+  
+  % Function curve
+  \draw[thick, blue!80!black] (0, 1.5) -- (1, 1.5) to[out=0, in=180] (2.5, 0) -- (3.5, 0);
+  
+  % Labels
+  \node[left] at (0, 1.5) {$g(x)=1$};
+  \node[left] at (0, 0) {$0$};
+  \node[left] at (0, 0.75) {$0 \le g \le 1$};
+\end{tikzpicture}
+\end{document}
+```
+
+Use $\rho(x) = g(\|x\|)$ which is smooth because $g$ is smooth and near $x=\vec{0}$, $\rho$ is constant.
+
+More generally, given 2 concentric balls $B \subsetneq B'$ in $\mathbb{R}^n$, we can again construct a smooth function $\rho$ on $\mathbb{R}^n$ such that
+
+$$
+\rho|_B \equiv 0, \quad \rho|_{\mathbb{R}^n \setminus B'} \equiv 1, \quad 0 \le \rho \le 1.
+$$
+
+As a consequence, given a manifold $X$ and a point $p \in X$, $\exists$ a smooth function $X \to \mathbb{R}$ which is $1$ in a nbd $V$ of $p$, and $0$ outside a nbd $V'$ where $V \subsetneq \overline{V} \subsetneq V'$.
+
+> [!NOTE]- Proof Sketch
+> Pick a chart $(V_1, \varphi)$ around $p \in X$ such that $\varphi(p) = \vec{0} \in \mathbb{R}^n$.
+> 
+> ```tikz
+> \usepackage{tikz,amssymb,amsmath}
+> \begin{document}
+> \begin{tikzpicture}[>=stealth, scale=1]
+>   % Concentric circles
+>   \draw[blue!80!black, thick] (0,0) circle (0.5) node[below left=0.4cm] {$B_1$};
+>   \draw[blue!80!black, thick] (0,0) circle (1.0) node[below left=0.8cm] {$B_2$};
+>   \draw[blue!80!black, thick] (0,0) circle (1.5) node[below left=1.2cm] {$B_3$};
+>   \fill[black] (0,0) circle (1.5pt) node[above] {$\vec{0}$};
+>   
+>   \node at (1.5, -1.5) {in $\mathbb{R}^n$};
+> \end{tikzpicture}
+> \end{document}
+> ```
+> 
+> Note that $\varphi(\overline{B_2})$ is a compact set in $X$ (as the image of a compact set under a homeomorphism).
+> 
+> Consider the open cover $\{ X \setminus \varphi(\overline{B_2}), \varphi(B_3) \}$.
+> *   On $X \setminus \varphi(\overline{B_2})$, set the function $f \equiv 0$.
+> *   On $\varphi(B_3)$, use the above bump function for $B_1 \subseteq B_2$ (i.e., pull back $\rho: \mathbb{R}^n \to \mathbb{R}$ via $\varphi$).
+> 
+> These functions agree on the overlaps and hence we get a global smooth function on $X$.
+> 
+> Here $V = \varphi(B_1)$ and $V' = \varphi(B_3)$.
+
+
+> [!INFO] Definition: Support
+> Let $f: X \to \mathbb{R}$ be a continuous function. Then we define its support to be
+> $$
+> \overline{\{ x \in X \mid f(x) \neq 0 \}} = \text{Supp}(f)
+> $$
+> Thus $p \notin \text{Supp}(f)$ iff $f$ vanishes identically in an open neighborhood of $p$.
+
+> [!TIP] Theorem: Existence of partitions of unity
+> Let $X \subseteq \mathbb{R}^n$ be any subset, $\{ U_\alpha \}$ an open covering of $X$. Then there exist countably many smooth functions $\{\theta_i\}_{i \in \mathbb{N}}$ on $X$, such that the following hold:
+> 
+> (i) For every $p \in X$, $\exists$ an open nbd on which only finitely many $\theta_i$'s are not identically $0$.
+> (ii) For every $i \in \mathbb{N}$, $\exists \, \alpha$ s.t. $\text{Supp}(\theta_i) \subseteq U_\alpha$.
+> (iii) $\forall x$, $\quad 0 \le \theta_i(x) \le 1$.
+> (iv) $\sum_{i \in \mathbb{N}} \theta_i \equiv 1$, i.e., $\forall x \in X$, $\sum_{i \in \mathbb{N}} \theta_i(x) = 1$ (finite sum for a given $x$).
+
+We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha \}$.
+
+> [!NOTE]- Proof
+> For each $\alpha$, $\exists$ open $W_\alpha \subseteq \mathbb{R}^N$ such that $U_\alpha = X \cap W_\alpha$. Set
+> $$
+> W := \bigcup_\alpha W_\alpha
+> $$
+> an open set in $\mathbb{R}^N$.
+> It suffices to prove a partition of unity $\{ \theta_i \}$ on $\mathbb{R}^N$ subordinate to $\{ W_\alpha \}$ because then the restriction of $\theta_i$ to $X$ proves the theorem.
+> 
+> Now we write $W = \bigcup_{j \ge 1} K_j$ where $K_j$ is compact and $K_j \subseteq \text{Int}(K_{j+1})$, $K_0 = \varnothing$.
+> This can be arranged, for example, by using
+> $$
+> K_j = \left\{ z \in W \;\middle|\; |z| \le j, \ d(z, \mathbb{R}^n \setminus W) \ge \frac{1}{j} \right\}
+> $$
+> 
+> Clearly $K_j$ is closed and bounded and hence compact, and $K_j \subseteq \text{Int}(K_{j+1})$ as the open set 
+> $$
+> \left\{ z \;\middle|\; |z| < j + \frac{1}{2}, \ d(z, \mathbb{R}^n \setminus W) > \frac{1}{j + \frac{1}{2}} \right\}
+> $$
+> contains $K_j$ and lies in $K_{j+1}$.
+> 
+> Consider $L_1 := K_1$, and $L_i := K_i \setminus \text{Int}(K_{i-1})$ for $i \ge 1$.
+> Each $L_i$ is compact and $L_i \subseteq W \setminus K_{i-2}$.
+> 
+> For each $i$, choose a finite set of pairs of concentric open balls
+> $B_{ij} \subsetneq \overline{B}_{ij} \subsetneq B'_{ij}$ such that $B_{ij}$ cover $L_i$ and $B'_{ij} \subseteq W \setminus K_{i-2}$
+> and $B'_{ij} \subseteq W_\alpha$ for some $\alpha$.
+> 
+> > [!NOTE]- Construction of such balls
+> > For every $x \in L_i$, first find an open ball $B'$ centered at $x$ such that $B' \subseteq W \setminus K_{i-2}$ and $B' \subseteq W_\alpha$ for some $\alpha$. Now pick a smaller ball $B$ in $B'$ centered at $x$. Finally use compactness of $L_i$.
+> 
+> Now set $\eta_{ij} := \text{smooth function } \mathbb{R}^n \to \mathbb{R}$
+> such that $0 \le \eta_{ij} \le 1$ at all points and 
+> $\eta_{ij} \equiv 1$ on $\overline{B}_{ij}$ and $\eta_{ij} \equiv 0$ outside $B'_{ij}$.
+> 
+> This countable collection $\{\eta_{ij}\}$ is locally finite on $W$ because any $x \in W$ lies in $K_{i_0}$ for some $i_0$ and hence $\eta_{ij}(x) = 0$ for $i \ge i_0 + 2$.
+> (as $K_{i_0} \subseteq B'_{ij}$ for $i \ge i_0 + 2$)
+> 
+> Also, $\text{Supp}(\eta_{ij}) \subseteq B'_{ij} \subseteq W_\alpha$ for some $\alpha$.
+> Also, $\sum \eta_{ij}$ makes sense and is nonzero at every point as for $x \in B_{ij}$, $\eta_{ij}(x) = 1$.
+> Now re-index $\{\eta_{ij}\}$ to $\{\eta_k\}_{k \in \mathbb{N}}$.
+> Set $\theta_k := \frac{\eta_k}{\sum \eta_j}$ (the denominator is a nowhere vanishing smooth function on $W$).
+> Then $\{\theta_i\}$ satisfy (i) - (iv).
+> $\blacksquare$
+
+
+> [!TIP] Theorem: Whitney Embedding Theorem
+> Any manifold $X$ of dimension $k$ (in some $\mathbb{R}^N$) admits an embedding into $\mathbb{R}^{2k+1}$.
+
+> [!NOTE]- Proof
+> Let $X \xrightarrow{f} \mathbb{R}^{2k+1}$ be a one-one immersion. We may, w.l.o.g. assume that $f$ is bounded (compose it with a diffeomorphism of $\mathbb{R}^{2k+1}$ to the sphere in $\mathbb{R}^{2k+1}$).
+> Now consider $X \xrightarrow{(f, \rho)} \mathbb{R}^{2k+1} \times \mathbb{R} = \mathbb{R}^{2k+2}$ where $\rho$ is a proper map on $X$. As before, choose any $a \in \mathbb{R}^{2k+2} \setminus \{\vec{0}\}$ such that $a$ avoids secant & tangent directions and also $a$ is not parallel to $(0,0,\dots,0, \pm 1)$. To finish the proof we verify that for $X \xrightarrow{F=(f,\rho)} \mathbb{R}^{2k+2} \xrightarrow{\pi} a^\perp (\cong \mathbb{R}^{2k+1})$, $\pi \circ F$ is a proper one-one immersion.
+> In fact it suffices to check that $\pi \circ F$ is proper.
+> 
+> To check $\pi \circ F$ is proper it suffices to show that for any closed ball $\bar{B}_c$ (of radius $c$) in $\mathbb{R}^{2k+2}$, $(\pi \circ F)^{-1}(\bar{B}_c)$ is compact. We'll in fact show that this inverse image lies in $\rho^{-1}([-d, d])$ for some $d>0$ in $\mathbb{R}$.
+> 
+> Suppose we cannot find such a $d > 0$ (for a given $\bar{B}_c$).
+> Then there exists a sequence of points $x_i \in X$
+> such that on one hand $\| \pi \circ F(x_i) \| \le C$
+> while on the other, $\| \rho(x_i) \| \to \infty$.
+> 
+> Now $(\pi \circ F)(x_i) - F(x_i)$ is parallel to $a$ by definition of $\pi$.
+> 
+> Now $\lim_{i \to \infty} \left\| \frac{\pi \circ F(x_i)}{\rho(x_i)} \right\| = 0$ as $\lim_{i \to \infty} \frac{C}{\rho(x_i)} = 0$.
+> 
+> $\therefore \lim_{i \to \infty} \frac{\pi \circ F(x_i)}{\rho(x_i)} = \vec{0} \in \mathbb{R}^{2k+2}$.
+> 
+> $\lim_{i \to \infty} \frac{F(x_i)}{\rho(x_i)} = \lim_{i \to \infty} \frac{(f(x_i), \rho(x_i))}{\rho(x_i)} = (0, \dots, 0, 1)$ because $\|f(x_i)\| < 1$.
+> 
+> Thus $\lim_{i \to \infty} \frac{\pi \circ F(x_i) - F(x_i)}{\rho(x_i)} = (0, \dots, 0, -1)$.
+> 
+> This contradicts that $(\pi \circ F)(x_i) - F(x_i)$ is parallel to $a$, and $a$ is not parallel to $(0, \dots, 0, \pm 1)$.
+> $\blacksquare$
