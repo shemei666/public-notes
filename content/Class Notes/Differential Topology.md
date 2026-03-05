@@ -976,7 +976,7 @@ It turns out that $T(X)$ need not be diffeomorphic to $X \times \mathbb{R}^k$ gl
 >\end{gather}
 >$$
 > Here image of $h$ captures the secant directions while the image of $g$ captures the tangential ones. Since $\dim(X\times X\times \mathbb{R})=2k+1$, $\dim(T(X))=2k$ if $M>2k+1$, by Sard's theorem $\exists a \in \mathbb{R}^{M}\setminus \{ 0 \}$ such that $a$ does not lie in the image of $h,g$ and the same holds for all non-zero multiples of $a$.
-> Consider the orthogonal projection $p:\mathbb{R}^{M}\to a^{\perp}=\mathbb{R}^{M-1}$.
+> Consider the orthogonal projection $p:\mathbb{R}^{M}\to a^{\perp}=\mathbb{R}^{M-1}$. #todo%%  : rest of the proof from images or mayukh  %%
 
 > [!TIP] Corollary
 > If $X$ (with $\dim=k$) is compact, then $X$ admits an embedding in $\mathbb{R}^{2k+1}$.
