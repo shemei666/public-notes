@@ -908,3 +908,10 @@ Thus, as we move to the new point $\vec{y} = \vec{x} + \theta^* \vec{d}$, the va
 > (Note: $y_{\overline{B}(i)}$ is not necessarily 0 for $i \neq l$, as $y_{B(i)} = x_{B(i)} > 0$ if non-degenerate).
 >
 > Since $\overline{B}$ is a valid basis matrix (by part a) and $\vec{y} \ge 0, A\vec{y}=\vec{b}$ with non-basis components 0, $\vec{y}$ is a b.f.s. associated with $\overline{B}$. $\blacksquare$
+
+---
+### Algorithm Pseudocode:
+
+
+
+---

@@ -1128,3 +1128,10 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 > 
 > This countable collection $\{\eta_{ij}\}$ is locally finite on $W$ because any $x \in W$ lies in $K_{i_0}$ for some $i_0$ and hence $\eta_{ij}(x) = 0$ for $i \ge i_0 + 2$.
 > (as $K_{i_0} \subseteq B'_{ij}$ for $i \ge i_0 + 2$)
+> 
+> Also, $\text{Supp}(\eta_{ij}) \subseteq B'_{ij} \subseteq W_\alpha$ for some $\alpha$.
+> Also, $\sum \eta_{ij}$ makes sense and is nonzero at every point as for $x \in B_{ij}$, $\eta_{ij}(x) = 1$.
+> Now re-index $\{\eta_{ij}\}$ to $\{\eta_k\}_{k \in \mathbb{N}}$.
+> Set $\theta_k := \frac{\eta_k}{\sum \eta_j}$ (the denominator is a nowhere vanishing smooth function on $W$).
+> Then $\{\theta_i\}$ satisfy (i) - (iv).
+> $\blacksquare$
