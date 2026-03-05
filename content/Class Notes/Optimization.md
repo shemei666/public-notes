@@ -940,7 +940,7 @@ $$ y_{B(i)} = x_{B(i)} - \theta^* u_i $$
 > **Anti-cycling rules**: The algorithm (so far) does not specify what $j$ to pick in Step II, and what $l$ to pick in Step V.
 
 > [!NOTE] Pivoting Rules: Smallest Subscript Rule
-> Choose the smallest subscript $j$ for which $\overline{c}_j < 0$, and the smallest index $l$ for which $x_{B(l)} = \theta^*$. By following this rule, cycling can be avoided.
+> Choose the smallest subscript $j$ for which $\overline{c}_j < 0$, and the smallest index $l$ for which $\frac{x_{B(l)}}{u_{l}} = \theta^*$. By following this rule, cycling can be avoided.
 
 ### Computational Complexity of Each Iteration
 
