@@ -912,6 +912,10 @@ Thus, as we move to the new point $\vec{y} = \vec{x} + \theta^* \vec{d}$, the va
 ---
 ### Algorithm Pseudocode:
 
+**Step I.** $\vec{x}$ - b.f.s. w.r.t. basis matrix $B = [A_{B(1)} \mid \dots \mid A_{B(m)}]$.
 
+**Step II.** Compute reduced costs $\overline{c}_j = c_j - \vec{c}_B^T B^{-1} A_j$ ($j \in N$). If they are all non-negative the current b.f.s. ($\vec{x}$) is optimal, and the algorithm terminates. Else, choose some $j$ for which $\overline{c}_j < 0$.
+
+**Step III.** Compute $\vec{u} = B^{-1} A_j$. If no component of $\vec{u}$ is (strictly) positive, we have $\theta^* = \infty$, and the optimal cost is $-\infty$ (unbounded LP instance). Terminate the algorithm.
 
 ---
