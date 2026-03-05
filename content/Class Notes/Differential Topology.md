@@ -1144,4 +1144,4 @@ $\rho = \sum i \theta_i$ is proper on $X$.
 
 > [!NOTE]- Proof
 > Let $X \xrightarrow{f} \mathbb{R}^{2k+1}$ be a one-one immersion. We may, w.l.o.g. assume that $f$ is bounded (compose it with a diffeomorphism of $\mathbb{R}^{2k+1}$ to the sphere in $\mathbb{R}^{2k+1}$).
-> $\blacksquare$
+> 
