@@ -1135,3 +1135,4 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 > Set $\theta_k := \frac{\eta_k}{\sum \eta_j}$ (the denominator is a nowhere vanishing smooth function on $W$).
 > Then $\{\theta_i\}$ satisfy (i) - (iv).
 > $\blacksquare$
+
