@@ -929,4 +929,15 @@ $$ y_{B(i)} = x_{B(i)} - \theta^* u_i $$
 > If $\vec{x}$ is non-degenerate, then it corresponds to a unique basis matrix, since:
 > $$ x_{B(i)} > 0 \quad \forall i \in B \implies \vec{x}_B = B^{-1}\vec{b} $$
 
+> [!TIP] Theorem: Termination of Simplex Algorithm
+> Assume that the feasible set is non-empty and that every b.f.s. is non-degenerate. Then the simplex algorithm (just described) terminates after finitely many iterations. At termination, either:
+> - **(a)** We have an optimal basis $B$ and an associated b.f.s. $\vec{x}$ (termination in Step II of the final iteration).
+> - **(b)** The LP is unbounded (termination in Step III of the final iteration).
+
+> [!NOTE] Remark: Cycling
+> If the feasible set has degenerate b.f.s., one may return to the same basis — a phenomenon known as **"cycling"**.
+>
+> **Anti-cycling rules**: The algorithm (so far) does not specify what $j$ to pick in Step II, and what $l$ to pick in Step V.
+
+---
 ---
