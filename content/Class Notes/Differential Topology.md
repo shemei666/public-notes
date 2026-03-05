@@ -1136,8 +1136,6 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 > Then $\{\theta_i\}$ satisfy (i) - (iv).
 > $\blacksquare$
 
-Pick partition of unity $\{ \theta_i \}$ subordinate to some cover.
-$\rho = \sum i \theta_i$ is proper on $X$.
 
 > [!TIP] Theorem: Whitney Embedding Theorem
 > Any manifold $X$ of dimension $k$ (in some $\mathbb{R}^N$) admits an embedding into $\mathbb{R}^{2k+1}$.
@@ -1151,8 +1149,9 @@ $\rho = \sum i \theta_i$ is proper on $X$.
 > 
 > Suppose we cannot find such a $d > 0$ (for a given $\bar{B}_c$).
 > Then there exists a sequence of points $x_i \in X$
-> such that on one hand $\| \pi \circ F(x_i) \| \le c$
+> such that on one hand $\| \pi \circ F(x_i) \| \le C$
 > while on the other, $\| \rho(x_i) \| \to \infty$.
 > 
-> Now $(\pi \circ F)(x_i) - F(x_i)$ is parallel to $a$
-> by definition of $\pi$.
+> Now $(\pi \circ F)(x_i) - F(x_i)$ is parallel to $a$ by definition of $\pi$.
+
+
