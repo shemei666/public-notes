@@ -998,6 +998,22 @@ $\sin z = z - \frac{z^{3}}{3!}+ \dots$
 > 
 > 2. **$p$ is a vertex of $T$**:
 >    Let $T = [p, b, c, p]$. Choose points $x \in [p,b]$ and $y \in [c,p]$. This decomposes $T$ into a smaller triangle $T_1 = [p, x, y, p]$ and a polygon $P = [x, b, c, y, x]$.
+>    
+>    ```tikz
+>    \begin{document}
+>    \begin{tikzpicture}[>=stealth, scale=0.8]
+>        \coordinate (p) at (0,0);
+>        \coordinate (b) at (6,0);
+>        \coordinate (c) at (3,4);
+>        \coordinate (x) at (1.5,0);
+>        \coordinate (y) at (1.125,1.5);
+>        
+>        \draw[thick] (p) node[left] {$p$} -- (b) node[right] {$b$} -- (c) node[above] {$c$} -- cycle;
+>        \draw[thick] (x) node[below] {$x$} -- (y) node[left] {$y$};
+>    \end{tikzpicture}
+>    \end{document}
+>    ```
+>    
 >    We have $\int_T g = \int_{T_1} g + \int_P g$. Since $P$ does not contain $p$ in its interior or boundary, $P \sim 0$ in the punctured disk, so $\int_P g = 0$ by Cauchy's Theorem. Thus, $\int_T g = \int_{T_1} g$.
 >    Since $g$ is continuous and $g(p) = 0$, for any given $\epsilon > 0$, we can choose $x$ and $y$ sufficiently close to $p$ such that $|g(z)| \le \epsilon / \ell$ for all $z$ on $T_1$, where $\ell$ is the perimeter of $T$. 
 >    Therefore, $\left| \int_T g \right| = \left| \int_{T_1} g \right| \le \frac{\epsilon}{\ell} \cdot \text{length}(T_1) \le \epsilon$ (since $\text{length}(T_1) \le \ell$).
@@ -1005,6 +1021,23 @@ $\sin z = z - \frac{z^{3}}{3!}+ \dots$
 > 
 > 3. **$p \in \Delta$ (in the interior or on an edge but not a vertex)**:
 >    Let $T = [x, y, z, x]$. We can decompose $T$ into three sub-triangles that share $p$ as a vertex: $T_1 = [x, y, p, x]$, $T_2 = [y, z, p, y]$, and $T_3 = [z, x, p, z]$.
+>    
+>    ```tikz
+>    \begin{document}
+>    \begin{tikzpicture}[>=stealth, scale=0.8]
+>        \coordinate (x) at (0,0);
+>        \coordinate (y) at (6,0);
+>        \coordinate (z) at (4,4);
+>        \coordinate (p) at (3,1.5);
+>        
+>        \draw[thick] (x) node[below left] {$x$} -- (y) node[below right] {$y$} -- (z) node[above right] {$z$} -- cycle;
+>        \draw[thick] (x) -- (p) node[above right, inner sep=1pt] {$p$};
+>        \draw[thick] (y) -- (p);
+>        \draw[thick] (z) -- (p);
+>    \end{tikzpicture}
+>    \end{document}
+>    ```
+>    
 >    From case 2, the integral of $g$ over each of these sub-triangles is zero. We obtain:
 >    $$ \int_T g = \int_{T_1} g + \int_{T_2} g + \int_{T_3} g = 0 $$
 > 
