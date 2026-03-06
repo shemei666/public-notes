@@ -992,3 +992,4 @@ $\sin z = z - \frac{z^{3}}{3!}+ \dots$
 > **Claim:** $g$ is also analytic
 > We use Morera's thm to show that $g$ is analytic.
 > 
+
