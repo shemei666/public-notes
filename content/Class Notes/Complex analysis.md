@@ -1050,3 +1050,4 @@ $\sin z = z - \frac{z^{3}}{3!}+ \dots$
 > If $z = p$ is an isolated singularity of $f$, then $p$ is a **pole** of $f$ if $\lim_{z \to p} |f(z)| = \infty$. That is, for any $M > 0$ there is a number $\epsilon > 0$ such that $|f(z)| \ge M$ whenever $0 < |z-p| < \epsilon$.
 > 
 > If an isolated singularity is neither a pole nor a removable singularity, it is called an **essential singularity**.
+
