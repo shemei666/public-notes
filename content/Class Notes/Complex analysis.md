@@ -988,8 +988,28 @@ $\sin z = z - \frac{z^{3}}{3!}+ \dots$
 
 > [!NOTE]- Proof
 > $\implies$ Trivial
-> $\impliedby$ Define $g(z) = (z-p)f(z)$ $z\neq p$. $g(p)=0$. Then $g$ is continuous.
-> **Claim:** $g$ is also analytic
-> We use Morera's thm to show that $g$ is analytic.
+> $\impliedby$ Define $g(z) = (z-p)f(z)$ for $z \neq p$, and $g(p) = 0$. By the hypothesis $\lim_{z \to p} (z-p)f(z) = 0$, $g$ is continuous on $D(p,R)$.
+>
+> **Claim:** $g$ is analytic on $D(p,R)$.
+> We use Morera's Theorem. Let $T$ be a triangle in $D(p,R)$ and $\Delta$ be the solid triangle (the inside of $T$ along with its boundary $T$). We consider three cases depending on the location of $p$:
 > 
+> 1. **$p \notin \Delta$**:
+>    Then $T$ is homotopic to $0$ in the punctured disk $D(p,R) \setminus \{p\}$. Since $g$ is analytic there, Cauchy's Theorem gives $\int_T g(z) \, dz = 0$.
+> 
+> 2. **$p$ is a vertex of $T$**:
+>    Let $T = [p, b, c, p]$. Choose points $x \in [p,b]$ and $y \in [c,p]$. This decomposes $T$ into a smaller triangle $T_1 = [p, x, y, p]$ and a polygon $P = [x, b, c, y, x]$.
+>    We have $\int_T g = \int_{T_1} g + \int_P g$. Since $P$ does not contain $p$ in its interior or boundary, $P \sim 0$ in the punctured disk, so $\int_P g = 0$ by Cauchy's Theorem. Thus, $\int_T g = \int_{T_1} g$.
+>    Since $g$ is continuous and $g(p) = 0$, for any given $\epsilon > 0$, we can choose $x$ and $y$ sufficiently close to $p$ such that $|g(z)| \le \epsilon / \ell$ for all $z$ on $T_1$, where $\ell$ is the perimeter of $T$. 
+>    Therefore, $\left| \int_T g \right| = \left| \int_{T_1} g \right| \le \frac{\epsilon}{\ell} \cdot \text{length}(T_1) \le \epsilon$ (since $\text{length}(T_1) \le \ell$).
+>    As $\epsilon > 0$ was arbitrary, we must have $\int_T g = 0$.
+> 
+> 3. **$p \in \Delta$ (in the interior or on an edge but not a vertex)**:
+>    Let $T = [x, y, z, x]$. We can decompose $T$ into three sub-triangles that share $p$ as a vertex: $T_1 = [x, y, p, x]$, $T_2 = [y, z, p, y]$, and $T_3 = [z, x, p, z]$.
+>    From case 2, the integral of $g$ over each of these sub-triangles is zero. We obtain:
+>    $$ \int_T g = \int_{T_1} g + \int_{T_2} g + \int_{T_3} g = 0 $$
+> 
+> Since $\int_T g = 0$ for all triangles $T$ in $D(p,R)$, $g$ is analytic by Morera's Theorem.
+> 
+> Finally, since $g$ is analytic and $g(p) = 0$, we can write $g(z) = (z-p)h(z)$ for some analytic function $h$ on $D(p,R)$. For $z \neq p$, this means $(z-p)f(z) = (z-p)h(z)$, which implies $f(z) = h(z)$. Thus, $f$ agrees with the analytic function $h$ on the punctured disk, so $p$ is a removable singularity.
+> $\blacksquare$
 
