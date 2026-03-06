@@ -1046,3 +1046,7 @@ $\sin z = z - \frac{z^{3}}{3!}+ \dots$
 > Finally, since $g$ is analytic and $g(p) = 0$, we can write $g(z) = (z-p)h(z)$ for some analytic function $h$ on $D(p,R)$. For $z \neq p$, this means $(z-p)f(z) = (z-p)h(z)$, which implies $f(z) = h(z)$. Thus, $f$ agrees with the analytic function $h$ on the punctured disk, so $p$ is a removable singularity.
 > $\blacksquare$
 
+> [!INFO] Definition: Pole and Essential Singularity
+> If $z = p$ is an isolated singularity of $f$, then $p$ is a **pole** of $f$ if $\lim_{z \to p} |f(z)| = \infty$. That is, for any $M > 0$ there is a number $\epsilon > 0$ such that $|f(z)| \ge M$ whenever $0 < |z-p| < \epsilon$.
+> 
+> If an isolated singularity is neither a pole nor a removable singularity, it is called an **essential singularity**.
