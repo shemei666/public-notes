@@ -1051,3 +1051,6 @@ $\sin z = z - \frac{z^{3}}{3!}+ \dots$
 > 
 > If an isolated singularity is neither a pole nor a removable singularity, it is called an **essential singularity**.
 
+> [!TIP] Theorem: Casorati-Weierstrass Theorem
+> Let $f$ have an essential singularity at $a$. Let $f: B(a; R) \setminus \{a\} \to \mathbb{C}$ be analytic.
+> Then $f(B(a; R) \setminus \{a\})$ is dense in $\mathbb{C}$.
