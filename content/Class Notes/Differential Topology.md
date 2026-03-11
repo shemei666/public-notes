@@ -1226,7 +1226,8 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 ```
 
 > [!INFO] Definition: 
-> We set $\partial $
+> We define $\mathbb{H}^{k}:= \{ x_{1},\dots,x_{k} \}$ 
+> We set $\partial \mathbb{H}^{k}:= \{ (x_{1},\dots,x_{k}) \mid x_{k}\geq{0} \}$
 
 
 > [!TIP] Proposition
