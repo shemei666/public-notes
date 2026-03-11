@@ -1164,3 +1164,4 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 > 
 > This contradicts that $(\pi \circ F)(x_i) - F(x_i)$ is parallel to $a$, and $a$ is not parallel to $(0, \dots, 0, \pm 1)$.
 > $\blacksquare$
+
