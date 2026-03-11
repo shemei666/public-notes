@@ -1226,8 +1226,9 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 ```
 
 > [!INFO] Definition: 
-> We define $\mathbb{H}^{k}:= \{ x_{1},\dots,x_{k} \}$ 
-> We set $\partial \mathbb{H}^{k}:= \{ (x_{1},\dots,x_{k}) \mid x_{k}\geq{0} \}$
+> We define $\mathbb{H}^{k}:= \{ (x_{1},\dots,x_{k}) \mid x_{k}\geq 0 \}$ 
+> We set $\partial \mathbb{H}^{k}:= \{ (x_{1},\dots,x_{k}) \mid x_{k}=0 \}$
+> and $\partial U = U \cap \partial \mathbb{H}^{k}$
 
 
 > [!TIP] Proposition
@@ -1240,7 +1241,8 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 \end{gather}
 > $$ 
 
-
+> [!NOTE]- Proof
+> 
 
 
 
