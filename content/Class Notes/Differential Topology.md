@@ -1224,3 +1224,19 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 \end{tikzpicture}
 \end{document}
 ```
+
+
+> [!TIP] Proposition
+>  Let $X$ be a k manifold with boundary. Let $p \in X$. If there exists one parametrization $\phi:U \to V \subseteq X$ around $p$ with $U\subseteq \mathbb{H}^{k}$ open such that $p \in \phi(Int(U))\setminus \phi(\partial U)$ then the same is true for every parametrization around p. Therefore, we define
+>  $$
+>  \begin{gather}
+>  Int(X)   = \{ p \in X \mid p \in \phi(INt(U)) \text{for some parametrization around } p\} \\
+>  \partial(X)   = \{  \dots  \} \\
+>  X   = Int(X) \bigsqcup \partial(X) \\
+\end{gather}
+> $$ 
+
+
+
+
+
