@@ -1165,3 +1165,10 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 > This contradicts that $(\pi \circ F)(x_i) - F(x_i)$ is parallel to $a$, and $a$ is not parallel to $(0, \dots, 0, \pm 1)$.
 > $\blacksquare$
 
+## Transversality and Intersections
+
+> [!TIP] Lemma
+> Let $U \subseteq  \mathbb{R}^{n}$ be open. Let $U\xrightarrow{f}\mathbb{R}^{n}$ be a smooth map such that $U\to f(U)$ is a diffeomorphism. Then $f(U)$ is open in $\mathbb{R}^{n}$.
+
+> [!NOTE]- Proof
+> Clearly $f(U)$
