@@ -1053,3 +1053,125 @@ $\sin z = z - \frac{z^{3}}{3!}+ \dots$
 > [!TIP] Theorem: Casorati-Weierstrass Theorem
 > Let $f$ have an essential singularity at $a$. Let $f: B(a; R) \setminus \{a\} \to \mathbb{C}$ be analytic.
 > Then $f(B(a; R) \setminus \{a\})$ is dense in $\mathbb{C}$.
+
+## Laurent Series
+
+> [!TIP] Theorem: Laurent's Theorem
+> Let $f$ be analytic in a domain $N$ containing the annulus $A_{R_1, R_2} = \{ z \in \mathbb{C} : R_1 \le |z-a| \le R_2 \}$, where $0 \le R_1 < R_2$. Then $f(z)$ can be expanded into a Laurent series on the interior of the annulus:
+> $$ f(z) = \sum_{n=-\infty}^{\infty} c_n (z-a)^n $$
+> where the coefficients $c_n$ are given by:
+> $$ c_n = \frac{1}{2\pi i} \int_{C_r} \frac{f(\zeta)}{(\zeta-a)^{n+1}} d\zeta $$
+> for any circle $C_r = \{ \zeta : |\zeta-a| = r \}$ with $R_1 \le r \le R_2$.
+
+> [!NOTE]- Proof
+> 
+> ```tikz
+> \begin{document}
+> \begin{tikzpicture}[>=stealth, scale=1]
+>     \coordinate (a) at (0,0);
+>     
+>     % Draw the domain N (wavy boundary)
+>     \draw[thick, gray, fill=gray!10, plot[smooth cycle, tension=0.7]] coordinates {
+>         (0:3.5) (45:3.2) (90:3.6) (135:3.1) (180:3.4) (225:3.3) (270:3.5) (315:3.2)
+>     };
+>     
+>     % The hole of N in the center
+>     \draw[thick, gray, fill=white, plot[smooth cycle, tension=0.7]] coordinates {
+>         (0:0.8) (60:0.9) (120:0.7) (180:0.8) (240:0.9) (300:0.7)
+>     };
+>     
+>     % Draw the circles CR1 and CR2
+>     \draw[thick, blue!80!black, dashed, fill=blue!10, fill opacity=0.5] (a) circle (2.8);
+>     \draw[thick, blue!80!black, dashed, fill=white] (a) circle (1.2);
+>     
+>     % Draw circles solid outlines
+>     \draw[thick, blue!80!black] (a) circle (2.8);
+>     \draw[thick, blue!80!black] (a) circle (1.2);
+>     
+>     % Annotate circles
+>     \node[blue!80!black, above] at (120:2.8) {$C_{R_2}$};
+>     \node[blue!80!black, above] at (120:1.2) {$C_{R_1}$};
+>     
+>     % Radial lines as shown in the original chalkboard
+>     \foreach \angle in {0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330} {
+>         \draw[thin, blue!50!black] (\angle:1.2) -- (\angle:2.8);
+>     }
+>     
+>     % Annotate a and radii
+>     \filldraw[black] (a) circle (1.5pt) node[below] {$a$};
+>     \draw[->, black] (a) -- (45:1.2) node[-latex] {} node[midway, below right] {$R_1$};
+>     \draw[->, black] (a) -- (30:2.8) node[-latex] {} node[midway, below right] {$R_2$};
+>     
+>     % Annotate z
+>     \filldraw[red!70!black] (150:2) circle (1.5pt) node[left] {$z$};
+>     
+>     % Map to C
+>     \draw[->, thick, black] (3.8, 0) to[bend left=20] node[midway, above] {$f$} (5.5, 0);
+>     \node[below] at (4.65, -0.2) {analytic};
+>     \node at (6, 0) {$\mathbb{C}$};
+>     
+>     \node at (2, -3.5) {$f \text{ is analytic in } N \supseteq A_{R_1, R_2}$};
+> \end{tikzpicture}
+> \end{document}
+> ```
+> 
+> Let $C_{R_i} = \{ |z-a| = R_i \}$ for $i = 1, 2$. Suppose $f$ is analytic in $N \supseteq \{ R_1 \le |z-a| \le R_2 \} = A_{R_1, R_2}$.
+> Fix $z \in \text{int}(A_{R_1, R_2})$. Define a new function $g(\zeta)$ for $\zeta \in N$:
+> $$
+> g(\zeta) = \begin{cases}
+> \frac{f(\zeta) - f(z)}{\zeta - z} & \text{if } \zeta \neq z \\
+> f'(z) & \text{if } \zeta = z
+> \end{cases}
+> $$
+> Clearly, $g$ is continuous on $N$. Since $f$ is analytic, $g$ is analytic in $A_{R_1, R_2} \setminus \{z\}$, and $z$ is a removable singularity. This implies that $g$ is analytic in $A_{R_1, R_2}$.
+> 
+> By Cauchy's Theorem on the annulus, the integral over the outer boundary equals the integral over the inner boundary:
+> $$ \int_{C_{R_1}} g(\zeta) d\zeta = \int_{C_{R_2}} g(\zeta) d\zeta $$
+> Substituting the definition of $g(\zeta)$ since the integration paths do not pass through $z$:
+> $$ \int_{C_{R_1}} \frac{f(\zeta) - f(z)}{\zeta - z} d\zeta = \int_{C_{R_2}} \frac{f(\zeta) - f(z)}{\zeta - z} d\zeta $$
+> We can split the integrals:
+> $$ \int_{C_{R_1}} \frac{f(\zeta)}{\zeta - z} d\zeta - f(z) \int_{C_{R_1}} \frac{1}{\zeta - z} d\zeta = \int_{C_{R_2}} \frac{f(\zeta)}{\zeta - z} d\zeta - f(z) \int_{C_{R_2}} \frac{1}{\zeta - z} d\zeta $$
+> Since $z \in \text{int}(A_{R_1, R_2})$, $z$ is inside the curve $C_{R_2}$ and outside the curve $C_{R_1}$. By Cauchy's Integral Formula (or using winding numbers):
+> $$ \int_{C_{R_1}} \frac{1}{\zeta - z} d\zeta = 0 \quad \text{and} \quad \int_{C_{R_2}} \frac{1}{\zeta - z} d\zeta = 2\pi i $$
+> Substituting these values gives:
+> $$ \int_{C_{R_1}} \frac{f(\zeta)}{\zeta - z} d\zeta = \int_{C_{R_2}} \frac{f(\zeta)}{\zeta - z} d\zeta - 2\pi i f(z) $$
+> Rearranging for $f(z)$:
+> $$ f(z) = \frac{1}{2\pi i} \int_{C_{R_2}} \frac{f(\zeta)}{\zeta - z} d\zeta - \frac{1}{2\pi i} \int_{C_{R_1}} \frac{f(\zeta)}{\zeta - z} d\zeta $$
+> 
+> Let $I_2 = \frac{1}{2\pi i} \int_{C_{R_2}} \frac{f(\zeta)}{\zeta - z} d\zeta$ and $I_1 = \frac{1}{2\pi i} \int_{C_{R_1}} \frac{f(\zeta)}{\zeta - z} d\zeta$, so $f(z) = I_2 - I_1$.
+> 
+> We rewrite the denominator for $I_2$:
+> $$ \frac{1}{\zeta - z} = \frac{1}{(\zeta - a) - (z - a)} = \frac{1}{\zeta - a} \left( \frac{1}{1 - \frac{z - a}{\zeta - a}} \right) $$
+> On $C_{R_2}$, we have $|\zeta - a| = R_2$. Since $z$ is in the interior of the annulus, $|z - a| < R_2 = |\zeta - a|$, meaning $\left| \frac{z - a}{\zeta - a} \right| < 1$. We can expand this as a uniformly convergent geometric series:
+> $$
+> \begin{align*}
+> I_2 &= \frac{1}{2\pi i} \int_{C_{R_2}} \frac{f(\zeta)}{\zeta - a} \left( 1 + \left( \frac{z - a}{\zeta - a} \right) + \left( \frac{z - a}{\zeta - a} \right)^2 + \dots \right) d\zeta \\
+> &= \frac{1}{2\pi i} \int_{C_{R_2}} \left[ \frac{f(\zeta)}{\zeta - a} + \frac{f(\zeta)(z - a)}{(\zeta - a)^2} + \dots \right] d\zeta \\
+> &= \sum_{n=0}^{\infty} \left[ \frac{1}{2\pi i} \int_{C_{R_2}} \frac{f(\zeta)}{(\zeta - a)^{n+1}} d\zeta \right] (z - a)^n
+> \end{align*}
+> $$
+> 
+> For $I_1$, we rewrite the denominator similarly but factor out $-(z - a)$ since $|z - a| > R_1$:
+> $$ \frac{1}{\zeta - z} = \frac{1}{(\zeta - a) - (z - a)} = \frac{1}{-(z - a)} \left( \frac{1}{1 - \frac{\zeta - a}{z - a}} \right) $$
+> On $C_{R_1}$, we have $|\zeta - a| = R_1$. Since $z$ is in the interior of the annulus, $|z - a| > R_1 = |\zeta - a|$, meaning $\left| \frac{\zeta - a}{z - a} \right| < 1$. Expanding this using a geometric series:
+> $$
+> \begin{align*}
+> I_1 &= -\frac{1}{2\pi i} \int_{C_{R_1}} \frac{f(\zeta)}{z - a} \left( 1 + \left( \frac{\zeta - a}{z - a} \right) + \left( \frac{\zeta - a}{z - a} \right)^2 + \dots \right) d\zeta \\
+> &= -\sum_{k=1}^{\infty} \left[ \frac{1}{2\pi i} \int_{C_{R_1}} f(\zeta) (\zeta - a)^{k-1} d\zeta \right] \frac{1}{(z - a)^{k}}
+> \end{align*}
+> $$
+> 
+> Therefore, solving for $f(z) = I_2 - I_1$:
+> $$
+> \begin{align*}
+> f(z) &= \sum_{n=0}^{\infty} \left[ \frac{1}{2\pi i} \int_{C_{R_2}} \frac{f(\zeta)}{(\zeta - a)^{n+1}} d\zeta \right] (z - a)^n + \sum_{k=1}^{\infty} \left[ \frac{1}{2\pi i} \int_{C_{R_1}} f(\zeta) (\zeta - a)^{k-1} d\zeta \right] (z - a)^{-k} \\
+> &= \sum_{n=-\infty}^{\infty} c_n (z - a)^n
+> \end{align*}
+> $$
+> where we substituted $n = -k$ in the second sum, yielding $f(\zeta)(\zeta-a)^{k-1} = \frac{f(\zeta)}{(\zeta-a)^{n+1}}$ inside the integral.
+> 
+> Finally, since the function $\frac{f(\zeta)}{(\zeta - a)^{n+1}}$ is analytic in the region $A_{R_1, R_2}$, the integral over $C_{R_1}$ or $C_{R_2}$ is equal to the integral over any simple closed curve $C_r$ in the annulus by Cauchy's Theorem. Thus, we have:
+> $$ c_n = \frac{1}{2\pi i} \int_{C_r} \frac{f(\zeta)}{(\zeta - a)^{n+1}} d\zeta $$
+> for all $n \in \mathbb{Z}$.
+> $\blacksquare$
+
