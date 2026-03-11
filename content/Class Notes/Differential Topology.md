@@ -1171,4 +1171,56 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 > Let $U \subseteq  \mathbb{R}^{n}$ be open. Let $U\xrightarrow{f}\mathbb{R}^{n}$ be a smooth map such that $U\to f(U)$ is a diffeomorphism. Then $f(U)$ is open in $\mathbb{R}^{n}$.
 
 > [!NOTE]- Proof
-> Clearly $f(U)$
+> Clearly $f(U)$ is a submanifold of dimension $n$ in $\mathbb{R}^n$.
+> $\therefore$ for any $p \in U$, $T_p U \xrightarrow{\simeq} T_{f(p)} f(U) \subseteq T_{f(p)} \mathbb{R}^n$ is an isomorphism.
+> $\therefore$ By I.F.T., $f$ is open around $p$. Since $p$ is arbitrary, $f$ is open.
+> $\blacksquare$
+
+## Manifolds with boundary
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
+  \draw[thick] (0,0) to[out=70, in=180] (2,1.5);
+  \draw (0.2, 0.5) -- (0.0, 0.2);
+  \draw (0.5, 1.0) -- (0.3, 0.7);
+  \draw (0.9, 1.3) -- (0.7, 1.0);
+  \draw (1.4, 1.45) -- (1.2, 1.15);
+  \draw (1.8, 1.5) -- (1.6, 1.2);
+\end{tikzpicture}
+\end{document}
+```
+
+*   **closed ball**
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
+  \draw[thick] (0,0) circle (0.8);
+  \clip (0,0) circle (0.8);
+  \foreach \x in {-1,-0.8,...,1}
+    \draw (\x,-1) -- (\x+2,1);
+\end{tikzpicture}
+\end{document}
+```
+
+*   **closed hollow cylinder**
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
+  \draw[thick] (0, 1) ellipse (0.8 and 0.3);
+  \draw[thick] (-0.8, -1) arc (180:360:0.8 and 0.3);
+  \draw[thick, dashed] (0.8, -1) arc (0:180:0.8 and 0.3);
+  \draw[thick] (-0.8, -1) -- (-0.8, 1);
+  \draw[thick] (0.8, -1) -- (0.8, 1);
+  
+  \begin{scope}
+    \clip (-0.8,-1) rectangle (0.8,1);
+    \foreach \x in {-2,-1.8,...,2}
+      \draw (\x,-1.5) -- (\x+1.5,1.5);
+  \end{scope}
+\end{tikzpicture}
+\end{document}
+```
