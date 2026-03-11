@@ -1244,7 +1244,12 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 > [!NOTE]- Proof
 > Suppose $\phi_{1}:U_{1}\to V_{1}$ is another param around p then upon shirnking $U,V,U_{1},V_{1}$ we may have $V=V_{1}$. Then $h=\phi_{1} ^{-1} \circ \phi$ gives a diffeo $U\to U_{1}$ and hence by above lemma $h(\partial U)=\partial U_{1}$, $h(Int(U))=Int(U_{1})$. If follows that $\phi(\partial U)=\phi_{1}(\partial U_{1}), \phi(Int(U))=\phi_{1}(Int(U_{1}))$. $\quad \blacksquare$
 
-**Examples**
+**Examples:** 
+1. Any manifold $X$ is a manifold with boundary, $\partial X=\phi$, $Int(X)=X$.
+2. $X=[0,1]$ is a 1-manifold with boundary $\partial X=\{ 0,1 \}, Int(X)=(0,1)$
+3. If $X$ is a submanifold with boundary in $\mathbb{R}^{N}$, then its topological boundary may be quite different than $\partial X$.
+
+
 
 
 
