@@ -1249,6 +1249,13 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 2. $X=[0,1]$ is a 1-manifold with boundary $\partial X=\{ 0,1 \}, Int(X)=(0,1)$
 3. If $X$ is a submanifold with boundary in $\mathbb{R}^{N}$, then its topological boundary may be quite different than $\partial X$.
 
+---
+
+---
+
+
+
+
 
 
 
