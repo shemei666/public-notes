@@ -33,8 +33,15 @@ U \arrow[r, "i"] & U \times V
 
 where $\phi: X_1 \cong U \subseteq \mathbb{R}^{\dim X}$ and $\psi: Y_1 \cong U \times V \subseteq \mathbb{R}^{\dim Y}$ are charts such that $\psi \circ f \circ \phi^{-1} = i$, with $i(u) = (u, 0)$.
 
-Assuming this claim, we see that $2$ holds as $U$ diffeomorphic to its image in $V \implies  X_{1} \xrightarrow{\sim } Y_{1}$ Since $X_{1} = f^{-1} f(X_{1})$, we see that $X\to f(X)$ is a bijective local diffeomorphism, hence $2$.
-Similarly we see that **Claim** $\implies 4$. #todo
+> [!NOTE]- Proof of Claim
+> By the Local Immersion Theorem, since $f$ is an immersion, there exist local charts $\phi': W \xrightarrow{\sim} U'$ around $x$ and $\psi': Y' \xrightarrow{\sim} U' \times V'$ around $y=f(x)$ such that $f(W) \subseteq Y'$, and in these coordinates $f$ is given by $u \mapsto (u, 0)$. Thus, $f(W)$ corresponds to the slice $U' \times \{0\}$ in $Y'$. 
+> By hypothesis (3), $X \to f(X)$ is a homeomorphism, which means the image $f(W)$ is open in $f(X)$ with the subspace topology. Therefore, there exists an open subset $Y'' \subseteq Y$ such that $f(X) \cap Y'' = f(W)$.
+> Now, define $Y_1 = Y' \cap Y''$, which is an open neighborhood of $y$ in $Y$. 
+> Let $X_1 = f^{-1}(Y_1)$. Since $Y_1 \subseteq Y''$, we have $f(X_1) \subseteq f(X) \cap Y'' = f(W)$. Since $f$ is an injective map, this implies $X_1 \subseteq W$. 
+> This means $X_1$ consists exactly of the points in $W$ that map into $Y_1$, and no other points in $X$ map into $Y_1$. By suitably shrinking our coordinate patches to $U \subseteq U'$ and $V \subseteq V'$ corresponding to $X_1$ and $Y_1$, we obtain the desired charts where $X_1 \cong U$ and $Y_1 \cong U \times V$, which satisfy the diagram. $\quad \blacksquare$
+
+Assuming this claim, we see that $2$ holds as $U$ is diffeomorphic to its image $U \times \{0\} \subseteq U \times V \implies  X_{1} \xrightarrow{\sim } f(X_{1})$ is a diffeomorphism. Since $X_{1} = f^{-1}(f(X_{1}))$, we see that $X\to f(X)$ is a bijective local diffeomorphism, hence $2$ holds.
+Similarly we see that **Claim** $\implies 4$: For every $y \in f(X)$, pick such an open set $Y_{1}$ corresponding to the diagram. The map $i: U \to U \times V$ given by $u \mapsto (u, 0)$ is proper, since the inverse image of any compact set in $U \times V$ is exactly its intersection with $U \times \{0\}$, which is compact. Hence, $f|_{X_1}: X_1 \to Y_1$ is a proper map. Setting $Y' = \bigcup_{y \in f(X)} Y_{1}$, $Y'$ is an open subset of $Y$ containing $f(X)$, and $X \to Y'$ is locally proper on $Y'$. This proves 4.
 
 **Def:** A map of manifolds $f:X\to Y$ is called an embedding if it is an injective immersion satisfying above equivalent conditions,
 
