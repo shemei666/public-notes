@@ -1260,4 +1260,3 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 
 
 
-
