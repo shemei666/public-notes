@@ -1,7 +1,8 @@
 $$
-\begin{pmatrix}
+\begin{pmatrix} \\
+ 
 1  &  &  \\
  & 1 \\
- &  & 
+ &  & 1  & 
 \end{pmatrix}
 $$
