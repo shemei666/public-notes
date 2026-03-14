@@ -14,5 +14,8 @@ $$
 q < 0,
 $$
 $$
-kap + kbq = k, \text{ k > 0}
+\begin{gather}
+ap = 1 + bq \\
+
+\end{gather}
 $$
