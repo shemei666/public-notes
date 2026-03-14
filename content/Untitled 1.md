@@ -22,3 +22,9 @@ ap = 1 + bq \\
 (b-1)ap = (b-1) + (b-1)bq
 \end{gather}
 $$
+$$
+\begin{gather}
+
+N = bq + r \\
+\end{gather}
+$$
