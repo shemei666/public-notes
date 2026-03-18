@@ -1175,3 +1175,8 @@ $\sin z = z - \frac{z^{3}}{3!}+ \dots$
 > for all $n \in \mathbb{Z}$.
 > $\blacksquare$
 
+---
+#todo result on poles,poles at infinity, polynomial as an entire fn with pole at infinity.
+
+---
+
