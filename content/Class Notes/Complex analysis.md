@@ -1190,13 +1190,12 @@ $\sin z = z - \frac{z^{3}}{3!}+ \dots$
 ## Residues
 
 ```tikz
+\usepackage{tikz}
 \usepackage{amssymb}
 \begin{document}
-\begin{tikzpicture}[>=stealth, scale=1.0]
+\begin{tikzpicture}[>=stealth, scale=0.8]
     % Domain Omega
-    \draw[thick, plot[smooth cycle, tension=0.7]] coordinates {
-        (-2.5,-2) (2.5,-2) (3, 1) (1.5, 2.5) (-1.5, 2) (-3, 0)
-    };
+    \draw[thick] (-2,-2) .. controls (0,-2.5) and (2.5,-2.5) .. (3,0) .. controls (3,2) and (1.5,3) .. (0,2.5) .. controls (-2,2) and (-3,1) .. (-2,-2);
     \node at (3.5, 0.5) {$\Omega$};
     
     % Point a
@@ -1206,11 +1205,9 @@ $\sin z = z - \frac{z^{3}}{3!}+ \dots$
     \draw[thick] (-0.5,0) circle (1.5);
     
     % Text
-    \node[right] at (2, -1) { $f : \Omega \setminus \{a\} \to \mathbb{C}$ };
-    \node[right] at (2, -1.5) { $\overline{B(a,R)} \setminus \{a\} \subseteq \Omega$ };
+    \node[right] at (2, -1) { $f : \Omega \backslash \{a\} \to C$ };
+    \node[right] at (2, -1.5) { $\overline{B(a,R)} \backslash \{a\} \subseteq \Omega$ };
 
-    % Line on the right
-    \draw[thick] (4, -1) -- (4, 3);
 \end{tikzpicture}
 \end{document}
 ```
