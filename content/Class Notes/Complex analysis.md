@@ -1186,3 +1186,39 @@ $\sin z = z - \frac{z^{3}}{3!}+ \dots$
 > 
 >   $z \mapsto \frac{P(z)}{Q(z)} \quad \gcd(P,Q) = 1$
 
+
+## Residues
+
+```tikz
+\usepackage{amssymb}
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1.0]
+    % Domain Omega
+    \draw[thick, plot[smooth cycle, tension=0.7]] coordinates {
+        (-2.5,-2) (2.5,-2) (3, 1) (1.5, 2.5) (-1.5, 2) (-3, 0)
+    };
+    \node at (3.5, 0.5) {$\Omega$};
+    
+    % Point a
+    \filldraw[black] (-0.5,0) circle (1.5pt) node[below] {$a$};
+    
+    % Circle around a
+    \draw[thick] (-0.5,0) circle (1.5);
+    
+    % Text
+    \node[right] at (2, -1) { $f : \Omega \setminus \{a\} \to \mathbb{C}$ };
+    \node[right] at (2, -1.5) { $\overline{B(a,R)} \setminus \{a\} \subseteq \Omega$ };
+
+    % Line on the right
+    \draw[thick] (4, -1) -- (4, 3);
+\end{tikzpicture}
+\end{document}
+```
+
+$$ f(z) = \dots + \frac{a_{-2}}{(z-a)^2} + \frac{a_{-1}}{z-a} + a_0 + a_1(z-a) + a_2(z-a)^2 + \dots $$
+
+> [!INFO] Definition: Residue
+> Residue of $f$ at $a$ is $a_{-1}$.
+> 
+> Notation is $\text{Res}(f; a)$
+
