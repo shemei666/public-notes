@@ -1180,3 +1180,9 @@ $\sin z = z - \frac{z^{3}}{3!}+ \dots$
 
 ---
 
+> [!QUESTION] Question
+> * Characterization of rational functions which have removable singularity at $\infty$.
+> * The same problem with pole at $\infty$.
+> 
+>   $z \mapsto \frac{P(z)}{Q(z)} \quad \gcd(P,Q) = 1$
+
