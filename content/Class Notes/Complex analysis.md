@@ -1219,3 +1219,16 @@ $$ f(z) = \dots + \frac{a_{-2}}{(z-a)^2} + \frac{a_{-1}}{z-a} + a_0 + a_1(z-a) +
 > 
 > Notation is $\text{Res}(f; a)$
 
+> [!TIP] Theorem: Residue Theorem
+> Let $f$ be analytic in the region $G$ except for the isolated singularities $a_1, a_2, \dots, a_n$. If $\gamma$ is a closed rectifiable curve in $G$ which does not pass through any of the points $a_k$ and if $\gamma \approx 0$ in $G$ then
+> $$ \frac{1}{2\pi i} \int_\gamma f = \sum_{k=1}^n n(\gamma; a_k) \text{Res}(f; a_k). $$
+
+> [!NOTE]- Proof
+> Let $m_k = n(\gamma; a_k)$ for $1 \le k \le m$, and choose positive numbers $r_1, \dots, r_m$ such that no two disks $\overline{B}(a_k; r_k)$ intersect, none of them intersects $\{\gamma\}$, and each disk is contained in $G$. (This can be done by induction and by using the fact that $\gamma$ does not pass through any of the singularities.) Let $\gamma_k(t) = a_k + r_k \exp(-2\pi i m_k t)$ for $0 \le t \le 1$. Then for $1 \le j \le m$
+> $$ n(\gamma; a_j) + \sum_{k=1}^m n(\gamma_k; a_j) = 0. $$
+> Since $\gamma \approx 0(G)$ and $\overline{B}(a_k; r_k) \subset G$,
+> $$ n(\gamma; a) + \sum_{k=1}^m n(\gamma_k; a) = 0 $$
+> for all $a$ not in $G - \{a_1, \dots, a_m\}$. Since $f$ is analytic in $G - \{a_1, \dots, a_m\}$ Theorem IV.5.7 gives
+> $$ 0 = \int_\gamma f + \sum_{k=1}^m \int_{\gamma_k} f. \quad (2.3) $$
+> If $f(z) = \sum_{-\infty}^\infty b_n (z - a_k)^n$ is the Laurent expansion about $z = a_k$ then this series converges uniformly on $\overline{B}(a_k; r_k)$. Hence $\int_{\gamma_k} f = \sum_{-\infty}^\infty b_n \int_{\gamma_k} (z - a_k)^n$.
+> But $\int_{\gamma_k} (z - a_k)^n = 0$ if $n \neq -1$ since $(z - a_k)^n$ has a primitive. Also $\int_{\gamma_k} (z - a_k)^{-1} = 2\pi i n(\gamma_k; a_k) \text{Res}(f; a_k)$. Hence (2.3) implies the desired result. $\blacksquare$
