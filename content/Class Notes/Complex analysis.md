@@ -1219,6 +1219,26 @@ $$ f(z) = \dots + \frac{a_{-2}}{(z-a)^2} + \frac{a_{-1}}{z-a} + a_0 + a_1(z-a) +
 > 
 > Notation is $\text{Res}(f; a)$
 
+> [!TIP] Theorem: Cauchy's Theorem (First Version) / Generalized Cauchy Theorem
+> Let $G$ be an open subset of the plane and $f: G \to \mathbb{C}$ an analytic function. If $\gamma_1, \dots, \gamma_m$ are closed rectifiable curves in $G$ such that $n(\gamma_1; w) + \dots + n(\gamma_m; w) = 0$ for all $w$ in $\mathbb{C} \setminus G$ then
+> $$ \sum_{k=1}^m \int_{\gamma_k} f = 0. $$
+
+> [!NOTE]- Proof
+> We can prove this directly using Cauchy's Integral Formula. Let $\Gamma$ denote the cycle $\gamma_1 + \dots + \gamma_m$. The hypothesis states that $n(\Gamma; w) = 0$ for all $w \notin G$, which means $\Gamma \approx 0$ in $G$.
+> Assume Cauchy's Integral Formula holds for this cycle $\Gamma$, which states that for any $z_0 \in G \setminus \Gamma$:
+> $$ f(z_0) n(\Gamma; z_0) = \frac{1}{2\pi i} \int_\Gamma \frac{f(w)}{w - z_0} dw $$
+> To prove that $\int_\Gamma f(w) dw = 0$, define a new function $g(z) = z f(z)$. Since $f$ is analytic on $G$, $g$ is also analytic on $G$.
+> Applying Cauchy's Integral Formula to $g$ at the point $z_0$:
+> $$ g(z_0) n(\Gamma; z_0) = \frac{1}{2\pi i} \int_\Gamma \frac{g(w)}{w - z_0} dw $$
+> Substituting $g(w) = w f(w)$ and decomposing the numerator $w = (w - z_0) + z_0$:
+> $$ z_0 f(z_0) n(\Gamma; z_0) = \frac{1}{2\pi i} \int_\Gamma \frac{(w - z_0 + z_0) f(w)}{w - z_0} dw $$
+> $$ z_0 f(z_0) n(\Gamma; z_0) = \frac{1}{2\pi i} \int_\Gamma f(w) dw + \frac{z_0}{2\pi i} \int_\Gamma \frac{f(w)}{w - z_0} dw $$
+> Using Cauchy's Integral Formula for $f$ on the second term, we get:
+> $$ z_0 f(z_0) n(\Gamma; z_0) = \frac{1}{2\pi i} \int_\Gamma f(w) dw + z_0 f(z_0) n(\Gamma; z_0) $$
+> Subtracting this term from both sides yields:
+> $$ 0 = \frac{1}{2\pi i} \int_\Gamma f(w) dw $$
+> Therefore, $\sum_{k=1}^m \int_{\gamma_k} f = 0$. $\blacksquare$
+
 > [!TIP] Theorem: Residue Theorem
 > Let $f$ be analytic in the region $G$ except for the isolated singularities $a_1, a_2, \dots, a_n$. If $\gamma$ is a closed rectifiable curve in $G$ which does not pass through any of the points $a_k$ and if $\gamma \approx 0$ in $G$ then
 > $$ \frac{1}{2\pi i} \int_\gamma f = \sum_{k=1}^n n(\gamma; a_k) \text{Res}(f; a_k). $$
