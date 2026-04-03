@@ -1278,16 +1278,6 @@ A continuous/smooth vector field (tangential) on $X$ is a continuous/smooth map 
 > This contradicts that $(\pi \circ F)(x_i) - F(x_i)$ is parallel to $a$, and $a$ is not parallel to $(0, \dots, 0, \pm 1)$.
 > $\blacksquare$
 
-## Transversality and Intersections
-
-> [!TIP] Lemma
-> Let $U \subseteq  \mathbb{R}^{n}$ be open. Let $U\xrightarrow{f}\mathbb{R}^{n}$ be a smooth map such that $U\to f(U)$ is a diffeomorphism. Then $f(U)$ is open in $\mathbb{R}^{n}$.
-
-> [!NOTE]- Proof
-> Clearly $f(U)$ is a submanifold of dimension $n$ in $\mathbb{R}^n$.
-> $\therefore$ for any $p \in U$, $T_p U \xrightarrow{\simeq} T_{f(p)} f(U) \subseteq T_{f(p)} \mathbb{R}^n$ is an isomorphism.
-> $\therefore$ By I.F.T., $f$ is open around $p$. Since $p$ is arbitrary, $f$ is open.
-> $\blacksquare$
 
 ## Manifolds with boundary
 
@@ -1362,9 +1352,21 @@ A continuous/smooth vector field (tangential) on $X$ is a continuous/smooth map 
 2. $X=[0,1]$ is a 1-manifold with boundary $\partial X=\{ 0,1 \}, Int(X)=(0,1)$
 3. If $X$ is a submanifold with boundary in $\mathbb{R}^{N}$, then its topological boundary may be quite different than $\partial X$.
 
----
+## One-manifolds and some consequences
+
 
 ---
+
+## Transversality and Intersections
+
+> [!TIP] Lemma
+> Let $U \subseteq  \mathbb{R}^{n}$ be open. Let $U\xrightarrow{f}\mathbb{R}^{n}$ be a smooth map such that $U\to f(U)$ is a diffeomorphism. Then $f(U)$ is open in $\mathbb{R}^{n}$.
+
+> [!NOTE]- Proof
+> Clearly $f(U)$ is a submanifold of dimension $n$ in $\mathbb{R}^n$.
+> $\therefore$ for any $p \in U$, $T_p U \xrightarrow{\simeq} T_{f(p)} f(U) \subseteq T_{f(p)} \mathbb{R}^n$ is an isomorphism.
+> $\therefore$ By I.F.T., $f$ is open around $p$. Since $p$ is arbitrary, $f$ is open.
+> $\blacksquare$
 
 
 
