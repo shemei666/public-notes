@@ -1281,20 +1281,6 @@ A continuous/smooth vector field (tangential) on $X$ is a continuous/smooth map 
 
 ## Manifolds with boundary
 
-```tikz
-\usepackage{tikz}
-\begin{document}
-\begin{tikzpicture}[>=stealth, scale=1]
-  \draw[thick] (0,0) to[out=70, in=180] (2,1.5);
-  \draw (0.2, 0.5) -- (0.0, 0.2);
-  \draw (0.5, 1.0) -- (0.3, 0.7);
-  \draw (0.9, 1.3) -- (0.7, 1.0);
-  \draw (1.4, 1.45) -- (1.2, 1.15);
-  \draw (1.8, 1.5) -- (1.6, 1.2);
-\end{tikzpicture}
-\end{document}
-```
-
 *   **closed ball**
 ```tikz
 \usepackage{tikz}
