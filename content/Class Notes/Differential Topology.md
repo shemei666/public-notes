@@ -1144,8 +1144,114 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 > $\blacksquare$
 
 
-> [!TIP] Theorem: Whitney Embedding Theorem
-> Any manifold $X$ of dimension $k$ (in some $\mathbb{R}^N$) admits an embedding into $\mathbb{R}^{2k+1}$.
+## Tangent Bundle
+
+**Recall:** Tangent Bundle $=$ disjoint union of all tangent spaces of $X$ (manifold) at all points of $X$.
+- $T(\mathbb{R}^n) = \mathbb{R}^n \times \mathbb{R}^n = \{ (p, v) \mid v \in T_p \mathbb{R}^n \}$
+- $U \subseteq \mathbb{R}^n$ open, $T(U) = U \times \mathbb{R}^n = \{ (p,v) \mid p \in U, v \in T_p \mathbb{R}^n \}$ open in $T(\mathbb{R}^n) (\cong \mathbb{R}^{2n})$
+- $X \subseteq \mathbb{R}^N$ $k$-submanifold, $T(X) = \{ (p,v) \mid p \in X, v \in T_p X \} \subseteq \mathbb{R}^{2N}$ (subspace topology)
+
+It turns out that $T(X)$ is a $2k$-dimensional manifold in $\mathbb{R}^{2N}$.
+- $X \xrightarrow{f} Y$ smooth map $\Rightarrow T(X) \xrightarrow{df} T(Y)$, $(p,v) \mapsto (f(p), df_p(v))$ is a smooth map (by locally extending $f$ to a smooth map $F$)
+- $X \xrightarrow{f} Y \xrightarrow{g} Z$ smooth $\Rightarrow d(g \circ f) = dg \circ df : T(X) \to T(Z)$ by usual chain rule
+- $X \xrightarrow[\text{diffeo}]{f} Y \Rightarrow T(X) \xrightarrow[\simeq]{df} T(Y)$
+
+$V \subseteq X$ open $\Rightarrow T(V)$ open subset of $T(X)$, i.e., $(V \times \mathbb{R}^N) \cap T(X)$.
+$\varphi: U \subseteq \mathbb{R}^k \xrightarrow{\simeq} V \subseteq X$ parameterisation where $U$ is open.
+But $T(V) \xrightarrow[\simeq]{d\varphi} T(U) = U \times \mathbb{R}^k$.
+Thus locally $T(X)$ is diffeomorphic to $U \times \mathbb{R}^k$.
+It turns out that $T(X)$ need not be diffeomorphic to $X \times \mathbb{R}^k$.
+[Example: $X = S^2$, but not that easy to prove]
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
+  % Top line for R^1
+  \node at (-3, 1) {$\mathbb{R}^1$};
+  \draw[->] (-2, 0.5) -- (2, 0.5);
+  \draw[->] (0, -0.5) -- (0, 1.5);
+  \draw[->, thick] (0, 0.5) -- (1, 0.5);
+  
+  % Bottom circle for S^1
+  \node at (-3, -1.5) {$S^1$};
+  \draw[->] (0,-3.5) -- (0,-0.5);
+  \draw (-2,-2) -- (2,-2);
+  \draw[thick] (-0.5,-2) circle (0.5);
+  \draw[->, thick] (-0.5,-1.5) -- (0.5,-1.5);
+  \draw[->, thick] (-1,-2) -- (-1,-3);
+  \draw[->, thick] (0,-2) -- (0,-1);
+  \draw[->, thick] (-0.5,-2.5) -- (-1.5,-2.5);
+  
+  % S^1 vector field
+  \draw[thick] (3, -2) circle (0.5);
+  \node at (2.4, -2) {$p_0$};
+  \draw[->,thick] (2.5, -2) -- (2.5, -1.5);
+  \draw[->,thick] (3, -1.5) -- (3.5, -1.5);
+  \draw[->,thick] (3.5, -2) -- (3.5, -2.5);
+  \draw[->,thick] (3, -2.5) -- (2.5, -2.5);
+  
+  \node[right] at (4, -2) {\parbox{4cm}{This allows us to see that\\ $T(S^1) \simeq S^1 \times \mathbb{R}$\\ $(p,u) \mapsto (p,\lambda)$ where $u = \lambda v_p$\\ $v_{p_0} \in T_{p_0}(S^1)$ gives rise to a\\ (continuous) set of vectors $v_p \in T_p S^1$\\ by rotation.}};
+\end{tikzpicture}
+\end{document}
+```
+
+The tangent bundle $T(X)$ admits a natural map $T(X) \xrightarrow{\pi} X$, $(p,v) \mapsto p$ which is in fact smooth as can be checked locally, say over $V \subseteq X$ where $T(V) \simeq V \times \mathbb{R}^k$.
+$X \xrightarrow{f} Y$ gives a commutative diagram:
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
+  \node (TX) at (0,1.5) {$T(X)$};
+  \node (TY) at (2,1.5) {$T(Y)$};
+  \node (X) at (0,0) {$X$};
+  \node (Y) at (2,0) {$Y$};
+  
+  \draw[->] (TX) -- node[above] {$df$} (TY);
+  \draw[->] (TX) -- node[left] {$\downarrow$} (X); 
+  \draw[->] (TY) -- node[right] {$\downarrow$} (Y);
+  \draw[->] (X) -- node[above] {$f$} (Y);
+\end{tikzpicture}
+\end{document}
+```
+
+A continuous/smooth vector field (tangential) on $X$ is a continuous/smooth map $X \xrightarrow{s} T(X)$ such that $\pi \circ s = \mathbf{1}_X$.
+
+> [!TIP] Exercise
+> Show that $S^1 \subseteq \mathbb{R}^2$ has a smooth unit vector field (length = 1 as per embedding in $\mathbb{R}^2$).
+> Then show that $T(S^1) \simeq S^1 \times \mathbb{R}$.
+
+## Whitney Embedding Theorem
+
+> [!TIP] Theorem: (Whitney immersion theorem)
+> Any manifold $X$ of dimension $k$ admits a one-one immersion in $\mathbb{R}^{2k+1}$.
+
+> [!NOTE]- Proof
+> First note that $\exists N \gg 0$ such that $X \subseteq \mathbb{R}^N$ embedding.
+> We show if $M > 2k+1$ and if $\exists$ a one-one immersion $f: X \to \mathbb{R}^M$, then $\exists$ an orthogonal projection $\mathbb{R}^M \xrightarrow{p} \mathbb{R}^{M-1}$ (i.e., $\exists$ vector $a \in \mathbb{R}^M \setminus \{\vec{0}\}$ with $\mathbb{R}^{M-1} = a^\perp$ and $p$ the orthogonal projection) such that the composite $X \xrightarrow{f} \mathbb{R}^M \xrightarrow{p} \mathbb{R}^{M-1}$ is also a one-one immersion. By descending induction, the theorem follows.
+> 
+> We now avoid all tangent & secant directions.
+> 
+> Consider $X \times X \times \mathbb{R} \xrightarrow{h} \mathbb{R}^M$, $(x,y,t) \mapsto t[f(x)-f(y)]$ and $T(X) \xrightarrow{g} \mathbb{R}^M$, $(x,v) \mapsto df_x(v)$, which are both smooth maps.
+> Here image of $h$ captures the secant directions while the image of $g$ captures the tangential ones.
+> 
+> Since $\dim(X \times X \times \mathbb{R}) = 2k+1$ and $\dim(T(X)) = 2k$, if $M > 2k+1$, by Sard's theorem $\exists a \in \mathbb{R}^M \setminus \{\vec{0}\}$ such that $a$ does not lie in the images of $h, g$ and the same holds for all non-zero multiples of $a$.
+> Consider the orthogonal projection $p: \mathbb{R}^M \to a^\perp = \mathbb{R}^{M-1}$.
+> 
+> It is easy to check that $p \circ f$ is one-one immersion.
+> *   **one-one**: $(p \circ f)(x) = (p \circ f)(y) \Rightarrow p(f(x)) = p(f(y))$
+>     $\Rightarrow p(f(x) - f(y)) = 0$ as $p$ is linear
+>     $\Rightarrow f(x) - f(y)$ is a multiple of $a$
+>     which is only possible if $f(x) = f(y)$, whence $x = y$ as $f$ is one-one.
+> *   **immersion**: $d(p \circ f)_x(v) = 0$ for some $v \in T_x X$ at some $x \in X$
+>     $\Rightarrow dp_{f(x)} \circ df_x(v) = 0 \Rightarrow p \circ df_x(v) = 0$ as $p$ is linear
+>     i.e., $p(df_x(v)) = 0$, i.e., $df_x(v)$ is a multiple of $a$
+>     which is only possible if $df_x(v) = 0$, whence $v = 0$ as $f$ is an immersion.
+> $\blacksquare$
+
+> [!TIP] Theorem (Strong Whitney Embedding)
+> Any manifold of dim $k$ admits a closed embedding in $\mathbb{R}^{2k+1}$.
 
 > [!NOTE]- Proof
 > Let $X \xrightarrow{f} \mathbb{R}^{2k+1}$ be a one-one immersion. We may, w.l.o.g. assume that $f$ is bounded (compose it with a diffeomorphism of $\mathbb{R}^{2k+1}$ to the sphere in $\mathbb{R}^{2k+1}$).
