@@ -941,11 +941,11 @@ $$
 
 > [!TIP] Theorem: 
 > Let $\Omega \subseteq \mathbb{C}$ be a domain let $f:\Omega\to \mathbb{C}$ analytic and let $\gamma$ be a smooth curve in $\Omega$ such that $\gamma  \sim 0$. Let $a_{1},\dots,a_{n}$ are the zeroes of $f$ in $\Omega$ enclosed by the curve $\gamma$ then,
-> $$
+>$$
 \frac{1}{2\pi i} \int_{\gamma } \frac{f'(z)}{f(z)-a} = \sum_{k=1}^{n} \eta(\gamma;\xi_{k}(\alpha ))
 >$$
 >where $\xi_{k}(\alpha)$ are the zeroes of $f(z)=\alpha$ enclosed by the curve $\gamma$.
-> 
+
 
 $\exists$ a small disc around $\alpha$, say $B(\alpha;\delta )$ and a small disc around $a$, say $B(a;\varepsilon )$ such that any point $\zeta \in B(\alpha,\delta)$ has exactly m solutions in the preimage 
 
