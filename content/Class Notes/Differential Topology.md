@@ -33,8 +33,15 @@ U \arrow[r, "i"] & U \times V
 
 where $\phi: X_1 \cong U \subseteq \mathbb{R}^{\dim X}$ and $\psi: Y_1 \cong U \times V \subseteq \mathbb{R}^{\dim Y}$ are charts such that $\psi \circ f \circ \phi^{-1} = i$, with $i(u) = (u, 0)$.
 
-Assuming this claim, we see that $2$ holds as $U$ diffeomorphic to its image in $V \implies  X_{1} \xrightarrow{\sim } Y_{1}$ Since $X_{1} = f^{-1} f(X_{1})$, we see that $X\to f(X)$ is a bijective local diffeomorphism, hence $2$.
-Similarly we see that **Claim** $\implies 4$. #todo
+> [!NOTE]- Proof of Claim
+> By the Local Immersion Theorem, since $f$ is an immersion, there exist local charts $\phi': W \xrightarrow{\sim} U'$ around $x$ and $\psi': Y' \xrightarrow{\sim} U' \times V'$ around $y=f(x)$ such that $f(W) \subseteq Y'$, and in these coordinates $f$ is given by $u \mapsto (u, 0)$. Thus, $f(W)$ corresponds to the slice $U' \times \{0\}$ in $Y'$. 
+> By hypothesis (3), $X \to f(X)$ is a homeomorphism, which means the image $f(W)$ is open in $f(X)$ with the subspace topology. Therefore, there exists an open subset $Y'' \subseteq Y$ such that $f(X) \cap Y'' = f(W)$.
+> Now, define $Y_1 = Y' \cap Y''$, which is an open neighborhood of $y$ in $Y$. 
+> Let $X_1 = f^{-1}(Y_1)$. Since $Y_1 \subseteq Y''$, we have $f(X_1) \subseteq f(X) \cap Y'' = f(W)$. Since $f$ is an injective map, this implies $X_1 \subseteq W$. 
+> This means $X_1$ consists exactly of the points in $W$ that map into $Y_1$, and no other points in $X$ map into $Y_1$. By suitably shrinking our coordinate patches to $U \subseteq U'$ and $V \subseteq V'$ corresponding to $X_1$ and $Y_1$, we obtain the desired charts where $X_1 \cong U$ and $Y_1 \cong U \times V$, which satisfy the diagram. $\quad \blacksquare$
+
+Assuming this claim, we see that $2$ holds as $U$ is diffeomorphic to its image $U \times \{0\} \subseteq U \times V \implies  X_{1} \xrightarrow{\sim } f(X_{1})$ is a diffeomorphism. Since $X_{1} = f^{-1}(f(X_{1}))$, we see that $X\to f(X)$ is a bijective local diffeomorphism, hence $2$ holds.
+Similarly we see that **Claim** $\implies 4$: For every $y \in f(X)$, pick such an open set $Y_{1}$ corresponding to the diagram. The map $i: U \to U \times V$ given by $u \mapsto (u, 0)$ is proper, since the inverse image of any compact set in $U \times V$ is exactly its intersection with $U \times \{0\}$, which is compact. Hence, $f|_{X_1}: X_1 \to Y_1$ is a proper map. Setting $Y' = \bigcup_{y \in f(X)} Y_{1}$, $Y'$ is an open subset of $Y$ containing $f(X)$, and $X \to Y'$ is locally proper on $Y'$. This proves 4.
 
 **Def:** A map of manifolds $f:X\to Y$ is called an embedding if it is an injective immersion satisfying above equivalent conditions,
 
@@ -1137,8 +1144,114 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 > $\blacksquare$
 
 
-> [!TIP] Theorem: Whitney Embedding Theorem
-> Any manifold $X$ of dimension $k$ (in some $\mathbb{R}^N$) admits an embedding into $\mathbb{R}^{2k+1}$.
+## Tangent Bundle
+
+**Recall:** Tangent Bundle $=$ disjoint union of all tangent spaces of $X$ (manifold) at all points of $X$.
+- $T(\mathbb{R}^n) = \mathbb{R}^n \times \mathbb{R}^n = \{ (p, v) \mid v \in T_p \mathbb{R}^n \}$
+- $U \subseteq \mathbb{R}^n$ open, $T(U) = U \times \mathbb{R}^n = \{ (p,v) \mid p \in U, v \in T_p \mathbb{R}^n \}$ open in $T(\mathbb{R}^n) (\cong \mathbb{R}^{2n})$
+- $X \subseteq \mathbb{R}^N$ $k$-submanifold, $T(X) = \{ (p,v) \mid p \in X, v \in T_p X \} \subseteq \mathbb{R}^{2N}$ (subspace topology)
+
+It turns out that $T(X)$ is a $2k$-dimensional manifold in $\mathbb{R}^{2N}$.
+- $X \xrightarrow{f} Y$ smooth map $\Rightarrow T(X) \xrightarrow{df} T(Y)$, $(p,v) \mapsto (f(p), df_p(v))$ is a smooth map (by locally extending $f$ to a smooth map $F$)
+- $X \xrightarrow{f} Y \xrightarrow{g} Z$ smooth $\Rightarrow d(g \circ f) = dg \circ df : T(X) \to T(Z)$ by usual chain rule
+- $X \xrightarrow[\text{diffeo}]{f} Y \Rightarrow T(X) \xrightarrow[\simeq]{df} T(Y)$
+
+$V \subseteq X$ open $\Rightarrow T(V)$ open subset of $T(X)$, i.e., $(V \times \mathbb{R}^N) \cap T(X)$.
+$\varphi: U \subseteq \mathbb{R}^k \xrightarrow{\simeq} V \subseteq X$ parameterisation where $U$ is open.
+But $T(V) \xrightarrow[\simeq]{d\varphi} T(U) = U \times \mathbb{R}^k$.
+Thus locally $T(X)$ is diffeomorphic to $U \times \mathbb{R}^k$.
+It turns out that $T(X)$ need not be diffeomorphic to $X \times \mathbb{R}^k$.
+[Example: $X = S^2$, but not that easy to prove]
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
+  % Top line for R^1
+  \node at (-3, 1) {$\mathbb{R}^1$};
+  \draw[->] (-2, 0.5) -- (2, 0.5);
+  \draw[->] (0, -0.5) -- (0, 1.5);
+  \draw[->, thick] (0, 0.5) -- (1, 0.5);
+  
+  % Bottom circle for S^1
+  \node at (-3, -1.5) {$S^1$};
+  \draw[->] (0,-3.5) -- (0,-0.5);
+  \draw (-2,-2) -- (2,-2);
+  \draw[thick] (-0.5,-2) circle (0.5);
+  \draw[->, thick] (-0.5,-1.5) -- (0.5,-1.5);
+  \draw[->, thick] (-1,-2) -- (-1,-3);
+  \draw[->, thick] (0,-2) -- (0,-1);
+  \draw[->, thick] (-0.5,-2.5) -- (-1.5,-2.5);
+  
+  % S^1 vector field
+  \draw[thick] (3, -2) circle (0.5);
+  \node at (2.4, -2) {$p_0$};
+  \draw[->,thick] (2.5, -2) -- (2.5, -1.5);
+  \draw[->,thick] (3, -1.5) -- (3.5, -1.5);
+  \draw[->,thick] (3.5, -2) -- (3.5, -2.5);
+  \draw[->,thick] (3, -2.5) -- (2.5, -2.5);
+  
+  \node[right] at (4, -2) {\parbox{4cm}{This allows us to see that\\ $T(S^1) \simeq S^1 \times \mathbb{R}$\\ $(p,u) \mapsto (p,\lambda)$ where $u = \lambda v_p$\\ $v_{p_0} \in T_{p_0}(S^1)$ gives rise to a\\ (continuous) set of vectors $v_p \in T_p S^1$\\ by rotation.}};
+\end{tikzpicture}
+\end{document}
+```
+
+The tangent bundle $T(X)$ admits a natural map $T(X) \xrightarrow{\pi} X$, $(p,v) \mapsto p$ which is in fact smooth as can be checked locally, say over $V \subseteq X$ where $T(V) \simeq V \times \mathbb{R}^k$.
+$X \xrightarrow{f} Y$ gives a commutative diagram:
+
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
+  \node (TX) at (0,1.5) {$T(X)$};
+  \node (TY) at (2,1.5) {$T(Y)$};
+  \node (X) at (0,0) {$X$};
+  \node (Y) at (2,0) {$Y$};
+  
+  \draw[->] (TX) -- node[above] {$df$} (TY);
+  \draw[->] (TX) -- node[left] {$\downarrow$} (X); 
+  \draw[->] (TY) -- node[right] {$\downarrow$} (Y);
+  \draw[->] (X) -- node[above] {$f$} (Y);
+\end{tikzpicture}
+\end{document}
+```
+
+A continuous/smooth vector field (tangential) on $X$ is a continuous/smooth map $X \xrightarrow{s} T(X)$ such that $\pi \circ s = \mathbf{1}_X$.
+
+> [!TIP] Exercise
+> Show that $S^1 \subseteq \mathbb{R}^2$ has a smooth unit vector field (length = 1 as per embedding in $\mathbb{R}^2$).
+> Then show that $T(S^1) \simeq S^1 \times \mathbb{R}$.
+
+## Whitney Embedding Theorem
+
+> [!TIP] Theorem: (Whitney immersion theorem)
+> Any manifold $X$ of dimension $k$ admits a one-one immersion in $\mathbb{R}^{2k+1}$.
+
+> [!NOTE]- Proof
+> First note that $\exists N \gg 0$ such that $X \subseteq \mathbb{R}^N$ embedding.
+> We show if $M > 2k+1$ and if $\exists$ a one-one immersion $f: X \to \mathbb{R}^M$, then $\exists$ an orthogonal projection $\mathbb{R}^M \xrightarrow{p} \mathbb{R}^{M-1}$ (i.e., $\exists$ vector $a \in \mathbb{R}^M \setminus \{\vec{0}\}$ with $\mathbb{R}^{M-1} = a^\perp$ and $p$ the orthogonal projection) such that the composite $X \xrightarrow{f} \mathbb{R}^M \xrightarrow{p} \mathbb{R}^{M-1}$ is also a one-one immersion. By descending induction, the theorem follows.
+> 
+> We now avoid all tangent & secant directions.
+> 
+> Consider $X \times X \times \mathbb{R} \xrightarrow{h} \mathbb{R}^M$, $(x,y,t) \mapsto t[f(x)-f(y)]$ and $T(X) \xrightarrow{g} \mathbb{R}^M$, $(x,v) \mapsto df_x(v)$, which are both smooth maps.
+> Here image of $h$ captures the secant directions while the image of $g$ captures the tangential ones.
+> 
+> Since $\dim(X \times X \times \mathbb{R}) = 2k+1$ and $\dim(T(X)) = 2k$, if $M > 2k+1$, by Sard's theorem $\exists a \in \mathbb{R}^M \setminus \{\vec{0}\}$ such that $a$ does not lie in the images of $h, g$ and the same holds for all non-zero multiples of $a$.
+> Consider the orthogonal projection $p: \mathbb{R}^M \to a^\perp = \mathbb{R}^{M-1}$.
+> 
+> It is easy to check that $p \circ f$ is one-one immersion.
+> *   **one-one**: $(p \circ f)(x) = (p \circ f)(y) \Rightarrow p(f(x)) = p(f(y))$
+>     $\Rightarrow p(f(x) - f(y)) = 0$ as $p$ is linear
+>     $\Rightarrow f(x) - f(y)$ is a multiple of $a$
+>     which is only possible if $f(x) = f(y)$, whence $x = y$ as $f$ is one-one.
+> *   **immersion**: $d(p \circ f)_x(v) = 0$ for some $v \in T_x X$ at some $x \in X$
+>     $\Rightarrow dp_{f(x)} \circ df_x(v) = 0 \Rightarrow p \circ df_x(v) = 0$ as $p$ is linear
+>     i.e., $p(df_x(v)) = 0$, i.e., $df_x(v)$ is a multiple of $a$
+>     which is only possible if $df_x(v) = 0$, whence $v = 0$ as $f$ is an immersion.
+> $\blacksquare$
+
+> [!TIP] Theorem (Strong Whitney Embedding)
+> Any manifold of dim $k$ admits a closed embedding in $\mathbb{R}^{2k+1}$.
 
 > [!NOTE]- Proof
 > Let $X \xrightarrow{f} \mathbb{R}^{2k+1}$ be a one-one immersion. We may, w.l.o.g. assume that $f$ is bounded (compose it with a diffeomorphism of $\mathbb{R}^{2k+1}$ to the sphere in $\mathbb{R}^{2k+1}$).
@@ -1164,3 +1277,87 @@ We say that $\{\theta_i \}$ are a partition of unity subordinate to $\{U_\alpha 
 > 
 > This contradicts that $(\pi \circ F)(x_i) - F(x_i)$ is parallel to $a$, and $a$ is not parallel to $(0, \dots, 0, \pm 1)$.
 > $\blacksquare$
+
+
+## Manifolds with boundary
+
+*   **closed ball**
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
+  \draw[thick] (0,0) circle (0.8);
+  \clip (0,0) circle (0.8);
+  \foreach \x in {-1,-0.8,...,1}
+    \draw (\x,-1) -- (\x+2,1);
+\end{tikzpicture}
+\end{document}
+```
+
+*   **closed hollow cylinder**
+```tikz
+\usepackage{tikz}
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1]
+  \draw[thick] (0, 1) ellipse (0.8 and 0.3);
+  \draw[thick] (-0.8, -1) arc (180:360:0.8 and 0.3);
+  \draw[thick, dashed] (0.8, -1) arc (0:180:0.8 and 0.3);
+  \draw[thick] (-0.8, -1) -- (-0.8, 1);
+  \draw[thick] (0.8, -1) -- (0.8, 1);
+  
+  \begin{scope}
+    \clip (-0.8,-1) rectangle (0.8,1);
+    \foreach \x in {-2,-1.8,...,2}
+      \draw (\x,-1.5) -- (\x+1.5,1.5);
+  \end{scope}
+\end{tikzpicture}
+\end{document}
+```
+
+> [!INFO] Definition: 
+> We define $\mathbb{H}^{k}:= \{ (x_{1},\dots,x_{k}) \mid x_{k}\geq 0 \}$ 
+> We set $\partial \mathbb{H}^{k}:= \{ (x_{1},\dots,x_{k}) \mid x_{k}=0 \}$
+> and $\partial U = U \cap \partial \mathbb{H}^{k}$
+
+
+> [!TIP] Proposition
+>  Let $X$ be a k manifold with boundary. Let $p \in X$. If there exists one parametrization $\phi:U \to V \subseteq X$ around $p$ with $U\subseteq \mathbb{H}^{k}$ open such that $p \in \phi(Int(U))\setminus \phi(\partial U)$ then the same is true for every parametrization around p. Therefore, we define
+>  $$
+>  \begin{gather}
+>  Int(X)   = \{ p \in X \mid p \in \phi(Int(U)) \text{for some parametrization around } p\} \\
+>  \partial(X)   = \{ p \in X \mid p \in \phi(\partial (U)) \} \\
+>  X   = Int(X) \bigsqcup \partial(X) \\
+\end{gather}
+> $$ 
+
+> [!NOTE]- Proof
+> Suppose $\phi_{1}:U_{1}\to V_{1}$ is another param around p then upon shirnking $U,V,U_{1},V_{1}$ we may have $V=V_{1}$. Then $h=\phi_{1} ^{-1} \circ \phi$ gives a diffeo $U\to U_{1}$ and hence by above lemma $h(\partial U)=\partial U_{1}$, $h(Int(U))=Int(U_{1})$. If follows that $\phi(\partial U)=\phi_{1}(\partial U_{1}), \phi(Int(U))=\phi_{1}(Int(U_{1}))$. $\quad \blacksquare$
+
+**Examples:** 
+1. Any manifold $X$ is a manifold with boundary, $\partial X=\phi$, $Int(X)=X$.
+2. $X=[0,1]$ is a 1-manifold with boundary $\partial X=\{ 0,1 \}, Int(X)=(0,1)$
+3. If $X$ is a submanifold with boundary in $\mathbb{R}^{N}$, then its topological boundary may be quite different than $\partial X$.
+
+## One-manifolds and some consequences
+
+
+---
+
+## Transversality and Intersections
+
+> [!TIP] Lemma
+> Let $U \subseteq  \mathbb{R}^{n}$ be open. Let $U\xrightarrow{f}\mathbb{R}^{n}$ be a smooth map such that $U\to f(U)$ is a diffeomorphism. Then $f(U)$ is open in $\mathbb{R}^{n}$.
+
+> [!NOTE]- Proof
+> Clearly $f(U)$ is a submanifold of dimension $n$ in $\mathbb{R}^n$.
+> $\therefore$ for any $p \in U$, $T_p U \xrightarrow{\simeq} T_{f(p)} f(U) \subseteq T_{f(p)} \mathbb{R}^n$ is an isomorphism.
+> $\therefore$ By I.F.T., $f$ is open around $p$. Since $p$ is arbitrary, $f$ is open.
+> $\blacksquare$
+
+
+
+
+
+
+
+

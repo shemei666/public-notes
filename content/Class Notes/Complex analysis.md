@@ -1175,3 +1175,65 @@ $\sin z = z - \frac{z^{3}}{3!}+ \dots$
 > for all $n \in \mathbb{Z}$.
 > $\blacksquare$
 
+---
+#todo result on poles,poles at infinity, polynomial as an entire fn with pole at infinity.
+
+---
+
+> [!QUESTION] Question
+> * Characterization of rational functions which have removable singularity at $\infty$.
+> * The same problem with pole at $\infty$.
+> 
+>   $z \mapsto \frac{P(z)}{Q(z)} \quad \gcd(P,Q) = 1$
+
+
+## Residues
+
+```tikz
+\usepackage{tikz}
+\usepackage{amssymb}
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=0.8]
+    % Domain Omega
+    \draw[thick] (-2,-2) .. controls (0,-2.5) and (2.5,-2.5) .. (3,0) .. controls (3,2) and (1.5,3) .. (0,2.5) .. controls (-2,2) and (-3,1) .. (-2,-2);
+    \node at (3.5, 0.5) {$\Omega$};
+    
+    % Point a
+    \filldraw[black] (-0.5,0) circle (1.5pt) node[below] {$a$};
+    
+    % Circle around a
+    \draw[thick] (-0.5,0) circle (1.5);
+    
+    % Text
+    \node[right] at (2, -1) { $f : \Omega \backslash \{a\} \to C$ };
+    \node[right] at (2, -1.5) { $\overline{B(a,R)} \backslash \{a\} \subseteq \Omega$ };
+
+\end{tikzpicture}
+\end{document}
+```
+
+$$ f(z) = \dots + \frac{a_{-2}}{(z-a)^2} + \frac{a_{-1}}{z-a} + a_0 + a_1(z-a) + a_2(z-a)^2 + \dots $$
+
+> [!INFO] Definition: Residue
+> Residue of $f$ at $a$ is $a_{-1}$.
+> 
+> Notation is $\text{Res}(f; a)$
+
+> [!TIP] Theorem: Cauchy's Theorem (First Version) / Generalized Cauchy Theorem
+> Let $G$ be an open subset of the plane and $f: G \to \mathbb{C}$ an analytic function. If $\gamma_1, \dots, \gamma_m$ are closed rectifiable curves in $G$ such that $n(\gamma_1; w) + \dots + n(\gamma_m; w) = 0$ for all $w$ in $\mathbb{C} \setminus G$ then
+> $$ \sum_{k=1}^m \int_{\gamma_k} f = 0. $$
+
+> [!TIP] Theorem: Residue Theorem
+> Let $f$ be analytic in the region $G$ except for the isolated singularities $a_1, a_2, \dots, a_n$. If $\gamma$ is a closed rectifiable curve in $G$ which does not pass through any of the points $a_k$ and if $\gamma \approx 0$ in $G$ then
+> $$ \frac{1}{2\pi i} \int_\gamma f = \sum_{k=1}^n n(\gamma; a_k) \text{Res}(f; a_k). $$
+
+> [!NOTE]- Proof
+> Let $m_k = n(\gamma; a_k)$ for $1 \le k \le m$, and choose positive numbers $r_1, \dots, r_m$ such that no two disks $\overline{B}(a_k; r_k)$ intersect, none of them intersects $\{\gamma\}$, and each disk is contained in $G$. (This can be done by induction and by using the fact that $\gamma$ does not pass through any of the singularities.) Let $\gamma_k(t) = a_k + r_k \exp(-2\pi i m_k t)$ for $0 \le t \le 1$. Then for $1 \le j \le m$
+> $$ n(\gamma; a_j) + \sum_{k=1}^m n(\gamma_k; a_j) = 0. $$
+> Since $\gamma \approx 0(G)$ and $\overline{B}(a_k; r_k) \subset G$,
+> $$ n(\gamma; a) + \sum_{k=1}^m n(\gamma_k; a) = 0 $$
+> for all $a$ not in $G - \{a_1, \dots, a_m\}$. Since $f$ is analytic in $G - \{a_1, \dots, a_m\}$ generalized Cauchy theorem gives
+> $$ 0 = \int_\gamma f + \sum_{k=1}^m \int_{\gamma_k} f. \quad (2.3) $$
+> If $f(z) = \sum_{-\infty}^\infty b_n (z - a_k)^n$ is the Laurent expansion about $z = a_k$ then this series converges uniformly on $\overline{B}(a_k; r_k)$. Hence $\int_{\gamma_k} f = \sum_{-\infty}^\infty b_n \int_{\gamma_k} (z - a_k)^n$.
+> But $\int_{\gamma_k} (z - a_k)^n = 0$ if $n \neq -1$ since $(z - a_k)^n$ has a primitive. Also $\int_{\gamma_k} (z - a_k)^{-1} = 2\pi i n(\gamma_k; a_k) \text{Res}(f; a_k)$. Hence (2.3) implies the desired result. $\blacksquare$
+
