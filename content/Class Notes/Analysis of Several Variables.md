@@ -232,9 +232,6 @@ Besides the standard Euclidean norm ($l_2$ norm), other common norms on $\mathbb
 
 - **$l_p$ Norm** ($p \ge 1$):
   $$ \|x\|_p = \left( \sum_{i=1}^n |x_i|^p \right)^{1/p} $$
-### Visualizing Open Balls in Different $l_p$ Norms
-
-Below are the open unit balls $B_p(0, 1) = \{ x \in \mathbb{R}^2 \mid \|x\|_p < 1 \}$ in $\mathbb{R}^2$ for $p = 1, 2, 3$, and $\infty$. The dashed boundary indicates that the boundary is not included (since the balls are open).
 
 ```tikz
 \begin{document}
@@ -279,3 +276,22 @@ Below are the open unit balls $B_p(0, 1) = \{ x \in \mathbb{R}^2 \mid \|x\|_p < 
 \end{tikzpicture}
 \end{document}
 ```
+
+---
+
+## Equivalent Metrics
+
+Note that the open sets of $(\mathbb{R}^n, d_2)$ coincide with the open sets of $(\mathbb{R}^n, d_\infty)$.
+
+**Def (Equivalent Metrics):**  
+Two metrics $d$ and $\sigma$ on $\mathbb{R}^n$ are said to be **equivalent** if there exist constants $c, C > 0$ such that:
+$$ c \, \sigma(x, y) \le d(x, y) \le C \, \sigma(x, y) \quad \forall x, y \in \mathbb{R}^n $$
+
+---
+
+**Exercise 5.**  
+1. Show that $\tau(d) = \tau(\sigma)$ (i.e., equivalent metrics induce the same topology).  
+2. Show that the $l_1$, $l_2$, and $l_\infty$ topologies on $\mathbb{R}^n$ are the same.
+
+**Question:**  
+If $B_\sigma(x; s) \subseteq B_d(x; r)$, how are the radii $r$ and $s$ related?
