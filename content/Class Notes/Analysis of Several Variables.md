@@ -326,3 +326,51 @@ The **operator norm** on $M_n(\mathbb{R})$ is defined as:
 $$ \|A\|_{op} = \sup_{\|x\|_2 = 1} \|Ax\|_2 = \sup_{\|x\|_2 \leq 1} \|Ax\|_2 $$
 *(Note: $\|A\|_{op}$ is finite as the continuous image of a compact set $\{x \in \mathbb{R}^n \mid \|x\|_2 = 1\}$ under the map $x \mapsto \|Ax\|_2$ is compact).*
 
+**Corollary (Action on Vectors):**  
+For any matrix $A \in M_n(\mathbb{R})$ and $z \in \mathbb{R}^n$:
+$$ \|Az\|_2 \le \|A\|_{op} \|z\|_2 $$
+
+**Proof:**  
+- If $z = 0$, both sides are $0$, so the inequality holds trivially.
+- If $z \neq 0$, set $x = \frac{z}{\|z\|_2}$. Since $\|x\|_2 = 1$, by definition of operator norm:
+  $$ \left\| A \left(\frac{z}{\|z\|_2}\right) \right\|_2 \le \|A\|_{op} \implies \frac{\|Az\|_2}{\|z\|_2} \le \|A\|_{op} \implies \|Az\|_2 \le \|A\|_{op} \|z\|_2 \quad \blacksquare $$
+
+---
+
+**Corollary (Sub-multiplicativity of Operator Norm):**  
+For any $A, B \in M_n(\mathbb{R})$:
+$$ \|AB\|_{op} \le \|A\|_{op} \|B\|_{op} $$
+
+**Proof:**  
+For any $z \in \mathbb{R}^n$:
+$$ \|ABz\|_2 \le \|A\|_{op} \|Bz\|_2 \le \|A\|_{op} \|B\|_{op} \|z\|_2 $$
+Taking the supremum over all $z \in \mathbb{R}^n$ with $\|z\|_2 = 1$:
+$$ \|AB\|_{op} = \sup_{\|z\|_2 = 1} \|ABz\|_2 \le \sup_{\|z\|_2 = 1} \|A\|_{op} \|B\|_{op} \|z\|_2 = \|A\|_{op} \|B\|_{op} \quad \blacksquare $$
+
+---
+
+**Proposition (Equivalence of Norms on $M_n(\mathbb{R})$):**  
+The operator norm $\|\cdot\|_{op}$ and the Hilbert-Schmidt norm $\|\cdot\|_{HS}$ are equivalent norms on $M_n(\mathbb{R})$.
+
+**Lemma:**  
+For any $A \in M_n(\mathbb{R})$:
+$$ \|A\|_{op} \le \|A\|_{HS} \quad \text{and} \quad \|A\|_{HS} \le \sqrt{n} \|A\|_{op} $$
+
+**Proof of First Inequality ($\|A\|_{op} \le \|A\|_{HS}$):**  
+Let $\{e_1, \dots, e_n\}$ be the standard Euclidean basis of $\mathbb{R}^n$.  
+For any $v = \sum_{i=1}^n v_i e_i \in \mathbb{R}^n$ with $\|v\|_2 = 1$ (so $\sum_{i=1}^n v_i^2 = 1$):
+$$ \|Av\|_2^2 = \left\| \sum_{i=1}^n v_i A e_i \right\|_2^2 \le \left( \sum_{i=1}^n |v_i| \|Ae_i\|_2 \right)^2 $$
+By Cauchy-Schwarz inequality:
+$$ \left( \sum_{i=1}^n |v_i| \|Ae_i\|_2 \right)^2 \le \left(\sum_{i=1}^n v_i^2\right) \left(\sum_{i=1}^n \|Ae_i\|_2^2\right) = \sum_{i=1}^n \|Ae_i\|_2^2 $$
+Taking the supremum over all $\|v\|_2 = 1$:
+$$ \|A\|_{op}^2 = \sup_{\|v\|_2 = 1} \|Av\|_2^2 \le \sum_{i=1}^n \|Ae_i\|_2^2 = \|A\|_{HS}^2 $$
+Taking square roots yields $\|A\|_{op} \le \|A\|_{HS}$. $\quad \blacksquare$
+
+**Proof of Second Inequality ($\|A\|_{HS} \le \sqrt{n} \|A\|_{op}$):**  
+Since $\{e_1, \dots, e_n\}$ is the standard basis with $\|e_i\|_2 = 1$, we have:
+$$ \|Ae_i\|_2 \le \|A\|_{op} \|e_i\|_2 = \|A\|_{op} \quad \forall i = 1, \dots, n $$
+Thus:
+$$ \|A\|_{HS}^2 = \sum_{i=1}^n \|Ae_i\|_2^2 \le \sum_{i=1}^n \|A\|_{op}^2 = n \|A\|_{op}^2 $$
+Taking square roots yields $\|A\|_{HS} \le \sqrt{n} \|A\|_{op}$. $\quad \blacksquare$
+
+
