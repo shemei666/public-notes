@@ -109,5 +109,35 @@ $$ d_2(\alpha^k, \alpha) < \varepsilon $$
 A function $f : \mathbb{R}^m \longrightarrow \mathbb{R}^n$ is continuous at $\alpha \in \mathbb{R}^m$ if and only if for every sequence $\{\alpha^k\} \to \alpha$ in $\mathbb{R}^m$, we have:
 $$ \{f(\alpha^k)\} \longrightarrow f(\alpha) \quad \text{in } \mathbb{R}^n $$
 
+---
+
+## Exercises and Solutions
+
+**Exercise 1.** In $(\mathbb{R}^n, d_2)$:
+1. Show that an arbitrary union of open sets is open.
+2. Show that if $V_1, \dots, V_k$ are open in $\mathbb{R}^n$, then $\bigcap_{i=1}^k V_i$ is open in $\mathbb{R}^n$.
+3. Find an example to show that a countable intersection of open sets need not be open.
+
+**Solution:**
+1. If $B(x, \varepsilon) \subseteq U_i$ for some $i \in I$, then $B(x, \varepsilon) \subseteq \bigcup_{i \in I} U_i$. Thus, the arbitrary union of open sets is open.
+2. If $x \in \bigcap_{i=1}^k V_i$, then for each $i = 1, \dots, k$, there exists $d_i > 0$ such that $B(x, d_i) \subseteq V_i$. Taking $d = \min \{d_1, \dots, d_k\} > 0$, we have $B(x, d) \subseteq \bigcap_{i=1}^k V_i$, showing the finite intersection is open.
+3. Consider the open intervals $U_n = (-1/n, 1/n)$ in $\mathbb{R}$ for $n = 1, 2, \dots$. The countable intersection is:
+   $$ \bigcap_{n=1}^\infty \left(-\frac{1}{n}, \frac{1}{n}\right) = \{0\} $$
+   which is a closed set (not open). $\quad \blacksquare$
+
+---
+
+**Exercise 2 (Continuity of Coordinate Functions).**
+Let $f : \mathbb{R}^m \longrightarrow \mathbb{R}^n$ with $f = (f_1, \dots, f_n)$. Show that $f$ is continuous if and only if each coordinate function $f_i : \mathbb{R}^m \longrightarrow \mathbb{R}$ is continuous.
+*(Note: $f_i = \pi_i \circ f$, where $\pi_i : \mathbb{R}^n \to \mathbb{R}$ is the $i$-th projection map).*
+
+---
+
+**Exercise 3.**
+Consider the function $f : \mathbb{R}^2 \longrightarrow \mathbb{R}$ defined by:
+$$ f(x, y) = \begin{cases} \frac{xy}{x^2 + y^2} & \text{if } (x, y) \neq (0, 0) \\ 0 & \text{if } (x, y) = (0, 0) \end{cases} $$
+Show that $f$ is not continuous at $(0, 0)$.
+
+
 
 
