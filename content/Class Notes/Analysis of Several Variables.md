@@ -131,12 +131,34 @@ $$ \{f(\alpha^k)\} \longrightarrow f(\alpha) \quad \text{in } \mathbb{R}^n $$
 Let $f : \mathbb{R}^m \longrightarrow \mathbb{R}^n$ with $f = (f_1, \dots, f_n)$. Show that $f$ is continuous if and only if each coordinate function $f_i : \mathbb{R}^m \longrightarrow \mathbb{R}$ is continuous.
 *(Note: $f_i = \pi_i \circ f$, where $\pi_i : \mathbb{R}^n \to \mathbb{R}$ is the $i$-th projection map).*
 
+**Solution:**
+- $(\implies)$ Assume $f$ is continuous at $x \in \mathbb{R}^m$. For any $\varepsilon > 0$, there exists $\delta > 0$ such that for all $y \in \mathbb{R}^m$ with $\|x - y\|_2 < \delta$, we have $\|f(x) - f(y)\|_2 < \varepsilon$.
+  Observe that:
+  $$ \|f(x) - f(y)\|_2^2 = \sum_{k=1}^n |f_k(x) - f_k(y)|^2 < \varepsilon^2 $$
+  Thus, for each $k = 1, \dots, n$:
+  $$ |f_k(x) - f_k(y)|^2 \leq \|f(x) - f(y)\|_2^2 < \varepsilon^2 \implies |f_k(x) - f_k(y)| < \varepsilon $$
+  Hence, each coordinate function $f_k$ is continuous.
+
+- $(\impliedby)$ Assume each coordinate function $f_k : \mathbb{R}^m \to \mathbb{R}$ is continuous at $x \in \mathbb{R}^m$. Given $\varepsilon > 0$, for each $k = 1, \dots, n$ there exists $\delta_k > 0$ such that whenever $\|x - y\|_2 < \delta_k$:
+  $$ |f_k(x) - f_k(y)| < \frac{\sqrt{\varepsilon}}{\sqrt{n}} $$
+  Set $\delta = \min\{\delta_1, \dots, \delta_n\} > 0$. Then for all $y \in \mathbb{R}^m$ with $\|x - y\|_2 < \delta$:
+  $$ \|f(x) - f(y)\|_2^2 = \sum_{k=1}^n |f_k(x) - f_k(y)|^2 \leq n \times \left(\frac{\sqrt{\varepsilon}}{\sqrt{n}}\right)^2 = \varepsilon $$
+  Thus $\|f(x) - f(y)\|_2 \leq \sqrt{\varepsilon}$, which proves that $f$ is continuous. $\quad \blacksquare$
+
 ---
 
 **Exercise 3.**
 Consider the function $f : \mathbb{R}^2 \longrightarrow \mathbb{R}$ defined by:
 $$ f(x, y) = \begin{cases} \frac{xy}{x^2 + y^2} & \text{if } (x, y) \neq (0, 0) \\ 0 & \text{if } (x, y) = (0, 0) \end{cases} $$
 Show that $f$ is not continuous at $(0, 0)$.
+
+**Solution:**
+Consider a sequence of points $(x_n, m x_n)$ along the line $y = mx$, where $x_n \to 0$ and $m \in \mathbb{R}$. Evaluating $f$ along this sequence:
+$$ f(x_n, m x_n) = \frac{x_n(m x_n)}{x_n^2 + (m x_n)^2} = \frac{m}{1 + m^2} $$
+Notice that $f(x_n, m x_n)$ is constant along the direction $y = mx$ and non-zero for any $m \neq 0$.
+Since the limit depends on the path / slope $m$ (for instance, $f(x_n, x_n) = \frac{1}{2} \neq f(0,0)$), the limit as $(x,y) \to (0,0)$ does not exist.
+$\therefore f$ is not continuous at $(0, 0)$. $\quad \blacksquare$
+
 
 
 
