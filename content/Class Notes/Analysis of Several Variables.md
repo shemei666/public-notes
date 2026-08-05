@@ -159,6 +159,42 @@ Notice that $f(x_n, m x_n)$ is constant along the direction $y = mx$ and non-zer
 Since the limit depends on the path / slope $m$ (for instance, $f(x_n, x_n) = \frac{1}{2} \neq f(0,0)$), the limit as $(x,y) \to (0,0)$ does not exist.
 $\therefore f$ is not continuous at $(0, 0)$. $\quad \blacksquare$
 
+---
+
+## Completeness, Cantor Intersection, and Bolzano-Weierstrass
+
+**Proposition (Completeness of $(\mathbb{R}^n, d_2)$).**
+The metric space $(\mathbb{R}^n, d_2)$ is complete, i.e., every Cauchy sequence in $\mathbb{R}^n$ is convergent.
+
+**Def (Cauchy Sequence in $\mathbb{R}^n$):**
+A sequence $\{\alpha^k\}$ is **Cauchy** in $(\mathbb{R}^n, d_2)$ if for any $\varepsilon > 0$, there exists $N \in \mathbb{N}$ such that:
+$$ \|\alpha^n - \alpha^m\| < \varepsilon \quad \forall n, m \geq N $$
+
+**Proof Sketch:**
+Follows from component-wise convergence and the completeness of $\mathbb{R}$. $\quad \blacksquare$
+
+---
+
+**Theorem (Cantor's Intersection Theorem).**
+Let $C_1 \supseteq C_2 \supseteq C_3 \supseteq \dots$ be a nested sequence of non-empty closed subsets of $\mathbb{R}^n$ such that $\text{diam}(C_n) \longrightarrow 0$ as $n \to \infty$. Then the intersection contains exactly one point:
+$$ \bigcap_{n=1}^\infty C_n = \{p\} \quad \text{for some } p \in \mathbb{R}^n $$
+
+**Def (Diameter of a Set):**
+The diameter of a subset $S \subseteq \mathbb{R}^n$ is defined as:
+$$ \text{diam}(S) := \sup \{ \|x - y\| \mid x, y \in S \} $$
+
+**Proof Sketch:**
+Choose $x_n \in C_n$. Since $C_n$ are nested and $\text{diam}(C_n) \to 0$, $\{x_n\}$ forms a Cauchy sequence in $\mathbb{R}^n$. By completeness of $\mathbb{R}^n$, $x_n \to p$. Since each $C_n$ is closed, $p \in \bigcap_{n=1}^\infty C_n$. Uniqueness follows from $\text{diam}(C_n) \to 0$. $\quad \blacksquare$
+
+---
+
+**Theorem (Bolzano-Weierstrass Theorem).**
+Any bounded infinite subset $S \subseteq \mathbb{R}^n$ contains a convergent sequence.
+
+**Proof Sketch:**
+Consider a sequence of distinct points $\{x_k\} \subseteq S$. Define $F_n = \overline{\{x_k \mid k \geq n\}}$. Apply Cantor's Intersection Theorem on the nested closed sets $F_n$ to construct a convergent subsequence. $\quad \blacksquare$
+
+
 
 
 
