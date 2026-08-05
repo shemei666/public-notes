@@ -373,4 +373,37 @@ Thus:
 $$ \|A\|_{HS}^2 = \sum_{i=1}^n \|Ae_i\|_2^2 \le \sum_{i=1}^n \|A\|_{op}^2 = n \|A\|_{op}^2 $$
 Taking square roots yields $\|A\|_{HS} \le \sqrt{n} \|A\|_{op}$. $\quad \blacksquare$
 
+---
+
+## Sequences of Functions and Uniform Convergence
+
+**Def (Pointwise and Uniform Convergence):**  
+Let $\{f_k\}_{k=1}^\infty$ be a sequence of functions $f_k : \mathbb{R}^m \longrightarrow \mathbb{R}$.
+- **Pointwise Convergence**: $\{f_k\}$ converges pointwise to $f$ on a subset $S \subseteq \mathbb{R}^m$ if for every $x \in S$:
+  $$ f_k(x) \longrightarrow f(x) \quad \text{as } k \to \infty $$
+- **Uniform Convergence**: $\{f_k\}$ converges uniformly to $f$ on $S \subseteq \mathbb{R}^m$ if for every $\varepsilon > 0$, there exists $N \in \mathbb{N}$ such that:
+  $$ |f_k(x) - f(x)| < \varepsilon \quad \forall x \in S \text{ and } \forall k \ge N $$
+
+**Theorem (Uniform Limit Theorem):**  
+If $\{f_k\}$ is a sequence of continuous functions on $S \subseteq \mathbb{R}^m$ and $f_k \longrightarrow f$ uniformly on $S$, then the limit function $f$ is continuous on $S$.
+
+---
+
+## Matrix Exponential and Series in $M_n(\mathbb{R})$
+
+**Def (Matrix Exponential):**  
+For $A \in M_n(\mathbb{R})$, the **matrix exponential** is defined as:
+$$ \exp(A) = \sum_{n=0}^\infty \frac{A^n}{n!} $$
+
+---
+
+**Exercise 6.**  
+1. **Absolute Convergence Test for Matrix Series**: Show that a series $\sum_{n=0}^\infty A_n$ is convergent in $M_n(\mathbb{R})$ if the series of operator norms $\sum_{n=0}^\infty \|A_n\|_{op}$ is convergent.
+2. **Exponential of Commuting Matrices**: Show that if $A, B \in M_n(\mathbb{R})$ commute ($AB = BA$), then:
+   $$ \exp(A + B) = \exp(A) \exp(B) $$
+   *(Hint: Use the Cauchy product for power series).*
+3. **Invertibility of Matrix Exponential**: Show that $\exp(0) = I$ and $\exp(A - A) = \exp(A) \exp(-A)$, concluding that $\exp(A)$ is always invertible with $(\exp(A))^{-1} = \exp(-A)$.
+4. **Continuity of Matrix Exponential**: Show that the function $\exp : M_n(\mathbb{R}) \longrightarrow M_n(\mathbb{R})$ is continuous.
+
+
 
