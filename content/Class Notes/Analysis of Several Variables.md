@@ -295,3 +295,34 @@ $$ c \, \sigma(x, y) \le d(x, y) \le C \, \sigma(x, y) \quad \forall x, y \in \m
 
 **Question:**  
 If $B_\sigma(x; s) \subseteq B_d(x; r)$, how are the radii $r$ and $s$ related?
+
+---
+
+## Matrix Spaces $M_n(\mathbb{R})$ and Norms
+
+**Def (Space of Matrices):**  
+Let $M_n(\mathbb{R})$ denote the set of all $n \times n$ matrices over $\mathbb{R}$.
+
+The vector space isomorphism $\Phi : \mathbb{R}^{n^2} \longrightarrow M_n(\mathbb{R})$ is defined by mapping a vector to a matrix column-by-column:
+$$ (x_1, \dots, x_{n^2}) \longmapsto \begin{pmatrix} x_1 & x_{n+1} & \dots & x_{n^2-n+1} \\ \vdots & \vdots & \ddots & \vdots \\ x_n & x_{2n} & \dots & x_{n^2} \end{pmatrix} $$
+$\Phi$ is a linear isomorphism.
+
+### Matrix Operations
+For $A = (a_{ij}), B = (b_{ij}) \in M_n(\mathbb{R})$:
+- **Addition**: $A + B = (a_{ij} + b_{ij})$
+- **Scalar Multiplication**: $\lambda A = (\lambda a_{ij})$
+- **Matrix Multiplication**: $AB = \left( \sum_{k=1}^n a_{ik} b_{kj} \right)$
+
+---
+
+### Norms on $M_n(\mathbb{R})$
+
+**Def (Hilbert-Schmidt Norm):**  
+The **Hilbert-Schmidt norm** on $M_n(\mathbb{R})$ is defined as:
+$$ \|A\|_{HS} = (\text{trace}(A^T A))^{1/2} = \left( \sum_{i,j=1}^n a_{ij}^2 \right)^{1/2} $$
+
+**Def (Operator Norm):**  
+The **operator norm** on $M_n(\mathbb{R})$ is defined as:
+$$ \|A\|_{op} = \sup_{\|x\|_2 = 1} \|Ax\|_2 = \sup_{\|x\|_2 \leq 1} \|Ax\|_2 $$
+*(Note: $\|A\|_{op}$ is finite as the continuous image of a compact set $\{x \in \mathbb{R}^n \mid \|x\|_2 = 1\}$ under the map $x \mapsto \|Ax\|_2$ is compact).*
+
