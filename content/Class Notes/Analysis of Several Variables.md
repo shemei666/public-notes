@@ -23,3 +23,63 @@ $$ (x, y) \mapsto \langle x, y \rangle = \sum_{i=1}^n x_i y_i $$
   When given an inner product on $\mathbb{R}^n$, we can define a norm structure on $\mathbb{R}^n$:
   $$ \|\cdot\| : \mathbb{R}^n \longrightarrow \mathbb{R}_{\geq 0}, \quad \|x\| = \sqrt{\langle x, x \rangle} $$
   *(The norm obtained from the Euclidean inner product is called the **Euclidean norm**).*
+
+  **Properties of the norm:**
+  1. $\|x\| \geq 0$, and $\|x\| = 0 \iff x = 0$
+  2. $\|\lambda x\| = |\lambda| \|x\| \quad \forall \lambda \in \mathbb{R}$ *(Homogeneity)*
+  3. $\|x + y\| \leq \|x\| + \|y\|$ *(Triangle Inequality)*
+
+- **Euclidean Metric**:
+  The metric induced by the Euclidean norm is a map $d : \mathbb{R}^n \times \mathbb{R}^n \longrightarrow \mathbb{R}_{\geq 0}$ defined by
+  $$ d(x, y) = \|x - y\| $$
+  This metric is often denoted as $d_2$.
+
+---
+
+**Theorem (Cauchy-Schwarz Inequality).**
+For all $x, y \in \mathbb{R}^n$,
+$$ |\langle x, y \rangle| \leq \|x\| \|y\| $$
+
+**Proof:**
+For any $\lambda \in \mathbb{R}$:
+$$ \langle x - \lambda y, x - \lambda y \rangle \geq 0 $$
+
+Expanding by bilinearity and symmetry:
+$$ \langle x, x \rangle + \langle x, -\lambda y \rangle + \langle -\lambda y, x \rangle + \langle -\lambda y, -\lambda y \rangle \geq 0 $$
+$$ \|x\|^2 - 2\lambda \langle x, y \rangle + \lambda^2 \|y\|^2 \geq 0 $$
+
+Rearranging as a quadratic expression in $\lambda$:
+$$ \lambda^2 \|y\|^2 - 2\lambda \langle x, y \rangle + \|x\|^2 \geq 0 $$
+
+Since this quadratic in $\lambda$ is non-negative for all $\lambda \in \mathbb{R}$, its discriminant must be less than or equal to $0$:
+$$ 4 \langle x, y \rangle^2 - 4 \|x\|^2 \|y\|^2 \leq 0 $$
+$$ \implies \langle x, y \rangle^2 \leq (\|x\| \|y\|)^2 $$
+
+Taking the square root on both sides yields:
+$$ |\langle x, y \rangle| \leq \|x\| \|y\| \quad \blacksquare $$
+
+---
+
+## Topology on $(\mathbb{R}^n, d_2)$
+
+**Def (Balls and Spheres):**
+In the metric space $(\mathbb{R}^n, d_2)$ for $r > 0$ and $x \in \mathbb{R}^n$:
+- **Open Ball**:
+  $$ B(x; r) := \{ y \in \mathbb{R}^n \mid \|x - y\| < r \} $$
+- **Sphere of radius $r$ centered at $x$**:
+  $$ S(x; r) := \{ y \in \mathbb{R}^n \mid \|x - y\| = r \} $$
+- **Closed Ball**:
+  $$ \bar{B}(x; r) := \{ y \in \mathbb{R}^n \mid \|x - y\| \leq r \} = B(x; r) \cup S(x; r) $$
+
+**Def (Open Sets and Metric Topology):**
+- **Open Sets**: A subset $S \subseteq \mathbb{R}^n$ is open in $(\mathbb{R}^n, d_2)$ if $S$ is a union of open balls in $(\mathbb{R}^n, d_2)$.
+- **Metric Topology $\tau(d_2)$**: The set of all open sets in $(\mathbb{R}^n, d_2)$ forms the topology induced by the metric $d_2$, denoted as $\tau(d_2)$.
+
+---
+
+**Lemma (Countable Basis for $\tau(d_2)$).**
+The collection of open balls
+$$ \mathcal{B} := \{ B(x; r) \mid x \in \mathbb{Q}^n, r \in \mathbb{Q}^+ \} $$
+is a countable collection of open balls. They form a basis of $\tau(d_2)$, i.e., every open set in $\tau(d_2)$ can be represented as a union of sets in $\mathcal{B}$.
+
+
