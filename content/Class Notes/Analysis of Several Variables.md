@@ -194,8 +194,88 @@ Any bounded infinite subset $S \subseteq \mathbb{R}^n$ contains a convergent seq
 **Proof Sketch:**
 Consider a sequence of distinct points $\{x_k\} \subseteq S$. Define $F_n = \overline{\{x_k \mid k \geq n\}}$. Apply Cantor's Intersection Theorem on the nested closed sets $F_n$ to construct a convergent subsequence. $\quad \blacksquare$
 
+---
 
+## Compactness and Heine-Borel Theorem
 
+**Exercise 4.**
+Let $S \subseteq \mathbb{R}^n$ be an uncountable set. Show that $S$ has a limit point.
 
+**Solution:**
+Cover $\mathbb{R}^n$ using a countable collection of open balls $\{B_i\}_{i=1}^\infty$ (e.g., balls with rational centers and rational radii). Then:
+$$ S = \bigcup_{i=1}^\infty (S \cap B_i) $$
+Since $S$ is uncountable and a countable union of countable sets is countable, at least one subset $S \cap B_k$ must be uncountable.
+Since $B_k$ is bounded, $S \cap B_k$ is a bounded uncountable (and hence infinite) set. By the Bolzano-Weierstrass Theorem, $S \cap B_k$ (and therefore $S$) must contain a limit point. $\quad \blacksquare$
 
+---
 
+**Def (Compactness):**
+A subset $S \subseteq \mathbb{R}^n$ is **compact** if and only if every open cover of $S$ admits a finite subcover.
+
+**Theorem (Heine-Borel Theorem).**
+A subset $S \subseteq \mathbb{R}^n$ is compact if and only if $S$ is closed and bounded.
+
+---
+
+## $l_p$ Norms on $\mathbb{R}^n$
+
+Besides the standard Euclidean norm ($l_2$ norm), other common norms on $\mathbb{R}^n$ include:
+
+- **$l_1$ Norm**:
+  $$ \|x\|_1 = \sum_{i=1}^n |x_i| $$
+
+- **$l_2$ Norm** (Euclidean Norm):
+  $$ \|x\|_2 = \sqrt{\sum_{i=1}^n x_i^2} $$
+
+- **$l_\infty$ Norm** (Maximum Norm):
+  $$ \|x\|_\infty = \max \{ |x_1|, \dots, |x_n| \} $$
+
+- **$l_p$ Norm** ($p \ge 1$):
+  $$ \|x\|_p = \left( \sum_{i=1}^n |x_i|^p \right)^{1/p} $$
+### Visualizing Open Balls in Different $l_p$ Norms
+
+Below are the open unit balls $B_p(0, 1) = \{ x \in \mathbb{R}^2 \mid \|x\|_p < 1 \}$ in $\mathbb{R}^2$ for $p = 1, 2, 3$, and $\infty$. The dashed boundary indicates that the boundary is not included (since the balls are open).
+
+```tikz
+\begin{document}
+\begin{tikzpicture}[>=stealth, scale=1.0]
+
+  % l1 open ball
+  \begin{scope}[shift={(0,0)}]
+    \filldraw[fill=blue!10, draw=blue, thick, dashed] (1,0) -- (0,1) -- (-1,0) -- (0,-1) -- cycle;
+    \draw[->] (-1.5,0) -- (1.5,0) node[right] {$x$};
+    \draw[->] (0,-1.5) -- (0,1.5) node[above] {$y$};
+    \node at (0,-1.8) {$l_1$ ball: $|x|+|y| < 1$};
+  \end{scope}
+  
+  % l2 open ball
+  \begin{scope}[shift={(4,0)}]
+    \filldraw[fill=blue!10, draw=blue, thick, dashed] (0,0) circle (1);
+    \draw[->] (-1.5,0) -- (1.5,0) node[right] {$x$};
+    \draw[->] (0,-1.5) -- (0,1.5) node[above] {$y$};
+    \node at (0,-1.8) {$l_2$ ball: $\sqrt{x^2+y^2} < 1$};
+  \end{scope}
+
+  % l3 open ball
+  \begin{scope}[shift={(0,-4)}]
+    \filldraw[fill=blue!10, draw=blue, thick, dashed] 
+      plot[domain=0:1, samples=50] ({\x}, {(1-\x^3)^(1/3)}) -- 
+      plot[domain=1:0, samples=50] ({\x}, {-(1-\x^3)^(1/3)}) -- 
+      plot[domain=0:-1, samples=50] ({\x}, {-(1-(-\x)^3)^(1/3)}) -- 
+      plot[domain=-1:0, samples=50] ({\x}, {(1-(-\x)^3)^(1/3)}) -- cycle;
+    \draw[->] (-1.5,0) -- (1.5,0) node[right] {$x$};
+    \draw[->] (0,-1.5) -- (0,1.5) node[above] {$y$};
+    \node at (0,-1.8) {$l_3$ ball: $|x|^3+|y|^3 < 1$};
+  \end{scope}
+
+  % l_infinity open ball
+  \begin{scope}[shift={(4,-4)}]
+    \filldraw[fill=blue!10, draw=blue, thick, dashed] (-1,-1) rectangle (1,1);
+    \draw[->] (-1.5,0) -- (1.5,0) node[right] {$x$};
+    \draw[->] (0,-1.5) -- (0,1.5) node[above] {$y$};
+    \node at (0,-1.8) {$l_\infty$ ball: $\max(|x|,|y|) < 1$};
+  \end{scope}
+
+\end{tikzpicture}
+\end{document}
+```
