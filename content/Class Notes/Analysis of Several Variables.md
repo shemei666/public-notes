@@ -326,6 +326,31 @@ The **operator norm** on $M_n(\mathbb{R})$ is defined as:
 $$ \|A\|_{op} = \sup_{\|x\|_2 = 1} \|Ax\|_2 = \sup_{\|x\|_2 \leq 1} \|Ax\|_2 $$
 *(Note: $\|A\|_{op}$ is finite as the continuous image of a compact set $\{x \in \mathbb{R}^n \mid \|x\|_2 = 1\}$ under the map $x \mapsto \|Ax\|_2$ is compact).*
 
+---
+
+**Lemma (Operator Norm Axioms).**  
+The operator norm $\|\cdot\|_{op}$ is a valid norm on $M_n(\mathbb{R})$.
+
+**Proof:**
+- **Non-negativity & Positivity**:
+  Since $\|Az\|_2 \ge 0$ for all $\|z\|_2 = 1$, we have $\|A\|_{op} \ge 0$. Furthermore:
+  $$ \|A\|_{op} = 0 \iff \sup_{\|z\|_2 = 1} \|Az\|_2 = 0 \iff 0 \le \|Az\|_2 \le 0 \quad \forall \|z\|_2 = 1 \iff Az = 0 \quad \forall z \in \mathbb{R}^n \iff A = 0 $$
+
+- **Absolute Homogeneity**:
+  For any scalar $\lambda \in \mathbb{R}$:
+  $$ \|\lambda A\|_{op} = \sup_{\|z\|_2 = 1} \|\lambda A z\|_2 = \sup_{\|z\|_2 = 1} |\lambda| \|Az\|_2 = |\lambda| \sup_{\|z\|_2 = 1} \|Az\|_2 = |\lambda| \|A\|_{op} $$
+
+- **Triangle Inequality**:
+  For any $A, B \in M_n(\mathbb{R})$:
+  $$
+  \begin{aligned}
+  \|A + B\|_{op} &= \sup_{\|z\|_2 = 1} \|(A + B)z\|_2 \\
+  &\le \sup_{\|z\|_2 = 1} \left( \|Az\|_2 + \|Bz\|_2 \right) \quad (\text{by triangle inequality on } d_2) \\
+  &\le \sup_{\|z\|_2 = 1} \|Az\|_2 + \sup_{\|z\|_2 = 1} \|Bz\|_2 \quad (\text{by subadditivity of } \sup) \\
+  &= \|A\|_{op} + \|B\|_{op} \quad \blacksquare
+  \end{aligned}
+  $$
+
 **Corollary (Action on Vectors):**  
 For any matrix $A \in M_n(\mathbb{R})$ and $z \in \mathbb{R}^n$:
 $$ \|Az\|_2 \le \|A\|_{op} \|z\|_2 $$
