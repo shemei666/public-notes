@@ -368,27 +368,24 @@ $$ \|A\|_{op} = \sup_{\|x\|_2 = 1} \|Ax\|_2 = \sup_{\|x\|_2 \leq 1} \|Ax\|_2 $$
 ---
 
 **Lemma (Operator Norm Axioms).**  
-The operator norm $\|\cdot\|_{op}$ is a valid norm on $M_n(\mathbb{R})$.
+The operator norm $\|\cdot\|_{op}$ is a norm on $M_n(\mathbb{R})$.
 
-**Proof:**
-- **Non-negativity & Positivity**:
-  Since $\|Az\|_2 \ge 0$ for all $\|z\|_2 = 1$, we have $\|A\|_{op} \ge 0$. Furthermore:
-  $$ \|A\|_{op} = 0 \iff \sup_{\|z\|_2 = 1} \|Az\|_2 = 0 \iff 0 \le \|Az\|_2 \le 0 \quad \forall \|z\|_2 = 1 \iff Az = 0 \quad \forall z \in \mathbb{R}^n \iff A = 0 $$
+**Proof:**  
+Since $\|Az\|_2 \ge 0$ for all $\|z\|_2 = 1$, we have $\|A\|_{op} \ge 0$, and:
+$$ \|A\|_{op} = 0 \iff \sup_{\|z\|_2 = 1} \|Az\|_2 = 0 \iff 0 \le \|Az\|_2 \le 0 \quad \forall \|z\|_2 = 1 \iff Az = 0 \quad \forall z \iff A = 0 $$
 
-- **Absolute Homogeneity**:
-  For any scalar $\lambda \in \mathbb{R}$:
-  $$ \|\lambda A\|_{op} = \sup_{\|z\|_2 = 1} \|\lambda A z\|_2 = \sup_{\|z\|_2 = 1} |\lambda| \|Az\|_2 = |\lambda| \sup_{\|z\|_2 = 1} \|Az\|_2 = |\lambda| \|A\|_{op} $$
+Likewise, for any $\lambda \in \mathbb{R}$:
+$$ \|\lambda A\|_{op} = \sup_{\|z\|_2 = 1} \|\lambda A z\|_2 = |\lambda| \sup{\|z\|_2 = 1} \|Az\|_2 = |\lambda| \|A\|_{op} $$
 
-- **Triangle Inequality**:
-  For any $A, B \in M_n(\mathbb{R})$:
-  $$
-  \begin{aligned}
-  \|A + B\|_{op} &= \sup_{\|z\|_2 = 1} \|(A + B)z\|_2 \\
-  &\le \sup_{\|z\|_2 = 1} \left( \|Az\|_2 + \|Bz\|_2 \right) \quad (\text{by triangle inequality on } d_2) \\
-  &\le \sup_{\|z\|_2 = 1} \|Az\|_2 + \sup_{\|z\|_2 = 1} \|Bz\|_2 \quad (\text{by subadditivity of } \sup) \\
-  &= \|A\|_{op} + \|B\|_{op} \quad \blacksquare
-  \end{aligned}
-  $$
+Finally, to verify the triangle inequality:
+$$
+\begin{aligned}
+\|A + B\|_{op} &= \sup_{\|z\|_2 = 1} \|(A + B)z\|_2 \\
+&\le \sup_{\|z\|_2 = 1} \left( \|Az\|_2 + \|Bz\|_2 \right) \quad (\text{by triangle inequality on } d_2) \\
+&\le \sup_{\|z\|_2 = 1} \|Az\|_2 + \sup_{\|z\|_2 = 1} \|Bz\|_2 \quad (\text{by subadditivity of } \sup) \\
+&= \|A\|_{op} + \|B\|_{op} \quad \blacksquare
+\end{aligned}
+$$
 
 **Corollary (Action on Vectors):**  
 For any matrix $A \in M_n(\mathbb{R})$ and $z \in \mathbb{R}^n$:
@@ -490,18 +487,9 @@ Follows by induction using the sub-multiplicativity property $\|AB\|_{op} \le \|
 The series $\sum_{n=0}^\infty \frac{A^n}{n!}$ is absolutely convergent in $M_n(\mathbb{R})$ for every $A \in M_n(\mathbb{R})$, and hence $\exp(A)$ is well-defined.
 
 **Proof:**  
-We construct a dominating scalar series to establish absolute convergence:
-
-1. **Dominating Series**:  
-   Let $\alpha = \|A\|_{op} \ge 0$. By the sub-power inequality:
-   $$ \left\| \frac{A^n}{n!} \right\|_{op} = \frac{\|A^n\|_{op}}{n!} \le \frac{\|A\|_{op}^n}{n!} = \frac{\alpha^n}{n!} $$
-   The real series $\sum_{n=0}^\infty \frac{\alpha^n}{n!}$ converges to $e^\alpha < \infty$.
-
-2. **Completeness & Absolute Convergence**:  
-   Since $M_n(\mathbb{R}) \cong \mathbb{R}^{n^2}$ is a complete metric space, showing that the partial sums of $\sum_{n=0}^\infty \frac{\alpha^n}{n!}$ are Cauchy guarantees convergence of the series of norms $\sum_{n=0}^\infty \frac{\|A^n\|_{op}}{n!}$.
-
-3. **Conclusion**:  
-   Since $\sum_{n=0}^\infty \frac{\|A^n\|_{op}}{n!} \le \sum_{n=0}^\infty \frac{\|A\|_{op}^n}{n!} < \infty$, the series $\sum_{n=0}^\infty \frac{A^n}{n!}$ is absolutely convergent, and thus convergent in $M_n(\mathbb{R})$. $\quad \blacksquare$
+Let $\alpha = \|A\|_{op}$. The series of operator norms is dominated by:
+$$ \sum_{n=0}^\infty \frac{\|A^n\|_{op}}{n!} \le \sum_{n=0}^\infty \frac{\|A\|_{op}^n}{n!} = \sum_{n=0}^\infty \frac{\alpha^n}{n!} $$
+Since the real power series $\sum_{n=0}^\infty \frac{\alpha^n}{n!} = e^\alpha$ converges, its sequence of partial sums is Cauchy. By completeness of $M_n(\mathbb{R}) \cong \mathbb{R}^{n^2}$, the dominated series $\sum_{n=0}^\infty \frac{\|A^n\|_{op}}{n!}$ converges. Therefore, $\sum_{n=0}^\infty \frac{A^n}{n!}$ is absolutely convergent, which implies it converges in $M_n(\mathbb{R})$. $\quad \blacksquare$
 
 
 
