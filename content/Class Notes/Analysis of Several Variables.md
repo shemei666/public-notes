@@ -507,5 +507,18 @@ $$ (A + B)^n = \sum_{k=0}^n \binom{n}{k} A^{n-k} B^k $$
 Substituting this identity into the series yields:
 $$ \exp(A)\exp(B) = \sum_{n=0}^\infty \frac{(A + B)^n}{n!} = \exp(A + B) \quad \blacksquare $$
 
+---
+
+**Corollary (Invertibility of Matrix Exponential).**  
+For any matrix $A \in M_n(\mathbb{R})$, the matrix exponential $\exp(A)$ is invertible in $GL_n(\mathbb{R})$, and its inverse is:
+$$ (\exp(A))^{-1} = \exp(-A) $$
+
+**Proof:**  
+First, evaluating $\exp(0)$ directly from the definition of the matrix power series gives:
+$$ \exp(0) = \sum_{n=0}^\infty \frac{0^n}{n!} = I + \sum_{n=1}^\infty 0 = I $$
+Since $A$ and $-A$ commute ($A(-A) = (-A)A = -A^2$), we can apply the theorem for exponential of commuting matrices to $A$ and $-A$:
+$$ \exp(A) \exp(-A) = \exp(A - A) = \exp(0) = I $$
+Similarly, $\exp(-A) \exp(A) = \exp(-A + A) = \exp(0) = I$. Thus $\exp(A)$ is invertible for every $A \in M_n(\mathbb{R})$, with $(\exp(A))^{-1} = \exp(-A)$. $\quad \blacksquare$
+
 
 
