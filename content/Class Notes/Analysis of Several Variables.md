@@ -484,12 +484,14 @@ Follows by induction using the sub-multiplicativity property $\|AB\|_{op} \le \|
 ---
 
 **Proposition (Convergence of Matrix Exponential).**  
-The series $\sum_{n=0}^\infty \frac{A^n}{n!}$ is absolutely convergent in $M_n(\mathbb{R})$ for every $A \in M_n(\mathbb{R})$, and hence $\exp(A)$ is well-defined.
+The series $\sum_{n=0}^\infty \frac{A^n}{n!}$ is convergent in $M_n(\mathbb{R})$ for every $A \in M_n(\mathbb{R})$, and hence $\exp(A)$ is well-defined.
 
 **Proof:**  
-Let $\alpha = \|A\|_{op}$. The series of operator norms is dominated by:
-$$ \sum_{n=0}^\infty \frac{\|A^n\|_{op}}{n!} \le \sum_{n=0}^\infty \frac{\|A\|_{op}^n}{n!} = \sum_{n=0}^\infty \frac{\alpha^n}{n!} $$
-Since the real power series $\sum_{n=0}^\infty \frac{\alpha^n}{n!} = e^\alpha$ converges, its sequence of partial sums is Cauchy. By completeness of $M_n(\mathbb{R}) \cong \mathbb{R}^{n^2}$, the dominated series $\sum_{n=0}^\infty \frac{\|A^n\|_{op}}{n!}$ converges. Therefore, $\sum_{n=0}^\infty \frac{A^n}{n!}$ is absolutely convergent, which implies it converges in $M_n(\mathbb{R})$. $\quad \blacksquare$
+Let $S_m = \sum_{n=0}^m \frac{A^n}{n!}$ denote the $m$-th partial sum of the matrix series in $M_n(\mathbb{R})$, and set $\alpha = \|A\|_{op}$. For any integers $m > k \ge 0$, using the triangle inequality and sub-multiplicativity of the operator norm $\|A^n\|_{op} \le \alpha^n$:
+$$ \|S_m - S_k\|_{op} = \left\| \sum_{n=k+1}^m \frac{A^n}{n!} \right\|_{op} \le \sum_{n=k+1}^m \frac{\|A^n\|_{op}}{n!} \le \sum_{n=k+1}^m \frac{\alpha^n}{n!} = s_m - s_k $$
+where $s_m = \sum_{n=0}^m \frac{\alpha^n}{n!}$ is the sequence of partial sums of the real power series $\sum_{n=0}^\infty \frac{\alpha^n}{n!} = e^\alpha$. Since $\sum_{n=0}^\infty \frac{\alpha^n}{n!}$ converges in $\mathbb{R}$, its sequence of partial sums $\{s_m\}$ is Cauchy. Thus, for any $\varepsilon > 0$, there exists $N \in \mathbb{N}$ such that for all $m > k \ge N$:
+$$ |s_m - s_k| = \sum_{n=k+1}^m \frac{\alpha^n}{n!} < \varepsilon \implies \|S_m - S_k\|_{op} < \varepsilon $$
+This shows that $\{S_m\}_{m=0}^\infty$ is a Cauchy sequence in the metric space $(M_n(\mathbb{R}), \|\cdot\|_{op})$. Since $M_n(\mathbb{R}) \cong \mathbb{R}^{n^2}$ is complete, every Cauchy sequence in $M_n(\mathbb{R})$ converges to a limit in $M_n(\mathbb{R})$. Therefore, the limit $\lim_{m\to\infty} S_m = \sum_{n=0}^\infty \frac{A^n}{n!} = \exp(A)$ exists in $M_n(\mathbb{R})$. $\quad \blacksquare$
 
 
 
