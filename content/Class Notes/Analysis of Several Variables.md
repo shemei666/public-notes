@@ -307,11 +307,50 @@ The vector space isomorphism $\Phi : \mathbb{R}^{n^2} \longrightarrow M_n(\mathb
 $$ (x_1, \dots, x_{n^2}) \longmapsto \begin{pmatrix} x_1 & x_{n+1} & \dots & x_{n^2-n+1} \\ \vdots & \vdots & \ddots & \vdots \\ x_n & x_{2n} & \dots & x_{n^2} \end{pmatrix} $$
 $\Phi$ is a linear isomorphism.
 
-### Matrix Operations
+### Matrix Operations and Vector Space Structure
+
 For $A = (a_{ij}), B = (b_{ij}) \in M_n(\mathbb{R})$:
 - **Addition**: $A + B = (a_{ij} + b_{ij})$
 - **Scalar Multiplication**: $\lambda A = (\lambda a_{ij})$
 - **Matrix Multiplication**: $AB = \left( \sum_{k=1}^n a_{ik} b_{kj} \right)$
+
+**Lemma:** $M_n(\mathbb{R})$ is a vector space over $\mathbb{R}$ of dimension $n^2$.
+
+- **Examples of Vector Subspaces of $M_n(\mathbb{R})$**:
+  - **Symmetric Matrices**: $\{ A \in M_n(\mathbb{R}) \mid A^T = A \}$
+  - **Skew-Symmetric Matrices**: $\{ A \in M_n(\mathbb{R}) \mid A^T = -A \}$
+  - **Traceless Matrices**: $\{ A \in M_n(\mathbb{R}) \mid \text{trace}(A) = 0 \}$
+
+---
+
+### Matrix Groups and Subgroups
+
+**Def (General Linear Group):**  
+The **General Linear Group** of degree $n$ over $\mathbb{R}$ is defined as:
+$$ GL_n(\mathbb{R}) := \{ A \in M_n(\mathbb{R}) \mid \det(A) \neq 0 \} \subseteq M_n(\mathbb{R}) $$
+
+**Lemma:** For $A, B \in M_n(\mathbb{R})$, $\det(AB) = \det(A)\det(B)$.
+
+**Lemma:** $(GL_n(\mathbb{R}), \cdot)$ with matrix multiplication forms a group.
+
+- **Examples of Subgroups of $GL_n(\mathbb{R})$**:
+  - **Special Linear Group**:  
+    $$ SL_n(\mathbb{R}) := \{ A \in GL_n(\mathbb{R}) \mid \det(A) = 1 \} $$
+  - **Orthogonal Group**:  
+    $$ O_n(\mathbb{R}) := \{ A \in GL_n(\mathbb{R}) \mid A^T A = I_n \} $$
+
+---
+
+### Topological Properties of Matrix Groups
+
+**Proposition (Topology of Matrix Subgroups):**  
+1. **$SL_n(\mathbb{R})$ is Closed**:  
+   The determinant map $\det : M_n(\mathbb{R}) \longrightarrow \mathbb{R}$ is continuous (as a polynomial in matrix entries). Since $\{1\}$ is a closed subset of $\mathbb{R}$, $SL_n(\mathbb{R}) = \det^{-1}(\{1\})$ is closed in $M_n(\mathbb{R}) \cong \mathbb{R}^{n^2}$.
+
+2. **$O_n(\mathbb{R})$ is Compact**:  
+   - **Closed**: The map $f : M_n(\mathbb{R}) \longrightarrow M_n(\mathbb{R})$ given by $f(A) = A^T A$ is continuous. Since $O_n(\mathbb{R}) = f^{-1}(\{I_n\})$ and $\{I_n\}$ is closed, $O_n(\mathbb{R})$ is closed. Alternatively, $O_n(\mathbb{R}) = \bigcap_{i=1}^k f_i^{-1}(\{e_i\})$.
+   - **Bounded**: For any $A \in O_n(\mathbb{R})$, its column vectors $a_1, \dots, a_n$ satisfy $\|a_i\|_2 = 1$. Thus, the Hilbert-Schmidt norm is $\|A\|_{HS} = \sqrt{\sum_{i=1}^n \|a_i\|_2^2} = \sqrt{n}$. Since the norm is bounded by $\sqrt{n}$, $O_n(\mathbb{R})$ is a bounded subset of $\mathbb{R}^{n^2}$.
+   - By the **Heine-Borel Theorem**, since $O_n(\mathbb{R})$ is closed and bounded in $\mathbb{R}^{n^2}$, it is **compact**. $\quad \blacksquare$
 
 ---
 
