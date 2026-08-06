@@ -469,5 +469,39 @@ $$ \exp(A) = \sum_{n=0}^\infty \frac{A^n}{n!} $$
 3. **Invertibility of Matrix Exponential**: Show that $\exp(0) = I$ and $\exp(A - A) = \exp(A) \exp(-A)$, concluding that $\exp(A)$ is always invertible with $(\exp(A))^{-1} = \exp(-A)$.
 4. **Continuity of Matrix Exponential**: Show that the function $\exp : M_n(\mathbb{R}) \longrightarrow M_n(\mathbb{R})$ is continuous.
 
+---
+
+### Well-Definedness of Matrix Exponential
+
+To verify that the matrix exponential map
+$$ \exp : M_n(\mathbb{R}) \longrightarrow M_n(\mathbb{R}), \quad A \longmapsto \sum_{n=0}^\infty \frac{A^n}{n!} = \exp(A) $$
+is well-defined, we must verify that the defining series converges for every $A \in M_n(\mathbb{R})$.
+
+**Lemma (Sub-power Inequality for Operator Norm).**  
+For any matrix $A \in M_n(\mathbb{R})$ and integer $n \ge 0$:
+$$ \|A^n\|_{op} \le \|A\|_{op}^n $$
+
+**Proof:**  
+Follows by induction using the sub-multiplicativity property $\|AB\|_{op} \le \|A\|_{op} \|B\|_{op}$. $\quad \blacksquare$
+
+---
+
+**Proposition (Convergence of Matrix Exponential).**  
+The series $\sum_{n=0}^\infty \frac{A^n}{n!}$ is absolutely convergent in $M_n(\mathbb{R})$ for every $A \in M_n(\mathbb{R})$, and hence $\exp(A)$ is well-defined.
+
+**Proof:**  
+We construct a dominating scalar series to establish absolute convergence:
+
+1. **Dominating Series**:  
+   Let $\alpha = \|A\|_{op} \ge 0$. By the sub-power inequality:
+   $$ \left\| \frac{A^n}{n!} \right\|_{op} = \frac{\|A^n\|_{op}}{n!} \le \frac{\|A\|_{op}^n}{n!} = \frac{\alpha^n}{n!} $$
+   The real series $\sum_{n=0}^\infty \frac{\alpha^n}{n!}$ converges to $e^\alpha < \infty$.
+
+2. **Completeness & Absolute Convergence**:  
+   Since $M_n(\mathbb{R}) \cong \mathbb{R}^{n^2}$ is a complete metric space, showing that the partial sums of $\sum_{n=0}^\infty \frac{\alpha^n}{n!}$ are Cauchy guarantees convergence of the series of norms $\sum_{n=0}^\infty \frac{\|A^n\|_{op}}{n!}$.
+
+3. **Conclusion**:  
+   Since $\sum_{n=0}^\infty \frac{\|A^n\|_{op}}{n!} \le \sum_{n=0}^\infty \frac{\|A\|_{op}^n}{n!} < \infty$, the series $\sum_{n=0}^\infty \frac{A^n}{n!}$ is absolutely convergent, and thus convergent in $M_n(\mathbb{R})$. $\quad \blacksquare$
+
 
 
