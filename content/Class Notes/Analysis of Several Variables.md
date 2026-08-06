@@ -493,5 +493,19 @@ where $s_m = \sum_{n=0}^m \frac{\alpha^n}{n!}$ is the sequence of partial sums o
 $$ |s_m - s_k| = \sum_{n=k+1}^m \frac{\alpha^n}{n!} < \varepsilon \implies \|S_m - S_k\|_{op} < \varepsilon $$
 This shows that $\{S_m\}_{m=0}^\infty$ is a Cauchy sequence in the metric space $(M_n(\mathbb{R}), \|\cdot\|_{op})$. Since $M_n(\mathbb{R}) \cong \mathbb{R}^{n^2}$ is complete, every Cauchy sequence in $M_n(\mathbb{R})$ converges to a limit in $M_n(\mathbb{R})$. Therefore, the limit $\lim_{m\to\infty} S_m = \sum_{n=0}^\infty \frac{A^n}{n!} = \exp(A)$ exists in $M_n(\mathbb{R})$. $\quad \blacksquare$
 
+---
+
+**Theorem:**  
+Let $A, B \in M_n(\mathbb{R})$. If $A$ and $B$ commute ($AB = BA$), then:
+$$ \exp(A + B) = \exp(A) \exp(B) $$
+
+**Proof:**  
+Since the series for $\exp(A) = \sum_{j=0}^\infty \frac{A^j}{j!}$ and $\exp(B) = \sum_{k=0}^\infty \frac{B^k}{k!}$ are absolutely convergent, their matrix product is given by the Cauchy product of the series:
+$$ \exp(A)\exp(B) = \sum_{n=0}^\infty \sum_{k=0}^n \frac{A^{n-k}}{(n-k)!} \frac{B^k}{k!} = \sum_{n=0}^\infty \frac{1}{n!} \sum_{k=0}^n \frac{n!}{(n-k)!\, k!} A^{n-k} B^k = \sum_{n=0}^\infty \frac{1}{n!} \sum_{k=0}^n \binom{n}{k} A^{n-k} B^k $$
+Since $A$ and $B$ commute ($AB = BA$), the matrix binomial expansion holds:
+$$ (A + B)^n = \sum_{k=0}^n \binom{n}{k} A^{n-k} B^k $$
+Substituting this identity into the series yields:
+$$ \exp(A)\exp(B) = \sum_{n=0}^\infty \frac{(A + B)^n}{n!} = \exp(A + B) \quad \blacksquare $$
+
 
 
