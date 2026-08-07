@@ -1,4 +1,7 @@
-- [ ] Complete differential topology
-- [ ] complete complex notes
-- [ ] complete optimization notes
-- [ ] complete geometry notes
+- [x] clothes 
+- [x] towels
+- [x] books
+- [x] hygiene shampoo
+- [x] electronics : controller mouse laptop calculator earphones
+- [x] books novels, math books
+- [x] files
