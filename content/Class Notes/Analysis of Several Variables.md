@@ -527,7 +527,20 @@ $$
 $$
 is continuous, see that each partial sum is continuous and it converges to a continuous function on any compact set. Hence $\exp$ is continuous. $\quad \blacksquare$
 
+**Corollary:**
+For any $A \in M_n(\mathbb{R})$, $\exp(A^T) = \exp(A)^T$.
 
+**Proof:**
+This follows trivially from the series definition of $\exp(A)$ and the property $(A^k)^T = (A^T)^k$. $\quad \blacksquare$
 
+**Corollary:**
+Let $A$ be a skew-symmetric matrix ($A + A^T = 0$). Then $\exp(A)$ is an orthogonal matrix. 
+Thus, the matrix exponential restricts to a map $\exp : \text{Skew-Symm}_n(\mathbb{R}) \longrightarrow O_n(\mathbb{R})$.
 
-
+**Proof:**
+Let $A$ be a skew-symmetric matrix. Since $A$ and $A^T$ commute, we can use the property of the exponential of commuting matrices:
+$$ \exp(A + A^T) = \exp(A)\exp(A^T) $$
+Using the previous corollary ($\exp(A^T) = \exp(A)^T$) and the fact that $A + A^T = 0$, this becomes:
+$$ \exp(0) = \exp(A)\exp(A)^T $$
+$$ I = \exp(A)\exp(A)^T $$
+Therefore, $\exp(A) \in O_n(\mathbb{R})$. $\quad \blacksquare$
