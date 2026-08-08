@@ -521,7 +521,11 @@ $$ \exp(A) \exp(-A) = \exp(A - A) = \exp(0) = I $$
 Similarly, $\exp(-A) \exp(A) = \exp(-A + A) = \exp(0) = I$. Thus $\exp(A)$ is invertible for every $A \in M_n(\mathbb{R})$, with $(\exp(A))^{-1} = \exp(-A)$. $\quad \blacksquare$
 
 **Corollary (Continuity of matrix exponential)**
-**Proof:** 
+**Proof:**  We need to show that the function
+$$
+\exp : M_{n}(\mathbb{R}) \to GL_{n}^+(\mathbb{R})
+$$
+is continuous 
 
 
 
