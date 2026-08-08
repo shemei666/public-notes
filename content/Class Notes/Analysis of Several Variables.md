@@ -525,7 +525,7 @@ Similarly, $\exp(-A) \exp(A) = \exp(-A + A) = \exp(0) = I$. Thus $\exp(A)$ is in
 $$
 \exp : M_{n}(\mathbb{R}) \to GL_{n}^+(\mathbb{R})
 $$
-is continuous 
+is continuous
 
 
 
