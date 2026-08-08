@@ -566,3 +566,29 @@ Since $\exp(A)$ is upper triangular, its determinant is the product of its diago
 $$ \det(\exp(A)) = e^{a_{11}} \cdot \dots \cdot e^{a_{nn}} = e^{a_{11} + \dots + a_{nn}} = e^{\text{trace}(A)} $$
 
 *(Note: This proves the identity for upper triangular matrices).* $\quad \blacksquare$
+
+**Corollary (General Matrix Case via Triangularization):**  
+For any matrix $B \in M_n(\mathbb{C})$, we can write $B = G A G^{-1}$ where $A$ is upper triangular (via Schur Triangularization). Then:
+$$ \det(\exp(B)) = e^{\text{trace}(B)} $$
+
+**Proof:**  
+Let $B = G A G^{-1}$ where $A$ is upper triangular. Using the similarity property $\exp(G A G^{-1}) = G \exp(A) G^{-1}$ and multiplicativity of the determinant:
+$$ \det(\exp(B)) = \det(\exp(G A G^{-1})) = \det(G \exp(A) G^{-1}) = \det(G) \det(\exp(A)) \det(G^{-1}) = \det(\exp(A)) $$
+
+By cyclic invariance of the trace:
+$$ \text{trace}(B) = \text{trace}(G A G^{-1}) = \text{trace}(A G^{-1} G) = \text{trace}(A) $$
+
+Combining this with the result for upper triangular matrices ($\det(\exp(A)) = e^{\text{trace}(A)}$), we obtain:
+$$ \det(\exp(B)) = e^{\text{trace}(A)} = e^{\text{trace}(B)} \quad \blacksquare $$
+
+This property is summarized by the following commutative diagram:
+
+```tikz
+\usepackage{tikz-cd}
+\begin{document}
+\begin{tikzcd}
+M_n(\mathbb{R}) \arrow[r, "\exp"] \arrow[d, "\text{trace}"'] & GL_n^+(\mathbb{R}) \arrow[d, "\det"] \\
+\mathbb{R} \arrow[r, "\exp"] & \mathbb{R}
+\end{tikzcd}
+\end{document}
+```
