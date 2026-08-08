@@ -520,5 +520,8 @@ Since $A$ and $-A$ commute ($A(-A) = (-A)A = -A^2$), we can apply the theorem fo
 $$ \exp(A) \exp(-A) = \exp(A - A) = \exp(0) = I $$
 Similarly, $\exp(-A) \exp(A) = \exp(-A + A) = \exp(0) = I$. Thus $\exp(A)$ is invertible for every $A \in M_n(\mathbb{R})$, with $(\exp(A))^{-1} = \exp(-A)$. $\quad \blacksquare$
 
+**Corollary (Continuity of matrix exponential)**
+**Proof:** 
+
 
 
