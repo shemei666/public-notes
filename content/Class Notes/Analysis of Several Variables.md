@@ -544,3 +544,25 @@ Using the previous corollary ($\exp(A^T) = \exp(A)^T$) and the fact that $A + A^
 $$ \exp(0) = \exp(A)\exp(A)^T $$
 $$ I = \exp(A)\exp(A)^T $$
 Therefore, $\exp(A) \in O_n(\mathbb{R})$. $\quad \blacksquare$
+
+**Proposition:**  
+$$ \det(\exp(A)) = e^{\text{trace}(A)} $$
+
+**Proof:**  
+Let $A \in M_n(\mathbb{R})$ and suppose $A$ is upper triangular.
+
+*Lemma:* The product of upper triangular matrices is upper triangular, and the determinant of an upper triangular matrix is the product of its diagonal entries.
+
+For an upper triangular matrix $A$, the diagonal entries of $\frac{A^k}{k!}$ are:
+$$ \left( \frac{a_{11}^k}{k!}, \frac{a_{22}^k}{k!}, \ldots, \frac{a_{nn}^k}{k!} \right) $$
+
+Thus, the partial sum $\sum_{l=0}^K \frac{A^l}{l!}$ is upper triangular with diagonal entries:
+$$ \left( \sum_{l=0}^K \frac{a_{11}^l}{l!}, \ldots, \sum_{l=0}^K \frac{a_{nn}^l}{l!} \right) $$
+
+Taking the limit as $K \to \infty$, the diagonal entries of $\exp(A)$ are:
+$$ \left( \sum_{l=0}^\infty \frac{a_{11}^l}{l!}, \ldots, \sum_{l=0}^\infty \frac{a_{nn}^l}{l!} \right) = \left( e^{a_{11}}, e^{a_{22}}, \ldots, e^{a_{nn}} \right) $$
+
+Since $\exp(A)$ is upper triangular, its determinant is the product of its diagonal entries:
+$$ \det(\exp(A)) = e^{a_{11}} \cdot \dots \cdot e^{a_{nn}} = e^{a_{11} + \dots + a_{nn}} = e^{\text{trace}(A)} $$
+
+*(Note: This proves the identity for upper triangular matrices).* $\quad \blacksquare$
