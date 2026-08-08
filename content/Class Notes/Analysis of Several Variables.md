@@ -587,7 +587,7 @@ This property is summarized by the following commutative diagram:
 \usepackage{tikz-cd}
 \begin{document}
 \begin{tikzcd}
-M_n(\mathbb{R}) \arrow[r, "\exp"] \arrow[d, "\text{trace}"'] & GL_n^+(\mathbb{R}) \arrow[d, "\det"] \\
+M_n(\mathbb{R}) \arrow[r, "\exp"] \arrow[d, "\mathrm{trace}"'] & GL_n^+(\mathbb{R}) \arrow[d, "\det"] \\
 \mathbb{R} \arrow[r, "\exp"] & \mathbb{R}
 \end{tikzcd}
 \end{document}
