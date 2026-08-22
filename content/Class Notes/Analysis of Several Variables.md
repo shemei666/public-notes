@@ -184,7 +184,7 @@ Follows from component-wise convergence and the completeness of $\mathbb{R}$. $\
 
 **Theorem (Cantor's Intersection Theorem).**
 Let $C_1 \supseteq C_2 \supseteq C_3 \supseteq \dots$ be a nested sequence of non-empty closed subsets of $\mathbb{R}^n$ such that $\text{diam}(C_n) \longrightarrow 0$ as $n \to \infty$. Then the intersection contains exactly one point:
-$$ \bigcap\_{n=1}^\infty C_n = \{p\} \quad \text{for some } p \in \mathbb{R}^n $$
+$$ \bigcap_{n=1}^\infty C_n = \{p\} \quad \text{for some } p \in \mathbb{R}^n $$
 
 **Def (Diameter of a Set):**
 The diameter of a subset $S \subseteq \mathbb{R}^n$ is defined as:
