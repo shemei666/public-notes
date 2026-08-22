@@ -199,7 +199,7 @@ Choose $x_n \in C_n$. Since $C_n$ are nested and $\text{diam}(C_n) \to 0$, $\{x_
 Any bounded infinite subset $S \subseteq \mathbb{R}^n$ contains a convergent sequence.
 
 **Proof Sketch:**
-Consider a sequence of distinct points $\{x_k\} \subseteq S$. Define $F_n = \overline{\{x_k \mid k \geq n\}}$. Apply Cantor's Intersection Theorem on the nested closed sets $F_n$ to construct a convergent subsequence. $\quad \blacksquare$
+Since $S$ is bounded, it is contained in a closed hypercube $C_0 \subset \mathbb{R}^n$. Because $S$ is infinite, we can construct a sequence of nested closed hypercubes $C_0 \supset C_1 \supset C_2 \supset \dots$ by repeatedly subdividing the current hypercube into $2^n$ smaller hypercubes and choosing $C_k$ to be one that contains infinitely many points of $S$. The diameter $\text{diam}(C_k) \to 0$ as $k \to \infty$. By Cantor's Intersection Theorem, $\bigcap_{k=1}^\infty C_k = \{p\}$. We can then construct a convergent sequence by choosing distinct points $x_k \in S \cap C_k$, which will converge to $p$. $\quad \blacksquare$
 
 ---
 
@@ -398,7 +398,7 @@ $$
 \end{aligned}
 $$
 
-**Corollary (Action on Vectors):**  
+**Corollary:**  
 For any matrix $A \in M_n(\mathbb{R})$ and $z \in \mathbb{R}^n$:
 $$ \|Az\|_2 \le \|A\|_{op} \|z\|_2 $$
 
