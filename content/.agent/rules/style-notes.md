@@ -26,7 +26,7 @@ publish: true
 - **Title**: Use a single H1 (`#`) for the document title or main topic.
 - **Sections**: Use H2 (`##`) for major sections (e.g., "Holomorphic Functions", "Nullstellensatz").
 - **Subsections**: Use H3 (`###`) and H4 (`####`) for nested content.
-- **Lists**: Use numbered lists (`1.`, `2.`) for sequential items and analytical results, and bullet points (`*` or `-`) for unordered lists.
+- **Lists**: Use ONLY numbered lists (`1.`, `2.`) for all list items. Do not use bullet points or unordered lists.
 - **Dividers**: Use horizontal rules (`---`) to separate distinct topics, proofs, or examples.
 
 ## 3. Mathematical Environments (Theorems, Proofs, Definitions)

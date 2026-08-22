@@ -312,7 +312,7 @@ If $B_\sigma(x; s) \subseteq B_d(x; r)$, how are the radii $r$ and $s$ related?
 Let $M_n(\mathbb{R})$ denote the set of all $n \times n$ matrices over $\mathbb{R}$.
 
 The vector space isomorphism $\Phi : \mathbb{R}^{n^2} \longrightarrow M_n(\mathbb{R})$ is defined by mapping a vector to a matrix column-by-column:
-$$ (x*1, \dots, x*{n^2}) \longmapsto \begin{pmatrix} x*1 & x*{n+1} & \dots & x*{n^2-n+1} \\ \vdots & \vdots & \ddots & \vdots \\ x_n & x*{2n} & \dots & x\_{n^2} \end{pmatrix} $$
+$$ (x_1, \dots, x_{n^2}) \longmapsto \begin{pmatrix} x_1 & x_{n+1} & \dots & x_{n^2-n+1} \\ \vdots & \vdots & \ddots & \vdots \\ x_n & x_{2n} & \dots & x_{n^2} \end{pmatrix} $$
 $\Phi$ is a linear isomorphism.
 
 ### Matrix Operations and Vector Space Structure
