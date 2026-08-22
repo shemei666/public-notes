@@ -433,7 +433,7 @@ $$ \|A\|_{op} \le \|A\|_{HS} \quad \text{and} \quad \|A\|_{HS} \le \sqrt{n} \|A\
 Let $\{e_1, \dots, e_n\}$ be the standard Euclidean basis of $\mathbb{R}^n$.  
 For any $v = \sum_{i=1}^n v_i e_i \in \mathbb{R}^n$ with $\|v\|_2 = 1$ (so $\sum_{i=1}^n v_i^2 = 1$):
 $$ \|Av\|_2^2 = \left\| \sum_{i=1}^n v_i A e_i \right\|_2^2 \le \left( \sum_{i=1}^n |v_i| \|Ae_i\|_2 \right)^2 $$
-By Cauchy-Schwarz inequality:
+By Cauchy-Schwarz Inequality:
 $$ \left( \sum_{i=1}^n |v_i| \|Ae_i\|_2 \right)^2 \le \left(\sum_{i=1}^n v_i^2\right) \left(\sum_{i=1}^n \|Ae_i\|_2^2\right) = \sum_{i=1}^n \|Ae_i\|_2^2 $$
 Taking the supremum over all $\|v\|_2 = 1$:
 $$ \|A\|_{op}^2 = \sup_{\|v\|_2 = 1} \|Av\|_2^2 \le \sum_{i=1}^n \|Ae_i\|_2^2 = \|A\|_{HS}^2 $$
