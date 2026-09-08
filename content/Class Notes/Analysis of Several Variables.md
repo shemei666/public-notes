@@ -400,7 +400,7 @@ $$
 
 **Corollary (Action on Vectors):**  
 For any matrix $A \in M_n(\mathbb{R})$ and $z \in \mathbb{R}^n$:
-$$ \|Az\|_2 \le \|A\|_{op} \|z\|\_2 $$
+$$ \|Az\|_2 \le \|A\|_{op} \|z\|_2 $$
 
 **Proof:**
 
@@ -412,13 +412,13 @@ $$ \|Az\|_2 \le \|A\|_{op} \|z\|\_2 $$
 
 **Corollary (Sub-multiplicativity of Operator Norm):**  
 For any $A, B \in M_n(\mathbb{R})$:
-$$ \|AB\|_{op} \le \|A\|_{op} \|B\|\_{op} $$
+$$ \|AB\|_{op} \le \|A\|_{op} \|B\|_{op} $$
 
 **Proof:**  
 For any $z \in \mathbb{R}^n$:
-$$ \|ABz\|_2 \le \|A\|_{op} \|Bz\|_2 \le \|A\|_{op} \|B\|_{op} \|z\|\_2 $$
+$$ \|ABz\|_2 \le \|A\|_{op} \|Bz\|_2 \le \|A\|_{op} \|B\|_{op} \|z\|_2 $$
 Taking the supremum over all $z \in \mathbb{R}^n$ with $\|z\|_2 = 1$:
-$$ \|AB\|_{op} = \sup*{\|z\|\_2 = 1} \|ABz\|\_2 \le \sup*{\|z\|_2 = 1} \|A\|_{op} \|B\|_{op} \|z\|\_2 = \|A\|_{op} \|B\|\_{op} \quad \blacksquare $$
+$$ \|AB\|_{op} = \sup*{\|z\|\_2 = 1} \|ABz\|\_2 \le \sup*{\|z\|_2 = 1} \|A\|_{op} \|B\|_{op} \|z\|\_2 = \|A\|_{op} \|B\|_{op} \quad \blacksquare $$
 
 ---
 
