@@ -1,7 +1,1 @@
-- [x] clothes 
-- [x] towels
-- [x] books
-- [x] hygiene shampoo
-- [x] electronics : controller mouse laptop calculator earphones
-- [x] books novels, math books
-- [x] files
+![[IMG_20260929_185042.jpg]]3.38
