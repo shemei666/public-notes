@@ -1,0 +1,1 @@
+Let $X$ be a completely metrizable space. A subspace $A \subseteq X$ is completely metrizable if and only if $A$ is a $G_\delta$ set in $X$.
